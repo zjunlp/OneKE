@@ -1,0 +1,1027 @@
+[
+    {
+        "sentence": "Popular approaches of opinion-based recommender system utilize various techniques including text mining , information retrieval , sentiment analysis ( see also Multimodal sentiment analysis ) and deep learning X.Y. Feng , H. Zhang , Y.J. Ren , P.H. Shang , Y. Zhu , Y.C. Liang , R.C. Guan , D. Xu , ( 2019 ) , , 21 ( 5 ) : e12957 .",
+        "entity_list": {
+            "opinion-based recommender system": "product",
+            "text mining": "field",
+            "information retrieval": "task",
+            "sentiment analysis": "task",
+            "Multimodal sentiment analysis": "task",
+            "deep learning": "field",
+            "X.Y. Feng": "researcher",
+            "H. Zhang": "researcher",
+            "Y.J. Ren": "researcher",
+            "P.H. Shang": "researcher",
+            "Y. Zhu": "researcher",
+            "Y.C. Liang": "researcher",
+            "R.C. Guan": "researcher",
+            "D. Xu": "researcher"
+        }
+    },
+    {
+        "sentence": "Advocates of procedural representations were mainly centered at MIT , under the leadership of Marvin Minsky and Seymour Papert .",
+        "entity_list": {
+            "MIT": "university",
+            "Marvin Minsky": "researcher",
+            "Seymour Papert": "researcher"
+        }
+    },
+    {
+        "sentence": "The standard interface and calculator interface are written in Java .",
+        "entity_list": {
+            "Java": "program language"
+        }
+    },
+    {
+        "sentence": "Octave helps in solving linear and nonlinear problems numerically , and for performing other numerical experiments using a that is mostly compatible with MATLAB .",
+        "entity_list": {
+            "Octave": "product",
+            "MATLAB": "product"
+        }
+    },
+    {
+        "sentence": "Variants of the back-propagation algorithm as well as unsupervised methods by Geoff Hinton and colleagues at the University of Toronto can be used to train deep , highly nonlinear neural architectures , { { cite journal",
+        "entity_list": {
+            "back-propagation algorithm": "algorithm",
+            "unsupervised methods": "else",
+            "Geoff Hinton": "researcher",
+            "University of Toronto": "university"
+        }
+    },
+    {
+        "sentence": "or equivalently using DCG notation :",
+        "entity_list": {
+            "DCG": "metrics"
+        }
+    },
+    {
+        "sentence": "Self-organizing maps differ from other artificial neural networks as they apply competitive learning as opposed to error-correction learning such as backpropagation with gradient descent ) , and in the sense that they use a neighborhood function to preserve the topological properties of the input space .",
+        "entity_list": {
+            "artificial neural networks": "algorithm",
+            "competitive learning": "algorithm",
+            "error-correction learning": "algorithm",
+            "backpropagation": "algorithm",
+            "gradient descent": "algorithm",
+            "topological properties": "else"
+        }
+    },
+    {
+        "sentence": "Since the early 1990s , it has been recommended by several authorities , including the Audio Engineering Society that measurements of dynamic range be made with an audio signal present , which is then filtered out in the noise floor measurement used in determining dynamic range . This avoids questionable measurements based on the use of blank media , or muting circuits .",
+        "entity_list": {
+            "Audio Engineering Society": "organization",
+            "audio signal": "else",
+            "noise floor measurement": "metrics"
+        }
+    },
+    {
+        "sentence": "The technique used in creating eigenfaces and using them for recognition is also used outside of face recognition : handwriting recognition , lip reading , voice recognition , sign language / hand gestures interpretation and medical imaging analysis .",
+        "entity_list": {
+            "eigenfaces": "else",
+            "face recognition": "task",
+            "handwriting recognition": "task",
+            "lip reading": "task",
+            "voice recognition": "task",
+            "sign language": "task",
+            "hand gestures interpretation": "task",
+            "medical imaging analysis": "field"
+        }
+    },
+    {
+        "sentence": "The National Science Foundation was an umbrella for the National Aeronautics and Space Administration ( NASA ) , the US Department of Energy , the US Department of Commerce NIST , the US Department of Defense , Defense Advanced Research Projects Agency ( DARPA ) , and the Office of Naval Research coordinated studies to inform strategic planners in their deliberations .",
+        "entity_list": {
+            "National Science Foundation": "organization",
+            "National Aeronautics and Space Administration": "organization",
+            "NASA": "organization",
+            "US Department of Energy": "organization",
+            "US Department of Commerce NIST": "organization",
+            "US Department of Defense": "organization",
+            "Defense Advanced Research Projects Agency": "organization",
+            "DARPA": "organization",
+            "Office of Naval Research": "organization"
+        }
+    },
+    {
+        "sentence": "A fast method for computing maximum likelihood estimates for the probit model was proposed by Ronald Fisher as an appendix to Bliss ' work in 1935 .",
+        "entity_list": {
+            "maximum likelihood": "metrics",
+            "probit model": "algorithm",
+            "Ronald Fisher": "researcher",
+            "Bliss": "researcher"
+        }
+    },
+    {
+        "sentence": "Several of these programs are available online , such as Google Translate and the SYSTRAN system that powers AltaVista 's BabelFish ( now Yahoo 's Babelfish as of 9 May 2008 ) .",
+        "entity_list": {
+            "Google Translate": "product",
+            "SYSTRAN system": "product",
+            "AltaVista": "organization",
+            "BabelFish": "product",
+            "Yahoo": "organization",
+            "Babelfish": "product"
+        }
+    },
+    {
+        "sentence": "In 2002 Hutter , with Jürgen Schmidhuber and Shane Legg , developed and published a mathematical theory of artificial general intelligence based on idealised intelligent agents and reward-motivated reinforcement learning .",
+        "entity_list": {
+            "Hutter": "researcher",
+            "Jürgen Schmidhuber": "researcher",
+            "Shane Legg": "researcher",
+            "artificial general intelligence": "field",
+            "intelligent agents": "else",
+            "reinforcement learning": "field"
+        }
+    },
+    {
+        "sentence": "The most common way is using the so-called ROUGE ( Recall-Oriented Understudy for Gisting Evaluation ) measure .",
+        "entity_list": {
+            "ROUGE": "metrics",
+            "Recall-Oriented Understudy for Gisting Evaluation": "metrics"
+        }
+    },
+    {
+        "sentence": "RapidMiner provides learning schemes , models and algorithms and can be extended using R and Python scripts . David Norris , Bloor Research , November 13 , 2013 .",
+        "entity_list": {
+            "RapidMiner": "product",
+            "R": "program language",
+            "Python": "program language",
+            "David Norris": "researcher",
+            "Bloor Research": "organization"
+        }
+    },
+    {
+        "sentence": "tity contains a collection of visualization tools and algorithms for data analysis and predictive modeling , together with graphical user interfaces for easy access to these functions. but the more recent fully Java -based version ( Weka 3 ) , for which development started in 1997 , is now used in many different application areas , in particular for educational purposes and research .",
+        "entity_list": {
+            "tity": "product",
+            "data analysis": "field",
+            "predictive modeling": "task",
+            "graphical user interfaces": "else",
+            "Java": "program language",
+            "Weka 3": "product"
+        }
+    },
+    {
+        "sentence": "Eurisko made many interesting discoveries and enjoyed significant acclaim , with his paper Heuretics : Theoretical and Study of Heuristic Rules winning the Best Paper award at the 1982 Association for the Advancement of Artificial Intelligence .",
+        "entity_list": {
+            "Eurisko": "product",
+            "Heuretics : Theoretical and Study of Heuristic Rules": "else",
+            "Best Paper award": "else",
+            "1982 Association for the Advancement of Artificial Intelligence": "conference"
+        }
+    },
+    {
+        "sentence": "To allow for multiple entities , a separate Hinge loss is computed for each capsule .",
+        "entity_list": {
+            "Hinge loss": "metrics"
+        }
+    },
+    {
+        "sentence": "With the emergence of conversational assistants such as Apple 's Siri , Amazon Alexa , Google Assistant , Microsoft Cortana , and Samsung 's Bixby , Voice Portals can now be accessed through mobile devices and Far Field voice smart speakers such as the Amazon Echo and Google Home .",
+        "entity_list": {
+            "Apple 's Siri": "product",
+            "Amazon Alexa": "product",
+            "Google Assistant": "product",
+            "Microsoft Cortana": "product",
+            "Samsung 's Bixby": "product",
+            "Voice Portals": "product",
+            "Far Field voice smart speakers": "product",
+            "Amazon Echo": "product",
+            "Google Home": "product"
+        }
+    },
+    {
+        "sentence": "Examples of supervised learning are Naive Bayes classifier , Support vector machine , mixtures of Gaussians , and network .",
+        "entity_list": {
+            "supervised learning": "field",
+            "Naive Bayes classifier": "algorithm",
+            "Support vector machine": "algorithm",
+            "mixtures of Gaussians": "algorithm",
+            "network": "algorithm"
+        }
+    },
+    {
+        "sentence": "One can use the OSD algorithm to derive math O ( \\ sqrt { T } ) / math regret bounds for the online version of Support vector machine for classification , which use the hinge loss math v _ t ( w ) = \\ max \\ { 0 , 1 - y _ t ( w \\ cdot x _ t ) \\ } / math",
+        "entity_list": {
+            "OSD algorithm": "algorithm",
+            "Support vector machine": "algorithm",
+            "classification": "task",
+            "hinge loss": "metrics"
+        }
+    },
+    {
+        "sentence": "Applications include object recognition , robotic mapping and navigation , image stitching , 3D modeling , gesture recognition , video tracking , individual identification of wildlife and match moving .",
+        "entity_list": {
+            "object recognition": "task",
+            "robotic mapping": "task",
+            "navigation": "task",
+            "image stitching": "task",
+            "3D modeling": "task",
+            "gesture recognition": "task",
+            "video tracking": "task",
+            "individual identification of wildlife": "task",
+            "match moving": "task"
+        }
+    },
+    {
+        "sentence": "A number of groups and companies are researching pose estimation , including groups at Brown University , Carnegie Mellon University , MPI Saarbruecken , Stanford University , the University of California , San Diego , the University of Toronto , the École Centrale Paris , ETH Zurich , National University of Sciences and Technology ( NUST ) , and the University of California , Irvine .",
+        "entity_list": {
+            "pose estimation": "task",
+            "Brown University": "university",
+            "Carnegie Mellon University": "university",
+            "MPI Saarbruecken": "university",
+            "Stanford University": "university",
+            "University of California , San Diego": "university",
+            "University of Toronto": "university",
+            "École Centrale Paris": "university",
+            "ETH Zurich": "university",
+            "National University of Sciences and Technology": "university",
+            "NUST": "university",
+            "University of California , Irvine": "university"
+        }
+    },
+    {
+        "sentence": "Sigmoid function Cross entropy loss is used for predicting K independent probability values in math 0,1 / math .",
+        "entity_list": {
+            "Sigmoid function Cross entropy loss": "metrics"
+        }
+    },
+    {
+        "sentence": "He held the Johann Bernoulli Chair of Mathematics and Informatics at the University of Groningen in the Netherlands , and the Toshiba Endowed Chair at the Tokyo Institute of Technology in Japan before becoming Professor at Cambridge .",
+        "entity_list": {
+            "Johann Bernoulli Chair": "else",
+            "Mathematics": "field",
+            "Informatics": "field",
+            "University of Groningen": "university",
+            "Netherlands": "country",
+            "Toshiba Endowed Chair": "else",
+            "Tokyo Institute of Technology": "university",
+            "Japan": "country",
+            "Cambridge": "university"
+        }
+    },
+    {
+        "sentence": "Another technique particularly used for recurrent neural network s is the long short-term memory ( LSTM ) network of 1997 by Sepp Hochreiter & Jürgen Schmidhuber .",
+        "entity_list": {
+            "recurrent neural network": "algorithm",
+            "long short-term memory": "algorithm",
+            "LSTM": "algorithm",
+            "Sepp Hochreiter": "researcher",
+            "Jürgen Schmidhuber": "researcher"
+        }
+    },
+    {
+        "sentence": "The inclusion of a C + + interpreter ( CINT until version 5.34 , Cling from version 6 ) makes this package very versatile as it can be used in interactive , scripted and compiled modes in a manner similar to commercial products like MATLAB .",
+        "entity_list": {
+            "C + +": "program language",
+            "CINT": "product",
+            "Cling": "product",
+            "MATLAB": "product"
+        }
+    },
+    {
+        "sentence": "Voice user interfaces that interpret and manage conversational state are challenging to design due to the inherent difficulty of integrating complex natural language processing tasks like coreference resolution , named-entity recognition , information retrieval , and dialog management .",
+        "entity_list": {
+            "Voice user interfaces": "product",
+            "natural language processing": "field",
+            "coreference resolution": "task",
+            "named-entity recognition": "task",
+            "information retrieval": "task",
+            "dialog management": "task"
+        }
+    },
+    {
+        "sentence": "Between 2009 and 2012 , the recurrent neural network s and deep feedforward neural network s developed in the research group of Jürgen Schmidhuber at the Swiss AI Lab IDSIA have won eight international competitions in pattern recognition and machine learning .",
+        "entity_list": {
+            "recurrent neural network": "algorithm",
+            "deep feedforward neural network": "algorithm",
+            "Jürgen Schmidhuber": "researcher",
+            "Swiss AI Lab IDSIA": "organization",
+            "pattern recognition": "field",
+            "machine learning": "field"
+        }
+    },
+    {
+        "sentence": "Modern Windows desktop systems can use SAPI 4 and SAPI 5 components to support speech synthesis and speech .",
+        "entity_list": {
+            "Windows desktop systems": "product",
+            "SAPI 4": "product",
+            "SAPI 5": "product",
+            "speech synthesis": "task",
+            "speech": "task"
+        }
+    },
+    {
+        "sentence": "He received two honorary degree s , one S. V. della laurea ad honorem in Psychology from the University of Padua in 1995 and one doctorate in Industrial Design and Engineering from Delft University of Technology .",
+        "entity_list": {
+            "S. V. della laurea ad honorem": "else",
+            "Psychology": "field",
+            "University of Padua": "university",
+            "Industrial Design and Engineering": "field",
+            "Delft University of Technology": "university"
+        }
+    },
+    {
+        "sentence": "With long-time collaborator Laurent Cohen , a neurologist at the Pitié-Salpêtrière Hospital in Paris , Dehaene also identified patients with lesions in different regions of the parietal lobe with impaired multiplication , but preserved subtraction ( associated with lesions of the inferior parietal lobule ) and others with impaired subtraction , but preserved multiplication ( associated with lesions to the intraparietal sulcus ) .",
+        "entity_list": {
+            "Laurent Cohen": "researcher",
+            "Pitié-Salpêtrière Hospital": "organization",
+            "Paris": "location",
+            "Dehaene": "researcher",
+            "parietal lobe": "else",
+            "inferior parietal lobule": "else",
+            "intraparietal sulcus": "else"
+        }
+    },
+    {
+        "sentence": "More recently , fictional representations of artificially intelligent robots in films such as A.I. Artificial Intelligence and Ex Machina and the 2016 TV adaptation of Westworld have engaged audience sympathy for the robots themselves .",
+        "entity_list": {
+            "artificially intelligent robots": "product",
+            "A.I. Artificial Intelligence": "else",
+            "Ex Machina": "else",
+            "Westworld": "else"
+        }
+    },
+    {
+        "sentence": "Two of the main methods used in unsupervised learning are principal component analysis and cluster analysis .",
+        "entity_list": {
+            "unsupervised learning": "field",
+            "principal component analysis": "algorithm",
+            "cluster analysis": "task"
+        }
+    },
+    {
+        "sentence": "The Walt Disney Company also began more prominent use of 3D films in special venues to impress audiences with Magic Journeys ( 1982 ) and Captain EO ( Francis Ford Coppola , 1986 , starring Michael Jackson ) being notable examples .",
+        "entity_list": {
+            "The Walt Disney Company": "organization",
+            "Magic Journeys": "else",
+            "Captain EO": "else",
+            "Francis Ford Coppola": "person",
+            "Michael Jackson": "person"
+        }
+    },
+    {
+        "sentence": "Since 2002 , perceptron training has become popular in the field of natural language processing for such tasks as part-of-speech tagging and syntactic parsing ( Collins , 2002 ) .",
+        "entity_list": {
+            "natural language processing": "field",
+            "part-of-speech tagging": "task",
+            "syntactic parsing": "task",
+            "Collins": "researcher"
+        }
+    },
+    {
+        "sentence": "The first palletizing robot was introduced in 1963 by the Fuji Yusoki Kogyo Company. by KUKA robotics in Germany , and the Programmable Universal Machine for Assembly was invented by Victor Scheinman in 1976 , and the design was sold to Unimation .",
+        "entity_list": {
+            "palletizing robot": "product",
+            "Fuji Yusoki Kogyo Company.": "organization",
+            "KUKA robotics": "organization",
+            "Germany": "country",
+            "Programmable Universal Machine for Assembly": "product",
+            "Victor Scheinman": "researcher",
+            "Unimation": "organization"
+        }
+    },
+    {
+        "sentence": "In the middle of the 1990s , while serving as president of the AAAI , Hayes began a series of attacks on critics of AI , mostly phrased in an ironic light , and ( together with his colleague Kenneth Ford ) invented an award named after Simon Newcomb to be given for the most ridiculous argument disproving the possibility of AI .",
+        "entity_list": {
+            "AAAI": "conference",
+            "Hayes": "researcher",
+            "AI": "field",
+            "Kenneth Ford": "researcher",
+            "Simon Newcomb": "researcher"
+        }
+    },
+    {
+        "sentence": "An optimal value for math \\ alpha / math can be found by using a line search algorithm , that is , the magnitude of math \\ alpha / math is determined by finding the value that minimizes S , usually using a line search in the interval math0 \\ alpha 1 / math or a backtracking line search such as Armijo-line search .",
+        "entity_list": {
+            "line search algorithm": "algorithm",
+            "line search": "algorithm",
+            "backtracking line search": "algorithm",
+            "Armijo-line search": "algorithm"
+        }
+    },
+    {
+        "sentence": "He discusses Breadth-first search and Depth-first search techniques , but eventually concludes that the results represent expert system s that incarnate a lot of technical knowledge but don 't shine much light on the mental processes that humans use to solve such puzzles .",
+        "entity_list": {
+            "Breadth-first search": "algorithm",
+            "Depth-first search": "algorithm",
+            "expert system": "product"
+        }
+    },
+    {
+        "sentence": "Speech recognition and speech synthesis deal with how spoken language can be understood or created using computers .",
+        "entity_list": {
+            "Speech recognition": "task",
+            "speech synthesis": "task"
+        }
+    },
+    {
+        "sentence": "This math \\ theta ^ { * } / math is normally estimated using a Maximum Likelihood ( math \\ theta ^ { * } = \\ theta ^ { ML } / math ) or Maximum A Posteriori ( math \\ theta ^ { * } = \\ theta ^ { MAP } / math ) procedure .",
+        "entity_list": {
+            "Maximum Likelihood": "algorithm",
+            "Maximum A Posteriori": "algorithm",
+            "MAP": "algorithm"
+        }
+    },
+    {
+        "sentence": "Some less widely spoken languages use the open-source eSpeak synthesizer for their speech ; producing a robotic , awkward voice that may be difficult to understand .",
+        "entity_list": {
+            "eSpeak synthesizer": "product"
+        }
+    },
+    {
+        "sentence": "Although used mainly by statisticians and other practitioners requiring an environment for statistical computation and software development , R can also operate as a general matrix calculation toolbox - with performance benchmarks comparable to GNU Octave or MATLAB .",
+        "entity_list": {
+            "R": "program language",
+            "GNU Octave": "program language",
+            "MATLAB": "product"
+        }
+    },
+    {
+        "sentence": "Heterodyning is a signal processing technique invented by Canadian inventor-engineer Reginald Fessenden that creates new frequencies by combining mixing two frequencies .",
+        "entity_list": {
+            "Heterodyning": "algorithm",
+            "signal processing": "field",
+            "Canadian": "else",
+            "Reginald Fessenden": "researcher"
+        }
+    },
+    {
+        "sentence": "Several other features that helped put 3D back on the map that month were the John Wayne feature Hondo ( distributed by Warner Bros. ) , Columbia 's Miss Sadie Thompson with Rita Hayworth , and Paramount 's Money From Home with Dean Martin and Jerry Lewis .",
+        "entity_list": {
+            "John Wayne": "person",
+            "Hondo": "else",
+            "Warner Bros.": "organization",
+            "Columbia": "organization",
+            "Miss Sadie Thompson": "else",
+            "Rita Hayworth": "person",
+            "Paramount": "organization",
+            "Money From Home": "else",
+            "Dean Martin": "person",
+            "Jerry Lewis": "person"
+        }
+    },
+    {
+        "sentence": "DeepFace is a deep learning facial recognition system created by a research group at Facebook .",
+        "entity_list": {
+            "DeepFace": "product",
+            "deep learning": "field",
+            "facial recognition": "task",
+            "Facebook": "organization"
+        }
+    },
+    {
+        "sentence": "Geometry processing is a common research topic at SIGGRAPH , the premier computer graphics academic conference , and the main topic of the annual Symposium on Geometry Processing .",
+        "entity_list": {
+            "Geometry processing": "field",
+            "SIGGRAPH": "conference",
+            "computer graphics": "field",
+            "Symposium on Geometry Processing": "conference"
+        }
+    },
+    {
+        "sentence": "Feature extraction and dimension reduction can be combined in one step using Principal Component Analysis ( PCA ) , linear discriminant analysis ( LDA ) , or canonical correlation analysis ( CCA ) techniques as a pre-processing step , followed by clustering by k -NN on feature vectors in reduced-dimension space .",
+        "entity_list": {
+            "Feature extraction": "task",
+            "dimension reduction": "task",
+            "Principal Component Analysis": "algorithm",
+            "PCA": "algorithm",
+            "linear discriminant analysis": "algorithm",
+            "LDA": "algorithm",
+            "canonical correlation analysis": "algorithm",
+            "CCA": "algorithm",
+            "pre-processing": "else",
+            "k -NN": "algorithm"
+        }
+    },
+    {
+        "sentence": "Artificial neural networks are computational models that excel at machine learning and pattern recognition .",
+        "entity_list": {
+            "Artificial neural networks": "algorithm",
+            "machine learning": "field",
+            "pattern recognition": "field"
+        }
+    },
+    {
+        "sentence": ", C. Papageorgiou and T. Poggio , A Trainable Pedestrian Detection system , International Journal of Computer Vision ( IJCV ) , pages 1 : 15-33 , 2000 others uses local features like histogram of oriented gradients N. Dalal , B. Triggs , Histograms of oriented gradients for human detection , IEEE Computer Society Conference on Computer Vision and Pattern Recognition ( CVPR ) , pages 1 : 886-893 , 2005 descriptors .",
+        "entity_list": {
+            "C. Papageorgiou": "researcher",
+            "T. Poggio": "researcher",
+            "Trainable Pedestrian Detection system": "product",
+            "International Journal of Computer Vision": "conference",
+            "IJCV": "conference",
+            "histogram of oriented gradients": "algorithm",
+            "N. Dalal": "researcher",
+            "B. Triggs": "researcher",
+            "Histograms of oriented gradients": "algorithm",
+            "human detection": "task",
+            "IEEE Computer Society Conference on Computer Vision and Pattern Recognition": "conference",
+            "CVPR": "conference"
+        }
+    },
+    {
+        "sentence": "An autoencoder is a type of artificial neural network used to learn Feature learning in an unsupervised learning manner .",
+        "entity_list": {
+            "autoencoder": "algorithm",
+            "artificial neural network": "algorithm",
+            "Feature learning": "task",
+            "unsupervised learning": "field"
+        }
+    },
+    {
+        "sentence": "Haralick is a Fellow of IEEE for his contributions in computer vision and image processing and a Fellow of the International Association for Pattern Recognition ( IAPR ) for his contributions in pattern recognition , image processing , and for service to IAPR .",
+        "entity_list": {
+            "Haralick": "researcher",
+            "IEEE": "organization",
+            "computer vision": "field",
+            "image processing": "field",
+            "International Association for Pattern Recognition": "organization",
+            "IAPR": "organization",
+            "pattern recognition": "field"
+        }
+    },
+    {
+        "sentence": "The first attempt at end-to-end ASR was with Connectionist Temporal Classification ( CTC ) -based systems introduced by Alex Graves of Google DeepMind and Navdeep Jaitly of the University of Toronto in 2014 .",
+        "entity_list": {
+            "end-to-end ASR": "task",
+            "Connectionist Temporal Classification": "algorithm",
+            "CTC": "algorithm",
+            "Alex Graves": "researcher",
+            "Google DeepMind": "organization",
+            "Navdeep Jaitly": "researcher",
+            "University of Toronto": "university"
+        }
+    },
+    {
+        "sentence": "Linear-fractional programming ( LFP ) is a generalization of linear programming ( LP ) .",
+        "entity_list": {
+            "Linear-fractional programming": "algorithm",
+            "LFP": "algorithm",
+            "linear programming": "algorithm",
+            "LP": "algorithm"
+        }
+    },
+    {
+        "sentence": "Lafferty received numerous awards , including two Test-of-Time awards at the International Conference on Machine Learning 2011 & 2012 ,",
+        "entity_list": {
+            "Lafferty": "researcher",
+            "Test-of-Time awards": "else",
+            "International Conference on Machine Learning 2011 & 2012": "conference"
+        }
+    },
+    {
+        "sentence": "With the advent of component-based frameworks such as .NET and Java , component based development environments are capable of deploying the developed neural network to these frameworks as inheritable components .",
+        "entity_list": {
+            ".NET": "product",
+            "Java": "program language",
+            "neural network": "algorithm"
+        }
+    },
+    {
+        "sentence": "As with BLEU , the basic unit of evaluation is the sentence , the algorithm first creates an alignment ( see illustrations ) between two sentence s , the candidate translation string , and the reference translation string .",
+        "entity_list": {
+            "BLEU": "metrics"
+        }
+    },
+    {
+        "sentence": "One of the metrics used in NIST ' s annual Document Understanding Conferences , in which research groups submit their systems for both summarization and translation tasks , is the ROUGE metric ( Recall-Oriented Understudy for Gisting Evaluation , In Advances of Neural Information Processing Systems ( NIPS ) , Montreal , Canada , December - 2014 .",
+        "entity_list": {
+            "NIST ' s annual Document Understanding Conferences": "conference",
+            "summarization": "task",
+            "translation tasks": "task",
+            "ROUGE metric": "metrics",
+            "Recall-Oriented Understudy for Gisting Evaluation": "metrics",
+            "Neural Information Processing Systems": "conference",
+            "NIPS": "conference",
+            "Montreal": "location",
+            "Canada": "country"
+        }
+    },
+    {
+        "sentence": "Same implementation , to run in Java with JShell ( Java 9 minimum ) : codejshell scriptfile / codesyntaxhighlight lang = java",
+        "entity_list": {
+            "Java": "program language",
+            "JShell": "product",
+            "Java 9": "program language",
+            "codejshell": "product"
+        }
+    },
+    {
+        "sentence": "The NIST metric is based on the BLEU metric , but with some alterations .",
+        "entity_list": {
+            "NIST metric": "metrics",
+            "BLEU metric": "metrics"
+        }
+    },
+    {
+        "sentence": "In the late 1980s , two Netherlands universities , University of Groningen and University of Twente , jointly began a project called Knowledge Graphs , which are semantic networks but with the added constraint that edges are restricted to be from a limited set of possible relations , to facilitate algebras on the graph .",
+        "entity_list": {
+            "Netherlands": "country",
+            "University of Groningen": "university",
+            "University of Twente": "university",
+            "Knowledge Graphs": "product",
+            "semantic networks": "algorithm"
+        }
+    },
+    {
+        "sentence": "Grammar checkers are most often implemented as a feature of a larger program , such as a word processor , but are also available as a stand-alone application that can be activated from within programs that work with editable text .",
+        "entity_list": {
+            "Grammar checkers": "product",
+            "word processor": "product"
+        }
+    },
+    {
+        "sentence": "He is a Fellow of the American Association for the Advancement of Science , Association for the Advancement Artificial Intelligence , and Cognitive Science Society , and an editor of the J. Automated Reasoning , J. Learning Sciences , and J. Applied Ontology .",
+        "entity_list": {
+            "American Association for the Advancement of Science": "organization",
+            "Association for the Advancement Artificial Intelligence": "conference",
+            "Cognitive Science Society": "organization",
+            "J. Automated Reasoning": "conference",
+            "J. Learning Sciences": "conference",
+            "J. Applied Ontology": "conference"
+        }
+    },
+    {
+        "sentence": "Linear predictive coding ( LPC ) , a form of speech coding , began development with the work Fumitada Itakura of Nagoya University and Shuzo Saito of Nippon Telegraph and Telephone ( NTT ) in 1966 .",
+        "entity_list": {
+            "Linear predictive coding": "algorithm",
+            "LPC": "algorithm",
+            "speech coding": "task",
+            "Fumitada Itakura": "researcher",
+            "Nagoya University": "university",
+            "Shuzo Saito": "researcher",
+            "Nippon Telegraph and Telephone": "university",
+            "NTT": "university"
+        }
+    },
+    {
+        "sentence": "If the signal is further ergodic , all sample paths exhibits the same time-average and thus mathR _ x ^ { n / T _ 0 } ( \\ tau ) = \\ widehat { R } _ x ^ { n / T _ 0 } ( \\ tau ) / math in mean square error sense .",
+        "entity_list": {
+            "mean square error": "metrics"
+        }
+    },
+    {
+        "sentence": "Feature extraction and dimension reduction can be combined in one step using principal component analysis ( PCA ) , linear discriminant analysis ( LDA ) , canonical correlation analysis ( CCA ) , or non-negative matrix factorization ( NMF ) techniques as a pre-processing step followed by clustering by K-NN on feature vectors in reduced-dimension space .",
+        "entity_list": {
+            "Feature extraction": "task",
+            "dimension reduction": "task",
+            "principal component analysis": "algorithm",
+            "PCA": "algorithm",
+            "linear discriminant analysis": "algorithm",
+            "LDA": "algorithm",
+            "canonical correlation analysis": "algorithm",
+            "CCA": "algorithm",
+            "non-negative matrix factorization": "algorithm",
+            "NMF": "algorithm",
+            "pre-processing step": "else",
+            "K-NN": "algorithm",
+            "feature vectors": "else"
+        }
+    },
+    {
+        "sentence": "Libraries written in Perl , Java , ActiveX or .NET can be directly called from MATLAB ,",
+        "entity_list": {
+            "Perl": "program language",
+            "Java": "program language",
+            "ActiveX": "program language",
+            ".NET": "program language",
+            "MATLAB": "product"
+        }
+    },
+    {
+        "sentence": "The task of recognizing named entities in text is Named Entity Recognition while the task of determining the identity of the named entities mentioned in text is called Entity Linking .",
+        "entity_list": {
+            "recognizing named entities in text": "task",
+            "Named Entity Recognition": "task",
+            "Entity Linking": "task"
+        }
+    },
+    {
+        "sentence": "The sigmoid function s and derivatives used in the package were originally included in the package , from version 0.8.0 onwards , these were released in a separate R package sigmoid , with the intention to enable more general use .",
+        "entity_list": {
+            "sigmoid function": "algorithm",
+            "R": "program language",
+            "sigmoid": "algorithm"
+        }
+    },
+    {
+        "sentence": "Logo was created in 1967 at Bolt , Beranek and Newman ( BBN ) , a Cambridge , Massachusetts research firm , by Wally Feurzeig , Cynthia Solomon , and Seymour Papert .",
+        "entity_list": {
+            "Logo": "program language",
+            "Bolt , Beranek and Newman": "organization",
+            "BBN": "organization",
+            "Cambridge": "university",
+            "Massachusetts": "university",
+            "Wally Feurzeig": "researcher",
+            "Cynthia Solomon": "researcher",
+            "Seymour Papert": "researcher"
+        }
+    },
+    {
+        "sentence": "Neuroevolution is commonly used as part of the reinforcement learning paradigm , and it can be contrasted with conventional deep learning techniques that use gradient descent on a neural network with a fixed topology .",
+        "entity_list": {
+            "Neuroevolution": "else",
+            "reinforcement learning": "field",
+            "deep learning": "field",
+            "gradient descent": "algorithm",
+            "neural network": "algorithm"
+        }
+    },
+    {
+        "sentence": "If we use least squares to fit a function in the form of a hyperplane ŷ = a + β supT / sup x to the data ( x sub i / sub , y sub i / sub ) sub 1 ≤ i ≤ n / sub , we could then assess the fit using the mean squared error ( MSE ) .",
+        "entity_list": {
+            "least squares": "algorithm",
+            "mean squared error": "metrics",
+            "MSE": "metrics"
+        }
+    },
+    {
+        "sentence": "The company has international locations in Australia , Brazil , Canada , China , Germany , India , Italy , Japan , Korea , Lithuania , Poland , Malaysia , the Philippines , Russia , Singapore , South Africa , Spain , Taiwan , Thailand , Turkey and the United Kingdom .",
+        "entity_list": {
+            "Australia": "country",
+            "Brazil": "country",
+            "Canada": "country",
+            "China": "country",
+            "Germany": "country",
+            "India": "country",
+            "Italy": "country",
+            "Japan": "country",
+            "Korea": "country",
+            "Lithuania": "country",
+            "Poland": "country",
+            "Malaysia": "country",
+            "Philippines": "country",
+            "Russia": "country",
+            "Singapore": "country",
+            "South Africa": "country",
+            "Spain": "country",
+            "Taiwan": "country",
+            "Thailand": "country",
+            "Turkey": "country",
+            "United Kingdom": "country"
+        }
+    },
+    {
+        "sentence": "He holds a D.Sc. degree in electrical and computer engineering ( 2000 ) from Inria and the University of Nice Sophia Antipolis , and has held permanent positions at Siemens Corporate Technology , École des ponts ParisTech as well as visiting positions at Rutgers University , Yale University and University of Houston .",
+        "entity_list": {
+            "D.Sc. degree": "else",
+            "electrical and computer engineering": "field",
+            "Inria": "organization",
+            "University of Nice Sophia Antipolis": "university",
+            "Siemens Corporate Technology": "organization",
+            "École des ponts ParisTech": "university",
+            "Rutgers University": "university",
+            "Yale University": "university",
+            "University of Houston": "university"
+        }
+    },
+    {
+        "sentence": "Licensing the original patent awarded to inventor George Devol , Engelberger developed the first industrial robot in the United States , the Unimate , in the 1950s .",
+        "entity_list": {
+            "George Devol": "researcher",
+            "Engelberger": "researcher",
+            "industrial robot": "product",
+            "United States": "country",
+            "Unimate": "product"
+        }
+    },
+    {
+        "sentence": "The input is called speech recognition and the output is called speech synthesis .",
+        "entity_list": {
+            "speech recognition": "task",
+            "speech synthesis": "task"
+        }
+    },
+    {
+        "sentence": "Descendants of the CLIPS language include Jess ( rule-based portion of CLIPS rewritten in Java , it later grew up in different direction ) , JESS was originally inspired",
+        "entity_list": {
+            "CLIPS": "program language",
+            "Jess": "program language",
+            "Java": "program language",
+            "JESS": "program language"
+        }
+    },
+    {
+        "sentence": "It also created flexible intelligent AGV applications , designing the Motivity control system used by RMT Robotics to develop its ADAM iAGV ( Self-Guided Vehicle ) , used for complex pick and place operations , in conjunction with gantry systems and industrial robot arms , used in first-tier auto supply factories to move products from process to process in non-linear layouts .",
+        "entity_list": {
+            "AGV": "product",
+            "Motivity control system": "product",
+            "RMT Robotics": "organization",
+            "ADAM iAGV": "product",
+            "gantry systems": "product",
+            "industrial robot arms": "product",
+            "non-linear layouts": "else"
+        }
+    },
+    {
+        "sentence": "The parameters β are typically estimated by maximum likelihood .",
+        "entity_list": {
+            "maximum likelihood": "metrics"
+        }
+    },
+    {
+        "sentence": "The information retrieval metrics such as precision and recall or DCG are useful to assess the quality of a recommendation method .",
+        "entity_list": {
+            "information retrieval": "task",
+            "precision": "metrics",
+            "recall": "metrics",
+            "DCG": "metrics"
+        }
+    },
+    {
+        "sentence": "A typical factory contains hundreds of industrial robot s working on fully automated production lines , with one robot for every ten human workers .",
+        "entity_list": {
+            "industrial robot": "product"
+        }
+    },
+    {
+        "sentence": "Over the past decade , PCNNs have been used in a variety of image processing applications , including : image segmentation , feature generation , face extraction , motion detection , region growing , and noise reduction .",
+        "entity_list": {
+            "PCNNs": "product",
+            "image processing": "field",
+            "image segmentation": "task",
+            "feature generation": "task",
+            "face extraction": "task",
+            "motion detection": "task",
+            "region growing": "task",
+            "noise reduction": "task"
+        }
+    },
+    {
+        "sentence": "Xu has published more than 50 papers at international conferences and in journals in the field of computer vision and won the Best Paper Award at the international conference on Non-Photorealistic Rendering and Animation ( NPAR ) 2012 and the Best Reviewer Award at the international conferences Asian Conference on Computer Vision ACCV 2012 and International Conference on Computer Vision ( ICCV ) 2015 .",
+        "entity_list": {
+            "Xu": "researcher",
+            "computer vision": "field",
+            "Best Paper Award": "else",
+            "international conference on Non-Photorealistic Rendering and Animation": "conference",
+            "NPAR": "conference",
+            "Best Reviewer Award": "else",
+            "international conferences Asian Conference on Computer Vision": "conference",
+            "ACCV 2012": "conference",
+            "International Conference on Computer Vision": "conference",
+            "ICCV": "conference"
+        }
+    },
+    {
+        "sentence": "CycL in computer science and artificial intelligence is an ontology language used by Doug Lenat 's Cyc artificial project .",
+        "entity_list": {
+            "CycL": "program language",
+            "computer science": "field",
+            "artificial intelligence": "field",
+            "ontology language": "else",
+            "Doug Lenat": "researcher",
+            "Cyc artificial project": "else"
+        }
+    },
+    {
+        "sentence": "Also in regression analysis , mean squared error , often referred to as mean squared prediction error or out-of-sample mean squared error , can refer to the mean value of the squared deviations of the predictions from the TRUE values , over an out-of-sample test space , generated by a model estimated over a particular sample space .",
+        "entity_list": {
+            "regression analysis": "task",
+            "mean squared error": "metrics",
+            "mean squared prediction error": "metrics",
+            "out-of-sample mean squared error": "metrics",
+            "squared deviations": "else"
+        }
+    },
+    {
+        "sentence": "As for the results , the C-HOG and R-HOG block descriptors perform comparably , with the C-HOG descriptors maintaining a slight advantage in the detection miss rate at fixed FALSE positive rate s across both data sets .",
+        "entity_list": {
+            "C-HOG": "algorithm",
+            "R-HOG": "algorithm",
+            "C-HOG descriptors": "algorithm",
+            "FALSE positive rate": "metrics"
+        }
+    },
+    {
+        "sentence": "Popular recognition algorithms include principal component analysis using eigenface s , linear discriminant analysis , Elastic matching using the Fisherface algorithm , the hidden Markov model , the multilinear subspace learning using tensor representation , and the neuronal motivated dynamic link matching .",
+        "entity_list": {
+            "principal component analysis": "algorithm",
+            "eigenface": "else",
+            "linear discriminant analysis": "algorithm",
+            "Elastic matching": "algorithm",
+            "Fisherface algorithm": "algorithm",
+            "hidden Markov model": "algorithm",
+            "multilinear subspace learning": "algorithm",
+            "tensor representation": "else",
+            "dynamic link matching": "algorithm"
+        }
+    },
+    {
+        "sentence": "Beginning at the 2019 Toronto International Film Festival , films may now be restricted from screening at Scotiabank Theatre Toronto - one of the festival 's main venues - and screened elsewhere ( such as TIFF Bell Lightbox and other local cinemas ) if distributed by a service such as Netflix .",
+        "entity_list": {
+            "2019 Toronto International Film Festival": "else",
+            "Scotiabank Theatre Toronto": "location",
+            "TIFF Bell Lightbox": "location",
+            "Netflix": "organization"
+        }
+    },
+    {
+        "sentence": "Unimation purchased Victor Scheinman ' s Vicarm Inc. in 1977 , and with Scheinman 's help , the company created and began producing the Programmable Universal Machine for Assembly , a new model of robotic arm , and using Scheinman 's cutting-edge VAL programming language .",
+        "entity_list": {
+            "Unimation": "organization",
+            "Victor Scheinman": "researcher",
+            "Vicarm Inc.": "organization",
+            "Scheinman": "researcher",
+            "Programmable Universal Machine for Assembly": "product",
+            "VAL programming language": "program language"
+        }
+    },
+    {
+        "sentence": "J48 is an open source Java implementation of the C4.5 algorithm in the Weka data mining tool .",
+        "entity_list": {
+            "J48": "product",
+            "Java": "program language",
+            "C4.5 algorithm": "algorithm",
+            "Weka data mining tool": "product"
+        }
+    },
+    {
+        "sentence": "The 2004 SSIM paper has been cited over 20,000 times according to Google Scholar , It also received the IEEE Signal Processing Society Sustained Impact Award for 2016 , indicative of a paper having an unusually high impact for at least 10 years following its publication .",
+        "entity_list": {
+            "SSIM": "metrics",
+            "Google Scholar": "product",
+            "IEEE Signal Processing Society Sustained Impact Award": "else"
+        }
+    },
+    {
+        "sentence": "The speech synthesis is verging on being completely indistinguishable from a real human 's voice with the 2016 introduction of the voice editing and generation software Adobe Voco , a prototype slated to be a part of the Adobe Creative Suite and DeepMind WaveNet , a prototype from Google .",
+        "entity_list": {
+            "speech synthesis": "task",
+            "Adobe Voco": "product",
+            "Adobe Creative Suite": "product",
+            "DeepMind": "organization",
+            "WaveNet": "product",
+            "Google": "organization"
+        }
+    },
+    {
+        "sentence": "Poggio is an honorary member of the Neuroscience Research Program , a member of the American Academy of Arts and Sciences and a founding fellow of AAAI and a founding member of the McGovern Institute for Brain Research .",
+        "entity_list": {
+            "Poggio": "researcher",
+            "Neuroscience Research Program": "organization",
+            "American Academy of Arts and Sciences": "organization",
+            "AAAI": "conference",
+            "McGovern Institute for Brain Research": "organization"
+        }
+    },
+    {
+        "sentence": "During the 1990s , encouraged by successes in speech recognition and speech synthesis , research began into speech translation with the development of the German Verbmobil project .",
+        "entity_list": {
+            "speech recognition": "task",
+            "speech synthesis": "task",
+            "speech translation": "task",
+            "German": "else",
+            "Verbmobil project": "else"
+        }
+    },
+    {
+        "sentence": "In 1999 , Felix Gers and his advisor Jürgen Schmidhuber and Fred Cummins introduced the forget gate ( also called keep gate ) into LSTM architecture ,",
+        "entity_list": {
+            "Felix Gers": "researcher",
+            "Jürgen Schmidhuber": "researcher",
+            "Fred Cummins": "researcher",
+            "forget gate": "algorithm",
+            "keep gate": "algorithm",
+            "LSTM": "algorithm"
+        }
+    },
+    {
+        "sentence": "In digital signal processing and information theory , the normalized sinc function is commonly defined for by",
+        "entity_list": {
+            "digital signal processing": "field",
+            "information theory": "field",
+            "normalized sinc function": "algorithm"
+        }
+    },
+    {
+        "sentence": "The term computational linguistics itself was first coined by David Hays , a founding member of both the Association for Computational Linguistics and the International Committee on Computational Linguistics ( ICCL ) .",
+        "entity_list": {
+            "computational linguistics": "field",
+            "David Hays": "researcher",
+            "Association for Computational Linguistics": "conference",
+            "International Committee on Computational Linguistics": "organization",
+            "ICCL": "organization"
+        }
+    },
+    {
+        "sentence": "59 , pp. 2547-2553 , Oct. 2011 In one dimensional polynomial-based memory ( or memoryless ) DPD , in order to solve for the digital pre-distorter polynomials coefficients and minimize the mean squared error ( MSE ) , the distorted output of the nonlinear system must be over-sampled at a rate that enables the capture of the nonlinear products of the order of the digital pre-distorter .",
+        "entity_list": {
+            "one dimensional polynomial-based memory": "else",
+            "DPD": "else",
+            "mean squared error": "metrics",
+            "MSE": "metrics"
+        }
+    },
+    {
+        "sentence": "Boris Katz , ( born October 5 , 1947 , Chișinău , Moldavian SSR , Soviet Union , ( now Chișinău , Moldova ) ) is a principal American research scientist ( computer scientist ) at the MIT Computer Science and Artificial Intelligence Laboratory at the Massachusetts Institute of Technology in Cambridge and head of the Laboratory 's InfoLab Group .",
+        "entity_list": {
+            "Boris Katz": "researcher",
+            "Chișinău": "location",
+            "Moldavian SSR": "location",
+            "Soviet Union": "country",
+            "Moldova": "country",
+            "MIT Computer Science and Artificial Intelligence Laboratory": "organization",
+            "Massachusetts Institute of Technology": "organization",
+            "Cambridge": "university",
+            "InfoLab Group": "organization"
+        }
+    }
+]

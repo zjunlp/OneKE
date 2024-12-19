@@ -1,0 +1,24 @@
+llm:
+  language: en
+  name_or_path: /disk/disk_20T/share/Llama-3-8B-Instruct
+
+agent:
+  default_schema: Return your extraction result in JSON format.
+  default_ner: Extract the Named Entities in the given text.
+  default_re: Extract Relationships between Named Entities in the given text.
+  default_ee: Extract the Events in the given text.
+  chunk_token_limit: 1024
+  mode:
+    quick:
+      schema_agent: get_deduced_schema
+      extraction_agent: extract_information_direct
+    standard:
+      schema_agent: get_deduced_schema
+      extraction_agent: extract_information_with_case
+      reflection_agent: reflect_with_case
+    customized:
+      schema_agent:  get_retrieved_schema
+      extraction_agent: extract_information_direct
+      reflection_agent: reflect_with_case
+  update_case_repo: False
+    

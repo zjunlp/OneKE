@@ -1,0 +1,165 @@
+{
+    "Base": {
+        "instruction": {
+            "direct": {
+                "prompt": "You are an expert in information extraction. Extract all valid information from the given text.",
+                "examples": "",
+                "output_format": "Return your response in dictionary format as a JSON object."
+            },
+            "iterative": ""
+        },
+        "schema": "",
+        "output_format": "Return your response in dictionary format as a JSON object.",
+        "reflection": [
+            "Completeness Check: Ensure that you have extracted all information in the given text that matches the schema definitionn. If there is any missing information, supplement it.",
+            "Accuracy Check: Compare your schema definition with the extraction results. Ensure that your extraction results conform to the schema definition. Remove or modify any parts that do not meet the schema definition."
+        ],
+        "thinking_process":{
+            "direct": {
+                "information_extractor": ["extract_schema_iterative"]
+            },
+            "fast-thinking": {
+                "task_parser": ["get_output_format"],
+                "information_extractor": ["extract_information_direct"],
+                "reflection_generator": ["get_format_reflection"]
+            },
+            "slow-thinking": {
+                "task_parser": ["get_output_format"],
+                "information_extractor": ["extract_information_direct"],
+                "reflection_generator": ["get_format_reflection", "get_rules_reflection"]
+            }
+        }
+    },
+    "NER": {
+        "instruction": {
+            "direct": {
+                "prompt": "You are an expert in named entity recognition. Based on the named entity types defined in the schema, extract all named entities from the given text. Return your responses in dictionary format as a JSON object. \n",
+                "examples": "",
+                "output_format": "{\"entity_list\": {\"entity1\": \"entity_type1\", \"entity2\": \"entity_type2\"}}"
+            },
+            "iterative": [
+                {
+                    "prompt": "You are an expert in named entity recoginition. Based on the entity types given in the schema, extract all the named entities included in the given text. ",
+                    "examples": "",
+                    "output_format": "{\"entity_list\": [\"entity1\", \"entity2\"]}"
+                },
+                {
+                    "prompt": "You are an expert in named entity recognition. Given the entity list in the **Result** below, assign the corresponding entity type defined in **Schema** to each entity. If there is no appropriate entity type in **Schema**, simply remove the entity.                    ",
+                    "examples": "",
+                    "output_format": "{\"entity_list\": {\"entity1\": \"entity_type1\", \"entity2\": \"entity_type2\"}}"
+                }
+            ]
+        },
+        "schema": "All entity types that appear in the text.",
+        "output_format": "{\"entity_list\": {\"entity1\": \"entity_type1\", \"entity2\": \"entity_type2\"}}",
+        "reflection":[
+            {
+                "rule": "Completeness Check: Ensure that you have extracted all named entities in the given text that matches the schema definition. If there is any missing entity name or entity type , supplement it. ",
+                "examples": "**Text**: Shortly thereafter , Bloch created the Damon Runyon -esque humorous series character Lefty Feep in the story Time Wounds All Heels Fantastic Adventures ( April 1942 ) . \n\n**Schema**: ['person', 'country', 'writer', 'else', 'book', 'award', 'literary genre', 'poem', 'location', 'magazine', 'event', 'organization'] \n\n**Result**: {\"entity_list\": {\"Damon Runyon\": \"writer\", \"Bloch\": \"writer\", \"Time Wounds All Heels\": \"book\", \"Fantastic Adventures\": \"magazine\"}} \n\n**Corrected Result**: \nAccording to the reflection rules, I found that there is an entity 'Lefty Feep' in the text that has not yet been extracted, and its corresponding entity type is 'person'. Therefore, I have supplemented the original answer, and the completed answer is: \n{\"entity_list\": {\"Damon Runyon\": \"writer\", \"Lefty Feep\": \"person\", \"Time Wounds All Heels\": \"book\", \"Fantastic Adventures\": \"magazine\"}}"
+            },
+            {
+                "rule": "Accuracy Check: Check the extracted entity types. Ensure that the extracted entity types are included in the schema definition. Remove entities whose entity type is not included in the schema.",
+                "examples": "**Text**: Shortly thereafter , Bloch created the Damon Runyon -esque humorous series character Lefty Feep in the story Time Wounds All Heels Fantastic Adventures ( April 1942 ) . \n\n**Schema**: ['person', 'country', 'writer', 'else', 'book', 'award', 'literary genre', 'poem', 'location', 'magazine', 'event', 'organization']  \n\n**Result**: {\"entity_list\": {\"Damon Runyon\": \"writer\", \"Lefty Feep\": \"person\", \"Time Wounds All Heels\": \"book\", \"Fantastic Adventures\": \"magazine\", \"April 1942\": \"date\"}}  \n\n**Corrected Result**:   \nAccording to the reflection rules, I found that there exists an entity type 'date' in the above extraction results that is not defined in the schema. Therefore, I removed that element from the original answer, and the modified answer is: \n{\"entity_list\": {\"Damon Runyon\": \"writer\", \"Lefty Feep\": \"person\", \"Time Wounds All Heels\": \"book\", \"Fantastic Adventures\": \"magazine\"}}"
+            },
+            {
+                "rule": "Accuracy Check: Check the correspondence between the entities and their types. If the entity and its type do not match, check the entity type list in the **Schema**. If there exists appropriate entity type in the **Schema**, update the entity type. If there is no appropriate entity type, remove that entity.",
+                "examples": "**Text**: Shortly thereafter , Bloch created the Damon Runyon -esque humorous series character Lefty Feep in the story Time Wounds All Heels Fantastic Adventures ( April 1942 ) . \n\n**Schema**: ['person', 'country', 'writer', 'else', 'book', 'award', 'literary genre', 'poem', 'location', 'magazine', 'event', 'organization'] \n\n**Result**: {\"entity_list\": {\"Damon Runyon\": \"writer\", \"Lefty Feep\": \"person\", \"Time Wounds All Heels\": \"magazine\", \"Fantastic Adventures\": \"magazine\", \"April 1942\": \"event\"}} \n\n**Corrected Result**: According to the reflection rules, I found that the entity 'Time Wounds All Heels' in the above extraction results should have the entity type 'book' instead of the current 'magazine'. Therefore, I need to change the type of that entity to 'book'. Additionally, I found that the entity 'April 1942' should not have the entity type 'event', and I could not find a suitable entity type in the schema, so I removed that element. Therefore, the modified answer is: \n{\"entity_list\": {\"Damon Runyon\": \"writer\", \"Lefty Feep\": \"person\", \"Time Wounds All Heels\": \"book\", \"Fantastic Adventures\": \"magazine\"}}"
+            }
+        ],
+        "thinking_process":{
+            "available":{
+                "TaskParser": ["get_deduced_schema", "get_detailed_schema"],
+                "InformationExtractor": ["extract_information_direct", "extract_information_with_examples", "extract_schema_iterative"],
+                "ReflectionGenerator": ["get_schema_reflection", "get_re_ask_reflection", "get_examples_reflection", "get_rules_reflection", "get_summarized_answer", "get_format_reflection", "generate_reflection_to_repository", "generate_example_to_repository"]
+            },
+            "direct": {
+                "information_extractor": ["extract_information_direct"]
+            },
+            "quick": {
+                "information_extractor": ["extract_information_with_examples"],
+                "ReflectionGenerator": ["get_examples_reflection"]
+            },
+            "another_quick": {
+                "information_extractor": ["extract_information_with_examples"],
+                "ReflectionGenerator": ["get_rules_reflection"]
+            },
+            "standard": {
+                "information_extractor": ["extract_information_with_examples"],
+                "ReflectionGenerator": ["get_examples_reflection", "get_rules_reflection"]
+            }
+        }
+    },
+    "RE": {
+        "instruction": {
+            "direct": {
+                "prompt": "You are an expert in relation extraction. Based on the relation types defined in the schema, extract relationships between entities in the given text. Return your response in dictionary format as a JSON object. ",
+                "examples": ""
+            },
+            "iterative": [
+                {
+                    "prompt": "You are an expert in relation extraction. Based on the relation types given in the schema, extract relations included in the given text. Pay attention to the following requirements:\n- Format: Return your responses in dictionary format as a JSON object. Output Format: \n{\"relation_list\": [\"relation1\", \"relation2\"]}.\n - Content: Ensure that all relations included in this given text have been extracted. Ignore relations that are not in the relation(schema) definition. Ignore relations that do not appear in the given text.",
+                    "examples": ""
+                },
+                {
+                    "prompt": "You are an expert in relation extraction. Based on the relation types given in the schema, generate explanation related to the relations in the given text, such as relevant people, items, time, location, etc. Pay attention to the following requirements:\n- Format: Return your responses in dictionary format as a JSON object. Output Format: \n{\"relation_list\": [{\"relation1\": [\"relevant_explanation\"]}, {\"relation2\": [\"relevant_explanation\"]}]}.\n ",
+                    "examples": ""
+                },
+                {
+                    "prompt": "You are an expert in relation extraction. Based on the relation types and relevant information given in the schema, extract the named entities associated with the relations in the given text. Pay attention to the following requirements: \n- Format: Return your responses in dictionary format as a JSON object. Output Format: \n{\"spo_list\": [{{\"subject\": \"xxx\", \"predicate\": \"xxx\", \"object\": \"xxx\"}}]}.\n 'predicate' represents the extracted relationship, and 'subject' and 'object' represent the associated named entities. \n- Content: Ignore relations that are not in the relation(schema) definition. Ignore relations that do not appear in the given text. \n- Note: Extracted named entities must have clear names appeared in the given text. If any relevant entity cannot be clearly identified, ignore that relation.",
+                    "examples": ""
+                }
+            
+            ]
+        },
+        "schema": "All relation types that appear in the text.",
+        "output_format": "{\"relation_list\": [{\"head\": \"entity1\", \"tail\": \"entity2\",  \"relation\": \"relation_type\"}]}",
+        "reflection":[
+            "Task Check: Ensure the extracted result meets the task description and output format, consisting of relation triples.",
+            "Completeness Check: Ensure that you have extracted all relations in the given text that matches the schema definition. If there is any missing relations, supplement it.",
+            "Accuracy Check: Confirm that the 'relation' is the most precise for the head and tail entities. Update it if a more accurate relation is available in the schema.",
+            "Accuracy Check: Ensure that the extracted relations are included in the schema definition. Remove triples where the relation is not included in the schema."
+        ],
+        "thinking_process":{
+            "available":{
+                "TaskParser": ["get_deduced_schema", "get_detailed_schema"],
+                "InformationExtractor": ["extract_information_direct", "extract_information_with_examples", "extract_schema_iterative"],
+                "ReflectionGenerator": ["get_schema_reflection", "get_re_ask_reflection", "get_examples_reflection", "get_rules_reflection", "get_summarized_answer", "get_format_reflection", "generate_reflection_to_repository", "generate_example_to_repository"]
+            },
+            "direct": {
+                "information_extractor": ["extract_information_direct"]
+            },
+            "quick": {
+                "information_extractor": ["extract_information_with_examples"],
+                "ReflectionGenerator": ["get_examples_reflection"]
+            },
+            "another_quick": {
+                "information_extractor": ["extract_information_with_examples"],
+                "ReflectionGenerator": ["get_rules_reflection"]
+            },
+            "standard": {
+                "information_extractor": ["extract_information_with_examples"],
+                "ReflectionGenerator": ["get_examples_reflection", "get_rules_reflection"]
+            },
+            "retrieve_samples": {
+                "information_extractor": ["extract_information_with_examples"]
+            },
+            "reflect_samples": {
+                "information_extractor": ["extract_information_direct"],
+                "reflection_generator": ["get_examples_reflection"]
+            },
+            "reflect_rules":{
+                "information_extractor": ["extract_information_direct"],
+                "reflection_generator": ["get_rules_reflection"]
+            },
+            "memory": {
+                "information_extractor": ["extract_information_direct"],
+                "reflection_generator": ["generate_reflection_to_repository", "generate_example_to_repository"]
+            }
+
+        }
+    },
+    "EE": {
+
+    }
+
+}
