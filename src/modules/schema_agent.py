@@ -74,9 +74,9 @@ class SchemaAgent:
         
     def __preprocess_text(self, data: DataPoint):
         if data.use_file:
-            data.chunk_text_list = chunk_file(data.text)
+            data.chunk_text_list = chunk_file(data.file_path)
         else:
-            data.chunk_text_list = chunk_str(data.fi)
+            data.chunk_text_list = chunk_str(data.text)
         return data
              
     def get_default_schema(self, data: DataPoint):
