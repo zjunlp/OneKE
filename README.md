@@ -1,14 +1,11 @@
+<img src="./figs/logo.png" width="300px">
 
-<div style="text-align: center;">
-  <img src="./figs/logo.png" alt="Logo" style="display: block; margin: 0 auto; max-width: 100%; height: auto; zoom: 50%;">
-</div>
-<h3 align="center"> A Dockerized Schema-Guided Knowledge Extraction System </h3>
+<h4 align="center"> A Dockerized Schema-Guided Knowledge Extraction System </h3>
 
 <p align="center">
   <a href="https://arxiv.org/">📄arXiv</a> •
   <a href="http://oneke.openkg.cn/">🌐Web</a>
 </p>
-
 
 ## Table of Contents
 
