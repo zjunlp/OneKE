@@ -1,5 +1,5 @@
 
-<img src="./figs/logo.png" alt="" style="zoom: 10%; display: block; margin: 0 auto;" />
+<img src="./figs/logo.png" alt="" style="zoom: 2%; display: block; margin: 0 auto;" />
 <h3 align="center"> A Dockerized Schema-Guided Knowledge Extraction System </h3>
 
 <p align="center">
