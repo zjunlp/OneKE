@@ -1,23 +1,3 @@
-schema_des_examples = """
-Schema: person, time, organization, location
-Answer: 
-{
-  "person": "identified individual",
-  "time": "event duration",
-  "organization": "goal-oriented group",
-  "location": "geographical point"
-}
-
-Schema: ["title", "content", "author", "date"]
-Answer:
-{
-  "Title": "document heading",
-  "Content": "primary text or info",
-  "Author": "creator of content",
-  "Date": "associated date"
-}
-"""
-
 json_schema_examples = """
 **Task**: Please extract all economic policies affecting the stock market between 2015 and 2023 and the exact dates of their implementation.
 **Text**: This text is from the field of Economics and represents the genre of Article.
@@ -34,7 +14,7 @@ json_schema_examples = """
 
 Example2:
 **Task**: Tell me the main content of papers related to NLP between 2022 and 2023.
-**Text**: This text is from the field of Chemistry and represents the genre of Research Paper.
+**Text**: This text is from the field of AI and represents the genre of Research Paper.
 ...(example text)...
 **Output Schema**:
 {
@@ -81,16 +61,16 @@ Example1:
 **Text**: 
 ...(example text)...
 **Output Schema**:
-```
+```python
 from typing import List, Optional
 from pydantic import BaseModel, Field
 
 class Entity(BaseModel):
-    label : str = Field("The type or category of the entity, such as 'Process', 'Technique', 'Data Structure', 'Methodology', 'Person', etc. ")
-    name : str = Field("The specific name of the entity. It should represent a single, distinct concept and must not be an empty string. For example, if the entity is a 'Technique', the name could be 'Neural Networks'.")
+    label : str = Field(description="The type or category of the entity, such as 'Process', 'Technique', 'Data Structure', 'Methodology', 'Person', etc. ")
+    name : str = Field(description="The specific name of the entity. It should represent a single, distinct concept and must not be an empty string. For example, if the entity is a 'Technique', the name could be 'Neural Networks'.")
     
 class ExtractionTarget(BaseModel):
-    entity_list : List[Entity] = Field("All the entities presented in the context. The entities should encode ONE concept.")
+    entity_list : List[Entity] = Field(description="All the entities presented in the context. The entities should encode ONE concept.")
 ```
 
 Example2: 
@@ -98,13 +78,14 @@ Example2:
 **Text**: This text is from the field of Political and represents the genre of News Article.
 ...(example text)...
 **Output Schema**:
-```
+```python
 from typing import List, Optional
 from pydantic import BaseModel, Field
 
 class Person(BaseModel):
     name: str = Field(description="The name of the person")
-    role: Optional[str] = Field(description="The role or occupation of the person in the event")
+    identity: Optional[str] = Field(description="The occupation, status or characteristics of the person.")
+    role: Optional[str] = Field(description="The role or function the person plays in an event.")
 
 class Event(BaseModel):
     name: str = Field(description="Name of the event")
@@ -126,21 +107,25 @@ class ExtractionTarget(BaseModel):
 
 Example3:
 **Task**: Extract the key information in the given text.
-**Text**: This text is from the field of AI and represents the genre of Academic Article.
+**Text**: This text is from the field of AI and represents the genre of Research Paper.
 ...(example text)...
-```
+```python
 from typing import List, Optional
 from pydantic import BaseModel, Field
 
+class MetaData(BaseModel):
+    title : str = Field(description="The title of the article")
+    authors : List[str] = Field(description="The list of the article's authors")
+    abstract: str = Field(description="The article's abstract") 
+    key_words: List[str] = Field(description="The key words associated with the article")
+    
 class Baseline(BaseModel):
     method_name : str = Field(description="The name of the baseline method")
     proposed_solution : str = Field(description="the proposed solution in details")
     performance_metrics : str = Field(description="The performance metrics of the method and comparative analysis")
     
 class ExtractionTarget(BaseModel):
-    title : str = Field(description="The title of the article")
-    authors : List[str] = Field(description="The list of the article's authors")
-    abstract: str = Field(description="The article's abstract")
+    
     key_contributions: List[str] = Field(description="The key contributions of the article")
     limitation_of_sota : str=Field(description="the summary limitation of the existing work")
     proposed_solution : str = Field(description="the proposed solution in details")

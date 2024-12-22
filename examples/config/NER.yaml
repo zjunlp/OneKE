@@ -1,0 +1,11 @@
+model:
+  category: LLaMA
+  model_name_or_path: /disk/disk_20T/share/Llama-3-8B-Instruct
+
+extraction: 
+  task: NER
+  text: Finally , every other year , ELRA organizes a major conference LREC , the International Language Resources and Evaluation Conference .
+  constraint: ["algorithm", "conference", "else", "product", "task", "field", "metrics", "organization", "researcher", "program language", "country", "location", "person", "university"]
+  use_file: false
+  mode: quick
+  update_case: false

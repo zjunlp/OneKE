@@ -1,100 +1,2610 @@
-{"text": "In 1351 , during the reign of Emperor Toghon Temür of the Yuan dynasty , 93rd-generation descendant Kong Huan ( 孔浣 ) ' s 2nd son Kong Shao ( 孔昭 ) moved from China to Korea during the Goryeo , and was received courteously by Princess Noguk ( the Mongolian-born wife of the future king Gongmin ) .", "entity": [{"entity": "Emperor Toghon Temür", "entity_type": "person", "pos": [30, 50]}, {"entity": "Yuan dynasty", "entity_type": "country", "pos": [58, 70]}, {"entity": "Kong Huan", "entity_type": "writer", "pos": [100, 109]}, {"entity": "孔浣", "entity_type": "writer", "pos": [112, 114]}, {"entity": "Kong Shao", "entity_type": "writer", "pos": [129, 138]}, {"entity": "孔昭", "entity_type": "writer", "pos": [141, 143]}, {"entity": "China", "entity_type": "country", "pos": [157, 162]}, {"entity": "Korea", "entity_type": "country", "pos": [166, 171]}, {"entity": "Goryeo", "entity_type": "else", "pos": [183, 189]}, {"entity": "Princess Noguk", "entity_type": "person", "pos": [224, 238]}, {"entity": "Mongolian-born", "entity_type": "else", "pos": [245, 259]}, {"entity": "Gongmin", "entity_type": "person", "pos": [284, 291]}], "task": "NER"}
-{"text": "In 1990 , he published the last Rabbit novel , Rabbit at Rest , which won the Pulitzer Prize and the National Book Critics Circle Award .", "entity": [{"entity": "Rabbit novel", "entity_type": "else", "pos": [32, 44]}, {"entity": "Rabbit at Rest", "entity_type": "book", "pos": [47, 61]}, {"entity": "Pulitzer Prize", "entity_type": "award", "pos": [78, 92]}, {"entity": "National Book Critics Circle Award", "entity_type": "award", "pos": [101, 135]}], "task": "NER"}
-{"text": "She is known for her two best-selling novels , The Fountainhead and Atlas Shrugged , and for developing a philosophical system she named Objectivism .", "entity": [{"entity": "novels", "entity_type": "literary genre", "pos": [38, 44]}, {"entity": "The Fountainhead", "entity_type": "book", "pos": [47, 63]}, {"entity": "Atlas Shrugged", "entity_type": "book", "pos": [68, 82]}, {"entity": "Objectivism", "entity_type": "else", "pos": [137, 148]}], "task": "NER"}
-{"text": "The following year they collaborated on a musical film version of The Little Prince , based on the classic children 's tale by Antoine de Saint-Exupéry .", "entity": [{"entity": "The Little Prince", "entity_type": "book", "pos": [66, 83]}, {"entity": "Antoine de Saint-Exupéry", "entity_type": "writer", "pos": [127, 151]}], "task": "NER"}
-{"text": "Lindbergh 's Pulitzer Prize -winning biographer , A. Scott Berg , contended that Lindbergh was not so much a supporter of the Nazi regime as someone so stubborn in his convictions and relatively inexperienced in political maneuvering that he easily allowed rivals to portray him as one .", "entity": [{"entity": "Lindbergh", "entity_type": "person", "pos": [0, 9]}, {"entity": "Pulitzer Prize", "entity_type": "award", "pos": [13, 27]}, {"entity": "A. Scott Berg", "entity_type": "writer", "pos": [50, 63]}, {"entity": "Lindbergh", "entity_type": "person", "pos": [81, 90]}, {"entity": "Nazi", "entity_type": "else", "pos": [126, 130]}], "task": "NER"}
-{"text": "Highly regarded in his lifetime and for a period thereafter , he is now largely remembered for his anti-slavery writings and his poems Barbara Frietchie , The Barefoot Boy , Maud Muller and Snow-Bound .", "entity": [{"entity": "anti-slavery writings", "entity_type": "literary genre", "pos": [99, 120]}, {"entity": "poems", "entity_type": "literary genre", "pos": [129, 134]}, {"entity": "Barbara Frietchie", "entity_type": "poem", "pos": [135, 152]}, {"entity": "The Barefoot Boy", "entity_type": "poem", "pos": [155, 171]}, {"entity": "Maud Muller", "entity_type": "poem", "pos": [174, 185]}, {"entity": "Snow-Bound", "entity_type": "poem", "pos": [190, 200]}], "task": "NER"}
-{"text": "7th Century CE ) , author of Shishupala Vadha , an epic famous for its linguistic ingenuity , and Śrīharṣa ( 12th century CE ) , author of Naishadha Charita ( Naiṣadhīya-carita ) .", "entity": [{"entity": "Shishupala Vadha", "entity_type": "poem", "pos": [29, 45]}, {"entity": "Śrīharṣa", "entity_type": "writer", "pos": [98, 106]}, {"entity": "Naishadha Charita", "entity_type": "poem", "pos": [139, 156]}, {"entity": "Naiṣadhīya-carita", "entity_type": "poem", "pos": [159, 176]}], "task": "NER"}
-{"text": "He then went to live at Chalcedon , whence in 367 he was banished to Mauretania for harbouring the rebel Procopius .", "entity": [{"entity": "Chalcedon", "entity_type": "location", "pos": [24, 33]}, {"entity": "Mauretania", "entity_type": "country", "pos": [69, 79]}, {"entity": "Procopius", "entity_type": "writer", "pos": [105, 114]}], "task": "NER"}
-{"text": "Far more manuscripts of the Prick of Conscience than any other Middle English poem survive .", "entity": [{"entity": "Prick of Conscience", "entity_type": "poem", "pos": [28, 47]}, {"entity": "Middle English", "entity_type": "else", "pos": [63, 77]}, {"entity": "poem", "entity_type": "literary genre", "pos": [78, 82]}], "task": "NER"}
-{"text": "This uses the words of war poet Wilfred Owen ' s At a Calvary near the Ancre .", "entity": [{"entity": "Wilfred Owen", "entity_type": "writer", "pos": [32, 44]}, {"entity": "At a Calvary near the Ancre", "entity_type": "poem", "pos": [49, 76]}], "task": "NER"}
-{"text": "Arrian , Anabasis Alexandri 1.12.1 , Cicero , Pro Archia Poeta 24 .", "entity": [{"entity": "Arrian", "entity_type": "writer", "pos": [0, 6]}, {"entity": "Anabasis Alexandri", "entity_type": "book", "pos": [9, 27]}, {"entity": "Cicero", "entity_type": "writer", "pos": [37, 43]}, {"entity": "Pro Archia Poeta", "entity_type": "book", "pos": [46, 62]}], "task": "NER"}
-{"text": "United States poets such as John Ashbery , Marilyn Hacker , Donald Justice ( Pantoum of the Great Depression ) , and David Trinidad have done work in this form , as has Irish poet Caitriona O 'Reilly .", "entity": [{"entity": "United States", "entity_type": "country", "pos": [0, 13]}, {"entity": "John Ashbery", "entity_type": "writer", "pos": [28, 40]}, {"entity": "Marilyn Hacker", "entity_type": "writer", "pos": [43, 57]}, {"entity": "Donald Justice", "entity_type": "writer", "pos": [60, 74]}, {"entity": "Pantoum of the Great Depression", "entity_type": "book", "pos": [77, 108]}, {"entity": "David Trinidad", "entity_type": "writer", "pos": [117, 131]}, {"entity": "Irish", "entity_type": "else", "pos": [169, 174]}, {"entity": "Caitriona O 'Reilly", "entity_type": "writer", "pos": [180, 199]}], "task": "NER"}
-{"text": "In 2009 , Erdrich was a Pulitzer Prize finalist for The Plague of Doves The Plague of Doves focuses on the historical lynching of four Native people wrongly accused of murdering a Caucasian family , and the effect of this injustice on the current generations .", "entity": [{"entity": "Erdrich", "entity_type": "writer", "pos": [10, 17]}, {"entity": "Pulitzer Prize", "entity_type": "award", "pos": [24, 38]}, {"entity": "The Plague of Doves", "entity_type": "book", "pos": [52, 71]}, {"entity": "The Plague of Doves", "entity_type": "book", "pos": [72, 91]}, {"entity": "Caucasian", "entity_type": "else", "pos": [180, 189]}], "task": "NER"}
-{"text": "Under the influence of Adrian Maniu , the adolescent Tzara became interested in Symbolism and co-founded the magazine Simbolul with Ion Vinea ( with whom he also wrote experimental poetry ) and painter Marcel Janco .", "entity": [{"entity": "Adrian Maniu", "entity_type": "writer", "pos": [23, 35]}, {"entity": "Tzara", "entity_type": "writer", "pos": [53, 58]}, {"entity": "Symbolism", "entity_type": "literary genre", "pos": [80, 89]}, {"entity": "Simbolul", "entity_type": "magazine", "pos": [118, 126]}, {"entity": "Ion Vinea", "entity_type": "writer", "pos": [132, 141]}, {"entity": "experimental poetry", "entity_type": "literary genre", "pos": [168, 187]}, {"entity": "Marcel Janco", "entity_type": "person", "pos": [202, 214]}], "task": "NER"}
-{"text": "The film was presented at the Cannes Film Festival , won the Grand Prix Spécial du Jury and the FIPRESCI prize , and was nominated for the Palme d 'Or .", "entity": [{"entity": "Cannes Film Festival", "entity_type": "event", "pos": [30, 50]}, {"entity": "Grand Prix Spécial du Jury", "entity_type": "award", "pos": [61, 87]}, {"entity": "FIPRESCI prize", "entity_type": "award", "pos": [96, 110]}, {"entity": "Palme d 'Or", "entity_type": "award", "pos": [139, 150]}], "task": "NER"}
-{"text": "The Story of Civilization : Volume 8 , The Age of Louis XIV by Will Durant ; chapter II , subsection 4.1 p.56 )", "entity": [{"entity": "The Story of Civilization", "entity_type": "book", "pos": [0, 25]}, {"entity": "The Age of Louis XIV", "entity_type": "book", "pos": [39, 59]}, {"entity": "Will Durant", "entity_type": "writer", "pos": [63, 74]}], "task": "NER"}
-{"text": "The title of the story refers to a bedtime poem recited in the narrative entitled There Will Come Soft Rains , an actual poem by Sara Teasdale originally published in 1920 .", "entity": [{"entity": "poem", "entity_type": "literary genre", "pos": [43, 47]}, {"entity": "There Will Come Soft Rains", "entity_type": "poem", "pos": [82, 108]}, {"entity": "poem", "entity_type": "literary genre", "pos": [121, 125]}, {"entity": "Sara Teasdale", "entity_type": "writer", "pos": [129, 142]}], "task": "NER"}
-{"text": "The illustrated and audio adventure is titled Winnie-the-Pooh Meets the Queen , and has been narrated by actor Jim Broadbent .", "entity": [{"entity": "Winnie-the-Pooh Meets the Queen", "entity_type": "book", "pos": [46, 77]}, {"entity": "Jim Broadbent", "entity_type": "person", "pos": [111, 124]}], "task": "NER"}
-{"text": "It was selected as one of the best science fiction short stories of the pre- Nebula Award period by the Science Fiction and Fantasy Writers of America .", "entity": [{"entity": "science fiction short stories", "entity_type": "literary genre", "pos": [35, 64]}, {"entity": "Nebula Award", "entity_type": "award", "pos": [77, 89]}, {"entity": "Science Fiction and Fantasy Writers of America", "entity_type": "organization", "pos": [104, 150]}], "task": "NER"}
-{"text": "Private Eye parodied Sue Townsend ' s The Secret Diary of Adrian Mole , age 13 ¾ to write The Secret Diary of John Major , age 47 ¾ , in which Major was portrayed as naïve and childish , keeping lists of his enemies in a Rymans Notebook called his Bastards Book , and featuring my wife Norman and Mr Dr Mawhinney as recurring character s .", "entity": [{"entity": "Private Eye", "entity_type": "magazine", "pos": [0, 11]}, {"entity": "Sue Townsend", "entity_type": "writer", "pos": [21, 33]}, {"entity": "The Secret Diary of Adrian Mole , age 13 ¾", "entity_type": "book", "pos": [38, 80]}, {"entity": "The Secret Diary of John Major , age 47 ¾", "entity_type": "book", "pos": [90, 131]}, {"entity": "Major", "entity_type": "person", "pos": [143, 148]}, {"entity": "Rymans Notebook", "entity_type": "else", "pos": [221, 236]}, {"entity": "Bastards Book", "entity_type": "else", "pos": [248, 261]}, {"entity": "Norman", "entity_type": "person", "pos": [286, 292]}, {"entity": "Mr Dr Mawhinney", "entity_type": "person", "pos": [297, 312]}], "task": "NER"}
-{"text": "The British military historian John Keegan attacked Clausewitz 's theory in his book A History of Warfare . John Keegan , A History of Warfare .", "entity": [{"entity": "British", "entity_type": "else", "pos": [4, 11]}, {"entity": "John Keegan", "entity_type": "writer", "pos": [31, 42]}, {"entity": "Clausewitz", "entity_type": "writer", "pos": [52, 62]}, {"entity": "A History of Warfare", "entity_type": "book", "pos": [85, 105]}, {"entity": "John Keegan", "entity_type": "writer", "pos": [108, 119]}, {"entity": "A History of Warfare", "entity_type": "book", "pos": [122, 142]}], "task": "NER"}
-{"text": "The film 's soundtrack often forms a major component of the narrative , just as with other important arthouse films of the era such as Donald Cammell and Nicolas Roeg ' s Performance .", "entity": [{"entity": "arthouse films", "entity_type": "else", "pos": [101, 115]}, {"entity": "Donald Cammell", "entity_type": "person", "pos": [135, 149]}, {"entity": "Nicolas Roeg", "entity_type": "person", "pos": [154, 166]}, {"entity": "Performance", "entity_type": "else", "pos": [171, 182]}], "task": "NER"}
-{"text": "John Updike , comparing Abner to a hillbilly Candide , added that the strip 's richness of social and philosophical commentary approached the Voltairean .", "entity": [{"entity": "John Updike", "entity_type": "writer", "pos": [0, 11]}, {"entity": "Abner", "entity_type": "person", "pos": [24, 29]}, {"entity": "Candide", "entity_type": "book", "pos": [45, 52]}], "task": "NER"}
-{"text": "In an article for The Atlantic , film critic Ty Burr deemed The Birth of a Nation the most influential film in history while criticizing its portrayal of black men as savage .", "entity": [{"entity": "The Atlantic", "entity_type": "magazine", "pos": [18, 30]}, {"entity": "Ty Burr", "entity_type": "person", "pos": [45, 52]}, {"entity": "The Birth of a Nation", "entity_type": "else", "pos": [60, 81]}], "task": "NER"}
-{"text": "Sergei Rachmaninoff , Rainer Maria Rilke and Leo Tolstoy were all visitors to the family home .", "entity": [{"entity": "Sergei Rachmaninoff", "entity_type": "person", "pos": [0, 19]}, {"entity": "Rainer Maria Rilke", "entity_type": "writer", "pos": [22, 40]}, {"entity": "Leo Tolstoy", "entity_type": "writer", "pos": [45, 56]}], "task": "NER"}
-{"text": "At the 47th Berlin International Film Festival in 1997 , DiCaprio won the Silver Bear for Best Actor and Luhrmann won the Alfred Bauer Prize .", "entity": [{"entity": "47th Berlin International Film Festival", "entity_type": "event", "pos": [7, 46]}, {"entity": "DiCaprio", "entity_type": "person", "pos": [57, 65]}, {"entity": "Silver Bear for Best Actor", "entity_type": "award", "pos": [74, 100]}, {"entity": "Luhrmann", "entity_type": "person", "pos": [105, 113]}, {"entity": "Alfred Bauer Prize", "entity_type": "award", "pos": [122, 140]}], "task": "NER"}
-{"text": "Nin was a friend , and in some cases lover , of many literary figures , including Henry Miller , John Steinbeck , Antonin Artaud , Edmund Wilson , Gore Vidal , James Agee , James Leo Herlihy , and Lawrence Durrell .", "entity": [{"entity": "Nin", "entity_type": "writer", "pos": [0, 3]}, {"entity": "Henry Miller", "entity_type": "writer", "pos": [82, 94]}, {"entity": "John Steinbeck", "entity_type": "writer", "pos": [97, 111]}, {"entity": "Antonin Artaud", "entity_type": "writer", "pos": [114, 128]}, {"entity": "Edmund Wilson", "entity_type": "writer", "pos": [131, 144]}, {"entity": "Gore Vidal", "entity_type": "writer", "pos": [147, 157]}, {"entity": "James Agee", "entity_type": "writer", "pos": [160, 170]}, {"entity": "James Leo Herlihy", "entity_type": "writer", "pos": [173, 190]}, {"entity": "Lawrence Durrell", "entity_type": "writer", "pos": [197, 213]}], "task": "NER"}
-{"text": "These include the Charles Dickens Museum in London , the historic home where he wrote Oliver Twist , The Pickwick Papers and Nicholas Nickleby ; and the Charles Dickens Birthplace Museum in Portsmouth , the house in which he was born .", "entity": [{"entity": "Charles Dickens Museum", "entity_type": "location", "pos": [18, 40]}, {"entity": "London", "entity_type": "location", "pos": [44, 50]}, {"entity": "Oliver Twist", "entity_type": "book", "pos": [86, 98]}, {"entity": "The Pickwick Papers", "entity_type": "book", "pos": [101, 120]}, {"entity": "Nicholas Nickleby", "entity_type": "book", "pos": [125, 142]}, {"entity": "Charles Dickens Birthplace Museum", "entity_type": "location", "pos": [153, 186]}, {"entity": "Portsmouth", "entity_type": "location", "pos": [190, 200]}], "task": "NER"}
-{"text": "It tied with Roger Zelazny ' s This Immortal for the Hugo Award in 1966 ,", "entity": [{"entity": "Roger Zelazny", "entity_type": "writer", "pos": [13, 26]}, {"entity": "This Immortal", "entity_type": "book", "pos": [31, 44]}, {"entity": "Hugo Award", "entity_type": "award", "pos": [53, 63]}], "task": "NER"}
-{"text": "Her stage credits include Norman Mailer ' s The Deer Park , Israel Horovitz ' s The Indian Wants the Bronx , Neil Simon 's The Good Doctor and Joseph Papp ' s 1974 Richard III at the Lincoln Center .", "entity": [{"entity": "Norman Mailer", "entity_type": "writer", "pos": [26, 39]}, {"entity": "The Deer Park", "entity_type": "book", "pos": [44, 57]}, {"entity": "Israel Horovitz", "entity_type": "writer", "pos": [60, 75]}, {"entity": "The Indian Wants the Bronx", "entity_type": "book", "pos": [80, 106]}, {"entity": "Neil Simon", "entity_type": "writer", "pos": [109, 119]}, {"entity": "The Good Doctor", "entity_type": "book", "pos": [123, 138]}, {"entity": "Joseph Papp", "entity_type": "person", "pos": [143, 154]}, {"entity": "Richard III", "entity_type": "else", "pos": [164, 175]}, {"entity": "Lincoln Center", "entity_type": "location", "pos": [183, 197]}], "task": "NER"}
-{"text": "In The Crisis magazine in 1943 , Harold Preece criticized Hurston for her perpetuation of Negro primitivism in order to advance her own literary career .", "entity": [{"entity": "The Crisis", "entity_type": "magazine", "pos": [3, 13]}, {"entity": "Harold Preece", "entity_type": "writer", "pos": [33, 46]}, {"entity": "Hurston", "entity_type": "writer", "pos": [58, 65]}, {"entity": "Negro primitivism", "entity_type": "literary genre", "pos": [90, 107]}], "task": "NER"}
-{"text": "Most notably , she was the food editor of The New York Times Magazine , the editor of T Living , a quarterly publication of The New York Times , author of The Essential New York Times Cookbook which was a New York Times bestseller , and co-founder and CEO of Food52 .", "entity": [{"entity": "The New York Times Magazine", "entity_type": "magazine", "pos": [42, 69]}, {"entity": "T Living", "entity_type": "magazine", "pos": [86, 94]}, {"entity": "The New York Times", "entity_type": "organization", "pos": [124, 142]}, {"entity": "The Essential New York Times Cookbook", "entity_type": "book", "pos": [155, 192]}, {"entity": "New York Times", "entity_type": "organization", "pos": [205, 219]}, {"entity": "Food52", "entity_type": "organization", "pos": [259, 265]}], "task": "NER"}
-{"text": "He was also an admirer of Richard Condon , author of The Manchurian Candidate ( 1959 ) , Prizzi 's Honor ( 1982 ) , and numerous other novels .", "entity": [{"entity": "Richard Condon", "entity_type": "writer", "pos": [26, 40]}, {"entity": "The Manchurian Candidate", "entity_type": "book", "pos": [53, 77]}, {"entity": "Prizzi 's Honor", "entity_type": "book", "pos": [89, 104]}, {"entity": "novels", "entity_type": "literary genre", "pos": [135, 141]}], "task": "NER"}
-{"text": "He also gave a lecture at the Beethovensaal in Berlin on 13 October 1922 , which appeared in Neue Rundschau in November 1922 in which he developed his eccentric defence of the Republic , based on extensive close readings of Novalis and Walt Whitman .", "entity": [{"entity": "Beethovensaal", "entity_type": "location", "pos": [30, 43]}, {"entity": "Berlin", "entity_type": "location", "pos": [47, 53]}, {"entity": "Neue Rundschau", "entity_type": "magazine", "pos": [93, 107]}, {"entity": "Novalis", "entity_type": "writer", "pos": [224, 231]}, {"entity": "Walt Whitman", "entity_type": "writer", "pos": [236, 248]}], "task": "NER"}
-{"text": "One of his poems , Ikke Bødlen , was featured as one of the best poems on Human Rights on a 1979 book published by Amnesty International Denmark , and would be later translated into the first verse of Roger Waters ' song Each Small Candle .", "entity": [{"entity": "poems", "entity_type": "literary genre", "pos": [11, 16]}, {"entity": "Ikke Bødlen", "entity_type": "poem", "pos": [19, 30]}, {"entity": "poems", "entity_type": "literary genre", "pos": [65, 70]}, {"entity": "Amnesty International", "entity_type": "organization", "pos": [115, 136]}, {"entity": "Denmark", "entity_type": "country", "pos": [137, 144]}, {"entity": "verse", "entity_type": "literary genre", "pos": [192, 197]}, {"entity": "Roger Waters", "entity_type": "writer", "pos": [201, 213]}, {"entity": "Each Small Candle", "entity_type": "else", "pos": [221, 238]}], "task": "NER"}
-{"text": "Anthony Boucher , reviewing the volume in The Magazine of Fantasy & Science Fiction , wrote that The Two Towers makes inordinate demands upon the patience of its readers with passages which could be lopped away without affecting form or content .", "entity": [{"entity": "Anthony Boucher", "entity_type": "writer", "pos": [0, 15]}, {"entity": "The Magazine of Fantasy & Science Fiction", "entity_type": "magazine", "pos": [42, 83]}, {"entity": "The Two Towers", "entity_type": "book", "pos": [97, 111]}], "task": "NER"}
-{"text": "See Gubbinal and Nuances of a Theme by Williams for comparisons .", "entity": [{"entity": "Gubbinal", "entity_type": "poem", "pos": [4, 12]}, {"entity": "Nuances of a Theme by Williams", "entity_type": "poem", "pos": [17, 47]}], "task": "NER"}
-{"text": "Cuarón 's feature Children of Men , an adaptation of the P. D. James The Children of Men starring Clive Owen , Julianne Moore and Michael Caine , received wide critical acclaim , including three Academy Awards nominations .", "entity": [{"entity": "Cuarón", "entity_type": "writer", "pos": [0, 6]}, {"entity": "Children of Men", "entity_type": "book", "pos": [18, 33]}, {"entity": "P. D. James", "entity_type": "writer", "pos": [57, 68]}, {"entity": "The Children of Men", "entity_type": "book", "pos": [69, 88]}, {"entity": "Clive Owen", "entity_type": "person", "pos": [98, 108]}, {"entity": "Julianne Moore", "entity_type": "person", "pos": [111, 125]}, {"entity": "Michael Caine", "entity_type": "person", "pos": [130, 143]}, {"entity": "Academy Awards", "entity_type": "award", "pos": [195, 209]}], "task": "NER"}
-{"text": "According to Willmott , Yeats 's poems often move from the world of social interaction to a place where the individual finds seclusion , as is also the case in the pastoral Yeats 's earlier poems The Lake Isle of Innisfree , The Song of the Happy Shepherd , and The Sad Shepherd .", "entity": [{"entity": "Willmott", "entity_type": "writer", "pos": [13, 21]}, {"entity": "Yeats", "entity_type": "writer", "pos": [24, 29]}, {"entity": "Yeats", "entity_type": "writer", "pos": [173, 178]}, {"entity": "The Lake Isle of Innisfree", "entity_type": "poem", "pos": [196, 222]}, {"entity": "The Song of the Happy Shepherd", "entity_type": "poem", "pos": [225, 255]}, {"entity": "The Sad Shepherd", "entity_type": "poem", "pos": [262, 278]}], "task": "NER"}
-{"text": "Robert Caro has cited it as the strongest influence on The Power Broker , his Pulitzer Prize -winning biography of Robert Moses , though Caro does not mention Jacobs by name even once in the book despite Jacobs ' battles with Moses over his proposed Lower Manhattan Expressway .", "entity": [{"entity": "Robert Caro", "entity_type": "writer", "pos": [0, 11]}, {"entity": "The Power Broker", "entity_type": "book", "pos": [55, 71]}, {"entity": "Pulitzer Prize", "entity_type": "award", "pos": [78, 92]}, {"entity": "Robert Moses", "entity_type": "person", "pos": [115, 127]}, {"entity": "Caro", "entity_type": "writer", "pos": [137, 141]}, {"entity": "Jacobs", "entity_type": "writer", "pos": [159, 165]}, {"entity": "Jacobs", "entity_type": "writer", "pos": [204, 210]}, {"entity": "Moses", "entity_type": "person", "pos": [226, 231]}, {"entity": "Lower Manhattan Expressway", "entity_type": "else", "pos": [250, 276]}], "task": "NER"}
-{"text": "Gravity 's Rainbow shared the 1974 National Book Award with A Crown of Feathers and Other Stories by Isaac Bashevis Singer ( split award ) .", "entity": [{"entity": "Gravity 's Rainbow", "entity_type": "book", "pos": [0, 18]}, {"entity": "National Book Award", "entity_type": "award", "pos": [35, 54]}, {"entity": "A Crown of Feathers and Other Stories", "entity_type": "book", "pos": [60, 97]}, {"entity": "Isaac Bashevis Singer", "entity_type": "writer", "pos": [101, 122]}], "task": "NER"}
-{"text": "The original Chanson d 'Antioche is lost , but it was edited in the 12th century by Graindor de Douai , who also edited the Chanson de Jérusalem , and possibly wrote the Chanson des Chétifs himself .", "entity": [{"entity": "Chanson d 'Antioche", "entity_type": "poem", "pos": [13, 32]}, {"entity": "Graindor de Douai", "entity_type": "writer", "pos": [84, 101]}, {"entity": "Chanson de Jérusalem", "entity_type": "poem", "pos": [124, 144]}, {"entity": "Chanson des Chétifs", "entity_type": "poem", "pos": [170, 189]}], "task": "NER"}
-{"text": "Although not accessible for years within Germany to comply with a court order from S. Fischer Verlag regarding the works of Heinrich Mann , Thomas Mann and Alfred Döblin , Project Gutenberg is once more accessible .", "entity": [{"entity": "Germany", "entity_type": "country", "pos": [41, 48]}, {"entity": "S. Fischer Verlag", "entity_type": "organization", "pos": [83, 100]}, {"entity": "Heinrich Mann", "entity_type": "writer", "pos": [124, 137]}, {"entity": "Thomas Mann", "entity_type": "writer", "pos": [140, 151]}, {"entity": "Alfred Döblin", "entity_type": "writer", "pos": [156, 169]}, {"entity": "Project Gutenberg", "entity_type": "organization", "pos": [172, 189]}], "task": "NER"}
-{"text": "Darkness at Noon for the New Statesman in 1941 , saying :", "entity": [{"entity": "Darkness at Noon", "entity_type": "book", "pos": [0, 16]}, {"entity": "New Statesman", "entity_type": "magazine", "pos": [25, 38]}], "task": "NER"}
-{"text": "The Han dynasty Records of the Grand Historian records that it had already become a place of pilgrimage for ministers .", "entity": [{"entity": "Han dynasty", "entity_type": "country", "pos": [4, 15]}, {"entity": "Records of the Grand Historian", "entity_type": "book", "pos": [16, 46]}], "task": "NER"}
-{"text": "In 1960 , aged 42 , he approached Aleksandr Tvardovsky , a poet and the chief editor of the Novy Mir magazine , with the manuscript of One Day in the Life of Ivan Denisovich .", "entity": [{"entity": "Aleksandr Tvardovsky", "entity_type": "writer", "pos": [34, 54]}, {"entity": "Novy Mir", "entity_type": "magazine", "pos": [92, 100]}, {"entity": "One Day in the Life of Ivan Denisovich", "entity_type": "book", "pos": [135, 173]}], "task": "NER"}
-{"text": "The first writer to use the term classic was Aulus Gellius , a 2nd-century Ancient Rome writer who , in the miscellany Noctes Atticae ( 19 , 8 , 15 ) , refers to a writer as a classicus scriptor , non proletarius ( A distinguished , not a commonplace writer ) .", "entity": [{"entity": "classic", "entity_type": "literary genre", "pos": [33, 40]}, {"entity": "Aulus Gellius", "entity_type": "writer", "pos": [45, 58]}, {"entity": "Ancient Rome", "entity_type": "country", "pos": [75, 87]}, {"entity": "Noctes Atticae", "entity_type": "book", "pos": [119, 133]}, {"entity": "classicus scriptor", "entity_type": "else", "pos": [176, 194]}, {"entity": "non proletarius", "entity_type": "else", "pos": [197, 212]}], "task": "NER"}
-{"text": "Dickens has been praised by many of his fellow writers - from Leo Tolstoy to George Orwell , G. K. Chesterton , and Tom Wolfe - for his realism , comedy , prose style , unique characterisations , and social criticism .", "entity": [{"entity": "Dickens", "entity_type": "writer", "pos": [0, 7]}, {"entity": "Leo Tolstoy", "entity_type": "writer", "pos": [62, 73]}, {"entity": "George Orwell", "entity_type": "writer", "pos": [77, 90]}, {"entity": "G. K. Chesterton", "entity_type": "writer", "pos": [93, 109]}, {"entity": "Tom Wolfe", "entity_type": "writer", "pos": [116, 125]}], "task": "NER"}
-{"text": "Hughes wrote of inequality ( I , Too ) , of resilience ( Mother to Son and The Negro Speaks of Rivers ) , of pride ( My People ) , of hope ( Freedom 's Plow ) , and of music ( The Trumpet Player and Juke Box Love Song ) .", "entity": [{"entity": "Hughes", "entity_type": "writer", "pos": [0, 6]}, {"entity": "I , Too", "entity_type": "poem", "pos": [29, 36]}, {"entity": "Mother to Son", "entity_type": "poem", "pos": [57, 70]}, {"entity": "The Negro Speaks of Rivers", "entity_type": "poem", "pos": [75, 101]}, {"entity": "My People", "entity_type": "book", "pos": [117, 126]}, {"entity": "Freedom 's Plow", "entity_type": "poem", "pos": [141, 156]}, {"entity": "The Trumpet Player", "entity_type": "poem", "pos": [176, 194]}, {"entity": "Juke Box Love Song", "entity_type": "poem", "pos": [199, 217]}], "task": "NER"}
-{"text": "Fry helped to fund a 1988 London re-staging of Stanshall 's Stinkfoot , a Comic Opera , written by Vivian and Ki Longfellow for the Bristol -based The Thekla .", "entity": [{"entity": "Fry", "entity_type": "person", "pos": [0, 3]}, {"entity": "London", "entity_type": "location", "pos": [26, 32]}, {"entity": "Stanshall", "entity_type": "writer", "pos": [47, 56]}, {"entity": "Stinkfoot , a Comic Opera", "entity_type": "book", "pos": [60, 85]}, {"entity": "Vivian", "entity_type": "writer", "pos": [99, 105]}, {"entity": "Ki Longfellow", "entity_type": "writer", "pos": [110, 123]}, {"entity": "Bristol", "entity_type": "location", "pos": [132, 139]}, {"entity": "The Thekla", "entity_type": "location", "pos": [147, 157]}], "task": "NER"}
-{"text": "Another Gruelle family friends was Hoosier poet James Whitcomb Riley , whose poems The Elf-Child , later titled Little Orphant Annie ! -- Orphant is correct -- not the comic strip-- ( 1885 ) , and The Raggedy Man ( 1888 ) , eventually formed the name for John Gruelle 's iconic Raggedy Ann character .", "entity": [{"entity": "Gruelle", "entity_type": "person", "pos": [8, 15]}, {"entity": "Hoosier poet", "entity_type": "writer", "pos": [35, 47]}, {"entity": "James Whitcomb Riley", "entity_type": "writer", "pos": [48, 68]}, {"entity": "poems", "entity_type": "literary genre", "pos": [77, 82]}, {"entity": "The Elf-Child", "entity_type": "poem", "pos": [83, 96]}, {"entity": "Little Orphant Annie", "entity_type": "poem", "pos": [112, 132]}, {"entity": "The Raggedy Man", "entity_type": "poem", "pos": [197, 212]}, {"entity": "John Gruelle", "entity_type": "person", "pos": [255, 267]}, {"entity": "Raggedy Ann", "entity_type": "else", "pos": [278, 289]}], "task": "NER"}
-{"text": "In 1927 Lu was considered for the Nobel Prize in Literature , for the short story The TRUE Story of Ah Q , despite a poor English translation and annotations that were nearly double the size of the text. Kowallis 3 Lu rejected the possibility of accepting the nomination .", "entity": [{"entity": "Lu", "entity_type": "writer", "pos": [8, 10]}, {"entity": "Nobel Prize in Literature", "entity_type": "award", "pos": [34, 59]}, {"entity": "short story", "entity_type": "literary genre", "pos": [70, 81]}, {"entity": "The TRUE Story of Ah Q", "entity_type": "book", "pos": [82, 104]}, {"entity": "English", "entity_type": "else", "pos": [122, 129]}, {"entity": "Kowallis 3 Lu", "entity_type": "writer", "pos": [204, 217]}], "task": "NER"}
-{"text": "Sagan and his works received numerous awards and honors , including the NASA Distinguished Public Service Medal , the National Academy of Sciences Public Welfare Medal , the Pulitzer Prize for General Non-Fiction for his book The Dragons of Eden , and , regarding Cosmos : A Personal Voyage , two Emmy Award s , the Peabody Award , and the Hugo Award .", "entity": [{"entity": "Sagan", "entity_type": "writer", "pos": [0, 5]}, {"entity": "NASA Distinguished Public Service Medal", "entity_type": "award", "pos": [72, 111]}, {"entity": "National Academy of Sciences Public Welfare Medal", "entity_type": "award", "pos": [118, 167]}, {"entity": "Pulitzer Prize for General Non-Fiction", "entity_type": "award", "pos": [174, 212]}, {"entity": "The Dragons of Eden", "entity_type": "book", "pos": [226, 245]}, {"entity": "Cosmos : A Personal Voyage", "entity_type": "book", "pos": [264, 290]}, {"entity": "Emmy Award", "entity_type": "award", "pos": [297, 307]}, {"entity": "Peabody Award", "entity_type": "award", "pos": [316, 329]}, {"entity": "Hugo Award", "entity_type": "award", "pos": [340, 350]}], "task": "NER"}
-{"text": "Jackie was a play-by-play announcer for the Luge at the 1976 Winter Olympics and the Equestrian at the 1976 Summer Olympics ( partnered with Chris Schenkel ) on ABC 's Wide World of Sports .", "entity": [{"entity": "Jackie", "entity_type": "person", "pos": [0, 6]}, {"entity": "Luge at the 1976 Winter Olympics", "entity_type": "event", "pos": [44, 76]}, {"entity": "Equestrian at the 1976 Summer Olympics", "entity_type": "event", "pos": [85, 123]}, {"entity": "Chris Schenkel", "entity_type": "person", "pos": [141, 155]}, {"entity": "ABC 's Wide World of Sports", "entity_type": "else", "pos": [161, 188]}], "task": "NER"}
-{"text": "Augustine was born in the year 354 AD in the municipium of Thagaste ( now Souk Ahras , Algeria ) in the Roman province of Numidia .", "entity": [{"entity": "Augustine", "entity_type": "person", "pos": [0, 9]}, {"entity": "Thagaste", "entity_type": "location", "pos": [59, 67]}, {"entity": "Souk Ahras", "entity_type": "location", "pos": [74, 84]}, {"entity": "Algeria", "entity_type": "country", "pos": [87, 94]}, {"entity": "Roman province of Numidia", "entity_type": "location", "pos": [104, 129]}], "task": "NER"}
-{"text": "In addition to writing for The New Yorker , he has written for The Atlantic Monthly and National Geographic .", "entity": [{"entity": "The New Yorker", "entity_type": "magazine", "pos": [27, 41]}, {"entity": "The Atlantic Monthly", "entity_type": "magazine", "pos": [63, 83]}, {"entity": "National Geographic", "entity_type": "magazine", "pos": [88, 107]}], "task": "NER"}
-{"text": "In 2012 , Nichols won the Best Direction of a Play Tony Award Award for Arthur Miller ' s Death of a Salesman .", "entity": [{"entity": "Nichols", "entity_type": "person", "pos": [10, 17]}, {"entity": "Tony Award", "entity_type": "award", "pos": [51, 61]}, {"entity": "Arthur Miller", "entity_type": "writer", "pos": [72, 85]}, {"entity": "Death of a Salesman", "entity_type": "book", "pos": [90, 109]}], "task": "NER"}
-{"text": "To please his wife , Diederichs agreed to publish Hesse 's collection of prose entitled One Hour After Midnight in 1898 ( although it is dated 1899 ) .Freedman ( 1978 ) pp. 78-80 .", "entity": [{"entity": "Diederichs", "entity_type": "person", "pos": [21, 31]}, {"entity": "Hesse", "entity_type": "writer", "pos": [50, 55]}, {"entity": "prose", "entity_type": "literary genre", "pos": [73, 78]}, {"entity": "One Hour After Midnight", "entity_type": "poem", "pos": [88, 111]}, {"entity": ".Freedman", "entity_type": "book", "pos": [150, 159]}], "task": "NER"}
-{"text": "In Far from the Madding Crowd , Hardy first introduced the idea of calling the region in the west of England , where his novels are set , Wessex .", "entity": [{"entity": "Far from the Madding Crowd", "entity_type": "book", "pos": [3, 29]}, {"entity": "Hardy", "entity_type": "writer", "pos": [32, 37]}, {"entity": "England", "entity_type": "country", "pos": [101, 108]}, {"entity": "novels", "entity_type": "literary genre", "pos": [121, 127]}, {"entity": "Wessex", "entity_type": "country", "pos": [138, 144]}], "task": "NER"}
-{"text": "Charles spent time outdoors , but also read voraciously , including the picaresque novel s of Tobias Smollett and Henry Fielding , as well as Robinson Crusoe and Gil Blas .", "entity": [{"entity": "Charles", "entity_type": "writer", "pos": [0, 7]}, {"entity": "picaresque novel", "entity_type": "literary genre", "pos": [72, 88]}, {"entity": "Tobias Smollett", "entity_type": "writer", "pos": [94, 109]}, {"entity": "Henry Fielding", "entity_type": "writer", "pos": [114, 128]}, {"entity": "Robinson Crusoe", "entity_type": "book", "pos": [142, 157]}, {"entity": "Gil Blas", "entity_type": "book", "pos": [162, 170]}], "task": "NER"}
-{"text": "Paul Christopher , J. D. Salinger ' s Holden Caulfield , and J. P. Donleavy ' s Sebastion Dangerfield in The Ginger Man ( 1955 ) are among the post-World War II literary heroes who have stymied Hollywood efforts to depict them.see J.P. Donnelley , 91 , Author Who Stirred Controversy With ' Ginger Man , ' Dies , The New York Times , September 14 , 2017 .", "entity": [{"entity": "Paul Christopher", "entity_type": "writer", "pos": [0, 16]}, {"entity": "J. D. Salinger", "entity_type": "writer", "pos": [19, 33]}, {"entity": "Holden Caulfield", "entity_type": "person", "pos": [38, 54]}, {"entity": "J. P. Donleavy", "entity_type": "writer", "pos": [61, 75]}, {"entity": "Sebastion Dangerfield", "entity_type": "person", "pos": [80, 101]}, {"entity": "The Ginger Man", "entity_type": "book", "pos": [105, 119]}, {"entity": "post-World War II literary", "entity_type": "else", "pos": [143, 169]}, {"entity": "Hollywood", "entity_type": "organization", "pos": [194, 203]}, {"entity": "J.P. Donnelley", "entity_type": "writer", "pos": [231, 245]}, {"entity": "Ginger Man", "entity_type": "book", "pos": [291, 301]}, {"entity": "The New York Times", "entity_type": "organization", "pos": [313, 331]}], "task": "NER"}
-{"text": "1789 ) with the addition of five of his poems : the Introduction and The Divine Image from the Songs of Innocence ( 1789 ) , The Tyger and A Divine Image from the Songs of Experience ( 1789-1794 ) , and A Cradle Song from his Note-book ( Manuscript Dante Gabriel Rossetti , 1793 ) .", "entity": [{"entity": "The Divine Image", "entity_type": "poem", "pos": [69, 85]}, {"entity": "Songs of Innocence", "entity_type": "book", "pos": [95, 113]}, {"entity": "The Tyger", "entity_type": "poem", "pos": [125, 134]}, {"entity": "A Divine Image", "entity_type": "poem", "pos": [139, 153]}, {"entity": "Songs of Experience", "entity_type": "book", "pos": [163, 182]}, {"entity": "A Cradle Song", "entity_type": "poem", "pos": [203, 216]}, {"entity": "Dante Gabriel Rossetti", "entity_type": "writer", "pos": [249, 271]}], "task": "NER"}
-{"text": "Under the succeeding Han dynasty and Tang dynasty dynasties , Confucian ideas gained even more widespread prominence .", "entity": [{"entity": "Han dynasty", "entity_type": "country", "pos": [21, 32]}, {"entity": "Tang dynasty", "entity_type": "country", "pos": [37, 49]}, {"entity": "Confucian ideas", "entity_type": "else", "pos": [62, 77]}], "task": "NER"}
-{"text": "In 2012 , when the Nobel Prize Records were opened after 50 years , it was revealed that Durrell had been on a shortlist of authors considered for the 1962 Nobel Prize in Literature , along with American John Steinbeck ( winner ) , British poet Robert Graves , French writer Jean Anouilh , and the Danish Karen Blixen .", "entity": [{"entity": "Nobel Prize Records", "entity_type": "else", "pos": [19, 38]}, {"entity": "Durrell", "entity_type": "writer", "pos": [89, 96]}, {"entity": "Nobel Prize in Literature", "entity_type": "award", "pos": [156, 181]}, {"entity": "American", "entity_type": "else", "pos": [195, 203]}, {"entity": "John Steinbeck", "entity_type": "writer", "pos": [204, 218]}, {"entity": "British", "entity_type": "else", "pos": [232, 239]}, {"entity": "Robert Graves", "entity_type": "writer", "pos": [245, 258]}, {"entity": "French", "entity_type": "else", "pos": [261, 267]}, {"entity": "Jean Anouilh", "entity_type": "writer", "pos": [275, 287]}, {"entity": "Danish", "entity_type": "else", "pos": [298, 304]}, {"entity": "Karen Blixen", "entity_type": "writer", "pos": [305, 317]}], "task": "NER"}
-{"text": "His time-travel novel Timescape ( 1980 ) won both the Nebula Award and the John W. Campbell Memorial Award .", "entity": [{"entity": "novel", "entity_type": "literary genre", "pos": [16, 21]}, {"entity": "Timescape", "entity_type": "book", "pos": [22, 31]}, {"entity": "Nebula Award", "entity_type": "award", "pos": [54, 66]}, {"entity": "John W. Campbell Memorial Award", "entity_type": "award", "pos": [75, 106]}], "task": "NER"}
-{"text": "In 1985 , Spielberg released The Color Purple , an adaptation of Alice Walker ' s Pulitzer Prize -winning The Color Purple , about a generation of empowered African-American women during depression-era America .", "entity": [{"entity": "Spielberg", "entity_type": "writer", "pos": [10, 19]}, {"entity": "The Color Purple", "entity_type": "book", "pos": [29, 45]}, {"entity": "Alice Walker", "entity_type": "writer", "pos": [65, 77]}, {"entity": "Pulitzer Prize", "entity_type": "award", "pos": [82, 96]}, {"entity": "The Color Purple", "entity_type": "book", "pos": [106, 122]}, {"entity": "African-American", "entity_type": "else", "pos": [157, 173]}, {"entity": "America", "entity_type": "country", "pos": [202, 209]}], "task": "NER"}
-{"text": "It is largely based on the Alexandreis of Walter of Châtillon , but also contains many fantastical elements common to the Alexander romance .", "entity": [{"entity": "Alexandreis", "entity_type": "poem", "pos": [27, 38]}, {"entity": "Walter of Châtillon", "entity_type": "writer", "pos": [42, 61]}, {"entity": "Alexander romance", "entity_type": "book", "pos": [122, 139]}], "task": "NER"}
-{"text": "For the general reader , Jonson 's reputation rests on a few lyrics that , though brief , are surpassed for grace and precision by very few Renaissance poems : On My First Sonne ; To Celia ; To Penshurst ; and the epitaph on Salomon Pavy , a boy player abducted from his parents who acted in Jonson 's plays .", "entity": [{"entity": "Jonson", "entity_type": "person", "pos": [25, 31]}, {"entity": "Renaissance poems", "entity_type": "literary genre", "pos": [140, 157]}, {"entity": "On My First Sonne", "entity_type": "poem", "pos": [160, 177]}, {"entity": "To Celia", "entity_type": "poem", "pos": [180, 188]}, {"entity": "To Penshurst", "entity_type": "poem", "pos": [191, 203]}, {"entity": "Salomon Pavy", "entity_type": "person", "pos": [225, 237]}, {"entity": "Jonson", "entity_type": "writer", "pos": [292, 298]}], "task": "NER"}
-{"text": "During most of his career , Orwell was best known for his journalism , in essays , reviews , columns in newspapers and magazines and in his books of reportage : Down and Out in Paris and London ( describing a period of poverty in these cities ) , The Road to Wigan Pier ( describing the living conditions of the poor in northern England , and class division generally ) and Homage to Catalonia .", "entity": [{"entity": "Orwell", "entity_type": "writer", "pos": [28, 34]}, {"entity": "Down and Out in Paris and London", "entity_type": "book", "pos": [161, 193]}, {"entity": "The Road to Wigan Pier", "entity_type": "book", "pos": [247, 269]}, {"entity": "England", "entity_type": "country", "pos": [329, 336]}, {"entity": "Homage to Catalonia", "entity_type": "book", "pos": [374, 393]}], "task": "NER"}
-{"text": "A late ( 1890s ) reference to the urban legend of the murderous barber can be found in the poem by the Australian bush poet Banjo Paterson - The Man from Ironbark .", "entity": [{"entity": "poem", "entity_type": "literary genre", "pos": [91, 95]}, {"entity": "Australian", "entity_type": "else", "pos": [103, 113]}, {"entity": "Banjo Paterson", "entity_type": "person", "pos": [124, 138]}, {"entity": "The Man from Ironbark", "entity_type": "poem", "pos": [141, 162]}], "task": "NER"}
-{"text": "This acted as a prelude to the release the following year of The Whitsun Weddings , the volume which cemented his reputation ; almost immediately after its publication he was granted a Fellowship of the Royal Society of Literature .", "entity": [{"entity": "The Whitsun Weddings", "entity_type": "book", "pos": [61, 81]}, {"entity": "Royal Society of Literature", "entity_type": "organization", "pos": [203, 230]}], "task": "NER"}
-{"text": "Bova holds the position of President Emeritus of the National Space Society and served as President of Science Fiction and Fantasy Writers of America ( SFWA ) from 1990 to 1992 .", "entity": [{"entity": "Bova", "entity_type": "writer", "pos": [0, 4]}, {"entity": "President Emeritus", "entity_type": "else", "pos": [27, 45]}, {"entity": "National Space Society", "entity_type": "organization", "pos": [53, 75]}, {"entity": "Science Fiction and Fantasy Writers of America", "entity_type": "organization", "pos": [103, 149]}, {"entity": "SFWA", "entity_type": "organization", "pos": [152, 156]}], "task": "NER"}
-{"text": "This strand continues in Latin accounts of the Trojan War by writers such as Dictys Cretensis and Dares Phrygius and in Benoît de Sainte-Maure ' s Roman de Troie and Guido delle Colonne ' s Historia destructionis Troiae , which remained the most widely read and retold versions of the Matter of Troy until the 17th century .", "entity": [{"entity": "Latin", "entity_type": "else", "pos": [25, 30]}, {"entity": "Trojan War", "entity_type": "event", "pos": [47, 57]}, {"entity": "Dictys Cretensis", "entity_type": "writer", "pos": [77, 93]}, {"entity": "Dares Phrygius", "entity_type": "writer", "pos": [98, 112]}, {"entity": "Benoît de Sainte-Maure", "entity_type": "writer", "pos": [120, 142]}, {"entity": "Roman de Troie", "entity_type": "book", "pos": [147, 161]}, {"entity": "Guido delle Colonne", "entity_type": "writer", "pos": [166, 185]}, {"entity": "Historia destructionis Troiae", "entity_type": "book", "pos": [190, 219]}, {"entity": "Matter of Troy", "entity_type": "else", "pos": [285, 299]}], "task": "NER"}
-{"text": "Other works soon followed , including A Tale of Two Cities ( 1859 ) and Great Expectations ( 1861 ) , which were resounding successes .", "entity": [{"entity": "A Tale of Two Cities", "entity_type": "book", "pos": [38, 58]}, {"entity": "Great Expectations", "entity_type": "book", "pos": [72, 90]}], "task": "NER"}
-{"text": "In 1952 , Capp and his characters graced the covers of both Life and TV Guide .", "entity": [{"entity": "Capp", "entity_type": "writer", "pos": [10, 14]}, {"entity": "Life", "entity_type": "magazine", "pos": [60, 64]}, {"entity": "TV Guide", "entity_type": "magazine", "pos": [69, 77]}], "task": "NER"}
-{"text": "Nobel Prize -winning writer Isaac Bashevis Singer translated some of his works .", "entity": [{"entity": "Nobel Prize", "entity_type": "award", "pos": [0, 11]}, {"entity": "Isaac Bashevis Singer", "entity_type": "writer", "pos": [28, 49]}], "task": "NER"}
-{"text": "The story of a powerful ( fairy ) woman who takes a lover on condition that he obey a particular prohibition is common in medieval poetry : the French lais of Desiré , Graelent , and Guingamor , and Chrétien de Troyes ' s romance Yvain , the Knight of the Lion , all share similar plot elements .", "entity": [{"entity": "French", "entity_type": "else", "pos": [144, 150]}, {"entity": "lais", "entity_type": "literary genre", "pos": [151, 155]}, {"entity": "Desiré", "entity_type": "poem", "pos": [159, 165]}, {"entity": "Graelent", "entity_type": "poem", "pos": [168, 176]}, {"entity": "Guingamor", "entity_type": "poem", "pos": [183, 192]}, {"entity": "Chrétien de Troyes", "entity_type": "writer", "pos": [199, 217]}, {"entity": "Yvain , the Knight of the Lion", "entity_type": "poem", "pos": [230, 260]}], "task": "NER"}
-{"text": "It was nominated for seven Academy Awards and won four , including Academy Award for Best Picture and Academy Award for Best Original Screenplay .", "entity": [{"entity": "Academy Awards", "entity_type": "award", "pos": [27, 41]}, {"entity": "Academy Award for Best Picture", "entity_type": "award", "pos": [67, 97]}, {"entity": "Academy Award for Best Original Screenplay", "entity_type": "award", "pos": [102, 144]}], "task": "NER"}
-{"text": "Also in 2007 he provided consulting services to Silver Pictures on the film adaptation of Richard K. Morgan ' s hardboiled cyberpunk science-fiction novel Altered Carbon ( 2002 ) .", "entity": [{"entity": "Silver Pictures", "entity_type": "organization", "pos": [48, 63]}, {"entity": "Richard K. Morgan", "entity_type": "writer", "pos": [90, 107]}, {"entity": "science-fiction novel", "entity_type": "literary genre", "pos": [133, 154]}, {"entity": "Altered Carbon", "entity_type": "book", "pos": [155, 169]}], "task": "NER"}
-{"text": "In Beyond Good and Evil and On the Genealogy of Morality , Nietzsche 's genealogical account of the development of modern moral systems occupies a central place .", "entity": [{"entity": "Beyond Good and Evil", "entity_type": "book", "pos": [3, 23]}, {"entity": "On the Genealogy of Morality", "entity_type": "book", "pos": [28, 56]}, {"entity": "Nietzsche", "entity_type": "writer", "pos": [59, 68]}], "task": "NER"}
-{"text": "Due to pressure by fans on Asimov to write another book in his Foundation series , he did so with Foundation 's Edge ( 1982 ) and Foundation and Earth ( 1986 ) , and then went back to before the original trilogy with Prelude to Foundation ( 1988 ) and Forward the Foundation ( 1992 ) , his last novel .", "entity": [{"entity": "Asimov", "entity_type": "writer", "pos": [27, 33]}, {"entity": "Foundation series", "entity_type": "else", "pos": [63, 80]}, {"entity": "Foundation 's Edge", "entity_type": "book", "pos": [98, 116]}, {"entity": "Foundation and Earth", "entity_type": "book", "pos": [130, 150]}, {"entity": "trilogy", "entity_type": "else", "pos": [204, 211]}, {"entity": "Prelude to Foundation", "entity_type": "book", "pos": [217, 238]}, {"entity": "Forward the Foundation", "entity_type": "book", "pos": [252, 274]}, {"entity": "novel", "entity_type": "literary genre", "pos": [295, 300]}], "task": "NER"}
-{"text": "Swift is remembered for works such as A Tale of a Tub ( 1704 ) , An Argument Against Abolishing Christianity ( 1712 ) , Gulliver 's Travels ( 1726 ) , and A Modest Proposal ( 1729 ) .", "entity": [{"entity": "Swift", "entity_type": "writer", "pos": [0, 5]}, {"entity": "A Tale of a Tub", "entity_type": "book", "pos": [38, 53]}, {"entity": "An Argument Against Abolishing Christianity", "entity_type": "book", "pos": [65, 108]}, {"entity": "Gulliver 's Travels", "entity_type": "book", "pos": [120, 139]}, {"entity": "A Modest Proposal", "entity_type": "book", "pos": [155, 172]}], "task": "NER"}
-{"text": "Seymour Hersh , Nixon 's Last Cover-Up : The Tapes He Wants the Archives to Suppress ; The New Yorker , December 14 , 1992 , pp. 80-81 In passing sentence in February 1972 , the judge rejected the D.A. ' s motion that Capp agree to undergo psychiatric treatment .", "entity": [{"entity": "Seymour Hersh", "entity_type": "writer", "pos": [0, 13]}, {"entity": "Nixon", "entity_type": "person", "pos": [16, 21]}, {"entity": "Last Cover-Up : The Tapes He Wants the Archives to Suppress", "entity_type": "else", "pos": [25, 84]}, {"entity": "The New Yorker", "entity_type": "magazine", "pos": [87, 101]}, {"entity": "D.A.", "entity_type": "else", "pos": [197, 201]}, {"entity": "Capp", "entity_type": "writer", "pos": [218, 222]}], "task": "NER"}
-{"text": "To Dolapdere , he sarcastically gave the name Cholera ( Kolera in Turkish ) in Ağır Roman , thereby recalling both its shabbiness and the fact that the great Poland poet Adam Mickiewicz died there from the cholera in 1855 .", "entity": [{"entity": "Dolapdere", "entity_type": "location", "pos": [3, 12]}, {"entity": "Cholera", "entity_type": "else", "pos": [46, 53]}, {"entity": "Kolera", "entity_type": "else", "pos": [56, 62]}, {"entity": "Turkish", "entity_type": "else", "pos": [66, 73]}, {"entity": "Ağır Roman", "entity_type": "book", "pos": [79, 89]}, {"entity": "Poland", "entity_type": "country", "pos": [158, 164]}, {"entity": "Adam Mickiewicz", "entity_type": "writer", "pos": [170, 185]}, {"entity": "cholera", "entity_type": "else", "pos": [206, 213]}], "task": "NER"}
-{"text": "He was influenced by the Marxist playwright Bertolt Brecht and was invited by Brecht to be his assistant at the East Berlin State Opera but turned down the offer .", "entity": [{"entity": "Marxist", "entity_type": "else", "pos": [25, 32]}, {"entity": "Bertolt Brecht", "entity_type": "writer", "pos": [44, 58]}, {"entity": "Brecht", "entity_type": "writer", "pos": [78, 84]}, {"entity": "East Berlin State Opera", "entity_type": "location", "pos": [112, 135]}], "task": "NER"}
-{"text": "The poems he had written during his time in prison were so effective that Dudley Randall , a poet and owner of Broadside Press , published Knight 's first volume of verse , Poems from Prison , and hailed Knight as one of the major poets of the Black Arts Movement .", "entity": [{"entity": "poems", "entity_type": "literary genre", "pos": [4, 9]}, {"entity": "Dudley Randall", "entity_type": "writer", "pos": [74, 88]}, {"entity": "Broadside Press", "entity_type": "organization", "pos": [111, 126]}, {"entity": "Knight 's first volume of verse", "entity_type": "else", "pos": [139, 170]}, {"entity": "Poems from Prison", "entity_type": "poem", "pos": [173, 190]}, {"entity": "Black Arts Movement", "entity_type": "event", "pos": [244, 263]}], "task": "NER"}
-{"text": "Verne 's collaboration with the publisher Pierre-Jules Hetzel led to the creation of the Voyages extraordinaires , a widely popular series of scrupulously researched adventure novels including Journey to the Center of the Earth ( 1864 ) , Twenty Thousand Leagues Under the Sea ( 1870 ) , and Around the World in Eighty Days ( 1873 ) .", "entity": [{"entity": "Verne", "entity_type": "writer", "pos": [0, 5]}, {"entity": "Pierre-Jules Hetzel", "entity_type": "writer", "pos": [42, 61]}, {"entity": "Voyages extraordinaires", "entity_type": "book", "pos": [89, 112]}, {"entity": "novels", "entity_type": "literary genre", "pos": [176, 182]}, {"entity": "Journey to the Center of the Earth", "entity_type": "book", "pos": [193, 227]}, {"entity": "Twenty Thousand Leagues Under the Sea", "entity_type": "book", "pos": [239, 276]}, {"entity": "Around the World in Eighty Days", "entity_type": "book", "pos": [292, 323]}], "task": "NER"}
-{"text": "With his poem Yo soy Joaquín , known in English as I Am Joaquin , Gonzales shared his new cosmological vision of the Chicano , who was neither Indian nor European , neither Mexican nor American , but a combination of all the conflicting identities .", "entity": [{"entity": "poem", "entity_type": "literary genre", "pos": [9, 13]}, {"entity": "Yo soy Joaquín", "entity_type": "poem", "pos": [14, 28]}, {"entity": "English", "entity_type": "else", "pos": [40, 47]}, {"entity": "I Am Joaquin", "entity_type": "poem", "pos": [51, 63]}, {"entity": "Gonzales", "entity_type": "writer", "pos": [66, 74]}, {"entity": "Chicano", "entity_type": "poem", "pos": [117, 124]}, {"entity": "Indian", "entity_type": "else", "pos": [143, 149]}, {"entity": "European", "entity_type": "else", "pos": [154, 162]}, {"entity": "Mexican", "entity_type": "else", "pos": [173, 180]}, {"entity": "American", "entity_type": "else", "pos": [185, 193]}], "task": "NER"}
-{"text": "In response to what at least appeared to be a blatant snub by his own countrymen , the director Sidney Lumet led a successful campaign to have Kurosawa receive an Oscar nomination for Academy Award for Best Director that year ( Sydney Pollack ultimately won the award for directing Out of Africa ) .", "entity": [{"entity": "Sidney Lumet", "entity_type": "person", "pos": [96, 108]}, {"entity": "Kurosawa", "entity_type": "person", "pos": [143, 151]}, {"entity": "Oscar", "entity_type": "award", "pos": [163, 168]}, {"entity": "Academy Award for Best Director", "entity_type": "award", "pos": [184, 215]}, {"entity": "Sydney Pollack", "entity_type": "person", "pos": [228, 242]}, {"entity": "Out of Africa", "entity_type": "else", "pos": [282, 295]}], "task": "NER"}
-{"text": "After a 1995 staging at the La Jolla Playhouse , he retained David Mamet to help rework the book before its relaunch on the Chicago Goodman Theatre mainstage in 1996 .", "entity": [{"entity": "La Jolla Playhouse", "entity_type": "location", "pos": [28, 46]}, {"entity": "David Mamet", "entity_type": "writer", "pos": [61, 72]}, {"entity": "Chicago Goodman Theatre", "entity_type": "location", "pos": [124, 147]}], "task": "NER"}
-{"text": "The period around World War II also saw the publication of the time travel novel Lest Darkness Fall by L. Sprague de Camp , in which an American academic travels to Italy at the time of the Byzantine invasion of the Ostrogoths .", "entity": [{"entity": "World War II", "entity_type": "event", "pos": [18, 30]}, {"entity": "time travel novel", "entity_type": "literary genre", "pos": [63, 80]}, {"entity": "Lest Darkness Fall", "entity_type": "book", "pos": [81, 99]}, {"entity": "L. Sprague de Camp", "entity_type": "writer", "pos": [103, 121]}, {"entity": "American", "entity_type": "else", "pos": [136, 144]}, {"entity": "Italy", "entity_type": "country", "pos": [165, 170]}, {"entity": "Byzantine", "entity_type": "else", "pos": [190, 199]}, {"entity": "Ostrogoths", "entity_type": "else", "pos": [216, 226]}], "task": "NER"}
-{"text": "His most famous poem is The Airs of Palestine .", "entity": [{"entity": "poem", "entity_type": "literary genre", "pos": [16, 20]}, {"entity": "The Airs of Palestine", "entity_type": "poem", "pos": [24, 45]}], "task": "NER"}
-{"text": "A tribute show to Wilson , organized by Coldcut and Mixmaster Morris and performed in London as a part of the Ether 7 Festival held at the Queen Elizabeth Hall on March 18 , 2007 , also included Ken Campbell , Bill Drummond and Alan Moore .", "entity": [{"entity": "Wilson", "entity_type": "writer", "pos": [18, 24]}, {"entity": "Coldcut", "entity_type": "person", "pos": [40, 47]}, {"entity": "Mixmaster Morris", "entity_type": "person", "pos": [52, 68]}, {"entity": "London", "entity_type": "location", "pos": [86, 92]}, {"entity": "Ether 7 Festival", "entity_type": "event", "pos": [110, 126]}, {"entity": "Queen Elizabeth Hall", "entity_type": "location", "pos": [139, 159]}, {"entity": "Ken Campbell", "entity_type": "writer", "pos": [195, 207]}, {"entity": "Bill Drummond", "entity_type": "writer", "pos": [210, 223]}, {"entity": "Alan Moore", "entity_type": "writer", "pos": [228, 238]}], "task": "NER"}
-{"text": "Former House Speaker Newt Gingrich and William R. Forstchen have written a novel , 1945 , in which the US defeated Empire of Japan but not Nazi Germany in World War II , resulting in a Cold War with Germany rather than the Soviet Union .", "entity": [{"entity": "House", "entity_type": "organization", "pos": [7, 12]}, {"entity": "Newt Gingrich", "entity_type": "writer", "pos": [21, 34]}, {"entity": "William R. Forstchen", "entity_type": "writer", "pos": [39, 59]}, {"entity": "novel", "entity_type": "literary genre", "pos": [75, 80]}, {"entity": "1945", "entity_type": "book", "pos": [83, 87]}, {"entity": "US", "entity_type": "country", "pos": [103, 105]}, {"entity": "Empire of Japan", "entity_type": "country", "pos": [115, 130]}, {"entity": "Nazi Germany", "entity_type": "country", "pos": [139, 151]}, {"entity": "World War II", "entity_type": "event", "pos": [155, 167]}, {"entity": "Cold War", "entity_type": "event", "pos": [185, 193]}, {"entity": "Germany", "entity_type": "country", "pos": [199, 206]}, {"entity": "Soviet Union", "entity_type": "country", "pos": [223, 235]}], "task": "NER"}
-{"text": "With the publications of Sense and Sensibility ( 1811 ) , Pride and Prejudice ( 1813 ) , Mansfield Park ( 1814 ) and Emma ( 1816 ) , she achieved success as a published writer .", "entity": [{"entity": "Sense and Sensibility", "entity_type": "book", "pos": [25, 46]}, {"entity": "Pride and Prejudice", "entity_type": "book", "pos": [58, 77]}, {"entity": "Mansfield Park", "entity_type": "book", "pos": [89, 103]}, {"entity": "Emma", "entity_type": "book", "pos": [117, 121]}], "task": "NER"}
-{"text": "For example , Russ criticized Ursula K. Le Guin ' s 1969 The Left Hand of Darkness , which won both the 1969 Nebula Award for Best Novel and 1970 Hugo Award for Best Novel awards for best science fiction novel , arguing that gender discriminations that permeated science fiction by men showed up just as frequently in science fiction by women .", "entity": [{"entity": "Russ", "entity_type": "writer", "pos": [14, 18]}, {"entity": "Ursula K. Le Guin", "entity_type": "writer", "pos": [30, 47]}, {"entity": "The Left Hand of Darkness", "entity_type": "book", "pos": [57, 82]}, {"entity": "Nebula Award for Best Novel", "entity_type": "award", "pos": [109, 136]}, {"entity": "Hugo Award for Best Novel", "entity_type": "award", "pos": [146, 171]}, {"entity": "science fiction", "entity_type": "literary genre", "pos": [188, 203]}, {"entity": "science fiction", "entity_type": "literary genre", "pos": [263, 278]}, {"entity": "science fiction", "entity_type": "literary genre", "pos": [318, 333]}], "task": "NER"}
-{"text": "Caterina di Giacomo di Benincasa was born on 25 March 1347 ( shortly before the Black Death ravaged Europe ) in Siena , Republic of Siena ( today Italy ) , to Lapa Piagenti , the daughter of a local poet , and Giacomo di Benincasa , a cloth dyer who ran his enterprise with the help of his sons .", "entity": [{"entity": "Caterina di", "entity_type": "person", "pos": [0, 11]}, {"entity": "Giacomo di Benincasa", "entity_type": "person", "pos": [12, 32]}, {"entity": "Black Death", "entity_type": "else", "pos": [80, 91]}, {"entity": "Europe", "entity_type": "location", "pos": [100, 106]}, {"entity": "Siena", "entity_type": "location", "pos": [112, 117]}, {"entity": "Republic of Siena", "entity_type": "country", "pos": [120, 137]}, {"entity": "Italy", "entity_type": "country", "pos": [146, 151]}, {"entity": "Lapa Piagenti", "entity_type": "person", "pos": [159, 172]}, {"entity": "Giacomo di Benincasa", "entity_type": "person", "pos": [210, 230]}], "task": "NER"}
-{"text": "These include the Universal Natural History and Theory of the Heavens ( 1755 ) , the Critique of Practical Reason ( 1788 ) , the Metaphysics of Morals ( 1797 ) , the Critique of Judgment ( 1790 ) , which looks at aesthetics and teleology , and Religion within the Bounds of Bare Reason ( 1793 ) .", "entity": [{"entity": "Universal Natural History and Theory of the Heavens", "entity_type": "book", "pos": [18, 69]}, {"entity": "Critique of Practical Reason", "entity_type": "book", "pos": [85, 113]}, {"entity": "Metaphysics of Morals", "entity_type": "book", "pos": [129, 150]}, {"entity": "Critique of Judgment", "entity_type": "book", "pos": [166, 186]}, {"entity": "Religion within the Bounds of Bare Reason", "entity_type": "book", "pos": [244, 285]}], "task": "NER"}
-{"text": "His interest in space , however , was his primary focus , especially after reading science fiction stories by writers such as H. G. Wells and Edgar Rice Burroughs , which stirred his imagination about life on other planets such as Mars .", "entity": [{"entity": "science fiction stories", "entity_type": "literary genre", "pos": [83, 106]}, {"entity": "H. G. Wells", "entity_type": "writer", "pos": [126, 137]}, {"entity": "Edgar Rice Burroughs", "entity_type": "writer", "pos": [142, 162]}, {"entity": "Mars", "entity_type": "else", "pos": [231, 235]}], "task": "NER"}
-{"text": "Baron Cohen was educated at The Haberdashers ' Aske 's Boys ' School , an independent school in Elstree , Hertfordshire , While a member of the Cambridge University Amateur Dramatic Club , Baron Cohen performed in plays such as Fiddler on the Roof and Cyrano de Bergerac , as well as in Habonim Dror Jewish theatre .", "entity": [{"entity": "Baron Cohen", "entity_type": "person", "pos": [0, 11]}, {"entity": "The Haberdashers ' Aske 's Boys ' School", "entity_type": "organization", "pos": [28, 68]}, {"entity": "Elstree", "entity_type": "location", "pos": [96, 103]}, {"entity": "Hertfordshire", "entity_type": "location", "pos": [106, 119]}, {"entity": "Cambridge University Amateur Dramatic Club", "entity_type": "organization", "pos": [144, 186]}, {"entity": "Baron Cohen", "entity_type": "person", "pos": [189, 200]}, {"entity": "Fiddler on the Roof", "entity_type": "else", "pos": [228, 247]}, {"entity": "Cyrano de Bergerac", "entity_type": "else", "pos": [252, 270]}, {"entity": "Habonim Dror Jewish theatre", "entity_type": "location", "pos": [287, 314]}], "task": "NER"}
+[
+  {
+    "sentence": "In 1351 , during the reign of Emperor Toghon Temür of the Yuan dynasty , 93rd-generation descendant Kong Huan ( 孔浣 ) ' s 2nd son Kong Shao ( 孔昭 ) moved from China to Korea during the Goryeo , and was received courteously by Princess Noguk ( the Mongolian-born wife of the future king Gongmin ) .",
+    "entity_list": [
+      {
+        "name": "Emperor Toghon Temür",
+        "type": "person"
+      },
+      {
+        "name": "Yuan dynasty",
+        "type": "country"
+      },
+      {
+        "name": "Kong Huan",
+        "type": "writer"
+      },
+      {
+        "name": "孔浣",
+        "type": "writer"
+      },
+      {
+        "name": "Kong Shao",
+        "type": "writer"
+      },
+      {
+        "name": "孔昭",
+        "type": "writer"
+      },
+      {
+        "name": "China",
+        "type": "country"
+      },
+      {
+        "name": "Korea",
+        "type": "country"
+      },
+      {
+        "name": "Goryeo",
+        "type": "else"
+      },
+      {
+        "name": "Princess Noguk",
+        "type": "person"
+      },
+      {
+        "name": "Mongolian-born",
+        "type": "else"
+      },
+      {
+        "name": "Gongmin",
+        "type": "person"
+      }
+    ]
+  },
+  {
+    "sentence": "In 1990 , he published the last Rabbit novel , Rabbit at Rest , which won the Pulitzer Prize and the National Book Critics Circle Award .",
+    "entity_list": [
+      {
+        "name": "Rabbit novel",
+        "type": "else"
+      },
+      {
+        "name": "Rabbit at Rest",
+        "type": "book"
+      },
+      {
+        "name": "Pulitzer Prize",
+        "type": "award"
+      },
+      {
+        "name": "National Book Critics Circle Award",
+        "type": "award"
+      }
+    ]
+  },
+  {
+    "sentence": "She is known for her two best-selling novels , The Fountainhead and Atlas Shrugged , and for developing a philosophical system she named Objectivism .",
+    "entity_list": [
+      {
+        "name": "novels",
+        "type": "literary genre"
+      },
+      {
+        "name": "The Fountainhead",
+        "type": "book"
+      },
+      {
+        "name": "Atlas Shrugged",
+        "type": "book"
+      },
+      {
+        "name": "Objectivism",
+        "type": "else"
+      }
+    ]
+  },
+  {
+    "sentence": "The following year they collaborated on a musical film version of The Little Prince , based on the classic children 's tale by Antoine de Saint-Exupéry .",
+    "entity_list": [
+      {
+        "name": "The Little Prince",
+        "type": "book"
+      },
+      {
+        "name": "Antoine de Saint-Exupéry",
+        "type": "writer"
+      }
+    ]
+  },
+  {
+    "sentence": "Lindbergh 's Pulitzer Prize -winning biographer , A. Scott Berg , contended that Lindbergh was not so much a supporter of the Nazi regime as someone so stubborn in his convictions and relatively inexperienced in political maneuvering that he easily allowed rivals to portray him as one .",
+    "entity_list": [
+      {
+        "name": "Lindbergh",
+        "type": "person"
+      },
+      {
+        "name": "Pulitzer Prize",
+        "type": "award"
+      },
+      {
+        "name": "A. Scott Berg",
+        "type": "writer"
+      },
+      {
+        "name": "Nazi",
+        "type": "else"
+      }
+    ]
+  },
+  {
+    "sentence": "Highly regarded in his lifetime and for a period thereafter , he is now largely remembered for his anti-slavery writings and his poems Barbara Frietchie , The Barefoot Boy , Maud Muller and Snow-Bound .",
+    "entity_list": [
+      {
+        "name": "anti-slavery writings",
+        "type": "literary genre"
+      },
+      {
+        "name": "poems",
+        "type": "literary genre"
+      },
+      {
+        "name": "Barbara Frietchie",
+        "type": "poem"
+      },
+      {
+        "name": "The Barefoot Boy",
+        "type": "poem"
+      },
+      {
+        "name": "Maud Muller",
+        "type": "poem"
+      },
+      {
+        "name": "Snow-Bound",
+        "type": "poem"
+      }
+    ]
+  },
+  {
+    "sentence": "7th Century CE ) , author of Shishupala Vadha , an epic famous for its linguistic ingenuity , and Śrīharṣa ( 12th century CE ) , author of Naishadha Charita ( Naiṣadhīya-carita ) .",
+    "entity_list": [
+      {
+        "name": "Shishupala Vadha",
+        "type": "poem"
+      },
+      {
+        "name": "Śrīharṣa",
+        "type": "writer"
+      },
+      {
+        "name": "Naishadha Charita",
+        "type": "poem"
+      },
+      {
+        "name": "Naiṣadhīya-carita",
+        "type": "poem"
+      }
+    ]
+  },
+  {
+    "sentence": "He then went to live at Chalcedon , whence in 367 he was banished to Mauretania for harbouring the rebel Procopius .",
+    "entity_list": [
+      {
+        "name": "Chalcedon",
+        "type": "location"
+      },
+      {
+        "name": "Mauretania",
+        "type": "country"
+      },
+      {
+        "name": "Procopius",
+        "type": "writer"
+      }
+    ]
+  },
+  {
+    "sentence": "Far more manuscripts of the Prick of Conscience than any other Middle English poem survive .",
+    "entity_list": [
+      {
+        "name": "Prick of Conscience",
+        "type": "poem"
+      },
+      {
+        "name": "Middle English",
+        "type": "else"
+      },
+      {
+        "name": "poem",
+        "type": "literary genre"
+      }
+    ]
+  },
+  {
+    "sentence": "This uses the words of war poet Wilfred Owen ' s At a Calvary near the Ancre .",
+    "entity_list": [
+      {
+        "name": "Wilfred Owen",
+        "type": "writer"
+      },
+      {
+        "name": "At a Calvary near the Ancre",
+        "type": "poem"
+      }
+    ]
+  },
+  {
+    "sentence": "Arrian , Anabasis Alexandri 1.12.1 , Cicero , Pro Archia Poeta 24 .",
+    "entity_list": [
+      {
+        "name": "Arrian",
+        "type": "writer"
+      },
+      {
+        "name": "Anabasis Alexandri",
+        "type": "book"
+      },
+      {
+        "name": "Cicero",
+        "type": "writer"
+      },
+      {
+        "name": "Pro Archia Poeta",
+        "type": "book"
+      }
+    ]
+  },
+  {
+    "sentence": "United States poets such as John Ashbery , Marilyn Hacker , Donald Justice ( Pantoum of the Great Depression ) , and David Trinidad have done work in this form , as has Irish poet Caitriona O 'Reilly .",
+    "entity_list": [
+      {
+        "name": "United States",
+        "type": "country"
+      },
+      {
+        "name": "John Ashbery",
+        "type": "writer"
+      },
+      {
+        "name": "Marilyn Hacker",
+        "type": "writer"
+      },
+      {
+        "name": "Donald Justice",
+        "type": "writer"
+      },
+      {
+        "name": "Pantoum of the Great Depression",
+        "type": "book"
+      },
+      {
+        "name": "David Trinidad",
+        "type": "writer"
+      },
+      {
+        "name": "Irish",
+        "type": "else"
+      },
+      {
+        "name": "Caitriona O 'Reilly",
+        "type": "writer"
+      }
+    ]
+  },
+  {
+    "sentence": "In 2009 , Erdrich was a Pulitzer Prize finalist for The Plague of Doves The Plague of Doves focuses on the historical lynching of four Native people wrongly accused of murdering a Caucasian family , and the effect of this injustice on the current generations .",
+    "entity_list": [
+      {
+        "name": "Erdrich",
+        "type": "writer"
+      },
+      {
+        "name": "Pulitzer Prize",
+        "type": "award"
+      },
+      {
+        "name": "The Plague of Doves",
+        "type": "book"
+      },
+      {
+        "name": "Caucasian",
+        "type": "else"
+      }
+    ]
+  },
+  {
+    "sentence": "Under the influence of Adrian Maniu , the adolescent Tzara became interested in Symbolism and co-founded the magazine Simbolul with Ion Vinea ( with whom he also wrote experimental poetry ) and painter Marcel Janco .",
+    "entity_list": [
+      {
+        "name": "Adrian Maniu",
+        "type": "writer"
+      },
+      {
+        "name": "Tzara",
+        "type": "writer"
+      },
+      {
+        "name": "Symbolism",
+        "type": "literary genre"
+      },
+      {
+        "name": "Simbolul",
+        "type": "magazine"
+      },
+      {
+        "name": "Ion Vinea",
+        "type": "writer"
+      },
+      {
+        "name": "experimental poetry",
+        "type": "literary genre"
+      },
+      {
+        "name": "Marcel Janco",
+        "type": "person"
+      }
+    ]
+  },
+  {
+    "sentence": "The film was presented at the Cannes Film Festival , won the Grand Prix Spécial du Jury and the FIPRESCI prize , and was nominated for the Palme d 'Or .",
+    "entity_list": [
+      {
+        "name": "Cannes Film Festival",
+        "type": "event"
+      },
+      {
+        "name": "Grand Prix Spécial du Jury",
+        "type": "award"
+      },
+      {
+        "name": "FIPRESCI prize",
+        "type": "award"
+      },
+      {
+        "name": "Palme d 'Or",
+        "type": "award"
+      }
+    ]
+  },
+  {
+    "sentence": "The Story of Civilization : Volume 8 , The Age of Louis XIV by Will Durant ; chapter II , subsection 4.1 p.56 )",
+    "entity_list": [
+      {
+        "name": "The Story of Civilization",
+        "type": "book"
+      },
+      {
+        "name": "The Age of Louis XIV",
+        "type": "book"
+      },
+      {
+        "name": "Will Durant",
+        "type": "writer"
+      }
+    ]
+  },
+  {
+    "sentence": "The title of the story refers to a bedtime poem recited in the narrative entitled There Will Come Soft Rains , an actual poem by Sara Teasdale originally published in 1920 .",
+    "entity_list": [
+      {
+        "name": "poem",
+        "type": "literary genre"
+      },
+      {
+        "name": "There Will Come Soft Rains",
+        "type": "poem"
+      },
+      {
+        "name": "Sara Teasdale",
+        "type": "writer"
+      }
+    ]
+  },
+  {
+    "sentence": "The illustrated and audio adventure is titled Winnie-the-Pooh Meets the Queen , and has been narrated by actor Jim Broadbent .",
+    "entity_list": [
+      {
+        "name": "Winnie-the-Pooh Meets the Queen",
+        "type": "book"
+      },
+      {
+        "name": "Jim Broadbent",
+        "type": "person"
+      }
+    ]
+  },
+  {
+    "sentence": "It was selected as one of the best science fiction short stories of the pre- Nebula Award period by the Science Fiction and Fantasy Writers of America .",
+    "entity_list": [
+      {
+        "name": "science fiction short stories",
+        "type": "literary genre"
+      },
+      {
+        "name": "Nebula Award",
+        "type": "award"
+      },
+      {
+        "name": "Science Fiction and Fantasy Writers of America",
+        "type": "organization"
+      }
+    ]
+  },
+  {
+    "sentence": "Private Eye parodied Sue Townsend ' s The Secret Diary of Adrian Mole , age 13 ¾ to write The Secret Diary of John Major , age 47 ¾ , in which Major was portrayed as naïve and childish , keeping lists of his enemies in a Rymans Notebook called his Bastards Book , and featuring my wife Norman and Mr Dr Mawhinney as recurring character s .",
+    "entity_list": [
+      {
+        "name": "Private Eye",
+        "type": "magazine"
+      },
+      {
+        "name": "Sue Townsend",
+        "type": "writer"
+      },
+      {
+        "name": "The Secret Diary of Adrian Mole , age 13 ¾",
+        "type": "book"
+      },
+      {
+        "name": "The Secret Diary of John Major , age 47 ¾",
+        "type": "book"
+      },
+      {
+        "name": "Major",
+        "type": "person"
+      },
+      {
+        "name": "Rymans Notebook",
+        "type": "else"
+      },
+      {
+        "name": "Bastards Book",
+        "type": "else"
+      },
+      {
+        "name": "Norman",
+        "type": "person"
+      },
+      {
+        "name": "Mr Dr Mawhinney",
+        "type": "person"
+      }
+    ]
+  },
+  {
+    "sentence": "The British military historian John Keegan attacked Clausewitz 's theory in his book A History of Warfare . John Keegan , A History of Warfare .",
+    "entity_list": [
+      {
+        "name": "British",
+        "type": "else"
+      },
+      {
+        "name": "John Keegan",
+        "type": "writer"
+      },
+      {
+        "name": "Clausewitz",
+        "type": "writer"
+      },
+      {
+        "name": "A History of Warfare",
+        "type": "book"
+      }
+    ]
+  },
+  {
+    "sentence": "The film 's soundtrack often forms a major component of the narrative , just as with other important arthouse films of the era such as Donald Cammell and Nicolas Roeg ' s Performance .",
+    "entity_list": [
+      {
+        "name": "arthouse films",
+        "type": "else"
+      },
+      {
+        "name": "Donald Cammell",
+        "type": "person"
+      },
+      {
+        "name": "Nicolas Roeg",
+        "type": "person"
+      },
+      {
+        "name": "Performance",
+        "type": "else"
+      }
+    ]
+  },
+  {
+    "sentence": "John Updike , comparing Abner to a hillbilly Candide , added that the strip 's richness of social and philosophical commentary approached the Voltairean .",
+    "entity_list": [
+      {
+        "name": "John Updike",
+        "type": "writer"
+      },
+      {
+        "name": "Abner",
+        "type": "person"
+      },
+      {
+        "name": "Candide",
+        "type": "book"
+      }
+    ]
+  },
+  {
+    "sentence": "In an article for The Atlantic , film critic Ty Burr deemed The Birth of a Nation the most influential film in history while criticizing its portrayal of black men as savage .",
+    "entity_list": [
+      {
+        "name": "The Atlantic",
+        "type": "magazine"
+      },
+      {
+        "name": "Ty Burr",
+        "type": "person"
+      },
+      {
+        "name": "The Birth of a Nation",
+        "type": "else"
+      }
+    ]
+  },
+  {
+    "sentence": "Sergei Rachmaninoff , Rainer Maria Rilke and Leo Tolstoy were all visitors to the family home .",
+    "entity_list": [
+      {
+        "name": "Sergei Rachmaninoff",
+        "type": "person"
+      },
+      {
+        "name": "Rainer Maria Rilke",
+        "type": "writer"
+      },
+      {
+        "name": "Leo Tolstoy",
+        "type": "writer"
+      }
+    ]
+  },
+  {
+    "sentence": "At the 47th Berlin International Film Festival in 1997 , DiCaprio won the Silver Bear for Best Actor and Luhrmann won the Alfred Bauer Prize .",
+    "entity_list": [
+      {
+        "name": "47th Berlin International Film Festival",
+        "type": "event"
+      },
+      {
+        "name": "DiCaprio",
+        "type": "person"
+      },
+      {
+        "name": "Silver Bear for Best Actor",
+        "type": "award"
+      },
+      {
+        "name": "Luhrmann",
+        "type": "person"
+      },
+      {
+        "name": "Alfred Bauer Prize",
+        "type": "award"
+      }
+    ]
+  },
+  {
+    "sentence": "Nin was a friend , and in some cases lover , of many literary figures , including Henry Miller , John Steinbeck , Antonin Artaud , Edmund Wilson , Gore Vidal , James Agee , James Leo Herlihy , and Lawrence Durrell .",
+    "entity_list": [
+      {
+        "name": "Nin",
+        "type": "writer"
+      },
+      {
+        "name": "Henry Miller",
+        "type": "writer"
+      },
+      {
+        "name": "John Steinbeck",
+        "type": "writer"
+      },
+      {
+        "name": "Antonin Artaud",
+        "type": "writer"
+      },
+      {
+        "name": "Edmund Wilson",
+        "type": "writer"
+      },
+      {
+        "name": "Gore Vidal",
+        "type": "writer"
+      },
+      {
+        "name": "James Agee",
+        "type": "writer"
+      },
+      {
+        "name": "James Leo Herlihy",
+        "type": "writer"
+      },
+      {
+        "name": "Lawrence Durrell",
+        "type": "writer"
+      }
+    ]
+  },
+  {
+    "sentence": "These include the Charles Dickens Museum in London , the historic home where he wrote Oliver Twist , The Pickwick Papers and Nicholas Nickleby ; and the Charles Dickens Birthplace Museum in Portsmouth , the house in which he was born .",
+    "entity_list": [
+      {
+        "name": "Charles Dickens Museum",
+        "type": "location"
+      },
+      {
+        "name": "London",
+        "type": "location"
+      },
+      {
+        "name": "Oliver Twist",
+        "type": "book"
+      },
+      {
+        "name": "The Pickwick Papers",
+        "type": "book"
+      },
+      {
+        "name": "Nicholas Nickleby",
+        "type": "book"
+      },
+      {
+        "name": "Charles Dickens Birthplace Museum",
+        "type": "location"
+      },
+      {
+        "name": "Portsmouth",
+        "type": "location"
+      }
+    ]
+  },
+  {
+    "sentence": "It tied with Roger Zelazny ' s This Immortal for the Hugo Award in 1966 ,",
+    "entity_list": [
+      {
+        "name": "Roger Zelazny",
+        "type": "writer"
+      },
+      {
+        "name": "This Immortal",
+        "type": "book"
+      },
+      {
+        "name": "Hugo Award",
+        "type": "award"
+      }
+    ]
+  },
+  {
+    "sentence": "Her stage credits include Norman Mailer ' s The Deer Park , Israel Horovitz ' s The Indian Wants the Bronx , Neil Simon 's The Good Doctor and Joseph Papp ' s 1974 Richard III at the Lincoln Center .",
+    "entity_list": [
+      {
+        "name": "Norman Mailer",
+        "type": "writer"
+      },
+      {
+        "name": "The Deer Park",
+        "type": "book"
+      },
+      {
+        "name": "Israel Horovitz",
+        "type": "writer"
+      },
+      {
+        "name": "The Indian Wants the Bronx",
+        "type": "book"
+      },
+      {
+        "name": "Neil Simon",
+        "type": "writer"
+      },
+      {
+        "name": "The Good Doctor",
+        "type": "book"
+      },
+      {
+        "name": "Joseph Papp",
+        "type": "person"
+      },
+      {
+        "name": "Richard III",
+        "type": "else"
+      },
+      {
+        "name": "Lincoln Center",
+        "type": "location"
+      }
+    ]
+  },
+  {
+    "sentence": "In The Crisis magazine in 1943 , Harold Preece criticized Hurston for her perpetuation of Negro primitivism in order to advance her own literary career .",
+    "entity_list": [
+      {
+        "name": "The Crisis",
+        "type": "magazine"
+      },
+      {
+        "name": "Harold Preece",
+        "type": "writer"
+      },
+      {
+        "name": "Hurston",
+        "type": "writer"
+      },
+      {
+        "name": "Negro primitivism",
+        "type": "literary genre"
+      }
+    ]
+  },
+  {
+    "sentence": "Most notably , she was the food editor of The New York Times Magazine , the editor of T Living , a quarterly publication of The New York Times , author of The Essential New York Times Cookbook which was a New York Times bestseller , and co-founder and CEO of Food52 .",
+    "entity_list": [
+      {
+        "name": "The New York Times Magazine",
+        "type": "magazine"
+      },
+      {
+        "name": "T Living",
+        "type": "magazine"
+      },
+      {
+        "name": "The New York Times",
+        "type": "organization"
+      },
+      {
+        "name": "The Essential New York Times Cookbook",
+        "type": "book"
+      },
+      {
+        "name": "New York Times",
+        "type": "organization"
+      },
+      {
+        "name": "Food52",
+        "type": "organization"
+      }
+    ]
+  },
+  {
+    "sentence": "He was also an admirer of Richard Condon , author of The Manchurian Candidate ( 1959 ) , Prizzi 's Honor ( 1982 ) , and numerous other novels .",
+    "entity_list": [
+      {
+        "name": "Richard Condon",
+        "type": "writer"
+      },
+      {
+        "name": "The Manchurian Candidate",
+        "type": "book"
+      },
+      {
+        "name": "Prizzi 's Honor",
+        "type": "book"
+      },
+      {
+        "name": "novels",
+        "type": "literary genre"
+      }
+    ]
+  },
+  {
+    "sentence": "He also gave a lecture at the Beethovensaal in Berlin on 13 October 1922 , which appeared in Neue Rundschau in November 1922 in which he developed his eccentric defence of the Republic , based on extensive close readings of Novalis and Walt Whitman .",
+    "entity_list": [
+      {
+        "name": "Beethovensaal",
+        "type": "location"
+      },
+      {
+        "name": "Berlin",
+        "type": "location"
+      },
+      {
+        "name": "Neue Rundschau",
+        "type": "magazine"
+      },
+      {
+        "name": "Novalis",
+        "type": "writer"
+      },
+      {
+        "name": "Walt Whitman",
+        "type": "writer"
+      }
+    ]
+  },
+  {
+    "sentence": "One of his poems , Ikke Bødlen , was featured as one of the best poems on Human Rights on a 1979 book published by Amnesty International Denmark , and would be later translated into the first verse of Roger Waters ' song Each Small Candle .",
+    "entity_list": [
+      {
+        "name": "poems",
+        "type": "literary genre"
+      },
+      {
+        "name": "Ikke Bødlen",
+        "type": "poem"
+      },
+      {
+        "name": "Amnesty International",
+        "type": "organization"
+      },
+      {
+        "name": "Denmark",
+        "type": "country"
+      },
+      {
+        "name": "verse",
+        "type": "literary genre"
+      },
+      {
+        "name": "Roger Waters",
+        "type": "writer"
+      },
+      {
+        "name": "Each Small Candle",
+        "type": "else"
+      }
+    ]
+  },
+  {
+    "sentence": "Anthony Boucher , reviewing the volume in The Magazine of Fantasy & Science Fiction , wrote that The Two Towers makes inordinate demands upon the patience of its readers with passages which could be lopped away without affecting form or content .",
+    "entity_list": [
+      {
+        "name": "Anthony Boucher",
+        "type": "writer"
+      },
+      {
+        "name": "The Magazine of Fantasy & Science Fiction",
+        "type": "magazine"
+      },
+      {
+        "name": "The Two Towers",
+        "type": "book"
+      }
+    ]
+  },
+  {
+    "sentence": "See Gubbinal and Nuances of a Theme by Williams for comparisons .",
+    "entity_list": [
+      {
+        "name": "Gubbinal",
+        "type": "poem"
+      },
+      {
+        "name": "Nuances of a Theme by Williams",
+        "type": "poem"
+      }
+    ]
+  },
+  {
+    "sentence": "Cuarón 's feature Children of Men , an adaptation of the P. D. James The Children of Men starring Clive Owen , Julianne Moore and Michael Caine , received wide critical acclaim , including three Academy Awards nominations .",
+    "entity_list": [
+      {
+        "name": "Cuarón",
+        "type": "writer"
+      },
+      {
+        "name": "Children of Men",
+        "type": "book"
+      },
+      {
+        "name": "P. D. James",
+        "type": "writer"
+      },
+      {
+        "name": "The Children of Men",
+        "type": "book"
+      },
+      {
+        "name": "Clive Owen",
+        "type": "person"
+      },
+      {
+        "name": "Julianne Moore",
+        "type": "person"
+      },
+      {
+        "name": "Michael Caine",
+        "type": "person"
+      },
+      {
+        "name": "Academy Awards",
+        "type": "award"
+      }
+    ]
+  },
+  {
+    "sentence": "According to Willmott , Yeats 's poems often move from the world of social interaction to a place where the individual finds seclusion , as is also the case in the pastoral Yeats 's earlier poems The Lake Isle of Innisfree , The Song of the Happy Shepherd , and The Sad Shepherd .",
+    "entity_list": [
+      {
+        "name": "Willmott",
+        "type": "writer"
+      },
+      {
+        "name": "Yeats",
+        "type": "writer"
+      },
+      {
+        "name": "The Lake Isle of Innisfree",
+        "type": "poem"
+      },
+      {
+        "name": "The Song of the Happy Shepherd",
+        "type": "poem"
+      },
+      {
+        "name": "The Sad Shepherd",
+        "type": "poem"
+      }
+    ]
+  },
+  {
+    "sentence": "Robert Caro has cited it as the strongest influence on The Power Broker , his Pulitzer Prize -winning biography of Robert Moses , though Caro does not mention Jacobs by name even once in the book despite Jacobs ' battles with Moses over his proposed Lower Manhattan Expressway .",
+    "entity_list": [
+      {
+        "name": "Robert Caro",
+        "type": "writer"
+      },
+      {
+        "name": "The Power Broker",
+        "type": "book"
+      },
+      {
+        "name": "Pulitzer Prize",
+        "type": "award"
+      },
+      {
+        "name": "Robert Moses",
+        "type": "person"
+      },
+      {
+        "name": "Caro",
+        "type": "writer"
+      },
+      {
+        "name": "Jacobs",
+        "type": "writer"
+      },
+      {
+        "name": "Moses",
+        "type": "person"
+      },
+      {
+        "name": "Lower Manhattan Expressway",
+        "type": "else"
+      }
+    ]
+  },
+  {
+    "sentence": "Gravity 's Rainbow shared the 1974 National Book Award with A Crown of Feathers and Other Stories by Isaac Bashevis Singer ( split award ) .",
+    "entity_list": [
+      {
+        "name": "Gravity 's Rainbow",
+        "type": "book"
+      },
+      {
+        "name": "National Book Award",
+        "type": "award"
+      },
+      {
+        "name": "A Crown of Feathers and Other Stories",
+        "type": "book"
+      },
+      {
+        "name": "Isaac Bashevis Singer",
+        "type": "writer"
+      }
+    ]
+  },
+  {
+    "sentence": "The original Chanson d 'Antioche is lost , but it was edited in the 12th century by Graindor de Douai , who also edited the Chanson de Jérusalem , and possibly wrote the Chanson des Chétifs himself .",
+    "entity_list": [
+      {
+        "name": "Chanson d 'Antioche",
+        "type": "poem"
+      },
+      {
+        "name": "Graindor de Douai",
+        "type": "writer"
+      },
+      {
+        "name": "Chanson de Jérusalem",
+        "type": "poem"
+      },
+      {
+        "name": "Chanson des Chétifs",
+        "type": "poem"
+      }
+    ]
+  },
+  {
+    "sentence": "Although not accessible for years within Germany to comply with a court order from S. Fischer Verlag regarding the works of Heinrich Mann , Thomas Mann and Alfred Döblin , Project Gutenberg is once more accessible .",
+    "entity_list": [
+      {
+        "name": "Germany",
+        "type": "country"
+      },
+      {
+        "name": "S. Fischer Verlag",
+        "type": "organization"
+      },
+      {
+        "name": "Heinrich Mann",
+        "type": "writer"
+      },
+      {
+        "name": "Thomas Mann",
+        "type": "writer"
+      },
+      {
+        "name": "Alfred Döblin",
+        "type": "writer"
+      },
+      {
+        "name": "Project Gutenberg",
+        "type": "organization"
+      }
+    ]
+  },
+  {
+    "sentence": "Darkness at Noon for the New Statesman in 1941 , saying :",
+    "entity_list": [
+      {
+        "name": "Darkness at Noon",
+        "type": "book"
+      },
+      {
+        "name": "New Statesman",
+        "type": "magazine"
+      }
+    ]
+  },
+  {
+    "sentence": "The Han dynasty Records of the Grand Historian records that it had already become a place of pilgrimage for ministers .",
+    "entity_list": [
+      {
+        "name": "Han dynasty",
+        "type": "country"
+      },
+      {
+        "name": "Records of the Grand Historian",
+        "type": "book"
+      }
+    ]
+  },
+  {
+    "sentence": "In 1960 , aged 42 , he approached Aleksandr Tvardovsky , a poet and the chief editor of the Novy Mir magazine , with the manuscript of One Day in the Life of Ivan Denisovich .",
+    "entity_list": [
+      {
+        "name": "Aleksandr Tvardovsky",
+        "type": "writer"
+      },
+      {
+        "name": "Novy Mir",
+        "type": "magazine"
+      },
+      {
+        "name": "One Day in the Life of Ivan Denisovich",
+        "type": "book"
+      }
+    ]
+  },
+  {
+    "sentence": "The first writer to use the term classic was Aulus Gellius , a 2nd-century Ancient Rome writer who , in the miscellany Noctes Atticae ( 19 , 8 , 15 ) , refers to a writer as a classicus scriptor , non proletarius ( A distinguished , not a commonplace writer ) .",
+    "entity_list": [
+      {
+        "name": "classic",
+        "type": "literary genre"
+      },
+      {
+        "name": "Aulus Gellius",
+        "type": "writer"
+      },
+      {
+        "name": "Ancient Rome",
+        "type": "country"
+      },
+      {
+        "name": "Noctes Atticae",
+        "type": "book"
+      },
+      {
+        "name": "classicus scriptor",
+        "type": "else"
+      },
+      {
+        "name": "non proletarius",
+        "type": "else"
+      }
+    ]
+  },
+  {
+    "sentence": "Dickens has been praised by many of his fellow writers - from Leo Tolstoy to George Orwell , G. K. Chesterton , and Tom Wolfe - for his realism , comedy , prose style , unique characterisations , and social criticism .",
+    "entity_list": [
+      {
+        "name": "Dickens",
+        "type": "writer"
+      },
+      {
+        "name": "Leo Tolstoy",
+        "type": "writer"
+      },
+      {
+        "name": "George Orwell",
+        "type": "writer"
+      },
+      {
+        "name": "G. K. Chesterton",
+        "type": "writer"
+      },
+      {
+        "name": "Tom Wolfe",
+        "type": "writer"
+      }
+    ]
+  },
+  {
+    "sentence": "Hughes wrote of inequality ( I , Too ) , of resilience ( Mother to Son and The Negro Speaks of Rivers ) , of pride ( My People ) , of hope ( Freedom 's Plow ) , and of music ( The Trumpet Player and Juke Box Love Song ) .",
+    "entity_list": [
+      {
+        "name": "Hughes",
+        "type": "writer"
+      },
+      {
+        "name": "I , Too",
+        "type": "poem"
+      },
+      {
+        "name": "Mother to Son",
+        "type": "poem"
+      },
+      {
+        "name": "The Negro Speaks of Rivers",
+        "type": "poem"
+      },
+      {
+        "name": "My People",
+        "type": "book"
+      },
+      {
+        "name": "Freedom 's Plow",
+        "type": "poem"
+      },
+      {
+        "name": "The Trumpet Player",
+        "type": "poem"
+      },
+      {
+        "name": "Juke Box Love Song",
+        "type": "poem"
+      }
+    ]
+  },
+  {
+    "sentence": "Fry helped to fund a 1988 London re-staging of Stanshall 's Stinkfoot , a Comic Opera , written by Vivian and Ki Longfellow for the Bristol -based The Thekla .",
+    "entity_list": [
+      {
+        "name": "Fry",
+        "type": "person"
+      },
+      {
+        "name": "London",
+        "type": "location"
+      },
+      {
+        "name": "Stanshall",
+        "type": "writer"
+      },
+      {
+        "name": "Stinkfoot , a Comic Opera",
+        "type": "book"
+      },
+      {
+        "name": "Vivian",
+        "type": "writer"
+      },
+      {
+        "name": "Ki Longfellow",
+        "type": "writer"
+      },
+      {
+        "name": "Bristol",
+        "type": "location"
+      },
+      {
+        "name": "The Thekla",
+        "type": "location"
+      }
+    ]
+  },
+  {
+    "sentence": "Another Gruelle family friends was Hoosier poet James Whitcomb Riley , whose poems The Elf-Child , later titled Little Orphant Annie ! -- Orphant is correct -- not the comic strip-- ( 1885 ) , and The Raggedy Man ( 1888 ) , eventually formed the name for John Gruelle 's iconic Raggedy Ann character .",
+    "entity_list": [
+      {
+        "name": "Gruelle",
+        "type": "person"
+      },
+      {
+        "name": "Hoosier poet",
+        "type": "writer"
+      },
+      {
+        "name": "James Whitcomb Riley",
+        "type": "writer"
+      },
+      {
+        "name": "poems",
+        "type": "literary genre"
+      },
+      {
+        "name": "The Elf-Child",
+        "type": "poem"
+      },
+      {
+        "name": "Little Orphant Annie",
+        "type": "poem"
+      },
+      {
+        "name": "The Raggedy Man",
+        "type": "poem"
+      },
+      {
+        "name": "John Gruelle",
+        "type": "person"
+      },
+      {
+        "name": "Raggedy Ann",
+        "type": "else"
+      }
+    ]
+  },
+  {
+    "sentence": "In 1927 Lu was considered for the Nobel Prize in Literature , for the short story The TRUE Story of Ah Q , despite a poor English translation and annotations that were nearly double the size of the text. Kowallis 3 Lu rejected the possibility of accepting the nomination .",
+    "entity_list": [
+      {
+        "name": "Lu",
+        "type": "writer"
+      },
+      {
+        "name": "Nobel Prize in Literature",
+        "type": "award"
+      },
+      {
+        "name": "short story",
+        "type": "literary genre"
+      },
+      {
+        "name": "The TRUE Story of Ah Q",
+        "type": "book"
+      },
+      {
+        "name": "English",
+        "type": "else"
+      },
+      {
+        "name": "Kowallis 3 Lu",
+        "type": "writer"
+      }
+    ]
+  },
+  {
+    "sentence": "Sagan and his works received numerous awards and honors , including the NASA Distinguished Public Service Medal , the National Academy of Sciences Public Welfare Medal , the Pulitzer Prize for General Non-Fiction for his book The Dragons of Eden , and , regarding Cosmos : A Personal Voyage , two Emmy Award s , the Peabody Award , and the Hugo Award .",
+    "entity_list": [
+      {
+        "name": "Sagan",
+        "type": "writer"
+      },
+      {
+        "name": "NASA Distinguished Public Service Medal",
+        "type": "award"
+      },
+      {
+        "name": "National Academy of Sciences Public Welfare Medal",
+        "type": "award"
+      },
+      {
+        "name": "Pulitzer Prize for General Non-Fiction",
+        "type": "award"
+      },
+      {
+        "name": "The Dragons of Eden",
+        "type": "book"
+      },
+      {
+        "name": "Cosmos : A Personal Voyage",
+        "type": "book"
+      },
+      {
+        "name": "Emmy Award",
+        "type": "award"
+      },
+      {
+        "name": "Peabody Award",
+        "type": "award"
+      },
+      {
+        "name": "Hugo Award",
+        "type": "award"
+      }
+    ]
+  },
+  {
+    "sentence": "Jackie was a play-by-play announcer for the Luge at the 1976 Winter Olympics and the Equestrian at the 1976 Summer Olympics ( partnered with Chris Schenkel ) on ABC 's Wide World of Sports .",
+    "entity_list": [
+      {
+        "name": "Jackie",
+        "type": "person"
+      },
+      {
+        "name": "Luge at the 1976 Winter Olympics",
+        "type": "event"
+      },
+      {
+        "name": "Equestrian at the 1976 Summer Olympics",
+        "type": "event"
+      },
+      {
+        "name": "Chris Schenkel",
+        "type": "person"
+      },
+      {
+        "name": "ABC 's Wide World of Sports",
+        "type": "else"
+      }
+    ]
+  },
+  {
+    "sentence": "Augustine was born in the year 354 AD in the municipium of Thagaste ( now Souk Ahras , Algeria ) in the Roman province of Numidia .",
+    "entity_list": [
+      {
+        "name": "Augustine",
+        "type": "person"
+      },
+      {
+        "name": "Thagaste",
+        "type": "location"
+      },
+      {
+        "name": "Souk Ahras",
+        "type": "location"
+      },
+      {
+        "name": "Algeria",
+        "type": "country"
+      },
+      {
+        "name": "Roman province of Numidia",
+        "type": "location"
+      }
+    ]
+  },
+  {
+    "sentence": "In addition to writing for The New Yorker , he has written for The Atlantic Monthly and National Geographic .",
+    "entity_list": [
+      {
+        "name": "The New Yorker",
+        "type": "magazine"
+      },
+      {
+        "name": "The Atlantic Monthly",
+        "type": "magazine"
+      },
+      {
+        "name": "National Geographic",
+        "type": "magazine"
+      }
+    ]
+  },
+  {
+    "sentence": "In 2012 , Nichols won the Best Direction of a Play Tony Award Award for Arthur Miller ' s Death of a Salesman .",
+    "entity_list": [
+      {
+        "name": "Nichols",
+        "type": "person"
+      },
+      {
+        "name": "Tony Award",
+        "type": "award"
+      },
+      {
+        "name": "Arthur Miller",
+        "type": "writer"
+      },
+      {
+        "name": "Death of a Salesman",
+        "type": "book"
+      }
+    ]
+  },
+  {
+    "sentence": "To please his wife , Diederichs agreed to publish Hesse 's collection of prose entitled One Hour After Midnight in 1898 ( although it is dated 1899 ) .Freedman ( 1978 ) pp. 78-80 .",
+    "entity_list": [
+      {
+        "name": "Diederichs",
+        "type": "person"
+      },
+      {
+        "name": "Hesse",
+        "type": "writer"
+      },
+      {
+        "name": "prose",
+        "type": "literary genre"
+      },
+      {
+        "name": "One Hour After Midnight",
+        "type": "poem"
+      },
+      {
+        "name": ".Freedman",
+        "type": "book"
+      }
+    ]
+  },
+  {
+    "sentence": "In Far from the Madding Crowd , Hardy first introduced the idea of calling the region in the west of England , where his novels are set , Wessex .",
+    "entity_list": [
+      {
+        "name": "Far from the Madding Crowd",
+        "type": "book"
+      },
+      {
+        "name": "Hardy",
+        "type": "writer"
+      },
+      {
+        "name": "England",
+        "type": "country"
+      },
+      {
+        "name": "novels",
+        "type": "literary genre"
+      },
+      {
+        "name": "Wessex",
+        "type": "country"
+      }
+    ]
+  },
+  {
+    "sentence": "Charles spent time outdoors , but also read voraciously , including the picaresque novel s of Tobias Smollett and Henry Fielding , as well as Robinson Crusoe and Gil Blas .",
+    "entity_list": [
+      {
+        "name": "Charles",
+        "type": "writer"
+      },
+      {
+        "name": "picaresque novel",
+        "type": "literary genre"
+      },
+      {
+        "name": "Tobias Smollett",
+        "type": "writer"
+      },
+      {
+        "name": "Henry Fielding",
+        "type": "writer"
+      },
+      {
+        "name": "Robinson Crusoe",
+        "type": "book"
+      },
+      {
+        "name": "Gil Blas",
+        "type": "book"
+      }
+    ]
+  },
+  {
+    "sentence": "Paul Christopher , J. D. Salinger ' s Holden Caulfield , and J. P. Donleavy ' s Sebastion Dangerfield in The Ginger Man ( 1955 ) are among the post-World War II literary heroes who have stymied Hollywood efforts to depict them.see J.P. Donnelley , 91 , Author Who Stirred Controversy With ' Ginger Man , ' Dies , The New York Times , September 14 , 2017 .",
+    "entity_list": [
+      {
+        "name": "Paul Christopher",
+        "type": "writer"
+      },
+      {
+        "name": "J. D. Salinger",
+        "type": "writer"
+      },
+      {
+        "name": "Holden Caulfield",
+        "type": "person"
+      },
+      {
+        "name": "J. P. Donleavy",
+        "type": "writer"
+      },
+      {
+        "name": "Sebastion Dangerfield",
+        "type": "person"
+      },
+      {
+        "name": "The Ginger Man",
+        "type": "book"
+      },
+      {
+        "name": "post-World War II literary",
+        "type": "else"
+      },
+      {
+        "name": "Hollywood",
+        "type": "organization"
+      },
+      {
+        "name": "J.P. Donnelley",
+        "type": "writer"
+      },
+      {
+        "name": "Ginger Man",
+        "type": "book"
+      },
+      {
+        "name": "The New York Times",
+        "type": "organization"
+      }
+    ]
+  },
+  {
+    "sentence": "1789 ) with the addition of five of his poems : the Introduction and The Divine Image from the Songs of Innocence ( 1789 ) , The Tyger and A Divine Image from the Songs of Experience ( 1789-1794 ) , and A Cradle Song from his Note-book ( Manuscript Dante Gabriel Rossetti , 1793 ) .",
+    "entity_list": [
+      {
+        "name": "The Divine Image",
+        "type": "poem"
+      },
+      {
+        "name": "Songs of Innocence",
+        "type": "book"
+      },
+      {
+        "name": "The Tyger",
+        "type": "poem"
+      },
+      {
+        "name": "A Divine Image",
+        "type": "poem"
+      },
+      {
+        "name": "Songs of Experience",
+        "type": "book"
+      },
+      {
+        "name": "A Cradle Song",
+        "type": "poem"
+      },
+      {
+        "name": "Dante Gabriel Rossetti",
+        "type": "writer"
+      }
+    ]
+  },
+  {
+    "sentence": "Under the succeeding Han dynasty and Tang dynasty dynasties , Confucian ideas gained even more widespread prominence .",
+    "entity_list": [
+      {
+        "name": "Han dynasty",
+        "type": "country"
+      },
+      {
+        "name": "Tang dynasty",
+        "type": "country"
+      },
+      {
+        "name": "Confucian ideas",
+        "type": "else"
+      }
+    ]
+  },
+  {
+    "sentence": "In 2012 , when the Nobel Prize Records were opened after 50 years , it was revealed that Durrell had been on a shortlist of authors considered for the 1962 Nobel Prize in Literature , along with American John Steinbeck ( winner ) , British poet Robert Graves , French writer Jean Anouilh , and the Danish Karen Blixen .",
+    "entity_list": [
+      {
+        "name": "Nobel Prize Records",
+        "type": "else"
+      },
+      {
+        "name": "Durrell",
+        "type": "writer"
+      },
+      {
+        "name": "Nobel Prize in Literature",
+        "type": "award"
+      },
+      {
+        "name": "American",
+        "type": "else"
+      },
+      {
+        "name": "John Steinbeck",
+        "type": "writer"
+      },
+      {
+        "name": "British",
+        "type": "else"
+      },
+      {
+        "name": "Robert Graves",
+        "type": "writer"
+      },
+      {
+        "name": "French",
+        "type": "else"
+      },
+      {
+        "name": "Jean Anouilh",
+        "type": "writer"
+      },
+      {
+        "name": "Danish",
+        "type": "else"
+      },
+      {
+        "name": "Karen Blixen",
+        "type": "writer"
+      }
+    ]
+  },
+  {
+    "sentence": "His time-travel novel Timescape ( 1980 ) won both the Nebula Award and the John W. Campbell Memorial Award .",
+    "entity_list": [
+      {
+        "name": "novel",
+        "type": "literary genre"
+      },
+      {
+        "name": "Timescape",
+        "type": "book"
+      },
+      {
+        "name": "Nebula Award",
+        "type": "award"
+      },
+      {
+        "name": "John W. Campbell Memorial Award",
+        "type": "award"
+      }
+    ]
+  },
+  {
+    "sentence": "In 1985 , Spielberg released The Color Purple , an adaptation of Alice Walker ' s Pulitzer Prize -winning The Color Purple , about a generation of empowered African-American women during depression-era America .",
+    "entity_list": [
+      {
+        "name": "Spielberg",
+        "type": "writer"
+      },
+      {
+        "name": "The Color Purple",
+        "type": "book"
+      },
+      {
+        "name": "Alice Walker",
+        "type": "writer"
+      },
+      {
+        "name": "Pulitzer Prize",
+        "type": "award"
+      },
+      {
+        "name": "African-American",
+        "type": "else"
+      },
+      {
+        "name": "America",
+        "type": "country"
+      }
+    ]
+  },
+  {
+    "sentence": "It is largely based on the Alexandreis of Walter of Châtillon , but also contains many fantastical elements common to the Alexander romance .",
+    "entity_list": [
+      {
+        "name": "Alexandreis",
+        "type": "poem"
+      },
+      {
+        "name": "Walter of Châtillon",
+        "type": "writer"
+      },
+      {
+        "name": "Alexander romance",
+        "type": "book"
+      }
+    ]
+  },
+  {
+    "sentence": "For the general reader , Jonson 's reputation rests on a few lyrics that , though brief , are surpassed for grace and precision by very few Renaissance poems : On My First Sonne ; To Celia ; To Penshurst ; and the epitaph on Salomon Pavy , a boy player abducted from his parents who acted in Jonson 's plays .",
+    "entity_list": [
+      {
+        "name": "Jonson",
+        "type": "writer"
+      },
+      {
+        "name": "Renaissance poems",
+        "type": "literary genre"
+      },
+      {
+        "name": "On My First Sonne",
+        "type": "poem"
+      },
+      {
+        "name": "To Celia",
+        "type": "poem"
+      },
+      {
+        "name": "To Penshurst",
+        "type": "poem"
+      },
+      {
+        "name": "Salomon Pavy",
+        "type": "person"
+      }
+    ]
+  },
+  {
+    "sentence": "During most of his career , Orwell was best known for his journalism , in essays , reviews , columns in newspapers and magazines and in his books of reportage : Down and Out in Paris and London ( describing a period of poverty in these cities ) , The Road to Wigan Pier ( describing the living conditions of the poor in northern England , and class division generally ) and Homage to Catalonia .",
+    "entity_list": [
+      {
+        "name": "Orwell",
+        "type": "writer"
+      },
+      {
+        "name": "Down and Out in Paris and London",
+        "type": "book"
+      },
+      {
+        "name": "The Road to Wigan Pier",
+        "type": "book"
+      },
+      {
+        "name": "England",
+        "type": "country"
+      },
+      {
+        "name": "Homage to Catalonia",
+        "type": "book"
+      }
+    ]
+  },
+  {
+    "sentence": "A late ( 1890s ) reference to the urban legend of the murderous barber can be found in the poem by the Australian bush poet Banjo Paterson - The Man from Ironbark .",
+    "entity_list": [
+      {
+        "name": "poem",
+        "type": "literary genre"
+      },
+      {
+        "name": "Australian",
+        "type": "else"
+      },
+      {
+        "name": "Banjo Paterson",
+        "type": "person"
+      },
+      {
+        "name": "The Man from Ironbark",
+        "type": "poem"
+      }
+    ]
+  },
+  {
+    "sentence": "This acted as a prelude to the release the following year of The Whitsun Weddings , the volume which cemented his reputation ; almost immediately after its publication he was granted a Fellowship of the Royal Society of Literature .",
+    "entity_list": [
+      {
+        "name": "The Whitsun Weddings",
+        "type": "book"
+      },
+      {
+        "name": "Royal Society of Literature",
+        "type": "organization"
+      }
+    ]
+  },
+  {
+    "sentence": "Bova holds the position of President Emeritus of the National Space Society and served as President of Science Fiction and Fantasy Writers of America ( SFWA ) from 1990 to 1992 .",
+    "entity_list": [
+      {
+        "name": "Bova",
+        "type": "writer"
+      },
+      {
+        "name": "President Emeritus",
+        "type": "else"
+      },
+      {
+        "name": "National Space Society",
+        "type": "organization"
+      },
+      {
+        "name": "Science Fiction and Fantasy Writers of America",
+        "type": "organization"
+      },
+      {
+        "name": "SFWA",
+        "type": "organization"
+      }
+    ]
+  },
+  {
+    "sentence": "This strand continues in Latin accounts of the Trojan War by writers such as Dictys Cretensis and Dares Phrygius and in Benoît de Sainte-Maure ' s Roman de Troie and Guido delle Colonne ' s Historia destructionis Troiae , which remained the most widely read and retold versions of the Matter of Troy until the 17th century .",
+    "entity_list": [
+      {
+        "name": "Latin",
+        "type": "else"
+      },
+      {
+        "name": "Trojan War",
+        "type": "event"
+      },
+      {
+        "name": "Dictys Cretensis",
+        "type": "writer"
+      },
+      {
+        "name": "Dares Phrygius",
+        "type": "writer"
+      },
+      {
+        "name": "Benoît de Sainte-Maure",
+        "type": "writer"
+      },
+      {
+        "name": "Roman de Troie",
+        "type": "book"
+      },
+      {
+        "name": "Guido delle Colonne",
+        "type": "writer"
+      },
+      {
+        "name": "Historia destructionis Troiae",
+        "type": "book"
+      },
+      {
+        "name": "Matter of Troy",
+        "type": "else"
+      }
+    ]
+  },
+  {
+    "sentence": "Other works soon followed , including A Tale of Two Cities ( 1859 ) and Great Expectations ( 1861 ) , which were resounding successes .",
+    "entity_list": [
+      {
+        "name": "A Tale of Two Cities",
+        "type": "book"
+      },
+      {
+        "name": "Great Expectations",
+        "type": "book"
+      }
+    ]
+  },
+  {
+    "sentence": "In 1952 , Capp and his characters graced the covers of both Life and TV Guide .",
+    "entity_list": [
+      {
+        "name": "Capp",
+        "type": "writer"
+      },
+      {
+        "name": "Life",
+        "type": "magazine"
+      },
+      {
+        "name": "TV Guide",
+        "type": "magazine"
+      }
+    ]
+  },
+  {
+    "sentence": "Nobel Prize -winning writer Isaac Bashevis Singer translated some of his works .",
+    "entity_list": [
+      {
+        "name": "Nobel Prize",
+        "type": "award"
+      },
+      {
+        "name": "Isaac Bashevis Singer",
+        "type": "writer"
+      }
+    ]
+  },
+  {
+    "sentence": "The story of a powerful ( fairy ) woman who takes a lover on condition that he obey a particular prohibition is common in medieval poetry : the French lais of Desiré , Graelent , and Guingamor , and Chrétien de Troyes ' s romance Yvain , the Knight of the Lion , all share similar plot elements .",
+    "entity_list": [
+      {
+        "name": "French",
+        "type": "else"
+      },
+      {
+        "name": "lais",
+        "type": "literary genre"
+      },
+      {
+        "name": "Desiré",
+        "type": "poem"
+      },
+      {
+        "name": "Graelent",
+        "type": "poem"
+      },
+      {
+        "name": "Guingamor",
+        "type": "poem"
+      },
+      {
+        "name": "Chrétien de Troyes",
+        "type": "writer"
+      },
+      {
+        "name": "Yvain , the Knight of the Lion",
+        "type": "poem"
+      }
+    ]
+  },
+  {
+    "sentence": "It was nominated for seven Academy Awards and won four , including Academy Award for Best Picture and Academy Award for Best Original Screenplay .",
+    "entity_list": [
+      {
+        "name": "Academy Awards",
+        "type": "award"
+      },
+      {
+        "name": "Academy Award for Best Picture",
+        "type": "award"
+      },
+      {
+        "name": "Academy Award for Best Original Screenplay",
+        "type": "award"
+      }
+    ]
+  },
+  {
+    "sentence": "Also in 2007 he provided consulting services to Silver Pictures on the film adaptation of Richard K. Morgan ' s hardboiled cyberpunk science-fiction novel Altered Carbon ( 2002 ) .",
+    "entity_list": [
+      {
+        "name": "Silver Pictures",
+        "type": "organization"
+      },
+      {
+        "name": "Richard K. Morgan",
+        "type": "writer"
+      },
+      {
+        "name": "science-fiction novel",
+        "type": "literary genre"
+      },
+      {
+        "name": "Altered Carbon",
+        "type": "book"
+      }
+    ]
+  },
+  {
+    "sentence": "In Beyond Good and Evil and On the Genealogy of Morality , Nietzsche 's genealogical account of the development of modern moral systems occupies a central place .",
+    "entity_list": [
+      {
+        "name": "Beyond Good and Evil",
+        "type": "book"
+      },
+      {
+        "name": "On the Genealogy of Morality",
+        "type": "book"
+      },
+      {
+        "name": "Nietzsche",
+        "type": "writer"
+      }
+    ]
+  },
+  {
+    "sentence": "Due to pressure by fans on Asimov to write another book in his Foundation series , he did so with Foundation 's Edge ( 1982 ) and Foundation and Earth ( 1986 ) , and then went back to before the original trilogy with Prelude to Foundation ( 1988 ) and Forward the Foundation ( 1992 ) , his last novel .",
+    "entity_list": [
+      {
+        "name": "Asimov",
+        "type": "writer"
+      },
+      {
+        "name": "Foundation series",
+        "type": "else"
+      },
+      {
+        "name": "Foundation 's Edge",
+        "type": "book"
+      },
+      {
+        "name": "Foundation and Earth",
+        "type": "book"
+      },
+      {
+        "name": "trilogy",
+        "type": "else"
+      },
+      {
+        "name": "Prelude to Foundation",
+        "type": "book"
+      },
+      {
+        "name": "Forward the Foundation",
+        "type": "book"
+      },
+      {
+        "name": "novel",
+        "type": "literary genre"
+      }
+    ]
+  },
+  {
+    "sentence": "Swift is remembered for works such as A Tale of a Tub ( 1704 ) , An Argument Against Abolishing Christianity ( 1712 ) , Gulliver 's Travels ( 1726 ) , and A Modest Proposal ( 1729 ) .",
+    "entity_list": [
+      {
+        "name": "Swift",
+        "type": "writer"
+      },
+      {
+        "name": "A Tale of a Tub",
+        "type": "book"
+      },
+      {
+        "name": "An Argument Against Abolishing Christianity",
+        "type": "book"
+      },
+      {
+        "name": "Gulliver 's Travels",
+        "type": "book"
+      },
+      {
+        "name": "A Modest Proposal",
+        "type": "book"
+      }
+    ]
+  },
+  {
+    "sentence": "Seymour Hersh , Nixon 's Last Cover-Up : The Tapes He Wants the Archives to Suppress ; The New Yorker , December 14 , 1992 , pp. 80-81 In passing sentence in February 1972 , the judge rejected the D.A. ' s motion that Capp agree to undergo psychiatric treatment .",
+    "entity_list": [
+      {
+        "name": "Seymour Hersh",
+        "type": "writer"
+      },
+      {
+        "name": "Nixon",
+        "type": "person"
+      },
+      {
+        "name": "Last Cover-Up : The Tapes He Wants the Archives to Suppress",
+        "type": "else"
+      },
+      {
+        "name": "The New Yorker",
+        "type": "magazine"
+      },
+      {
+        "name": "D.A.",
+        "type": "else"
+      },
+      {
+        "name": "Capp",
+        "type": "writer"
+      }
+    ]
+  },
+  {
+    "sentence": "To Dolapdere , he sarcastically gave the name Cholera ( Kolera in Turkish ) in Ağır Roman , thereby recalling both its shabbiness and the fact that the great Poland poet Adam Mickiewicz died there from the cholera in 1855 .",
+    "entity_list": [
+      {
+        "name": "Dolapdere",
+        "type": "location"
+      },
+      {
+        "name": "Cholera",
+        "type": "else"
+      },
+      {
+        "name": "Kolera",
+        "type": "else"
+      },
+      {
+        "name": "Turkish",
+        "type": "else"
+      },
+      {
+        "name": "Ağır Roman",
+        "type": "book"
+      },
+      {
+        "name": "Poland",
+        "type": "country"
+      },
+      {
+        "name": "Adam Mickiewicz",
+        "type": "writer"
+      },
+      {
+        "name": "cholera",
+        "type": "else"
+      }
+    ]
+  },
+  {
+    "sentence": "He was influenced by the Marxist playwright Bertolt Brecht and was invited by Brecht to be his assistant at the East Berlin State Opera but turned down the offer .",
+    "entity_list": [
+      {
+        "name": "Marxist",
+        "type": "else"
+      },
+      {
+        "name": "Bertolt Brecht",
+        "type": "writer"
+      },
+      {
+        "name": "Brecht",
+        "type": "writer"
+      },
+      {
+        "name": "East Berlin State Opera",
+        "type": "location"
+      }
+    ]
+  },
+  {
+    "sentence": "The poems he had written during his time in prison were so effective that Dudley Randall , a poet and owner of Broadside Press , published Knight 's first volume of verse , Poems from Prison , and hailed Knight as one of the major poets of the Black Arts Movement .",
+    "entity_list": [
+      {
+        "name": "poems",
+        "type": "literary genre"
+      },
+      {
+        "name": "Dudley Randall",
+        "type": "writer"
+      },
+      {
+        "name": "Broadside Press",
+        "type": "organization"
+      },
+      {
+        "name": "Knight 's first volume of verse",
+        "type": "else"
+      },
+      {
+        "name": "Poems from Prison",
+        "type": "poem"
+      },
+      {
+        "name": "Black Arts Movement",
+        "type": "event"
+      }
+    ]
+  },
+  {
+    "sentence": "Verne 's collaboration with the publisher Pierre-Jules Hetzel led to the creation of the Voyages extraordinaires , a widely popular series of scrupulously researched adventure novels including Journey to the Center of the Earth ( 1864 ) , Twenty Thousand Leagues Under the Sea ( 1870 ) , and Around the World in Eighty Days ( 1873 ) .",
+    "entity_list": [
+      {
+        "name": "Verne",
+        "type": "writer"
+      },
+      {
+        "name": "Pierre-Jules Hetzel",
+        "type": "writer"
+      },
+      {
+        "name": "Voyages extraordinaires",
+        "type": "book"
+      },
+      {
+        "name": "novels",
+        "type": "literary genre"
+      },
+      {
+        "name": "Journey to the Center of the Earth",
+        "type": "book"
+      },
+      {
+        "name": "Twenty Thousand Leagues Under the Sea",
+        "type": "book"
+      },
+      {
+        "name": "Around the World in Eighty Days",
+        "type": "book"
+      }
+    ]
+  },
+  {
+    "sentence": "With his poem Yo soy Joaquín , known in English as I Am Joaquin , Gonzales shared his new cosmological vision of the Chicano , who was neither Indian nor European , neither Mexican nor American , but a combination of all the conflicting identities .",
+    "entity_list": [
+      {
+        "name": "poem",
+        "type": "literary genre"
+      },
+      {
+        "name": "Yo soy Joaquín",
+        "type": "poem"
+      },
+      {
+        "name": "English",
+        "type": "else"
+      },
+      {
+        "name": "I Am Joaquin",
+        "type": "poem"
+      },
+      {
+        "name": "Gonzales",
+        "type": "writer"
+      },
+      {
+        "name": "Chicano",
+        "type": "poem"
+      },
+      {
+        "name": "Indian",
+        "type": "else"
+      },
+      {
+        "name": "European",
+        "type": "else"
+      },
+      {
+        "name": "Mexican",
+        "type": "else"
+      },
+      {
+        "name": "American",
+        "type": "else"
+      }
+    ]
+  },
+  {
+    "sentence": "In response to what at least appeared to be a blatant snub by his own countrymen , the director Sidney Lumet led a successful campaign to have Kurosawa receive an Oscar nomination for Academy Award for Best Director that year ( Sydney Pollack ultimately won the award for directing Out of Africa ) .",
+    "entity_list": [
+      {
+        "name": "Sidney Lumet",
+        "type": "person"
+      },
+      {
+        "name": "Kurosawa",
+        "type": "person"
+      },
+      {
+        "name": "Oscar",
+        "type": "award"
+      },
+      {
+        "name": "Academy Award for Best Director",
+        "type": "award"
+      },
+      {
+        "name": "Sydney Pollack",
+        "type": "person"
+      },
+      {
+        "name": "Out of Africa",
+        "type": "else"
+      }
+    ]
+  },
+  {
+    "sentence": "After a 1995 staging at the La Jolla Playhouse , he retained David Mamet to help rework the book before its relaunch on the Chicago Goodman Theatre mainstage in 1996 .",
+    "entity_list": [
+      {
+        "name": "La Jolla Playhouse",
+        "type": "location"
+      },
+      {
+        "name": "David Mamet",
+        "type": "writer"
+      },
+      {
+        "name": "Chicago Goodman Theatre",
+        "type": "location"
+      }
+    ]
+  },
+  {
+    "sentence": "The period around World War II also saw the publication of the time travel novel Lest Darkness Fall by L. Sprague de Camp , in which an American academic travels to Italy at the time of the Byzantine invasion of the Ostrogoths .",
+    "entity_list": [
+      {
+        "name": "World War II",
+        "type": "event"
+      },
+      {
+        "name": "time travel novel",
+        "type": "literary genre"
+      },
+      {
+        "name": "Lest Darkness Fall",
+        "type": "book"
+      },
+      {
+        "name": "L. Sprague de Camp",
+        "type": "writer"
+      },
+      {
+        "name": "American",
+        "type": "else"
+      },
+      {
+        "name": "Italy",
+        "type": "country"
+      },
+      {
+        "name": "Byzantine",
+        "type": "else"
+      },
+      {
+        "name": "Ostrogoths",
+        "type": "else"
+      }
+    ]
+  },
+  {
+    "sentence": "His most famous poem is The Airs of Palestine .",
+    "entity_list": [
+      {
+        "name": "poem",
+        "type": "literary genre"
+      },
+      {
+        "name": "The Airs of Palestine",
+        "type": "poem"
+      }
+    ]
+  },
+  {
+    "sentence": "A tribute show to Wilson , organized by Coldcut and Mixmaster Morris and performed in London as a part of the Ether 7 Festival held at the Queen Elizabeth Hall on March 18 , 2007 , also included Ken Campbell , Bill Drummond and Alan Moore .",
+    "entity_list": [
+      {
+        "name": "Wilson",
+        "type": "writer"
+      },
+      {
+        "name": "Coldcut",
+        "type": "person"
+      },
+      {
+        "name": "Mixmaster Morris",
+        "type": "person"
+      },
+      {
+        "name": "London",
+        "type": "location"
+      },
+      {
+        "name": "Ether 7 Festival",
+        "type": "event"
+      },
+      {
+        "name": "Queen Elizabeth Hall",
+        "type": "location"
+      },
+      {
+        "name": "Ken Campbell",
+        "type": "writer"
+      },
+      {
+        "name": "Bill Drummond",
+        "type": "writer"
+      },
+      {
+        "name": "Alan Moore",
+        "type": "writer"
+      }
+    ]
+  },
+  {
+    "sentence": "Former House Speaker Newt Gingrich and William R. Forstchen have written a novel , 1945 , in which the US defeated Empire of Japan but not Nazi Germany in World War II , resulting in a Cold War with Germany rather than the Soviet Union .",
+    "entity_list": [
+      {
+        "name": "House",
+        "type": "organization"
+      },
+      {
+        "name": "Newt Gingrich",
+        "type": "writer"
+      },
+      {
+        "name": "William R. Forstchen",
+        "type": "writer"
+      },
+      {
+        "name": "novel",
+        "type": "literary genre"
+      },
+      {
+        "name": "1945",
+        "type": "book"
+      },
+      {
+        "name": "US",
+        "type": "country"
+      },
+      {
+        "name": "Empire of Japan",
+        "type": "country"
+      },
+      {
+        "name": "Nazi Germany",
+        "type": "country"
+      },
+      {
+        "name": "World War II",
+        "type": "event"
+      },
+      {
+        "name": "Cold War",
+        "type": "event"
+      },
+      {
+        "name": "Germany",
+        "type": "country"
+      },
+      {
+        "name": "Soviet Union",
+        "type": "country"
+      }
+    ]
+  },
+  {
+    "sentence": "With the publications of Sense and Sensibility ( 1811 ) , Pride and Prejudice ( 1813 ) , Mansfield Park ( 1814 ) and Emma ( 1816 ) , she achieved success as a published writer .",
+    "entity_list": [
+      {
+        "name": "Sense and Sensibility",
+        "type": "book"
+      },
+      {
+        "name": "Pride and Prejudice",
+        "type": "book"
+      },
+      {
+        "name": "Mansfield Park",
+        "type": "book"
+      },
+      {
+        "name": "Emma",
+        "type": "book"
+      }
+    ]
+  },
+  {
+    "sentence": "For example , Russ criticized Ursula K. Le Guin ' s 1969 The Left Hand of Darkness , which won both the 1969 Nebula Award for Best Novel and 1970 Hugo Award for Best Novel awards for best science fiction novel , arguing that gender discriminations that permeated science fiction by men showed up just as frequently in science fiction by women .",
+    "entity_list": [
+      {
+        "name": "Russ",
+        "type": "writer"
+      },
+      {
+        "name": "Ursula K. Le Guin",
+        "type": "writer"
+      },
+      {
+        "name": "The Left Hand of Darkness",
+        "type": "book"
+      },
+      {
+        "name": "Nebula Award for Best Novel",
+        "type": "award"
+      },
+      {
+        "name": "Hugo Award for Best Novel",
+        "type": "award"
+      },
+      {
+        "name": "science fiction",
+        "type": "literary genre"
+      }
+    ]
+  },
+  {
+    "sentence": "Caterina di Giacomo di Benincasa was born on 25 March 1347 ( shortly before the Black Death ravaged Europe ) in Siena , Republic of Siena ( today Italy ) , to Lapa Piagenti , the daughter of a local poet , and Giacomo di Benincasa , a cloth dyer who ran his enterprise with the help of his sons .",
+    "entity_list": [
+      {
+        "name": "Caterina di",
+        "type": "person"
+      },
+      {
+        "name": "Giacomo di Benincasa",
+        "type": "person"
+      },
+      {
+        "name": "Black Death",
+        "type": "else"
+      },
+      {
+        "name": "Europe",
+        "type": "location"
+      },
+      {
+        "name": "Siena",
+        "type": "location"
+      },
+      {
+        "name": "Republic of Siena",
+        "type": "country"
+      },
+      {
+        "name": "Italy",
+        "type": "country"
+      },
+      {
+        "name": "Lapa Piagenti",
+        "type": "person"
+      }
+    ]
+  },
+  {
+    "sentence": "These include the Universal Natural History and Theory of the Heavens ( 1755 ) , the Critique of Practical Reason ( 1788 ) , the Metaphysics of Morals ( 1797 ) , the Critique of Judgment ( 1790 ) , which looks at aesthetics and teleology , and Religion within the Bounds of Bare Reason ( 1793 ) .",
+    "entity_list": [
+      {
+        "name": "Universal Natural History and Theory of the Heavens",
+        "type": "book"
+      },
+      {
+        "name": "Critique of Practical Reason",
+        "type": "book"
+      },
+      {
+        "name": "Metaphysics of Morals",
+        "type": "book"
+      },
+      {
+        "name": "Critique of Judgment",
+        "type": "book"
+      },
+      {
+        "name": "Religion within the Bounds of Bare Reason",
+        "type": "book"
+      }
+    ]
+  },
+  {
+    "sentence": "His interest in space , however , was his primary focus , especially after reading science fiction stories by writers such as H. G. Wells and Edgar Rice Burroughs , which stirred his imagination about life on other planets such as Mars .",
+    "entity_list": [
+      {
+        "name": "science fiction stories",
+        "type": "literary genre"
+      },
+      {
+        "name": "H. G. Wells",
+        "type": "writer"
+      },
+      {
+        "name": "Edgar Rice Burroughs",
+        "type": "writer"
+      },
+      {
+        "name": "Mars",
+        "type": "else"
+      }
+    ]
+  },
+  {
+    "sentence": "Baron Cohen was educated at The Haberdashers ' Aske 's Boys ' School , an independent school in Elstree , Hertfordshire , While a member of the Cambridge University Amateur Dramatic Club , Baron Cohen performed in plays such as Fiddler on the Roof and Cyrano de Bergerac , as well as in Habonim Dror Jewish theatre .",
+    "entity_list": [
+      {
+        "name": "Baron Cohen",
+        "type": "person"
+      },
+      {
+        "name": "The Haberdashers ' Aske 's Boys ' School",
+        "type": "organization"
+      },
+      {
+        "name": "Elstree",
+        "type": "location"
+      },
+      {
+        "name": "Hertfordshire",
+        "type": "location"
+      },
+      {
+        "name": "Cambridge University Amateur Dramatic Club",
+        "type": "organization"
+      },
+      {
+        "name": "Fiddler on the Roof",
+        "type": "else"
+      },
+      {
+        "name": "Cyrano de Bergerac",
+        "type": "else"
+      },
+      {
+        "name": "Habonim Dror Jewish theatre",
+        "type": "location"
+      }
+    ]
+  }
+]

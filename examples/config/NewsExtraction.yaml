@@ -1,0 +1,15 @@
+model:
+  category: DeepSeek
+  model_name_or_path: deepseek-chat
+  api_key: sk-8a1ebfc920a145bea54a5ad6d987dbea
+  base_url: https://api.deepseek.com
+
+extraction:             
+  task: Base
+  instruction: Extract key information from the given text.
+  file_path: ./data/input_files/Tulsi_Gabbard_News.html
+  output_schema: NewsReport
+  use_file: true
+  mode: customized
+  update_case: false
+

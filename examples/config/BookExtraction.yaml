@@ -1,0 +1,15 @@
+model:
+  # Recommend using ChatGPT or DeepSeek APIs for complex IE task.
+  category: ChatGPT
+  model_name_or_path: gpt-4o-mini
+  api_key: sk-ADCiVBqVHAnnugtsGS2V05g2RigirBSoZc7unds4DWk3JPS3
+  base_url: https://api.chatanywhere.tech/v1
+
+extraction:             
+  task: Base
+  instruction: Extract main characters and background setting from this chapter.
+  file_path: ./data/input_files/Harry_Potter_Chapter1.pdf
+  use_file: true
+  mode: quick
+  update_case: false
+

@@ -1,93 +1,2791 @@
-{"text": "In 2003 , the Stade de France was the primary site of the 2003 World Championships in Athletics .", "entity": [{"entity": "Stade de France", "entity_type": "location", "pos": [14, 29]}, {"entity": "2003 World Championships in Athletics", "entity_type": "event", "pos": [58, 95]}], "task": "NER"}
-{"text": "In addition to relentless touring in the U.S. and Canada , PUSA made multiple tours of Europe , Australia , New Zealand and Japan .", "entity": [{"entity": "U.S.", "entity_type": "country", "pos": [41, 45]}, {"entity": "Canada", "entity_type": "country", "pos": [50, 56]}, {"entity": "PUSA", "entity_type": "band", "pos": [59, 63]}, {"entity": "Europe", "entity_type": "location", "pos": [87, 93]}, {"entity": "Australia", "entity_type": "country", "pos": [96, 105]}, {"entity": "New Zealand", "entity_type": "country", "pos": [108, 119]}, {"entity": "Japan", "entity_type": "country", "pos": [124, 129]}], "task": "NER"}
-{"text": "Barney Bubbles directed several videos , including the Specials ' Ghost Town , Squeeze ' s Is That Love and Tempted , Elvis Costello ' s Clubland and New Lace Sleeves , and Fun Boy Three ' s The Lunatics ( Have Taken Over the Asylum ) .", "entity": [{"entity": "Barney Bubbles", "entity_type": "person", "pos": [0, 14]}, {"entity": "the Specials", "entity_type": "band", "pos": [51, 63]}, {"entity": "Ghost Town", "entity_type": "band", "pos": [66, 76]}, {"entity": "Squeeze", "entity_type": "band", "pos": [79, 86]}, {"entity": "Is That Love", "entity_type": "song", "pos": [91, 103]}, {"entity": "Tempted", "entity_type": "song", "pos": [108, 115]}, {"entity": "Elvis Costello", "entity_type": "musical artist", "pos": [118, 132]}, {"entity": "Clubland", "entity_type": "song", "pos": [137, 145]}, {"entity": "New Lace Sleeves", "entity_type": "song", "pos": [150, 166]}, {"entity": "Fun Boy Three", "entity_type": "band", "pos": [173, 186]}, {"entity": "The Lunatics ( Have Taken Over the Asylum )", "entity_type": "song", "pos": [191, 234]}], "task": "NER"}
-{"text": "Since then there has been a renaissance in Sacred Harp singing , with annual conventions popping up in United States and in a number of European countries recently , including the United Kingdom , Germany , Ireland and Poland , as well as in Australia .", "entity": [{"entity": "Sacred Harp", "entity_type": "music genre", "pos": [43, 54]}, {"entity": "United States", "entity_type": "country", "pos": [103, 116]}, {"entity": "European", "entity_type": "else", "pos": [136, 144]}, {"entity": "United Kingdom", "entity_type": "country", "pos": [180, 194]}, {"entity": "Germany", "entity_type": "country", "pos": [197, 204]}, {"entity": "Ireland", "entity_type": "country", "pos": [207, 214]}, {"entity": "Poland", "entity_type": "country", "pos": [219, 225]}, {"entity": "Australia", "entity_type": "country", "pos": [242, 251]}], "task": "NER"}
-{"text": "Three of the labels rejected her , saying that audiences wanted pop bands such as the Backstreet Boys and the Spice Girls , and there wasn 't going to be another Madonna , another Debbie Gibson , or another Tiffany .", "entity": [{"entity": "Backstreet Boys", "entity_type": "band", "pos": [86, 101]}, {"entity": "Spice Girls", "entity_type": "band", "pos": [110, 121]}, {"entity": "Madonna", "entity_type": "musical artist", "pos": [162, 169]}, {"entity": "Debbie Gibson", "entity_type": "musical artist", "pos": [180, 193]}, {"entity": "Tiffany", "entity_type": "musical artist", "pos": [207, 214]}], "task": "NER"}
-{"text": "Notable Sun Ra albums from the 1950s include Sun Ra Visits Planet Earth , Interstellar Low Ways , Super-Sonic Jazz , We Travel the Space Ways , The Nubians of Plutonia and Jazz In Silhouette .", "entity": [{"entity": "Sun Ra", "entity_type": "musical artist", "pos": [8, 14]}, {"entity": "Sun Ra Visits Planet Earth", "entity_type": "album", "pos": [45, 71]}, {"entity": "Interstellar Low Ways", "entity_type": "album", "pos": [74, 95]}, {"entity": "Super-Sonic Jazz", "entity_type": "album", "pos": [98, 114]}, {"entity": "We Travel the Space Ways", "entity_type": "album", "pos": [117, 141]}, {"entity": "The Nubians of Plutonia", "entity_type": "album", "pos": [144, 167]}, {"entity": "Jazz In Silhouette", "entity_type": "album", "pos": [172, 190]}], "task": "NER"}
-{"text": "Stevens ' albums Tea for the Tillerman ( 1970 ) and Teaser and the Firecat ( 1971 ) were certified triple platinum in the US by the Recording Industry Association of America .. BBC News .", "entity": [{"entity": "Stevens", "entity_type": "musical artist", "pos": [0, 7]}, {"entity": "Tea for the Tillerman", "entity_type": "album", "pos": [17, 38]}, {"entity": "Teaser and the Firecat", "entity_type": "album", "pos": [52, 74]}, {"entity": "US", "entity_type": "country", "pos": [122, 124]}, {"entity": "Recording Industry Association of America", "entity_type": "organization", "pos": [132, 173]}, {"entity": "BBC News", "entity_type": "organization", "pos": [177, 185]}], "task": "NER"}
-{"text": "He has won Top New Male Vocalist from Billboard in 1992 and from Academy of Country Music in 1993 , and Vocal Event of the Year from the Country Music Association in 2007 .", "entity": [{"entity": "Top New Male Vocalist", "entity_type": "award", "pos": [11, 32]}, {"entity": "Billboard", "entity_type": "organization", "pos": [38, 47]}, {"entity": "Academy of Country Music", "entity_type": "organization", "pos": [65, 89]}, {"entity": "Vocal Event of the Year", "entity_type": "event", "pos": [104, 127]}, {"entity": "Country Music Association", "entity_type": "organization", "pos": [137, 162]}], "task": "NER"}
-{"text": "In 1983 , the lineup of Verni , Skates , Ellsworth , and Gustafson released the Power in Black demo , a recording that made as much impact in the underground tape trading circuit as demos by up-and-coming Bay Area thrash metal bands such as Exodus and Testament .", "entity": [{"entity": "Verni", "entity_type": "musical artist", "pos": [24, 29]}, {"entity": "Skates", "entity_type": "musical artist", "pos": [32, 38]}, {"entity": "Ellsworth", "entity_type": "musical artist", "pos": [41, 50]}, {"entity": "Gustafson", "entity_type": "musical artist", "pos": [57, 66]}, {"entity": "Power in Black", "entity_type": "album", "pos": [80, 94]}, {"entity": "Bay Area", "entity_type": "location", "pos": [205, 213]}, {"entity": "thrash metal", "entity_type": "music genre", "pos": [214, 226]}, {"entity": "Exodus", "entity_type": "band", "pos": [241, 247]}, {"entity": "Testament", "entity_type": "band", "pos": [252, 261]}], "task": "NER"}
-{"text": "Their style has been described as Rock and roll with a renegade stance , what in later years would be dubbed ' Punk rock ' .", "entity": [{"entity": "Rock and roll", "entity_type": "music genre", "pos": [34, 47]}, {"entity": "Punk rock", "entity_type": "music genre", "pos": [111, 120]}], "task": "NER"}
-{"text": "On 9 June 1892 the Paris Opéra-Comique staged Les Troyens à Carthage ( in the Théâtre de la Ville as its premiere ) and witnessed a triumphant debut for the 17-year-old Marie Delna as Didon , with Stéphane Lafarge as Énée , conducted by Jules Danbé ; these staged performances of Part 2 continued into the next year .", "entity": [{"entity": "Paris", "entity_type": "location", "pos": [19, 24]}, {"entity": "Opéra-Comique", "entity_type": "organization", "pos": [25, 38]}, {"entity": "Les Troyens à Carthage", "entity_type": "else", "pos": [46, 68]}, {"entity": "Théâtre de la Ville", "entity_type": "location", "pos": [78, 97]}, {"entity": "Marie Delna", "entity_type": "musical artist", "pos": [169, 180]}, {"entity": "Didon", "entity_type": "else", "pos": [184, 189]}, {"entity": "Stéphane Lafarge", "entity_type": "person", "pos": [197, 213]}, {"entity": "Énée", "entity_type": "else", "pos": [217, 221]}, {"entity": "Jules Danbé", "entity_type": "musical artist", "pos": [237, 248]}], "task": "NER"}
-{"text": "As a group , the Spice Girls have received a number of notable awards including five Brit Awards , three American Music Awards , three MTV Europe Music Awards , one MTV Video Music Award and three World Music Awards .", "entity": [{"entity": "Spice Girls", "entity_type": "band", "pos": [17, 28]}, {"entity": "Brit Awards", "entity_type": "award", "pos": [85, 96]}, {"entity": "American Music Awards", "entity_type": "award", "pos": [105, 126]}, {"entity": "MTV Europe Music Awards", "entity_type": "award", "pos": [135, 158]}, {"entity": "MTV Video Music Award", "entity_type": "award", "pos": [165, 186]}, {"entity": "World Music Awards", "entity_type": "award", "pos": [197, 215]}], "task": "NER"}
-{"text": "The album experimented with a diverse number of genres , including contemporary R & B , deep house , Swing music , Hip hop music , Rock music , and Pop music , with Billboard describing each as being delivered with consummate skill and passion .", "entity": [{"entity": "contemporary R & B", "entity_type": "music genre", "pos": [67, 85]}, {"entity": "deep house", "entity_type": "music genre", "pos": [88, 98]}, {"entity": "Swing music", "entity_type": "music genre", "pos": [101, 112]}, {"entity": "Hip hop music", "entity_type": "music genre", "pos": [115, 128]}, {"entity": "Rock music", "entity_type": "music genre", "pos": [131, 141]}, {"entity": "Pop music", "entity_type": "music genre", "pos": [148, 157]}, {"entity": "Billboard", "entity_type": "else", "pos": [165, 174]}], "task": "NER"}
-{"text": "Chuck Burgi ( 1991-1992 , 1992-1995 , 1996-1997 ) , John Miceli ( 1992 , 1995 ) , John O 'Reilly ( 1995-1996 ) and Bobby Rondinelli ( 1997-2004 ) .", "entity": [{"entity": "Chuck Burgi", "entity_type": "musical artist", "pos": [0, 11]}, {"entity": "John Miceli", "entity_type": "musical artist", "pos": [52, 63]}, {"entity": "John O 'Reilly", "entity_type": "musical artist", "pos": [82, 96]}, {"entity": "Bobby Rondinelli", "entity_type": "musical artist", "pos": [115, 131]}], "task": "NER"}
-{"text": "Two of his most popular recordings were Layla , recorded with Derek and the Dominos ; and Robert Johnson ' s Cross Road Blues , recorded with Cream .", "entity": [{"entity": "Layla", "entity_type": "song", "pos": [40, 45]}, {"entity": "Derek and the Dominos", "entity_type": "band", "pos": [62, 83]}, {"entity": "Robert Johnson", "entity_type": "musical artist", "pos": [90, 104]}, {"entity": "Cross Road Blues", "entity_type": "song", "pos": [109, 125]}, {"entity": "Cream", "entity_type": "band", "pos": [142, 147]}], "task": "NER"}
-{"text": "Flood has been certified platinum and their children 's music albums Here Come the ABCs , Here Come the 123s , and Here Comes Science have all been certified gold .", "entity": [{"entity": "Flood", "entity_type": "album", "pos": [0, 5]}, {"entity": "Here Come the ABCs", "entity_type": "album", "pos": [69, 87]}, {"entity": "Here Come the 123s", "entity_type": "album", "pos": [90, 108]}, {"entity": "Here Comes Science", "entity_type": "album", "pos": [115, 133]}], "task": "NER"}
-{"text": "She is the recipient of various accolades including an Academy Awards , three Golden Globe Awards , two Critics ' Choice Movie Awards , a Screen Actors Guild Award , and nominations for four BAFTA Awards , three Primetime Emmy Awards , and a Grammy Award .", "entity": [{"entity": "Academy Awards", "entity_type": "award", "pos": [55, 69]}, {"entity": "Golden Globe Awards", "entity_type": "award", "pos": [78, 97]}, {"entity": "Critics ' Choice Movie Awards", "entity_type": "award", "pos": [104, 133]}, {"entity": "Screen Actors Guild Award", "entity_type": "award", "pos": [138, 163]}, {"entity": "BAFTA Awards", "entity_type": "award", "pos": [191, 203]}, {"entity": "Primetime Emmy Awards", "entity_type": "award", "pos": [212, 233]}, {"entity": "Grammy Award", "entity_type": "award", "pos": [242, 254]}], "task": "NER"}
-{"text": "James Brown is said to be the most sampled artist in the history of hip hop , while P-Funk is the second most sampled artist ; samples of old Parliament and Funkadelic songs formed the basis of West Coast G-funk .", "entity": [{"entity": "James Brown", "entity_type": "musical artist", "pos": [0, 11]}, {"entity": "hip hop", "entity_type": "music genre", "pos": [68, 75]}, {"entity": "P-Funk", "entity_type": "band", "pos": [84, 90]}, {"entity": "Parliament and Funkadelic", "entity_type": "band", "pos": [142, 167]}, {"entity": "West Coast G-funk", "entity_type": "music genre", "pos": [194, 211]}], "task": "NER"}
-{"text": "Her early works in the 1960s ( her debut The Barbra Streisand Album , The Second Barbra Streisand Album , The Third Album , My Name Is Barbra , etc .", "entity": [{"entity": "The Barbra Streisand Album", "entity_type": "album", "pos": [41, 67]}, {"entity": "The Second Barbra Streisand Album", "entity_type": "album", "pos": [70, 103]}, {"entity": "The Third Album", "entity_type": "album", "pos": [106, 121]}, {"entity": "My Name Is Barbra", "entity_type": "album", "pos": [124, 141]}], "task": "NER"}
-{"text": "At these labels , Bubbles created more designs for Elvis Costello , as well as other artists such as Nick Lowe , Carlene Carter and Clive Langer & amp ; The Boxes .", "entity": [{"entity": "Bubbles", "entity_type": "person", "pos": [18, 25]}, {"entity": "Elvis Costello", "entity_type": "musical artist", "pos": [51, 65]}, {"entity": "Nick Lowe", "entity_type": "musical artist", "pos": [101, 110]}, {"entity": "Carlene Carter", "entity_type": "musical artist", "pos": [113, 127]}, {"entity": "Clive Langer & amp ; The Boxes", "entity_type": "band", "pos": [132, 162]}], "task": "NER"}
-{"text": "The band have received a total of 11 nominations for ARIA Music Awards in ARIA Music Awards of 1999 , ARIA Music Awards of 2001 and ARIA Music Awards of 2003 .", "entity": [{"entity": "ARIA Music Awards", "entity_type": "award", "pos": [53, 70]}, {"entity": "ARIA Music Awards of 1999", "entity_type": "award", "pos": [74, 99]}, {"entity": "ARIA Music Awards of 2001", "entity_type": "award", "pos": [102, 127]}, {"entity": "ARIA Music Awards of 2003", "entity_type": "award", "pos": [132, 157]}], "task": "NER"}
-{"text": "Their music has a particular rumba flamenca style , with Pop music influences ; many songs of the Gipsy Kings fit social dance s , such as salsa and Rhumba .", "entity": [{"entity": "rumba flamenca", "entity_type": "music genre", "pos": [29, 43]}, {"entity": "Pop music", "entity_type": "music genre", "pos": [57, 66]}, {"entity": "Gipsy Kings", "entity_type": "band", "pos": [98, 109]}, {"entity": "salsa", "entity_type": "music genre", "pos": [139, 144]}, {"entity": "Rhumba", "entity_type": "music genre", "pos": [149, 155]}], "task": "NER"}
-{"text": "Parton received nominations for Drama Desk Award for Outstanding Music and Drama Desk Award for Outstanding Lyrics , as well as a nomination for Tony Award for Best Original Score .", "entity": [{"entity": "Parton", "entity_type": "musical artist", "pos": [0, 6]}, {"entity": "Drama Desk Award for Outstanding Music", "entity_type": "award", "pos": [32, 70]}, {"entity": "Drama Desk Award for Outstanding Lyrics", "entity_type": "award", "pos": [75, 114]}, {"entity": "Tony Award for Best Original Score", "entity_type": "award", "pos": [145, 179]}], "task": "NER"}
-{"text": "By the end of World War II , mountaineer string band music known as Bluegrass music had emerged when Bill Monroe joined with Lester Flatt and Earl Scruggs , introduced by Roy Acuff at the Grand Ole Opry .", "entity": [{"entity": "World War II", "entity_type": "event", "pos": [14, 26]}, {"entity": "Bluegrass music", "entity_type": "music genre", "pos": [68, 83]}, {"entity": "Bill Monroe", "entity_type": "musical artist", "pos": [101, 112]}, {"entity": "Lester Flatt", "entity_type": "musical artist", "pos": [125, 137]}, {"entity": "Earl Scruggs", "entity_type": "musical artist", "pos": [142, 154]}, {"entity": "Roy Acuff", "entity_type": "musical artist", "pos": [171, 180]}, {"entity": "Grand Ole Opry", "entity_type": "location", "pos": [188, 202]}], "task": "NER"}
-{"text": "At the 59th Annual Grammy Awards on 12 February 2017 , Bowie won all five nominated awards : Grammy Award for Best Rock Performance ; Grammy Award for Best Alternative Music Album ; Best Engineered Album , Non-Classical ; Grammy Award for Best Recording Package ; and Grammy Award for Best Rock Song .", "entity": [{"entity": "59th Annual Grammy Awards", "entity_type": "award", "pos": [7, 32]}, {"entity": "Bowie", "entity_type": "musical artist", "pos": [55, 60]}, {"entity": "Grammy Award for Best Rock Performance", "entity_type": "award", "pos": [93, 131]}, {"entity": "Grammy Award for Best Alternative Music Album", "entity_type": "award", "pos": [134, 179]}, {"entity": "Best Engineered Album , Non-Classical", "entity_type": "award", "pos": [182, 219]}, {"entity": "Grammy Award for Best Recording Package", "entity_type": "award", "pos": [222, 261]}, {"entity": "Grammy Award for Best Rock Song", "entity_type": "award", "pos": [268, 299]}], "task": "NER"}
-{"text": "The group has been nominated for 20 Grammy awards and has won five of them with Best Alternative Album for Dookie , Best Rock Album for American Idiot and 21st Century Breakdown , Record of the Year for Boulevard of Broken Dreams , and Best Musical Show Album for American Idiot : The Original Broadway Cast Recording .", "entity": [{"entity": "Grammy awards", "entity_type": "award", "pos": [36, 49]}, {"entity": "Best Alternative Album", "entity_type": "award", "pos": [80, 102]}, {"entity": "Dookie", "entity_type": "album", "pos": [107, 113]}, {"entity": "Best Rock Album", "entity_type": "award", "pos": [116, 131]}, {"entity": "American Idiot", "entity_type": "album", "pos": [136, 150]}, {"entity": "21st Century Breakdown", "entity_type": "album", "pos": [155, 177]}, {"entity": "Record of the Year", "entity_type": "award", "pos": [180, 198]}, {"entity": "Boulevard of Broken Dreams", "entity_type": "album", "pos": [203, 229]}, {"entity": "Best Musical Show Album", "entity_type": "award", "pos": [236, 259]}, {"entity": "American Idiot", "entity_type": "album", "pos": [264, 278]}, {"entity": "The Original Broadway Cast Recording", "entity_type": "album", "pos": [281, 317]}], "task": "NER"}
-{"text": "The Righteous Brothers , Bobby Hatfield and Bill Medley , also guest-starred in different episodes .", "entity": [{"entity": "The Righteous Brothers", "entity_type": "band", "pos": [0, 22]}, {"entity": "Bobby Hatfield", "entity_type": "musical artist", "pos": [25, 39]}, {"entity": "Bill Medley", "entity_type": "musical artist", "pos": [44, 55]}], "task": "NER"}
-{"text": "Outside the south , the accordion ( predominantly the piano accordion ) is used in almost all styles of Forró ( in particular in the subgenres of Xote and Baião ) as the principal instrument , Luiz Gonzaga ( the King of the Baião ) and Dominguinhos being among the notable musicians in this style from the northeast .", "entity": [{"entity": "piano accordion", "entity_type": "musical instrument", "pos": [54, 69]}, {"entity": "Forró", "entity_type": "music genre", "pos": [104, 109]}, {"entity": "Xote", "entity_type": "music genre", "pos": [146, 150]}, {"entity": "Baião", "entity_type": "music genre", "pos": [155, 160]}, {"entity": "Luiz Gonzaga", "entity_type": "musical artist", "pos": [193, 205]}, {"entity": "King of the Baião", "entity_type": "else", "pos": [212, 229]}, {"entity": "Dominguinhos", "entity_type": "musical artist", "pos": [236, 248]}], "task": "NER"}
-{"text": "These were : Now and Zen in 1988 , Manic Nirvana in 1990 , and the 1993 Fate of Nations ( which features Moya Brennan of Clannad and former Cutting Crew guitarist Kevin MacMichael ) .", "entity": [{"entity": "Now and Zen", "entity_type": "album", "pos": [13, 24]}, {"entity": "Manic Nirvana", "entity_type": "album", "pos": [35, 48]}, {"entity": "Fate of Nations", "entity_type": "album", "pos": [72, 87]}, {"entity": "Moya Brennan", "entity_type": "musical artist", "pos": [105, 117]}, {"entity": "Clannad", "entity_type": "band", "pos": [121, 128]}, {"entity": "Cutting Crew", "entity_type": "band", "pos": [140, 152]}, {"entity": "Kevin MacMichael", "entity_type": "musical artist", "pos": [163, 179]}], "task": "NER"}
-{"text": "Arguably the most successful boy band manager from the U.S. was Lou Pearlman , who founded commercially successful acts such as the Backstreet Boys in 1993 , NSYNC and LFO in 1995 , O-Town in 2000 , and US5 in 2005 .", "entity": [{"entity": "U.S.", "entity_type": "country", "pos": [55, 59]}, {"entity": "Lou Pearlman", "entity_type": "musical artist", "pos": [64, 76]}, {"entity": "Backstreet Boys", "entity_type": "band", "pos": [132, 147]}, {"entity": "NSYNC", "entity_type": "band", "pos": [158, 163]}, {"entity": "LFO", "entity_type": "band", "pos": [168, 171]}, {"entity": "O-Town", "entity_type": "band", "pos": [182, 188]}, {"entity": "US5", "entity_type": "band", "pos": [203, 206]}], "task": "NER"}
-{"text": "Extreme , Red Hot Chili Peppers , Living Colour , Jane 's Addiction , Prince , Primus , Fishbone , Faith No More , Rage Against the Machine , Infectious Grooves , and Incubus spread the approach and styles garnered from funk pioneers to new audiences in the mid-to-late 1980s and the 1990s .", "entity": [{"entity": "Extreme", "entity_type": "band", "pos": [0, 7]}, {"entity": "Red Hot Chili Peppers", "entity_type": "band", "pos": [10, 31]}, {"entity": "Living Colour", "entity_type": "band", "pos": [34, 47]}, {"entity": "Jane 's Addiction", "entity_type": "band", "pos": [50, 67]}, {"entity": "Prince", "entity_type": "musical artist", "pos": [70, 76]}, {"entity": "Primus", "entity_type": "band", "pos": [79, 85]}, {"entity": "Fishbone", "entity_type": "band", "pos": [88, 96]}, {"entity": "Faith No More", "entity_type": "band", "pos": [99, 112]}, {"entity": "Rage Against the Machine", "entity_type": "band", "pos": [115, 139]}, {"entity": "Infectious Grooves", "entity_type": "band", "pos": [142, 160]}, {"entity": "Incubus", "entity_type": "band", "pos": [167, 174]}, {"entity": "funk", "entity_type": "else", "pos": [220, 224]}], "task": "NER"}
-{"text": "Bands like Flogging Molly , Black 47 , Dropkick Murphys , The Young Dubliners , The Tossers introduced a hybrid of Celtic rock , Punk rock , reggae , Hardcore punk and other elements in the 1990s that has become popular with Irish-American youth .", "entity": [{"entity": "Flogging Molly", "entity_type": "band", "pos": [11, 25]}, {"entity": "Black 47", "entity_type": "band", "pos": [28, 36]}, {"entity": "Dropkick Murphys", "entity_type": "band", "pos": [39, 55]}, {"entity": "The Young Dubliners", "entity_type": "band", "pos": [58, 77]}, {"entity": "The Tossers", "entity_type": "band", "pos": [80, 91]}, {"entity": "Celtic rock", "entity_type": "music genre", "pos": [115, 126]}, {"entity": "Punk rock", "entity_type": "music genre", "pos": [129, 138]}, {"entity": "reggae", "entity_type": "music genre", "pos": [141, 147]}, {"entity": "Hardcore punk", "entity_type": "music genre", "pos": [150, 163]}, {"entity": "Irish-American", "entity_type": "else", "pos": [225, 239]}], "task": "NER"}
-{"text": "The Stone Roses ' influences included garage rock , electronic dance music , Krautrock , Northern soul , punk rock , reggae , Soul music and artists such as the Beatles ,", "entity": [{"entity": "The Stone Roses", "entity_type": "band", "pos": [0, 15]}, {"entity": "garage rock", "entity_type": "music genre", "pos": [38, 49]}, {"entity": "electronic dance music", "entity_type": "music genre", "pos": [52, 74]}, {"entity": "Krautrock", "entity_type": "music genre", "pos": [77, 86]}, {"entity": "Northern soul", "entity_type": "music genre", "pos": [89, 102]}, {"entity": "punk rock", "entity_type": "music genre", "pos": [105, 114]}, {"entity": "reggae", "entity_type": "music genre", "pos": [117, 123]}, {"entity": "Soul music", "entity_type": "music genre", "pos": [126, 136]}, {"entity": "the Beatles", "entity_type": "band", "pos": [157, 168]}], "task": "NER"}
-{"text": "In 2018 , Buckingham was fired from the band and was replaced by Mike Campbell , formerly of Tom Petty and the Heartbreakers , and Neil Finn of Split Enz and Crowded House .", "entity": [{"entity": "Buckingham", "entity_type": "musical artist", "pos": [10, 20]}, {"entity": "Mike Campbell", "entity_type": "musical artist", "pos": [65, 78]}, {"entity": "Tom Petty and the Heartbreakers", "entity_type": "band", "pos": [93, 124]}, {"entity": "Neil Finn", "entity_type": "musical artist", "pos": [131, 140]}, {"entity": "Split Enz", "entity_type": "band", "pos": [144, 153]}, {"entity": "Crowded House", "entity_type": "band", "pos": [158, 171]}], "task": "NER"}
-{"text": "In Paris , he performed at the Stade de France for Saint Patrick 's Day , in AccorHotels Arena , the Bataclan , the Casino de Paris and the Théâtre de la Ville with guest singers Mari Boine and Karen Matheson as well as Donald Shaw .", "entity": [{"entity": "Paris", "entity_type": "location", "pos": [3, 8]}, {"entity": "Stade de France", "entity_type": "location", "pos": [31, 46]}, {"entity": "Saint Patrick 's Day", "entity_type": "event", "pos": [51, 71]}, {"entity": "AccorHotels Arena", "entity_type": "location", "pos": [77, 94]}, {"entity": "Bataclan", "entity_type": "location", "pos": [101, 109]}, {"entity": "Casino de Paris", "entity_type": "location", "pos": [116, 131]}, {"entity": "Théâtre de la Ville", "entity_type": "location", "pos": [140, 159]}, {"entity": "Mari Boine", "entity_type": "musical artist", "pos": [179, 189]}, {"entity": "Karen Matheson", "entity_type": "musical artist", "pos": [194, 208]}, {"entity": "Donald Shaw", "entity_type": "musical artist", "pos": [220, 231]}], "task": "NER"}
-{"text": "On 26 February 1987 , A Hard Day 's Night was officially released on compact disc in mono , along with Please Please Me , With the Beatles , and Beatles for Sale .", "entity": [{"entity": "Hard Day 's Night", "entity_type": "album", "pos": [24, 41]}, {"entity": "Please Please Me", "entity_type": "album", "pos": [103, 119]}, {"entity": "With the Beatles", "entity_type": "album", "pos": [122, 138]}, {"entity": "Beatles for Sale", "entity_type": "album", "pos": [145, 161]}], "task": "NER"}
-{"text": "It started with pop music singers like Glen Campbell , Bobbie Gentry , John Denver , Olivia Newton-John , Anne Murray , B. J. Thomas , The Bellamy Brothers , and Linda Ronstadt having hits on the country charts .", "entity": [{"entity": "pop music", "entity_type": "music genre", "pos": [16, 25]}, {"entity": "Glen Campbell", "entity_type": "person", "pos": [39, 52]}, {"entity": "Bobbie Gentry", "entity_type": "person", "pos": [55, 68]}, {"entity": "John Denver", "entity_type": "person", "pos": [71, 82]}, {"entity": "Olivia Newton-John", "entity_type": "person", "pos": [85, 103]}, {"entity": "Anne Murray", "entity_type": "musical artist", "pos": [106, 117]}, {"entity": "B. J. Thomas", "entity_type": "musical artist", "pos": [120, 132]}, {"entity": "The Bellamy Brothers", "entity_type": "band", "pos": [135, 155]}, {"entity": "Linda Ronstadt", "entity_type": "musical artist", "pos": [162, 176]}], "task": "NER"}
-{"text": "The shows were later taken into Europe , and featured such stars as Johnny Cash , Dolly Parton , Tammy Wynette , David Allan Coe , Emmylou Harris , Boxcar Willie , Johnny Russell and Jerry Lee Lewis .", "entity": [{"entity": "Europe", "entity_type": "location", "pos": [32, 38]}, {"entity": "Johnny Cash", "entity_type": "musical artist", "pos": [68, 79]}, {"entity": "Dolly Parton", "entity_type": "musical artist", "pos": [82, 94]}, {"entity": "Tammy Wynette", "entity_type": "musical artist", "pos": [97, 110]}, {"entity": "David Allan Coe", "entity_type": "musical artist", "pos": [113, 128]}, {"entity": "Emmylou Harris", "entity_type": "musical artist", "pos": [131, 145]}, {"entity": "Boxcar Willie", "entity_type": "musical artist", "pos": [148, 161]}, {"entity": "Johnny Russell", "entity_type": "musical artist", "pos": [164, 178]}, {"entity": "Jerry Lee Lewis", "entity_type": "musical artist", "pos": [183, 198]}], "task": "NER"}
-{"text": "In addition , the film won the BAFTA Award for Best Film , BAFTA Award for Best Direction ( Nichols ) , BAFTA Award for Most Promising Newcomer to Leading Film Roles ( Hoffman ) , the BAFTA Award for Best Editing ( Sam O 'Steen ) .", "entity": [{"entity": "BAFTA Award for Best Film", "entity_type": "award", "pos": [31, 56]}, {"entity": "BAFTA Award for Best Direction", "entity_type": "award", "pos": [59, 89]}, {"entity": "Nichols", "entity_type": "person", "pos": [92, 99]}, {"entity": "BAFTA Award for Most Promising Newcomer to Leading Film Roles", "entity_type": "award", "pos": [104, 165]}, {"entity": "Hoffman", "entity_type": "person", "pos": [168, 175]}, {"entity": "BAFTA Award for Best Editing", "entity_type": "award", "pos": [184, 212]}, {"entity": "Sam O 'Steen", "entity_type": "person", "pos": [215, 227]}], "task": "NER"}
-{"text": "With the influence of Tropicalismo , Traditional Samba and Bossa Nova , MPB ( Música popular brasileira ) , or Brazilian Popular Music , became highly singer-songwriter based .", "entity": [{"entity": "Tropicalismo", "entity_type": "music genre", "pos": [22, 34]}, {"entity": "Samba", "entity_type": "music genre", "pos": [49, 54]}, {"entity": "Bossa Nova", "entity_type": "music genre", "pos": [59, 69]}, {"entity": "MPB", "entity_type": "music genre", "pos": [72, 75]}, {"entity": "Música popular brasileira", "entity_type": "music genre", "pos": [78, 103]}, {"entity": "Brazilian Popular Music", "entity_type": "music genre", "pos": [111, 134]}], "task": "NER"}
-{"text": "Following the hard rock and heavy metal origins on the band 's first two albums , Too Fast for Love ( 1981 ) and Shout at the Devil ( 1983 ) , the release of its third album Theatre of Pain ( 1985 ) saw Mötley Crüe joining the first wave of glam metal .", "entity": [{"entity": "hard rock", "entity_type": "music genre", "pos": [14, 23]}, {"entity": "heavy metal", "entity_type": "music genre", "pos": [28, 39]}, {"entity": "Too Fast for Love", "entity_type": "album", "pos": [82, 99]}, {"entity": "Shout at the Devil", "entity_type": "album", "pos": [113, 131]}, {"entity": "Theatre of Pain", "entity_type": "album", "pos": [174, 189]}, {"entity": "the first wave of glam metal", "entity_type": "event", "pos": [223, 251]}], "task": "NER"}
-{"text": "In June 1985 , the United Way of Canada invited Lata Mangeshkar to perform at Maple Leaf Gardens .", "entity": [{"entity": "United Way of Canada", "entity_type": "organization", "pos": [19, 39]}, {"entity": "Lata Mangeshkar", "entity_type": "musical artist", "pos": [48, 63]}, {"entity": "Maple Leaf Gardens", "entity_type": "location", "pos": [78, 96]}], "task": "NER"}
-{"text": "Soundgarden achieved its biggest success with the 1994 album Superunknown , which debuted at number one on the Billboard 200 and yielded the Grammy Award -winning singles Spoonman and Black Hole Sun .", "entity": [{"entity": "Soundgarden", "entity_type": "band", "pos": [0, 11]}, {"entity": "Superunknown", "entity_type": "album", "pos": [61, 73]}, {"entity": "Billboard 200", "entity_type": "else", "pos": [111, 124]}, {"entity": "Grammy Award", "entity_type": "award", "pos": [141, 153]}, {"entity": "Spoonman", "entity_type": "song", "pos": [171, 179]}, {"entity": "Black Hole Sun", "entity_type": "song", "pos": [184, 198]}], "task": "NER"}
-{"text": "Despite this , The Godfather Part III went on to gather 7 Academy Awards nominations , including Academy Award for Best Director and Academy Award for Best Picture .", "entity": [{"entity": "The Godfather Part III", "entity_type": "else", "pos": [15, 37]}, {"entity": "Academy Awards", "entity_type": "award", "pos": [58, 72]}, {"entity": "Academy Award for Best Director", "entity_type": "award", "pos": [97, 128]}, {"entity": "Academy Award for Best Picture", "entity_type": "award", "pos": [133, 163]}], "task": "NER"}
-{"text": "In 2005 , American Idiot won a Grammy Award for Grammy Award for Best Rock Album and was nominated in six other categories including Grammy Award for Album of the Year .", "entity": [{"entity": "American Idiot", "entity_type": "album", "pos": [10, 24]}, {"entity": "Grammy Award", "entity_type": "award", "pos": [31, 43]}, {"entity": "Grammy Award for Best Rock Album", "entity_type": "award", "pos": [48, 80]}, {"entity": "Grammy Award for Album of the Year", "entity_type": "award", "pos": [133, 167]}], "task": "NER"}
-{"text": "A sleeper hit in United Kingdom , the record eventually hit the top three in the Official Charts Company and received platinum certifications from British Phonographic Industry , Recording Industry Association of America and ARIA .", "entity": [{"entity": "United Kingdom", "entity_type": "country", "pos": [17, 31]}, {"entity": "Official Charts Company", "entity_type": "organization", "pos": [81, 104]}, {"entity": "British Phonographic Industry", "entity_type": "organization", "pos": [147, 176]}, {"entity": "Recording Industry Association of America", "entity_type": "organization", "pos": [179, 220]}, {"entity": "ARIA", "entity_type": "organization", "pos": [225, 229]}], "task": "NER"}
-{"text": "For the 2008 / 2009 season , he played Captain Hook at the Milton Keynes Theatre and donned the hook once again for the 2009 / 2010 panto season at the Liverpool Empire Theatre .", "entity": [{"entity": "Captain Hook", "entity_type": "else", "pos": [39, 51]}, {"entity": "Milton Keynes Theatre", "entity_type": "location", "pos": [59, 80]}, {"entity": "panto season", "entity_type": "event", "pos": [132, 144]}, {"entity": "Liverpool Empire Theatre", "entity_type": "location", "pos": [152, 176]}], "task": "NER"}
-{"text": "The band also released three full-length albums dubbed ( and later packaged together as ) The Trilogy : The Maggot , The Bootlicker , and The Crybaby .", "entity": [{"entity": "The Trilogy", "entity_type": "album", "pos": [90, 101]}, {"entity": "The Maggot", "entity_type": "album", "pos": [104, 114]}, {"entity": "The Bootlicker", "entity_type": "album", "pos": [117, 131]}, {"entity": "The Crybaby", "entity_type": "album", "pos": [138, 149]}], "task": "NER"}
-{"text": "On 24 August 2012 , Westenra staged a concert in the Gŵyl Gobaith Music Festival in Wales to support for charities Cancer Research UK , Wales Air Ambulance , CLIC Sargent and HeadtoHeart .", "entity": [{"entity": "Westenra", "entity_type": "musical artist", "pos": [20, 28]}, {"entity": "Gŵyl Gobaith Music Festival", "entity_type": "event", "pos": [53, 80]}, {"entity": "Wales", "entity_type": "country", "pos": [84, 89]}, {"entity": "Cancer Research UK", "entity_type": "organization", "pos": [115, 133]}, {"entity": "Wales Air Ambulance", "entity_type": "organization", "pos": [136, 155]}, {"entity": "CLIC Sargent", "entity_type": "organization", "pos": [158, 170]}, {"entity": "HeadtoHeart", "entity_type": "organization", "pos": [175, 186]}], "task": "NER"}
-{"text": "These albums spawned some of Carey 's most successful singles , including Hero , Without You , All I Want for Christmas Is You , Fantasy , Always Be My Baby , as well as One Sweet Day , which peaked at number one in the U.S. for 16 weeks and became Billboard s Song Of The Decade ( 1990s Decade ) .", "entity": [{"entity": "Carey", "entity_type": "musical artist", "pos": [29, 34]}, {"entity": "Hero", "entity_type": "song", "pos": [74, 78]}, {"entity": "Without You", "entity_type": "song", "pos": [81, 92]}, {"entity": "All I Want for Christmas Is You", "entity_type": "song", "pos": [95, 126]}, {"entity": "Fantasy", "entity_type": "song", "pos": [129, 136]}, {"entity": "Always Be My Baby", "entity_type": "song", "pos": [139, 156]}, {"entity": "One Sweet Day", "entity_type": "song", "pos": [170, 183]}, {"entity": "U.S.", "entity_type": "country", "pos": [220, 224]}, {"entity": "Billboard", "entity_type": "organization", "pos": [249, 258]}, {"entity": "Song Of The Decade", "entity_type": "else", "pos": [261, 279]}], "task": "NER"}
-{"text": "Michael won various music awards including two Grammy Award s , three Brit Awards , three American Music Award s , four MTV Video Music Award s and six Ivor Novello Awards .", "entity": [{"entity": "Michael", "entity_type": "musical artist", "pos": [0, 7]}, {"entity": "Grammy Award s", "entity_type": "award", "pos": [47, 61]}, {"entity": "Brit Awards", "entity_type": "award", "pos": [70, 81]}, {"entity": "American Music Award s", "entity_type": "award", "pos": [90, 112]}, {"entity": "MTV Video Music Award s", "entity_type": "award", "pos": [120, 143]}, {"entity": "Ivor Novello Awards", "entity_type": "award", "pos": [152, 171]}], "task": "NER"}
-{"text": "This style emerged in the United States in the early and mid-1980s , with innovators such as Queensrÿche , Fates Warning , and Dream Theater .", "entity": [{"entity": "United States", "entity_type": "country", "pos": [26, 39]}, {"entity": "Queensrÿche", "entity_type": "band", "pos": [93, 104]}, {"entity": "Fates Warning", "entity_type": "band", "pos": [107, 120]}, {"entity": "Dream Theater", "entity_type": "band", "pos": [127, 140]}], "task": "NER"}
-{"text": "For Mirrors , instead of working with previous producers Sandy Pearlman ( who instead went on to manage Black Sabbath ) and Murray Krugman , Blue Öyster Cult chose Tom Werman , who had worked with acts such as Cheap Trick and Ted Nugent .", "entity": [{"entity": "Mirrors", "entity_type": "album", "pos": [4, 11]}, {"entity": "Sandy Pearlman", "entity_type": "person", "pos": [57, 71]}, {"entity": "Black Sabbath", "entity_type": "band", "pos": [104, 117]}, {"entity": "Murray Krugman", "entity_type": "person", "pos": [124, 138]}, {"entity": "Blue Öyster Cult", "entity_type": "band", "pos": [141, 157]}, {"entity": "Tom Werman", "entity_type": "person", "pos": [164, 174]}, {"entity": "Cheap Trick", "entity_type": "band", "pos": [210, 221]}, {"entity": "Ted Nugent", "entity_type": "musical artist", "pos": [226, 236]}], "task": "NER"}
-{"text": "The self-titled record was an instant success both critically and commercially , led by the official theme song for UAAP Season 71 of the UAAP - Puso ( trans : Heart ) .", "entity": [{"entity": "UAAP Season 71", "entity_type": "event", "pos": [116, 130]}, {"entity": "UAAP", "entity_type": "organization", "pos": [138, 142]}, {"entity": "Puso", "entity_type": "song", "pos": [145, 149]}, {"entity": "Heart", "entity_type": "song", "pos": [160, 165]}], "task": "NER"}
-{"text": "Examples of such professional groups include Straight No Chaser , Pentatonix , The House Jacks , Rockapella , Mosaic , Home Free and M-pact .", "entity": [{"entity": "Straight No Chaser", "entity_type": "band", "pos": [45, 63]}, {"entity": "Pentatonix", "entity_type": "band", "pos": [66, 76]}, {"entity": "The House Jacks", "entity_type": "band", "pos": [79, 94]}, {"entity": "Rockapella", "entity_type": "band", "pos": [97, 107]}, {"entity": "Mosaic", "entity_type": "band", "pos": [110, 116]}, {"entity": "Home Free", "entity_type": "band", "pos": [119, 128]}, {"entity": "M-pact", "entity_type": "band", "pos": [133, 139]}], "task": "NER"}
-{"text": "Simon has won 12 Grammy Award s ( one of them a Grammy Lifetime Achievement Award ) and five Grammy Award for Album of the Year Grammy nominations , the most recent for You 're the One in 2001 .", "entity": [{"entity": "Simon", "entity_type": "musical artist", "pos": [0, 5]}, {"entity": "Grammy Award s", "entity_type": "award", "pos": [17, 31]}, {"entity": "Grammy Lifetime Achievement Award", "entity_type": "award", "pos": [48, 81]}, {"entity": "Grammy Award for Album of the Year Grammy nominations", "entity_type": "award", "pos": [93, 146]}, {"entity": "You 're the One", "entity_type": "song", "pos": [169, 184]}], "task": "NER"}
-{"text": "Brazil Classics ! -- redirects here -- , the label 's first compilation series , consists of seven albums surveying genres ranging from Samba to Tropicália , as well as individual artists .", "entity": [{"entity": "Brazil Classics", "entity_type": "album", "pos": [0, 15]}, {"entity": "Samba", "entity_type": "music genre", "pos": [136, 141]}, {"entity": "Tropicália", "entity_type": "music genre", "pos": [145, 155]}], "task": "NER"}
-{"text": "In addition , a vintage siren , just as the original Boston Garden had used , was added to replace the end-of-period horn for hockey only , a feature of the Montreal Canadiens , the Bruins ' arch-rivals , at the Montreal Forum ( now the Pepsi Forum shopping centre ) and the current Bell Centre .", "entity": [{"entity": "Boston Garden", "entity_type": "location", "pos": [53, 66]}, {"entity": "Montreal Canadiens", "entity_type": "else", "pos": [157, 175]}, {"entity": "Bruins", "entity_type": "else", "pos": [182, 188]}, {"entity": "Montreal Forum", "entity_type": "location", "pos": [212, 226]}, {"entity": "Pepsi Forum", "entity_type": "location", "pos": [237, 248]}, {"entity": "Bell Centre", "entity_type": "location", "pos": [283, 294]}], "task": "NER"}
-{"text": "This was followed by a series of small , intimate gigs at UK venues such as Liverpool 's The Cavern Club , London 's Mean Fiddler , and Glasgow 's Barrowland Ballroom .", "entity": [{"entity": "UK", "entity_type": "country", "pos": [58, 60]}, {"entity": "Liverpool", "entity_type": "location", "pos": [76, 85]}, {"entity": "The Cavern Club", "entity_type": "location", "pos": [89, 104]}, {"entity": "London", "entity_type": "location", "pos": [107, 113]}, {"entity": "Mean Fiddler", "entity_type": "location", "pos": [117, 129]}, {"entity": "Glasgow", "entity_type": "location", "pos": [136, 143]}, {"entity": "Barrowland Ballroom", "entity_type": "location", "pos": [147, 166]}], "task": "NER"}
-{"text": "Attracting over 200,000 fans , Black Sabbath appeared alongside popular 1970s rock and pop bands Deep Purple , Eagles , Emerson , Lake & Palmer , Rare Earth , Seals and Crofts , Black Oak Arkansas , and Earth , Wind & Fire .", "entity": [{"entity": "Black Sabbath", "entity_type": "band", "pos": [31, 44]}, {"entity": "rock", "entity_type": "music genre", "pos": [78, 82]}, {"entity": "pop", "entity_type": "music genre", "pos": [87, 90]}, {"entity": "Deep Purple", "entity_type": "band", "pos": [97, 108]}, {"entity": "Eagles", "entity_type": "band", "pos": [111, 117]}, {"entity": "Emerson , Lake & Palmer", "entity_type": "band", "pos": [120, 143]}, {"entity": "Rare Earth", "entity_type": "band", "pos": [146, 156]}, {"entity": "Seals and Crofts", "entity_type": "band", "pos": [159, 175]}, {"entity": "Black Oak Arkansas", "entity_type": "band", "pos": [178, 196]}, {"entity": "Earth , Wind & Fire", "entity_type": "band", "pos": [203, 222]}], "task": "NER"}
-{"text": "Staind has recorded seven studio albums : Tormented ( 1996 ) , Dysfunction ( 1999 ) , Break the Cycle ( 2001 ) , 14 Shades of Grey ( 2003 ) , Chapter V ( 2005 ) , The Illusion of Progress ( 2008 ) , and Staind ( 2011 ) .", "entity": [{"entity": "Staind", "entity_type": "musical artist", "pos": [0, 6]}, {"entity": "Tormented", "entity_type": "album", "pos": [42, 51]}, {"entity": "Dysfunction", "entity_type": "album", "pos": [63, 74]}, {"entity": "Break the Cycle", "entity_type": "album", "pos": [86, 101]}, {"entity": "14 Shades of Grey", "entity_type": "album", "pos": [113, 130]}, {"entity": "Chapter V", "entity_type": "album", "pos": [142, 151]}, {"entity": "The Illusion of Progress", "entity_type": "album", "pos": [163, 187]}, {"entity": "Staind", "entity_type": "album", "pos": [203, 209]}], "task": "NER"}
-{"text": "Following the end of Nirvana , Novoselic worked on completing the With the Lights Out box set and From the Muddy Banks of the Wishkah album , as well as pushing for release of a Nevermind .", "entity": [{"entity": "Nirvana", "entity_type": "band", "pos": [21, 28]}, {"entity": "Novoselic", "entity_type": "musical artist", "pos": [31, 40]}, {"entity": "With the Lights Out", "entity_type": "album", "pos": [66, 85]}, {"entity": "From the Muddy Banks of the Wishkah", "entity_type": "album", "pos": [98, 133]}, {"entity": "Nevermind", "entity_type": "album", "pos": [178, 187]}], "task": "NER"}
-{"text": "However , some bands were created around the talent of a songwriter within the group like Gary Barlow of Take That or Tony Mortimer of East 17 .", "entity": [{"entity": "Gary Barlow", "entity_type": "musical artist", "pos": [90, 101]}, {"entity": "Take That", "entity_type": "band", "pos": [105, 114]}, {"entity": "Tony Mortimer", "entity_type": "musical artist", "pos": [118, 131]}, {"entity": "East 17", "entity_type": "band", "pos": [135, 142]}], "task": "NER"}
-{"text": "Since then the band have released five albums : In It for the Money ( 1997 ) , Supergrass ( 1999 ) , Life on Other Planets ( 2002 ) , Road to Rouen ( 2005 ) and Diamond Hoo Ha ( 2008 ) , as well as a decade-ending compilation called Supergrass Is 10 ( 2004 ) .", "entity": [{"entity": "In It for the Money", "entity_type": "album", "pos": [48, 67]}, {"entity": "Supergrass", "entity_type": "album", "pos": [79, 89]}, {"entity": "Life on Other Planets", "entity_type": "album", "pos": [101, 122]}, {"entity": "Road to Rouen", "entity_type": "album", "pos": [134, 147]}, {"entity": "Diamond Hoo Ha", "entity_type": "album", "pos": [161, 175]}, {"entity": "Supergrass Is 10", "entity_type": "album", "pos": [233, 249]}], "task": "NER"}
-{"text": "At the 33rd Academy Awards , The Apartment was nominated for ten awards and won five , including Academy Award for Best Picture , Academy Award for Best Director , and Academy Award for Best Original Screenplay .", "entity": [{"entity": "33rd Academy Awards", "entity_type": "award", "pos": [7, 26]}, {"entity": "The Apartment", "entity_type": "else", "pos": [29, 42]}, {"entity": "Academy Award for Best Picture", "entity_type": "award", "pos": [97, 127]}, {"entity": "Academy Award for Best Director", "entity_type": "award", "pos": [130, 161]}, {"entity": "Academy Award for Best Original Screenplay", "entity_type": "award", "pos": [168, 210]}], "task": "NER"}
-{"text": "Dream On , I Feel Loved , Freelove and Goodnight Lovers were released as singles in 2001 and 2002 .", "entity": [{"entity": "Dream On", "entity_type": "song", "pos": [0, 8]}, {"entity": "I Feel Loved", "entity_type": "song", "pos": [11, 23]}, {"entity": "Freelove", "entity_type": "song", "pos": [26, 34]}, {"entity": "Goodnight Lovers", "entity_type": "song", "pos": [39, 55]}], "task": "NER"}
-{"text": "He has musically encompassed Folk music , funk , Soul music , Hip hop music , Electronic music , alternative rock , Country music , and psychedelia .", "entity": [{"entity": "Folk music", "entity_type": "music genre", "pos": [29, 39]}, {"entity": "funk", "entity_type": "music genre", "pos": [42, 46]}, {"entity": "Soul music", "entity_type": "music genre", "pos": [49, 59]}, {"entity": "Hip hop music", "entity_type": "music genre", "pos": [62, 75]}, {"entity": "Electronic music", "entity_type": "music genre", "pos": [78, 94]}, {"entity": "alternative rock", "entity_type": "music genre", "pos": [97, 113]}, {"entity": "Country music", "entity_type": "music genre", "pos": [116, 129]}, {"entity": "psychedelia", "entity_type": "music genre", "pos": [136, 147]}], "task": "NER"}
-{"text": "Coldcut returned with the single Everything Is Under Control at the end of 2005 , featuring Jon Spencer ( of Jon Spencer Blues Explosion ) and Mike Ladd .", "entity": [{"entity": "Coldcut", "entity_type": "band", "pos": [0, 7]}, {"entity": "Everything Is Under Control", "entity_type": "song", "pos": [33, 60]}, {"entity": "Jon Spencer", "entity_type": "musical artist", "pos": [92, 103]}, {"entity": "Jon Spencer Blues Explosion", "entity_type": "band", "pos": [109, 136]}, {"entity": "Mike Ladd", "entity_type": "musical artist", "pos": [143, 152]}], "task": "NER"}
-{"text": "The series featured five albums of Masada themes including Masada Guitars by Marc Ribot , Bill Frisell , and Tim Sparks ; Masada Recital by Mark Feldman and Sylvie Courvoisier ; Masada Rock by Rashanim ; and two albums featuring various artists , Voices in the Wilderness and The Unknown Masada .", "entity": [{"entity": "Masada", "entity_type": "else", "pos": [35, 41]}, {"entity": "Masada Guitars", "entity_type": "album", "pos": [59, 73]}, {"entity": "Marc Ribot", "entity_type": "musical artist", "pos": [77, 87]}, {"entity": "Bill Frisell", "entity_type": "musical artist", "pos": [90, 102]}, {"entity": "Tim Sparks", "entity_type": "musical artist", "pos": [109, 119]}, {"entity": "Masada Recital", "entity_type": "album", "pos": [122, 136]}, {"entity": "Mark Feldman", "entity_type": "musical artist", "pos": [140, 152]}, {"entity": "Sylvie Courvoisier", "entity_type": "musical artist", "pos": [157, 175]}, {"entity": "Masada Rock", "entity_type": "album", "pos": [178, 189]}, {"entity": "Rashanim", "entity_type": "musical artist", "pos": [193, 201]}, {"entity": "Voices in the Wilderness", "entity_type": "album", "pos": [247, 271]}, {"entity": "The Unknown Masada", "entity_type": "album", "pos": [276, 294]}], "task": "NER"}
-{"text": "Depeche Mode contributed their cover of the U2 song So Cruel to the tribute album AHK-toong BAY-bi Covered honouring the 20th anniversary of Achtung Baby , a 1991 album by U2 .", "entity": [{"entity": "Depeche", "entity_type": "band", "pos": [0, 7]}, {"entity": "U2", "entity_type": "band", "pos": [44, 46]}, {"entity": "So Cruel", "entity_type": "song", "pos": [52, 60]}, {"entity": "AHK-toong BAY-bi Covered", "entity_type": "album", "pos": [82, 106]}, {"entity": "Achtung Baby", "entity_type": "album", "pos": [141, 153]}, {"entity": "U2", "entity_type": "band", "pos": [172, 174]}], "task": "NER"}
-{"text": "The stadium also hosted such events as 1973 Summer Universiade , 1986 Goodwill Games and 2013 World Championships in Athletics .", "entity": [{"entity": "1973 Summer Universiade", "entity_type": "event", "pos": [39, 62]}, {"entity": "1986 Goodwill Games", "entity_type": "event", "pos": [65, 84]}, {"entity": "2013 World Championships in Athletics", "entity_type": "event", "pos": [89, 126]}], "task": "NER"}
-{"text": "In 1995 , Dookie won the Grammy Award for Grammy Award for Best Alternative Music Album and the band was nominated for nine MTV Video Music Award s including Video of the Year .", "entity": [{"entity": "Dookie", "entity_type": "album", "pos": [10, 16]}, {"entity": "Grammy Award", "entity_type": "award", "pos": [25, 37]}, {"entity": "Grammy Award for Best Alternative Music Album", "entity_type": "award", "pos": [42, 87]}, {"entity": "MTV Video Music Award", "entity_type": "award", "pos": [124, 145]}, {"entity": "Video of the Year", "entity_type": "award", "pos": [158, 175]}], "task": "NER"}
-{"text": "He also became progressively more involved with Irish-American organizations : in 1908 he joined the Friendly Sons of St. Patrick ( becoming president in 1916 ) , the oldest Irish association in New York , and in 1911 he became a member of the American Irish Historical Society .", "entity": [{"entity": "Irish-American", "entity_type": "else", "pos": [48, 62]}, {"entity": "Friendly Sons of St. Patrick", "entity_type": "organization", "pos": [101, 129]}, {"entity": "Irish", "entity_type": "else", "pos": [174, 179]}, {"entity": "New York", "entity_type": "location", "pos": [195, 203]}, {"entity": "American Irish Historical Society", "entity_type": "organization", "pos": [244, 277]}], "task": "NER"}
-{"text": "The Benedictines and their offshoots ( Cistercians and Trappists among them ) , the Premonstratensians , and the military orders distinguish between conventual and simple or obedientiary priories .", "entity": [{"entity": "Benedictines", "entity_type": "organization", "pos": [4, 16]}, {"entity": "Cistercians", "entity_type": "organization", "pos": [39, 50]}, {"entity": "Trappists", "entity_type": "organization", "pos": [55, 64]}, {"entity": "Premonstratensians", "entity_type": "organization", "pos": [84, 102]}, {"entity": "military orders", "entity_type": "organization", "pos": [113, 128]}], "task": "NER"}
-{"text": "Poland has always been a very open country to new music genres and even before the fall of the communism , music styles like rock , Heavy metal music , jazz , Electronic music , and New wave music were well-known .", "entity": [{"entity": "Poland", "entity_type": "country", "pos": [0, 6]}, {"entity": "fall of the communism", "entity_type": "event", "pos": [83, 104]}, {"entity": "rock", "entity_type": "music genre", "pos": [125, 129]}, {"entity": "Heavy metal music", "entity_type": "music genre", "pos": [132, 149]}, {"entity": "jazz", "entity_type": "music genre", "pos": [152, 156]}, {"entity": "Electronic music", "entity_type": "music genre", "pos": [159, 175]}, {"entity": "New wave music", "entity_type": "music genre", "pos": [182, 196]}], "task": "NER"}
-{"text": "Blues subgenres include country blues , such as Delta blues and Piedmont blues , as well as urban blues styles such as Chicago blues and West Coast blues .", "entity": [{"entity": "Blues", "entity_type": "music genre", "pos": [0, 5]}, {"entity": "country blues", "entity_type": "music genre", "pos": [24, 37]}, {"entity": "Delta blues", "entity_type": "music genre", "pos": [48, 59]}, {"entity": "Piedmont blues", "entity_type": "music genre", "pos": [64, 78]}, {"entity": "urban blues", "entity_type": "music genre", "pos": [92, 103]}, {"entity": "Chicago blues", "entity_type": "music genre", "pos": [119, 132]}, {"entity": "West Coast blues", "entity_type": "music genre", "pos": [137, 153]}], "task": "NER"}
-{"text": "The musical was an immediate hit , winning Tony Award s for Tony Award for Best Musical , Tony Award for Best Actress in a Musical ( for Lawrence ) and Tony Award for Best Featured Actor in a Musical ( for Brynner ) .", "entity": [{"entity": "Tony Award", "entity_type": "award", "pos": [43, 53]}, {"entity": "Tony Award for Best Musical", "entity_type": "award", "pos": [60, 87]}, {"entity": "Tony Award for Best Actress in a Musical", "entity_type": "award", "pos": [90, 130]}, {"entity": "Lawrence", "entity_type": "musical artist", "pos": [137, 145]}, {"entity": "Tony Award for Best Featured Actor in a Musical", "entity_type": "award", "pos": [152, 199]}, {"entity": "Brynner", "entity_type": "musical artist", "pos": [206, 213]}], "task": "NER"}
-{"text": "In 1995 , Nas did guest performances on the albums Doe or Die by AZ , The Infamous by Mobb Deep , Only Built 4 Cuban Linx by Raekwon and 4,5,6 by Kool G Rap .", "entity": [{"entity": "Nas", "entity_type": "musical artist", "pos": [10, 13]}, {"entity": "Doe or Die", "entity_type": "album", "pos": [51, 61]}, {"entity": "AZ", "entity_type": "musical artist", "pos": [65, 67]}, {"entity": "The Infamous", "entity_type": "album", "pos": [70, 82]}, {"entity": "Mobb Deep", "entity_type": "band", "pos": [86, 95]}, {"entity": "Only Built 4 Cuban Linx", "entity_type": "album", "pos": [98, 121]}, {"entity": "Raekwon", "entity_type": "musical artist", "pos": [125, 132]}, {"entity": "4,5,6", "entity_type": "album", "pos": [137, 142]}, {"entity": "Kool G Rap", "entity_type": "musical artist", "pos": [146, 156]}], "task": "NER"}
-{"text": "In 1995 , he guested on two tracks on Tom Cochrane ' s Ragged Ass Road album and then in 1996 on I Mother Earth ' s Like a Girl from the Scenery and Fish album .", "entity": [{"entity": "Tom Cochrane", "entity_type": "musical artist", "pos": [38, 50]}, {"entity": "Ragged Ass Road", "entity_type": "album", "pos": [55, 70]}, {"entity": "I Mother Earth", "entity_type": "band", "pos": [97, 111]}, {"entity": "Like a Girl", "entity_type": "song", "pos": [116, 127]}, {"entity": "Scenery and Fish", "entity_type": "album", "pos": [137, 153]}], "task": "NER"}
-{"text": "She released her first Spanish language album , Mi Plan , in 2009 , which won her a Latin Grammy Award for Latin Grammy Award for Best Female Pop Vocal Album .", "entity": [{"entity": "Spanish", "entity_type": "else", "pos": [23, 30]}, {"entity": "Mi Plan", "entity_type": "album", "pos": [48, 55]}, {"entity": "Latin Grammy Award for Latin Grammy Award for Best Female Pop Vocal Album", "entity_type": "award", "pos": [84, 157]}], "task": "NER"}
-{"text": "Bands sponsored by factories include The Black Dyke Mills Band , Yorkshire Imperial Band ( originally the Yorkshire Copperworks Band ) , Foden 's sponsored by the truck manufacturer , Fairey Band sponsored by the aircraft manufacturer , and Leyland Band sponsored by the vehicle manufacturer .", "entity": [{"entity": "Black Dyke Mills Band", "entity_type": "band", "pos": [41, 62]}, {"entity": "Yorkshire Imperial Band", "entity_type": "band", "pos": [65, 88]}, {"entity": "Yorkshire Copperworks Band", "entity_type": "band", "pos": [106, 132]}, {"entity": "Foden 's", "entity_type": "band", "pos": [137, 145]}, {"entity": "Fairey Band", "entity_type": "band", "pos": [184, 195]}, {"entity": "Leyland Band", "entity_type": "band", "pos": [241, 253]}], "task": "NER"}
-{"text": "He has been involved in charitable work , including ONE Campaign , H2O Africa Foundation , Feeding America , and Water.org .", "entity": [{"entity": "ONE Campaign", "entity_type": "organization", "pos": [52, 64]}, {"entity": "H2O Africa Foundation", "entity_type": "organization", "pos": [67, 88]}, {"entity": "Feeding America", "entity_type": "organization", "pos": [91, 106]}, {"entity": "Water.org", "entity_type": "organization", "pos": [113, 122]}], "task": "NER"}
-{"text": "Prestwich joined Little River Band in 1984 and appeared on the albums , Playing to Win and No Reins , before departing in 1986 to join Farnham 's touring band .", "entity": [{"entity": "Little River Band", "entity_type": "band", "pos": [17, 34]}, {"entity": "Playing to Win", "entity_type": "album", "pos": [72, 86]}, {"entity": "No Reins", "entity_type": "album", "pos": [91, 99]}, {"entity": "Farnham", "entity_type": "musical artist", "pos": [135, 142]}], "task": "NER"}
-{"text": "Their debut album The Magnificent Moodies , produced by Denny Cordell with a strong Beat music / Rhythm and blues flavour , was released on Decca in mono only in 1965 .", "entity": [{"entity": "The Magnificent Moodies", "entity_type": "album", "pos": [18, 41]}, {"entity": "Denny Cordell", "entity_type": "musical artist", "pos": [56, 69]}, {"entity": "Beat music", "entity_type": "music genre", "pos": [84, 94]}, {"entity": "Rhythm and blues", "entity_type": "music genre", "pos": [97, 113]}, {"entity": "Decca", "entity_type": "organization", "pos": [140, 145]}], "task": "NER"}
-{"text": "According to the band 's biographer Dave Lewis , while the barnstorming effect of the early era was now levelling off , and though devoid of the electricity of Zeppelin I and Led Zeppelin II , the sheer diversity of Led Zeppelin III , and lacking the classic status of Led Zeppelin IV , Houses of the Holy nevertheless found its rightful niche .", "entity": [{"entity": "Dave Lewis", "entity_type": "musical artist", "pos": [36, 46]}, {"entity": "Zeppelin I", "entity_type": "album", "pos": [160, 170]}, {"entity": "Led Zeppelin II", "entity_type": "album", "pos": [175, 190]}, {"entity": "Led Zeppelin III", "entity_type": "album", "pos": [216, 232]}, {"entity": "Led Zeppelin IV", "entity_type": "album", "pos": [269, 284]}, {"entity": "Houses of the Holy", "entity_type": "album", "pos": [287, 305]}], "task": "NER"}
-{"text": "In 1961 , he performed ten recitals in Carnegie Hall to raise roughly $ 100,000 for charities including Big Brothers Big Sisters of America , United Jewish Appeal , Polish Assistance , Musicians Emergency fund , the National Association for Mental Health , and the Legal Defense Fund of the National Advancement of Colored People .", "entity": [{"entity": "Carnegie Hall", "entity_type": "location", "pos": [39, 52]}, {"entity": "Big Brothers Big Sisters of America", "entity_type": "organization", "pos": [104, 139]}, {"entity": "United Jewish Appeal", "entity_type": "organization", "pos": [142, 162]}, {"entity": "Polish Assistance", "entity_type": "organization", "pos": [165, 182]}, {"entity": "Musicians Emergency fund", "entity_type": "organization", "pos": [185, 209]}, {"entity": "National Association for Mental Health", "entity_type": "organization", "pos": [216, 254]}, {"entity": "Legal Defense Fund of the National Advancement of Colored People", "entity_type": "organization", "pos": [265, 329]}], "task": "NER"}
-{"text": "Today , musicians as diverse as Keith Urban , Rod Stewart , Taj Mahal , Joe Satriani , David Hidalgo , Larry Lalonde and Doc Watson play the six-string guitar banjo .", "entity": [{"entity": "Keith Urban", "entity_type": "musical artist", "pos": [32, 43]}, {"entity": "Rod Stewart", "entity_type": "musical artist", "pos": [46, 57]}, {"entity": "Taj Mahal", "entity_type": "musical artist", "pos": [60, 69]}, {"entity": "Joe Satriani", "entity_type": "musical artist", "pos": [72, 84]}, {"entity": "David Hidalgo", "entity_type": "musical artist", "pos": [87, 100]}, {"entity": "Larry Lalonde", "entity_type": "musical artist", "pos": [103, 116]}, {"entity": "Doc Watson", "entity_type": "musical artist", "pos": [121, 131]}, {"entity": "six-string guitar banjo", "entity_type": "musical instrument", "pos": [141, 164]}], "task": "NER"}
-{"text": "The initial volume of the album set ( Anthology 1 ) was released the same week of the documentary 's airdate , with the subsequent two volumes ( Anthology 2 and Anthology 3 ) released in 1996 .", "entity": [{"entity": "Anthology 1", "entity_type": "album", "pos": [38, 49]}, {"entity": "Anthology 2", "entity_type": "album", "pos": [145, 156]}, {"entity": "Anthology 3", "entity_type": "album", "pos": [161, 172]}], "task": "NER"}
-{"text": "International who 's who in popular music , Volume 4 p.37. Routledge , 2002 The band was renamed Rocket Baby Dolls and adopted a Gothic rock - Glam rock image .", "entity": [{"entity": "popular music", "entity_type": "music genre", "pos": [28, 41]}, {"entity": "Rocket Baby Dolls", "entity_type": "band", "pos": [97, 114]}, {"entity": "Gothic rock", "entity_type": "music genre", "pos": [129, 140]}, {"entity": "Glam rock", "entity_type": "music genre", "pos": [143, 152]}], "task": "NER"}
-{"text": "In September 2007 , Boney M. ' s last four original albums , Boonoonoonoos , Ten Thousand Lightyears , Kalimba de Luna - 16 Happy Songs and Eye Dance were reissued on compact disc in Europe and the United States , all including bonus tracks .", "entity": [{"entity": "Boney M.", "entity_type": "band", "pos": [20, 28]}, {"entity": "Boonoonoonoos", "entity_type": "album", "pos": [61, 74]}, {"entity": "Ten Thousand Lightyears", "entity_type": "album", "pos": [77, 100]}, {"entity": "Kalimba de Luna - 16 Happy Songs", "entity_type": "album", "pos": [103, 135]}, {"entity": "Eye Dance", "entity_type": "album", "pos": [140, 149]}, {"entity": "compact disc", "entity_type": "else", "pos": [167, 179]}, {"entity": "Europe", "entity_type": "location", "pos": [183, 189]}, {"entity": "United States", "entity_type": "country", "pos": [198, 211]}, {"entity": "bonus tracks", "entity_type": "else", "pos": [228, 240]}], "task": "NER"}
-{"text": "Despite the appeal of the Nashville sound , many traditional country artists emerged during this period and dominated the genre : Loretta Lynn , Merle Haggard , Buck Owens , Porter Wagoner , George Jones , and Sonny James among them .", "entity": [{"entity": "the Nashville sound", "entity_type": "music genre", "pos": [22, 41]}, {"entity": "Loretta Lynn", "entity_type": "musical artist", "pos": [130, 142]}, {"entity": "Merle Haggard", "entity_type": "musical artist", "pos": [145, 158]}, {"entity": "Buck Owens", "entity_type": "musical artist", "pos": [161, 171]}, {"entity": "Porter Wagoner", "entity_type": "musical artist", "pos": [174, 188]}, {"entity": "George Jones", "entity_type": "musical artist", "pos": [191, 203]}, {"entity": "Sonny James", "entity_type": "musical artist", "pos": [210, 221]}], "task": "NER"}
-{"text": "Christian alternative music has its roots in the early 1980s , as the earliest efforts at Christian punk and new wave were recorded by artists like Andy McCarroll and Moral Support , Undercover , the 77s , Steve Scott , Adam Again , Quickflight , Daniel Amos , Youth Choir ( later renamed the Choir ) , Lifesavers Underground , Michael Knott , the Prayer Chain , Altar Boys , Breakfast with Amy , Steve Taylor , 4-4-1 , David Edwards and Vector .", "entity": [{"entity": "Christian alternative music", "entity_type": "music genre", "pos": [0, 27]}, {"entity": "Christian punk", "entity_type": "music genre", "pos": [90, 104]}, {"entity": "new wave", "entity_type": "music genre", "pos": [109, 117]}, {"entity": "Andy McCarroll", "entity_type": "band", "pos": [148, 162]}, {"entity": "Moral Support", "entity_type": "band", "pos": [167, 180]}, {"entity": "Undercover", "entity_type": "band", "pos": [183, 193]}, {"entity": "the 77s", "entity_type": "band", "pos": [196, 203]}, {"entity": "Steve Scott", "entity_type": "musical artist", "pos": [206, 217]}, {"entity": "Adam Again", "entity_type": "band", "pos": [220, 230]}, {"entity": "Quickflight", "entity_type": "band", "pos": [233, 244]}, {"entity": "Daniel Amos", "entity_type": "band", "pos": [247, 258]}, {"entity": "Youth Choir", "entity_type": "band", "pos": [261, 272]}, {"entity": "the Choir", "entity_type": "band", "pos": [289, 298]}, {"entity": "Lifesavers Underground", "entity_type": "band", "pos": [303, 325]}, {"entity": "Michael Knott", "entity_type": "musical artist", "pos": [328, 341]}, {"entity": "the Prayer Chain", "entity_type": "band", "pos": [344, 360]}, {"entity": "Altar Boys", "entity_type": "band", "pos": [363, 373]}, {"entity": "Breakfast with Amy", "entity_type": "band", "pos": [376, 394]}, {"entity": "Steve Taylor", "entity_type": "musical artist", "pos": [397, 409]}, {"entity": "4-4-1", "entity_type": "band", "pos": [412, 417]}, {"entity": "David Edwards", "entity_type": "musical artist", "pos": [420, 433]}, {"entity": "Vector", "entity_type": "musical artist", "pos": [438, 444]}], "task": "NER"}
-{"text": "He has won numerous accolades for his work , including an Academy Award for Best Adapted Screenplay , a Student Academy Award , a BAFTA Award for Best Adapted Screenplay , two Emmy Awards , two Peabody Award s , and the Cannes Grand Prix .", "entity": [{"entity": "Academy Award for Best Adapted Screenplay", "entity_type": "award", "pos": [58, 99]}, {"entity": "Student Academy Award", "entity_type": "award", "pos": [104, 125]}, {"entity": "BAFTA Award for Best Adapted Screenplay", "entity_type": "award", "pos": [130, 169]}, {"entity": "Emmy Awards", "entity_type": "award", "pos": [176, 187]}, {"entity": "Peabody Award", "entity_type": "award", "pos": [194, 207]}, {"entity": "Cannes Grand Prix", "entity_type": "award", "pos": [220, 237]}], "task": "NER"}
+[
+  {
+    "sentence": "In 2003 , the Stade de France was the primary site of the 2003 World Championships in Athletics .",
+    "entity_list": [
+      {
+        "name": "Stade de France",
+        "type": "location"
+      },
+      {
+        "name": "2003 World Championships in Athletics",
+        "type": "event"
+      }
+    ]
+  },
+  {
+    "sentence": "In addition to relentless touring in the U.S. and Canada , PUSA made multiple tours of Europe , Australia , New Zealand and Japan .",
+    "entity_list": [
+      {
+        "name": "U.S.",
+        "type": "country"
+      },
+      {
+        "name": "Canada",
+        "type": "country"
+      },
+      {
+        "name": "PUSA",
+        "type": "band"
+      },
+      {
+        "name": "Europe",
+        "type": "location"
+      },
+      {
+        "name": "Australia",
+        "type": "country"
+      },
+      {
+        "name": "New Zealand",
+        "type": "country"
+      },
+      {
+        "name": "Japan",
+        "type": "country"
+      }
+    ]
+  },
+  {
+    "sentence": "Barney Bubbles directed several videos , including the Specials ' Ghost Town , Squeeze ' s Is That Love and Tempted , Elvis Costello ' s Clubland and New Lace Sleeves , and Fun Boy Three ' s The Lunatics ( Have Taken Over the Asylum ) .",
+    "entity_list": [
+      {
+        "name": "Barney Bubbles",
+        "type": "person"
+      },
+      {
+        "name": "the Specials",
+        "type": "band"
+      },
+      {
+        "name": "Ghost Town",
+        "type": "band"
+      },
+      {
+        "name": "Squeeze",
+        "type": "band"
+      },
+      {
+        "name": "Is That Love",
+        "type": "song"
+      },
+      {
+        "name": "Tempted",
+        "type": "song"
+      },
+      {
+        "name": "Elvis Costello",
+        "type": "musical artist"
+      },
+      {
+        "name": "Clubland",
+        "type": "song"
+      },
+      {
+        "name": "New Lace Sleeves",
+        "type": "song"
+      },
+      {
+        "name": "Fun Boy Three",
+        "type": "band"
+      },
+      {
+        "name": "The Lunatics ( Have Taken Over the Asylum )",
+        "type": "song"
+      }
+    ]
+  },
+  {
+    "sentence": "Since then there has been a renaissance in Sacred Harp singing , with annual conventions popping up in United States and in a number of European countries recently , including the United Kingdom , Germany , Ireland and Poland , as well as in Australia .",
+    "entity_list": [
+      {
+        "name": "Sacred Harp",
+        "type": "music genre"
+      },
+      {
+        "name": "United States",
+        "type": "country"
+      },
+      {
+        "name": "European",
+        "type": "else"
+      },
+      {
+        "name": "United Kingdom",
+        "type": "country"
+      },
+      {
+        "name": "Germany",
+        "type": "country"
+      },
+      {
+        "name": "Ireland",
+        "type": "country"
+      },
+      {
+        "name": "Poland",
+        "type": "country"
+      },
+      {
+        "name": "Australia",
+        "type": "country"
+      }
+    ]
+  },
+  {
+    "sentence": "Three of the labels rejected her , saying that audiences wanted pop bands such as the Backstreet Boys and the Spice Girls , and there wasn 't going to be another Madonna , another Debbie Gibson , or another Tiffany .",
+    "entity_list": [
+      {
+        "name": "Backstreet Boys",
+        "type": "band"
+      },
+      {
+        "name": "Spice Girls",
+        "type": "band"
+      },
+      {
+        "name": "Madonna",
+        "type": "musical artist"
+      },
+      {
+        "name": "Debbie Gibson",
+        "type": "musical artist"
+      },
+      {
+        "name": "Tiffany",
+        "type": "musical artist"
+      }
+    ]
+  },
+  {
+    "sentence": "Notable Sun Ra albums from the 1950s include Sun Ra Visits Planet Earth , Interstellar Low Ways , Super-Sonic Jazz , We Travel the Space Ways , The Nubians of Plutonia and Jazz In Silhouette .",
+    "entity_list": [
+      {
+        "name": "Sun Ra",
+        "type": "musical artist"
+      },
+      {
+        "name": "Sun Ra Visits Planet Earth",
+        "type": "album"
+      },
+      {
+        "name": "Interstellar Low Ways",
+        "type": "album"
+      },
+      {
+        "name": "Super-Sonic Jazz",
+        "type": "album"
+      },
+      {
+        "name": "We Travel the Space Ways",
+        "type": "album"
+      },
+      {
+        "name": "The Nubians of Plutonia",
+        "type": "album"
+      },
+      {
+        "name": "Jazz In Silhouette",
+        "type": "album"
+      }
+    ]
+  },
+  {
+    "sentence": "Stevens ' albums Tea for the Tillerman ( 1970 ) and Teaser and the Firecat ( 1971 ) were certified triple platinum in the US by the Recording Industry Association of America .. BBC News .",
+    "entity_list": [
+      {
+        "name": "Stevens",
+        "type": "musical artist"
+      },
+      {
+        "name": "Tea for the Tillerman",
+        "type": "album"
+      },
+      {
+        "name": "Teaser and the Firecat",
+        "type": "album"
+      },
+      {
+        "name": "US",
+        "type": "country"
+      },
+      {
+        "name": "Recording Industry Association of America",
+        "type": "organization"
+      },
+      {
+        "name": "BBC News",
+        "type": "organization"
+      }
+    ]
+  },
+  {
+    "sentence": "He has won Top New Male Vocalist from Billboard in 1992 and from Academy of Country Music in 1993 , and Vocal Event of the Year from the Country Music Association in 2007 .",
+    "entity_list": [
+      {
+        "name": "Top New Male Vocalist",
+        "type": "award"
+      },
+      {
+        "name": "Billboard",
+        "type": "organization"
+      },
+      {
+        "name": "Academy of Country Music",
+        "type": "organization"
+      },
+      {
+        "name": "Vocal Event of the Year",
+        "type": "event"
+      },
+      {
+        "name": "Country Music Association",
+        "type": "organization"
+      }
+    ]
+  },
+  {
+    "sentence": "In 1983 , the lineup of Verni , Skates , Ellsworth , and Gustafson released the Power in Black demo , a recording that made as much impact in the underground tape trading circuit as demos by up-and-coming Bay Area thrash metal bands such as Exodus and Testament .",
+    "entity_list": [
+      {
+        "name": "Verni",
+        "type": "musical artist"
+      },
+      {
+        "name": "Skates",
+        "type": "musical artist"
+      },
+      {
+        "name": "Ellsworth",
+        "type": "musical artist"
+      },
+      {
+        "name": "Gustafson",
+        "type": "musical artist"
+      },
+      {
+        "name": "Power in Black",
+        "type": "album"
+      },
+      {
+        "name": "Bay Area",
+        "type": "location"
+      },
+      {
+        "name": "thrash metal",
+        "type": "music genre"
+      },
+      {
+        "name": "Exodus",
+        "type": "band"
+      },
+      {
+        "name": "Testament",
+        "type": "band"
+      }
+    ]
+  },
+  {
+    "sentence": "Their style has been described as Rock and roll with a renegade stance , what in later years would be dubbed ' Punk rock ' .",
+    "entity_list": [
+      {
+        "name": "Rock and roll",
+        "type": "music genre"
+      },
+      {
+        "name": "Punk rock",
+        "type": "music genre"
+      }
+    ]
+  },
+  {
+    "sentence": "On 9 June 1892 the Paris Opéra-Comique staged Les Troyens à Carthage ( in the Théâtre de la Ville as its premiere ) and witnessed a triumphant debut for the 17-year-old Marie Delna as Didon , with Stéphane Lafarge as Énée , conducted by Jules Danbé ; these staged performances of Part 2 continued into the next year .",
+    "entity_list": [
+      {
+        "name": "Paris",
+        "type": "location"
+      },
+      {
+        "name": "Opéra-Comique",
+        "type": "organization"
+      },
+      {
+        "name": "Les Troyens à Carthage",
+        "type": "else"
+      },
+      {
+        "name": "Théâtre de la Ville",
+        "type": "location"
+      },
+      {
+        "name": "Marie Delna",
+        "type": "musical artist"
+      },
+      {
+        "name": "Didon",
+        "type": "else"
+      },
+      {
+        "name": "Stéphane Lafarge",
+        "type": "person"
+      },
+      {
+        "name": "Énée",
+        "type": "else"
+      },
+      {
+        "name": "Jules Danbé",
+        "type": "musical artist"
+      }
+    ]
+  },
+  {
+    "sentence": "As a group , the Spice Girls have received a number of notable awards including five Brit Awards , three American Music Awards , three MTV Europe Music Awards , one MTV Video Music Award and three World Music Awards .",
+    "entity_list": [
+      {
+        "name": "Spice Girls",
+        "type": "band"
+      },
+      {
+        "name": "Brit Awards",
+        "type": "award"
+      },
+      {
+        "name": "American Music Awards",
+        "type": "award"
+      },
+      {
+        "name": "MTV Europe Music Awards",
+        "type": "award"
+      },
+      {
+        "name": "MTV Video Music Award",
+        "type": "award"
+      },
+      {
+        "name": "World Music Awards",
+        "type": "award"
+      }
+    ]
+  },
+  {
+    "sentence": "The album experimented with a diverse number of genres , including contemporary R & B , deep house , Swing music , Hip hop music , Rock music , and Pop music , with Billboard describing each as being delivered with consummate skill and passion .",
+    "entity_list": [
+      {
+        "name": "contemporary R & B",
+        "type": "music genre"
+      },
+      {
+        "name": "deep house",
+        "type": "music genre"
+      },
+      {
+        "name": "Swing music",
+        "type": "music genre"
+      },
+      {
+        "name": "Hip hop music",
+        "type": "music genre"
+      },
+      {
+        "name": "Rock music",
+        "type": "music genre"
+      },
+      {
+        "name": "Pop music",
+        "type": "music genre"
+      },
+      {
+        "name": "Billboard",
+        "type": "else"
+      }
+    ]
+  },
+  {
+    "sentence": "Chuck Burgi ( 1991-1992 , 1992-1995 , 1996-1997 ) , John Miceli ( 1992 , 1995 ) , John O 'Reilly ( 1995-1996 ) and Bobby Rondinelli ( 1997-2004 ) .",
+    "entity_list": [
+      {
+        "name": "Chuck Burgi",
+        "type": "musical artist"
+      },
+      {
+        "name": "John Miceli",
+        "type": "musical artist"
+      },
+      {
+        "name": "John O 'Reilly",
+        "type": "musical artist"
+      },
+      {
+        "name": "Bobby Rondinelli",
+        "type": "musical artist"
+      }
+    ]
+  },
+  {
+    "sentence": "Two of his most popular recordings were Layla , recorded with Derek and the Dominos ; and Robert Johnson ' s Cross Road Blues , recorded with Cream .",
+    "entity_list": [
+      {
+        "name": "Layla",
+        "type": "song"
+      },
+      {
+        "name": "Derek and the Dominos",
+        "type": "band"
+      },
+      {
+        "name": "Robert Johnson",
+        "type": "musical artist"
+      },
+      {
+        "name": "Cross Road Blues",
+        "type": "song"
+      },
+      {
+        "name": "Cream",
+        "type": "band"
+      }
+    ]
+  },
+  {
+    "sentence": "Flood has been certified platinum and their children 's music albums Here Come the ABCs , Here Come the 123s , and Here Comes Science have all been certified gold .",
+    "entity_list": [
+      {
+        "name": "Flood",
+        "type": "album"
+      },
+      {
+        "name": "Here Come the ABCs",
+        "type": "album"
+      },
+      {
+        "name": "Here Come the 123s",
+        "type": "album"
+      },
+      {
+        "name": "Here Comes Science",
+        "type": "album"
+      }
+    ]
+  },
+  {
+    "sentence": "She is the recipient of various accolades including an Academy Awards , three Golden Globe Awards , two Critics ' Choice Movie Awards , a Screen Actors Guild Award , and nominations for four BAFTA Awards , three Primetime Emmy Awards , and a Grammy Award .",
+    "entity_list": [
+      {
+        "name": "Academy Awards",
+        "type": "award"
+      },
+      {
+        "name": "Golden Globe Awards",
+        "type": "award"
+      },
+      {
+        "name": "Critics ' Choice Movie Awards",
+        "type": "award"
+      },
+      {
+        "name": "Screen Actors Guild Award",
+        "type": "award"
+      },
+      {
+        "name": "BAFTA Awards",
+        "type": "award"
+      },
+      {
+        "name": "Primetime Emmy Awards",
+        "type": "award"
+      },
+      {
+        "name": "Grammy Award",
+        "type": "award"
+      }
+    ]
+  },
+  {
+    "sentence": "James Brown is said to be the most sampled artist in the history of hip hop , while P-Funk is the second most sampled artist ; samples of old Parliament and Funkadelic songs formed the basis of West Coast G-funk .",
+    "entity_list": [
+      {
+        "name": "James Brown",
+        "type": "musical artist"
+      },
+      {
+        "name": "hip hop",
+        "type": "music genre"
+      },
+      {
+        "name": "P-Funk",
+        "type": "band"
+      },
+      {
+        "name": "Parliament and Funkadelic",
+        "type": "band"
+      },
+      {
+        "name": "West Coast G-funk",
+        "type": "music genre"
+      }
+    ]
+  },
+  {
+    "sentence": "Her early works in the 1960s ( her debut The Barbra Streisand Album , The Second Barbra Streisand Album , The Third Album , My Name Is Barbra , etc .",
+    "entity_list": [
+      {
+        "name": "The Barbra Streisand Album",
+        "type": "album"
+      },
+      {
+        "name": "The Second Barbra Streisand Album",
+        "type": "album"
+      },
+      {
+        "name": "The Third Album",
+        "type": "album"
+      },
+      {
+        "name": "My Name Is Barbra",
+        "type": "album"
+      }
+    ]
+  },
+  {
+    "sentence": "At these labels , Bubbles created more designs for Elvis Costello , as well as other artists such as Nick Lowe , Carlene Carter and Clive Langer & amp ; The Boxes .",
+    "entity_list": [
+      {
+        "name": "Bubbles",
+        "type": "person"
+      },
+      {
+        "name": "Elvis Costello",
+        "type": "musical artist"
+      },
+      {
+        "name": "Nick Lowe",
+        "type": "musical artist"
+      },
+      {
+        "name": "Carlene Carter",
+        "type": "musical artist"
+      },
+      {
+        "name": "Clive Langer & amp ; The Boxes",
+        "type": "band"
+      }
+    ]
+  },
+  {
+    "sentence": "The band have received a total of 11 nominations for ARIA Music Awards in ARIA Music Awards of 1999 , ARIA Music Awards of 2001 and ARIA Music Awards of 2003 .",
+    "entity_list": [
+      {
+        "name": "ARIA Music Awards",
+        "type": "award"
+      },
+      {
+        "name": "ARIA Music Awards of 1999",
+        "type": "award"
+      },
+      {
+        "name": "ARIA Music Awards of 2001",
+        "type": "award"
+      },
+      {
+        "name": "ARIA Music Awards of 2003",
+        "type": "award"
+      }
+    ]
+  },
+  {
+    "sentence": "Their music has a particular rumba flamenca style , with Pop music influences ; many songs of the Gipsy Kings fit social dance s , such as salsa and Rhumba .",
+    "entity_list": [
+      {
+        "name": "rumba flamenca",
+        "type": "music genre"
+      },
+      {
+        "name": "Pop music",
+        "type": "music genre"
+      },
+      {
+        "name": "Gipsy Kings",
+        "type": "band"
+      },
+      {
+        "name": "salsa",
+        "type": "music genre"
+      },
+      {
+        "name": "Rhumba",
+        "type": "music genre"
+      }
+    ]
+  },
+  {
+    "sentence": "Parton received nominations for Drama Desk Award for Outstanding Music and Drama Desk Award for Outstanding Lyrics , as well as a nomination for Tony Award for Best Original Score .",
+    "entity_list": [
+      {
+        "name": "Parton",
+        "type": "musical artist"
+      },
+      {
+        "name": "Drama Desk Award for Outstanding Music",
+        "type": "award"
+      },
+      {
+        "name": "Drama Desk Award for Outstanding Lyrics",
+        "type": "award"
+      },
+      {
+        "name": "Tony Award for Best Original Score",
+        "type": "award"
+      }
+    ]
+  },
+  {
+    "sentence": "By the end of World War II , mountaineer string band music known as Bluegrass music had emerged when Bill Monroe joined with Lester Flatt and Earl Scruggs , introduced by Roy Acuff at the Grand Ole Opry .",
+    "entity_list": [
+      {
+        "name": "World War II",
+        "type": "event"
+      },
+      {
+        "name": "Bluegrass music",
+        "type": "music genre"
+      },
+      {
+        "name": "Bill Monroe",
+        "type": "musical artist"
+      },
+      {
+        "name": "Lester Flatt",
+        "type": "musical artist"
+      },
+      {
+        "name": "Earl Scruggs",
+        "type": "musical artist"
+      },
+      {
+        "name": "Roy Acuff",
+        "type": "musical artist"
+      },
+      {
+        "name": "Grand Ole Opry",
+        "type": "location"
+      }
+    ]
+  },
+  {
+    "sentence": "At the 59th Annual Grammy Awards on 12 February 2017 , Bowie won all five nominated awards : Grammy Award for Best Rock Performance ; Grammy Award for Best Alternative Music Album ; Best Engineered Album , Non-Classical ; Grammy Award for Best Recording Package ; and Grammy Award for Best Rock Song .",
+    "entity_list": [
+      {
+        "name": "59th Annual Grammy Awards",
+        "type": "award"
+      },
+      {
+        "name": "Bowie",
+        "type": "musical artist"
+      },
+      {
+        "name": "Grammy Award for Best Rock Performance",
+        "type": "award"
+      },
+      {
+        "name": "Grammy Award for Best Alternative Music Album",
+        "type": "award"
+      },
+      {
+        "name": "Best Engineered Album , Non-Classical",
+        "type": "award"
+      },
+      {
+        "name": "Grammy Award for Best Recording Package",
+        "type": "award"
+      },
+      {
+        "name": "Grammy Award for Best Rock Song",
+        "type": "award"
+      }
+    ]
+  },
+  {
+    "sentence": "The group has been nominated for 20 Grammy awards and has won five of them with Best Alternative Album for Dookie , Best Rock Album for American Idiot and 21st Century Breakdown , Record of the Year for Boulevard of Broken Dreams , and Best Musical Show Album for American Idiot : The Original Broadway Cast Recording .",
+    "entity_list": [
+      {
+        "name": "Grammy awards",
+        "type": "award"
+      },
+      {
+        "name": "Best Alternative Album",
+        "type": "award"
+      },
+      {
+        "name": "Dookie",
+        "type": "album"
+      },
+      {
+        "name": "Best Rock Album",
+        "type": "award"
+      },
+      {
+        "name": "American Idiot",
+        "type": "album"
+      },
+      {
+        "name": "21st Century Breakdown",
+        "type": "album"
+      },
+      {
+        "name": "Record of the Year",
+        "type": "award"
+      },
+      {
+        "name": "Boulevard of Broken Dreams",
+        "type": "album"
+      },
+      {
+        "name": "Best Musical Show Album",
+        "type": "award"
+      },
+      {
+        "name": "The Original Broadway Cast Recording",
+        "type": "album"
+      }
+    ]
+  },
+  {
+    "sentence": "The Righteous Brothers , Bobby Hatfield and Bill Medley , also guest-starred in different episodes .",
+    "entity_list": [
+      {
+        "name": "The Righteous Brothers",
+        "type": "band"
+      },
+      {
+        "name": "Bobby Hatfield",
+        "type": "musical artist"
+      },
+      {
+        "name": "Bill Medley",
+        "type": "musical artist"
+      }
+    ]
+  },
+  {
+    "sentence": "Outside the south , the accordion ( predominantly the piano accordion ) is used in almost all styles of Forró ( in particular in the subgenres of Xote and Baião ) as the principal instrument , Luiz Gonzaga ( the King of the Baião ) and Dominguinhos being among the notable musicians in this style from the northeast .",
+    "entity_list": [
+      {
+        "name": "piano accordion",
+        "type": "musical instrument"
+      },
+      {
+        "name": "Forró",
+        "type": "music genre"
+      },
+      {
+        "name": "Xote",
+        "type": "music genre"
+      },
+      {
+        "name": "Baião",
+        "type": "music genre"
+      },
+      {
+        "name": "Luiz Gonzaga",
+        "type": "musical artist"
+      },
+      {
+        "name": "King of the Baião",
+        "type": "else"
+      },
+      {
+        "name": "Dominguinhos",
+        "type": "musical artist"
+      }
+    ]
+  },
+  {
+    "sentence": "These were : Now and Zen in 1988 , Manic Nirvana in 1990 , and the 1993 Fate of Nations ( which features Moya Brennan of Clannad and former Cutting Crew guitarist Kevin MacMichael ) .",
+    "entity_list": [
+      {
+        "name": "Now and Zen",
+        "type": "album"
+      },
+      {
+        "name": "Manic Nirvana",
+        "type": "album"
+      },
+      {
+        "name": "Fate of Nations",
+        "type": "album"
+      },
+      {
+        "name": "Moya Brennan",
+        "type": "musical artist"
+      },
+      {
+        "name": "Clannad",
+        "type": "band"
+      },
+      {
+        "name": "Cutting Crew",
+        "type": "band"
+      },
+      {
+        "name": "Kevin MacMichael",
+        "type": "musical artist"
+      }
+    ]
+  },
+  {
+    "sentence": "Arguably the most successful boy band manager from the U.S. was Lou Pearlman , who founded commercially successful acts such as the Backstreet Boys in 1993 , NSYNC and LFO in 1995 , O-Town in 2000 , and US5 in 2005 .",
+    "entity_list": [
+      {
+        "name": "U.S.",
+        "type": "country"
+      },
+      {
+        "name": "Lou Pearlman",
+        "type": "musical artist"
+      },
+      {
+        "name": "Backstreet Boys",
+        "type": "band"
+      },
+      {
+        "name": "NSYNC",
+        "type": "band"
+      },
+      {
+        "name": "LFO",
+        "type": "band"
+      },
+      {
+        "name": "O-Town",
+        "type": "band"
+      },
+      {
+        "name": "US5",
+        "type": "band"
+      }
+    ]
+  },
+  {
+    "sentence": "Extreme , Red Hot Chili Peppers , Living Colour , Jane 's Addiction , Prince , Primus , Fishbone , Faith No More , Rage Against the Machine , Infectious Grooves , and Incubus spread the approach and styles garnered from funk pioneers to new audiences in the mid-to-late 1980s and the 1990s .",
+    "entity_list": [
+      {
+        "name": "Extreme",
+        "type": "band"
+      },
+      {
+        "name": "Red Hot Chili Peppers",
+        "type": "band"
+      },
+      {
+        "name": "Living Colour",
+        "type": "band"
+      },
+      {
+        "name": "Jane 's Addiction",
+        "type": "band"
+      },
+      {
+        "name": "Prince",
+        "type": "musical artist"
+      },
+      {
+        "name": "Primus",
+        "type": "band"
+      },
+      {
+        "name": "Fishbone",
+        "type": "band"
+      },
+      {
+        "name": "Faith No More",
+        "type": "band"
+      },
+      {
+        "name": "Rage Against the Machine",
+        "type": "band"
+      },
+      {
+        "name": "Infectious Grooves",
+        "type": "band"
+      },
+      {
+        "name": "Incubus",
+        "type": "band"
+      },
+      {
+        "name": "funk",
+        "type": "else"
+      }
+    ]
+  },
+  {
+    "sentence": "Bands like Flogging Molly , Black 47 , Dropkick Murphys , The Young Dubliners , The Tossers introduced a hybrid of Celtic rock , Punk rock , reggae , Hardcore punk and other elements in the 1990s that has become popular with Irish-American youth .",
+    "entity_list": [
+      {
+        "name": "Flogging Molly",
+        "type": "band"
+      },
+      {
+        "name": "Black 47",
+        "type": "band"
+      },
+      {
+        "name": "Dropkick Murphys",
+        "type": "band"
+      },
+      {
+        "name": "The Young Dubliners",
+        "type": "band"
+      },
+      {
+        "name": "The Tossers",
+        "type": "band"
+      },
+      {
+        "name": "Celtic rock",
+        "type": "music genre"
+      },
+      {
+        "name": "Punk rock",
+        "type": "music genre"
+      },
+      {
+        "name": "reggae",
+        "type": "music genre"
+      },
+      {
+        "name": "Hardcore punk",
+        "type": "music genre"
+      },
+      {
+        "name": "Irish-American",
+        "type": "else"
+      }
+    ]
+  },
+  {
+    "sentence": "The Stone Roses ' influences included garage rock , electronic dance music , Krautrock , Northern soul , punk rock , reggae , Soul music and artists such as the Beatles ,",
+    "entity_list": [
+      {
+        "name": "The Stone Roses",
+        "type": "band"
+      },
+      {
+        "name": "garage rock",
+        "type": "music genre"
+      },
+      {
+        "name": "electronic dance music",
+        "type": "music genre"
+      },
+      {
+        "name": "Krautrock",
+        "type": "music genre"
+      },
+      {
+        "name": "Northern soul",
+        "type": "music genre"
+      },
+      {
+        "name": "punk rock",
+        "type": "music genre"
+      },
+      {
+        "name": "reggae",
+        "type": "music genre"
+      },
+      {
+        "name": "Soul music",
+        "type": "music genre"
+      },
+      {
+        "name": "the Beatles",
+        "type": "band"
+      }
+    ]
+  },
+  {
+    "sentence": "In 2018 , Buckingham was fired from the band and was replaced by Mike Campbell , formerly of Tom Petty and the Heartbreakers , and Neil Finn of Split Enz and Crowded House .",
+    "entity_list": [
+      {
+        "name": "Buckingham",
+        "type": "musical artist"
+      },
+      {
+        "name": "Mike Campbell",
+        "type": "musical artist"
+      },
+      {
+        "name": "Tom Petty and the Heartbreakers",
+        "type": "band"
+      },
+      {
+        "name": "Neil Finn",
+        "type": "musical artist"
+      },
+      {
+        "name": "Split Enz",
+        "type": "band"
+      },
+      {
+        "name": "Crowded House",
+        "type": "band"
+      }
+    ]
+  },
+  {
+    "sentence": "In Paris , he performed at the Stade de France for Saint Patrick 's Day , in AccorHotels Arena , the Bataclan , the Casino de Paris and the Théâtre de la Ville with guest singers Mari Boine and Karen Matheson as well as Donald Shaw .",
+    "entity_list": [
+      {
+        "name": "Paris",
+        "type": "location"
+      },
+      {
+        "name": "Stade de France",
+        "type": "location"
+      },
+      {
+        "name": "Saint Patrick 's Day",
+        "type": "event"
+      },
+      {
+        "name": "AccorHotels Arena",
+        "type": "location"
+      },
+      {
+        "name": "Bataclan",
+        "type": "location"
+      },
+      {
+        "name": "Casino de Paris",
+        "type": "location"
+      },
+      {
+        "name": "Théâtre de la Ville",
+        "type": "location"
+      },
+      {
+        "name": "Mari Boine",
+        "type": "musical artist"
+      },
+      {
+        "name": "Karen Matheson",
+        "type": "musical artist"
+      },
+      {
+        "name": "Donald Shaw",
+        "type": "musical artist"
+      }
+    ]
+  },
+  {
+    "sentence": "On 26 February 1987 , A Hard Day 's Night was officially released on compact disc in mono , along with Please Please Me , With the Beatles , and Beatles for Sale .",
+    "entity_list": [
+      {
+        "name": "Hard Day 's Night",
+        "type": "album"
+      },
+      {
+        "name": "Please Please Me",
+        "type": "album"
+      },
+      {
+        "name": "With the Beatles",
+        "type": "album"
+      },
+      {
+        "name": "Beatles for Sale",
+        "type": "album"
+      }
+    ]
+  },
+  {
+    "sentence": "It started with pop music singers like Glen Campbell , Bobbie Gentry , John Denver , Olivia Newton-John , Anne Murray , B. J. Thomas , The Bellamy Brothers , and Linda Ronstadt having hits on the country charts .",
+    "entity_list": [
+      {
+        "name": "pop music",
+        "type": "music genre"
+      },
+      {
+        "name": "Glen Campbell",
+        "type": "person"
+      },
+      {
+        "name": "Bobbie Gentry",
+        "type": "person"
+      },
+      {
+        "name": "John Denver",
+        "type": "person"
+      },
+      {
+        "name": "Olivia Newton-John",
+        "type": "person"
+      },
+      {
+        "name": "Anne Murray",
+        "type": "musical artist"
+      },
+      {
+        "name": "B. J. Thomas",
+        "type": "musical artist"
+      },
+      {
+        "name": "The Bellamy Brothers",
+        "type": "band"
+      },
+      {
+        "name": "Linda Ronstadt",
+        "type": "musical artist"
+      }
+    ]
+  },
+  {
+    "sentence": "The shows were later taken into Europe , and featured such stars as Johnny Cash , Dolly Parton , Tammy Wynette , David Allan Coe , Emmylou Harris , Boxcar Willie , Johnny Russell and Jerry Lee Lewis .",
+    "entity_list": [
+      {
+        "name": "Europe",
+        "type": "location"
+      },
+      {
+        "name": "Johnny Cash",
+        "type": "musical artist"
+      },
+      {
+        "name": "Dolly Parton",
+        "type": "musical artist"
+      },
+      {
+        "name": "Tammy Wynette",
+        "type": "musical artist"
+      },
+      {
+        "name": "David Allan Coe",
+        "type": "musical artist"
+      },
+      {
+        "name": "Emmylou Harris",
+        "type": "musical artist"
+      },
+      {
+        "name": "Boxcar Willie",
+        "type": "musical artist"
+      },
+      {
+        "name": "Johnny Russell",
+        "type": "musical artist"
+      },
+      {
+        "name": "Jerry Lee Lewis",
+        "type": "musical artist"
+      }
+    ]
+  },
+  {
+    "sentence": "In addition , the film won the BAFTA Award for Best Film , BAFTA Award for Best Direction ( Nichols ) , BAFTA Award for Most Promising Newcomer to Leading Film Roles ( Hoffman ) , the BAFTA Award for Best Editing ( Sam O 'Steen ) .",
+    "entity_list": [
+      {
+        "name": "BAFTA Award for Best Film",
+        "type": "award"
+      },
+      {
+        "name": "BAFTA Award for Best Direction",
+        "type": "award"
+      },
+      {
+        "name": "Nichols",
+        "type": "person"
+      },
+      {
+        "name": "BAFTA Award for Most Promising Newcomer to Leading Film Roles",
+        "type": "award"
+      },
+      {
+        "name": "Hoffman",
+        "type": "person"
+      },
+      {
+        "name": "BAFTA Award for Best Editing",
+        "type": "award"
+      },
+      {
+        "name": "Sam O 'Steen",
+        "type": "person"
+      }
+    ]
+  },
+  {
+    "sentence": "With the influence of Tropicalismo , Traditional Samba and Bossa Nova , MPB ( Música popular brasileira ) , or Brazilian Popular Music , became highly singer-songwriter based .",
+    "entity_list": [
+      {
+        "name": "Tropicalismo",
+        "type": "music genre"
+      },
+      {
+        "name": "Samba",
+        "type": "music genre"
+      },
+      {
+        "name": "Bossa Nova",
+        "type": "music genre"
+      },
+      {
+        "name": "MPB",
+        "type": "music genre"
+      },
+      {
+        "name": "Música popular brasileira",
+        "type": "music genre"
+      },
+      {
+        "name": "Brazilian Popular Music",
+        "type": "music genre"
+      }
+    ]
+  },
+  {
+    "sentence": "Following the hard rock and heavy metal origins on the band 's first two albums , Too Fast for Love ( 1981 ) and Shout at the Devil ( 1983 ) , the release of its third album Theatre of Pain ( 1985 ) saw Mötley Crüe joining the first wave of glam metal .",
+    "entity_list": [
+      {
+        "name": "hard rock",
+        "type": "music genre"
+      },
+      {
+        "name": "heavy metal",
+        "type": "music genre"
+      },
+      {
+        "name": "Too Fast for Love",
+        "type": "album"
+      },
+      {
+        "name": "Shout at the Devil",
+        "type": "album"
+      },
+      {
+        "name": "Theatre of Pain",
+        "type": "album"
+      },
+      {
+        "name": "the first wave of glam metal",
+        "type": "event"
+      }
+    ]
+  },
+  {
+    "sentence": "In June 1985 , the United Way of Canada invited Lata Mangeshkar to perform at Maple Leaf Gardens .",
+    "entity_list": [
+      {
+        "name": "United Way of Canada",
+        "type": "organization"
+      },
+      {
+        "name": "Lata Mangeshkar",
+        "type": "musical artist"
+      },
+      {
+        "name": "Maple Leaf Gardens",
+        "type": "location"
+      }
+    ]
+  },
+  {
+    "sentence": "Soundgarden achieved its biggest success with the 1994 album Superunknown , which debuted at number one on the Billboard 200 and yielded the Grammy Award -winning singles Spoonman and Black Hole Sun .",
+    "entity_list": [
+      {
+        "name": "Soundgarden",
+        "type": "band"
+      },
+      {
+        "name": "Superunknown",
+        "type": "album"
+      },
+      {
+        "name": "Billboard 200",
+        "type": "else"
+      },
+      {
+        "name": "Grammy Award",
+        "type": "award"
+      },
+      {
+        "name": "Spoonman",
+        "type": "song"
+      },
+      {
+        "name": "Black Hole Sun",
+        "type": "song"
+      }
+    ]
+  },
+  {
+    "sentence": "Despite this , The Godfather Part III went on to gather 7 Academy Awards nominations , including Academy Award for Best Director and Academy Award for Best Picture .",
+    "entity_list": [
+      {
+        "name": "The Godfather Part III",
+        "type": "else"
+      },
+      {
+        "name": "Academy Awards",
+        "type": "award"
+      },
+      {
+        "name": "Academy Award for Best Director",
+        "type": "award"
+      },
+      {
+        "name": "Academy Award for Best Picture",
+        "type": "award"
+      }
+    ]
+  },
+  {
+    "sentence": "In 2005 , American Idiot won a Grammy Award for Grammy Award for Best Rock Album and was nominated in six other categories including Grammy Award for Album of the Year .",
+    "entity_list": [
+      {
+        "name": "American Idiot",
+        "type": "album"
+      },
+      {
+        "name": "Grammy Award",
+        "type": "award"
+      },
+      {
+        "name": "Grammy Award for Best Rock Album",
+        "type": "award"
+      },
+      {
+        "name": "Grammy Award for Album of the Year",
+        "type": "award"
+      }
+    ]
+  },
+  {
+    "sentence": "A sleeper hit in United Kingdom , the record eventually hit the top three in the Official Charts Company and received platinum certifications from British Phonographic Industry , Recording Industry Association of America and ARIA .",
+    "entity_list": [
+      {
+        "name": "United Kingdom",
+        "type": "country"
+      },
+      {
+        "name": "Official Charts Company",
+        "type": "organization"
+      },
+      {
+        "name": "British Phonographic Industry",
+        "type": "organization"
+      },
+      {
+        "name": "Recording Industry Association of America",
+        "type": "organization"
+      },
+      {
+        "name": "ARIA",
+        "type": "organization"
+      }
+    ]
+  },
+  {
+    "sentence": "For the 2008 / 2009 season , he played Captain Hook at the Milton Keynes Theatre and donned the hook once again for the 2009 / 2010 panto season at the Liverpool Empire Theatre .",
+    "entity_list": [
+      {
+        "name": "Captain Hook",
+        "type": "else"
+      },
+      {
+        "name": "Milton Keynes Theatre",
+        "type": "location"
+      },
+      {
+        "name": "panto season",
+        "type": "event"
+      },
+      {
+        "name": "Liverpool Empire Theatre",
+        "type": "location"
+      }
+    ]
+  },
+  {
+    "sentence": "The band also released three full-length albums dubbed ( and later packaged together as ) The Trilogy : The Maggot , The Bootlicker , and The Crybaby .",
+    "entity_list": [
+      {
+        "name": "The Trilogy",
+        "type": "album"
+      },
+      {
+        "name": "The Maggot",
+        "type": "album"
+      },
+      {
+        "name": "The Bootlicker",
+        "type": "album"
+      },
+      {
+        "name": "The Crybaby",
+        "type": "album"
+      }
+    ]
+  },
+  {
+    "sentence": "On 24 August 2012 , Westenra staged a concert in the Gŵyl Gobaith Music Festival in Wales to support for charities Cancer Research UK , Wales Air Ambulance , CLIC Sargent and HeadtoHeart .",
+    "entity_list": [
+      {
+        "name": "Westenra",
+        "type": "musical artist"
+      },
+      {
+        "name": "Gŵyl Gobaith Music Festival",
+        "type": "event"
+      },
+      {
+        "name": "Wales",
+        "type": "country"
+      },
+      {
+        "name": "Cancer Research UK",
+        "type": "organization"
+      },
+      {
+        "name": "Wales Air Ambulance",
+        "type": "organization"
+      },
+      {
+        "name": "CLIC Sargent",
+        "type": "organization"
+      },
+      {
+        "name": "HeadtoHeart",
+        "type": "organization"
+      }
+    ]
+  },
+  {
+    "sentence": "These albums spawned some of Carey 's most successful singles , including Hero , Without You , All I Want for Christmas Is You , Fantasy , Always Be My Baby , as well as One Sweet Day , which peaked at number one in the U.S. for 16 weeks and became Billboard s Song Of The Decade ( 1990s Decade ) .",
+    "entity_list": [
+      {
+        "name": "Carey",
+        "type": "musical artist"
+      },
+      {
+        "name": "Hero",
+        "type": "song"
+      },
+      {
+        "name": "Without You",
+        "type": "song"
+      },
+      {
+        "name": "All I Want for Christmas Is You",
+        "type": "song"
+      },
+      {
+        "name": "Fantasy",
+        "type": "song"
+      },
+      {
+        "name": "Always Be My Baby",
+        "type": "song"
+      },
+      {
+        "name": "One Sweet Day",
+        "type": "song"
+      },
+      {
+        "name": "U.S.",
+        "type": "country"
+      },
+      {
+        "name": "Billboard",
+        "type": "organization"
+      },
+      {
+        "name": "Song Of The Decade",
+        "type": "else"
+      }
+    ]
+  },
+  {
+    "sentence": "Michael won various music awards including two Grammy Award s , three Brit Awards , three American Music Award s , four MTV Video Music Award s and six Ivor Novello Awards .",
+    "entity_list": [
+      {
+        "name": "Michael",
+        "type": "musical artist"
+      },
+      {
+        "name": "Grammy Award s",
+        "type": "award"
+      },
+      {
+        "name": "Brit Awards",
+        "type": "award"
+      },
+      {
+        "name": "American Music Award s",
+        "type": "award"
+      },
+      {
+        "name": "MTV Video Music Award s",
+        "type": "award"
+      },
+      {
+        "name": "Ivor Novello Awards",
+        "type": "award"
+      }
+    ]
+  },
+  {
+    "sentence": "This style emerged in the United States in the early and mid-1980s , with innovators such as Queensrÿche , Fates Warning , and Dream Theater .",
+    "entity_list": [
+      {
+        "name": "United States",
+        "type": "country"
+      },
+      {
+        "name": "Queensrÿche",
+        "type": "band"
+      },
+      {
+        "name": "Fates Warning",
+        "type": "band"
+      },
+      {
+        "name": "Dream Theater",
+        "type": "band"
+      }
+    ]
+  },
+  {
+    "sentence": "For Mirrors , instead of working with previous producers Sandy Pearlman ( who instead went on to manage Black Sabbath ) and Murray Krugman , Blue Öyster Cult chose Tom Werman , who had worked with acts such as Cheap Trick and Ted Nugent .",
+    "entity_list": [
+      {
+        "name": "Mirrors",
+        "type": "album"
+      },
+      {
+        "name": "Sandy Pearlman",
+        "type": "person"
+      },
+      {
+        "name": "Black Sabbath",
+        "type": "band"
+      },
+      {
+        "name": "Murray Krugman",
+        "type": "person"
+      },
+      {
+        "name": "Blue Öyster Cult",
+        "type": "band"
+      },
+      {
+        "name": "Tom Werman",
+        "type": "person"
+      },
+      {
+        "name": "Cheap Trick",
+        "type": "band"
+      },
+      {
+        "name": "Ted Nugent",
+        "type": "musical artist"
+      }
+    ]
+  },
+  {
+    "sentence": "The self-titled record was an instant success both critically and commercially , led by the official theme song for UAAP Season 71 of the UAAP - Puso ( trans : Heart ) .",
+    "entity_list": [
+      {
+        "name": "UAAP Season 71",
+        "type": "event"
+      },
+      {
+        "name": "UAAP",
+        "type": "organization"
+      },
+      {
+        "name": "Puso",
+        "type": "song"
+      },
+      {
+        "name": "Heart",
+        "type": "song"
+      }
+    ]
+  },
+  {
+    "sentence": "Examples of such professional groups include Straight No Chaser , Pentatonix , The House Jacks , Rockapella , Mosaic , Home Free and M-pact .",
+    "entity_list": [
+      {
+        "name": "Straight No Chaser",
+        "type": "band"
+      },
+      {
+        "name": "Pentatonix",
+        "type": "band"
+      },
+      {
+        "name": "The House Jacks",
+        "type": "band"
+      },
+      {
+        "name": "Rockapella",
+        "type": "band"
+      },
+      {
+        "name": "Mosaic",
+        "type": "band"
+      },
+      {
+        "name": "Home Free",
+        "type": "band"
+      },
+      {
+        "name": "M-pact",
+        "type": "band"
+      }
+    ]
+  },
+  {
+    "sentence": "Simon has won 12 Grammy Award s ( one of them a Grammy Lifetime Achievement Award ) and five Grammy Award for Album of the Year Grammy nominations , the most recent for You 're the One in 2001 .",
+    "entity_list": [
+      {
+        "name": "Simon",
+        "type": "musical artist"
+      },
+      {
+        "name": "Grammy Award s",
+        "type": "award"
+      },
+      {
+        "name": "Grammy Lifetime Achievement Award",
+        "type": "award"
+      },
+      {
+        "name": "Grammy Award for Album of the Year Grammy nominations",
+        "type": "award"
+      },
+      {
+        "name": "You 're the One",
+        "type": "song"
+      }
+    ]
+  },
+  {
+    "sentence": "Brazil Classics ! -- redirects here -- , the label 's first compilation series , consists of seven albums surveying genres ranging from Samba to Tropicália , as well as individual artists .",
+    "entity_list": [
+      {
+        "name": "Brazil Classics",
+        "type": "album"
+      },
+      {
+        "name": "Samba",
+        "type": "music genre"
+      },
+      {
+        "name": "Tropicália",
+        "type": "music genre"
+      }
+    ]
+  },
+  {
+    "sentence": "In addition , a vintage siren , just as the original Boston Garden had used , was added to replace the end-of-period horn for hockey only , a feature of the Montreal Canadiens , the Bruins ' arch-rivals , at the Montreal Forum ( now the Pepsi Forum shopping centre ) and the current Bell Centre .",
+    "entity_list": [
+      {
+        "name": "Boston Garden",
+        "type": "location"
+      },
+      {
+        "name": "Montreal Canadiens",
+        "type": "else"
+      },
+      {
+        "name": "Bruins",
+        "type": "else"
+      },
+      {
+        "name": "Montreal Forum",
+        "type": "location"
+      },
+      {
+        "name": "Pepsi Forum",
+        "type": "location"
+      },
+      {
+        "name": "Bell Centre",
+        "type": "location"
+      }
+    ]
+  },
+  {
+    "sentence": "This was followed by a series of small , intimate gigs at UK venues such as Liverpool 's The Cavern Club , London 's Mean Fiddler , and Glasgow 's Barrowland Ballroom .",
+    "entity_list": [
+      {
+        "name": "UK",
+        "type": "country"
+      },
+      {
+        "name": "Liverpool",
+        "type": "location"
+      },
+      {
+        "name": "The Cavern Club",
+        "type": "location"
+      },
+      {
+        "name": "London",
+        "type": "location"
+      },
+      {
+        "name": "Mean Fiddler",
+        "type": "location"
+      },
+      {
+        "name": "Glasgow",
+        "type": "location"
+      },
+      {
+        "name": "Barrowland Ballroom",
+        "type": "location"
+      }
+    ]
+  },
+  {
+    "sentence": "Attracting over 200,000 fans , Black Sabbath appeared alongside popular 1970s rock and pop bands Deep Purple , Eagles , Emerson , Lake & Palmer , Rare Earth , Seals and Crofts , Black Oak Arkansas , and Earth , Wind & Fire .",
+    "entity_list": [
+      {
+        "name": "Black Sabbath",
+        "type": "band"
+      },
+      {
+        "name": "rock",
+        "type": "music genre"
+      },
+      {
+        "name": "pop",
+        "type": "music genre"
+      },
+      {
+        "name": "Deep Purple",
+        "type": "band"
+      },
+      {
+        "name": "Eagles",
+        "type": "band"
+      },
+      {
+        "name": "Emerson , Lake & Palmer",
+        "type": "band"
+      },
+      {
+        "name": "Rare Earth",
+        "type": "band"
+      },
+      {
+        "name": "Seals and Crofts",
+        "type": "band"
+      },
+      {
+        "name": "Black Oak Arkansas",
+        "type": "band"
+      },
+      {
+        "name": "Earth , Wind & Fire",
+        "type": "band"
+      }
+    ]
+  },
+  {
+    "sentence": "Staind has recorded seven studio albums : Tormented ( 1996 ) , Dysfunction ( 1999 ) , Break the Cycle ( 2001 ) , 14 Shades of Grey ( 2003 ) , Chapter V ( 2005 ) , The Illusion of Progress ( 2008 ) , and Staind ( 2011 ) .",
+    "entity_list": [
+      {
+        "name": "Staind",
+        "type": "album"
+      },
+      {
+        "name": "Tormented",
+        "type": "album"
+      },
+      {
+        "name": "Dysfunction",
+        "type": "album"
+      },
+      {
+        "name": "Break the Cycle",
+        "type": "album"
+      },
+      {
+        "name": "14 Shades of Grey",
+        "type": "album"
+      },
+      {
+        "name": "Chapter V",
+        "type": "album"
+      },
+      {
+        "name": "The Illusion of Progress",
+        "type": "album"
+      }
+    ]
+  },
+  {
+    "sentence": "Following the end of Nirvana , Novoselic worked on completing the With the Lights Out box set and From the Muddy Banks of the Wishkah album , as well as pushing for release of a Nevermind .",
+    "entity_list": [
+      {
+        "name": "Nirvana",
+        "type": "band"
+      },
+      {
+        "name": "Novoselic",
+        "type": "musical artist"
+      },
+      {
+        "name": "With the Lights Out",
+        "type": "album"
+      },
+      {
+        "name": "From the Muddy Banks of the Wishkah",
+        "type": "album"
+      },
+      {
+        "name": "Nevermind",
+        "type": "album"
+      }
+    ]
+  },
+  {
+    "sentence": "However , some bands were created around the talent of a songwriter within the group like Gary Barlow of Take That or Tony Mortimer of East 17 .",
+    "entity_list": [
+      {
+        "name": "Gary Barlow",
+        "type": "musical artist"
+      },
+      {
+        "name": "Take That",
+        "type": "band"
+      },
+      {
+        "name": "Tony Mortimer",
+        "type": "musical artist"
+      },
+      {
+        "name": "East 17",
+        "type": "band"
+      }
+    ]
+  },
+  {
+    "sentence": "Since then the band have released five albums : In It for the Money ( 1997 ) , Supergrass ( 1999 ) , Life on Other Planets ( 2002 ) , Road to Rouen ( 2005 ) and Diamond Hoo Ha ( 2008 ) , as well as a decade-ending compilation called Supergrass Is 10 ( 2004 ) .",
+    "entity_list": [
+      {
+        "name": "In It for the Money",
+        "type": "album"
+      },
+      {
+        "name": "Supergrass",
+        "type": "album"
+      },
+      {
+        "name": "Life on Other Planets",
+        "type": "album"
+      },
+      {
+        "name": "Road to Rouen",
+        "type": "album"
+      },
+      {
+        "name": "Diamond Hoo Ha",
+        "type": "album"
+      },
+      {
+        "name": "Supergrass Is 10",
+        "type": "album"
+      }
+    ]
+  },
+  {
+    "sentence": "At the 33rd Academy Awards , The Apartment was nominated for ten awards and won five , including Academy Award for Best Picture , Academy Award for Best Director , and Academy Award for Best Original Screenplay .",
+    "entity_list": [
+      {
+        "name": "33rd Academy Awards",
+        "type": "award"
+      },
+      {
+        "name": "The Apartment",
+        "type": "else"
+      },
+      {
+        "name": "Academy Award for Best Picture",
+        "type": "award"
+      },
+      {
+        "name": "Academy Award for Best Director",
+        "type": "award"
+      },
+      {
+        "name": "Academy Award for Best Original Screenplay",
+        "type": "award"
+      }
+    ]
+  },
+  {
+    "sentence": "Dream On , I Feel Loved , Freelove and Goodnight Lovers were released as singles in 2001 and 2002 .",
+    "entity_list": [
+      {
+        "name": "Dream On",
+        "type": "song"
+      },
+      {
+        "name": "I Feel Loved",
+        "type": "song"
+      },
+      {
+        "name": "Freelove",
+        "type": "song"
+      },
+      {
+        "name": "Goodnight Lovers",
+        "type": "song"
+      }
+    ]
+  },
+  {
+    "sentence": "He has musically encompassed Folk music , funk , Soul music , Hip hop music , Electronic music , alternative rock , Country music , and psychedelia .",
+    "entity_list": [
+      {
+        "name": "Folk music",
+        "type": "music genre"
+      },
+      {
+        "name": "funk",
+        "type": "music genre"
+      },
+      {
+        "name": "Soul music",
+        "type": "music genre"
+      },
+      {
+        "name": "Hip hop music",
+        "type": "music genre"
+      },
+      {
+        "name": "Electronic music",
+        "type": "music genre"
+      },
+      {
+        "name": "alternative rock",
+        "type": "music genre"
+      },
+      {
+        "name": "Country music",
+        "type": "music genre"
+      },
+      {
+        "name": "psychedelia",
+        "type": "music genre"
+      }
+    ]
+  },
+  {
+    "sentence": "Coldcut returned with the single Everything Is Under Control at the end of 2005 , featuring Jon Spencer ( of Jon Spencer Blues Explosion ) and Mike Ladd .",
+    "entity_list": [
+      {
+        "name": "Coldcut",
+        "type": "band"
+      },
+      {
+        "name": "Everything Is Under Control",
+        "type": "song"
+      },
+      {
+        "name": "Jon Spencer",
+        "type": "musical artist"
+      },
+      {
+        "name": "Jon Spencer Blues Explosion",
+        "type": "band"
+      },
+      {
+        "name": "Mike Ladd",
+        "type": "musical artist"
+      }
+    ]
+  },
+  {
+    "sentence": "The series featured five albums of Masada themes including Masada Guitars by Marc Ribot , Bill Frisell , and Tim Sparks ; Masada Recital by Mark Feldman and Sylvie Courvoisier ; Masada Rock by Rashanim ; and two albums featuring various artists , Voices in the Wilderness and The Unknown Masada .",
+    "entity_list": [
+      {
+        "name": "Masada",
+        "type": "else"
+      },
+      {
+        "name": "Masada Guitars",
+        "type": "album"
+      },
+      {
+        "name": "Marc Ribot",
+        "type": "musical artist"
+      },
+      {
+        "name": "Bill Frisell",
+        "type": "musical artist"
+      },
+      {
+        "name": "Tim Sparks",
+        "type": "musical artist"
+      },
+      {
+        "name": "Masada Recital",
+        "type": "album"
+      },
+      {
+        "name": "Mark Feldman",
+        "type": "musical artist"
+      },
+      {
+        "name": "Sylvie Courvoisier",
+        "type": "musical artist"
+      },
+      {
+        "name": "Masada Rock",
+        "type": "album"
+      },
+      {
+        "name": "Rashanim",
+        "type": "musical artist"
+      },
+      {
+        "name": "Voices in the Wilderness",
+        "type": "album"
+      },
+      {
+        "name": "The Unknown Masada",
+        "type": "album"
+      }
+    ]
+  },
+  {
+    "sentence": "Depeche Mode contributed their cover of the U2 song So Cruel to the tribute album AHK-toong BAY-bi Covered honouring the 20th anniversary of Achtung Baby , a 1991 album by U2 .",
+    "entity_list": [
+      {
+        "name": "Depeche",
+        "type": "band"
+      },
+      {
+        "name": "U2",
+        "type": "band"
+      },
+      {
+        "name": "So Cruel",
+        "type": "song"
+      },
+      {
+        "name": "AHK-toong BAY-bi Covered",
+        "type": "album"
+      },
+      {
+        "name": "Achtung Baby",
+        "type": "album"
+      }
+    ]
+  },
+  {
+    "sentence": "The stadium also hosted such events as 1973 Summer Universiade , 1986 Goodwill Games and 2013 World Championships in Athletics .",
+    "entity_list": [
+      {
+        "name": "1973 Summer Universiade",
+        "type": "event"
+      },
+      {
+        "name": "1986 Goodwill Games",
+        "type": "event"
+      },
+      {
+        "name": "2013 World Championships in Athletics",
+        "type": "event"
+      }
+    ]
+  },
+  {
+    "sentence": "In 1995 , Dookie won the Grammy Award for Grammy Award for Best Alternative Music Album and the band was nominated for nine MTV Video Music Award s including Video of the Year .",
+    "entity_list": [
+      {
+        "name": "Dookie",
+        "type": "album"
+      },
+      {
+        "name": "Grammy Award",
+        "type": "award"
+      },
+      {
+        "name": "Grammy Award for Best Alternative Music Album",
+        "type": "award"
+      },
+      {
+        "name": "MTV Video Music Award",
+        "type": "award"
+      },
+      {
+        "name": "Video of the Year",
+        "type": "award"
+      }
+    ]
+  },
+  {
+    "sentence": "He also became progressively more involved with Irish-American organizations : in 1908 he joined the Friendly Sons of St. Patrick ( becoming president in 1916 ) , the oldest Irish association in New York , and in 1911 he became a member of the American Irish Historical Society .",
+    "entity_list": [
+      {
+        "name": "Irish-American",
+        "type": "else"
+      },
+      {
+        "name": "Friendly Sons of St. Patrick",
+        "type": "organization"
+      },
+      {
+        "name": "Irish",
+        "type": "else"
+      },
+      {
+        "name": "New York",
+        "type": "location"
+      },
+      {
+        "name": "American Irish Historical Society",
+        "type": "organization"
+      }
+    ]
+  },
+  {
+    "sentence": "The Benedictines and their offshoots ( Cistercians and Trappists among them ) , the Premonstratensians , and the military orders distinguish between conventual and simple or obedientiary priories .",
+    "entity_list": [
+      {
+        "name": "Benedictines",
+        "type": "organization"
+      },
+      {
+        "name": "Cistercians",
+        "type": "organization"
+      },
+      {
+        "name": "Trappists",
+        "type": "organization"
+      },
+      {
+        "name": "Premonstratensians",
+        "type": "organization"
+      },
+      {
+        "name": "military orders",
+        "type": "organization"
+      }
+    ]
+  },
+  {
+    "sentence": "Poland has always been a very open country to new music genres and even before the fall of the communism , music styles like rock , Heavy metal music , jazz , Electronic music , and New wave music were well-known .",
+    "entity_list": [
+      {
+        "name": "Poland",
+        "type": "country"
+      },
+      {
+        "name": "fall of the communism",
+        "type": "event"
+      },
+      {
+        "name": "rock",
+        "type": "music genre"
+      },
+      {
+        "name": "Heavy metal music",
+        "type": "music genre"
+      },
+      {
+        "name": "jazz",
+        "type": "music genre"
+      },
+      {
+        "name": "Electronic music",
+        "type": "music genre"
+      },
+      {
+        "name": "New wave music",
+        "type": "music genre"
+      }
+    ]
+  },
+  {
+    "sentence": "Blues subgenres include country blues , such as Delta blues and Piedmont blues , as well as urban blues styles such as Chicago blues and West Coast blues .",
+    "entity_list": [
+      {
+        "name": "Blues",
+        "type": "music genre"
+      },
+      {
+        "name": "country blues",
+        "type": "music genre"
+      },
+      {
+        "name": "Delta blues",
+        "type": "music genre"
+      },
+      {
+        "name": "Piedmont blues",
+        "type": "music genre"
+      },
+      {
+        "name": "urban blues",
+        "type": "music genre"
+      },
+      {
+        "name": "Chicago blues",
+        "type": "music genre"
+      },
+      {
+        "name": "West Coast blues",
+        "type": "music genre"
+      }
+    ]
+  },
+  {
+    "sentence": "The musical was an immediate hit , winning Tony Award s for Tony Award for Best Musical , Tony Award for Best Actress in a Musical ( for Lawrence ) and Tony Award for Best Featured Actor in a Musical ( for Brynner ) .",
+    "entity_list": [
+      {
+        "name": "Tony Award",
+        "type": "award"
+      },
+      {
+        "name": "Tony Award for Best Musical",
+        "type": "award"
+      },
+      {
+        "name": "Tony Award for Best Actress in a Musical",
+        "type": "award"
+      },
+      {
+        "name": "Lawrence",
+        "type": "musical artist"
+      },
+      {
+        "name": "Tony Award for Best Featured Actor in a Musical",
+        "type": "award"
+      },
+      {
+        "name": "Brynner",
+        "type": "musical artist"
+      }
+    ]
+  },
+  {
+    "sentence": "In 1995 , Nas did guest performances on the albums Doe or Die by AZ , The Infamous by Mobb Deep , Only Built 4 Cuban Linx by Raekwon and 4,5,6 by Kool G Rap .",
+    "entity_list": [
+      {
+        "name": "Nas",
+        "type": "musical artist"
+      },
+      {
+        "name": "Doe or Die",
+        "type": "album"
+      },
+      {
+        "name": "AZ",
+        "type": "musical artist"
+      },
+      {
+        "name": "The Infamous",
+        "type": "album"
+      },
+      {
+        "name": "Mobb Deep",
+        "type": "band"
+      },
+      {
+        "name": "Only Built 4 Cuban Linx",
+        "type": "album"
+      },
+      {
+        "name": "Raekwon",
+        "type": "musical artist"
+      },
+      {
+        "name": "4,5,6",
+        "type": "album"
+      },
+      {
+        "name": "Kool G Rap",
+        "type": "musical artist"
+      }
+    ]
+  },
+  {
+    "sentence": "In 1995 , he guested on two tracks on Tom Cochrane ' s Ragged Ass Road album and then in 1996 on I Mother Earth ' s Like a Girl from the Scenery and Fish album .",
+    "entity_list": [
+      {
+        "name": "Tom Cochrane",
+        "type": "musical artist"
+      },
+      {
+        "name": "Ragged Ass Road",
+        "type": "album"
+      },
+      {
+        "name": "I Mother Earth",
+        "type": "band"
+      },
+      {
+        "name": "Like a Girl",
+        "type": "song"
+      },
+      {
+        "name": "Scenery and Fish",
+        "type": "album"
+      }
+    ]
+  },
+  {
+    "sentence": "She released her first Spanish language album , Mi Plan , in 2009 , which won her a Latin Grammy Award for Latin Grammy Award for Best Female Pop Vocal Album .",
+    "entity_list": [
+      {
+        "name": "Spanish",
+        "type": "else"
+      },
+      {
+        "name": "Mi Plan",
+        "type": "album"
+      },
+      {
+        "name": "Latin Grammy Award for Latin Grammy Award for Best Female Pop Vocal Album",
+        "type": "award"
+      }
+    ]
+  },
+  {
+    "sentence": "Bands sponsored by factories include The Black Dyke Mills Band , Yorkshire Imperial Band ( originally the Yorkshire Copperworks Band ) , Foden 's sponsored by the truck manufacturer , Fairey Band sponsored by the aircraft manufacturer , and Leyland Band sponsored by the vehicle manufacturer .",
+    "entity_list": [
+      {
+        "name": "Black Dyke Mills Band",
+        "type": "band"
+      },
+      {
+        "name": "Yorkshire Imperial Band",
+        "type": "band"
+      },
+      {
+        "name": "Yorkshire Copperworks Band",
+        "type": "band"
+      },
+      {
+        "name": "Foden 's",
+        "type": "band"
+      },
+      {
+        "name": "Fairey Band",
+        "type": "band"
+      },
+      {
+        "name": "Leyland Band",
+        "type": "band"
+      }
+    ]
+  },
+  {
+    "sentence": "He has been involved in charitable work , including ONE Campaign , H2O Africa Foundation , Feeding America , and Water.org .",
+    "entity_list": [
+      {
+        "name": "ONE Campaign",
+        "type": "organization"
+      },
+      {
+        "name": "H2O Africa Foundation",
+        "type": "organization"
+      },
+      {
+        "name": "Feeding America",
+        "type": "organization"
+      },
+      {
+        "name": "Water.org",
+        "type": "organization"
+      }
+    ]
+  },
+  {
+    "sentence": "Prestwich joined Little River Band in 1984 and appeared on the albums , Playing to Win and No Reins , before departing in 1986 to join Farnham 's touring band .",
+    "entity_list": [
+      {
+        "name": "Little River Band",
+        "type": "band"
+      },
+      {
+        "name": "Playing to Win",
+        "type": "album"
+      },
+      {
+        "name": "No Reins",
+        "type": "album"
+      },
+      {
+        "name": "Farnham",
+        "type": "musical artist"
+      }
+    ]
+  },
+  {
+    "sentence": "Their debut album The Magnificent Moodies , produced by Denny Cordell with a strong Beat music / Rhythm and blues flavour , was released on Decca in mono only in 1965 .",
+    "entity_list": [
+      {
+        "name": "The Magnificent Moodies",
+        "type": "album"
+      },
+      {
+        "name": "Denny Cordell",
+        "type": "musical artist"
+      },
+      {
+        "name": "Beat music",
+        "type": "music genre"
+      },
+      {
+        "name": "Rhythm and blues",
+        "type": "music genre"
+      },
+      {
+        "name": "Decca",
+        "type": "organization"
+      }
+    ]
+  },
+  {
+    "sentence": "According to the band 's biographer Dave Lewis , while the barnstorming effect of the early era was now levelling off , and though devoid of the electricity of Zeppelin I and Led Zeppelin II , the sheer diversity of Led Zeppelin III , and lacking the classic status of Led Zeppelin IV , Houses of the Holy nevertheless found its rightful niche .",
+    "entity_list": [
+      {
+        "name": "Dave Lewis",
+        "type": "musical artist"
+      },
+      {
+        "name": "Zeppelin I",
+        "type": "album"
+      },
+      {
+        "name": "Led Zeppelin II",
+        "type": "album"
+      },
+      {
+        "name": "Led Zeppelin III",
+        "type": "album"
+      },
+      {
+        "name": "Led Zeppelin IV",
+        "type": "album"
+      },
+      {
+        "name": "Houses of the Holy",
+        "type": "album"
+      }
+    ]
+  },
+  {
+    "sentence": "In 1961 , he performed ten recitals in Carnegie Hall to raise roughly $ 100,000 for charities including Big Brothers Big Sisters of America , United Jewish Appeal , Polish Assistance , Musicians Emergency fund , the National Association for Mental Health , and the Legal Defense Fund of the National Advancement of Colored People .",
+    "entity_list": [
+      {
+        "name": "Carnegie Hall",
+        "type": "location"
+      },
+      {
+        "name": "Big Brothers Big Sisters of America",
+        "type": "organization"
+      },
+      {
+        "name": "United Jewish Appeal",
+        "type": "organization"
+      },
+      {
+        "name": "Polish Assistance",
+        "type": "organization"
+      },
+      {
+        "name": "Musicians Emergency fund",
+        "type": "organization"
+      },
+      {
+        "name": "National Association for Mental Health",
+        "type": "organization"
+      },
+      {
+        "name": "Legal Defense Fund of the National Advancement of Colored People",
+        "type": "organization"
+      }
+    ]
+  },
+  {
+    "sentence": "Today , musicians as diverse as Keith Urban , Rod Stewart , Taj Mahal , Joe Satriani , David Hidalgo , Larry Lalonde and Doc Watson play the six-string guitar banjo .",
+    "entity_list": [
+      {
+        "name": "Keith Urban",
+        "type": "musical artist"
+      },
+      {
+        "name": "Rod Stewart",
+        "type": "musical artist"
+      },
+      {
+        "name": "Taj Mahal",
+        "type": "musical artist"
+      },
+      {
+        "name": "Joe Satriani",
+        "type": "musical artist"
+      },
+      {
+        "name": "David Hidalgo",
+        "type": "musical artist"
+      },
+      {
+        "name": "Larry Lalonde",
+        "type": "musical artist"
+      },
+      {
+        "name": "Doc Watson",
+        "type": "musical artist"
+      },
+      {
+        "name": "six-string guitar banjo",
+        "type": "musical instrument"
+      }
+    ]
+  },
+  {
+    "sentence": "The initial volume of the album set ( Anthology 1 ) was released the same week of the documentary 's airdate , with the subsequent two volumes ( Anthology 2 and Anthology 3 ) released in 1996 .",
+    "entity_list": [
+      {
+        "name": "Anthology 1",
+        "type": "album"
+      },
+      {
+        "name": "Anthology 2",
+        "type": "album"
+      },
+      {
+        "name": "Anthology 3",
+        "type": "album"
+      }
+    ]
+  },
+  {
+    "sentence": "International who 's who in popular music , Volume 4 p.37. Routledge , 2002 The band was renamed Rocket Baby Dolls and adopted a Gothic rock - Glam rock image .",
+    "entity_list": [
+      {
+        "name": "popular music",
+        "type": "music genre"
+      },
+      {
+        "name": "Rocket Baby Dolls",
+        "type": "band"
+      },
+      {
+        "name": "Gothic rock",
+        "type": "music genre"
+      },
+      {
+        "name": "Glam rock",
+        "type": "music genre"
+      }
+    ]
+  },
+  {
+    "sentence": "In September 2007 , Boney M. ' s last four original albums , Boonoonoonoos , Ten Thousand Lightyears , Kalimba de Luna - 16 Happy Songs and Eye Dance were reissued on compact disc in Europe and the United States , all including bonus tracks .",
+    "entity_list": [
+      {
+        "name": "Boney M.",
+        "type": "band"
+      },
+      {
+        "name": "Boonoonoonoos",
+        "type": "album"
+      },
+      {
+        "name": "Ten Thousand Lightyears",
+        "type": "album"
+      },
+      {
+        "name": "Kalimba de Luna - 16 Happy Songs",
+        "type": "album"
+      },
+      {
+        "name": "Eye Dance",
+        "type": "album"
+      },
+      {
+        "name": "compact disc",
+        "type": "else"
+      },
+      {
+        "name": "Europe",
+        "type": "location"
+      },
+      {
+        "name": "United States",
+        "type": "country"
+      },
+      {
+        "name": "bonus tracks",
+        "type": "else"
+      }
+    ]
+  },
+  {
+    "sentence": "Despite the appeal of the Nashville sound , many traditional country artists emerged during this period and dominated the genre : Loretta Lynn , Merle Haggard , Buck Owens , Porter Wagoner , George Jones , and Sonny James among them .",
+    "entity_list": [
+      {
+        "name": "the Nashville sound",
+        "type": "music genre"
+      },
+      {
+        "name": "Loretta Lynn",
+        "type": "musical artist"
+      },
+      {
+        "name": "Merle Haggard",
+        "type": "musical artist"
+      },
+      {
+        "name": "Buck Owens",
+        "type": "musical artist"
+      },
+      {
+        "name": "Porter Wagoner",
+        "type": "musical artist"
+      },
+      {
+        "name": "George Jones",
+        "type": "musical artist"
+      },
+      {
+        "name": "Sonny James",
+        "type": "musical artist"
+      }
+    ]
+  },
+  {
+    "sentence": "Christian alternative music has its roots in the early 1980s , as the earliest efforts at Christian punk and new wave were recorded by artists like Andy McCarroll and Moral Support , Undercover , the 77s , Steve Scott , Adam Again , Quickflight , Daniel Amos , Youth Choir ( later renamed the Choir ) , Lifesavers Underground , Michael Knott , the Prayer Chain , Altar Boys , Breakfast with Amy , Steve Taylor , 4-4-1 , David Edwards and Vector .",
+    "entity_list": [
+      {
+        "name": "Christian alternative music",
+        "type": "music genre"
+      },
+      {
+        "name": "Christian punk",
+        "type": "music genre"
+      },
+      {
+        "name": "new wave",
+        "type": "music genre"
+      },
+      {
+        "name": "Andy McCarroll",
+        "type": "band"
+      },
+      {
+        "name": "Moral Support",
+        "type": "band"
+      },
+      {
+        "name": "Undercover",
+        "type": "band"
+      },
+      {
+        "name": "the 77s",
+        "type": "band"
+      },
+      {
+        "name": "Steve Scott",
+        "type": "musical artist"
+      },
+      {
+        "name": "Adam Again",
+        "type": "band"
+      },
+      {
+        "name": "Quickflight",
+        "type": "band"
+      },
+      {
+        "name": "Daniel Amos",
+        "type": "band"
+      },
+      {
+        "name": "Youth Choir",
+        "type": "band"
+      },
+      {
+        "name": "the Choir",
+        "type": "band"
+      },
+      {
+        "name": "Lifesavers Underground",
+        "type": "band"
+      },
+      {
+        "name": "Michael Knott",
+        "type": "musical artist"
+      },
+      {
+        "name": "the Prayer Chain",
+        "type": "band"
+      },
+      {
+        "name": "Altar Boys",
+        "type": "band"
+      },
+      {
+        "name": "Breakfast with Amy",
+        "type": "band"
+      },
+      {
+        "name": "Steve Taylor",
+        "type": "musical artist"
+      },
+      {
+        "name": "4-4-1",
+        "type": "band"
+      },
+      {
+        "name": "David Edwards",
+        "type": "musical artist"
+      },
+      {
+        "name": "Vector",
+        "type": "musical artist"
+      }
+    ]
+  },
+  {
+    "sentence": "He has won numerous accolades for his work , including an Academy Award for Best Adapted Screenplay , a Student Academy Award , a BAFTA Award for Best Adapted Screenplay , two Emmy Awards , two Peabody Award s , and the Cannes Grand Prix .",
+    "entity_list": [
+      {
+        "name": "Academy Award for Best Adapted Screenplay",
+        "type": "award"
+      },
+      {
+        "name": "Student Academy Award",
+        "type": "award"
+      },
+      {
+        "name": "BAFTA Award for Best Adapted Screenplay",
+        "type": "award"
+      },
+      {
+        "name": "Emmy Awards",
+        "type": "award"
+      },
+      {
+        "name": "Peabody Award",
+        "type": "award"
+      },
+      {
+        "name": "Cannes Grand Prix",
+        "type": "award"
+      }
+    ]
+  }
+]

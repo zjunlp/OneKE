@@ -68,20 +68,54 @@ def process_single_quotes(text):
     result = re.sub(r"(?<!\w)'|'(?!\w)", '"', text)
     return result
 
+def remove_empty_values(data):
+    def is_empty(value):
+        return value is None or value == [] or value == "" or value == {}
+    if isinstance(data, dict):
+        return {
+            k: remove_empty_values(v)
+            for k, v in data.items()
+            if not is_empty(v)
+        }
+    elif isinstance(data, list):
+        return [
+            remove_empty_values(item)
+            for item in data
+            if not is_empty(item)
+        ]
+    else:
+        return data
+
 def extract_json_dict(text):
+    if isinstance(text, dict):
+        return text
     pattern = r'\{(?:[^{}]|(?:\{(?:[^{}]|(?:\{[^{}]*\})*)*\})*)*\}' 
     matches = re.findall(pattern, text)  
-
     if matches:
         json_string = matches[-1]  
         json_string = process_single_quotes(json_string)  
         try:
             json_dict = json.loads(json_string)
+            json_dict = remove_empty_values(json_dict)
+            if json_dict is None:
+                return "No valid information found."
             return json_dict
         except json.JSONDecodeError:
             return json_string  
     else:
         return text  
+
+def good_case_wrapper(example: str):
+    if example is None or example == "":
+        return ""
+    example = f"\nHere are some examples:\n{example}\n(END OF EXAMPLES)\nRefer to the reasoning steps and analysis in the examples to help complete the extraction task below.\n\n"
+    return example
+
+def bad_case_wrapper(example: str):
+    if example is None or example == "":
+        return ""
+    example = f"\nHere are some examples of bad cases:\n{example}\n(END OF EXAMPLES)\nRefer to the reflection rules and reflection steps in the examples to help optimize the original result below.\n\n"
+    return example
 
 def example_wrapper(example: str):
     if example is None or example == "":
@@ -131,6 +165,19 @@ def normalize_obj(value):
     if isinstance(value, dict):
         return frozenset((k, normalize_obj(v)) for k, v in value.items())
     elif isinstance(value, (list, set, tuple)):
-        return Counter(map(normalize_obj, value))
+        # 将 Counter 转换为元组以便于被哈希
+        return tuple(Counter(map(normalize_obj, value)).items())
+    elif isinstance(value, str):
+        return format_string(value)
     return value
 
+def dict_list_to_set(data_list):
+    result_set = set()
+    try:
+        for dictionary in data_list:
+            value_tuple = tuple(format_string(value) for value in dictionary.values())
+            result_set.add(value_tuple)
+        return result_set
+    except Exception as e:
+        print (f"Failed to convert dictionary list to set: {data_list}")
+        return result_set

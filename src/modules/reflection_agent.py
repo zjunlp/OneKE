@@ -8,18 +8,18 @@ class ReflectionGenerator:
     
     def get_reflection(self, instruction="", examples="", text="",schema="", result=""):
         result = json.dumps(result)
-        examples = json.dumps(examples)
+        examples = bad_case_wrapper(examples)
         prompt = reflect_instruction.format(instruction=instruction, examples=examples, text=text, schema=schema, result=result)
         response = self.llm.get_chat_response(prompt)
         response = extract_json_dict(response)
         return response
     
 class ReflectionAgent:
-    def __init__(self, llm: BaseEngine):
+    def __init__(self, llm: BaseEngine, case_repo: CaseRepositoryHandler):
         self.llm = llm
         self.module = ReflectionGenerator(llm = llm)
-        self.extractor = ExtractionAgent(llm = llm)
-        self.case_repo = CaseRepositoryHandler(llm = llm)  
+        self.extractor = ExtractionAgent(llm = llm, case_repo = case_repo)
+        self.case_repo = case_repo
         self.methods = ["reflect_with_case"]
 
     def __select_result(self, result_list):
@@ -36,9 +36,12 @@ class ReflectionAgent:
             result_trails = []
             result_trails.append(data.result_list)
             extract_func = getattr(self.extractor, extract_func)
+            temperature = [0.5, 1]
             for index in range(2):
+                self.module.llm.set_hyperparameter(temperature=temperature[index])
                 data = extract_func(data)
                 result_trails.append(data.result_list)
+            self.module.llm.set_hyperparameter()
             consistant_result = []
             reflect_index = []
             for index, elements in enumerate(zip(*result_trails)):
@@ -62,8 +65,7 @@ class ReflectionAgent:
             text = data.chunk_text_list[idx]
             result = data.result_list[idx]
             examples = json.dumps(self.case_repo.query_bad_case(data))
-            wrapper_examples = f"Here are some examples of bad cases: \n{examples}"
-            reflected_res = self.module.get_reflection(instruction=data.instruction, examples=wrapper_examples, text=text, schema=data.output_schema, result=result)
+            reflected_res = self.module.get_reflection(instruction=data.instruction, examples=examples, text=text, schema=data.output_schema, result=result)
             reflected_result_list[idx] = reflected_res
         data.set_result_list(reflected_result_list)
         function_name = current_function_name()

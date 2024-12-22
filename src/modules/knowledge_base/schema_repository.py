@@ -1,50 +1,50 @@
 from typing import List, Optional
 from pydantic import BaseModel, Field
+from langchain_core.output_parsers import JsonOutputParser
 
 # ==================================================================== #  
 #                                NER TASK                              #  
 # ==================================================================== #  
 class Entity(BaseModel):
-    type : str = Field("The type or category that the entity belongs to.")
-    name : str = Field("The specific name of the entity. ")
-    
+    name : str = Field(description="The specific name of the entity. ")
+    type : str = Field(description="The type or category that the entity belongs to.")
 class EntityList(BaseModel):
-    entity_list : List[Entity] = Field("Named entities appearing in the text.")
+    entity_list : List[Entity] = Field(description="Named entities appearing in the text.")
     
 # ==================================================================== #  
 #                               RE TASK                                #  
 # ==================================================================== #  
 class Relation(BaseModel):
-    head : str = Field("The starting entity in the relationship.")
-    tail : str = Field("The ending entity in the relationship.")
-    relation : str = Field("The predicate that defines the relationship between the two entities.")
+    head : str = Field(description="The starting entity in the relationship.")
+    tail : str = Field(description="The ending entity in the relationship.")
+    relation : str = Field(description="The predicate that defines the relationship between the two entities.")
 
 class RelationList(BaseModel):
-    relation_list : List[Relation] = Field("The collection of relationships between various entities.")
+    relation_list : List[Relation] = Field(description="The collection of relationships between various entities.")
 
 # ==================================================================== #  
 #                               EE TASK                                #  
 # ==================================================================== #  
 class Event(BaseModel):
-    event_type : str = Field("The type of the event.")
-    event_trigger : str = Field("A specific word or phrase that indicates the occurrence of the event.")
-    event_argument : dict = Field("The arguments or participants involved in the event.")
+    event_type : str = Field(description="The type of the event.")
+    event_trigger : str = Field(description="A specific word or phrase that indicates the occurrence of the event.")
+    event_argument : dict = Field(description="The arguments or participants involved in the event.")
 
 class EventList(BaseModel):
-    event_list : List[Event] = Field("Events presented in the context.")
+    event_list : List[Event] = Field(description="The events presented in the text.")
 
 # ==================================================================== #  
 #                          TEXT DESCRIPTION                            #  
 # ==================================================================== #  
 class TextDescription(BaseModel):
-    field: str = Field("The field of the given text, such as 'Science', 'Literature', 'Business', 'Medicine', 'Entertainment', etc.")
-    genre: str = Field("The genre of the given text, such as 'Article', 'Novel', 'Dialog', 'Blog', 'Manual','Expository', 'News Report', 'Research Paper', etc.")
+    field: str = Field(description="The field of the given text, such as 'Science', 'Literature', 'Business', 'Medicine', 'Entertainment', etc.")
+    genre: str = Field(description="The genre of the given text, such as 'Article', 'Novel', 'Dialog', 'Blog', 'Manual','Expository', 'News Report', 'Research Paper', etc.")
     
 # ==================================================================== #  
 #                        USER DEFINED SCHEMA                           #  
 # ==================================================================== #  
 
-# --------------------------- Research Article ----------------------- #
+# --------------------------- Research Paper ----------------------- #
 class MetaData(BaseModel):
     title : str = Field(description="The title of the article")
     authors : List[str] = Field(description="The list of the article's authors")
@@ -66,21 +66,26 @@ class ExtractionTarget(BaseModel):
     paper_limitations : str=Field(description="The limitations of the proposed solution of the paper")
     
 # --------------------------- News ----------------------- #
+class Person(BaseModel):
+    name: str = Field(description="The name of the person")
+    identity: Optional[str] = Field(description="The occupation, status or characteristics of the person.")
+    role: Optional[str] = Field(description="The role or function the person plays in an event.")
 
-class Fact(BaseModel):
-    statement: str = Field(description="A factual statement mentioned in the news article")
-    source: Optional[str] = Field(description="The source of the fact, if mentioned")
-    relevance: Optional[str] = Field(description="The relevance or importance of the fact to the overall article")
+class Event(BaseModel):
+    name: str = Field(description="Name of the event")
+    time: Optional[str] = Field(description="Time when the event took place")
+    people_involved: Optional[List[Person]] = Field(description="People involved in the event")
+    cause: Optional[str] = Field(default=None, description="Reason for the event, if applicable")
+    process: Optional[str] = Field(description="Details of the event process")
+    result: Optional[str] = Field(default=None, description="Result or outcome of the event")
 
-class Content(BaseModel):
-    headline: str = Field(description="The title or headline of the news article")
-    subheading: Optional[str] = Field(description="The subheading or supporting title of the article")
-    facts: List[Fact] = Field(description="List of factual statements covered in the article")
-    keywords: List[str] = Field(description="List of keywords or topics covered in the article")
-    publication_date: str = Field(description="The publication date of the article")
-    location: Optional[str] = Field(description="The location relevant to the article")
+class NewsReport(BaseModel):  
+    title: str = Field(description="The title or headline of the news report")
+    summary: str = Field(description="A brief summary of the news report")
+    publication_date: Optional[str] = Field(description="The publication date of the report")
+    keywords: Optional[List[str]] = Field(description="List of keywords or topics covered in the news report")
+    events: List[Event] = Field(description="Events covered in the news report")
+    quotes: Optional[List[str]] = Field(default=None, description="Quotes related to the news, if any")
+    viewpoints: Optional[List[str]] = Field(default=None, description="Different viewpoints regarding the news")
 
-class NewsReport(BaseModel):
-    title: str = Field(description="The title or headline of the news article")
-    author: Author = Field(description="The author of the article")
-    content: ArticleContent = Field(description="The body and details of the news article")
+# --------- You can customize new extraction schemas below -------- #

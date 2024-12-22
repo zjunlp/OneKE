@@ -1,0 +1,14 @@
+model:
+  category: ChatGPT
+  model_name_or_path: gpt-4o-mini
+  api_key: sk-26lHh1unrqNHyG6Y0JvVtO9vFKXkqnCv6JKSWnwgRsxPnvlA
+  base_url: https://api.chatanywhere.tech/v1
+
+extraction: 
+  task: RE
+  text: The aid group Doctors Without Borders said that since Saturday , more than 275 wounded people had been admitted and treated at Donka Hospital in the capital of Guinea , Conakry . 
+  constraint: ["nationality", "country capital", "place of death", "children", "location contains", "place of birth", "place lived", "administrative division of country", "country of administrative divisions", "company", "neighborhood of", "company founders"]
+  truth: {"relation_list": [{"head": "Guinea", "tail": "Conakry", "relation": "country capital"}]}
+  use_file: false
+  mode: quick
+  update_case: false

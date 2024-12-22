@@ -7,11 +7,9 @@ class InformationExtractor:
         self.llm = llm    
     
     def extract_information(self, instruction="", text="", examples="", schema="", additional_info=""):
-        examples = example_wrapper(examples)
+        examples = good_case_wrapper(examples)
         prompt = extract_instruction.format(instruction=instruction, examples=examples, text=text, additional_info=additional_info, schema=schema)
         response = self.llm.get_chat_response(prompt) 
-        print("======================Prompt===================\n", prompt)
-        print("======================Response===================\n", response)
         response = extract_json_dict(response)
         return response
 
@@ -22,10 +20,10 @@ class InformationExtractor:
         return response
     
 class ExtractionAgent:
-    def __init__(self, llm: BaseEngine):
+    def __init__(self, llm: BaseEngine, case_repo: CaseRepositoryHandler):
         self.llm = llm
         self.module = InformationExtractor(llm = llm)
-        self.case_repo = CaseRepositoryHandler(llm = llm)
+        self.case_repo = case_repo
         self.methods = ["extract_information_direct", "extract_information_with_case"]
 
     def __get_constraint(self, data: DataPoint):
@@ -33,13 +31,19 @@ class ExtractionAgent:
             return data
         if data.task == "NER":
             constraint = json.dumps(data.constraint)
+            if "**Entity Type Constraint**" in constraint:
+                return data
             data.constraint = f"\n**Entity Type Constraint**: The type of entities must be chosen from the following list.\n{constraint}\n"
         elif data.task == "RE":
             constraint = json.dumps(data.constraint)
+            if "**Relation Type Constraint**" in constraint:
+                return data
             data.constraint = f"\n**Relation Type Constraint**: The type of relations must be chosen from the following list.\n{constraint}\n"
         elif data.task == "EE":
             constraint = json.dumps(data.constraint)
-            data.constraint = f"\n**Event Extraction Constraint**: The event type must be chosen from 'event_type' in the following list, and the corresponding arguments should be extracted based on the keys defined in 'arguments'. \n{constraint}\n"
+            if "**Event Extraction Constraint**" in constraint:
+                return data
+            data.constraint = f"\n**Event Extraction Constraint**: The event type must be selected from the following dictionary keys, and its event arguments should be chosen from its corresponding dictionary values. \n{constraint}\n"
         return data
             
     def extract_information_direct(self, data: DataPoint):

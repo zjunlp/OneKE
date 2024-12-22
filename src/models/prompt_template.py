@@ -62,7 +62,7 @@ deduced_schema_code_instruction = PromptTemplate(
 # ==================================================================== #  
 
 EXTRACT_INSTRUCTION = """
-**Instruction**:You are an agent skilled in information extarction. {instruction}
+**Instruction**: You are an agent skilled in information extarction. {instruction}
 {examples}
 **Text**: {text}
 {additional_info}
@@ -84,7 +84,7 @@ SUMMARIZE_INSTRUCTION = """
 **Result List**: {answer_list}
 
 **Output Schema**: {schema}
-Now summarize all the information from the Result List.
+Now summarize all the information from the Result List. 
 """
 summarize_instruction = PromptTemplate(
     input_variables=["instruction", "examples", "answer_list", "schema"],
@@ -95,9 +95,7 @@ summarize_instruction = PromptTemplate(
 # ==================================================================== #  
 #                          REFLECION AGENT                             #  
 # ==================================================================== #  
-REFLECT_INSTRUCTION = """**Instruction**: You are an agent skilled in reflection and optimization based on the original result. Pay attention to the following requirements:
-- Content: Refer to **Reflection Reference** to identify potential issues in the current extraction results.
-- Format: Ensure that the format of the corrected results matches that of the original results.
+REFLECT_INSTRUCTION = """**Instruction**: You are an agent skilled in reflection and optimization based on the original result. Refer to **Reflection Reference** to identify potential issues in the current extraction results.
 
 **Reflection Reference**: {examples}
 
@@ -107,7 +105,7 @@ Now please review each element in the extraction result. Identify and improve an
 
 **Text**: {text}
 
-**Schema**: {schema}
+**Output Schema**: {schema}
 
 **Original Result**: {result}
 

@@ -12,7 +12,10 @@ class SchemaAnalyzer:
             return schema    
         try:
             parser = JsonOutputParser(pydantic_object = schema)
-            schema = parser.get_format_instructions()
+            schema_description = parser.get_format_instructions()
+            schema_content = re.findall(r'```(.*?)```', schema_description, re.DOTALL)
+            explanation = "For example, for the schema {\"properties\": {\"foo\": {\"title\": \"Foo\", \"description\": \"a list of strings\", \"type\": \"array\", \"items\": {\"type\": \"string\"}}}}, the object {\"foo\": [\"bar\", \"baz\"]} is a well-formatted instance."
+            schema = f"{schema_content}\n\n{explanation}"
         except:
             return schema
         return schema
@@ -23,7 +26,7 @@ class SchemaAnalyzer:
             genre = text_analysis['genre']
         except:
             return text_analysis    
-        prompt = f"Below is a portion of the text to be extracted. This text is from the field of {field} and represents the genre of {genre}."
+        prompt = f"This text is from the field of {field} and represents the genre of {genre}."
         return prompt
         
     def get_text_analysis(self, text: str):
@@ -35,13 +38,14 @@ class SchemaAnalyzer:
         return response    
     
     def get_deduced_schema_json(self, instruction: str, text: str, distilled_text: str):
-        prompt = deduced_schema_json_instruction.format(examples="", instruction=instruction, distilled_text=distilled_text, text=text)
+        prompt = deduced_schema_json_instruction.format(examples=example_wrapper(json_schema_examples), instruction=instruction, distilled_text=distilled_text, text=text)
         response = self.llm.get_chat_response(prompt)
         response = extract_json_dict(response)
+        print(f"Deduced Schema in Json: \n{response}\n\n")
         return response
 
     def get_deduced_schema_code(self, instruction: str, text: str, distilled_text: str):
-        prompt = deduced_schema_code_instruction.format(instruction=instruction, redefined_text=distilled_text, text=text)
+        prompt = deduced_schema_code_instruction.format(examples=example_wrapper(code_schema_examples), instruction=instruction, distilled_text=distilled_text, text=text)
         response = self.llm.get_chat_response(prompt)
         code_blocks = re.findall(r'```[^\n]*\n(.*?)\n```', response, re.DOTALL)
         if code_blocks:
@@ -53,7 +57,7 @@ class SchemaAnalyzer:
                 if schema is not None:
                     index = code_block.find("class")
                     code = code_block[index:]
-                    print("Schema in Code: ", code)
+                    print(f"Deduced Schema in Code: \n{code}\n\n")
                     schema = self.serialize_schema(schema)
                     return schema
             except Exception as e:
@@ -65,13 +69,14 @@ class SchemaAgent:
     def __init__(self, llm: BaseEngine):
         self.llm = llm
         self.module = SchemaAnalyzer(llm = llm)
+        self.schema_repo = schema_repository
         self.methods = ["get_default_schema", "get_retrieved_schema", "get_deduced_schema"]
         
     def __preprocess_text(self, data: DataPoint):
         if data.use_file:
             data.chunk_text_list = chunk_file(data.text)
         else:
-            data.chunk_text_list = chunk_str(data.text)
+            data.chunk_text_list = chunk_str(data.fi)
         return data
              
     def get_default_schema(self, data: DataPoint):
@@ -85,10 +90,11 @@ class SchemaAgent:
     def get_retrieved_schema(self, data: DataPoint):
         self.__preprocess_text(data)
         schema_name = data.output_schema
-        schema_class = globals().get(schema_name)
+        schema_class = getattr(self.schema_repo, schema_name, None)
         if schema_class is not None:
             schema = self.module.serialize_schema(schema_class)
-            data.set_schema(schema)
+            default_schema = config['agent']['default_schema']
+            data.set_schema(f"{default_schema}\n{schema}")
             function_name = current_function_name()
             data.update_trajectory(function_name, schema)
         else:
@@ -98,11 +104,15 @@ class SchemaAgent:
     def get_deduced_schema(self, data: DataPoint):
         self.__preprocess_text(data)
         target_text = data.chunk_text_list[0]
-        analysed_text = self.module.get_text_analysis(analysed_text)
-        distilled_text = self.module.redefine_text(target_text)
+        analysed_text = self.module.get_text_analysis(target_text)
+        if len(data.chunk_text_list) > 1:
+            prefix = "Below is a portion of the text to be extracted. "
+            analysed_text = f"{prefix}\n{target_text}" 
+        distilled_text = self.module.redefine_text(analysed_text)
         deduced_schema = self.module.get_deduced_schema_code(data.instruction, target_text, distilled_text)
         data.set_distilled_text(distilled_text)
-        data.set_schema(deduced_schema)
+        default_schema = config['agent']['default_schema']
+        data.set_schema(f"{default_schema}\n{deduced_schema}")
         function_name = current_function_name()
         data.update_trajectory(function_name, deduced_schema)
         return data
