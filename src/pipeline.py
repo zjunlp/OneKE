@@ -73,7 +73,7 @@ class Pipeline:
         # Case Update
         if update_case:
             if (data.truth == ""):
-                truth = input("Please enter the correct answer you prefer, or press Enter to accept the current answer: ")
+                truth = input("Please enter the correct answer you prefer, or just press Enter to accept the current answer: ")
                 if truth.strip() == "":
                     data.truth = data.pred
                 else:

@@ -1,5 +1,5 @@
 <h1 align="center"> OneKE </h1>
-<h3 align="center"> Dockerized Schema-Guided Knowledge Extraction System </h3>
+<h3 align="center"> A Dockerized Schema-Guided Knowledge Extraction System </h3>
 
 <p align="center">
   <a href="https://arxiv.org/">📄arXiv</a> •
@@ -17,24 +17,28 @@
   - [Extraction Method Support](#extraction-method-support)
 - [🛠️Installation](#️installation)
   - [Manual Environment Configuration](#manual-environment-configuration)
-  - [Building With Docker Images](#building-with-docker-images)
+  - [Building With Docker Image](#building-with-docker-image)
 - [🚀Quick-Start](#quick-start)
   - [Start with YAML](#start-with-yaml)
+    - [Prepare the configuration file](#prepare-the-configuration-file)
+    - [Run the shell script](#run-the-shell-script)
   - [Start with Python](#start-with-python)
+- [🎉Contributors](#contributors)
+- [🌻Acknowledgement](#acknowledgement)
 
 ---
 
 
 ## 🌟Overview
 
-<img src="./figs/main.png" alt="method" style="zoom: 50%;" />
+**OneKE** is a dockerized schema-guided knowledge extraction system, which can extract knowledge from the Web and raw PDF Books, and support various domains (science, news, etc.). **OneKE** features *multiple agents* and a configurable *knowledge base*. Different agents perform their respective roles, enabling support for various extraction scenarios. The configure knowledge base facilitates schema configuration, error case debugging and correction, further improving the performance. We hope OneKE can serve as a helpful tool for researchers and engineers engaging in knowledge extraction with LLMs.
 
-**OneKE** is a dockerized schema-guided knowledge extraction system, which can extract knowledge from the Web and raw PDF Books, and support various domains (science, news, etc.). Specifically, we design **OneKE** with multiple agents and a configure knowledge base. Different agents perform their respective roles, enabling support for various extraction scenarios. The configure knowledge base facilitates schema configuration, error case debugging and correction, further improving the performance. Empirical evaluations on benchmark datasets demonstrate OneKE’s efficacy, while case studies further elucidate its adaptability to diverse tasks across multiple domains, highlighting its potential for broad applications.
+<img src="./figs/main.png" alt="method" style="zoom: 50%;" />
 
 ### Input Source Support
 You can choose source texts of various lengths and forms for extraction.
   | **Source Format** | **Description** |
-  | --- | --- |
+  | :---: | :---: |
   | Plain Text | String form of raw natural language text. |
   | HTML Source | Markup language for structuring web pages. |
   | PDF File | Portable format for fixed-layout documents. |
@@ -44,10 +48,10 @@ You can choose source texts of various lengths and forms for extraction.
 
 ### Extraction Model Support
 You can choose from various open-source or proprietary model APIs to perform information extraction tasks.
-> Note: For complex open-domain IE tasks, we recommend using powerful models like OpenAI's or or large-scale open-source LLMs.
+> Note: For complex open-domain IE tasks, we recommend using powerful models like **OpenAI**'s or or **large-scale** open-source LLMs.
 
   | **Model** | **Description** |
-  | --- | --- |
+  | :---: | :---: |
   | ***API Support*** |   |
   | OpenAI |  A series of GPT foundation models offered by OpenAI, such as GPT-3.5 and GPT-4-turbo, which are renowned for their outstanding capabilities in natural language processing. |
   | DeepSeek | High-performance LLMs that have demonstrated exceptional capabilities in both English and Chinese benchmarks. |
@@ -60,7 +64,7 @@ You can choose from various open-source or proprietary model APIs to perform inf
 ### Extraction Task Support
 You can try different types of information extraction tasks within the OneKE framework.
   | **Model** | **Description** |
-  | --- | --- |
+  | :---: | :---: |
   | ***Traditional IE*** |   |
   | NER | Named Entity Recognition, identifies and classifies various named entities such as names, locations, and organizations in text. |
   | RE | Relation Extraction, identifies relationships between entities, and typically returns results as entity-relation-entity triples. |
@@ -73,7 +77,7 @@ You can try different types of information extraction tasks within the OneKE fra
 ### Extraction Method Support
 You can freely combine different extraction methods to complete the information extraction task.
   | **Method** | **Description** |
-  | --- | --- |
+  | :---: | :---: |
   | ***Schema Agent*** |   |
   | Default Schema | Use the default JSON output format. |
   | Predefined Schema | Utilize the predefined output schema retrieved from the knowledge base. |
@@ -84,10 +88,11 @@ You can freely combine different extraction methods to complete the information 
   | ***Reflection Agent***| 
   | No Reflection| Directly return the extraction results. |
   | Case Reflection  | Use the self-consistency approach, and if inconsistencies appear, reflect on the original answer by retrieving similar bad cases from the knowledge base. |
-  
+
 ## 🛠️Installation
-OneKE supports both manual and docker image environment configuration, you can choose the appropriate way to build.
+OneKE supports both manual and docker image environment configuration, choose your preferred method to build.
 ### Manual Environment Configuration
+Conda virtual environments offer a light and flexible setup.
 ```bash
 git clone https://github.com/zjunlp/OneKE.git
 cd OneKE
@@ -95,21 +100,91 @@ conda create -n oneke python=3.9
 conda activate oneke
 pip install -r requirements.txt
 ```
-### Building With Docker Images
-```
+### Building With Docker Image
+Docker image provides greater reliability and stability.
+```bash
+# Map necessary local files to docker container
+# Use container paths in code and execution
 git clone https://github.com/zjunlp/OneKE.git
 docker pull zjunlp/oneke:v1
-docker run \
+docker run --gpus all \
   -v ./OneKE:/app/OneKE \
-  -v your_local_model_path:/root/model/your_model_name \
+  -v your_local_model_path:/app/model/your_model_name \
   -it oneke /bin/bash
-
 ```
-
+self.print_schema = ""
 ## 🚀Quick-Start
 ### Start with YAML
+#### Prepare the configuration file
+Several YAML configuration files are available in the `examples/config` directory for each of the five extraction tasks described in section [Extraction Task Support](#extraction-task-support). These extraction scenarios cover different extraction data, methods, and models, allowing you to easily explore all the features of OneKE.
+
+Here is the configuration file for the web news knowledge extraction scenario:
+```yaml
+model:
+  category: DeepSeek
+  model_name_or_path: deepseek-chat
+  api_key: your_api_key 
+  base_url: https://api.deepseek.com
+
+extraction:             
+  task: Base
+  instruction: Extract key information from the given text.
+  file_path: ./data/input_files/Tulsi_Gabbard_News.html
+  output_schema: NewsReport
+  use_file: true
+  mode: customized
+  update_case: false
+```
+You can choose an existing configuration file or customize the extraction settings as you wish. Note that when using an API service like ChatGPT and DeepSeek, please enter your API key.
+
+#### Run the shell script
+First, enter the `OneKE` directory to make sure all subsequent commands are executed there:
+```bash
+cd OneKE
+```
+Next, specify the configuration file path and run the code to start the extraction process.
+```bash
+config_file=your_yaml_file_path
+python src/run.py --config $config_file
+```
 
 ### Start with Python
+You can also try OneKE by directly running the `example.py` file located in the `example` directory. Specifically, execute the following commands:
+```bash
+cd OneKE
+python example.py
+```
+
+This will complete a basic NER task, with the extraction results printed upon completion. You can further modify the code in `example.py` to suit your extraction task setting or to access detailed extraction trajectory.
+
+Specifically, in the `example.py` file:
+```python
+import sys
+sys.path.append("./src")
+from models import *
+from pipeline import *
+import json
+
+# model configuration
+model = ChatGPT(model_name_or_path="gpt-4o-mini", api_key="your_api_key")
+pipeline = Pipeline(model)
+
+# extraction configuration
+Task = "NER"
+Text = "Finally , every other year , ELRA organizes a major conference LREC , the International Language Resources and Evaluation Conference ."
+Constraint = ["nationality", "country capital", "place of death", "children", "location contains", "place of birth", "place lived", "administrative division of country", "country of administrative divisions", "company", "neighborhood of", "company founders"]
+
+# get extraction result
+result, trajectory = pipeline.get_extract_result(task=Task, text=Text, constraint=Constraint)
+print("Trajectory:", json.dumps(trajectory, indent=4))
+```
+First, select an appropriate extraction model, then complete the configuration of extraction parameters (such as extraction task, extraction text, etc.). Finally, call the `get_extract_result` function of the `Pipeline` class to perform information extraction and obtain the final results.
+
+<!-- ### Start with online service
+We have developed a frontend demo for OneKE, which allows you to try information extraction in an intuitive and convenient way. Website link: [OneKE-demo]()
+
+> Note: To ensure extraction efficiency and data security, the demo only displays OneKE's basic extraction capabilities. 
+For advanced features like error correction and reflection, please consider the options mentioned above. -->
 
 <!-- ## ✏️Self-Instruct
 
@@ -273,12 +348,17 @@ Please cite our repository if you use AutoAct in your work. Thanks!
   bibsource    = {dblp computer science bibliography, https://dblp.org}
 }
 ```
-
+-->
 
 
 ## 🎉Contributors
 
-<a href="https://github.com/zjunlp/AutoAct/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=zjunlp/AutoAct" /></a>
+<a href="https://github.com/zjunlp/OneKE/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=zjunlp/OneKE" /></a>
 
-We will offer long-term maintenance to fix bugs and solve issues. So if you have any problems, please put issues to us. -->
+We deeply appreciate the collaborative efforts of everyone involved. We will continue to enhance and maintain this repository over the long term. If you encounter any issues, feel free to submit them to us!
+
+
+## 🌻Acknowledgement
+We reference [itext2kg](https://github.com/AuvaLab/itext2kg) to aid in building the schema repository and utilize tools from [LangChain](https://www.langchain.com/) for file parsing. The experimental datasets we use are curated from the [IEPile](https://huggingface.co/datasets/zjunlp/iepile) repository. We appreciate their valuable contributions!
+

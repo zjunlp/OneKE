@@ -21,7 +21,7 @@ class BaseDataset:
         return None
 
 class NERDataset(BaseDataset):
-    def __init__(self, name=None, task="NER", data_dir = f"{DATA_DIR}/FewNERD", output_dir = f"{OUTPUT_DIR}", train=False):
+    def __init__(self, name=None, task="NER", data_dir = f"{DATA_DIR}/CrossNER", output_dir = f"{OUTPUT_DIR}", train=False):
         self.name = name
         self.task = task
         self.data_dir = data_dir
@@ -101,7 +101,7 @@ class NERDataset(BaseDataset):
             print("No items processed.")
 
 class REDataset(BaseDataset):
-    def __init__(self, name=None, task="RE", data_dir = f"{DATA_DIR}/SemEval", output_dir = f"{OUTPUT_DIR}", train=False):
+    def __init__(self, name=None, task="RE", data_dir = f"{DATA_DIR}/NYT11", output_dir = f"{OUTPUT_DIR}", train=False):
         self.name = name
         self.task = task
         self.data_dir = data_dir

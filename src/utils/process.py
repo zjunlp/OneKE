@@ -165,7 +165,6 @@ def normalize_obj(value):
     if isinstance(value, dict):
         return frozenset((k, normalize_obj(v)) for k, v in value.items())
     elif isinstance(value, (list, set, tuple)):
-        # 将 Counter 转换为元组以便于被哈希
         return tuple(Counter(map(normalize_obj, value)).items())
     elif isinstance(value, str):
         return format_string(value)

@@ -1,8 +1,8 @@
 model:
   category: ChatGPT
   model_name_or_path: gpt-4o-mini
-  api_key: sk-26lHh1unrqNHyG6Y0JvVtO9vFKXkqnCv6JKSWnwgRsxPnvlA
-  base_url: https://api.chatanywhere.tech/v1
+  api_key: your_api_key
+  base_url: https://api.openai.com/v1
 
 extraction: 
   task: RE
@@ -11,4 +11,4 @@ extraction:
   truth: {"relation_list": [{"head": "Guinea", "tail": "Conakry", "relation": "country capital"}]}
   use_file: false
   mode: quick
-  update_case: false
+  update_case: true
