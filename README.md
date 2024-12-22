@@ -21,15 +21,6 @@
 - [🚀Quick-Start](#quick-start)
   - [Start with YAML](#start-with-yaml)
   - [Start with Python](#start-with-python)
-- [✏️Self-Instruct](#️self-instruct)
-- [📝Self-Planning](#self-planning)
-  - [Automatic Tool Selection](#automatic-tool-selection)
-  - [Trajectories Synthesis](#trajectories-synthesis)
-  - [Self-Differentiation](#self-differentiation)
-  - [Group Planning](#group-planning)
-- [🌻Acknowledgement](#acknowledgement)
-- [🚩Citation](#citation)
-- [🎉Contributors](#contributors)
 
 ---
 
@@ -44,7 +35,7 @@
 You can choose source texts of various lengths and forms for extraction.
   | **Source Format** | **Description** |
   | --- | --- |
-  | Plain Text | String form of raw natural language text。  |
+  | Plain Text | String form of raw natural language text. |
   | HTML Source | Markup language for structuring web pages. |
   | PDF File | Portable format for fixed-layout documents. |
   | Word File | Microsoft Word document format, with rich text. |
@@ -60,7 +51,7 @@ You can choose from various open-source or proprietary model APIs to perform inf
   | ***API Support*** |   |
   | OpenAI |  A series of GPT foundation models offered by OpenAI, such as GPT-3.5 and GPT-4-turbo, which are renowned for their outstanding capabilities in natural language processing. |
   | DeepSeek | High-performance LLMs that have demonstrated exceptional capabilities in both English and Chinese benchmarks. |
-  | ***Deployment***| 
+  | ***Local Deploy***| 
   | LLaMA3 series| Meta's series of large language models, with tens to hundreds of billions of parameters, have shown advanced performance on industry-standard benchmarks. |
   | Qwen2.5 series| LLMs developed by the Qwen team, come in various parameter sizes and exhibit strong capabilities in both English and Chinese. |
   | ChatGLM4-9B | The latest model series by the Zhipu team, which achieve breakthroughs in multiple metrics, excel as bilingual (Chinese-English) chat models. |
@@ -120,7 +111,7 @@ docker run \
 
 ### Start with Python
 
-## ✏️Self-Instruct
+<!-- ## ✏️Self-Instruct
 
 We conduct self-instruct on Meta-Agent to acquire a sufficient amount of task data and provide an ample training resource. 
 
@@ -290,4 +281,4 @@ Please cite our repository if you use AutoAct in your work. Thanks!
 <a href="https://github.com/zjunlp/AutoAct/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=zjunlp/AutoAct" /></a>
 
-We will offer long-term maintenance to fix bugs and solve issues. So if you have any problems, please put issues to us.
+We will offer long-term maintenance to fix bugs and solve issues. So if you have any problems, please put issues to us. -->
