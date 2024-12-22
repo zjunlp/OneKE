@@ -1,4 +1,5 @@
-<h1 align="center"> OneKE </h1>
+
+<img src="./figs/logo.png" alt="" style="zoom: 10%; display: block; margin: 0 auto;" />
 <h3 align="center"> A Dockerized Schema-Guided Knowledge Extraction System </h3>
 
 <p align="center">
@@ -112,7 +113,6 @@ docker run --gpus all \
   -v your_local_model_path:/app/model/your_model_name \
   -it oneke /bin/bash
 ```
-self.print_schema = ""
 ## 🚀Quick-Start
 ### Start with YAML
 #### Prepare the configuration file
