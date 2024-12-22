@@ -1,5 +1,7 @@
 
-<img src="./figs/logo.png" alt="" style="zoom: 10% display: block; margin: 0 auto;" width="10%" height="50%"/>
+<div style="text-align: center;">
+  <img src="./figs/logo.png" alt="Logo" style="display: block; margin: 0 auto; max-width: 100%; height: auto; zoom: 50%;">
+</div>
 <h3 align="center"> A Dockerized Schema-Guided Knowledge Extraction System </h3>
 
 <p align="center">
