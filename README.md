@@ -1,6 +1,9 @@
-<img src="./figs/logo.png" width="300px">
 
-<h4 align="center"> A Dockerized Schema-Guided Knowledge Extraction System </h3>
+<p align="center">
+  <img src="./figs/logo.png" width="300px">
+</p>
+
+<h3 align="center"> A Dockerized Schema-Guided Knowledge Extraction System </h3>
 
 <p align="center">
   <a href="https://arxiv.org/">📄arXiv</a> •
