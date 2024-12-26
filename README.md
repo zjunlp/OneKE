@@ -244,6 +244,7 @@ Refer to the case defined in `examples/config/NER.yaml` as an example:
 In this task setting, `Text` represents the text to be extracted, while `Entity Types` denote the constraint on the types of entities to be extracted. Accordingly, we set the `text` and `constraint` attributes in the YAML file to their respective values.
 
 Next, run the following code to complete this NER task:
+
 ( Refer to [here](#🛠️network-issue-solutions) for any network issues. )
 ```bash
 config_file=./examples/config/NER.yaml 
@@ -271,7 +272,8 @@ Refer to the case defined in `examples/config/RE.yaml` as an example:
 
 In this task setting, `Text` represents the text to be extracted, while `Relation Types` denote the constraint on the types of relations of entities to be extracted. Accordingly, we set the `text` and `constraint` attributes in the YAML file to their respective values.
 
-Next, run the following code to complete this NER task:
+Next, run the following code to complete this RE task:
+
 ( Refer to [here](#🛠️network-issue-solutions) for any network issues. )
 ```bash
 config_file=./examples/config/RE.yaml 
@@ -309,7 +311,8 @@ while the event type constraint is formatted as follows:
 
 Each event type has its own corresponding event arguments.
 
-Next, run the following code to complete this NER task:
+Next, run the following code to complete this EE task:
+
 ( Refer to [here](#🛠️network-issue-solutions) for any network issues. )
 ```bash
 config_file=./examples/config/EE.yaml 
@@ -361,6 +364,7 @@ We refer to the [example](#step1-prepare-the-configuration-file) above for guida
 In the context of customized **Web News Extraction**, we first set the extraction instruction to `Extract key information from the given text`, and provide the file path to extract content from the file. We specify the output schema from the schema repository as the predefined `NewsReport`, and then proceed with the extraction.
 
 Next, run the following code to complete this task:
+
 ( Refer to [here](#🛠️network-issue-solutions) for any network issues. )
 ```bash
 config_file=./examples/config/NewsExtraction.yaml 
