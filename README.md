@@ -191,7 +191,7 @@ python examples/example.py
 
 This will complete a basic NER task, with the extraction results printed upon completion. You can further modify the code in `example.py` to suit your extraction task setting or to access detailed extraction trajectory.
 
-**Named Entity Extraction:**
+***Named Entity Extraction:***
 
 Specifically, we present a NER case in the `example.py` file:
 ```python
@@ -469,10 +469,10 @@ customized:
     extraction_agent: extract_information_direct
     reflection_agent: reflect_with_case
 ```
-Then, set the `mode` of your custom extraction task in `./examples/customized.yaml` to `customized`:
+Then, set the `mode` of your custom extraction task in `examples/customized.yaml` to `customized`:
 
 ```yaml
-# ./examples/customized.yaml
+# examples/customized.yaml
 mode: customized
 ```
 This allows you to experience the customized extraction methods.
@@ -484,11 +484,11 @@ This allows you to experience the customized extraction methods.
 
 ### 💡Knowledge Base Configuration
 #### 1. Schema Repository
-You can view the predefined schemas within the `./src/modules/knowledge_base/schema_repository.py` file. The Schema Repository is designed to be easily extendable. You just need to define your output schema in the form of a pydantic class following the format defined in the file, and it can be directly used in subsequent extractions.
+You can view the predefined schemas within the `src/modules/knowledge_base/schema_repository.py` file. The Schema Repository is designed to be easily extendable. You just need to define your output schema in the form of a pydantic class following the format defined in the file, and it can be directly used in subsequent extractions.
 
 For example, add a new schema in the schema repository:
 ```python
-# ./src/modules/knowledge_base/schema_repository.py
+# src/modules/knowledge_base/schema_repository.py
 class ChemicalSubstance(BaseModel):
     name: str = Field(description="Name of the chemical substance")
     formula: str = Field(description="Molecular formula")
@@ -500,14 +500,14 @@ class ChemicalList(BaseModel)
   chemicals: List[str] = Field(description="List of chemicals")
 ```
 
-Then, set the method for `schema_agent` under `customized` to `get_retrieved_schema` in `./src/config.yaml`. Finally, set the `mode` to `customized` in the external configuration file to enable custom schema extraction. 
+Then, set the method for `schema_agent` under `customized` to `get_retrieved_schema` in `src/config.yaml`. Finally, set the `mode` to `customized` in the external configuration file to enable custom schema extraction. 
 
 In this example, the extraction results will be a list of **chemical substances** that strictly adhere to the defined schema, ensuring a high level of accuracy and flexibility in the extraction results.
 
 Note that the names of newly created objects **should not conflict with** existing ones.
 
 #### 2. Case Repository
-You can directly view the case storage in the `./src/modules/knowledge_base/case_repository.json` file, but we do not recommend modifying it directly. 
+You can directly view the case storage in the `src/modules/knowledge_base/case_repository.json` file, but we do not recommend modifying it directly. 
 
 The Case Repository is automatically updated with each extraction process once setting `update_repository` to `True` in the configuration file. 
 
@@ -515,7 +515,7 @@ When updating the Case Repository, you must provide external feedback to generat
 
 Here is an example:
 ```yaml
-  # ./examples/config/RE.yaml
+  # examples/config/RE.yaml
   truth: {"relation_list": [{"head": "Guinea", "tail": "Conakry", "relation": "country capital"}]} # Truth data for the relation 
   update_case: true 
 ```
