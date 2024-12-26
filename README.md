@@ -534,7 +534,7 @@ Here are some network issues you might encounter and the corresponding solutions
 - Docker Image Pull Failure: Configure the docker daemon to add repository mirrors.
 - Nltk Download Failure: Manually download the `nltk` package and place it in the proper directory.
 - Model Dowload Failure: Use the `Hugging Face` mirror site or `ModelScope` to download model, and specify the local path to the model when using it. 
-    > Note: We use `all-MiniLM-L6-v2` model by default for case matching, so it needs to be downloaded during execution. If network issues occur, manually download the model, and update the `embedding_model` to its local path in the `/src/config.yaml` file.
+    > Note: We use `all-MiniLM-L6-v2` model by default for case matching, so it needs to be downloaded during execution. If network issues occur, manually download the model, and update the `embedding_model` to its local path in the `src/config.yaml` file.
 
 
 ## 🎉Contributors
