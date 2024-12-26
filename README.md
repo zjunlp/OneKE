@@ -10,35 +10,24 @@
   <a href="http://oneke.openkg.cn/demo.mp4">🌐Video</a>
 </p>
 
----
-
 ## Table of Contents
-- [Table of Contents](#table-of-contents)
-- [🌟Overview](#overview)
-- [🚀Quick Start](#quick-start)
-  - [Step1: Environment Setup](#step1-environment-setup)
-    - [🔩Manual Environment Configuration](#manual-environment-configuration)
-    - [🐳Building With Docker Image](#building-with-docker-image)
-  - [Step2: Start with Examples](#step2-start-with-examples)
-    - [🖊️Start with YAML](#️start-with-yaml)
-      - [Step1: Prepare the configuration file](#step1-prepare-the-configuration-file)
-      - [Step2: Run the shell script](#step2-run-the-shell-script)
-    - [🖊️Start with Python](#️start-with-python)
-- [🔍Further Usage](#further-usage)
-  - [💡Extraction Task Support](#extraction-task-support)
-    - [1. Named Entity Recognition](#1-named-entity-recognition)
-    - [2. Relation Extraction](#2-relation-extraction)
-    - [3. Event Extraction](#3-event-extraction)
-    - [4. Open Domain IE](#4-open-domain-ie)
-  - [💡Input Source Support](#input-source-support)
-  - [💡Extraction Model Support](#extraction-model-support)
-  - [💡Extraction Method Support](#extraction-method-support)
-  - [💡Knowledge Base Configuration](#knowledge-base-configuration)
-    - [1. Schema Repository](#1-schema-repository)
-    - [2. Case Repository](#2-case-repository)
-- [🛠️Network Issue Solutions](#️network-issue-solutions)
-- [🎉Contributors](#contributors)
-- [🌻Acknowledgement](#acknowledgement)
+- [Step2: Run the shell script](#step2-run-the-shell-script)
+      - [🖊️Start with Python](#️start-with-python)
+  - [🔍Further Usage](#further-usage)
+    - [💡Extraction Task Support](#extraction-task-support)
+      - [1. Named Entity Recognition](#1-named-entity-recognition)
+      - [2. Relation Extraction](#2-relation-extraction)
+      - [3. Event Extraction](#3-event-extraction)
+      - [4. Open Domain IE](#4-open-domain-ie)
+    - [💡Input Source Support](#input-source-support)
+    - [💡Extraction Model Support](#extraction-model-support)
+    - [💡Extraction Method Support](#extraction-method-support)
+    - [💡Knowledge Base Configuration](#knowledge-base-configuration)
+      - [1. Schema Repository](#1-schema-repository)
+      - [2. Case Repository](#2-case-repository)
+  - [🛠️Network Issue Solutions](#️network-issue-solutions)
+  - [🎉Contributors](#contributors)
+  - [🌻Acknowledgement](#acknowledgement)
 
 
 ---
@@ -70,7 +59,7 @@ Conda virtual environments offer a light and flexible setup.
 
 **Prerequisites**
 - Anaconda Installation
-- GPU support (recommended)
+- GPU support (recommended CUDA version: 12.4)
 
 **Configure Steps**
 1. Clone the repository:
@@ -93,6 +82,7 @@ pip install -r requirements.txt
 ```
 
 #### 🐳Building With Docker Image
+Docker image provides greater reliability and stability.
 
 **Prerequisites**
 - Docker Installation
@@ -100,8 +90,6 @@ pip install -r requirements.txt
 - GPU support (recommended CUDA version: 12.4)
 
 **Configure Steps**
-
-Docker image provides greater reliability and stability.
 1. Clone the repository:
 ```bash
 git clone https://github.com/zjunlp/OneKE.git
@@ -131,10 +119,12 @@ We offer two quick-start options. Choose your preferred method to swiftly explor
 
 
 #### 🖊️Start with YAML
-##### Step1: Prepare the configuration file
+**Step1: Prepare the configuration file**
+
 Several YAML configuration files are available in the `examples/config`. These extraction scenarios cover different extraction data, methods, and models, allowing you to easily explore all the features of OneKE.
 
-**Web News Extraction**
+***Web News Extraction:***
+
 Here is the example for the web news knowledge extraction scenario, with the source extraction text in `HTML` format:
 ```yaml
 # model configuration
@@ -155,7 +145,8 @@ extraction:
   update_case: false # whether to update the case repository. Default set to false.
 ```
 
-**Book News Extraction**
+***Book News Extraction:***
+
 Here is the example for the book news extraction scenario, with the source extraction text in `PDF` format:
 ```yaml
 model:
@@ -178,7 +169,8 @@ The `model` section contains information about the extraction model, while the `
 
 You can choose an existing configuration file or customize the extraction settings as you wish. Note that when using an API service like ChatGPT and DeepSeek, please **set your API key**.
 
-##### Step2: Run the shell script
+**Step2: Run the shell script**
+
 Specify the configuration file path and run the code to start the extraction process.
 ```bash
 config_file=your_yaml_file_path # configuration file path, use the container path if inside a container
@@ -193,7 +185,8 @@ python examples/example.py
 
 This will complete a basic NER task, with the extraction results printed upon completion. You can further modify the code in `example.py` to suit your extraction task setting or to access detailed extraction trajectory.
 
-**Named Entity Extraction**
+**Named Entity Extraction:**
+
 Specifically, we present a NER case in the `example.py` file:
 ```python
 import sys
@@ -470,10 +463,10 @@ customized:
     extraction_agent: extract_information_direct
     reflection_agent: reflect_with_case
 ```
-Then, set the `mode` of your custom extraction task in `examples/customized.yaml` to `customized`:
+Then, set the `mode` of your custom extraction task in `./examples/customized.yaml` to `customized`:
 
 ```yaml
-# examples/customized.yam
+# ./examples/customized.yaml
 mode: customized
 ```
 This allows you to experience the customized extraction methods.
@@ -485,7 +478,7 @@ This allows you to experience the customized extraction methods.
 
 ### 💡Knowledge Base Configuration
 #### 1. Schema Repository
-You can view the schemas stored in the schema repository within the `./src/modules/knowledge_base/schema_repository.py` file. The Schema Repository is designed to be easily extendable. You just need to define your output schema in the form of a pydantic class following the format defined in the file, and it can be directly used in subsequent extractions.
+You can view the predefined schemas within the `./src/modules/knowledge_base/schema_repository.py` file. The Schema Repository is designed to be easily extendable. You just need to define your output schema in the form of a pydantic class following the format defined in the file, and it can be directly used in subsequent extractions.
 
 For example, add a new schema in the schema repository:
 ```python
@@ -512,7 +505,7 @@ You can directly view the case storage in the `./src/modules/knowledge_base/case
 
 The Case Repository is automatically updated with each extraction process once setting `update_repository` to `True` in the configuration file. 
 
-When updating the Case Repository, you must provide external feedback to generate case information, either by including correct answer in the configuration file or during the extraction process.
+When updating the Case Repository, you must provide external feedback to generate case information, either by including truth answer in the configuration file or during the extraction process.
 
 Here is an example:
 ```yaml
@@ -521,7 +514,7 @@ Here is an example:
   update_case: true 
 ```
 
-After extraction, OneKE compares results with correct answers, generates analysis and, and finally stores the case in the repository.
+After extraction, OneKE compares results with the truth answer, generates analysis, and finally stores the case in the repository.
 
 
 ## 🛠️Network Issue Solutions
