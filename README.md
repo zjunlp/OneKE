@@ -26,7 +26,7 @@
     - [2. Relation Extraction](#2-relation-extraction)
     - [3. Event Extraction](#3-event-extraction)
     - [4. Open Domain IE](#4-open-domain-ie)
-  - [💡Input Source Support](#input-source-support)
+  - [Data Source Support](#data-source-support)
   - [💡Extraction Model Support](#extraction-model-support)
   - [💡Extraction Method Support](#extraction-method-support)
   - [💡Knowledge Base Configuration](#knowledge-base-configuration)
@@ -384,7 +384,7 @@ In contrast to eariler tasks, the `Base-type` Task requires you to provide an ex
 
 
 
-### 💡Input Source Support
+### Data Source Support
 You can choose source texts of various lengths and forms for extraction.
   | **Source Format** | **Description** |
   | :---: | :---: |
