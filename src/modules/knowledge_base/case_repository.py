@@ -14,7 +14,7 @@ warnings.filterwarnings("ignore", category=FutureWarning, message=r".*clean_up_t
 
 class CaseRepository:
     def __init__(self):
-        self.embedder = SentenceTransformer("all-MiniLM-L6-v2")
+        self.embedder = SentenceTransformer(config['model']['embedding_model'])
         self.embedder.to(device)  
         self.corpus = self.load_corpus()
         self.embedded_corpus = self.embed_corpus()
