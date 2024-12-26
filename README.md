@@ -245,11 +245,11 @@ In this task setting, `Text` represents the text to be extracted, while `Entity 
 
 Next, run the following code to complete this NER task:
 
-( Refer to [here](#🛠️network-issue-solutions) for any network issues. )
 ```bash
 config_file=./examples/config/NER.yaml 
 python src/run.py --config $config_file 
 ```
+( Refer to [here](#🛠️network-issue-solutions) for any network issues. )
 
 The final extraction result should be:
 | Text | Conference |
@@ -274,11 +274,11 @@ In this task setting, `Text` represents the text to be extracted, while `Relatio
 
 Next, run the following code to complete this RE task:
 
-( Refer to [here](#🛠️network-issue-solutions) for any network issues. )
 ```bash
 config_file=./examples/config/RE.yaml 
 python src/run.py --config $config_file 
 ```
+( Refer to [here](#🛠️network-issue-solutions) for any network issues. )
 
 The final extraction result should be:
 
@@ -313,11 +313,11 @@ Each event type has its own corresponding event arguments.
 
 Next, run the following code to complete this EE task:
 
-( Refer to [here](#🛠️network-issue-solutions) for any network issues. )
 ```bash
 config_file=./examples/config/EE.yaml 
 python src/run.py --config $config_file 
 ```
+( Refer to [here](#🛠️network-issue-solutions) for any network issues. )
 
 The final extraction result should be:
 
@@ -365,11 +365,11 @@ In the context of customized **Web News Extraction**, we first set the extractio
 
 Next, run the following code to complete this task:
 
-( Refer to [here](#🛠️network-issue-solutions) for any network issues. )
 ```bash
 config_file=./examples/config/NewsExtraction.yaml 
 python src/run.py --config $config_file 
 ```
+( Refer to [here](#🛠️network-issue-solutions) for any network issues. )
 
 Here is an excerpt of the extracted content:
 | **Title**                        | Meet Trump's pick for director of national intelligence |
