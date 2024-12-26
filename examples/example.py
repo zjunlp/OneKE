@@ -5,7 +5,7 @@ from pipeline import *
 import json
 
 # model configuration
-model = ChatGPT(model_name_or_path="gpt-4o-mini", api_key="your_api_key", base_url="https://api.openai.com/v1")
+model = ChatGPT(model_name_or_path="gpt-4o-mini", api_key="sk-ADCiVBqVHAnnugtsGS2V05g2RigirBSoZc7unds4DWk3JPS3", base_url="https://api.chatanywhere.tech")
 pipeline = Pipeline(model)
 
 # extraction configuration

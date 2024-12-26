@@ -72,16 +72,16 @@ Conda virtual environments offer a light and flexible setup.
 ```bash
 git clone https://github.com/zjunlp/OneKE.git
 ```
-1. Enter the working directory, and all subsequent commands should be executed in this directory.
+2. Enter the working directory, and all subsequent commands should be executed in this directory.
 ```bash
 cd OneKE
 ```
-1. Create a virtual environment using `Anaconda`.
+3. Create a virtual environment using `Anaconda`.
 ```bash
 conda create -n oneke python=3.9
 conda activate oneke
 ```
-1. Install all required Python packages.
+4. Install all required Python packages.
 ```bash
 pip install -r requirements.txt
 # If you encounter network issues, consider setting up a domestic mirror for pip.
@@ -100,7 +100,7 @@ Docker image provides greater reliability and stability.
 ```bash
 git clone https://github.com/zjunlp/OneKE.git
 ```
-1. Pull the docker image from the mirror repository.
+2. Pull the docker image from the mirror repository.
 ```bash
 docker pull zjunlp/oneke:v1
 # If you encounter network issues, consider setting up domestic registry mirrors for docker.
@@ -156,18 +156,18 @@ extraction:
 Here is the example for the book news extraction scenario, with the source extraction text in `PDF` format:
 ```yaml
 model:
+  # Recommend using ChatGPT or DeepSeek APIs for complex IE task.
   category: ChatGPT # model category, chosen from ChatGPT, DeepSeek, LLaMA, Qwen, ChatGLM, MiniCPM.
-  model_name_or_path: gpt-4o-mini # model name, chosen from the model list of the selected category.
+  model_name_or_path: gpt-4o-mini # # model name, chosen from the model list of the selected category.
   api_key: your_api_key # your API key for the model with API service. No need for open-source models.
-  base_url: https://api.openai.com/v1 # base URL for the API service. No need for open-source models.
+  base_url: https://api.openai.com/v1 # # base URL for the API service. No need for open-source models.
 
 extraction:             
   task: Base # task type, chosen from Base, NER, RE, EE.
-  instruction: Extract key information from the given text. # description for the task. No need for NER, RE, EE task.
-  use_file: true # whether to use a file for the input text. Default set to false.
-  file_path: ./data/input_files/Tulsi_Gabbard_News.html # path to the input file. No need if use_file is set to false.
-  output_schema: NewsReport # output schema for the extraction task. Selected the from schema repository.
-  mode: customized # extraction mode, chosen from quick, detailed, customized. Default set to quick. See src/config.yaml for more details.
+  instruction: Extract main characters and background setting from this chapter. # description for the task. No need for NER, RE, EE task.
+  use_file: true # whether to use a file for the input text. Default set to false.      
+  file_path: ./data/input_files/Harry_Potter_Chapter1.pdf #  # path to the input file. No need if use_file is set to false.
+  mode: quick # extraction mode, chosen from quick, detailed, customized. Default set to quick. See src/config.yaml for more details.
   update_case: false # whether to update the case repository. Default set to false.
 ```
 
@@ -501,7 +501,7 @@ class ChemicalSubstance(BaseModel):
     hazards: str = Field(description="Hazard classification")
 
 class ChemicalList(BaseModel)
-  chemicals: List[str] = Field(description="List of chemicals")
+  chemicals: List[ChemicalSubstance] = Field(description="List of chemicals")
 ```
 
 Then, set the method for `schema_agent` under `customized` to `get_retrieved_schema` in `src/config.yaml`. Finally, set the `mode` to `customized` in the external configuration file to enable custom schema extraction. 
