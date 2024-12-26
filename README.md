@@ -121,7 +121,7 @@ We offer two quick-start options. Choose your preferred method to swiftly explor
 
 > Note:
 > - **Ensure** that your working directory is set to the **`OneKE`** folder, whether in a virtual environment or a docker container. 
-> - Refer to [here](#🛠️network-issue-solutions) to resolve the **network issues**. If you have more questions, feel free to open an issue with us.
+> - Refer to [here](#network-issue-solutions) to resolve the **network issues**. If you have more questions, feel free to open an issue with us.
 
 
 #### 🖊️Start with YAML
@@ -249,7 +249,7 @@ Next, run the following code to complete this NER task:
 config_file=./examples/config/NER.yaml 
 python src/run.py --config $config_file 
 ```
-( Refer to [here](#🛠️network-issue-solutions) for any network issues. )
+( Refer to [here](#network-issue-solutions) for any network issues. )
 
 The final extraction result should be:
 | Text | Conference |
@@ -278,7 +278,7 @@ Next, run the following code to complete this RE task:
 config_file=./examples/config/RE.yaml 
 python src/run.py --config $config_file 
 ```
-( Refer to [here](#🛠️network-issue-solutions) for any network issues. )
+( Refer to [here](#network-issue-solutions) for any network issues. )
 
 The final extraction result should be:
 
@@ -317,7 +317,7 @@ Next, run the following code to complete this EE task:
 config_file=./examples/config/EE.yaml 
 python src/run.py --config $config_file 
 ```
-( Refer to [here](#🛠️network-issue-solutions) for any network issues. )
+( Refer to [here](#network-issue-solutions) for any network issues. )
 
 The final extraction result should be:
 
@@ -369,7 +369,7 @@ Next, run the following code to complete this task:
 config_file=./examples/config/NewsExtraction.yaml 
 python src/run.py --config $config_file 
 ```
-( Refer to [here](#🛠️network-issue-solutions) for any network issues. )
+( Refer to [here](#network-issue-solutions) for any network issues. )
 
 Here is an excerpt of the extracted content:
 | **Title**                        | Meet Trump's pick for director of national intelligence |
