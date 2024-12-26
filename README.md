@@ -16,26 +16,26 @@
 - [Table of Contents](#table-of-contents)
 - [🌟Overview](#overview)
 - [🚀Quick Start](#quick-start)
-  - [Environment Setup](#environment-setup)
-    - [Manual Environment Configuration](#manual-environment-configuration)
-    - [Building With Docker Image](#building-with-docker-image)
-  - [Start with Examples](#start-with-examples)
-    - [Start with YAML](#start-with-yaml)
+  - [Step1: Environment Setup](#step1-environment-setup)
+    - [🔩Manual Environment Configuration](#manual-environment-configuration)
+    - [🐳Building With Docker Image](#building-with-docker-image)
+  - [Step2: Start with Examples](#step2-start-with-examples)
+    - [🖊️Start with YAML](#️start-with-yaml)
       - [Step1: Prepare the configuration file](#step1-prepare-the-configuration-file)
       - [Step2: Run the shell script](#step2-run-the-shell-script)
-    - [Start with Python](#start-with-python)
+    - [🖊️Start with Python](#️start-with-python)
 - [🔍Further Usage](#further-usage)
-  - [Extraction Task Support](#extraction-task-support)
+  - [💡Extraction Task Support](#extraction-task-support)
     - [1. Named Entity Recognition](#1-named-entity-recognition)
     - [2. Relation Extraction](#2-relation-extraction)
     - [3. Event Extraction](#3-event-extraction)
     - [4. Open Domain IE](#4-open-domain-ie)
-  - [Input Source Support](#input-source-support)
-  - [Extraction Model Support](#extraction-model-support)
-  - [Extraction Method Support](#extraction-method-support)
-  - [Knowledge Base Configuration](#knowledge-base-configuration)
-    - [Schema Repository](#schema-repository)
-    - [Case Repository](#case-repository)
+  - [💡Input Source Support](#input-source-support)
+  - [💡Extraction Model Support](#extraction-model-support)
+  - [💡Extraction Method Support](#extraction-method-support)
+  - [💡Knowledge Base Configuration](#knowledge-base-configuration)
+    - [1. Schema Repository](#1-schema-repository)
+    - [2. Case Repository](#2-case-repository)
 - [🛠️Network Issue Solutions](#️network-issue-solutions)
 - [🎉Contributors](#contributors)
 - [🌻Acknowledgement](#acknowledgement)
@@ -62,34 +62,38 @@ We have developed a webpage demo for OneKE with Gradio, click [here](http://120.
 
 > Note: The demo only displays OneKE's basic capabilities for effiency. Consider the local deployment steps below for further features.
 
-### Environment Setup
+### Step1: Environment Setup
 OneKE supports both manual and docker image environment configuration, choose your preferred method to build.
-#### Manual Environment Configuration
+
+#### 🔩Manual Environment Configuration
 Conda virtual environments offer a light and flexible setup.
+
 **Prerequisites**
 - Anaconda Installation
 - GPU support (recommended)
+
 **Configure Steps**
 1. Clone the repository:
 ```bash
 git clone https://github.com/zjunlp/OneKE.git
 ```
-2. Enter the working directory, and all subsequent commands should be executed in this directory.
+1. Enter the working directory, and all subsequent commands should be executed in this directory.
 ```bash
 cd OneKE
 ```
-3. Create a virtual environment using `Anaconda`.
+1. Create a virtual environment using `Anaconda`.
 ```bash
 conda create -n oneke python=3.9
 conda activate oneke
 ```
-4. Install all required Python packages.
+1. Install all required Python packages.
 ```bash
 pip install -r requirements.txt
 # If you encounter network issues, consider setting up a domestic mirror for pip.
 ```
 
-#### Building With Docker Image
+#### 🐳Building With Docker Image
+
 **Prerequisites**
 - Docker Installation
 - NVIDIA Container Toolkit 
@@ -118,7 +122,7 @@ docker run --gpus all \ # start the container
 ```
 Upon starting, the container will enter the `/app/OneKE` directory as its working directory.
 
-### Start with Examples
+### Step2: Start with Examples
 We offer two quick-start options. Choose your preferred method to swiftly explore OneKE with predefined examples. 
 
 > Note:
@@ -126,7 +130,7 @@ We offer two quick-start options. Choose your preferred method to swiftly explor
 > - Refer to [here](#🛠️network-issue-solutions) to resolve the **network issues**. If you have more questions, feel free to open an issue with us.
 
 
-#### Start with YAML
+#### 🖊️Start with YAML
 ##### Step1: Prepare the configuration file
 Several YAML configuration files are available in the `examples/config`. These extraction scenarios cover different extraction data, methods, and models, allowing you to easily explore all the features of OneKE.
 
@@ -181,7 +185,7 @@ config_file=your_yaml_file_path # configuration file path, use the container pat
 python src/run.py --config $config_file # executed in the OneKE directory
 ```
 
-#### Start with Python
+#### 🖊️Start with Python
 You can also try OneKE by directly running the `example.py` file located in the `example` directory. Specifically, execute the following commands:
 ```bash
 python examples/example.py
@@ -214,7 +218,7 @@ print("Trajectory:", json.dumps(trajectory, indent=4))
 First, select an appropriate extraction model, then complete the configuration of extraction parameters (such as extraction task, extraction text, etc.). Finally, call the `get_extract_result` function of the `Pipeline` class to perform information extraction and obtain the final results.
 
 ## 🔍Further Usage
-### Extraction Task Support
+### 💡Extraction Task Support
 You can try different types of information extraction tasks within the OneKE framework.
   | **Task** | **Description** |
   | :---: | :---: |
@@ -381,7 +385,7 @@ In contrast to eariler tasks, the `Base-type` Task requires you to provide an ex
 
 
 
-### Input Source Support
+### 💡Input Source Support
 You can choose source texts of various lengths and forms for extraction.
   | **Source Format** | **Description** |
   | :---: | :---: |
@@ -407,7 +411,7 @@ In practice, you can use the YAML file configuration to handle different types o
   ```
 
 
-### Extraction Model Support
+### 💡Extraction Model Support
 You can choose from various open-source or proprietary model APIs to perform information extraction tasks.
 > Note: For complex IE tasks, we recommend using powerful models like **OpenAI**'s or or **large-scale** open-source LLMs.
 
@@ -441,7 +445,7 @@ In practice, you can use the YAML file configuration to employ various LLMs:
   ```
 Note that the category of model **must** be chosen from ChatGPT, DeepSeek, LLaMA, Qwen, ChatGLM, MiniCPM.
 
-### Extraction Method Support
+### 💡Extraction Method Support
 You can freely combine different extraction methods to complete the information extraction task.
   | **Method** | **Description** |
   | :---: | :---: |
@@ -479,8 +483,8 @@ This allows you to experience the customized extraction methods.
 > - For shorter tasks requiring high accuracy, you can try the `standard mode` to ensure precision.
 
 
-### Knowledge Base Configuration
-#### Schema Repository
+### 💡Knowledge Base Configuration
+#### 1. Schema Repository
 You can view the schemas stored in the schema repository within the `./src/modules/knowledge_base/schema_repository.py` file. The Schema Repository is designed to be easily extendable. You just need to define your output schema in the form of a pydantic class following the format defined in the file, and it can be directly used in subsequent extractions.
 
 For example, add a new schema in the schema repository:
@@ -503,7 +507,7 @@ In this example, the extraction results will be a list of **chemical substances*
 
 Note that the names of newly created objects **should not conflict with** existing ones.
 
-#### Case Repository
+#### 2. Case Repository
 You can directly view the case storage in the `./src/modules/knowledge_base/case_repository.json` file, but we do not recommend modifying it directly. 
 
 The Case Repository is automatically updated with each extraction process once setting `update_repository` to `True` in the configuration file. 
@@ -540,4 +544,3 @@ We deeply appreciate the collaborative efforts of everyone involved. We will con
 
 ## 🌻Acknowledgement
 We reference [itext2kg](https://github.com/AuvaLab/itext2kg) to aid in building the schema repository and utilize tools from [LangChain](https://www.langchain.com/) for file parsing. The experimental datasets we use are curated from the [IEPile](https://huggingface.co/datasets/zjunlp/iepile) repository. We appreciate their valuable contributions!
-
