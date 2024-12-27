@@ -210,6 +210,3 @@ class DeepSeek(BaseEngine):
             stop=None
         )
         return response.choices[0].message.content
-    
-# openai_api = sk-ADCiVBqVHAnnugtsGS2V05g2RigirBSoZc7unds4DWk3JPS3
-# openai_url = https://api.chatanywhere.tech/v1
