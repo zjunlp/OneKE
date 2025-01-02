@@ -48,7 +48,7 @@ OneKE currently offers the following features:
 - [x] Various IE Tasks Support
 - [x] Various Data Sources Support
 - [x] Various LLMs Support
-- [x] Vasious Extraction Method Support
+- [x] Various Extraction Method Support
 - [x] User-Configurable Knowledge Base
 
 
