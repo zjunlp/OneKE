@@ -73,23 +73,23 @@ Conda virtual environments offer a light and flexible setup.
 
 **Configure Steps**
 1. Clone the repository:
-  ```bash
-  git clone https://github.com/zjunlp/OneKE.git
-  ```
+```bash
+git clone https://github.com/zjunlp/OneKE.git
+```
 2. Enter the working directory, and all subsequent commands should be executed in this directory.
-  ```bash
-  cd OneKE
-  ```
+```bash
+cd OneKE
+```
 3. Create a virtual environment using `Anaconda`.
-  ```bash
-  conda create -n oneke python=3.9
-  conda activate oneke
-  ```
+```bash
+conda create -n oneke python=3.9
+conda activate oneke
+```
 4. Install all required Python packages.
-  ```bash
-  pip install -r requirements.txt
-  # If you encounter network issues, consider setting up a domestic mirror for pip.
-  ```
+```bash
+pip install -r requirements.txt
+# If you encounter network issues, consider setting up a domestic mirror for pip.
+```
 
 #### 🐳Building With Docker Image
 Docker image provides greater reliability and stability.
@@ -101,28 +101,28 @@ Docker image provides greater reliability and stability.
 
 **Configure Steps**
 1. Clone the repository:
-  ```bash
-  git clone https://github.com/zjunlp/OneKE.git
-  ```
+```bash
+git clone https://github.com/zjunlp/OneKE.git
+```
 2. Pull the docker image from the mirror repository.
-  ```bash
-  docker pull zjunlp/oneke:v2
-  # If you encounter network issues, consider setting up domestic registry mirrors for docker.
-  ```
+```bash
+docker pull zjunlp/oneke:v2
+# If you encounter network issues, consider setting up domestic registry mirrors for docker.
+```
 3. Launch a container from the image.
-  ```bash
-  docker run --gpus all \
-    -v ./OneKE:/app/OneKE \
-    -it oneke:v2 /bin/bash
-  ```
-  If using locally deployed models, ensure the local model path is mapped to the container:
-  ```bash
-  docker run --gpus all \
-    -v ./OneKE:/app/OneKE \
-    -v your_local_model_path:/app/model/your_model_name \
-    -it oneke:v2 /bin/bash
-  ```
-  Map any necessary local files to the container paths as shown above, and use **container paths** in your code and execution.
+```bash
+docker run --gpus all \
+  -v ./OneKE:/app/OneKE \
+  -it oneke:v2 /bin/bash
+```
+If using locally deployed models, ensure the local model path is mapped to the container:
+```bash
+docker run --gpus all \
+  -v ./OneKE:/app/OneKE \
+  -v your_local_model_path:/app/model/your_model_name \
+  -it oneke:v2 /bin/bash
+```
+Map any **necessary local files** to the container paths as shown above, and use **container paths** in your code and execution.
 
 Upon starting, the container will enter the `/app/OneKE` directory as its working directory. Just modify the code locally as needed, and the changes will sync to the container through mapping.
 
