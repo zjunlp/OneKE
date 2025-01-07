@@ -73,23 +73,23 @@ Conda virtual environments offer a light and flexible setup.
 
 **Configure Steps**
 1. Clone the repository:
-```bash
-git clone https://github.com/zjunlp/OneKE.git
-```
+  ```bash
+  git clone https://github.com/zjunlp/OneKE.git
+  ```
 2. Enter the working directory, and all subsequent commands should be executed in this directory.
-```bash
-cd OneKE
-```
+  ```bash
+  cd OneKE
+  ```
 3. Create a virtual environment using `Anaconda`.
-```bash
-conda create -n oneke python=3.9
-conda activate oneke
-```
+  ```bash
+  conda create -n oneke python=3.9
+  conda activate oneke
+  ```
 4. Install all required Python packages.
-```bash
-pip install -r requirements.txt
-# If you encounter network issues, consider setting up a domestic mirror for pip.
-```
+  ```bash
+  pip install -r requirements.txt
+  # If you encounter network issues, consider setting up a domestic mirror for pip.
+  ```
 
 #### 🐳Building With Docker Image
 Docker image provides greater reliability and stability.
@@ -101,28 +101,28 @@ Docker image provides greater reliability and stability.
 
 **Configure Steps**
 1. Clone the repository:
-```bash
-git clone https://github.com/zjunlp/OneKE.git
-```
-1. Pull the docker image from the mirror repository.
-```bash
-docker pull zjunlp/oneke:v2
-# If you encounter network issues, consider setting up domestic registry mirrors for docker.
-```
-1. Launch a container from the image.
-```bash
-docker run --gpus all \
-  -v ./OneKE:/app/OneKE \
-  -it oneke:v2 /bin/bash
-```
-If using locally deployed models, ensure the local model path is mapped to the container:
-```bash
-docker run --gpus all \
-  -v ./OneKE:/app/OneKE \
-  -v your_local_model_path:/app/model/your_model_name \
-  -it oneke:v2 /bin/bash
-```
-Map any necessary local files to the container paths as shown above, and use **container paths** in your code and execution.
+  ```bash
+  git clone https://github.com/zjunlp/OneKE.git
+  ```
+2. Pull the docker image from the mirror repository.
+  ```bash
+  docker pull zjunlp/oneke:v2
+  # If you encounter network issues, consider setting up domestic registry mirrors for docker.
+  ```
+3. Launch a container from the image.
+  ```bash
+  docker run --gpus all \
+    -v ./OneKE:/app/OneKE \
+    -it oneke:v2 /bin/bash
+  ```
+  If using locally deployed models, ensure the local model path is mapped to the container:
+  ```bash
+  docker run --gpus all \
+    -v ./OneKE:/app/OneKE \
+    -v your_local_model_path:/app/model/your_model_name \
+    -it oneke:v2 /bin/bash
+  ```
+  Map any necessary local files to the container paths as shown above, and use **container paths** in your code and execution.
 
 Upon starting, the container will enter the `/app/OneKE` directory as its working directory. Just modify the code locally as needed, and the changes will sync to the container through mapping.
 
@@ -257,7 +257,8 @@ Refer to the case defined in `examples/config/NER.yaml` as an example:
 In this task setting, `Text` represents the text to be extracted, while `Entity Types` denote the constraint on the types of entities to be extracted. Accordingly, we set the `text` and `constraint` attributes in the YAML file to their respective values.
 
 Next, follow the steps below to complete the NER task:
-- Complete the `./examples/config/NER.yaml ` file: configure the necessary model and extraction settings
+- Complete `./examples/config/NER.yaml`: 
+  configure the necessary model and extraction settings
 - Run the shell script below:
   ```bash
   config_file=./examples/config/NER.yaml 
@@ -268,7 +269,7 @@ Next, follow the steps below to complete the NER task:
 The final extraction result should be:
 | Text | Conference |
 | --- | --- |
-| Finally, every other year, ELRA organizes a major conference LREC, the International Language Resources and Evaluation Conference. | ELRA, conference, International Language Resources and Evaluation Conference | 
+| Finally, every other year, ELRA organizes a major conference LREC, the International Language Resources and Evaluation Conference. | ELRA, LREC, International Language Resources and Evaluation Conference | 
 
 Click [here](https://github.com/zjunlp/OneKE/tree/main/examples/results/NER.json) to obtain the raw results in `json` format.
 > Note: The actual extraction results may not exactly match this due to LLM randomness. 
@@ -289,7 +290,8 @@ Refer to the case defined in `examples/config/RE.yaml` as an example:
 In this task setting, `Text` represents the text to be extracted, while `Relation Types` denote the constraint on the types of relations of entities to be extracted. Accordingly, we set the `text` and `constraint` attributes in the YAML file to their respective values.
 
 Next, follow the steps below to complete the RE task:
-- Complete the `./examples/config/RE.yaml ` file: configure the necessary model and extraction settings
+- Complete `./examples/config/RE.yaml`: 
+  configure the necessary model and extraction settings
 - Run the shell script below:
   ```bash
   config_file=./examples/config/RE.yaml 
@@ -331,7 +333,8 @@ while the event type constraint is formatted as follows:
 Each event type has its own corresponding event arguments.
 
 Next, follow the steps below to complete the EE task:
-- Complete the `./examples/config/EE.yaml` file: configure the necessary model and extraction settings
+- Complete `./examples/config/EE.yaml`: 
+  configure the necessary model and extraction settings
 - Run the shell script below:
   ```bash
   config_file=./examples/config/EE.yaml 
@@ -385,7 +388,8 @@ We refer to the [example](#step1-prepare-the-configuration-file) above for guida
 In the context of customized **Web News Extraction**, we first set the extraction instruction to `Extract key information from the given text`, and provide the file path to extract content from the file. We specify the output schema from the schema repository as the predefined `NewsReport`, and then proceed with the extraction.
 
 Next, follow the steps below to complete this task:
-- Complete the `./examples/config/NewsExtraction.yaml ` file: configure the necessary model and extraction settings
+- Complete `./examples/config/NewsExtraction.yaml `: 
+  configure the necessary model and extraction settings
 - Run the shell script below:
   ```bash
   config_file=./examples/config/NewsExtraction.yaml 
