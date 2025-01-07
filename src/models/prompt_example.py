@@ -95,13 +95,13 @@ class Event(BaseModel):
     process: Optional[str] = Field(description="Details of the event process")
     result: Optional[str] = Field(default=None, description="Result or outcome of the event")
 
-class ExtractionTarget(BaseModel):  
-    title: str = Field(description="The title or headline of the news article")
-    summary: str = Field(description="A brief summary of the news article")
-    publication_date: Optional[str] = Field(description="The publication date of the article")
-    keywords: Optional[List[str]] = Field(description="List of keywords or topics covered in the article")
-    events: List[Event] = Field(description="Events covered in the article")
-    quotes: Optional[List[str]] = Field(default=None, description="Quotes related to the news, if any")
+class NewsReport(BaseModel):  
+    title: str = Field(description="The title or headline of the news report")
+    summary: str = Field(description="A brief summary of the news report")
+    publication_date: Optional[str] = Field(description="The publication date of the report")
+    keywords: Optional[List[str]] = Field(description="List of keywords or topics covered in the news report")
+    events: List[Event] = Field(description="Events covered in the news report")
+    quotes: Optional[dict] = Field(default=None, description="Quotes related to the news, with keys as the citation sources and values as the quoted content. ")
     viewpoints: Optional[List[str]] = Field(default=None, description="Different viewpoints regarding the news")
 ```
 

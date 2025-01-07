@@ -12,6 +12,7 @@
 
 ## Table of Contents
 - [Table of Contents](#table-of-contents)
+- [🔔News](#news)
 - [🌟Overview](#overview)
 - [🚀Quick Start](#quick-start)
   - [Step1: Environment Setup](#step1-environment-setup)
@@ -38,6 +39,9 @@
 
 ---
 
+## 🔔News
+- **[2024/12] We open source the *OneKE* framework, supporting multi-agent knowledge extraction across various scenarios.**
+- **[2024/04] We release a new bilingual (Chinese and English) schema-based information extraction model called [OneKE](https://huggingface.co/zjunlp/OneKE) based on Chinese-Alpaca-2-13B.**
 
 ## 🌟Overview
 **OneKE** is a flexible dockerized system for schema-guided knowledge extraction, capable of extracting information from the web and raw PDF books across multiple domains like science and news. It employs a collaborative multi-agent approach and includes a user-customizable knowledge base to enable tailored extraction. Embark on your information extraction journey with OneKE!
@@ -92,7 +96,7 @@ Docker image provides greater reliability and stability.
 
 **Prerequisites**
 - Docker Installation
-- NVIDIA Container Toolkit 
+- NVIDIA Container Toolkit
 - GPU support (recommended CUDA version: 12.4)
 
 **Configure Steps**
@@ -100,21 +104,27 @@ Docker image provides greater reliability and stability.
 ```bash
 git clone https://github.com/zjunlp/OneKE.git
 ```
-2. Pull the docker image from the mirror repository.
+1. Pull the docker image from the mirror repository.
 ```bash
-docker pull zjunlp/oneke:v1
+docker pull zjunlp/oneke:v2
 # If you encounter network issues, consider setting up domestic registry mirrors for docker.
 ```
-3. Launch a container from the image.
+1. Launch a container from the image.
 ```bash
-# Use container paths in code and execution
-docker run --gpus all \ # start the container
-  -v ./OneKE:/app/OneKE \ # map the code to docker container
-  -v your_local_model_path:/app/model/your_model_name \ # map the local model to container if necessary
-  # map any necessary local files to container here
-  -it oneke /bin/bash # launch an interactive bash
+docker run --gpus all \
+  -v ./OneKE:/app/OneKE \
+  -it oneke:v2 /bin/bash
 ```
-Upon starting, the container will enter the `/app/OneKE` directory as its working directory.
+If using locally deployed models, ensure the local model path is mapped to the container:
+```bash
+docker run --gpus all \
+  -v ./OneKE:/app/OneKE \
+  -v your_local_model_path:/app/model/your_model_name \
+  -it oneke:v2 /bin/bash
+```
+Map any necessary local files to the container paths as shown above, and use **container paths** in your code and execution.
+
+Upon starting, the container will enter the `/app/OneKE` directory as its working directory. Just modify the code locally as needed, and the changes will sync to the container through mapping.
 
 ### Step2: Start with Examples
 We offer two quick-start options. Choose your preferred method to swiftly explore OneKE with predefined examples. 
@@ -182,6 +192,7 @@ Specify the configuration file path and run the code to start the extraction pro
 config_file=your_yaml_file_path # configuration file path, use the container path if inside a container
 python src/run.py --config $config_file # executed in the OneKE directory
 ```
+Refer to [here](https://github.com/zjunlp/OneKE/tree/main/examples/results) to get an overview of the knowledge extraction results.
 
 #### 🖊️Start with Python
 You can also try OneKE by directly running the `example.py` file located in the `example` directory. Specifically, execute the following commands:
@@ -216,6 +227,8 @@ print("Trajectory:", json.dumps(trajectory, indent=4))
 ```
 First, select an appropriate extraction model, then complete the configuration of extraction parameters (such as extraction task, extraction text, etc.). Finally, call the `get_extract_result` function of the `Pipeline` class to perform information extraction and obtain the final results.
 
+Refer to [here](https://github.com/zjunlp/OneKE/tree/main/examples/results/NER.json) to get an overview of the knowledge extraction results.
+
 ## 🔍Further Usage
 ### 💡Extraction Task Support
 You can try different types of information extraction tasks within the OneKE framework.
@@ -243,19 +256,22 @@ Refer to the case defined in `examples/config/NER.yaml` as an example:
 
 In this task setting, `Text` represents the text to be extracted, while `Entity Types` denote the constraint on the types of entities to be extracted. Accordingly, we set the `text` and `constraint` attributes in the YAML file to their respective values.
 
-Next, run the following code to complete this NER task:
-
-```bash
-config_file=./examples/config/NER.yaml 
-python src/run.py --config $config_file 
-```
-( Refer to [here](#network-issue-solutions) for any network issues. )
+Next, follow the steps below to complete the NER task:
+- Complete the `./examples/config/NER.yaml ` file: configure the necessary model and extraction settings
+- Run the shell script below:
+  ```bash
+  config_file=./examples/config/NER.yaml 
+  python src/run.py --config $config_file 
+  ```
+  ( Refer to [issues](#network-issue-solutions) for any network issues. )
 
 The final extraction result should be:
 | Text | Conference |
 | --- | --- |
 | Finally, every other year, ELRA organizes a major conference LREC, the International Language Resources and Evaluation Conference. | ELRA, conference, International Language Resources and Evaluation Conference | 
-> Note: The actual extraction results may not exactly match this due to LLM randomness.
+
+Click [here](https://github.com/zjunlp/OneKE/tree/main/examples/results/NER.json) to obtain the raw results in `json` format.
+> Note: The actual extraction results may not exactly match this due to LLM randomness. 
 
 The result indicates that, given the text and entity type constraint, entities of type `conference` have been extracted: `ELRA`, `conference`, `International Language Resources and Evaluation Conference`.
 
@@ -272,19 +288,22 @@ Refer to the case defined in `examples/config/RE.yaml` as an example:
 
 In this task setting, `Text` represents the text to be extracted, while `Relation Types` denote the constraint on the types of relations of entities to be extracted. Accordingly, we set the `text` and `constraint` attributes in the YAML file to their respective values.
 
-Next, run the following code to complete this RE task:
-
-```bash
-config_file=./examples/config/RE.yaml 
-python src/run.py --config $config_file 
-```
-( Refer to [here](#network-issue-solutions) for any network issues. )
+Next, follow the steps below to complete the RE task:
+- Complete the `./examples/config/RE.yaml ` file: configure the necessary model and extraction settings
+- Run the shell script below:
+  ```bash
+  config_file=./examples/config/RE.yaml 
+  python src/run.py --config $config_file 
+  ```
+  ( Refer to [issues](#network-issue-solutions) for any network issues. )
 
 The final extraction result should be:
 
 | Text | Head Entity | Tail Entity | Relationship |
 | --- | --- | --- | --- |
 | The aid group Doctors Without Borders said that since Saturday , more than 275 wounded people had been admitted and treated at Donka Hospital in the capital of Guinea , Conakry . | Guinea | Conakry | Country-Capital |
+
+Click [here](https://github.com/zjunlp/OneKE/tree/main/examples/results/RE.json) to obtain the raw results in `json` format.
 > Note: The actual extraction results may not exactly match this due to LLM randomness.
 
 The result indicates that, the relation `Country-Capital` is extracted from the given text based on the relation list, accompanied by the corresponding head entity `Guinea` and tail entity `Conakry`, which denotes that `Conakry is the capital of Guinea`.
@@ -295,7 +314,7 @@ You can either specify relation type constraints or omit them. Without constrain
 #### 3. Event Extraction
 Event extraction is the task to extract event type, event trigger words, and event arguments from a unstructed text, which is a more complex IE task compared to the first two.
 
-Refer to the case defined in `examples/configEE.yaml` as an example:
+Refer to the case defined in `examples/config/EE.yaml` as an example:
 The extraction text is :
 ```
 UConn Health , an academic medical center , says in a media statement that it identified approximately 326,000 potentially impacted individuals whose personal information was contained in the compromised email accounts.
@@ -311,13 +330,14 @@ while the event type constraint is formatted as follows:
 
 Each event type has its own corresponding event arguments.
 
-Next, run the following code to complete this EE task:
-
-```bash
-config_file=./examples/config/EE.yaml 
-python src/run.py --config $config_file 
-```
-( Refer to [here](#network-issue-solutions) for any network issues. )
+Next, follow the steps below to complete the EE task:
+- Complete the `./examples/config/EE.yaml` file: configure the necessary model and extraction settings
+- Run the shell script below:
+  ```bash
+  config_file=./examples/config/EE.yaml 
+  python src/run.py --config $config_file 
+  ```
+  ( Refer to [issues](#network-issue-solutions) for any network issues. )
 
 The final extraction result should be:
 
@@ -350,6 +370,7 @@ The final extraction result should be:
   </tr>
 </table>
 
+Click [here](https://github.com/zjunlp/OneKE/tree/main/examples/results/NER.json) to obtain the raw results in `json` format.
 > Note: The actual extraction results may not exactly match this due to LLM randomness.
 
 The extraction results show that the `data breach` event is identified using the trigger `compromised`, and the specific contents of different event arguments such as `compromised data` and `victim` have also been extracted.
@@ -363,13 +384,14 @@ We refer to the [example](#step1-prepare-the-configuration-file) above for guida
 
 In the context of customized **Web News Extraction**, we first set the extraction instruction to `Extract key information from the given text`, and provide the file path to extract content from the file. We specify the output schema from the schema repository as the predefined `NewsReport`, and then proceed with the extraction.
 
-Next, run the following code to complete this task:
-
-```bash
-config_file=./examples/config/NewsExtraction.yaml 
-python src/run.py --config $config_file 
-```
-( Refer to [here](#network-issue-solutions) for any network issues. )
+Next, follow the steps below to complete this task:
+- Complete the `./examples/config/NewsExtraction.yaml ` file: configure the necessary model and extraction settings
+- Run the shell script below:
+  ```bash
+  config_file=./examples/config/NewsExtraction.yaml 
+  python src/run.py --config $config_file 
+  ```
+  ( Refer to [issues](#network-issue-solutions) for any network issues. )
 
 Here is an excerpt of the extracted content:
 | **Title**                        | Meet Trump's pick for director of national intelligence |
@@ -382,9 +404,10 @@ Here is an excerpt of the extracted content:
 | **Quotes**                       | "The U.S. intelligence community has identified her as having troubling relationships with America’s foes."; "If Gabbard is confirmed, America’s allies may not share as much information with the U.S."  |
 | **Viewpoints**                   | Gabbard's nomination is considered alarming and dangerous for U.S. national security; Her anti-war stance and criticism of military interventions draw both support and criticism. |
 
+Click [here](https://github.com/zjunlp/OneKE/tree/main/examples/results/NewsExtraction.json) to obtain the raw results in `json` format.
 > Note: The actual extraction results may not exactly match this due to LLM randomness.
 
-In contrast to eariler tasks, the `Base-type` Task requires you to provide an explicit `Instruction` that clearly defines your extraction task, while not allowing the setting of `constraint` values.
+In contrast to eariler tasks, the `Base-Type` Task requires you to provide an explicit `Instruction` that clearly defines your extraction task, while not allowing the setting of `constraint` values.
 
 
 
@@ -424,8 +447,8 @@ You can choose from various open-source or proprietary model APIs to perform inf
   | OpenAI |  A series of GPT foundation models offered by OpenAI, such as GPT-3.5 and GPT-4-turbo, which are renowned for their outstanding capabilities in natural language processing. |
   | DeepSeek | High-performance LLMs that have demonstrated exceptional capabilities in both English and Chinese benchmarks. |
   | ***Local Deploy***| 
-  | LLaMA3 series| Meta's series of large language models, with tens to hundreds of billions of parameters, have shown advanced performance on industry-standard benchmarks. |
-  | Qwen2.5 series| LLMs developed by the Qwen team, come in various parameter sizes and exhibit strong capabilities in both English and Chinese. |
+  | LLaMA3-Instruct series| Meta's series of large language models, with tens to hundreds of billions of parameters, have shown advanced performance on industry-standard benchmarks. |
+  | Qwen2.5-Instruct series| LLMs developed by the Qwen team, come in various parameter sizes and exhibit strong capabilities in both English and Chinese. |
   | ChatGLM4-9B | The latest model series by the Zhipu team, which achieve breakthroughs in multiple metrics, excel as bilingual (Chinese-English) chat models. |
   | MiniCPM3-4B | A lightweight language model with 4B parameters,  matches or even surpasses 7B-9B models in most evaluation benchmarks.|
 
@@ -439,7 +462,7 @@ In practice, you can use the YAML file configuration to employ various LLMs:
     api_key: your_api_key # your API key for the model with API service. No need for open-source models.
     base_url: https://api.openai.com/v1 # base URL for the API service. No need for open-source models.
   ```
-- **Local Deploy**: Set the `model_name_or_pat` to either the model name on Hugging Face or the path to the local model.
+- **Local Deploy**: Set the `model_name_or_path` to either the model name on Hugging Face or the path to the local model.
   For exmaple:
   ```yaml
   model:
@@ -533,7 +556,7 @@ Here are some network issues you might encounter and the corresponding solutions
 - Pip Installation Failure: Use mirror websites, run the command as `pip install -i [mirror-source] ...`.
 - Docker Image Pull Failure: Configure the docker daemon to add repository mirrors.
 - Nltk Download Failure: Manually download the `nltk` package and place it in the proper directory.
-- Model Dowload Failure: Use the `Hugging Face` mirror site or `ModelScope` to download model, and specify the local path to the model when using it. 
+- Model Dowload Failure: Use the `Hugging Face Mirror` site or `ModelScope` to download model, and specify the local path to the model when using it. 
     > Note: We use `all-MiniLM-L6-v2` model by default for case matching, so it needs to be downloaded during execution. If network issues occur, manually download the model, and update the `embedding_model` to its local path in the `src/config.yaml` file.
 
 
