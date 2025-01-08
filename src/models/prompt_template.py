@@ -84,7 +84,7 @@ SUMMARIZE_INSTRUCTION = """
 **Result List**: {answer_list}
 
 **Output Schema**: {schema}
-Now summarize all the information from the Result List. 
+Now summarize all the information from the Result List. Filter or merge the redundant information.
 """
 summarize_instruction = PromptTemplate(
     input_variables=["instruction", "examples", "answer_list", "schema"],

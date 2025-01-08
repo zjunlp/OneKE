@@ -10,11 +10,15 @@ import copy
 
 import warnings
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+docker_model_path = "/app/model/all-MiniLM-L6-v2"
 warnings.filterwarnings("ignore", category=FutureWarning, message=r".*clean_up_tokenization_spaces*")
 
 class CaseRepository:
     def __init__(self):
-        self.embedder = SentenceTransformer(config['model']['embedding_model'])
+        try:
+            self.embedder = SentenceTransformer(docker_model_path)
+        except:
+            self.embedder = SentenceTransformer(config['model']['embedding_model'])
         self.embedder.to(device)  
         self.corpus = self.load_corpus()
         self.embedded_corpus = self.embed_corpus()

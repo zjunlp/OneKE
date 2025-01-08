@@ -85,7 +85,7 @@ class NewsReport(BaseModel):
     publication_date: Optional[str] = Field(description="The publication date of the report")
     keywords: Optional[List[str]] = Field(description="List of keywords or topics covered in the news report")
     events: List[Event] = Field(description="Events covered in the news report")
-    quotes: Optional[List[str]] = Field(default=None, description="Quotes related to the news, if any")
+    quotes: Optional[dict] = Field(default=None, description="Quotes related to the news, with keys as the citation sources and values as the quoted content. ")
     viewpoints: Optional[List[str]] = Field(default=None, description="Different viewpoints regarding the news")
 
 # --------- You can customize new extraction schemas below -------- #

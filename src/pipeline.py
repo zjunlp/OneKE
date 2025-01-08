@@ -46,7 +46,8 @@ class Pipeline:
                            file_path: str = "",
                            truth: str = "",
                            mode: str = "quick",
-                           update_case: bool = False
+                           update_case: bool = False,
+                           show_trajectory: bool = False
                            ):
         
         data = DataPoint(task=task, instruction=instruction, text=text, output_schema=output_schema, constraint=constraint, use_file=use_file, file_path=file_path, truth=truth)
@@ -68,6 +69,10 @@ class Pipeline:
                 raise AttributeError(f"Method '{method_name}' not found in {agent_name}.")
             data = method(data)
         data = self.extraction_agent.summarize_answer(data)
+        
+        # show result
+        if show_trajectory:
+            print("Extraction Trajectory: \n", json.dumps(data.get_result_trajectory(), indent=2))
         print("Extraction Result: \n", json.dumps(data.pred, indent=2))
         
         # Case Update

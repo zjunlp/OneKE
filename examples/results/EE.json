@@ -1,0 +1,13 @@
+{
+    "event_list": [
+      {
+        "event_type": "data breach",
+        "event_trigger": "compromised",
+        "event_argument": {
+          "number of victim": 326000,
+          "compromised data": "personal information contained in email accounts",
+          "victim": "individuals whose personal information was compromised"
+        }
+      }
+    ]
+}

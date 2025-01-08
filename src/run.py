@@ -37,6 +37,7 @@ def load_extraction_config(yaml_path):
     file_path = extraction_config.get('file_path', "")
     mode = extraction_config.get('mode', "quick")
     update_case = extraction_config.get('update_case', False)
+    show_trajectory = extraction_config.get('show_trajectory', False)
 
     # 返回一个包含这些变量的字典
     return {
@@ -56,7 +57,8 @@ def load_extraction_config(yaml_path):
             "use_file": use_file,
             "file_path": file_path,
             "mode": mode,
-            "update_case": update_case
+            "update_case": update_case,
+            "show_trajectory": show_trajectory
         }
     }
 
@@ -83,7 +85,7 @@ def main():
     else:
         model = clazz(model_config['model_name_or_path'], model_config['api_key'], model_config['base_url'])
     pipeline = Pipeline(model)
-    result, trajectory = pipeline.get_extract_result(task=extraction_config['task'], instruction=extraction_config['instruction'], text=extraction_config['text'], output_schema=extraction_config['output_schema'], constraint=extraction_config['constraint'], use_file=extraction_config['use_file'], file_path=extraction_config['file_path'],truth=extraction_config['truth'], mode=extraction_config['mode'], update_case=extraction_config['update_case'])
+    result, trajectory = pipeline.get_extract_result(task=extraction_config['task'], instruction=extraction_config['instruction'], text=extraction_config['text'], output_schema=extraction_config['output_schema'], constraint=extraction_config['constraint'], use_file=extraction_config['use_file'], file_path=extraction_config['file_path'],truth=extraction_config['truth'], mode=extraction_config['mode'], update_case=extraction_config['update_case'], show_trajectory=extraction_config['show_trajectory'])
     return 
 
 if __name__ == "__main__":

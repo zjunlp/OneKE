@@ -12,4 +12,4 @@ extraction:
   output_schema: NewsReport # output schema for the extraction task. Selected the from schema repository.
   mode: customized # extraction mode, chosen from quick, detailed, customized. Default set to quick. See src/config.yaml for more details.
   update_case: false # whether to update the case repository. Default set to false.
-
+  show_trajectory: false # whether to display the extracted intermediate steps

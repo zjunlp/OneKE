@@ -14,6 +14,4 @@ Text = "Finally , every other year , ELRA organizes a major conference LREC , th
 Constraint = ["nationality", "country capital", "place of death", "children", "location contains", "place of birth", "place lived", "administrative division of country", "country of administrative divisions", "company", "neighborhood of", "company founders"]
 
 # get extraction result
-result, trajectory = pipeline.get_extract_result(task=Task, text=Text, constraint=Constraint)
-print("Trajectory:", json.dumps(trajectory, indent=4))
-
+result, trajectory = pipeline.get_extract_result(task=Task, text=Text, constraint=Constraint, show_trajectory=True)
