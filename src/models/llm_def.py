@@ -6,7 +6,7 @@ Supports:
 """
 
 from transformers import pipeline
-from transformers import AutoTokenizer, AutoModelForCausalLM, AutoTokenizer
+from transformers import AutoTokenizer, AutoModelForCausalLM, AutoTokenizer, BitsAndBytesConfig, AutoConfig, GenerationConfig
 import torch
 import openai
 import os
@@ -21,6 +21,7 @@ class BaseEngine:
         self.temperature = 0.2
         self.top_p = 0.9
         self.max_tokens = 1024
+        self.device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
         
     def get_chat_response(self, prompt):
         raise NotImplementedError
@@ -82,7 +83,7 @@ class Qwen(BaseEngine):
             tokenize=False,
             add_generation_prompt=True
         )
-        model_inputs = self.tokenizer([text], return_tensors="pt").to(self.model.device)
+        model_inputs = self.tokenizer([text], return_tensors="pt").to(self.device)
         generated_ids = self.model.generate(
             **model_inputs,
             temperature=self.temperature,
@@ -113,7 +114,7 @@ class MiniCPM(BaseEngine):
             {"role": "system", "content": "You are a helpful assistant."},
             {"role": "user", "content": prompt}
         ]
-        model_inputs = self.tokenizer.apply_chat_template(messages, return_tensors="pt", add_generation_prompt=True).to(self.model.device)
+        model_inputs = self.tokenizer.apply_chat_template(messages, return_tensors="pt", add_generation_prompt=True).to(self.device)
         model_outputs = self.model.generate(
             model_inputs,
             temperature=self.temperature,
@@ -145,7 +146,7 @@ class ChatGLM(BaseEngine):
             {"role": "system", "content": "You are a helpful assistant."},
             {"role": "user", "content": prompt}
         ]
-        model_inputs = self.tokenizer.apply_chat_template(messages, return_tensors="pt", return_dict=True, add_generation_prompt=True, tokenize=True).to(self.model.device)
+        model_inputs = self.tokenizer.apply_chat_template(messages, return_tensors="pt", return_dict=True, add_generation_prompt=True, tokenize=True).to(self.device)
         model_outputs = self.model.generate(
             **model_inputs,
             temperature=self.temperature,
@@ -157,6 +158,42 @@ class ChatGLM(BaseEngine):
         
         return response
 
+class OneKE(BaseEngine):
+    def __init__(self, model_name_or_path: str):
+        super().__init__(model_name_or_path)
+        self.name = "OneKE"
+        self.model_id = model_name_or_path
+        config = AutoConfig.from_pretrained(self.model_id, trust_remote_code=True)
+        quantization_config=BitsAndBytesConfig(     
+            load_in_4bit=True,
+            llm_int8_threshold=6.0,
+            llm_int8_has_fp16_weight=False,
+            bnb_4bit_compute_dtype=torch.bfloat16,
+            bnb_4bit_use_double_quant=True,
+            bnb_4bit_quant_type="nf4",
+        )
+        self.model = AutoModelForCausalLM.from_pretrained(
+            self.model_id,
+            config=config,
+            device_map="auto",  
+            quantization_config=quantization_config,
+            torch_dtype=torch.bfloat16,
+            trust_remote_code=True,
+        )
+        
+    def get_chat_response(self, prompt):
+        system_prompt = '<<SYS>>\nYou are a helpful assistant. 你是一个乐于助人的助手。\n<</SYS>>\n\n'
+        sintruct = '[INST] ' + system_prompt + prompt + '[/INST]'
+        input_ids = self.tokenizer.encode(prompt, return_tensors='pt')
+        input_ids = self.tokenizer.encode(sintruct, return_tensors="pt").to(self.device)
+        input_length = input_ids.size(1)
+        generation_output = self.model.generate(input_ids=input_ids, generation_config=GenerationConfig(max_length=1024, max_new_tokens=512, return_dict_in_generate=True,pad_token_id=self.tokenizer.pad_token_id,eos_token_id=self.tokenizer.eos_token_id))
+        generation_output = generation_output.sequences[0]
+        generation_output = generation_output[input_length:]
+        response = self.tokenizer.decode(generation_output, skip_special_tokens=True)
+        
+        return response
+        
 class ChatGPT(BaseEngine):
     def __init__(self, model_name_or_path: str, api_key: str, base_url=openai.base_url):
         self.name = "ChatGPT"

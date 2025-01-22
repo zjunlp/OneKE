@@ -4,7 +4,7 @@ from .knowledge_base.case_repository import CaseRepositoryHandler
 
 class InformationExtractor:
     def __init__(self, llm: BaseEngine):
-        self.llm = llm    
+        self.llm = llm
     
     def extract_information(self, instruction="", text="", examples="", schema="", additional_info=""):
         examples = good_case_wrapper(examples)
@@ -13,6 +13,13 @@ class InformationExtractor:
         response = extract_json_dict(response)
         return response
 
+    def extract_information_compatible(self, task="", text="", constraint=""):
+        instruction = instruction_mapper.get(task)
+        prompt = extract_instruction_json.format(instruction=instruction, constraint=constraint, input=text)
+        response = self.llm.get_chat_response(prompt) 
+        response = extract_json_dict(response)
+        return response
+    
     def summarize_answer(self, instruction="", answer_list="", schema="", additional_info=""):
         prompt = summarize_instruction.format(instruction=instruction, answer_list=answer_list, schema=schema, additional_info=additional_info)
         response = self.llm.get_chat_response(prompt)
@@ -31,26 +38,43 @@ class ExtractionAgent:
             return data
         if data.task == "NER":
             constraint = json.dumps(data.constraint)
-            if "**Entity Type Constraint**" in constraint:
+            if "**Entity Type Constraint**" in constraint or self.llm.name == "OneKE":
                 return data
             data.constraint = f"\n**Entity Type Constraint**: The type of entities must be chosen from the following list.\n{constraint}\n"
         elif data.task == "RE":
             constraint = json.dumps(data.constraint)
-            if "**Relation Type Constraint**" in constraint:
+            if "**Relation Type Constraint**" in constraint or self.llm.name == "OneKE":
                 return data
             data.constraint = f"\n**Relation Type Constraint**: The type of relations must be chosen from the following list.\n{constraint}\n"
         elif data.task == "EE":
             constraint = json.dumps(data.constraint)
             if "**Event Extraction Constraint**" in constraint:
                 return data
-            data.constraint = f"\n**Event Extraction Constraint**: The event type must be selected from the following dictionary keys, and its event arguments should be chosen from its corresponding dictionary values. \n{constraint}\n"
+            if self.llm.name != "OneKE":
+                data.constraint = f"\n**Event Extraction Constraint**: The event type must be selected from the following dictionary keys, and its event arguments should be chosen from its corresponding dictionary values. \n{constraint}\n"
+            else:
+                try:
+                    result = [
+                                {
+                                    "event_type": key,
+                                    "trigger": True,
+                                    "arguments": value
+                                }
+                                for key, value in data.constraint.items()
+                            ]
+                    data.constraint = json.dumps(result)
+                except:
+                    print("Invalid Constraint: Event Extraction constraint must be a dictionary with event types as keys and lists of arguments as values.", data.constraint)
         return data
             
     def extract_information_direct(self, data: DataPoint):
         data = self.__get_constraint(data)
         result_list = []
         for chunk_text in data.chunk_text_list:
-            extract_direct_result = self.module.extract_information(instruction=data.instruction, text=chunk_text, schema=data.output_schema, examples="", additional_info=data.constraint)
+            if self.llm.name != "OneKE":
+                extract_direct_result = self.module.extract_information(instruction=data.instruction, text=chunk_text, schema=data.output_schema, examples="", additional_info=data.constraint)
+            else:
+                extract_direct_result = self.module.extract_information_compatible(task=data.task, text=chunk_text, constraint=data.constraint)
             result_list.append(extract_direct_result)
         function_name = current_function_name()
         data.set_result_list(result_list)

@@ -12,6 +12,17 @@ class Pipeline:
         self.extraction_agent = ExtractionAgent(llm = llm, case_repo = self.case_repo)
         self.reflection_agent = ReflectionAgent(llm = llm, case_repo = self.case_repo)        
     
+    def __check_consistancy(self, llm, task, mode, update_case):
+        if llm.name == "OneKE":
+            if task == "Base":
+                raise ValueError("The finetuned OneKE only supports quick extraction mode for NER, RE and EE Task.")
+            else:
+                mode = "quick"
+                update_case = False
+                print("The fine-tuned OneKE defaults to quick extraction mode without case update.")
+                return mode, update_case
+        return mode, update_case
+    
     def __init_method(self, data: DataPoint, process_method):
         default_order = ["schema_agent", "extraction_agent", "reflection_agent"]
         if "schema_agent" not in process_method:
@@ -50,6 +61,10 @@ class Pipeline:
                            show_trajectory: bool = False
                            ):
         
+        # Check Consistancy
+        mode, update_case = self.__check_consistancy(self.llm, task, mode, update_case)
+        
+        # Load Data
         data = DataPoint(task=task, instruction=instruction, text=text, output_schema=output_schema, constraint=constraint, use_file=use_file, file_path=file_path, truth=truth)
         data = self.__init_data(data)
         if mode in config['agent']['mode'].keys():

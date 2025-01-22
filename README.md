@@ -40,6 +40,7 @@
 ---
 
 ## 🔔News
+- **[2025/01] [OneKE](https://arxiv.org/abs/2412.20005) is accepted by WWW 2025 Demonstration Track 🎉🎉🎉.**
 - **[2024/12] We open source the *OneKE* framework, supporting multi-agent knowledge extraction across various scenarios.**
 - **[2024/04] We release a new bilingual (Chinese and English) schema-based information extraction model called [OneKE](https://huggingface.co/zjunlp/OneKE) based on Chinese-Alpaca-2-13B.**
 
@@ -145,7 +146,7 @@ Here is the example for the web news knowledge extraction scenario, with the sou
 ```yaml
 # model configuration
 model:
-  category: ChatGPT # model category, chosen from ChatGPT, DeepSeek, LLaMA, Qwen, ChatGLM, MiniCPM.
+  category: ChatGPT # model category, chosen from ChatGPT, DeepSeek, LLaMA, Qwen, ChatGLM, MiniCPM, OneKE.
   model_name_or_path: gpt-4o-mini # model name, chosen from the model list of the selected category.
   api_key: your_api_key # your API key for the model with API service. No need for open-source models.
   base_url: https://api.openai.com/v1 # base URL for the API service. No need for open-source models.
@@ -168,7 +169,7 @@ Here is the example for the book news extraction scenario, with the source extra
 ```yaml
 model:
   # Recommend using ChatGPT or DeepSeek APIs for complex IE task.
-  category: ChatGPT # model category, chosen from ChatGPT, DeepSeek, LLaMA, Qwen, ChatGLM, MiniCPM.
+  category: ChatGPT # model category, chosen from ChatGPT, DeepSeek, LLaMA, Qwen, ChatGLM, MiniCPM, OneKE.
   model_name_or_path: gpt-4o-mini # # model name, chosen from the model list of the selected category.
   api_key: your_api_key # your API key for the model with API service. No need for open-source models.
   base_url: https://api.openai.com/v1 # # base URL for the API service. No need for open-source models.
@@ -457,13 +458,14 @@ You can choose from various open-source or proprietary model APIs to perform inf
   | Qwen2.5-Instruct series| LLMs developed by the Qwen team, come in various parameter sizes and exhibit strong capabilities in both English and Chinese. |
   | ChatGLM4-9B | The latest model series by the Zhipu team, which achieve breakthroughs in multiple metrics, excel as bilingual (Chinese-English) chat models. |
   | MiniCPM3-4B | A lightweight language model with 4B parameters,  matches or even surpasses 7B-9B models in most evaluation benchmarks.|
+  | OneKE | A large-scale model for knowledge extraction jointly developed by Ant Group and Zhejiang University. 
 
 In practice, you can use the YAML file configuration to employ various LLMs:
 - **API Service**:  Set the `model_name_or_path` to the available model name provided by the company, and enter your `api_key` as well as the `base_url`.
   For exmaple:
   ```yaml
   model:
-    category: ChatGPT # model category, chosen from ChatGPT, DeepSeek, LLaMA, Qwen, ChatGLM, MiniCPM.
+    category: ChatGPT # model category, chosen from ChatGPT, DeepSeek, LLaMA, Qwen, ChatGLM, MiniCPM, OneKE.
     model_name_or_path: gpt-4o-mini # model name, chosen from the model list of the selected category.
     api_key: your_api_key # your API key for the model with API service. No need for open-source models.
     base_url: https://api.openai.com/v1 # base URL for the API service. No need for open-source models.
@@ -472,10 +474,10 @@ In practice, you can use the YAML file configuration to employ various LLMs:
   For exmaple:
   ```yaml
   model:
-    category: LLaMA # model category, chosen from ChatGPT, DeepSeek, LLaMA, Qwen, ChatGLM, MiniCPM.
+    category: LLaMA # model category, chosen from ChatGPT, DeepSeek, LLaMA, Qwen, ChatGLM, MiniCPM, OneKE.
     model_name_or_path: meta-llama/Meta-Llama-3-8B-Instruct # model name to download from huggingface or use the local model path.
   ```
-Note that the category of model **must** be chosen from ChatGPT, DeepSeek, LLaMA, Qwen, ChatGLM, MiniCPM.
+Note that the category of model **must** be chosen from ChatGPT, DeepSeek, LLaMA, Qwen, ChatGLM, MiniCPM, OneKE.
 
 ### 💡Extraction Method Support
 You can freely combine different extraction methods to complete the information extraction task.

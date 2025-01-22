@@ -11,3 +11,6 @@ torch==2.4.0
 accelerate==1.1.1
 RapidFuzz==3.10.1
 sentence-transformers==3.3.0
+sentencepiece==0.1.98
+protobuf==5.29.3
+bitsandbytes==0.45.0
