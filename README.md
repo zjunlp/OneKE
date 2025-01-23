@@ -107,7 +107,7 @@ git clone https://github.com/zjunlp/OneKE.git
 ```
 2. Pull the docker image from the mirror repository.
 ```bash
-docker pull zjunlp/oneke:v2
+docker pull zjunlp/oneke:v3
 # If you encounter network issues, consider setting up domestic registry mirrors for docker.
 ```
 3. Launch a container from the image.
