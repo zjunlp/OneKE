@@ -114,14 +114,14 @@ docker pull zjunlp/oneke:v3
 ```bash
 docker run --gpus all \
   -v ./OneKE:/app/OneKE \
-  -it oneke:v2 /bin/bash
+  -it oneke:v3 /bin/bash
 ```
 If using locally deployed models, ensure the local model path is mapped to the container:
 ```bash
 docker run --gpus all \
   -v ./OneKE:/app/OneKE \
   -v your_local_model_path:/app/model/your_model_name \
-  -it oneke:v2 /bin/bash
+  -it oneke:v3 /bin/bash
 ```
 Map any **necessary local files** to the container paths as shown above, and use **container paths** in your code and execution.
 
@@ -565,7 +565,7 @@ Here are some network issues you might encounter and the corresponding solutions
 - Docker Image Pull Failure: Configure the docker daemon to add repository mirrors.
 - Nltk Download Failure: Manually download the `nltk` package and place it in the proper directory.
 - Model Dowload Failure: Use the `Hugging Face Mirror` site or `ModelScope` to download model, and specify the local path to the model when using it. 
-    > Note: We use `all-MiniLM-L6-v2` model by default for case matching, so it needs to be downloaded during execution. If network issues occur, manually download the model, and update the `embedding_model` to its local path in the `src/config.yaml` file.
+    > Note: We use `all-MiniLM-L6-v3` model by default for case matching, so it needs to be downloaded during execution. If network issues occur, manually download the model, and update the `embedding_model` to its local path in the `src/config.yaml` file.
 
 
 ## 🎉Contributors
