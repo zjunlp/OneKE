@@ -6,7 +6,7 @@
 <h3 align="center"> A Dockerized Schema-Guided Knowledge Extraction System </h3>
 
 <p align="center">
-  <a href="https://oneke.openkg.cn/">🌐Web</a> •
+  <a href="http://oneke.openkg.cn/">🌐Web</a> •
   <a href="http://oneke.openkg.cn/demo.mp4">📹Video</a>
 </p>
 
