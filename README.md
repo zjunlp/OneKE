@@ -458,7 +458,7 @@ You can choose from various open-source or proprietary model APIs to perform inf
   | Qwen2.5-Instruct series| LLMs developed by the Qwen team, come in various parameter sizes and exhibit strong capabilities in both English and Chinese. |
   | ChatGLM4-9B | The latest model series by the Zhipu team, which achieve breakthroughs in multiple metrics, excel as bilingual (Chinese-English) chat models. |
   | MiniCPM3-4B | A lightweight language model with 4B parameters,  matches or even surpasses 7B-9B models in most evaluation benchmarks.|
-  | OneKE | A large-scale model for knowledge extraction jointly developed by Ant Group and Zhejiang University. 
+  | [OneKE](https://huggingface.co/zjunlp/OneKE) (model) | A pre-trained language model for knowledge extraction jointly developed by Ant Group and Zhejiang University. 
 
 In practice, you can use the YAML file configuration to employ various LLMs:
 - **API Service**:  Set the `model_name_or_path` to the available model name provided by the company, and enter your `api_key` as well as the `base_url`.
