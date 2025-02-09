@@ -468,7 +468,7 @@ You can choose from various open-source or proprietary model APIs to perform inf
   | ChatGLM4-9B | The latest model series by the Zhipu team, which achieve breakthroughs in multiple metrics, excel as bilingual (Chinese-English) chat models. |
   | MiniCPM3-4B | A lightweight language model with 4B parameters,  matches or even surpasses 7B-9B models in most evaluation benchmarks.|
   | OneKE | A large-scale model for knowledge extraction jointly developed by Ant Group and Zhejiang University. 
-  | DeepSeek-R1 series| A bilingual Chinese-English strong reasoning model series provided by DeepSeek, featuring the original `DeepSeek-R1` and various distilled versions based on smaller models. |
+  | DeepSeek-R1 series| A bilingual Chinese-English strong reasoning model series provided by DeepSeek, featuring the original DeepSeek-R1 and various distilled versions based on smaller models. |
   > Note: We recommend deploying the DeepSeek-R1 models with VLLM.
 
 
@@ -485,7 +485,7 @@ In practice, you can use the YAML file configuration to employ various LLMs:
     base_url: https://api.deepseek.com # base URL for the API service. No need for open-source models.
   ```
 - **Local Deploy**: Set the `model_name_or_path` to either the model name on Hugging Face or the path to the local model. We support using either `Transformer` or `vllm` to access the models.
-  -  Transformer Example:
+  - Transformer Example:
     ```yaml
     model:
       category: LLaMA # model category, chosen from LLaMA, Qwen, ChatGLM, MiniCPM, OneKE.
@@ -505,7 +505,7 @@ In practice, you can use the YAML file configuration to employ various LLMs:
     config_file=your_yaml_file_path # REMEMBER to set vllm_serve to TRUE!
     python src/models/vllm_serve.py --config $config_file # deploy local model via vllm, executed in the OneKE directory
     ```
-    You can also run `vllm serve model_name_or_path` directly to start the VLLM service. See the official [Github](https://github.com/vllm-project/vllm) for more details.
+    You can also run the command `vllm serve model_name_or_path` directly to start the VLLM service. See the [official documents](https://docs.vllm.ai/en/latest/getting_started/quickstart.html) for more details.
 
 ### 💡Extraction Method Support
 You can freely combine different extraction methods to complete the information extraction task.
