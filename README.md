@@ -40,6 +40,7 @@
 ---
 
 ## 🔔News
+- **[2025/02] We support the local deployment of the [DeepSeek-R1](https://huggingface.co/collections/deepseek-ai/deepseek-r1-678e1e131c0169c0bc89728d) series in addition to the existing API service, as well as vllm acceleration for other LLMs.**
 - **[2025/01] [OneKE](https://arxiv.org/abs/2412.20005) is accepted by WWW 2025 Demonstration Track 🎉🎉🎉.**
 - **[2024/12] We open source the *OneKE* framework, supporting multi-agent knowledge extraction across various scenarios.**
 - **[2024/04] We release a new bilingual (Chinese and English) schema-based information extraction model called [OneKE](https://huggingface.co/zjunlp/OneKE) based on Chinese-Alpaca-2-13B.**
@@ -146,10 +147,10 @@ Here is the example for the web news knowledge extraction scenario, with the sou
 ```yaml
 # model configuration
 model:
-  category: ChatGPT # model category, chosen from ChatGPT, DeepSeek, LLaMA, Qwen, ChatGLM, MiniCPM, OneKE.
-  model_name_or_path: gpt-4o-mini # model name, chosen from the model list of the selected category.
-  api_key: your_api_key # your API key for the model with API service. No need for open-source models.
-  base_url: https://api.openai.com/v1 # base URL for the API service. No need for open-source models.
+  category: DeepSeek  # model category, chosen from ChatGPT, DeepSeek, LLaMA, Qwen, ChatGLM, MiniCPM, OneKE.
+  model_name_or_path: deepseek-chat # model name, chosen from deepseek-chat and deepseek-reasoner. Choose deepseek-chat to use DeepSeek-V3 or choose deepseek-reasoner to use DeepSeek-R1.
+  api_key: your_api_key # your API key for the model with API service. No need for open-source models. 
+  base_url: https://api.deepseek.com # base URL for the API service. No need for open-source models.
 
 # extraction configuration
 extraction:             
@@ -170,7 +171,7 @@ Here is the example for the book news extraction scenario, with the source extra
 model:
   # Recommend using ChatGPT or DeepSeek APIs for complex IE task.
   category: ChatGPT # model category, chosen from ChatGPT, DeepSeek, LLaMA, Qwen, ChatGLM, MiniCPM, OneKE.
-  model_name_or_path: gpt-4o-mini # # model name, chosen from the model list of the selected category.
+  model_name_or_path: gpt-4o-mini # model name, chosen from the model list of the selected category.
   api_key: your_api_key # your API key for the model with API service. No need for open-source models.
   base_url: https://api.openai.com/v1 # # base URL for the API service. No need for open-source models.
 
@@ -193,8 +194,16 @@ You can choose an existing configuration file or customize the extraction settin
 Specify the configuration file path and run the code to start the extraction process.
 ```bash
 config_file=your_yaml_file_path # configuration file path, use the container path if inside a container
-python src/run.py --config $config_file # executed in the OneKE directory
+python src/run.py --config $config_file # start extraction, executed in the OneKE directory
 ```
+
+If you want to deploy the local models using vllm, run the following code:
+```bash
+config_file=your_yaml_file_path # REMEMBER to set vllm_serve to TRUE!
+python src/models/vllm_serve.py --config $config_file # deploy local model via vllm, executed in the OneKE directory
+python src/run.py --config $config_file # start extraction, executed in the OneKE directory
+```
+
 Refer to [here](https://github.com/zjunlp/OneKE/tree/main/examples/results) to get an overview of the knowledge extraction results.
 
 #### 🖊️Start with Python
@@ -459,25 +468,44 @@ You can choose from various open-source or proprietary model APIs to perform inf
   | ChatGLM4-9B | The latest model series by the Zhipu team, which achieve breakthroughs in multiple metrics, excel as bilingual (Chinese-English) chat models. |
   | MiniCPM3-4B | A lightweight language model with 4B parameters,  matches or even surpasses 7B-9B models in most evaluation benchmarks.|
   | OneKE | A large-scale model for knowledge extraction jointly developed by Ant Group and Zhejiang University. 
+  | DeepSeek-R1 series| A bilingual Chinese-English strong reasoning model series provided by DeepSeek, featuring the original `DeepSeek-R1` and various distilled versions based on smaller models. |
+  > Note: We recommend deploying the DeepSeek-R1 models with VLLM.
+
+
+
 
 In practice, you can use the YAML file configuration to employ various LLMs:
 - **API Service**:  Set the `model_name_or_path` to the available model name provided by the company, and enter your `api_key` as well as the `base_url`.
   For exmaple:
   ```yaml
   model:
-    category: ChatGPT # model category, chosen from ChatGPT, DeepSeek, LLaMA, Qwen, ChatGLM, MiniCPM, OneKE.
-    model_name_or_path: gpt-4o-mini # model name, chosen from the model list of the selected category.
-    api_key: your_api_key # your API key for the model with API service. No need for open-source models.
-    base_url: https://api.openai.com/v1 # base URL for the API service. No need for open-source models.
+    category: DeepSeek # model category, chosen from ChatGPT and  DeepSeek
+    model_name_or_path: deepseek-chat # model name, chosen from deepseek-chat and deepseek-reasoner. Choose deepseek-chat to use DeepSeek-V3 or choose deepseek-reasoner to use DeepSeek-R1.
+    api_key: your_api_key # your API key for the model with API service. 
+    base_url: https://api.deepseek.com # base URL for the API service. No need for open-source models.
   ```
-- **Local Deploy**: Set the `model_name_or_path` to either the model name on Hugging Face or the path to the local model.
-  For exmaple:
-  ```yaml
-  model:
-    category: LLaMA # model category, chosen from ChatGPT, DeepSeek, LLaMA, Qwen, ChatGLM, MiniCPM, OneKE.
-    model_name_or_path: meta-llama/Meta-Llama-3-8B-Instruct # model name to download from huggingface or use the local model path.
-  ```
-Note that the category of model **must** be chosen from ChatGPT, DeepSeek, LLaMA, Qwen, ChatGLM, MiniCPM, OneKE.
+- **Local Deploy**: Set the `model_name_or_path` to either the model name on Hugging Face or the path to the local model. We support using either `Transformer` or `vllm` to access the models.
+  -  Transformer Example:
+    ```yaml
+    model:
+      category: LLaMA # model category, chosen from LLaMA, Qwen, ChatGLM, MiniCPM, OneKE.
+      model_name_or_path: meta-llama/Meta-Llama-3-8B-Instruct # model name to download from huggingface or use the local model path.
+      vllm_serve: false # whether to use the vllm. Default set to false.
+    ```
+    Note that the category of deployment model **must** be chosen from LLaMA, Qwen, ChatGLM, MiniCPM, OneKE.
+  - VLLM Example:
+    ```yaml
+    model:
+      category: DeepSeek # model category
+      model_name_or_path: meta-llama/Meta-Llama-3-8B-Instruct # model name to download from huggingface or use the local model path.
+      vllm_serve: true # whether to use the vllm. Default set to false.
+    ```
+    Note that the **DeepSeek-R1** series models only support **VLLM** deployment. Remember to **start the VLLM service** before running the extraction task. The reference code is as follows:
+    ```shell
+    config_file=your_yaml_file_path # REMEMBER to set vllm_serve to TRUE!
+    python src/models/vllm_serve.py --config $config_file # deploy local model via vllm, executed in the OneKE directory
+    ```
+    You can also run `vllm serve model_name_or_path` directly to start the VLLM service. See the official [Github](https://github.com/vllm-project/vllm) for more details.
 
 ### 💡Extraction Method Support
 You can freely combine different extraction methods to complete the information extraction task.

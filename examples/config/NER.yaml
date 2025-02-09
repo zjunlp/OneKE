@@ -1,6 +1,7 @@
 model:
   category: LLaMA # model category, chosen from ChatGPT, DeepSeek, LLaMA, Qwen, ChatGLM, MiniCPM, OneKE.
   model_name_or_path: meta-llama/Meta-Llama-3-8B-Instruct # model name to download from huggingface or use the local model path.
+  vllm_serve: false # whether to use the vllm. Default set to false.
 
 extraction: 
   task: NER  # task type, chosen from Base, NER, RE, EE.

@@ -17,7 +17,65 @@ import inspect
 import ast
 with open(os.path.join(os.path.dirname(__file__), "..", "config.yaml")) as file:
     config = yaml.safe_load(file)
+    
+# Load configuration 
+def load_extraction_config(yaml_path):
+    # Read YAML content from the file path
+    if not os.path.exists(yaml_path):
+        print(f"Error: The config file '{yaml_path}' does not exist.")
+        return {}
+        
+    with open(yaml_path, 'r') as file:
+        config = yaml.safe_load(file)
 
+    # Extract the 'extraction' configuration dictionary
+    model_config = config.get('model', {})
+    extraction_config = config.get('extraction', {})
+    
+    # Model config
+    model_name_or_path = model_config.get('model_name_or_path', "")
+    model_category = model_config.get('category', "")
+    api_key = model_config.get('api_key', "")
+    base_url = model_config.get('base_url', "")
+    vllm_serve = model_config.get('vllm_serve', False)
+    
+    # Extraction config
+    task = extraction_config.get('task', "")
+    instruction = extraction_config.get('instruction', "")
+    text = extraction_config.get('text', "")
+    output_schema = extraction_config.get('output_schema', "")
+    constraint = extraction_config.get('constraint', "")
+    truth = extraction_config.get('truth', "")
+    use_file = extraction_config.get('use_file', False)
+    file_path = extraction_config.get('file_path', "")
+    mode = extraction_config.get('mode', "quick")
+    update_case = extraction_config.get('update_case', False)
+    show_trajectory = extraction_config.get('show_trajectory', False)
+
+    # Return a dictionary containing these variables
+    return {
+        "model": {
+            "model_name_or_path": model_name_or_path,
+            "category": model_category,
+            "api_key": api_key,
+            "base_url": base_url,
+            "vllm_serve": vllm_serve
+        },
+        "extraction": {
+            "task": task,
+            "instruction": instruction,
+            "text": text,
+            "output_schema": output_schema,
+            "constraint": constraint,
+            "truth": truth,
+            "use_file": use_file,
+            "file_path": file_path,
+            "mode": mode,
+            "update_case": update_case,
+            "show_trajectory": show_trajectory
+        }
+    }
+    
 # Split the string text into chunks
 def chunk_str(text):
     sentences = sent_tokenize(text)

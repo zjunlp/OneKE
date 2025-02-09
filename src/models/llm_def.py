@@ -247,3 +247,33 @@ class DeepSeek(BaseEngine):
             stop=None
         )
         return response.choices[0].message.content
+
+class LocalServer(BaseEngine):
+    def __init__(self, model_name_or_path: str, base_url="http://localhost:8000/v1"):
+        self.name = model_name_or_path.split('/')[-1]
+        self.model = model_name_or_path
+        self.base_url = base_url
+        self.temperature = 0.2
+        self.top_p = 0.9
+        self.max_tokens = 1024
+        self.api_key = "EMPTY_API_KEY"
+        self.client = OpenAI(api_key=self.api_key, base_url=self.base_url)
+    
+    def get_chat_response(self, input):
+        try:
+            response = self.client.chat.completions.create(
+                model=self.model,
+                messages=[
+                    {"role": "user", "content": input},
+                ],
+                stream=False,
+                temperature=self.temperature,
+                max_tokens=self.max_tokens,
+                stop=None
+            )
+            return response.choices[0].message.content
+        except ConnectionError:
+            print("Error: Unable to connect to the server. Please check if the vllm service is running and the port is 8080.")
+        except Exception as e:
+            print(f"Error: {e}")
+        

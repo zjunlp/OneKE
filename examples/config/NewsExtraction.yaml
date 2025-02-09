@@ -1,8 +1,8 @@
 model:
-  category: ChatGPT # model category, chosen from ChatGPT, DeepSeek, LLaMA, Qwen, ChatGLM, MiniCPM, OneKE.
-  model_name_or_path: gpt-4o-mini # model name, chosen from the model list of the selected category.
-  api_key: your_api_key # your API key for the model with API service. No need for open-source models.
-  base_url: https://api.openai.com/v1 # base URL for the API service. No need for open-source models.
+  category: DeepSeek  # model category, chosen from ChatGPT, DeepSeek, LLaMA, Qwen, ChatGLM, MiniCPM, OneKE.
+  model_name_or_path: deepseek-chat # model name, chosen from the model list of the selected category.
+  api_key: your_api_key  # your API key for the model with API service. No need for open-source models.
+  base_url: https://api.deepseek.com # base URL for the API service. No need for open-source models.
 
 extraction:             
   task: Base # task type, chosen from Base, NER, RE, EE.
