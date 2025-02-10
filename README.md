@@ -108,21 +108,21 @@ git clone https://github.com/zjunlp/OneKE.git
 ```
 2. Pull the docker image from the mirror repository.
 ```bash
-docker pull zjunlp/oneke:v2
+docker pull zjunlp/oneke:v4
 # If you encounter network issues, consider setting up domestic registry mirrors for docker.
 ```
 3. Launch a container from the image.
 ```bash
 docker run --gpus all \
   -v ./OneKE:/app/OneKE \
-  -it oneke:v2 /bin/bash
+  -it oneke:v4 /bin/bash
 ```
 If using locally deployed models, ensure the local model path is mapped to the container:
 ```bash
 docker run --gpus all \
   -v ./OneKE:/app/OneKE \
   -v your_local_model_path:/app/model/your_model_name \
-  -it oneke:v2 /bin/bash
+  -it oneke:v4 /bin/bash
 ```
 Map any **necessary local files** to the container paths as shown above, and use **container paths** in your code and execution.
 
