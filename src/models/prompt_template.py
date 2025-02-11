@@ -76,6 +76,25 @@ extract_instruction = PromptTemplate(
     template=EXTRACT_INSTRUCTION,
 )
 
+instruction_mapper = {
+    'NER': "You are an expert in named entity recognition. Please extract entities that match the schema definition from the input. Return an empty list if the entity type does not exist. Please respond in the format of a JSON string.",
+    'RE': "You are an expert in relationship extraction. Please extract relationship triples that match the schema definition from the input. Return an empty list for relationships that do not exist. Please respond in the format of a JSON string.",
+    'EE': "You are an expert in event extraction. Please extract events from the input that conform to the schema definition. Return an empty list for events that do not exist, and return NAN for arguments that do not exist. If an argument has multiple values, please return a list. Respond in the format of a JSON string.",
+}
+
+EXTRACT_INSTRUCTION_JSON = """
+{{
+    "instruction": {instruction},
+    "schema": {constraint},
+    "input": {input},
+}}
+"""
+
+extract_instruction_json = PromptTemplate(
+    input_variables=["instruction", "constraint", "input"],
+    template=EXTRACT_INSTRUCTION_JSON,
+)
+
 SUMMARIZE_INSTRUCTION = """
 **Instruction**: Below is a list of results obtained after segmenting and extracting information from a long article. Please consolidate all the answers to generate a final response.
 {examples}
@@ -90,6 +109,8 @@ summarize_instruction = PromptTemplate(
     input_variables=["instruction", "examples", "answer_list", "schema"],
     template=SUMMARIZE_INSTRUCTION,
 )
+
+
 
 
 # ==================================================================== #  
