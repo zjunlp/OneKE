@@ -385,7 +385,7 @@ The final extraction result should be:
   </tr>
 </table>
 
-Click [here](https://github.com/zjunlp/OneKE/tree/main/examples/results/NER.json) to obtain the raw results in `json` format.
+Click [here](https://github.com/zjunlp/OneKE/tree/main/examples/results/EE.json) to obtain the raw results in `json` format.
 > Note: The actual extraction results may not exactly match this due to LLM randomness.
 
 The extraction results show that the `data breach` event is identified using the trigger `compromised`, and the specific contents of different event arguments such as `compromised data` and `victim` have also been extracted.
