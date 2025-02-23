@@ -27,9 +27,7 @@ class Pipeline:
         default_order = ["schema_agent", "extraction_agent", "reflection_agent"]
         if "schema_agent" not in process_method:
             process_method["schema_agent"] = "get_default_schema"
-        if data.task == "Base":
-            process_method["schema_agent"] = "get_deduced_schema"
-        else:
+        if data.task != "Base":
             process_method["schema_agent"] = "get_retrieved_schema"
         if "extraction_agent" not in process_method:
             process_method["extraction_agent"] = "extract_information_direct"
