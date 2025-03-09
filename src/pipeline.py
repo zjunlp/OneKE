@@ -23,15 +23,15 @@ class Pipeline:
                 return mode, update_case
         return mode, update_case
 
-    def __init_method(self, data: DataPoint, process_method):
+    def __init_method(self, data: DataPoint, process_method2):
         default_order = ["schema_agent", "extraction_agent", "reflection_agent"]
-        if "schema_agent" not in process_method:
-            process_method["schema_agent"] = "get_default_schema"
+        if "schema_agent" not in process_method2:
+            process_method2["schema_agent"] = "get_default_schema"
         if data.task != "Base":
-            process_method["schema_agent"] = "get_retrieved_schema"
-        if "extraction_agent" not in process_method:
-            process_method["extraction_agent"] = "extract_information_direct"
-        sorted_process_method = {key: process_method[key] for key in default_order if key in process_method}
+            process_method2["schema_agent"] = "get_retrieved_schema"
+        if "extraction_agent" not in process_method2:
+            process_method2["extraction_agent"] = "extract_information_direct"
+        sorted_process_method = {key: process_method2[key] for key in default_order if key in process_method2}
         return sorted_process_method
 
     def __init_data(self, data: DataPoint):
@@ -49,6 +49,7 @@ class Pipeline:
     # main entry
     def get_extract_result(self,
                            task: TaskType,
+                           three_agents = {},
                            instruction: str = "",
                            text: str = "",
                            output_schema: str = "",
@@ -58,8 +59,11 @@ class Pipeline:
                            truth: str = "",
                            mode: str = "quick",
                            update_case: bool = False,
-                           show_trajectory: bool = False
+                           show_trajectory: bool = False,
+                           isgui: bool = False,
                            ):
+        # for key, value in locals().items():
+        #     print(f"{key}: {value}")
 
         # Check Consistancy
         mode, update_case = self.__check_consistancy(self.llm, task, mode, update_case)
@@ -68,11 +72,20 @@ class Pipeline:
         data = DataPoint(task=task, instruction=instruction, text=text, output_schema=output_schema, constraint=constraint, use_file=use_file, file_path=file_path, truth=truth)
         data = self.__init_data(data)
         if mode in config['agent']['mode'].keys():
-            process_method = config['agent']['mode'][mode]
+            process_method = config['agent']['mode'][mode].copy()
         else:
             process_method = mode
+
+        if isgui and mode == "customized":
+            process_method = three_agents
+            print("Customized 3-Agents: ", three_agents)
+
         sorted_process_method = self.__init_method(data, process_method)
         print("Process Method: ", sorted_process_method)
+
+        print_schema = False #
+        frontend_schema = "" #
+        frontend_res = "" #
 
         # Information Extract
         for agent_name, method_name in sorted_process_method.items():
@@ -83,12 +96,18 @@ class Pipeline:
             if not method:
                 raise AttributeError(f"Method '{method_name}' not found in {agent_name}.")
             data = method(data)
+            if not print_schema and data.print_schema: #
+                print("Schema: \n", data.print_schema)
+                frontend_schema = data.print_schema
+                print_schema = True
         data = self.extraction_agent.summarize_answer(data)
 
         # show result
         if show_trajectory:
             print("Extraction Trajectory: \n", json.dumps(data.get_result_trajectory(), indent=2))
         print("Extraction Result: \n", json.dumps(data.pred, indent=2))
+
+        frontend_res = data.pred #
 
         # Case Update
         if update_case:
@@ -104,4 +123,4 @@ class Pipeline:
         result = data.pred
         trajectory = data.get_result_trajectory()
 
-        return result, trajectory
+        return result, trajectory, frontend_schema, frontend_res

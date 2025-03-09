@@ -27,6 +27,7 @@ class DataPoint:
         self.file_path = file_path
         self.truth = extract_json_dict(truth)
         # temp storage
+        self.print_schema = ""
         self.distilled_text = ""
         self.chunk_text_list = []
         # result feedback

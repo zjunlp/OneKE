@@ -89,3 +89,12 @@ class NewsReport(BaseModel):
     viewpoints: Optional[List[str]] = Field(default=None, description="Different viewpoints regarding the news")
 
 # --------- You can customize new extraction schemas below -------- #
+class ChemicalSubstance(BaseModel):
+    name: str = Field(description="Name of the chemical substance")
+    formula: str = Field(description="Molecular formula")
+    appearance: str = Field(description="Physical appearance")
+    uses: List[str] = Field(description="Primary uses")
+    hazards: str = Field(description="Hazard classification")
+
+class ChemicalList(BaseModel):
+  chemicals: List[ChemicalSubstance] = Field(description="List of chemicals")

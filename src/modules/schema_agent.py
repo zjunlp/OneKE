@@ -41,8 +41,9 @@ class SchemaAnalyzer:
         prompt = deduced_schema_json_instruction.format(examples=example_wrapper(json_schema_examples), instruction=instruction, distilled_text=distilled_text, text=text)
         response = self.llm.get_chat_response(prompt)
         response = extract_json_dict(response)
+        code = response
         print(f"Deduced Schema in Json: \n{response}\n\n")
-        return response
+        return code, response
 
     def get_deduced_schema_code(self, instruction: str, text: str, distilled_text: str):
         prompt = deduced_schema_code_instruction.format(examples=example_wrapper(code_schema_examples), instruction=instruction, distilled_text=distilled_text, text=text)
@@ -59,7 +60,7 @@ class SchemaAnalyzer:
                     code = code_block[index:]
                     print(f"Deduced Schema in Code: \n{code}\n\n")
                     schema = self.serialize_schema(schema)
-                    return schema
+                    return code, schema
             except Exception as e:
                 print(e)
                 return self.get_deduced_schema_json(instruction, text, distilled_text)
@@ -77,6 +78,34 @@ class SchemaAgent:
             data.chunk_text_list = chunk_file(data.file_path)
         else:
             data.chunk_text_list = chunk_str(data.text)
+        if data.task == "NER":
+            data.print_schema = """
+class Entity(BaseModel):
+    name : str = Field(description="The specific name of the entity. ")
+    type : str = Field(description="The type or category that the entity belongs to.")
+class EntityList(BaseModel):
+    entity_list : List[Entity] = Field(description="Named entities appearing in the text.")
+            """
+        elif data.task == "RE":
+            data.print_schema = """
+class Relation(BaseModel):
+    head : str = Field(description="The starting entity in the relationship.")
+    tail : str = Field(description="The ending entity in the relationship.")
+    relation : str = Field(description="The predicate that defines the relationship between the two entities.")
+
+class RelationList(BaseModel):
+    relation_list : List[Relation] = Field(description="The collection of relationships between various entities.")
+            """
+        elif data.task == "EE":
+            data.print_schema = """
+class Event(BaseModel):
+    event_type : str = Field(description="The type of the event.")
+    event_trigger : str = Field(description="A specific word or phrase that indicates the occurrence of the event.")
+    event_argument : dict = Field(description="The arguments or participants involved in the event.")
+
+class EventList(BaseModel):
+    event_list : List[Event] = Field(description="The events presented in the text.")
+            """
         return data
 
     def get_default_schema(self, data: DataPoint):
@@ -109,7 +138,8 @@ class SchemaAgent:
             prefix = "Below is a portion of the text to be extracted. "
             analysed_text = f"{prefix}\n{target_text}"
         distilled_text = self.module.redefine_text(analysed_text)
-        deduced_schema = self.module.get_deduced_schema_code(data.instruction, target_text, distilled_text)
+        code, deduced_schema = self.module.get_deduced_schema_code(data.instruction, target_text, distilled_text)
+        data.print_schema = code
         data.set_distilled_text(distilled_text)
         default_schema = config['agent']['default_schema']
         data.set_schema(f"{default_schema}\n{deduced_schema}")
