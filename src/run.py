@@ -11,9 +11,9 @@ from modules import *
 def main():
     # Create command-line argument parser
     parser = argparse.ArgumentParser(description='Run the extraction framefork.')
-    parser.add_argument('--config', type=str, required=True, 
+    parser.add_argument('--config', type=str, required=True,
                         help='Path to the YAML configuration file.')
-    
+
     # Parse command-line arguments
     args = parser.parse_args()
 
@@ -36,7 +36,7 @@ def main():
     # Extraction config
     extraction_config = config['extraction']
     result, trajectory = pipeline.get_extract_result(task=extraction_config['task'], instruction=extraction_config['instruction'], text=extraction_config['text'], output_schema=extraction_config['output_schema'], constraint=extraction_config['constraint'], use_file=extraction_config['use_file'], file_path=extraction_config['file_path'], truth=extraction_config['truth'], mode=extraction_config['mode'], update_case=extraction_config['update_case'], show_trajectory=extraction_config['show_trajectory'])
-    return 
+    return
 
 if __name__ == "__main__":
     main()

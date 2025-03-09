@@ -129,10 +129,10 @@ Map any **necessary local files** to the container paths as shown above, and use
 Upon starting, the container will enter the `/app/OneKE` directory as its working directory. Just modify the code locally as needed, and the changes will sync to the container through mapping.
 
 ### Step2: Start with Examples
-We offer two quick-start options. Choose your preferred method to swiftly explore OneKE with predefined examples. 
+We offer two quick-start options. Choose your preferred method to swiftly explore OneKE with predefined examples.
 
 > Note:
-> - **Ensure** that your working directory is set to the **`OneKE`** folder, whether in a virtual environment or a docker container. 
+> - **Ensure** that your working directory is set to the **`OneKE`** folder, whether in a virtual environment or a docker container.
 > - Refer to [here](#network-issue-solutions) to resolve the **network issues**. If you have more questions, feel free to open an issue with us.
 
 
@@ -149,11 +149,11 @@ Here is the example for the web news knowledge extraction scenario, with the sou
 model:
   category: DeepSeek  # model category, chosen from ChatGPT, DeepSeek, LLaMA, Qwen, ChatGLM, MiniCPM, OneKE.
   model_name_or_path: deepseek-chat # model name, chosen from deepseek-chat and deepseek-reasoner. Choose deepseek-chat to use DeepSeek-V3 or choose deepseek-reasoner to use DeepSeek-R1.
-  api_key: your_api_key # your API key for the model with API service. No need for open-source models. 
+  api_key: your_api_key # your API key for the model with API service. No need for open-source models.
   base_url: https://api.deepseek.com # base URL for the API service. No need for open-source models.
 
 # extraction configuration
-extraction:             
+extraction:
   task: Base # task type, chosen from Base, NER, RE, EE.
   instruction: Extract key information from the given text. # description for the task. No need for NER, RE, EE task.
   use_file: true # whether to use a file for the input text. Default set to false.
@@ -175,10 +175,10 @@ model:
   api_key: your_api_key # your API key for the model with API service. No need for open-source models.
   base_url: https://api.openai.com/v1 # # base URL for the API service. No need for open-source models.
 
-extraction:             
+extraction:
   task: Base # task type, chosen from Base, NER, RE, EE.
   instruction: Extract main characters and background setting from this chapter. # description for the task. No need for NER, RE, EE task.
-  use_file: true # whether to use a file for the input text. Default set to false.      
+  use_file: true # whether to use a file for the input text. Default set to false.
   file_path: ./data/input_files/Harry_Potter_Chapter1.pdf #  # path to the input file. No need if use_file is set to false.
   mode: quick # extraction mode, chosen from quick, detailed, customized. Default set to quick. See src/config.yaml for more details.
   update_case: false # whether to update the case repository. Default set to false.
@@ -250,7 +250,7 @@ You can try different types of information extraction tasks within the OneKE fra
   | NER | Named Entity Recognition, identifies and classifies various named entities such as names, locations, and organizations in text. |
   | RE | Relation Extraction, identifies relationships between entities, and typically returns results as entity-relation-entity triples. |
   | EE | Event Extraction, identifies events in text, focusing on event triggers and associated participants, known as event arguments. |
-  | ***Open Domain IE***| 
+  | ***Open Domain IE***|
   | Web News Extraction| Involves extracting key entities and events from online news articles to generate structured insights. |
   | Book Knowledged Extraction | Extracts information such as key concepts, themes, and facts from book chapters. |
   | Other | Encompasses information extraction from different types of content, such as social media and research papers, each tailored to the specific context and data type. |
@@ -269,22 +269,22 @@ Refer to the case defined in `examples/config/NER.yaml` as an example:
 In this task setting, `Text` represents the text to be extracted, while `Entity Types` denote the constraint on the types of entities to be extracted. Accordingly, we set the `text` and `constraint` attributes in the YAML file to their respective values.
 
 Next, follow the steps below to complete the NER task:
-- Complete `./examples/config/NER.yaml`: 
+- Complete `./examples/config/NER.yaml`:
   configure the necessary model and extraction settings
 - Run the shell script below:
   ```bash
-  config_file=./examples/config/NER.yaml 
-  python src/run.py --config $config_file 
+  config_file=./examples/config/NER.yaml
+  python src/run.py --config $config_file
   ```
   ( Refer to [issues](#network-issue-solutions) for any network issues. )
 
 The final extraction result should be:
 | Text | Conference |
 | --- | --- |
-| Finally, every other year, ELRA organizes a major conference LREC, the International Language Resources and Evaluation Conference. | ELRA, LREC, International Language Resources and Evaluation Conference | 
+| Finally, every other year, ELRA organizes a major conference LREC, the International Language Resources and Evaluation Conference. | ELRA, LREC, International Language Resources and Evaluation Conference |
 
 Click [here](https://github.com/zjunlp/OneKE/tree/main/examples/results/NER.json) to obtain the raw results in `json` format.
-> Note: The actual extraction results may not exactly match this due to LLM randomness. 
+> Note: The actual extraction results may not exactly match this due to LLM randomness.
 
 The result indicates that, given the text and entity type constraint, entities of type `conference` have been extracted: `ELRA`, `conference`, `International Language Resources and Evaluation Conference`.
 
@@ -302,12 +302,12 @@ Refer to the case defined in `examples/config/RE.yaml` as an example:
 In this task setting, `Text` represents the text to be extracted, while `Relation Types` denote the constraint on the types of relations of entities to be extracted. Accordingly, we set the `text` and `constraint` attributes in the YAML file to their respective values.
 
 Next, follow the steps below to complete the RE task:
-- Complete `./examples/config/RE.yaml`: 
+- Complete `./examples/config/RE.yaml`:
   configure the necessary model and extraction settings
 - Run the shell script below:
   ```bash
-  config_file=./examples/config/RE.yaml 
-  python src/run.py --config $config_file 
+  config_file=./examples/config/RE.yaml
+  python src/run.py --config $config_file
   ```
   ( Refer to [issues](#network-issue-solutions) for any network issues. )
 
@@ -345,12 +345,12 @@ while the event type constraint is formatted as follows:
 Each event type has its own corresponding event arguments.
 
 Next, follow the steps below to complete the EE task:
-- Complete `./examples/config/EE.yaml`: 
+- Complete `./examples/config/EE.yaml`:
   configure the necessary model and extraction settings
 - Run the shell script below:
   ```bash
-  config_file=./examples/config/EE.yaml 
-  python src/run.py --config $config_file 
+  config_file=./examples/config/EE.yaml
+  python src/run.py --config $config_file
   ```
   ( Refer to [issues](#network-issue-solutions) for any network issues. )
 
@@ -395,17 +395,17 @@ You can either specify event constraints or omit them. Without constraints, OneK
 #### 4. Open Domain IE
 This type of task is represented as `Base` in the code, signifying any other user-defined open-domain extraction tasks.
 
-We refer to the [example](#step1-prepare-the-configuration-file) above for guidance. 
+We refer to the [example](#step1-prepare-the-configuration-file) above for guidance.
 
 In the context of customized **Web News Extraction**, we first set the extraction instruction to `Extract key information from the given text`, and provide the file path to extract content from the file. We specify the output schema from the schema repository as the predefined `NewsReport`, and then proceed with the extraction.
 
 Next, follow the steps below to complete this task:
-- Complete `./examples/config/NewsExtraction.yaml `: 
+- Complete `./examples/config/NewsExtraction.yaml `:
   configure the necessary model and extraction settings
 - Run the shell script below:
   ```bash
-  config_file=./examples/config/NewsExtraction.yaml 
-  python src/run.py --config $config_file 
+  config_file=./examples/config/NewsExtraction.yaml
+  python src/run.py --config $config_file
   ```
   ( Refer to [issues](#network-issue-solutions) for any network issues. )
 
@@ -462,12 +462,12 @@ You can choose from various open-source or proprietary model APIs to perform inf
   | ***API Service*** |   |
   | OpenAI |  A series of GPT foundation models offered by OpenAI, such as GPT-3.5 and GPT-4-turbo, which are renowned for their outstanding capabilities in natural language processing. |
   | DeepSeek | High-performance LLMs that have demonstrated exceptional capabilities in both English and Chinese benchmarks. |
-  | ***Local Deploy***| 
+  | ***Local Deploy***|
   | LLaMA3-Instruct series| Meta's series of large language models, with tens to hundreds of billions of parameters, have shown advanced performance on industry-standard benchmarks. |
   | Qwen2.5-Instruct series| LLMs developed by the Qwen team, come in various parameter sizes and exhibit strong capabilities in both English and Chinese. |
   | ChatGLM4-9B | The latest model series by the Zhipu team, which achieve breakthroughs in multiple metrics, excel as bilingual (Chinese-English) chat models. |
   | MiniCPM3-4B | A lightweight language model with 4B parameters,  matches or even surpasses 7B-9B models in most evaluation benchmarks.|
-  | OneKE | A large-scale model for knowledge extraction jointly developed by Ant Group and Zhejiang University. 
+  | OneKE | A large-scale model for knowledge extraction jointly developed by Ant Group and Zhejiang University.
   | DeepSeek-R1 series| A bilingual Chinese-English strong reasoning model series provided by DeepSeek, featuring the original DeepSeek-R1 and various distilled versions based on smaller models. |
   > Note: We recommend deploying the DeepSeek-R1 models with VLLM.
 
@@ -481,7 +481,7 @@ In practice, you can use the YAML file configuration to employ various LLMs:
   model:
     category: DeepSeek # model category, chosen from ChatGPT and  DeepSeek
     model_name_or_path: deepseek-chat # model name, chosen from deepseek-chat and deepseek-reasoner. Choose deepseek-chat to use DeepSeek-V3 or choose deepseek-reasoner to use DeepSeek-R1.
-    api_key: your_api_key # your API key for the model with API service. 
+    api_key: your_api_key # your API key for the model with API service.
     base_url: https://api.deepseek.com # base URL for the API service. No need for open-source models.
   ```
 - **Local Deploy**: Set the `model_name_or_path` to either the model name on Hugging Face or the path to the local model. We support using either `Transformer` or `vllm` to access the models.
@@ -515,10 +515,10 @@ You can freely combine different extraction methods to complete the information 
   | Default Schema | Use the default JSON output format. |
   | Predefined Schema | Utilize the predefined output schema retrieved from the knowledge base. |
   | Self Schema Deduction | Generate the output schema by inferring from the task description and the source text. |
-  | ***Extraction Agent***| 
+  | ***Extraction Agent***|
   | Direct IE | Directly extract information from the given text based on the task description. |
   | Case Retrieval | Retrieve similar good cases from the knowledge base to aid in the extraction. |
-  | ***Reflection Agent***| 
+  | ***Reflection Agent***|
   | No Reflection| Directly return the extraction results. |
   | Case Reflection  | Use the self-consistency approach, and if inconsistencies appear, reflect on the original answer by retrieving similar bad cases from the knowledge base. |
 
@@ -540,8 +540,8 @@ mode: customized
 ```
 This allows you to experience the customized extraction methods.
 
-> Tips: 
-> - For longer text extraction tasks, we recommend using the `direct mode` to avoid issues like attention dispersion and increased processing time. 
+> Tips:
+> - For longer text extraction tasks, we recommend using the `direct mode` to avoid issues like attention dispersion and increased processing time.
 > - For shorter tasks requiring high accuracy, you can try the `standard mode` to ensure precision.
 
 
@@ -559,28 +559,28 @@ class ChemicalSubstance(BaseModel):
     uses: List[str] = Field(description="Primary uses")
     hazards: str = Field(description="Hazard classification")
 
-class ChemicalList(BaseModel)
+class ChemicalList(BaseModel):
   chemicals: List[ChemicalSubstance] = Field(description="List of chemicals")
 ```
 
-Then, set the method for `schema_agent` under `customized` to `get_retrieved_schema` in `src/config.yaml`. Finally, set the `mode` to `customized` in the external configuration file to enable custom schema extraction. 
+Then, set the method for `schema_agent` under `customized` to `get_retrieved_schema` in `src/config.yaml`. Finally, set the `mode` to `customized` in the external configuration file to enable custom schema extraction.
 
 In this example, the extraction results will be a list of **chemical substances** that strictly adhere to the defined schema, ensuring a high level of accuracy and flexibility in the extraction results.
 
 Note that the names of newly created objects **should not conflict with** existing ones.
 
 #### 2. Case Repository
-You can directly view the case storage in the `src/modules/knowledge_base/case_repository.json` file, but we do not recommend modifying it directly. 
+You can directly view the case storage in the `src/modules/knowledge_base/case_repository.json` file, but we do not recommend modifying it directly.
 
-The Case Repository is automatically updated with each extraction process once setting `update_repository` to `True` in the configuration file. 
+The Case Repository is automatically updated with each extraction process once setting `update_repository` to `True` in the configuration file.
 
 When updating the Case Repository, you must provide external feedback to generate case information, either by including truth answer in the configuration file or during the extraction process.
 
 Here is an example:
 ```yaml
   # examples/config/RE.yaml
-  truth: {"relation_list": [{"head": "Guinea", "tail": "Conakry", "relation": "country capital"}]} # Truth data for the relation 
-  update_case: true 
+  truth: {"relation_list": [{"head": "Guinea", "tail": "Conakry", "relation": "country capital"}]} # Truth data for the relation
+  update_case: true
 ```
 
 After extraction, OneKE compares results with the truth answer, generates analysis, and finally stores the case in the repository.
@@ -592,7 +592,7 @@ Here are some network issues you might encounter and the corresponding solutions
 - Pip Installation Failure: Use mirror websites, run the command as `pip install -i [mirror-source] ...`.
 - Docker Image Pull Failure: Configure the docker daemon to add repository mirrors.
 - Nltk Download Failure: Manually download the `nltk` package and place it in the proper directory.
-- Model Dowload Failure: Use the `Hugging Face Mirror` site or `ModelScope` to download model, and specify the local path to the model when using it. 
+- Model Dowload Failure: Use the `Hugging Face Mirror` site or `ModelScope` to download model, and specify the local path to the model when using it.
     > Note: We use `all-MiniLM-L6-v2` model by default for case matching, so it needs to be downloaded during execution. If network issues occur, manually download the model, and update the `embedding_model` to its local path in the `src/config.yaml` file.
 
 

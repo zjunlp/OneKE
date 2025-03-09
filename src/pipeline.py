@@ -10,8 +10,8 @@ class Pipeline:
         self.case_repo = CaseRepositoryHandler(llm = llm)
         self.schema_agent = SchemaAgent(llm = llm)
         self.extraction_agent = ExtractionAgent(llm = llm, case_repo = self.case_repo)
-        self.reflection_agent = ReflectionAgent(llm = llm, case_repo = self.case_repo)        
-    
+        self.reflection_agent = ReflectionAgent(llm = llm, case_repo = self.case_repo)
+
     def __check_consistancy(self, llm, task, mode, update_case):
         if llm.name == "OneKE":
             if task == "Base":
@@ -22,7 +22,7 @@ class Pipeline:
                 print("The fine-tuned OneKE defaults to quick extraction mode without case update.")
                 return mode, update_case
         return mode, update_case
-    
+
     def __init_method(self, data: DataPoint, process_method):
         default_order = ["schema_agent", "extraction_agent", "reflection_agent"]
         if "schema_agent" not in process_method:
@@ -33,7 +33,7 @@ class Pipeline:
             process_method["extraction_agent"] = "extract_information_direct"
         sorted_process_method = {key: process_method[key] for key in default_order if key in process_method}
         return sorted_process_method
-            
+
     def __init_data(self, data: DataPoint):
         if data.task == "NER":
             data.instruction = config['agent']['default_ner']
@@ -45,13 +45,13 @@ class Pipeline:
             data.instruction = config['agent']['default_ee']
             data.output_schema = "EventList"
         return data
-    
+
     # main entry
-    def get_extract_result(self, 
+    def get_extract_result(self,
                            task: TaskType,
-                           instruction: str = "", 
-                           text: str = "", 
-                           output_schema: str = "", 
+                           instruction: str = "",
+                           text: str = "",
+                           output_schema: str = "",
                            constraint: str = "",
                            use_file: bool = False,
                            file_path: str = "",
@@ -60,10 +60,10 @@ class Pipeline:
                            update_case: bool = False,
                            show_trajectory: bool = False
                            ):
-        
+
         # Check Consistancy
         mode, update_case = self.__check_consistancy(self.llm, task, mode, update_case)
-        
+
         # Load Data
         data = DataPoint(task=task, instruction=instruction, text=text, output_schema=output_schema, constraint=constraint, use_file=use_file, file_path=file_path, truth=truth)
         data = self.__init_data(data)
@@ -73,7 +73,7 @@ class Pipeline:
             process_method = mode
         sorted_process_method = self.__init_method(data, process_method)
         print("Process Method: ", sorted_process_method)
-        
+
         # Information Extract
         for agent_name, method_name in sorted_process_method.items():
             agent = getattr(self, agent_name, None)
@@ -84,12 +84,12 @@ class Pipeline:
                 raise AttributeError(f"Method '{method_name}' not found in {agent_name}.")
             data = method(data)
         data = self.extraction_agent.summarize_answer(data)
-        
+
         # show result
         if show_trajectory:
             print("Extraction Trajectory: \n", json.dumps(data.get_result_trajectory(), indent=2))
         print("Extraction Result: \n", json.dumps(data.pred, indent=2))
-        
+
         # Case Update
         if update_case:
             if (data.truth == ""):
@@ -99,9 +99,9 @@ class Pipeline:
                 else:
                     data.truth = extract_json_dict(truth)
             self.case_repo.update_case(data)
-        
+
         # return result
         result = data.pred
         trajectory = data.get_result_trajectory()
-        
+
         return result, trajectory

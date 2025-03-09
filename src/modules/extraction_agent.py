@@ -5,27 +5,27 @@ from .knowledge_base.case_repository import CaseRepositoryHandler
 class InformationExtractor:
     def __init__(self, llm: BaseEngine):
         self.llm = llm
-    
+
     def extract_information(self, instruction="", text="", examples="", schema="", additional_info=""):
         examples = good_case_wrapper(examples)
         prompt = extract_instruction.format(instruction=instruction, examples=examples, text=text, additional_info=additional_info, schema=schema)
-        response = self.llm.get_chat_response(prompt) 
+        response = self.llm.get_chat_response(prompt)
         response = extract_json_dict(response)
         return response
 
     def extract_information_compatible(self, task="", text="", constraint=""):
         instruction = instruction_mapper.get(task)
         prompt = extract_instruction_json.format(instruction=instruction, constraint=constraint, input=text)
-        response = self.llm.get_chat_response(prompt) 
+        response = self.llm.get_chat_response(prompt)
         response = extract_json_dict(response)
         return response
-    
+
     def summarize_answer(self, instruction="", answer_list="", schema="", additional_info=""):
         prompt = summarize_instruction.format(instruction=instruction, answer_list=answer_list, schema=schema, additional_info=additional_info)
         response = self.llm.get_chat_response(prompt)
         response = extract_json_dict(response)
         return response
-    
+
 class ExtractionAgent:
     def __init__(self, llm: BaseEngine, case_repo: CaseRepositoryHandler):
         self.llm = llm
@@ -66,7 +66,7 @@ class ExtractionAgent:
                 except:
                     print("Invalid Constraint: Event Extraction constraint must be a dictionary with event types as keys and lists of arguments as values.", data.constraint)
         return data
-            
+
     def extract_information_direct(self, data: DataPoint):
         data = self.__get_constraint(data)
         result_list = []
@@ -80,7 +80,7 @@ class ExtractionAgent:
         data.set_result_list(result_list)
         data.update_trajectory(function_name, result_list)
         return data
-    
+
     def extract_information_with_case(self, data: DataPoint):
         data = self.__get_constraint(data)
         result_list = []
@@ -92,7 +92,7 @@ class ExtractionAgent:
         data.set_result_list(result_list)
         data.update_trajectory(function_name, result_list)
         return data
-    
+
     def summarize_answer(self, data: DataPoint):
         if len(data.result_list) == 0:
             return data

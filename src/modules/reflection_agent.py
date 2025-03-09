@@ -5,7 +5,7 @@ from .knowledge_base.case_repository import CaseRepositoryHandler
 class ReflectionGenerator:
     def __init__(self, llm: BaseEngine):
         self.llm = llm
-    
+
     def get_reflection(self, instruction="", examples="", text="",schema="", result=""):
         result = json.dumps(result)
         examples = bad_case_wrapper(examples)
@@ -13,7 +13,7 @@ class ReflectionGenerator:
         response = self.llm.get_chat_response(prompt)
         response = extract_json_dict(response)
         return response
-    
+
 class ReflectionAgent:
     def __init__(self, llm: BaseEngine, case_repo: CaseRepositoryHandler):
         self.llm = llm
@@ -29,7 +29,7 @@ class ReflectionAgent:
         else:
             selected_obj = max(result_list, key=lambda o: len(json.dumps(o)))
         return selected_obj
-    
+
     def __self_consistance_check(self, data: DataPoint):
         extract_func = list(data.result_trajectory.keys())[-1]
         if hasattr(self.extractor, extract_func):
@@ -55,7 +55,7 @@ class ReflectionAgent:
                 consistant_result.append(selected_element)
             data.set_result_list(consistant_result)
             return reflect_index
-            
+
     def reflect_with_case(self, data: DataPoint):
         if data.result_list == []:
             return data
@@ -71,4 +71,3 @@ class ReflectionAgent:
         function_name = current_function_name()
         data.update_trajectory(function_name, data.result_list)
         return data
-    

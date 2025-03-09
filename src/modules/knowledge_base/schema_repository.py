@@ -2,18 +2,18 @@ from typing import List, Optional
 from pydantic import BaseModel, Field
 from langchain_core.output_parsers import JsonOutputParser
 
-# ==================================================================== #  
-#                                NER TASK                              #  
-# ==================================================================== #  
+# ==================================================================== #
+#                                NER TASK                              #
+# ==================================================================== #
 class Entity(BaseModel):
     name : str = Field(description="The specific name of the entity. ")
     type : str = Field(description="The type or category that the entity belongs to.")
 class EntityList(BaseModel):
     entity_list : List[Entity] = Field(description="Named entities appearing in the text.")
-    
-# ==================================================================== #  
-#                               RE TASK                                #  
-# ==================================================================== #  
+
+# ==================================================================== #
+#                               RE TASK                                #
+# ==================================================================== #
 class Relation(BaseModel):
     head : str = Field(description="The starting entity in the relationship.")
     tail : str = Field(description="The ending entity in the relationship.")
@@ -22,9 +22,9 @@ class Relation(BaseModel):
 class RelationList(BaseModel):
     relation_list : List[Relation] = Field(description="The collection of relationships between various entities.")
 
-# ==================================================================== #  
-#                               EE TASK                                #  
-# ==================================================================== #  
+# ==================================================================== #
+#                               EE TASK                                #
+# ==================================================================== #
 class Event(BaseModel):
     event_type : str = Field(description="The type of the event.")
     event_trigger : str = Field(description="A specific word or phrase that indicates the occurrence of the event.")
@@ -33,38 +33,38 @@ class Event(BaseModel):
 class EventList(BaseModel):
     event_list : List[Event] = Field(description="The events presented in the text.")
 
-# ==================================================================== #  
-#                          TEXT DESCRIPTION                            #  
-# ==================================================================== #  
+# ==================================================================== #
+#                          TEXT DESCRIPTION                            #
+# ==================================================================== #
 class TextDescription(BaseModel):
     field: str = Field(description="The field of the given text, such as 'Science', 'Literature', 'Business', 'Medicine', 'Entertainment', etc.")
     genre: str = Field(description="The genre of the given text, such as 'Article', 'Novel', 'Dialog', 'Blog', 'Manual','Expository', 'News Report', 'Research Paper', etc.")
-    
-# ==================================================================== #  
-#                        USER DEFINED SCHEMA                           #  
-# ==================================================================== #  
+
+# ==================================================================== #
+#                        USER DEFINED SCHEMA                           #
+# ==================================================================== #
 
 # --------------------------- Research Paper ----------------------- #
 class MetaData(BaseModel):
     title : str = Field(description="The title of the article")
     authors : List[str] = Field(description="The list of the article's authors")
-    abstract: str = Field(description="The article's abstract") 
+    abstract: str = Field(description="The article's abstract")
     key_words: List[str] = Field(description="The key words associated with the article")
-    
+
 class Baseline(BaseModel):
     method_name : str = Field(description="The name of the baseline method")
     proposed_solution : str = Field(description="the proposed solution in details")
     performance_metrics : str = Field(description="The performance metrics of the method and comparative analysis")
-    
+
 class ExtractionTarget(BaseModel):
-    
+
     key_contributions: List[str] = Field(description="The key contributions of the article")
     limitation_of_sota : str=Field(description="the summary limitation of the existing work")
     proposed_solution : str = Field(description="the proposed solution in details")
     baselines : List[Baseline] = Field(description="The list of baseline methods and their details")
     performance_metrics : str = Field(description="The performance metrics of the method and comparative analysis")
     paper_limitations : str=Field(description="The limitations of the proposed solution of the paper")
-    
+
 # --------------------------- News ----------------------- #
 class Person(BaseModel):
     name: str = Field(description="The name of the person")
@@ -79,7 +79,7 @@ class Event(BaseModel):
     process: Optional[str] = Field(description="Details of the event process")
     result: Optional[str] = Field(default=None, description="Result or outcome of the event")
 
-class NewsReport(BaseModel):  
+class NewsReport(BaseModel):
     title: str = Field(description="The title or headline of the news report")
     summary: str = Field(description="A brief summary of the news report")
     publication_date: Optional[str] = Field(description="The publication date of the report")

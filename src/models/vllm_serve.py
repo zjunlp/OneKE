@@ -9,13 +9,13 @@ from utils import *
 def main():
     # Create command-line argument parser
     parser = argparse.ArgumentParser(description='Run the extraction model.')
-    parser.add_argument('--config', type=str, required=True, 
+    parser.add_argument('--config', type=str, required=True,
                         help='Path to the YAML configuration file.')
     parser.add_argument('--tensor-parallel-size', type=int, default=2,
                         help='Tensor parallel size for the VLLM server.')
     parser.add_argument('--max-model-len', type=int, default=32768,
                         help='Maximum model length for the VLLM server.')
-    
+
     # Parse command-line arguments
     args = parser.parse_args()
 
@@ -31,4 +31,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-    

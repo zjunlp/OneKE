@@ -13,10 +13,10 @@ class BaseDataset:
 
     def __getitem__(self, idx):
         return None
-    
+
     def __len__(self):
         return None
-    
+
     def evaluate(self, idx, answer):
         return None
 
@@ -29,34 +29,34 @@ class NERDataset(BaseDataset):
         self.test_file = json.load(open(f"{data_dir}/train.json")) if train else json.load(open(f"{data_dir}/test.json"))
         self.schema = str(json.load(open(f"{data_dir}/class.json")))
         self.retry = 2
-    
+
     def evaluate(self, llm: BaseEngine, mode="", sample=None, random_sample=False, update_case=False):
-        # initialize 
+        # initialize
         sample = len(self.test_file) if sample is None else sample
         if random_sample:
             test_file = random.sample(self.test_file, sample)
         else:
             test_file = self.test_file[:sample]
         total_precision, total_recall, total_f1 = 0, 0, 0
-        num_items = 0  
+        num_items = 0
         output_path = f"{self.output_dir}/{self.name}_{self.task}_{mode}_{llm.name}_sample{sample}.jsonl"
         print("Results will be saved to: ", output_path)
-        
+
         # predict and evaluate
         pipeline = Pipeline(llm=llm)
         for item in test_file:
             try:
                 # get prediction
-                num_items += 1  
+                num_items += 1
                 truth = list(item.items())[1]
-                truth = {truth[0]: truth[1]}  
-                pred_set = set()  
-                for attempt in range(self.retry):  
+                truth = {truth[0]: truth[1]}
+                pred_set = set()
+                for attempt in range(self.retry):
                     pred_result, pred_detailed = pipeline.get_extract_result(task=self.task, text=item['sentence'], constraint=self.schema, mode=mode, truth=truth, update_case=update_case)
                     try:
                         pred_result = pred_result['entity_list']
                         pred_set = dict_list_to_set(pred_result)
-                        break  
+                        break
                     except Exception as e:
                         print(f"Failed to parse result: {pred_result}, retrying... Exception: {e}")
 
@@ -81,8 +81,8 @@ class NERDataset(BaseDataset):
             except Exception as e:
                 print(f"Exception occured: {e}")
                 print(f"idx: {num_items}")
-                pass            
-            
+                pass
+
         # calculate overall metrics
         if num_items > 0:
             avg_precision = total_precision / num_items
@@ -109,34 +109,34 @@ class REDataset(BaseDataset):
         self.test_file = json.load(open(f"{data_dir}/train.json")) if train else json.load(open(f"{data_dir}/test.json"))
         self.schema = str(json.load(open(f"{data_dir}/class.json")))
         self.retry = 2
-    
+
     def evaluate(self, llm: BaseEngine, mode="", sample=None, random_sample=False, update_case=False):
-        # initialize 
+        # initialize
         sample = len(self.test_file) if sample is None else sample
         if random_sample:
             test_file = random.sample(self.test_file, sample)
         else:
             test_file = self.test_file[:sample]
         total_precision, total_recall, total_f1 = 0, 0, 0
-        num_items = 0  
+        num_items = 0
         output_path = f"{self.output_dir}/{self.name}_{self.task}_{mode}_{llm.name}_sample{sample}.jsonl"
         print("Results will be saved to: ", output_path)
-        
+
         # predict and evaluate
         pipeline = Pipeline(llm=llm)
         for item in test_file:
             try:
                 # get prediction
-                num_items += 1  
+                num_items += 1
                 truth = list(item.items())[1]
-                truth = {truth[0]: truth[1]}  
-                pred_set = set()  
-                for attempt in range(self.retry):  
+                truth = {truth[0]: truth[1]}
+                pred_set = set()
+                for attempt in range(self.retry):
                     pred_result, pred_detailed = pipeline.get_extract_result(task=self.task, text=item['sentence'], constraint=self.schema, mode=mode, truth=truth, update_case=update_case)
                     try:
                         pred_result = pred_result['relation_list']
                         pred_set = dict_list_to_set(pred_result)
-                        break  
+                        break
                     except Exception as e:
                         print(f"Failed to parse result: {pred_result}, retrying... Exception: {e}")
 
@@ -161,8 +161,8 @@ class REDataset(BaseDataset):
             except Exception as e:
                 print(f"Exception occured: {e}")
                 print(f"idx: {num_items}")
-                pass            
-            
+                pass
+
         # calculate overall metrics
         if num_items > 0:
             avg_precision = total_precision / num_items
