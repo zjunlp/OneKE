@@ -52,7 +52,7 @@ class NERDataset(BaseDataset):
                 truth = {truth[0]: truth[1]}
                 pred_set = set()
                 for attempt in range(self.retry):
-                    pred_result, pred_detailed = pipeline.get_extract_result(task=self.task, text=item['sentence'], constraint=self.schema, mode=mode, truth=truth, update_case=update_case)
+                    pred_result, pred_detailed, _, _ = pipeline.get_extract_result(task=self.task, text=item['sentence'], constraint=self.schema, mode=mode, truth=truth, update_case=update_case)
                     try:
                         pred_result = pred_result['entity_list']
                         pred_set = dict_list_to_set(pred_result)
@@ -132,7 +132,7 @@ class REDataset(BaseDataset):
                 truth = {truth[0]: truth[1]}
                 pred_set = set()
                 for attempt in range(self.retry):
-                    pred_result, pred_detailed = pipeline.get_extract_result(task=self.task, text=item['sentence'], constraint=self.schema, mode=mode, truth=truth, update_case=update_case)
+                    pred_result, pred_detailed, _, _ = pipeline.get_extract_result(task=self.task, text=item['sentence'], constraint=self.schema, mode=mode, truth=truth, update_case=update_case)
                     try:
                         pred_result = pred_result['relation_list']
                         pred_set = dict_list_to_set(pred_result)
