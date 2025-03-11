@@ -106,6 +106,18 @@ class Event(BaseModel):
 class EventList(BaseModel):
     event_list : List[Event] = Field(description="The events presented in the text.")
             """
+        elif data.task == "Triple":
+            data.print_schema = """
+class Triple(BaseModel):
+    head: str = Field(description="The subject or head of the triple.")
+    head_type: str = Field(description="The type of the subject entity.")
+    relation: str = Field(description="The relation or predicate between the entities.")
+    relation_type: str = Field(description="The type of the relation.")
+    tail: str = Field(description="The object or tail of the triple.")
+    tail_type: str = Field(description="The type of the object entity.")
+class TripleList(BaseModel):
+    triple_list: List[Triple] = Field(description="A list of triples, each containing a head, relation, and tail.")
+"""
         return data
 
     def get_default_schema(self, data: DataPoint):

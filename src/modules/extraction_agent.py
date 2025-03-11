@@ -65,6 +65,34 @@ class ExtractionAgent:
                     data.constraint = json.dumps(result)
                 except:
                     print("Invalid Constraint: Event Extraction constraint must be a dictionary with event types as keys and lists of arguments as values.", data.constraint)
+        elif data.task == "Triple":
+            constraint = json.dumps(data.constraint)
+            if "**Triple Extraction Constraint**" in constraint:
+                return data
+            if self.llm.name != "OneKE":
+                if len(data.constraint) == 1: # 1 list means entity
+                    data.constraint = f"\n**Triple Extraction Constraint**: The type of entities must be chosen from the following list:\n{constraint}\n"
+                elif len(data.constraint) == 2: # 2 list means entity and relation
+                    if data.constraint[0] == []:
+                        data.constraint = f"\n**Triple Extraction Constraint**: Relation type must chosen from following list:\n{data.constraint[1]}\n"
+                    elif data.constraint[1] == []:
+                        data.constraint = f"\n**Triple Extraction Constraint**: Entities type must chosen from following list:\n{data.constraint[0]}\n"
+                    else:
+                        data.constraint = f"\n**Triple Extraction Constraint**: Entities type must chosen from following list:\n{data.constraint[0]}\nRelation type must chosen from following list:\n{data.constraint[1]}\n"
+                elif len(data.constraint) == 3: # 3 list means entity, relation and object
+                    if data.constraint[0] == []:
+                        data.constraint = f"\n**Triple Extraction Constraint**: Relation type must chosen from following list:\n{data.constraint[1]}\nObject Entities must chosen from following list:\n{data.constraint[2]}\n"
+                    elif data.constraint[1] == []:
+                        data.constraint = f"\n**Triple Extraction Constraint**: Subject Entities must chosen from following list:\n{data.constraint[0]}\nObject Entities must chosen from following list:\n{data.constraint[2]}\n"
+                    elif data.constraint[2] == []:
+                        data.constraint = f"\n**Triple Extraction Constraint**: Subject Entities must chosen from following list:\n{data.constraint[0]}\nRelation type must chosen from following list:\n{data.constraint[1]}\n"
+                    else:
+                        data.constraint = f"\n**Triple Extraction Constraint**: Subject Entities must chosen from following list:\n{data.constraint[0]}\nRelation type must chosen from following list:\n{data.constraint[1]}\nObject Entities must chosen from following list:\n{data.constraint[2]}\n"
+                else:
+                    data.constraint = f"\n**Triple Extraction Constraint**: The type of entities must be chosen from the following list:\n{constraint}\n"
+            else:
+                print("OneKE does not support Triple Extraction task now, please wait for the next version.")
+            # print("data.constraint", data.constraint)
         return data
 
     def extract_information_direct(self, data: DataPoint):

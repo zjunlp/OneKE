@@ -2,6 +2,7 @@ from typing import Literal
 from models import *
 from utils import *
 from modules import *
+from construct import *
 
 
 class Pipeline:
@@ -14,7 +15,7 @@ class Pipeline:
 
     def __check_consistancy(self, llm, task, mode, update_case):
         if llm.name == "OneKE":
-            if task == "Base":
+            if task == "Base" or task == "Triple":
                 raise ValueError("The finetuned OneKE only supports quick extraction mode for NER, RE and EE Task.")
             else:
                 mode = "quick"
@@ -44,12 +45,16 @@ class Pipeline:
         elif data.task == "EE":
             data.instruction = config['agent']['default_ee']
             data.output_schema = "EventList"
+        elif data.task == "Triple":
+            data.instruction = config['agent']['default_triple']
+            data.output_schema = "TripleList"
         return data
 
     # main entry
     def get_extract_result(self,
                            task: TaskType,
                            three_agents = {},
+                           construct = {},
                            instruction: str = "",
                            text: str = "",
                            output_schema: str = "",
@@ -61,6 +66,7 @@ class Pipeline:
                            update_case: bool = False,
                            show_trajectory: bool = False,
                            isgui: bool = False,
+                           iskg: bool = False,
                            ):
         # for key, value in locals().items():
         #     print(f"{key}: {value}")
@@ -105,7 +111,17 @@ class Pipeline:
         # show result
         if show_trajectory:
             print("Extraction Trajectory: \n", json.dumps(data.get_result_trajectory(), indent=2))
-        print("Extraction Result: \n", json.dumps(data.pred, indent=2))
+        extraction_result = json.dumps(data.pred, indent=2)
+        print("Extraction Result: \n", extraction_result)
+
+        # construct KG
+        if iskg:
+            myurl = construct['url']
+            myusername = construct['username']
+            mypassword = construct['password']
+            print(f"Construct KG in your {construct['database']} now...")
+            cypher_statements = generate_cypher_statements(extraction_result)
+            execute_cypher_statements(uri=myurl, user=myusername, password=mypassword, cypher_statements=cypher_statements)
 
         frontend_res = data.pred #
 

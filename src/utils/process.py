@@ -52,6 +52,43 @@ def load_extraction_config(yaml_path):
     update_case = extraction_config.get('update_case', False)
     show_trajectory = extraction_config.get('show_trajectory', False)
 
+    # Construct config (optional: for constructing your knowledge graph)
+    if 'construct' in config:
+        construct_config = config.get('construct', {})
+        database = construct_config.get('database', "")
+        url = construct_config.get('url', "")
+        username = construct_config.get('username', "")
+        password = construct_config.get('password', "")
+        # Return a dictionary containing these variables
+        return {
+            "model": {
+                "model_name_or_path": model_name_or_path,
+                "category": model_category,
+                "api_key": api_key,
+                "base_url": base_url,
+                "vllm_serve": vllm_serve
+            },
+            "extraction": {
+                "task": task,
+                "instruction": instruction,
+                "text": text,
+                "output_schema": output_schema,
+                "constraint": constraint,
+                "truth": truth,
+                "use_file": use_file,
+                "file_path": file_path,
+                "mode": mode,
+                "update_case": update_case,
+                "show_trajectory": show_trajectory
+            },
+            "construct": {
+                "database": database,
+                "url": url,
+                "username": username,
+                "password": password
+            }
+        }
+
     # Return a dictionary containing these variables
     return {
         "model": {

@@ -1,9 +1,15 @@
-import random
-import json
-import gradio as gr
+"""
+....../OneKE$ python src/webui.py
+"""
 
-from pipeline import Pipeline
+
+import gradio as gr
+import json
+import random
+
 from models import *
+from pipeline import Pipeline
+
 
 examples = [
     {
@@ -61,6 +67,17 @@ examples = [
         "update_case": False,
         "truth": "",
     },
+    {
+        "task": "Triple",
+        "mode": "quick",
+        "use_file": True,
+        "file_path": "data/input_files/Artificial_Intelligence_Wikipedia.txt",
+        "instruction": "",
+        "constraint": """[["Person", "Place", "Event", "property"], ["Interpersonal", "Located", "Ownership", "Action"]]""",
+        "text": "",
+        "update_case": False,
+        "truth": "",
+    }
 ]
 
 
@@ -75,15 +92,15 @@ def create_interface():
                 </p>
                 <h1>OneKE: A Dockerized Schema-Guided LLM Agent-based Knowledge Extraction System</h1>
                 <p>
-                🌐[<a href="https://oneke.openkg.cn/" target="_blank">Web</a>]
-                ⌨️[<a href="https://github.com/zjunlp/OneKE" target="_blank">Code</a>]
+                🌐[<a href="https://oneke.openkg.cn/" target="_blank">Home</a>]
                 📹[<a href="http://oneke.openkg.cn/demo.mp4" target="_blank">Video</a>]
+                📝[<a href="https://arxiv.org/abs/2209.10707" target="_blank">Paper</a>]
+                💻[<a href="https://github.com/zjunlp/OneKE" target="_blank">Code</a>]
                 </p>
             </div>
         """)
 
         example_button_gr = gr.Button("🎲 Quick Start with an Example 🎲")
-
 
         with gr.Row():
             with gr.Column():
@@ -103,7 +120,7 @@ def create_interface():
             with gr.Column():
                 task_gr = gr.Dropdown(
                     label="🎯 Select your Task",
-                    choices=["Base", "NER", "RE", "EE"],
+                    choices=["Base", "NER", "RE", "EE", "Triple"],
                     value="Base",
                 )
                 mode_gr = gr.Dropdown(
@@ -139,6 +156,8 @@ def create_interface():
                 return gr.update(visible=False), gr.update(visible=True, label="🕹️ Constraint", placeholder="Enter your RE Constraint")
             elif task == "EE":
                 return gr.update(visible=False), gr.update(visible=True, label="🕹️ Constraint", placeholder="Enter your EE Constraint")
+            elif task == "Triple":
+                return gr.update(visible=False), gr.update(visible=True, label="🕹️ Constraint", placeholder="Enter your Triple Constraint")
 
         def update_input_fields(use_file):
             if use_file:
@@ -162,7 +181,7 @@ def create_interface():
                 gr.update(value=example["file_path"], visible=example["use_file"]),
                 gr.update(value=example["text"], visible=not example["use_file"]),
                 gr.update(value=example["instruction"], visible=example["task"] == "Base"),
-                gr.update(value=example["constraint"], visible=example["task"] in ["NER", "RE", "EE"]),
+                gr.update(value=example["constraint"], visible=example["task"] in ["NER", "RE", "EE", "Triple"]),
                 gr.update(value=example["update_case"]),
                 gr.update(value=example["truth"]),
                 gr.update(value="NOT REQUIRED", visible=False),
@@ -207,7 +226,7 @@ def create_interface():
                     if reflection_agent not in ["", "NOT REQUIRED"]:
                         agent3["reflection_agent"] = reflection_agent
 
-                # 调用 Pipeline
+                # use 'Pipeline'
                 _, _, ger_frontend_schema, ger_frontend_res = pipeline.get_extract_result(
                     task=task,
                     text=text,
@@ -336,6 +355,8 @@ def create_interface():
 
     return demo
 
+
+# Launch the front-end interface
 if __name__ == "__main__":
     interface = create_interface()
-    interface.launch()
+    interface.launch() # the gredio defalut URL usually is: 127.0.0.1:7860
