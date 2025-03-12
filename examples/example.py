@@ -15,5 +15,3 @@ Constraint = ["nationality", "country capital", "place of death", "children", "l
 
 # get extraction result
 result, trajectory, frontend_schema, frontend_res = pipeline.get_extract_result(task=Task, text=Text, constraint=Constraint, show_trajectory=True)
-print("\nFrontend Schema: ", frontend_schema)
-print("\nFrontend Result: ", frontend_res)
