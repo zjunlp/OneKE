@@ -359,4 +359,4 @@ def create_interface():
 # Launch the front-end interface
 if __name__ == "__main__":
     interface = create_interface()
-    interface.launch() # the gredio defalut URL usually is: 127.0.0.1:7860
+    interface.launch() # the Gradio defalut URL usually is: 127.0.0.1:7860
