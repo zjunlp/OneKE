@@ -248,7 +248,7 @@ Refer to [here](https://github.com/zjunlp/OneKE/tree/main/examples/results/NER.j
 
 #### 🖊️Start with Web UI
 
-> Note: Before starting with the web UI, make sure the package `gradio` is already installed in your Environment.
+> Note: Before starting with the web UI, make sure the package `gradio 4.44.0` is already installed in your [Environment](https://github.com/zjunlp/OneKE/tree/main/requirements.txt).
 
 **Step1: Execute Command**
 
@@ -452,9 +452,9 @@ The final extraction result should be:
 
 Let's start in OneKE ~
 
-while the constraint can be customed as multiple styles, and it's formatted as follows:
+The constraint can be customed as multiple styles, and it's formatted as follows:
 
-* Only define `entity types`:
+* Define `entity types` only:
 
     If you only need to specify the entity types, the `constraint` should be a single list of strings representing the different entity types.
 
@@ -482,7 +482,7 @@ Next, follow the steps below to complete the Triple extraction task:
 
 - Complete `./examples/config/Triple2KG.yaml`:
 
-    configure the necessary model and extraction settings
+    configure the necessary model and extraction settings.
 
 - Run the shell script below:
 
@@ -501,21 +501,21 @@ Here is an [example](https://github.com/zjunlp/OneKE/tree/main/examples/config/T
 
  ✨ If you need to construct your Knowledge Graph (KG) **with your Triple Extraction result**, you can refer to this [example](https://github.com/zjunlp/OneKE/tree/main/examples/config/Triple2KG.yaml) for guidance. Mimic this example and add the `construct` field. Just update the field with your own database parameters.
 
-```python
+```yaml
 construct: # (Optional) If you want to construct a Knowledge Graph, you need to set the construct field, or you must delete this field.
-  database: Neo4j # database type, now only support Neo4j.
+  database: Neo4j # your database type.
   url: neo4j://localhost:7687 # your database URL，Neo4j's default port is 7687.
   username: your_username # your database username.
   password: "your_password" # your database password.
 ```
 
-Once your database is set up, you can access your graph database through a browser. For Neo4j, the connection URL is usually:
+Once your database is set up, you can access your graph database through a browser. For Neo4j, the web interface connection URL is usually:
 
-```python
+```
 http://localhost:7474/browser
 ```
 
-For additional information regarding the Neo4j database, please refer to the [documentation](https://neo4j.com/docs).
+For additional information regarding the Neo4j database, please refer to it's [documentation](https://neo4j.com/docs).
 
 > ⚠️ Warning Again: If you do not intend to build a Knowledge Graph, make sure to remove or comment out the construct field in the yaml file. This will help avoid errors related to database connection issues.
 
