@@ -71,7 +71,7 @@ class ExtractionAgent:
                 return data
             if self.llm.name != "OneKE":
                 if len(data.constraint) == 1: # 1 list means entity
-                    data.constraint = f"\n**Triple Extraction Constraint**: The type of entities must be chosen from the following list:\n{constraint}\n"
+                    data.constraint = f"\n**Triple Extraction Constraint**: Entities type must chosen from following list:\n{constraint}\n"
                 elif len(data.constraint) == 2: # 2 list means entity and relation
                     if data.constraint[0] == []:
                         data.constraint = f"\n**Triple Extraction Constraint**: Relation type must chosen from following list:\n{data.constraint[1]}\n"
