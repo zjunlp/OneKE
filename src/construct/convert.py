@@ -20,62 +20,63 @@ def sanitize_string(input_str, max_length=255):
 
     return input_str
 
+
 def generate_cypher_statements(data):
     """
-    enerates Cypher query statements based on the provided JSON data.
+    Generates Cypher query statements based on the provided JSON data.
     """
     cypher_statements = []
     parsed_data = json.loads(data)
 
-    # Handle a list of triples in "triple_list"
+    def create_statement(triple):
+        head = triple.get("head")
+        head_type = triple.get("head_type")
+        relation = triple.get("relation")
+        relation_type = triple.get("relation_type")
+        tail = triple.get("tail")
+        tail_type = triple.get("tail_type")
+
+        # head_safe = sanitize_string(head) if head else None
+        head_type_safe = sanitize_string(head_type) if head_type else None
+        # relation_safe = sanitize_string(relation) if relation else None
+        relation_type_safe = sanitize_string(relation_type) if relation_type else None
+        # tail_safe = sanitize_string(tail) if tail else None
+        tail_type_safe = sanitize_string(tail_type) if tail_type else None
+
+        statement = ""
+        if head:
+            if head_type_safe:
+                statement += f'MERGE (a:{head_type_safe} {{name: "{head}"}}) '
+            else:
+                statement += f'MERGE (a:UNTYPED {{name: "{head}"}}) '
+        if tail:
+            if tail_type_safe:
+                statement += f'MERGE (b:{tail_type_safe} {{name: "{tail}"}}) '
+            else:
+                statement += f'MERGE (b:UNTYPED {{name: "{tail}"}}) '
+        if relation:
+            if head and tail: # Only create relation if head and tail exist.
+                if relation_type_safe:
+                    statement += f'MERGE (a)-[:{relation_type_safe} {{name: "{relation}"}}]->(b);'
+                else:
+                    statement += f'MERGE (a)-[:UNTYPED {{name: "{relation}"}}]->(b);'
+            else:
+                statement += ';' if statement != "" else ''
+        else:
+            if relation_type_safe: # if relation is not provided, create relation by `relation_type`.
+                statement += f'MERGE (a)-[:{relation_type_safe} {{name: "{relation_type_safe}"}}]->(b);'
+            else:
+                statement += ';' if statement != "" else ''
+        return statement
+
     if "triple_list" in parsed_data:
         for triple in parsed_data["triple_list"]:
-            head = triple["head"]
-            head_type = triple["head_type"]
-            relation = triple["relation"]
-            relation_type = triple["relation_type"]
-            tail = triple["tail"]
-            tail_type = triple["tail_type"]
-
-            # head_safe = sanitize_string(head)
-            # relation_safe = sanitize_string(relation)
-            # tail_safe = sanitize_string(tail)
-            head_type_safe = sanitize_string(head_type)
-            relation_type_safe = sanitize_string(relation_type)
-            tail_type_safe = sanitize_string(tail_type)
-
-            statement = (
-                f'MERGE (a:{head_type_safe} {{name: "{head}"}}) '
-                f'MERGE (b:{tail_type_safe} {{name: "{tail}"}}) '
-                f'MERGE (a)-[:{relation_type_safe} {{name: "{relation}"}}]->(b);'
-            )
-            cypher_statements.append(statement)
-
-    # Handle a single triple (not in "triple_list")
+            cypher_statements.append(create_statement(triple))
     else:
-        triple = parsed_data
-        head = triple["head"]
-        head_type = triple["head_type"]
-        relation = triple["relation"]
-        relation_type = triple["relation_type"]
-        tail = triple["tail"]
-        tail_type = triple["tail_type"]
-
-        # head_safe = sanitize_string(head)
-        # relation_safe = sanitize_string(relation)
-        # tail_safe = sanitize_string(tail)
-        head_type_safe = sanitize_string(head_type)
-        relation_type_safe = sanitize_string(relation_type)
-        tail_type_safe = sanitize_string(tail_type)
-
-        statement = (
-            f'MERGE (a:{head_type_safe} {{name: "{head}"}}) '
-            f'MERGE (b:{tail_type_safe} {{name: "{tail}"}}) '
-            f'MERGE (a)-[:{relation_type_safe} {{name: "{relation}"}}]->(b);'
-        )
-        cypher_statements.append(statement)
+        cypher_statements.append(create_statement(parsed_data))
 
     return cypher_statements
+
 
 def execute_cypher_statements(uri, user, password, cypher_statements):
     """
@@ -107,25 +108,65 @@ if __name__ == "__main__":
                 "head": "J.K. Rowling",
                 "head_type": "Person",
                 "relation": "wrote",
-                "relation_type": "authorship",
-                "tail": "Harry Potter",
+                "relation_type": "Actions",
+                "tail": "Fantastic Beasts and Where to Find Them",
                 "tail_type": "Book"
             },
             {
-                "head": "Harry Potter",
+                "head": "Fantastic Beasts and Where to Find Them",
                 "head_type": "Book",
-                "relation": "belongs to",
-                "relation_type": "category",
-                "tail": "Fantasy",
-                "tail_type": "Genre"
+                "relation": "extra section of",
+                "relation_type": "Affiliation",
+                "tail": "Harry Potter Series",
+                "tail_type": "Book"
             },
             {
                 "head": "J.K. Rowling",
                 "head_type": "Person",
-                "relation": "belongs to",
-                "relation_type": "category",
-                "tail": "Fantasy",
-                "tail_type": "Genre"
+                "relation": "wrote",
+                "relation_type": "Actions",
+                "tail": "Harry Potter Series",
+                "tail_type": "Book"
+            },
+            {
+                "head": "Harry Potter Series",
+                "head_type": "Book",
+                "relation": "create",
+                "relation_type": "Actions",
+                "tail": "Dumbledore",
+                "tail_type": "Person"
+            },
+            {
+                "head": "Fantastic Beasts and Where to Find Them",
+                "head_type": "Book",
+                "relation": "mention",
+                "relation_type": "Actions",
+                "tail": "Dumbledore",
+                "tail_type": "Person"
+            },
+            {
+                "head": "Voldemort",
+                "head_type": "Person",
+                "relation": "afrid",
+                "relation_type": "Emotion",
+                "tail": "Dumbledore",
+                "tail_type": "Person"
+            },
+            {
+                "head": "Voldemort",
+                "head_type": "Person",
+                "relation": "robs",
+                "relation_type": "Actions",
+                "tail": "the Elder Wand",
+                "tail_type": "Weapon"
+            },
+            {
+                "head": "the Elder Wand",
+                "head_type": "Weapon",
+                "relation": "belong to",
+                "relation_type": "Affiliation",
+                "tail": "Dumbledore",
+                "tail_type": "Person"
             }
         ]
     }
@@ -143,120 +184,18 @@ if __name__ == "__main__":
     # }
     # '''
 
+    # Generate Cypher query statements
     cypher_statements = generate_cypher_statements(test_data)
+
+    # Print the generated Cypher query statements
+    for statement in cypher_statements:
+        print(statement)
+    print("\n")
+
+    # Execute the generated Cypher query statements
     execute_cypher_statements(
         uri="neo4j://localhost:7687", # your URI
         user="your_username", # your username
         password="your_password", # your password
         cypher_statements=cypher_statements,
     )
-
-# def generate_cypher_statements(data):
-#     """
-#     Generates Cypher query statements based on the provided JSON data.
-#     Handles missing fields by excluding them from the Cypher statement.
-#     """
-#     cypher_statements = []
-#     parsed_data = json.loads(data)
-
-#     # Helper function to get a value if the key exists, else return None
-#     def get_field(data, field):
-#         return data.get(field)
-
-#     # Handle a single triple (not in "triple_list")
-#     if "head" in parsed_data:
-#         triple = parsed_data
-#         head = get_field(triple, "head")
-#         head_type = get_field(triple, "head_type")  # May be missing
-#         relation = get_field(triple, "relation")  # May be missing
-#         relation_type = get_field(triple, "relation_type")  # May be missing
-#         tail = get_field(triple, "tail")  # May be missing
-#         tail_type = get_field(triple, "tail_type")  # May be missing
-
-#         # Start building the Cypher statement
-#         statement = f'MERGE (a {{name: "{head}"}})'
-
-#         # Include head_type if it exists
-#         if head_type:
-#             head_type_safe = sanitize_string(head_type)
-#             statement = f'MERGE (a:{head_type_safe} {{name: "{head}"}})'
-
-#         # Include tail and tail_type if they exist
-#         if tail:
-#             if tail_type:
-#                 tail_type_safe = sanitize_string(tail_type)
-#                 statement += f' MERGE (b:{tail_type_safe} {{name: "{tail}"}})'
-#             else:
-#                 statement += f' MERGE (b {{name: "{tail}"}})'
-
-#         # Include relation and relation_type if they exist
-#         if relation:
-#             if relation_type:
-#                 relation_type_safe = sanitize_string(relation_type)
-#                 statement += f' MERGE (a)-[:{relation_type_safe} {{name: "{relation}"}}]->(b);'
-#             else:
-#                 statement += f' MERGE (a)-[:RelatedTo {{name: "{relation}"}}]->(b);'  # Default relation if no relation_type
-
-#         else:
-#             statement += ';'  # No relation, just end the statement with a semicolon
-
-#         cypher_statements.append(statement)
-
-#     # Handle a list of triples in "triple_list"
-#     elif "triple_list" in parsed_data:
-#         for triple in parsed_data["triple_list"]:
-#             head = get_field(triple, "head")
-#             head_type = get_field(triple, "head_type")
-#             relation = get_field(triple, "relation")
-#             relation_type = get_field(triple, "relation_type")
-#             tail = get_field(triple, "tail")
-#             tail_type = get_field(triple, "tail_type")
-
-#             # Start building the Cypher statement
-#             statement = f'MERGE (a {{name: "{head}"}})'
-
-#             # Include head_type if it exists
-#             if head_type:
-#                 head_type_safe = sanitize_string(head_type)
-#                 statement = f'MERGE (a:{head_type_safe} {{name: "{head}"}})'
-
-#             # Include tail and tail_type if they exist
-#             if tail:
-#                 if tail_type:
-#                     tail_type_safe = sanitize_string(tail_type)
-#                     statement += f' MERGE (b:{tail_type_safe} {{name: "{tail}"}})'
-#                 else:
-#                     statement += f' MERGE (b {{name: "{tail}"}})'
-
-#             # Include relation and relation_type if they exist
-#             if relation:
-#                 if relation_type:
-#                     relation_type_safe = sanitize_string(relation_type)
-#                     statement += f' MERGE (a)-[:{relation_type_safe} {{name: "{relation}"}}]->(b);'
-#                 else:
-#                     statement += f' MERGE (a)-[:RelatedTo {{name: "{relation}"}}]->(b);'  # Default relation if no relation_type
-
-#             else:
-#                 statement += ';'  # No relation, just end the statement with a semicolon
-
-#             cypher_statements.append(statement)
-
-#     return cypher_statements
-
-# # Example sanitize_string function for reference:
-# def sanitize_string(input_str, max_length=255):
-#     """
-#     Process the input string to ensure it meets the database requirements.
-#     """
-#     # step1: Replace invalid characters
-#     input_str = re.sub(r'[^a-zA-Z0-9_]', '_', input_str)
-
-#     # step2: Add prefix if it starts with a digit
-#     if input_str[0].isdigit():
-#         input_str = 'num' + input_str
-
-#     # step3: Limit length
-#     if len(input_str) > max_length:
-#         input_str = input_str[:max_length]
-
-#     return input_str
