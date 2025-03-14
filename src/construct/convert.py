@@ -88,11 +88,11 @@ def execute_cypher_statements(uri, user, password, cypher_statements):
             session.run(statement)
             print(f"Executed: {statement}")
 
-    # Write the cypher statements to a text file
-    with open("executed_statements.txt", 'a') as f:
-        for statement in cypher_statements:
-            f.write(statement + '\n')
-        f.write('\n')
+    # Write excuted cypher statements to a text file if you want.
+    # with open("executed_statements.txt", 'a') as f:
+    #     for statement in cypher_statements:
+    #         f.write(statement + '\n')
+    #     f.write('\n')
 
     driver.close()
 
