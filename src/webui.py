@@ -108,7 +108,7 @@ def create_interface():
                     label="🪄 Select your Model",
                     choices=["deepseek-chat", "deepseek-reasoner",
                              "gpt-3.5-turbo", "gpt-4o-mini", "gpt-4o",
-                             "qwen-turbo", "qwen-plus", "qwen-max", "qwen-long"
+                             "qwen-turbo", "qwen-plus", "qwen-max", "qwen-long",
                              "moonshot-v1-8k", "moonshot-v1-32k", "moonshot-v1-128k",
                     ],
                     value="deepseek-chat",
