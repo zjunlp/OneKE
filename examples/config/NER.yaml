@@ -3,7 +3,7 @@ model:
   model_name_or_path: meta-llama/Meta-Llama-3-8B-Instruct # model name to download from huggingface or use the local model path.
   vllm_serve: false # whether to use the vllm. Default set to false.
 
-extraction: 
+extraction:
   task: NER  # task type, chosen from Base, NER, RE, EE.
   text: Finally , every other year , ELRA organizes a major conference LREC , the International Language Resources and Evaluation Conference . # input text for the extraction task. No need if use_file is set to true.
   constraint: ["algorithm", "conference", "else", "product", "task", "field", "metrics", "organization", "researcher", "program language", "country", "location", "person", "university"] # Specified entity types for the named entity recognition task. Default set to empty.

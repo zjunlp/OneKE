@@ -1,0 +1,21 @@
+model:
+  # Recommend using ChatGPT or DeepSeek APIs for complex Triple task.
+  category: ChatGPT # model category, chosen from ChatGPT, DeepSeek, LLaMA, Qwen, ChatGLM, MiniCPM, OneKE.
+  model_name_or_path: gpt-4o-mini # # model name, chosen from the model list of the selected category.
+  api_key: your_api_key # your API key for the model with API service. No need for open-source models.
+  base_url: https://api.openai.com/v1 # # base URL for the API service. No need for open-source models.
+
+extraction:
+  mode: quick # extraction mode, chosen from quick, detailed, customized. Default set to quick. See src/config.yaml for more details.
+  task: Triple  # task type, chosen from Base, NER, RE, EE. Now newly added task 'Triple'.
+  use_file: true # whether to use a file for the input text. Default set to false.
+  file_path: ./data/input_files/Artificial_Intelligence_Wikipedia.txt #  # path to the input file. No need if use_file is set to false.
+  constraint: [["Person", "Place", "Event", "Property"], ["Interpersonal", "Located", "Ownership", "Action"]] # Specified entity or relation types for Triple Extraction task. You can write 3 lists for subject, relation and object types. Or you can write 2 lists for entity and relation types. Or you can write 1 list for entity type only.
+  update_case: false # whether to update the case repository. Default set to false.
+  show_trajectory: false # whether to display the extracted intermediate steps
+
+# construct: # (Optional) If you want to construct a Knowledge Graph, you need to set the construct field, or you must delete this field.
+#   database: Neo4j # database type, now only support Neo4j.
+#   url: neo4j://localhost:7687 # your database URL，Neo4j's default port is 7687.
+#   username: your_username # your database username.
+#   password: "your_password" # your database password.

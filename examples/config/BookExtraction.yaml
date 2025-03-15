@@ -5,10 +5,10 @@ model:
   api_key: your_api_key # your API key for the model with API service. No need for open-source models.
   base_url: https://api.openai.com/v1 # # base URL for the API service. No need for open-source models.
 
-extraction:             
+extraction:
   task: Base # task type, chosen from Base, NER, RE, EE.
   instruction: Extract main characters and background setting from this chapter. # description for the task. No need for NER, RE, EE task.
-  use_file: true # whether to use a file for the input text. Default set to false.      
+  use_file: true # whether to use a file for the input text. Default set to false.
   file_path: ./data/input_files/Harry_Potter_Chapter1.pdf #  # path to the input file. No need if use_file is set to false.
   mode: quick # extraction mode, chosen from quick, detailed, customized. Default set to quick. See src/config.yaml for more details.
   update_case: false # whether to update the case repository. Default set to false.

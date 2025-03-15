@@ -1,9 +1,9 @@
 from langchain.prompts import PromptTemplate
 from .prompt_example import *
 
-# ==================================================================== #  
-#                           SCHEMA AGENT                               #  
-# ==================================================================== #  
+# ==================================================================== #
+#                           SCHEMA AGENT                               #
+# ==================================================================== #
 
 # Get Text Analysis
 TEXT_ANALYSIS_INSTRUCTION = """
@@ -22,9 +22,9 @@ text_analysis_instruction = PromptTemplate(
 # Get Deduced Schema Json
 DEDUCE_SCHEMA_JSON_INSTRUCTION = """
 **Instruction**: Generate an output format that meets the requirements as described in the task. Pay attention to the following requirements:
-    - Format: Return your responses in dictionary format as a JSON object. 
+    - Format: Return your responses in dictionary format as a JSON object.
     - Content: Do not include any actual data; all attributes values should be set to None.
-    - Note: Attributes not mentioned in the task description should be ignored. 
+    - Note: Attributes not mentioned in the task description should be ignored.
 {examples}
 **Task**: {instruction}
 
@@ -57,9 +57,9 @@ deduced_schema_code_instruction = PromptTemplate(
 )
 
 
-# ==================================================================== #  
-#                         EXTRACTION AGENT                             #  
-# ==================================================================== #  
+# ==================================================================== #
+#                         EXTRACTION AGENT                             #
+# ==================================================================== #
 
 EXTRACT_INSTRUCTION = """
 **Instruction**: You are an agent skilled in information extarction. {instruction}
@@ -113,9 +113,9 @@ summarize_instruction = PromptTemplate(
 
 
 
-# ==================================================================== #  
-#                          REFLECION AGENT                             #  
-# ==================================================================== #  
+# ==================================================================== #
+#                          REFLECION AGENT                             #
+# ==================================================================== #
 REFLECT_INSTRUCTION = """**Instruction**: You are an agent skilled in reflection and optimization based on the original result. Refer to **Reflection Reference** to identify potential issues in the current extraction results.
 
 **Reflection Reference**: {examples}
@@ -153,9 +153,9 @@ summarize_instruction = PromptTemplate(
 
 
 
-# ==================================================================== #  
-#                            CASE REPOSITORY                           #  
-# ==================================================================== #  
+# ==================================================================== #
+#                            CASE REPOSITORY                           #
+# ==================================================================== #
 
 GOOD_CASE_ANALYSIS_INSTRUCTION = """
 **Instruction**: Below is an information extraction task and its corresponding correct answer. Provide the reasoning steps that led to the correct answer, along with brief explanation of the answer. Your response should be brief and organized.

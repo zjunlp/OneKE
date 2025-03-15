@@ -22,7 +22,7 @@ class BaseEngine:
         self.top_p = 0.9
         self.max_tokens = 1024
         self.device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-        
+
     def get_chat_response(self, prompt):
         raise NotImplementedError
 
@@ -30,7 +30,7 @@ class BaseEngine:
         self.temperature = temperature
         self.top_p = top_p
         self.max_tokens = max_tokens
-    
+
 class LLaMA(BaseEngine):
     def __init__(self, model_name_or_path: str):
         super().__init__(model_name_or_path)
@@ -61,7 +61,7 @@ class LLaMA(BaseEngine):
             top_p=self.top_p,
         )
         return outputs[0]["generated_text"][-1]['content'].strip()
-    
+
 class Qwen(BaseEngine):
     def __init__(self, model_name_or_path: str):
         super().__init__(model_name_or_path)
@@ -72,7 +72,7 @@ class Qwen(BaseEngine):
             torch_dtype="auto",
             device_map="auto"
         )
-        
+
     def get_chat_response(self, prompt):
         messages = [
             {"role": "system", "content": "You are Qwen, created by Alibaba Cloud. You are a helpful assistant."},
@@ -94,7 +94,7 @@ class Qwen(BaseEngine):
             output_ids[len(input_ids):] for input_ids, output_ids in zip(model_inputs.input_ids, generated_ids)
         ]
         response = self.tokenizer.batch_decode(generated_ids, skip_special_tokens=True)[0].strip()
-        
+
         return response
 
 class MiniCPM(BaseEngine):
@@ -125,7 +125,7 @@ class MiniCPM(BaseEngine):
             model_outputs[i][len(model_inputs[i]):] for i in range(len(model_inputs))
         ]
         response = self.tokenizer.batch_decode(output_token_ids, skip_special_tokens=True)[0].strip()
-        
+
         return response
 
 class ChatGLM(BaseEngine):
@@ -155,7 +155,7 @@ class ChatGLM(BaseEngine):
         )
         model_outputs = model_outputs[:, model_inputs['input_ids'].shape[1]:]
         response = self.tokenizer.batch_decode(model_outputs, skip_special_tokens=True)[0].strip()
-        
+
         return response
 
 class OneKE(BaseEngine):
@@ -164,7 +164,7 @@ class OneKE(BaseEngine):
         self.name = "OneKE"
         self.model_id = model_name_or_path
         config = AutoConfig.from_pretrained(self.model_id, trust_remote_code=True)
-        quantization_config=BitsAndBytesConfig(     
+        quantization_config=BitsAndBytesConfig(
             load_in_4bit=True,
             llm_int8_threshold=6.0,
             llm_int8_has_fp16_weight=False,
@@ -175,12 +175,12 @@ class OneKE(BaseEngine):
         self.model = AutoModelForCausalLM.from_pretrained(
             self.model_id,
             config=config,
-            device_map="auto",  
+            device_map="auto",
             quantization_config=quantization_config,
             torch_dtype=torch.bfloat16,
             trust_remote_code=True,
         )
-        
+
     def get_chat_response(self, prompt):
         system_prompt = '<<SYS>>\nYou are a helpful assistant. 你是一个乐于助人的助手。\n<</SYS>>\n\n'
         sintruct = '[INST] ' + system_prompt + prompt + '[/INST]'
@@ -191,9 +191,9 @@ class OneKE(BaseEngine):
         generation_output = generation_output.sequences[0]
         generation_output = generation_output[input_length:]
         response = self.tokenizer.decode(generation_output, skip_special_tokens=True)
-        
+
         return response
-        
+
 class ChatGPT(BaseEngine):
     def __init__(self, model_name_or_path: str, api_key: str, base_url=openai.base_url):
         self.name = "ChatGPT"
@@ -207,7 +207,7 @@ class ChatGPT(BaseEngine):
         else:
             self.api_key = os.environ["OPENAI_API_KEY"]
         self.client = OpenAI(api_key=self.api_key, base_url=self.base_url)
-    
+
     def get_chat_response(self, input):
         response = self.client.chat.completions.create(
             model=self.model,
@@ -234,7 +234,7 @@ class DeepSeek(BaseEngine):
         else:
             self.api_key = os.environ["DEEPSEEK_API_KEY"]
         self.client = OpenAI(api_key=self.api_key, base_url=self.base_url)
-    
+
     def get_chat_response(self, input):
         response = self.client.chat.completions.create(
             model=self.model,
@@ -258,7 +258,7 @@ class LocalServer(BaseEngine):
         self.max_tokens = 1024
         self.api_key = "EMPTY_API_KEY"
         self.client = OpenAI(api_key=self.api_key, base_url=self.base_url)
-    
+
     def get_chat_response(self, input):
         try:
             response = self.client.chat.completions.create(
@@ -276,4 +276,3 @@ class LocalServer(BaseEngine):
             print("Error: Unable to connect to the server. Please check if the vllm service is running and the port is 8080.")
         except Exception as e:
             print(f"Error: {e}")
-        

@@ -1,0 +1,156 @@
+{
+    "triple_list": [
+        {
+            "head": "sea levels",
+            "head_type": "Property",
+            "relation": "wiped out",
+            "relation_type": "Action",
+            "tail": "coastal cities",
+            "tail_type": "Place"
+        },
+        {
+            "head": "nations",
+            "head_type": "Person",
+            "relation": "created",
+            "relation_type": "Action",
+            "tail": "mechas",
+            "tail_type": "Property"
+        },
+        {
+            "head": "David",
+            "head_type": "Person",
+            "relation": "given to",
+            "relation_type": "Ownership",
+            "tail": "Henry and Monica",
+            "tail_type": "Person"
+        },
+        {
+            "head": "Monica",
+            "head_type": "Person",
+            "relation": "feels uncomfortable",
+            "relation_type": "Interpersonal",
+            "tail": "David",
+            "tail_type": "Person"
+        },
+        {
+            "head": "David",
+            "head_type": "Person",
+            "relation": "befriends",
+            "relation_type": "Interpersonal",
+            "tail": "Teddy",
+            "tail_type": "Person"
+        },
+        {
+            "head": "Martin",
+            "head_type": "Person",
+            "relation": "goads",
+            "relation_type": "Action",
+            "tail": "David",
+            "tail_type": "Person"
+        },
+        {
+            "head": "David",
+            "head_type": "Person",
+            "relation": "blamed for",
+            "relation_type": "Action",
+            "tail": "incident",
+            "tail_type": "Event"
+        },
+        {
+            "head": "Monica",
+            "head_type": "Person",
+            "relation": "returns David to",
+            "relation_type": "Ownership",
+            "tail": "creators",
+            "tail_type": "Person"
+        },
+        {
+            "head": "David",
+            "head_type": "Person",
+            "relation": "decides to find",
+            "relation_type": "Action",
+            "tail": "Blue Fairy",
+            "tail_type": "Property"
+        },
+        {
+            "head": "David",
+            "head_type": "Person",
+            "relation": "pleads for",
+            "relation_type": "Action",
+            "tail": "his life",
+            "tail_type": "Event"
+        },
+        {
+            "head": "David",
+            "head_type": "Person",
+            "relation": "meets",
+            "relation_type": "Interpersonal",
+            "tail": "Professor Hobby",
+            "tail_type": "Person"
+        },
+        {
+            "head": "David",
+            "head_type": "Person",
+            "relation": "attempts",
+            "relation_type": "Action",
+            "tail": "suicide",
+            "tail_type": "Event"
+        },
+        {
+            "head": "Joe",
+            "head_type": "Person",
+            "relation": "rescues",
+            "relation_type": "Action",
+            "tail": "David",
+            "tail_type": "Person"
+        },
+        {
+            "head": "David",
+            "head_type": "Person",
+            "relation": "asks statue to turn him into",
+            "relation_type": "Action",
+            "tail": "real boy",
+            "tail_type": "Property"
+        },
+        {
+            "head": "humanity",
+            "head_type": "Person",
+            "relation": "is extinct",
+            "relation_type": "Action",
+            "tail": "future",
+            "tail_type": "Event"
+        },
+        {
+            "head": "Specialists",
+            "head_type": "Person",
+            "relation": "resurrect",
+            "relation_type": "Action",
+            "tail": "David and Teddy",
+            "tail_type": "Person"
+        },
+        {
+            "head": "Monica",
+            "head_type": "Person",
+            "relation": "can live for",
+            "relation_type": "Property",
+            "tail": "one day",
+            "tail_type": "Property"
+        },
+        {
+            "head": "David",
+            "head_type": "Person",
+            "relation": "spends",
+            "relation_type": "Action",
+            "tail": "happiest day with Monica",
+            "tail_type": "Event"
+        },
+        {
+            "head": "Monica",
+            "head_type": "Person",
+            "relation": "tells",
+            "relation_type": "Interpersonal",
+            "tail": "David",
+            "tail_type": "Person"
+        }
+    ]
+}
