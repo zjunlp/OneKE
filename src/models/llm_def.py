@@ -201,7 +201,7 @@ class ChatGPT(BaseEngine):
         self.base_url = base_url
         self.temperature = 0.2
         self.top_p = 0.9
-        self.max_tokens = 1024
+        self.max_tokens = 4096 # Close source model
         if api_key != "":
             self.api_key = api_key
         else:
@@ -228,7 +228,7 @@ class DeepSeek(BaseEngine):
         self.base_url = base_url
         self.temperature = 0.2
         self.top_p = 0.9
-        self.max_tokens = 1024
+        self.max_tokens = 4096 # Close source model
         if api_key != "":
             self.api_key = api_key
         else:
