@@ -94,7 +94,7 @@ def create_interface():
                 <p>
                 🌐[<a href="https://oneke.openkg.cn/" target="_blank">Home</a>]
                 📹[<a href="http://oneke.openkg.cn/demo.mp4" target="_blank">Video</a>]
-                📝[<a href="https://huggingface.co/papers/2412.20005" target="_blank">Paper</a>]
+                📝[<a href="https://arxiv.org/abs/2412.20005" target="_blank">Paper</a>]
                 💻[<a href="https://github.com/zjunlp/OneKE" target="_blank">Code</a>]
                 </p>
             </div>
