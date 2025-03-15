@@ -86,8 +86,8 @@ def create_interface():
         gr.HTML("""
             <div style="text-align:center;">
                 <p align="center">
-                    <a href="https://github.com/zjunlp/DeepKE/blob/main/example/llm/assets/oneke_logo.png">
-                        <img src="https://raw.githubusercontent.com/zjunlp/DeepKE/refs/heads/main/example/llm/assets/oneke_logo.png" width="240"/>
+                    <a>
+                        <img src="https://raw.githubusercontent.com/zjunlp/OneKE/refs/heads/main/figs/logo.png" width="240"/>
                     </a>
                 </p>
                 <h1>OneKE: A Dockerized Schema-Guided LLM Agent-based Knowledge Extraction System</h1>
