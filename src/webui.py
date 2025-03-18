@@ -94,7 +94,7 @@ def create_interface():
                 <p>
                 🌐[<a href="https://oneke.openkg.cn/" target="_blank">Home</a>]
                 📹[<a href="http://oneke.openkg.cn/demo.mp4" target="_blank">Video</a>]
-                📝[<a href="https://arxiv.org/abs/2412.20005" target="_blank">Paper</a>]
+                📝[<a href="https://arxiv.org/abs/2412.20005v2" target="_blank">Paper</a>]
                 💻[<a href="https://github.com/zjunlp/OneKE" target="_blank">Code</a>]
                 </p>
             </div>
@@ -108,8 +108,6 @@ def create_interface():
                     label="🪄 Select your Model",
                     choices=["deepseek-chat", "deepseek-reasoner",
                              "gpt-3.5-turbo", "gpt-4o-mini", "gpt-4o",
-                             "qwen-turbo", "qwen-plus", "qwen-max", "qwen-long",
-                             "moonshot-v1-8k", "moonshot-v1-32k", "moonshot-v1-128k",
                     ],
                     value="deepseek-chat",
                 )
@@ -200,18 +198,10 @@ def create_interface():
                         pipeline = Pipeline(ChatGPT(model_name_or_path=model, api_key=api_key))
                     elif model in ["deepseek-chat", "deepseek-reasoner"]:
                         pipeline = Pipeline(DeepSeek(model_name_or_path=model, api_key=api_key))
-                    elif model in ["moonshot-v1-8k", "moonshot-v1-32k", "moonshot-v1-128k"]:
-                        pipeline = Pipeline(DeepSeek(model_name_or_path=model, api_key=api_key, base_url="https://api.moonshot.cn/v1"))
-                    elif model in ["qwen-turbo", "qwen-plus", "qwen-max", "qwen-long"]:
-                        pipeline = Pipeline(DeepSeek(model_name_or_path=model, api_key=api_key, base_url="https://dashscope.aliyuncs.com/compatible-mode/v1"))
                 else:
                     if model in ["gpt-3.5-turbo", "gpt-4o-mini", "gpt-4o"]:
                         pipeline = Pipeline(ChatGPT(model_name_or_path=model, api_key=api_key, base_url=base_url))
                     elif model in ["deepseek-chat", "deepseek-reasoner"]:
-                        pipeline = Pipeline(DeepSeek(model_name_or_path=model, api_key=api_key, base_url=base_url))
-                    elif model in ["moonshot-v1-8k", "moonshot-v1-32k", "moonshot-v1-128k"]:
-                        pipeline = Pipeline(DeepSeek(model_name_or_path=model, api_key=api_key, base_url=base_url))
-                    elif model in ["qwen-turbo", "qwen-plus", "qwen-max", "qwen-long"]:
                         pipeline = Pipeline(DeepSeek(model_name_or_path=model, api_key=api_key, base_url=base_url))
 
                 if task == "Base":
