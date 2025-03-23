@@ -19,8 +19,7 @@
     - [🔩Manual Environment Configuration](#manual-environment-configuration)
     - [🐳Building With Docker Image](#building-with-docker-image)
   - [Step2: Start with Examples](#step2-start-with-examples)
-    - [🖊️Start with YAML](#️start-with-yaml)
-    - [🖊️Start with Python](#️start-with-python)
+    - [🖊️Start with CLI](#️start-with-cli)
     - [🖊️Start with Web UI](#️start-with-web-ui)
 - [🔍Further Usage](#further-usage)
   - [💡Extraction Task Support](#extraction-task-support)
@@ -134,14 +133,14 @@ Upon starting, the container will enter the `/app/OneKE` directory as its workin
 
 ### Step2: Start with Examples
 
-We offer three quick-start options. Choose your preferred method to swiftly explore OneKE with predefined examples.
+We offer two quick-start options. Choose your preferred method to swiftly explore OneKE with predefined examples.
 
 > Note:
 > - **Ensure** that your working directory is set to the **`OneKE`** folder, whether in a virtual environment or a docker container.
 > - Refer to [here](#network-issue-solutions) to resolve the **network issues**. If you have more questions, feel free to open an issue with us.
 
 
-#### 🖊️Start with YAML
+#### 🖊️Start with CLI
 **Step1: Prepare the configuration file**
 
 Several YAML configuration files are available in the `examples/config`. These extraction scenarios cover different extraction data, methods, and models, allowing you to easily explore all the features of OneKE.
@@ -211,40 +210,7 @@ python src/run.py --config $config_file # start extraction, executed in the OneK
 
 Refer to [here](https://github.com/zjunlp/OneKE/tree/main/examples/results) to get an overview of the knowledge extraction results.
 
-#### 🖊️Start with Python
-You can also try OneKE by directly running the `example.py` file located in the `example` directory. Specifically, execute the following commands:
-```bash
-python examples/example.py
-```
-
-This will complete a basic NER task, with the extraction results printed upon completion. You can further modify the code in `example.py` to suit your extraction task setting or to access detailed extraction trajectory.
-
-***Named Entity Extraction:***
-
-Specifically, we present a NER case in the `example.py` file:
-```python
-import sys
-sys.path.append("./src")
-from models import *
-from pipeline import *
-import json
-
-# model configuration
-model = ChatGPT(model_name_or_path="gpt-4o-mini", api_key="your_api_key")
-pipeline = Pipeline(model)
-
-# extraction configuration
-Task = "NER"
-Text = "Finally , every other year , ELRA organizes a major conference LREC , the International Language Resources and Evaluation Conference."
-Constraint = nationality, country capital, place of death, children, location contains, place of birth, place lived, administrative division of country, country of administrative divisions, company, neighborhood of, company founders
-
-# get extraction result
-result, trajectory, frontend_schema, frontend_res = pipeline.get_extract_result(task=Task, text=Text, constraint=Constraint)
-print("Trajectory:", json.dumps(trajectory, indent=4))
-```
-First, select an appropriate extraction model, then complete the configuration of extraction parameters (such as extraction task, extraction text, etc.). Finally, call the `get_extract_result` function of the `Pipeline` class to perform information extraction and obtain the final results.
-
-Refer to [here](https://github.com/zjunlp/OneKE/tree/main/examples/results/NER.json) to get an overview of the knowledge extraction results.
+> Note: You can also try OneKE by directly running the `example.py` file located in the `example` directory. In this way, you can explore more advanced uses flexibly.
 
 #### 🖊️Start with Web UI
 
