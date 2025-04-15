@@ -254,8 +254,8 @@ Here are three main function buttons:
 
 <table>
     <tr>
-        <td><img src="./figs/webdemo/demo020.png" width="300"></td>
-        <td><img src="./figs/webdemo/demo021.png" width="300"></td>
+        <td><img src="./figs/webdemo/demo020.png"></td>
+        <td><img src="./figs/webdemo/demo021.png"></td>
     </tr>
 </table>
 
