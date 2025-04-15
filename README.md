@@ -21,13 +21,20 @@
   - [Step2: Start with Examples](#step2-start-with-examples)
     - [🖊️Start with CLI](#️start-with-cli)
     - [🖊️Start with Web UI](#️start-with-web-ui)
+- [📟 Web UI Navigation](#-web-ui-navigation)
+  - [Initial Page](#initial-page)
+  - [Model Configuration](#model-configuration)
+  - [Task Configuration](#task-configuration)
+  - [Text Input](#text-input)
+  - [Set Instruction](#set-instruction)
+  - [Get Result](#get-result)
 - [🔍Further Usage](#further-usage)
   - [💡Extraction Task Support](#extraction-task-support)
     - [1. Named Entity Recognition](#1-named-entity-recognition)
     - [2. Relation Extraction](#2-relation-extraction)
     - [3. Event Extraction](#3-event-extraction)
     - [4. Triple Extraction](#4-triple-extraction)
-      - [Knowledge Graph](#knowledge-graph)
+      - [Build Knowledge-Graph](#build-knowledge-graph)
     - [5. Open Domain IE](#5-open-domain-ie)
   - [💡Data Source Support](#data-source-support)
   - [💡Extraction Model Support](#extraction-model-support)
@@ -211,11 +218,91 @@ The front-end is built with Gradio, and the default port of Gradio is 7860. Ther
  http://127.0.0.1:7860
 ```
 
-Similarly, you can visually configure tasks and obtain results through the front-end interface.
+The web service interface is now complete, so you can visually configure tasks and obtain results through it.
+
+## 📟 Web UI Navigation
+
+### Initial Page
+
+<table>
+    <tr>
+        <td><img src="./figs/webdemo/demo000.png"></td>
+        <td><img src="./figs/webdemo/demo001.png"></td>
+    </tr>
+</table>
+
+Here are three main function buttons:
 
 1. `🎲 Quick Start with an Example 🎲`: Quickly get a simple example to try OneKE.
-2. `Submit`: After configuring your LLM, parameters, and tasks, click this button to run OneKE.
-3. `Clear`: When a task is completed, click this button to restore the initial state.
+2. `Submit`: After configuring your customized tasks, click this button to run.
+3. `Clear`: When a task is completed, click this button to restore.
+
+### Model Configuration
+
+<table>
+    <tr>
+        <td><img src="./figs/webdemo/demo010.png"></td>
+        <td><img src="./figs/webdemo/demo011.png"></td>
+    </tr>
+</table>
+
+1. `🪄 Enter your Model`: You can enter your model name here, such as *gpt-4o-mini*, *o3-mini*, *deepseek-chat*, *deepseek-reasoner*, etc. We also support local models — just input the local model path. For more details, please read [this part](#extraction-model-support).
+2. `🔑 Enter your API-Key`: Enter your model's API key here. We ensure the security of your information. If you are using a local model, you don’t need to fill in this field.
+3. `🔗 Enter your Base-URL`: We support any custom Base-URL. If you are using the default URL, please leave this field empty.
+
+### Task Configuration
+
+<table>
+    <tr>
+        <td><img src="./figs/webdemo/demo020.png" width="300"></td>
+        <td><img src="./figs/webdemo/demo021.png" width="300"></td>
+    </tr>
+</table>
+
+
+1. `🎯 Select your Task`: Choose your task. We support both **Traditional IE** (NER, RE, EE, and Triple for knowledge graph) and **Open Domain IE** such as Web News Extraction, Book Knowledge Extraction, and **any other extraction task** you want. For more details, please read [this part](#extraction-task-support).
+2. `🧭 Select your Mode`: Choose your extraction method. We offer predefined agent combinations, or you can fully `customize` your own agent strategy. For longer text extraction tasks, we recommend using the `direct mode`; For shorter tasks requiring high accuracy, you can try the `standard mode`. If you're customizing the mode and don't need any agent, simply select `Not Required`. For more details, please read [this part](#extraction-method-support).
+
+### Text Input
+
+<table>
+    <tr>
+        <td><img src="./figs/webdemo/demo030.png"></td>
+        <td><img src="./figs/webdemo/demo031.png"></td>
+    </tr>
+</table>
+
+1. `📂 Use File`: You can either input the text or upload a file.
+2. `📖 Upload a File`: If you want to upload a file, make sure the `📂 Use File` is checked first. Then you can drop a file here or click to upload. We support various file formats such as *.pdf*, *.html*, etc. For more details, please read [this part](#data-source-support).
+3. `📖 Text`: You can enter text in any language here.
+
+### Set Instruction
+
+<table>
+    <tr>
+        <td><img src="./figs/webdemo/demo040.png"></td>
+        <td><img src="./figs/webdemo/demo041.png"></td>
+    </tr>
+</table>
+
+1. `🕹️ Instruction`: You can enter any type of information you want to extract here, for example: *Please help me extract all the person names*.
+2. `💰 Update Case`: Check this box if you want to update the **Case Repository**, then you need to provide your truth. For more details, please read [this part](#2-case-repository).
+3. `🪙 Truth`: You can enter the truth you want LLMs to know, for example: *{"relation_list": [{"head": "Guinea", "tail": "Conakry", "relation": "country capital"}]}*.
+
+### Get Result
+
+<table>
+    <tr>
+        <td><img src="./figs/webdemo/demo050.png"></td>
+        <td><img src="./figs/webdemo/demo051.png"></td>
+    </tr>
+</table>
+
+After configuring your customized tasks, click the `Submit` button to run. The results will be displayed here:
+
+1. **`🤔 Generated Schema`**: This is the extraction schema automatically generated by OneKE for your task, presented in a structured **Python class** format.
+2. **`😉 Final Answer`**: This is the final extraction result, presented in structured **JSON** format.
+3. `😵‍💫 Error capture`: This section displays all error messages caught during the process, such as network issues, etc. For more details, please read [this part](#️network-issue-solutions).
 
 ## 🔍Further Usage
 ### 💡Extraction Task Support
@@ -229,7 +316,7 @@ You can try different types of information extraction tasks within the OneKE fra
 | Triple | Triple Extraction, identifies subject-predicate-object triples in text. A triple is a fundamental data structure in information extraction, representing a piece of knowledge or fact. Knowledge graph can be quickly constructed after the Triple Extraction. |
 | ***Open Domain IE***||
 | Web News Extraction| Involves extracting key entities and events from online news articles to generate structured insights. |
-| Book Knowledged Extraction | Extracts information such as key concepts, themes, and facts from book chapters. |
+| Book Knowledge Extraction | Extracts information such as key concepts, themes, and facts from book chapters. |
 | Other | Encompasses information extraction from different types of content, such as social media and research papers, each tailored to the specific context and data type. |
 
 In subsequent code processing, we categorize tasks into four types: `NER` for Named Entity Recognition, `RE` for Relation Extraction, `EE` for Event Extraction, `Triple` for Triple Extraction, and `Base` for any other user-defined open-domain extraction tasks.
@@ -442,7 +529,7 @@ Here is an [example](https://github.com/zjunlp/OneKE/tree/main/examples/config/T
 
 > ⚠️ Warning: If you do not intend to build a Knowledge Graph, make sure to remove or comment out the construct field in the yaml file. This will help avoid errors related to database connection issues.
 
-##### Knowledge Graph
+##### Build Knowledge-Graph
 
  ✨ If you need to construct your Knowledge Graph (KG) **with your Triple Extraction result**, you can refer to this [example](https://github.com/zjunlp/OneKE/tree/main/examples/config/Triple2KG.yaml) for guidance. Mimic this example and add the `construct` field. Just update the field with your own database parameters.
 
