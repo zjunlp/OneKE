@@ -7,7 +7,8 @@
 
 <p align="center">
   <a href="https://oneke.openkg.cn/">🌐Web</a> •
-  <a href="http://oneke.openkg.cn/demo.mp4">📹Video</a>
+  <a href="http://oneke.openkg.cn/demo.mp4">📹Video</a> •
+  <a href="https://huggingface.co/spaces/zjunlp/OneKE">🤗HF·Demo
 </p>
 
 ## Table of Contents
@@ -68,7 +69,7 @@ OneKE currently offers the following features:
 
 
 ## 🚀Quick Start
-We have developed a webpage demo for OneKE with Gradio, click [here](http://120.27.214.45:7876/) try information extraction in an intuitive way.
+We have developed a webpage demo for OneKE with Gradio, click [here](http://121.41.117.246:7876/) try information extraction in an intuitive way.
 
 > Note: The demo only displays OneKE's basic capabilities for efficiency. Consider the local deployment steps below for further features.
 
