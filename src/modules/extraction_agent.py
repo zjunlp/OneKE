@@ -34,7 +34,7 @@ class ExtractionAgent:
         self.methods = ["extract_information_direct", "extract_information_with_case"]
 
     def __get_constraint(self, data: DataPoint):
-        if data.constraint == "":
+        if data.constraint in ("", [], {}, None):
             return data
         if data.task == "NER":
             constraint = json.dumps(data.constraint)
