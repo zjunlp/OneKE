@@ -137,7 +137,7 @@ def create_interface():
                 </p>
                 <h1>OneKE: A Dockerized Schema-Guided LLM Agent-based Knowledge Extraction System</h1>
                 <p>
-                🌐[<a href="https://oneke.openkg.cn/" target="_blank">Home</a>]
+                🌐[<a href="http://oneke.openkg.cn/" target="_blank">Home</a>]
                 📹[<a href="http://oneke.openkg.cn/demo.mp4" target="_blank">Video</a>]
                 📝[<a href="https://arxiv.org/abs/2412.20005v2" target="_blank">Paper</a>]
                 💻[<a href="https://github.com/zjunlp/OneKE" target="_blank">Code</a>]
