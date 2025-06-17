@@ -22,7 +22,7 @@
   - [Step2: Start with Examples](#step2-start-with-examples)
     - [🖊️Start with CLI](#️start-with-cli)
     - [🖊️Start with Web UI](#️start-with-web-ui)
-- [📟 Web UI Navigation](#-web-ui-navigation)
+- [📟Web UI Navigation](#web-ui-navigation)
   - [Initial Page](#initial-page)
   - [Model Configuration](#model-configuration)
   - [Task Configuration](#task-configuration)
@@ -46,10 +46,12 @@
 - [🛠️Network Issue Solutions](#️network-issue-solutions)
 - [🎉Contributors](#contributors)
 - [🌻Acknowledgement](#acknowledgement)
+- [🚩Citation](#citation)
 
 ---
 
 ## 🔔News
+- **[2025/03] We add the Triple Extraction Task for automated knowledge graph construction.**
 - **[2025/02] We support the local deployment of the [DeepSeek-R1](https://huggingface.co/collections/deepseek-ai/deepseek-r1-678e1e131c0169c0bc89728d) series in addition to the existing API service, as well as vllm acceleration for other LLMs.**
 - **[2025/01] [OneKE](https://arxiv.org/abs/2412.20005) is accepted by WWW 2025 Demonstration Track 🎉🎉🎉.**
 - **[2024/12] We open source the *OneKE* framework, supporting multi-agent knowledge extraction across various scenarios.**
@@ -221,7 +223,7 @@ The front-end is built with Gradio, and the default port of Gradio is 7860. Ther
 
 The web service interface is now complete, so you can visually configure tasks and obtain results through it.
 
-## 📟 Web UI Navigation
+## 📟Web UI Navigation
 
 ### Initial Page
 
@@ -766,3 +768,17 @@ We deeply appreciate the collaborative efforts of everyone involved. We will con
 
 ## 🌻Acknowledgement
 We reference [itext2kg](https://github.com/AuvaLab/itext2kg) to aid in building the schema repository and utilize tools from [LangChain](https://www.langchain.com/) for file parsing. The experimental datasets we use are curated from the [IEPile](https://huggingface.co/datasets/zjunlp/iepile) repository. We appreciate their valuable contributions!
+
+## 🚩Citation
+
+Please cite the following paper if you use OneKE in your work. Thanks!
+
+```bibtex
+@inproceedings{luo2025oneke,
+  title={OneKE: A Dockerized Schema-Guided LLM Agent-based Knowledge Extraction System},
+  author={Luo, Yujie and Ru, Xiangyuan and Liu, Kangwei and Yuan, Lin and Sun, Mengshu and Zhang, Ningyu and Liang, Lei and Zhang, Zhiqiang and Zhou, Jun and Wei, Lanning and others},
+  booktitle={Companion Proceedings of the ACM on Web Conference 2025},
+  pages={2871--2874},
+  year={2025}
+}
+```
