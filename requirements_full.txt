@@ -102,9 +102,9 @@ protobuf==5.29.3
 pyairports==2.1.1
 pyarrow==19.0.1
 pycountry==24.6.1
-pydantic==2.10.3
+pydantic==2.10.6
 pydantic-settings==2.6.1
-pydantic_core==2.27.1
+pydantic_core==2.27.2
 pydub==0.25.1
 Pygments==2.18.0
 PyJWT==2.8.0
