@@ -19,3 +19,6 @@ agent:
     customized:
       schema_agent:  get_retrieved_schema
       extraction_agent: extract_information_direct
+    customize_schema:
+      schema_agent: get_customized_schema
+      extraction_agent: extract_information_with_case

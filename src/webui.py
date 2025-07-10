@@ -2,6 +2,10 @@
 ....../OneKE$ python src/webui.py
 """
 
+import sys
+import os
+
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 
 import gradio as gr
 import json
@@ -10,6 +14,275 @@ import re
 
 from models import *
 from pipeline import Pipeline
+from visualize.visual_neo4j import vis_neo4j, construct
+from visualize.visual_table import vis_table, construct_table
+
+
+def get_model_category(model_name_or_path):
+    if model_name_or_path in ["gpt-3.5-turbo", "gpt-4o-mini", "gpt-4o", "o3-mini"]:
+        return ChatGPT
+    elif model_name_or_path in ["deepseek-chat", "deepseek-reasoner"]:
+        return DeepSeek
+    elif re.search(r"(?i)llama", model_name_or_path):
+        return LLaMA
+    elif re.search(r"(?i)qwen", model_name_or_path):
+        return Qwen
+    elif re.search(r"(?i)minicpm", model_name_or_path):
+        return MiniCPM
+    elif re.search(r"(?i)chatglm", model_name_or_path):
+        return ChatGLM
+    else:
+        return BaseEngine
+
+
+def customized_mode(mode):
+    if mode == "customized":
+        return gr.update(visible=True), gr.update(visible=True), gr.update(visible=True)
+    else:
+        return (
+            gr.update(visible=False, value="Not Required"),
+            gr.update(visible=False, value="Not Required"),
+            gr.update(visible=False, value="Not Required"),
+        )
+
+
+def update_fields(task):
+    if task == "Base" or task == "":
+        return gr.update(
+            visible=True,
+            label="🕹️ Instruction",
+            lines=3,
+            placeholder="You can enter any type of information you want to extract here, for example: Please help me extract all the person names.",
+        ), gr.update(visible=False)
+    elif task == "NER":
+        return gr.update(visible=False), gr.update(
+            visible=True,
+            label="🕹️ Instruction",
+            lines=3,
+            placeholder="You can enter any type of information you want to extract here, for example: Please help me extract all the person names.",
+        )
+    elif task == "RE":
+        return gr.update(visible=False), gr.update(
+            visible=True,
+            label="🕹️ Instruction",
+            lines=3,
+            placeholder="You can enter any type of information you want to extract here, for example: Please help me extract all the person names.",
+        )
+    elif task == "EE":
+        return gr.update(visible=False), gr.update(
+            visible=True,
+            label="🕹️ Instruction",
+            lines=3,
+            placeholder="You can enter any type of information you want to extract here, for example: Please help me extract all the person names.",
+        )
+    elif task == "Triple":
+        return gr.update(visible=False), gr.update(
+            visible=True,
+            label="🕹️ Instruction",
+            lines=3,
+            placeholder="You can enter any type of information you want to extract here, for example: Please help me extract all the person names.",
+        )
+
+
+def update_input_fields(use_file):
+    if use_file:
+        return gr.update(visible=False), gr.update(visible=True)
+    else:
+        return gr.update(visible=True), gr.update(visible=False)
+
+
+def update_case(update_case):
+    if update_case:
+        return gr.update(visible=True)
+    else:
+        return gr.update(visible=False)
+
+
+def update_schema(update_schema):
+    if update_schema:
+        return gr.update(visible=True)
+    else:
+        return gr.update(visible=False)
+
+
+def start_with_example():
+    example_index = random.randint(-3, len(examples) - 1)
+    example_index = max(example_index, 0)
+    example = examples[example_index]
+
+    if example_index == 0:
+        with open(
+            "data/input_files/ChineseNewsExample.json", "r", encoding="utf-8"
+        ) as file:
+            lines = file.readlines()
+            random_line = random.choice(lines).strip()
+            try:
+                json_data = json.loads(random_line)
+                title = json_data.get("title", "No title found")
+            except json.JSONDecodeError:
+                title = "Error decoding JSON"
+            example["text"] = title
+
+    return (
+        gr.update(value=example["task"]),
+        gr.update(value=example["mode"]),
+        gr.update(value=example["use_file"]),
+        gr.update(value=example["file_path"], visible=example["use_file"]),
+        gr.update(value=example["text"], visible=not example["use_file"]),
+        gr.update(value=example["instruction"], visible=example["task"] == "Base"),
+        gr.update(
+            value=example["constraint"],
+            visible=example["task"] in ["NER", "RE", "EE", "Triple"],
+        ),
+        gr.update(value=example["update_case"]),
+        gr.update(
+            value=example["truth"]
+        ),  # gr.update(value=example["update_schema"]), gr.update(value=example["selfschema"]),
+        gr.update(value="Not Required", visible=False),
+        gr.update(value="Not Required", visible=False),
+        gr.update(value="Not Required", visible=False),
+    )
+
+
+def submit(
+    model,
+    api_key,
+    base_url,
+    task,
+    mode,
+    instruction,
+    constraint,
+    text,
+    use_file,
+    file_path,
+    update_case,
+    truth,
+    selfschema,
+    schema_agent,
+    extraction_Agent,
+    reflection_agent,
+):
+    print(selfschema)
+    try:
+        ModelClass = get_model_category(model)
+        if base_url == "Default" or base_url == "":
+            if api_key == "":
+                pipeline = Pipeline(ModelClass(model_name_or_path=model))
+            else:
+                pipeline = Pipeline(
+                    ModelClass(model_name_or_path=model, api_key=api_key)
+                )
+        else:
+            if api_key == "":
+                pipeline = Pipeline(
+                    ModelClass(model_name_or_path=model, base_url=base_url)
+                )
+            else:
+                pipeline = Pipeline(
+                    ModelClass(
+                        model_name_or_path=model, api_key=api_key, base_url=base_url
+                    )
+                )
+
+        if task == "Base":
+            instruction = instruction
+            constraint = ""
+        else:
+            instruction = ""
+            constraint = constraint
+        if use_file:
+            text = ""
+            file_path = file_path
+        else:
+            text = text
+            file_path = None
+        if not update_case:
+            truth = ""
+
+        agent3 = {}
+        if mode == "customized":
+            if schema_agent not in ["", "Not Required"]:
+                agent3["schema_agent"] = schema_agent
+            if extraction_Agent not in ["", "Not Required"]:
+                agent3["extraction_agent"] = extraction_Agent
+            if reflection_agent not in ["", "Not Required"]:
+                agent3["reflection_agent"] = reflection_agent
+
+        # use 'Pipeline'
+        _, _, ger_frontend_schema, ger_frontend_res = pipeline.get_extract_result(
+            task=task,
+            text=text,
+            use_file=use_file,
+            file_path=file_path,
+            instruction=instruction,
+            constraint=constraint,
+            mode=mode,
+            three_agents=agent3,
+            isgui=True,
+            update_case=update_case,
+            truth=truth,
+            output_schema=selfschema,
+            show_trajectory=False,
+        )
+
+        ger_frontend_schema = str(ger_frontend_schema)
+        ger_frontend_res = (
+            json.dumps(ger_frontend_res, ensure_ascii=False, indent=4)
+            if isinstance(ger_frontend_res, dict)
+            else str(ger_frontend_res)
+        )
+        return ger_frontend_schema, ger_frontend_res, gr.update(value="", visible=False)
+
+    except Exception as e:
+        error_message = f"⚠️ Error:\n {str(e)}"
+        return "", "", gr.update(value=error_message, visible=True)
+
+
+def clear_all():
+    return (
+        gr.update(value="Not Required", visible=False),  # sechema_agent
+        gr.update(value="Not Required", visible=False),  # extraction_Agent
+        gr.update(value="Not Required", visible=False),  # reflection_agent
+        gr.update(value="Base"),  # task
+        gr.update(value="quick"),  # mode
+        gr.update(value="", visible=False),  # instruction
+        gr.update(value="", visible=False),  # constraint
+        gr.update(value=True),  # use_file
+        gr.update(value="", visible=False),  # text
+        gr.update(value=None, visible=True),  # file_path
+        gr.update(value=False),  # update_case
+        gr.update(value="", visible=False),  # truth
+        gr.update(value=False),  # update_schema
+        gr.update(value="", visible=False),  # selfschema
+        gr.update(value=""),  # py_output_gr
+        gr.update(value=""),  # json_output_gr
+        gr.update(value="", visible=False),  # error_output
+    )
+
+
+import time
+
+
+def visualize_output(task_gr, json_output_gr):
+    print("-" * 100)
+    print(json_output_gr)
+    print("-" * 100)
+    if task_gr in ["Base", "NER", "RE", "EE"]:
+        construct_table(json_output_gr)
+        return gr.update(visible=False), gr.update(visible=True)
+    else:
+        construct(json_output_gr)
+        return gr.update(visible=True), gr.update(visible=False)
+
+
+def refresh_page():
+    return """
+    <script>
+        setTimeout(() => {
+            window.location.reload();
+        });
+    </script>
+    """
 
 
 examples = [
@@ -122,13 +395,14 @@ examples = [
         "file_path": None,
         "update_case": False,
         "truth": "",
-    }
+    },
 ]
 
 
 def create_interface():
     with gr.Blocks(title="OneKE Demo", theme=gr.themes.Glass(text_size="lg")) as demo:
-        gr.HTML("""
+        gr.HTML(
+            """
             <div style="text-align:center;">
                 <p align="center">
                     <a>
@@ -143,19 +417,12 @@ def create_interface():
                 💻[<a href="https://github.com/zjunlp/OneKE" target="_blank">Code</a>]
                 </p>
             </div>
-        """)
-
-        example_button_gr = gr.Button("🎲 Quick Start with an Example 🎲")
-
+        """
+        )
+        with gr.Row():
+            example_button_gr = gr.Button("🎲 Quick Start with an Example 🎲")
         with gr.Row():
             with gr.Column():
-                # model_gr = gr.Dropdown(
-                #     label="🪄 Select your Model",
-                #     choices=["deepseek-chat", "deepseek-reasoner",
-                #              "gpt-3.5-turbo", "gpt-4o-mini", "gpt-4o",
-                #     ],
-                #     value="deepseek-chat",
-                # )
                 model_gr = gr.Textbox(
                     label="🪄 Enter your Model",
                     placeholder="Supports online-models like gpt-4o-mini, deepseek-chat, etc., while also allowing input of a path to use local models.",
@@ -164,14 +431,13 @@ def create_interface():
                 api_key_gr = gr.Textbox(
                     label="🔑 Enter your API-Key",
                     placeholder="If using a local-model, this field should be left empty.",
-                    value="sk-xxxxx"
+                    value="sk-61719c8677814d869d9a90df63f75b1c",
                 )
                 base_url_gr = gr.Textbox(
                     label="🔗 Enter your Base-URL",
                     placeholder="If using the default Base-URL or a local-model, this field should be left empty.",
                     value="Default",
                 )
-            with gr.Column():
                 task_gr = gr.Dropdown(
                     label="🎯 Select your Task",
                     choices=["Base", "NER", "RE", "EE", "Triple"],
@@ -179,211 +445,129 @@ def create_interface():
                 )
                 mode_gr = gr.Dropdown(
                     label="🧭 Select your Mode",
-                    choices=["quick", "standard", "customized"],
+                    choices=["quick", "standard", "customized", "customize_schema"],
                     value="quick",
                 )
-                schema_agent_gr = gr.Dropdown(choices=["Not Required", "get_default_schema", "get_retrieved_schema", "get_deduced_schema"], value="Not Required", label="🤖 Select your Schema-Agent", visible=False)
-                extraction_Agent_gr = gr.Dropdown(choices=["Not Required", "extract_information_direct", "extract_information_with_case"], value="Not Required", label="🤖 Select your Extraction-Agent", visible=False)
-                reflection_agent_gr = gr.Dropdown(choices=["Not Required", "reflect_with_case"], value="Not Required", label="🤖 Select your Reflection-Agent", visible=False)
-
-        use_file_gr = gr.Checkbox(label="📂 Use File", value=True)
-        file_path_gr = gr.File(label="📖 Upload a File", visible=True)
-        text_gr = gr.Textbox(label="📖 Text", lines=5, placeholder="Enter your Text please.", visible=False)
-        instruction_gr = gr.Textbox(label="🕹️ Instruction", lines=3, placeholder="You can enter any type of information you want to extract here, for example: Please help me extract all the person names.", visible=True)
-        constraint_gr = gr.Textbox(label="🕹️ Instruction", lines=3, placeholder="You can enter any type of information you want to extract here, for example: Please help me extract all the person names.", visible=False)
-
-        update_case_gr = gr.Checkbox(label="💰 Update Case", value=False)
-        # update_schema_gr = gr.Checkbox(label="📟 Update Schema", value=False)
-        truth_gr = gr.Textbox(label="🪙 Truth", lines=2, placeholder="""You can enter the truth you want LLM know, for example: {"relation_list": [{"head": "Guinea", "tail": "Conakry", "relation": "country capital"}]}""", visible=False)
-        # selfschema_gr = gr.Textbox(label="📟 Schema", lines=5, placeholder="Enter your New Schema", visible=False,  interactive=True)
-
-        def get_model_category(model_name_or_path):
-            if model_name_or_path in ["gpt-3.5-turbo", "gpt-4o-mini", "gpt-4o", "o3-mini"]:
-                return ChatGPT
-            elif model_name_or_path in ["deepseek-chat", "deepseek-reasoner"]:
-                return DeepSeek
-            elif re.search(r'(?i)llama', model_name_or_path):
-                return LLaMA
-            elif re.search(r'(?i)qwen', model_name_or_path):
-                return Qwen
-            elif re.search(r'(?i)minicpm', model_name_or_path):
-                return MiniCPM
-            elif re.search(r'(?i)chatglm', model_name_or_path):
-                return ChatGLM
-            else:
-                return BaseEngine
-
-        def customized_mode(mode):
-            if mode == "customized":
-                return gr.update(visible=True), gr.update(visible=True), gr.update(visible=True)
-            else:
-                return gr.update(visible=False, value="Not Required"), gr.update(visible=False, value="Not Required"), gr.update(visible=False, value="Not Required")
-
-        def update_fields(task):
-            if task == "Base" or task == "":
-                return gr.update(visible=True, label="🕹️ Instruction", lines=3, placeholder="You can enter any type of information you want to extract here, for example: Please help me extract all the person names."), gr.update(visible=False)
-            elif task == "NER":
-                return gr.update(visible=False), gr.update(visible=True, label="🕹️ Instruction", lines=3, placeholder="You can enter any type of information you want to extract here, for example: Please help me extract all the person names.")
-            elif task == "RE":
-                return gr.update(visible=False), gr.update(visible=True, label="🕹️ Instruction", lines=3, placeholder="You can enter any type of information you want to extract here, for example: Please help me extract all the person names.")
-            elif task == "EE":
-                return gr.update(visible=False), gr.update(visible=True, label="🕹️ Instruction", lines=3, placeholder="You can enter any type of information you want to extract here, for example: Please help me extract all the person names.")
-            elif task == "Triple":
-                return gr.update(visible=False), gr.update(visible=True, label="🕹️ Instruction", lines=3, placeholder="You can enter any type of information you want to extract here, for example: Please help me extract all the person names.")
-
-        def update_input_fields(use_file):
-            if use_file:
-                return gr.update(visible=False), gr.update(visible=True)
-            else:
-                return gr.update(visible=True), gr.update(visible=False)
-
-        def update_case(update_case):
-            if update_case:
-                return gr.update(visible=True)
-            else:
-                return gr.update(visible=False)
-
-        # def update_schema(update_schema):
-        #     if update_schema:
-        #         return gr.update(visible=True)
-        #     else:
-        #         return gr.update(visible=False)
-
-        def start_with_example():
-            example_index = random.randint(-3, len(examples) - 1)
-            example_index = max(example_index, 0)
-            example = examples[example_index]
-
-            if example_index == 0:
-                with open("data/input_files/ChineseNewsExample.json", "r", encoding="utf-8") as file:
-                    lines = file.readlines()
-                    random_line = random.choice(lines).strip()
-                    try:
-                        json_data = json.loads(random_line)
-                        title = json_data.get("title", "No title found")
-                    except json.JSONDecodeError:
-                        title = "Error decoding JSON"
-                    example["text"] = title
-
-            return (
-                gr.update(value=example["task"]),
-                gr.update(value=example["mode"]),
-                gr.update(value=example["use_file"]),
-                gr.update(value=example["file_path"], visible=example["use_file"]),
-                gr.update(value=example["text"], visible=not example["use_file"]),
-                gr.update(value=example["instruction"], visible=example["task"] == "Base"),
-                gr.update(value=example["constraint"], visible=example["task"] in ["NER", "RE", "EE", "Triple"]),
-                gr.update(value=example["update_case"]),
-                gr.update(value=example["truth"]), # gr.update(value=example["update_schema"]), gr.update(value=example["selfschema"]),
-                gr.update(value="Not Required", visible=False),
-                gr.update(value="Not Required", visible=False),
-                gr.update(value="Not Required", visible=False),
-            )
-
-        def submit(model, api_key, base_url, task, mode, instruction, constraint, text, use_file, file_path, update_case, truth, schema_agent, extraction_Agent, reflection_agent):
-            try:
-                ModelClass = get_model_category(model)
-                if base_url == "Default" or base_url == "":
-                    if api_key == "":
-                        pipeline = Pipeline(ModelClass(model_name_or_path=model))
-                    else:
-                        pipeline = Pipeline(ModelClass(model_name_or_path=model, api_key=api_key))
-                else:
-                    if api_key == "":
-                        pipeline = Pipeline(ModelClass(model_name_or_path=model, base_url=base_url))
-                    else:
-                        pipeline = Pipeline(ModelClass(model_name_or_path=model, api_key=api_key, base_url=base_url))
-
-                if task == "Base":
-                    instruction = instruction
-                    constraint = ""
-                else:
-                    instruction = ""
-                    constraint = constraint
-                if use_file:
-                    text = ""
-                    file_path = file_path
-                else:
-                    text = text
-                    file_path = None
-                if not update_case:
-                    truth = ""
-
-                agent3 = {}
-                if mode == "customized":
-                    if schema_agent not in ["", "Not Required"]:
-                        agent3["schema_agent"] = schema_agent
-                    if extraction_Agent not in ["", "Not Required"]:
-                        agent3["extraction_agent"] = extraction_Agent
-                    if reflection_agent not in ["", "Not Required"]:
-                        agent3["reflection_agent"] = reflection_agent
-
-                # use 'Pipeline'
-                _, _, ger_frontend_schema, ger_frontend_res = pipeline.get_extract_result(
-                    task=task,
-                    text=text,
-                    use_file=use_file,
-                    file_path=file_path,
-                    instruction=instruction,
-                    constraint=constraint,
-                    mode=mode,
-                    three_agents=agent3,
-                    isgui=True,
-                    update_case=update_case,
-                    truth=truth,
-                    output_schema="",
-                    show_trajectory=False,
+                schema_agent_gr = gr.Dropdown(
+                    choices=[
+                        "Not Required",
+                        "get_default_schema",
+                        "get_retrieved_schema",
+                        "get_deduced_schema",
+                    ],
+                    value="Not Required",
+                    label="🤖 Select your Schema-Agent",
+                    visible=False,
+                )
+                extraction_Agent_gr = gr.Dropdown(
+                    choices=[
+                        "Not Required",
+                        "extract_information_direct",
+                        "extract_information_with_case",
+                    ],
+                    value="Not Required",
+                    label="🤖 Select your Extraction-Agent",
+                    visible=False,
+                )
+                reflection_agent_gr = gr.Dropdown(
+                    choices=["Not Required", "reflect_with_case"],
+                    value="Not Required",
+                    label="🤖 Select your Reflection-Agent",
+                    visible=False,
                 )
 
-                ger_frontend_schema = str(ger_frontend_schema)
-                ger_frontend_res = json.dumps(ger_frontend_res, ensure_ascii=False, indent=4) if isinstance(ger_frontend_res, dict) else str(ger_frontend_res)
-                return ger_frontend_schema, ger_frontend_res, gr.update(value="", visible=False)
+            with gr.Column():
+                use_file_gr = gr.Checkbox(label="📂 Use File", value=True)
+                file_path_gr = gr.File(label="📖 Upload a File", visible=True)
+                text_gr = gr.Textbox(
+                    label="📖 Text",
+                    lines=5,
+                    placeholder="Enter your Text please.",
+                    visible=False,
+                )
+                instruction_gr = gr.Textbox(
+                    label="🕹️ Instruction",
+                    lines=3,
+                    placeholder="You can enter any type of information you want to extract here, for example: Please help me extract all the person names.",
+                    visible=True,
+                )
+                constraint_gr = gr.Textbox(
+                    label="🕹️ Instruction",
+                    lines=3,
+                    placeholder="You can enter any type of information you want to extract here, for example: Please help me extract all the person names.",
+                    visible=False,
+                )
 
-            except Exception as e:
-                error_message = f"⚠️ Error:\n {str(e)}"
-                return "", "", gr.update(value=error_message, visible=True)
-
-        def clear_all():
-            return (
-                gr.update(value="Not Required", visible=False),  # sechema_agent
-                gr.update(value="Not Required", visible=False),  # extraction_Agent
-                gr.update(value="Not Required", visible=False),  # reflection_agent
-                gr.update(value="Base"),  # task
-                gr.update(value="quick"),  # mode
-                gr.update(value="", visible=False),  # instruction
-                gr.update(value="", visible=False),  # constraint
-                gr.update(value=True),  # use_file
-                gr.update(value="", visible=False),  # text
-                gr.update(value=None, visible=True),  # file_path
-                gr.update(value=False),  # update_case
-                gr.update(value="", visible=False), # truth # gr.update(value=False),  # update_schema gr.update(value="", visible=False),  # selfschema
-                gr.update(value=""), # py_output_gr
-                gr.update(value=""), # json_output_gr
-                gr.update(value="", visible=False),  # error_output
-            )
-
+                update_case_gr = gr.Checkbox(label="💰 Update Case", value=False)
+                update_schema_gr = gr.Checkbox(label="📟 Update Schema", value=False)
+                truth_gr = gr.Textbox(
+                    label="🪙 Truth",
+                    lines=2,
+                    placeholder="""You can enter the truth you want LLM know, for example: {"relation_list": [{"head": "Guinea", "tail": "Conakry", "relation": "country capital"}]}""",
+                    visible=False,
+                )
+                selfschema_gr = gr.Textbox(
+                    label="📟 Schema",
+                    lines=5,
+                    placeholder="Enter your New Schema",
+                    visible=False,
+                    interactive=True,
+                )
         with gr.Row():
             submit_button_gr = gr.Button("Submit", variant="primary", scale=8)
             clear_button = gr.Button("Clear", scale=5)
-        gr.HTML("""
-		    <div style="width: 100%; text-align: center; font-size: 16px; font-weight: bold; position: relative; margin: 20px 0;">
-    			<span style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); width: 45%; border-top: 1px solid #ccc;"></span>
-	    		<span style="position: relative; z-index: 1; background-color: white; padding: 0 10px;">Output:</span>
-			    <span style="position: absolute; right: 0; top: 50%; transform: translateY(-50%); width: 45%; border-top: 1px solid #ccc;"></span>
-		    </div>
-        """)
-        error_output_gr = gr.Textbox(label="😵‍💫 Ops, an Error Occurred", visible=False, interactive=False)
         with gr.Row():
-            with gr.Column(scale=1):
-                py_output_gr = gr.Code(label="🤔 Generated Schema", language="python", lines=10, interactive=False)
-            with gr.Column(scale=1):
-                json_output_gr = gr.Code(label="😉 Final Answer", language="json", lines=10, interactive=False)
+            gr.HTML(
+                """
+            <div style="width: 100%; text-align: center; font-size: 16px; font-weight: bold; position: relative; margin: 20px 0;">
+              <span style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); width: 45%; border-top: 1px solid #ccc;"></span>
+              <span style="position: relative; z-index: 1; background-color: white; padding: 0 10px;">Output:</span>
+              <span style="position: absolute; right: 0; top: 50%; transform: translateY(-50%); width: 45%; border-top: 1px solid #ccc;"></span>
+            </div>
+            """
+            )
+            error_output_gr = gr.Textbox(
+                label="😵‍💫 Ops, an Error Occurred",
+                visible=False,
+                interactive=False,
+            )
+        with gr.Row():
+            with gr.Column(scale=2):
+                with gr.Column(scale=1):
+                    py_output_gr = gr.Code(
+                        label="🤔 Generated Schema",
+                        language="python",
+                        lines=10,
+                        interactive=False,
+                    )
+                with gr.Column(scale=1):
+                    json_output_gr = gr.Code(
+                        label="😉 Final Answer",
+                        language="json",
+                        lines=10,
+                        interactive=True,
+                        value="""{"relation_list": [\n {\n "head": "Guinea",\n "tail": "Conakry",\n "relation": "country capital"\n }\n ]\n }""",
+                    )
+                    visualize_button = gr.Button("可视化")
+            with gr.Column(scale=3, visible=False) as vis:
+                Row_neo = vis_neo4j()
+                Row_table = vis_table(json_output_gr)
 
-        task_gr.change(fn=update_fields, inputs=task_gr, outputs=[instruction_gr, constraint_gr])
-        mode_gr.change(fn=customized_mode, inputs=mode_gr, outputs=[schema_agent_gr, extraction_Agent_gr, reflection_agent_gr])
-        use_file_gr.change(fn=update_input_fields, inputs=use_file_gr, outputs=[text_gr, file_path_gr])
+        task_gr.change(
+            fn=update_fields, inputs=task_gr, outputs=[instruction_gr, constraint_gr]
+        )
+        mode_gr.change(
+            fn=customized_mode,
+            inputs=mode_gr,
+            outputs=[schema_agent_gr, extraction_Agent_gr, reflection_agent_gr],
+        )
+        use_file_gr.change(
+            fn=update_input_fields, inputs=use_file_gr, outputs=[text_gr, file_path_gr]
+        )
         update_case_gr.change(fn=update_case, inputs=update_case_gr, outputs=[truth_gr])
-        # update_schema_gr.change(fn=update_schema, inputs=update_schema_gr, outputs=[selfschema_gr])
+        update_schema_gr.change(
+            fn=update_schema, inputs=update_schema_gr, outputs=[selfschema_gr]
+        )
 
         example_button_gr.click(
             fn=start_with_example,
@@ -397,7 +581,7 @@ def create_interface():
                 instruction_gr,
                 constraint_gr,
                 update_case_gr,
-                truth_gr, # update_schema_gr, selfschema_gr,
+                truth_gr,  # update_schema_gr, selfschema_gr,
                 schema_agent_gr,
                 extraction_Agent_gr,
                 reflection_agent_gr,
@@ -417,13 +601,26 @@ def create_interface():
                 use_file_gr,
                 file_path_gr,
                 update_case_gr,
-                truth_gr, # update_schema_gr, selfschema_gr,
+                truth_gr,  # update_schema_gr, selfschema_gr,
+                selfschema_gr,
                 schema_agent_gr,
                 extraction_Agent_gr,
                 reflection_agent_gr,
             ],
             outputs=[py_output_gr, json_output_gr, error_output_gr],
             show_progress=True,
+        )
+        visualize_button.click(
+            fn=refresh_page,
+            outputs=demo,
+        ).then(
+            fn=lambda: gr.Column(visible=True),
+            inputs=None,
+            outputs=vis,
+        ).then(
+            fn=visualize_output,
+            inputs=[task_gr, json_output_gr],
+            outputs=[Row_neo, Row_table],
         )
         clear_button.click(
             fn=clear_all,
@@ -439,7 +636,9 @@ def create_interface():
                 text_gr,
                 file_path_gr,
                 update_case_gr,
-                truth_gr, # update_schema_gr, selfschema_gr,
+                truth_gr,
+                update_schema_gr,
+                selfschema_gr,
                 py_output_gr,
                 json_output_gr,
                 error_output_gr,
@@ -452,4 +651,4 @@ def create_interface():
 # Launch the front-end interface
 if __name__ == "__main__":
     interface = create_interface()
-    interface.launch() # the Gradio defalut URL usually is: 127.0.0.1:7860
+    interface.launch()  # the Gradio defalut URL usually is: 127.0.0.1:7860
