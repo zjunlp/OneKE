@@ -115,28 +115,52 @@ import json
 
 
 def vis_table(json_output_gr):
-    json_output_gr=json_output_gr.value
+    json_output_gr = json_output_gr.value
+    
     def refresh_table():
         with open("src/output.txt", "r", encoding="utf-8") as f:
             output = f.read()
         output = json.loads(output)
         return gr.HTML(render_nested_table(output))
+    
+    def export_json():
+        with open("src/output.txt", "r", encoding="utf-8") as f:
+            output = f.read()
+        # 创建一个临时文件
+        import tempfile
+        import os
+        temp_dir = tempfile.mkdtemp()
+        file_path = os.path.join(temp_dir, "output.json")
+        with open(file_path, "w", encoding="utf-8") as f:
+            f.write(output)
+        return file_path
+    
     with gr.Column(visible=True) as table:
         with gr.Row():
             refresh_btn = gr.Button("Refresh Table")
+            export_btn = gr.Button("Export as JSON")
         with gr.Row():
             with open("src/output.txt", "r", encoding="utf-8") as f:
                 output = f.read()
-            if(json_output_gr==output):
+            if json_output_gr == output:
                 output = json.loads(output)
             else:
-                output = json.loads(json_output_gr)    
+                output = json.loads(json_output_gr)
             html = gr.HTML(render_nested_table(output))
+        
+        # 添加文件下载组件
+        download_component = gr.File(visible=False)
 
     refresh_btn.click(fn=refresh_table, outputs=html)
+    export_btn.click(
+        fn=export_json,
+        outputs=download_component
+    ).then(
+        lambda: gr.File(visible=True),
+        outputs=download_component
+    )
 
     return table
-
 
 # with gr.Blocks() as demo:
 #     table = vis_table(output_str)
