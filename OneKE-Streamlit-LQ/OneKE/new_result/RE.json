@@ -1,0 +1,14 @@
+{
+  "relation_list": [
+    {
+      "head": "Conakry",
+      "tail": "Guinea",
+      "relation": "country capital"
+    },
+    {
+      "head": "Donka Hospital",
+      "tail": "Conakry",
+      "relation": "location contains"
+    }
+  ]
+}

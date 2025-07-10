@@ -1,0 +1,28 @@
+# model:
+#   category: LLaMA # model category, chosen from ChatGPT, DeepSeek, LLaMA, Qwen, ChatGLM, MiniCPM, OneKE.
+#   model_name_or_path: meta-llama/Meta-Llama-3-8B-Instruct # model name to download from huggingface or use the local model path.
+#   vllm_serve: false # whether to use the vllm. Default set to false.
+
+# extraction:
+#   task: NER  # task type, chosen from Base, NER, RE, EE.
+#   text: Finally , every other year , ELRA organizes a major conference LREC , the International Language Resources and Evaluation Conference . # input text for the extraction task. No need if use_file is set to true.
+#   constraint: ["algorithm", "conference", "else", "product", "task", "field", "metrics", "organization", "researcher", "program language", "country", "location", "person", "university"] # Specified entity types for the named entity recognition task. Default set to empty.
+#   use_file: false # whether to use a file for the input text.
+#   mode: quick # extraction mode, chosen from quick, detailed, customized. Default set to quick. See src/config.yaml for more details.
+#   update_case: false # whether to update the case repository. Default set to false.
+#   show_trajectory: false # whether to display the extracted intermediate steps
+
+model:
+  category: DeepSeek 
+  model_name_or_path: deepseek-chat 
+  api_key: sk-xxxxx
+  base_url: https://api.deepseek.com 
+
+extraction:
+  task: NER 
+  text: Finally , every other year , ELRA organizes a major conference LREC , the International Language Resources and Evaluation Conference . 
+  constraint: ["algorithm", "conference", "else", "product", "task", "field", "metrics", "organization", "researcher", "program language", "country", "location", "person", "university"]
+  use_file: false 
+  mode: quick 
+  update_case: false 
+  show_trajectory: false 

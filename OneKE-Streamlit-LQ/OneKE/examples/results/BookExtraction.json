@@ -1,0 +1,48 @@
+{
+    "main_characters": [
+      {
+        "name": "Mr. Dursley",
+        "description": "The director of a firm called Grunnings, a big, beefy man with hardly any neck and a large mustache."
+      },
+      {
+        "name": "Mrs. Dursley",
+        "description": "Thin and blonde, with nearly twice the usual amount of neck, spends time spying on neighbors."
+      },
+      {
+        "name": "Dudley Dursley",
+        "description": "The small son of Mr. and Mrs. Dursley, considered by them to be the finest boy anywhere."
+      },
+      {
+        "name": "Albus Dumbledore",
+        "description": "A tall, thin, and very old man with long silver hair and a purple cloak, who arrives mysteriously."
+      },
+      {
+        "name": "Professor McGonagall",
+        "description": "A severe-looking woman who can transform into a cat, wearing an emerald cloak."
+      },
+      {
+        "name": "Voldemort",
+        "description": "The dark wizard who has caused fear and chaos, but has mysteriously disappeared."
+      },
+      {
+        "name": "Harry Potter",
+        "description": "The young boy who survived Voldemort's attack, becoming a significant figure in the wizarding world."
+      },
+      {
+        "name": "Lily Potter",
+        "description": "Harry's mother, who is mentioned as having been killed by Voldemort."
+      },
+      {
+        "name": "James Potter",
+        "description": "Harry's father, who is mentioned as having been killed by Voldemort."
+      },
+      {
+        "name": "Hagrid",
+        "description": "A giant man who is caring and emotional about Harry's situation."
+      }
+    ],
+    "background_setting": {
+      "location": "Number four, Privet Drive, Suburban",
+      "time_period": "A dull, gray Tuesday morning, Late 20th Century"
+    }
+}

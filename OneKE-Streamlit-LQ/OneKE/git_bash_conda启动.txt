@@ -1,0 +1,21 @@
+# 这里前提是在Git Bash 中导入了基本的Linux命令
+# export PATH=$PATH:/usr/bin:/bin 
+
+
+
+# 永久配置添加Conda 
+
+# 打开Git Bash 启动配置文件
+nano ~/.bashrc
+
+# 添加内容
+# >>> conda initialize >>>
+. "/D/EPAN/Anaconda/etc/profile.d/conda.sh"
+# <<< conda initialize <<<
+
+#保存并生效
+source ~/.bashrc
+
+
+# 激活OneKE
+conda activate oneke

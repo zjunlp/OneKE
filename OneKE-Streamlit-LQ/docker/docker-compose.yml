@@ -1,0 +1,75 @@
+version: '3.8'
+
+services:
+  # 主服务：OneKE-Streamlit-Frontend
+  oneke-frontend:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+    container_name: oneke-frontend
+    ports:
+      - "0.0.0.0:8501:8501"  # Streamlit 前端 - 绑定所有网络接口
+    environment:
+      - PYTHONPATH=/app/OneKE/src:/app/OneKE-Streamlit-Frontend
+      - NEO4J_URI=bolt://neo4j:7687
+      - NEO4J_USER=neo4j
+      - NEO4J_PASSWORD=password123
+    volumes:
+      # OneKE 项目作为代码依赖（只读）
+      - ../OneKE:/app/OneKE:ro
+      # OneKE-Streamlit-Frontend 作为主项目（可读写）
+      - ../OneKE-Streamlit-Frontend:/app/OneKE-Streamlit-Frontend
+      # 数据目录
+      - ../data:/app/data
+      - ../logs:/app/logs
+      - ../uploads:/app/uploads
+      - ../models:/app/models
+    depends_on:
+      - neo4j
+    networks:
+      - oneke-network
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8501/_stcore/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+
+  neo4j:
+    image: neo4j:5.15-community
+    container_name: oneke-neo4j
+    ports:
+      - "0.0.0.0:7474:7474"  # Neo4j HTTP - 绑定所有网络接口
+      - "0.0.0.0:7687:7687"  # Neo4j Bolt - 绑定所有网络接口
+    environment:
+      - NEO4J_AUTH=neo4j/password123
+      - NEO4J_PLUGINS=["apoc"]
+      - NEO4J_dbms_security_procedures_unrestricted=apoc.*
+      - NEO4J_dbms_security_procedures_allowlist=apoc.*
+      - NEO4J_dbms_memory_heap_initial_size=512m
+      - NEO4J_dbms_memory_heap_max_size=2G
+    volumes:
+      - neo4j_data:/data
+      - neo4j_logs:/logs
+      - neo4j_import:/var/lib/neo4j/import
+      - neo4j_plugins:/plugins
+    restart: unless-stopped
+    networks:
+      - oneke-network
+    healthcheck:
+      test: ["CMD", "cypher-shell", "-u", "neo4j", "-p", "password123", "RETURN 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+      start_period: 30s
+
+volumes:
+  neo4j_data:
+  neo4j_logs:
+  neo4j_import:
+  neo4j_plugins:
+
+networks:
+  oneke-network:
+    driver: bridge

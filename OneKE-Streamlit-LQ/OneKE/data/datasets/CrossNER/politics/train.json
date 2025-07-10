@@ -1,0 +1,6117 @@
+[
+  {
+    "sentence": "Parties with mainly Eurosceptic views are the ruling United Russia , and opposition parties the Communist Party of the Russian Federation and Liberal Democratic Party of Russia .",
+    "entity_list": [
+      {
+        "name": "United Russia",
+        "type": "political party"
+      },
+      {
+        "name": "Communist Party of the Russian Federation",
+        "type": "political party"
+      },
+      {
+        "name": "Liberal Democratic Party of Russia",
+        "type": "political party"
+      }
+    ]
+  },
+  {
+    "sentence": "Parties with mainly Eurosceptic views are Serbian Radical Party , Democratic Party of Serbia , Dveri , DJB and the Serbian People 's Party of Nenad Popović .",
+    "entity_list": [
+      {
+        "name": "Serbian Radical Party",
+        "type": "political party"
+      },
+      {
+        "name": "Democratic Party of Serbia",
+        "type": "political party"
+      },
+      {
+        "name": "Dveri",
+        "type": "political party"
+      },
+      {
+        "name": "DJB",
+        "type": "political party"
+      },
+      {
+        "name": "Serbian People 's Party",
+        "type": "political party"
+      },
+      {
+        "name": "Nenad Popović",
+        "type": "politician"
+      }
+    ]
+  },
+  {
+    "sentence": "On 12 April 2019 a new Eurosceptic party , the Brexit Party was officially launched by former UK Independence Party Leader Nigel Farage .",
+    "entity_list": [
+      {
+        "name": "Brexit Party",
+        "type": "political party"
+      },
+      {
+        "name": "UK Independence Party",
+        "type": "political party"
+      },
+      {
+        "name": "Nigel Farage",
+        "type": "politician"
+      }
+    ]
+  },
+  {
+    "sentence": "Page returned to cabinet after the 1934 Australian federal election , when the Country Party entered a new coalition with Joseph Lyons ' United Australia Party .",
+    "entity_list": [
+      {
+        "name": "1934 Australian federal election",
+        "type": "election"
+      },
+      {
+        "name": "Country Party",
+        "type": "political party"
+      },
+      {
+        "name": "Joseph Lyons",
+        "type": "politician"
+      },
+      {
+        "name": "United Australia Party",
+        "type": "political party"
+      }
+    ]
+  },
+  {
+    "sentence": "He was the last former Prime Minister to lose his seat until Tony Abbott lost his seat of Warringah in 2019 Australian federal election , though John Howard would lose his seat of Bennelong as a sitting Prime Minister in 2007 Australian federal election .",
+    "entity_list": [
+      {
+        "name": "Tony Abbott",
+        "type": "politician"
+      },
+      {
+        "name": "Warringah",
+        "type": "location"
+      },
+      {
+        "name": "2019 Australian federal election",
+        "type": "election"
+      },
+      {
+        "name": "John Howard",
+        "type": "politician"
+      },
+      {
+        "name": "Bennelong",
+        "type": "person"
+      },
+      {
+        "name": "2007 Australian federal election",
+        "type": "election"
+      }
+    ]
+  },
+  {
+    "sentence": "Zappa set excerpts from the PMRC hearings to Synclavier music in his composition Porn Wars on the 1985 album Frank Zappa Meets the Mothers of Prevention , and the full recording was released in 2010 as Congress Shall Make No Law ... Zappa is heard interacting with Senators Fritz Hollings , Slade Gorton and Al Gore .",
+    "entity_list": [
+      {
+        "name": "Zappa",
+        "type": "politician"
+      },
+      {
+        "name": "PMRC",
+        "type": "organization"
+      },
+      {
+        "name": "Porn Wars",
+        "type": "else"
+      },
+      {
+        "name": "Frank Zappa Meets the Mothers of Prevention",
+        "type": "else"
+      },
+      {
+        "name": "Congress Shall Make No Law",
+        "type": "else"
+      },
+      {
+        "name": "Fritz Hollings",
+        "type": "politician"
+      },
+      {
+        "name": "Slade Gorton",
+        "type": "politician"
+      },
+      {
+        "name": "Al Gore",
+        "type": "politician"
+      }
+    ]
+  },
+  {
+    "sentence": "The Walwari has one deputy , Christiane Taubira , and the PSG has one deputy , Chantal Berthelot , who defeated long-time UMP incumbent Léon Bertrand .",
+    "entity_list": [
+      {
+        "name": "Walwari",
+        "type": "political party"
+      },
+      {
+        "name": "Christiane Taubira",
+        "type": "politician"
+      },
+      {
+        "name": "PSG",
+        "type": "organization"
+      },
+      {
+        "name": "Chantal Berthelot",
+        "type": "politician"
+      },
+      {
+        "name": "UMP",
+        "type": "organization"
+      },
+      {
+        "name": "Léon Bertrand",
+        "type": "politician"
+      }
+    ]
+  },
+  {
+    "sentence": "In late December 2011 , President Barack Obama nominated Jeremy C. Stein , a Harvard University finance professor and a Democrat , and Jerome Powell , formerly of Dillon Read , Bankers Trust",
+    "entity_list": [
+      {
+        "name": "Barack Obama",
+        "type": "politician"
+      },
+      {
+        "name": "Jeremy C. Stein",
+        "type": "politician"
+      },
+      {
+        "name": "Harvard University",
+        "type": "organization"
+      },
+      {
+        "name": "Democrat",
+        "type": "else"
+      },
+      {
+        "name": "Jerome Powell",
+        "type": "politician"
+      },
+      {
+        "name": "Dillon Read",
+        "type": "organization"
+      }
+    ]
+  },
+  {
+    "sentence": "Westerwelle stepped down as party leader following the 2011 state elections , in which the party was wiped out in 2011 Saxony-Anhalt state election and 2011 Rhineland-Palatinate state election and lost half its seats in 2011 Baden-Württemberg state election .",
+    "entity_list": [
+      {
+        "name": "Westerwelle",
+        "type": "politician"
+      },
+      {
+        "name": "2011 Saxony-Anhalt state election",
+        "type": "election"
+      },
+      {
+        "name": "2011 Rhineland-Palatinate state election",
+        "type": "election"
+      },
+      {
+        "name": "2011 Baden-Württemberg state election",
+        "type": "election"
+      }
+    ]
+  },
+  {
+    "sentence": "The change in leadership failed to revive the FDP 's fortunes , however , and in the next series of state elections , the party lost all its seats in 2011 Bremen state election , 2011 Mecklenburg-Vorpommern state election , and 2011 Berlin state election .",
+    "entity_list": [
+      {
+        "name": "FDP",
+        "type": "political party"
+      },
+      {
+        "name": "2011 Bremen state election",
+        "type": "election"
+      },
+      {
+        "name": "2011 Mecklenburg-Vorpommern state election",
+        "type": "election"
+      },
+      {
+        "name": "2011 Berlin state election",
+        "type": "election"
+      }
+    ]
+  },
+  {
+    "sentence": "Roosevelt was James M. Cox ' s running mate on the Democratic Party 's 1920 United States presidential election national ticket , but Cox was defeated by Republican Warren G. Harding .",
+    "entity_list": [
+      {
+        "name": "Roosevelt",
+        "type": "politician"
+      },
+      {
+        "name": "James M. Cox",
+        "type": "politician"
+      },
+      {
+        "name": "Democratic Party",
+        "type": "political party"
+      },
+      {
+        "name": "1920 United States presidential election",
+        "type": "election"
+      },
+      {
+        "name": "Cox",
+        "type": "politician"
+      },
+      {
+        "name": "Republican",
+        "type": "else"
+      },
+      {
+        "name": "Warren G. Harding",
+        "type": "politician"
+      }
+    ]
+  },
+  {
+    "sentence": "Assisted by his top aide Harry Hopkins and with very strong national support , he worked closely with British Prime Minister Winston Churchill , Soviet leader Joseph Stalin and Chinese Generalissimo Chiang Kai-shek in leading the Allied Powers against the Axis Powers .",
+    "entity_list": [
+      {
+        "name": "Harry Hopkins",
+        "type": "politician"
+      },
+      {
+        "name": "British",
+        "type": "else"
+      },
+      {
+        "name": "Winston Churchill",
+        "type": "politician"
+      },
+      {
+        "name": "Soviet",
+        "type": "else"
+      },
+      {
+        "name": "Joseph Stalin",
+        "type": "politician"
+      },
+      {
+        "name": "Chinese",
+        "type": "else"
+      },
+      {
+        "name": "Chiang Kai-shek",
+        "type": "politician"
+      },
+      {
+        "name": "Allied Powers",
+        "type": "organization"
+      },
+      {
+        "name": "Axis Powers",
+        "type": "organization"
+      }
+    ]
+  },
+  {
+    "sentence": "Though Roosevelt won the backing of Treasury Secretary William Gibbs McAdoo and Governor Martin H. Glynn , he faced a formidable opponent in the Tammany-backed James W. Gerard .",
+    "entity_list": [
+      {
+        "name": "Roosevelt",
+        "type": "politician"
+      },
+      {
+        "name": "William Gibbs McAdoo",
+        "type": "politician"
+      },
+      {
+        "name": "Martin H. Glynn",
+        "type": "politician"
+      },
+      {
+        "name": "James W. Gerard",
+        "type": "politician"
+      }
+    ]
+  },
+  {
+    "sentence": "In Italy , the Italian Social Movement led by Giorgio Almirante was a major neo-fascist movement that transformed itself into a self-described post-fascist movement called the National Alliance ( AN ) , which has been an ally of Silvio Berlusconi ' s Forza Italia for a decade .",
+    "entity_list": [
+      {
+        "name": "Italy",
+        "type": "location"
+      },
+      {
+        "name": "Italian Social Movement",
+        "type": "political party"
+      },
+      {
+        "name": "Giorgio Almirante",
+        "type": "politician"
+      },
+      {
+        "name": "National Alliance",
+        "type": "political party"
+      },
+      {
+        "name": "AN",
+        "type": "political party"
+      },
+      {
+        "name": "Silvio Berlusconi",
+        "type": "politician"
+      },
+      {
+        "name": "Forza Italia",
+        "type": "political party"
+      }
+    ]
+  },
+  {
+    "sentence": "Fianna Fáil was last in government from 1997 Irish general election to 2011 Irish general election under Bertie Ahern and Brian Cowen , with a periodic high of 81 seats in 2002 Irish general election , reduced to 77 in 2007 Irish general election .",
+    "entity_list": [
+      {
+        "name": "Fianna Fáil",
+        "type": "political party"
+      },
+      {
+        "name": "1997 Irish general election",
+        "type": "election"
+      },
+      {
+        "name": "2011 Irish general election",
+        "type": "election"
+      },
+      {
+        "name": "Bertie Ahern",
+        "type": "politician"
+      },
+      {
+        "name": "Brian Cowen",
+        "type": "politician"
+      },
+      {
+        "name": "2002 Irish general election",
+        "type": "election"
+      },
+      {
+        "name": "2007 Irish general election",
+        "type": "election"
+      }
+    ]
+  },
+  {
+    "sentence": "After winning the 1979 United Kingdom general election , Margaret Thatcher appointed Keith Joseph , the director of the Hayekian Centre for Policy Studies , as her secretary of state for industry in an effort to redirect parliament 's economic strategies .",
+    "entity_list": [
+      {
+        "name": "1979 United Kingdom general election",
+        "type": "election"
+      },
+      {
+        "name": "Margaret Thatcher",
+        "type": "politician"
+      },
+      {
+        "name": "Keith Joseph",
+        "type": "politician"
+      },
+      {
+        "name": "Hayekian Centre for Policy Studies",
+        "type": "organization"
+      }
+    ]
+  },
+  {
+    "sentence": "He led a government 's coalition composed by Christian Democrats , Italian Socialist Party , Italian Democratic Socialist Party , Italian Republican Party and Italian Liberal Party .",
+    "entity_list": [
+      {
+        "name": "Christian Democrats",
+        "type": "else"
+      },
+      {
+        "name": "Italian Socialist Party",
+        "type": "political party"
+      },
+      {
+        "name": "Italian Democratic Socialist Party",
+        "type": "political party"
+      },
+      {
+        "name": "Italian Republican Party",
+        "type": "political party"
+      },
+      {
+        "name": "Italian Liberal Party",
+        "type": "political party"
+      }
+    ]
+  },
+  {
+    "sentence": "With George W. Bush 's victory in the 2000 United States presidential election , Bush and his son became the second father-son pair to serve as the nation 's president , following John Adams and John Quincy Adams .",
+    "entity_list": [
+      {
+        "name": "George W. Bush",
+        "type": "politician"
+      },
+      {
+        "name": "2000 United States presidential election",
+        "type": "election"
+      },
+      {
+        "name": "Bush",
+        "type": "politician"
+      },
+      {
+        "name": "John Adams",
+        "type": "politician"
+      },
+      {
+        "name": "John Quincy Adams",
+        "type": "politician"
+      }
+    ]
+  },
+  {
+    "sentence": "Motivated by Tower 's victory , and hoping to prevent the far-right John Birch Society from coming to power , Bush ran for the chairmanship of the Harris County , Texas Republican Party , winning election in February 1963 . Like most other Texas Republicans , Bush supported conservative Senator Barry Goldwater over the more centrist Nelson Rockefeller in the 1964 Republican Party presidential primaries .",
+    "entity_list": [
+      {
+        "name": "Tower",
+        "type": "person"
+      },
+      {
+        "name": "John Birch Society",
+        "type": "organization"
+      },
+      {
+        "name": "Bush",
+        "type": "politician"
+      },
+      {
+        "name": "Harris County",
+        "type": "location"
+      },
+      {
+        "name": "Texas",
+        "type": "location"
+      },
+      {
+        "name": "Republican Party",
+        "type": "political party"
+      },
+      {
+        "name": "Texas Republicans",
+        "type": "else"
+      },
+      {
+        "name": "Barry Goldwater",
+        "type": "politician"
+      },
+      {
+        "name": "Nelson Rockefeller",
+        "type": "politician"
+      },
+      {
+        "name": "1964 Republican Party presidential primaries",
+        "type": "election"
+      }
+    ]
+  },
+  {
+    "sentence": "Though most other Texas Republicans supported Ronald Reagan in the 1968 Republican Party presidential primaries , Bush endorsed Richard Nixon , who went on to win the party 's nomination .",
+    "entity_list": [
+      {
+        "name": "Texas Republicans",
+        "type": "else"
+      },
+      {
+        "name": "Ronald Reagan",
+        "type": "politician"
+      },
+      {
+        "name": "1968 Republican Party presidential primaries",
+        "type": "election"
+      },
+      {
+        "name": "Bush",
+        "type": "politician"
+      },
+      {
+        "name": "Richard Nixon",
+        "type": "politician"
+      }
+    ]
+  },
+  {
+    "sentence": "Meanwhile , he began to lay the groundwork for his candidacy in the 1980 Republican Party presidential primaries . In the 1980 Republican primary campaign , Bush would face Ronald Reagan , who was widely regarded as the front-runner , as well as other contenders like Senator Bob Dole , Senator Howard Baker , Texas Governor John Connally , Congressman Phil Crane , and Congressman John B. Anderson .",
+    "entity_list": [
+      {
+        "name": "1980 Republican Party presidential primaries",
+        "type": "election"
+      },
+      {
+        "name": "Bush",
+        "type": "politician"
+      },
+      {
+        "name": "Ronald Reagan",
+        "type": "politician"
+      },
+      {
+        "name": "Bob Dole",
+        "type": "politician"
+      },
+      {
+        "name": "Howard Baker",
+        "type": "politician"
+      },
+      {
+        "name": "John Connally",
+        "type": "politician"
+      },
+      {
+        "name": "Phil Crane",
+        "type": "politician"
+      },
+      {
+        "name": "John B. Anderson",
+        "type": "politician"
+      }
+    ]
+  },
+  {
+    "sentence": "Congress chose his primary staff officers , including Major General Artemas Ward , Adjutant General Horatio Gates , Major General Charles Lee , Major General Philip Schuyler , Major General Nathanael Greene , Colonel Henry Knox , and Colonel Alexander Hamilton .",
+    "entity_list": [
+      {
+        "name": "Artemas Ward",
+        "type": "politician"
+      },
+      {
+        "name": "Horatio Gates",
+        "type": "politician"
+      },
+      {
+        "name": "Charles Lee",
+        "type": "politician"
+      },
+      {
+        "name": "Philip Schuyler",
+        "type": "politician"
+      },
+      {
+        "name": "Nathanael Greene",
+        "type": "politician"
+      },
+      {
+        "name": "Henry Knox",
+        "type": "politician"
+      },
+      {
+        "name": "Alexander Hamilton",
+        "type": "politician"
+      }
+    ]
+  },
+  {
+    "sentence": "Washington appointed fellow Virginian Edmund Randolph as Attorney General , Samuel Osgood as Postmaster General , Thomas Jefferson as Secretary of State , and Henry Knox as Secretary of War .",
+    "entity_list": [
+      {
+        "name": "Washington",
+        "type": "politician"
+      },
+      {
+        "name": "Edmund Randolph",
+        "type": "politician"
+      },
+      {
+        "name": "Samuel Osgood",
+        "type": "politician"
+      },
+      {
+        "name": "Thomas Jefferson",
+        "type": "politician"
+      },
+      {
+        "name": "Henry Knox",
+        "type": "politician"
+      }
+    ]
+  },
+  {
+    "sentence": "The head of Government is the Chief Minister , currently the Hon. Fabian Picardo of the Gibraltar Socialist Labour Party ( GSLP ) who has been in office since 9 December 2011 , in alliance with the Gibraltar Liberal Party ( Liberals ) , following the 2011 Gibraltar general election .",
+    "entity_list": [
+      {
+        "name": "Fabian Picardo",
+        "type": "politician"
+      },
+      {
+        "name": "Gibraltar Socialist Labour Party",
+        "type": "political party"
+      },
+      {
+        "name": "GSLP",
+        "type": "political party"
+      },
+      {
+        "name": "Gibraltar Liberal Party",
+        "type": "political party"
+      },
+      {
+        "name": "Liberals",
+        "type": "political party"
+      },
+      {
+        "name": "2011 Gibraltar general election",
+        "type": "election"
+      }
+    ]
+  },
+  {
+    "sentence": "On 4 October 2009 , George Papandreou , president of the Panhellenic Socialist Movement party and son and grandson of Prime Ministers , 2009 Greek legislative election as the new Prime Minister of Greece , following five years of government under New Democracy leader Kostas Karamanlis , the nephew of long-time Prime Minister and President Konstantinos Karamanlis .",
+    "entity_list": [
+      {
+        "name": "George Papandreou",
+        "type": "politician"
+      },
+      {
+        "name": "Panhellenic Socialist Movement",
+        "type": "political party"
+      },
+      {
+        "name": "2009 Greek legislative election",
+        "type": "election"
+      },
+      {
+        "name": "Greece",
+        "type": "country"
+      },
+      {
+        "name": "Democracy",
+        "type": "else"
+      },
+      {
+        "name": "Kostas Karamanlis",
+        "type": "politician"
+      },
+      {
+        "name": "Konstantinos Karamanlis",
+        "type": "politician"
+      }
+    ]
+  },
+  {
+    "sentence": "In the latest elections , which took place in 2011 , Retired General Otto Pérez Molina of the Patriotic Party won the presidential election in a runoff against populist Manuel Baldizón of the LIDER party .",
+    "entity_list": [
+      {
+        "name": "Otto Pérez Molina",
+        "type": "politician"
+      },
+      {
+        "name": "Patriotic Party",
+        "type": "political party"
+      },
+      {
+        "name": "Manuel Baldizón",
+        "type": "politician"
+      },
+      {
+        "name": "LIDER party",
+        "type": "political party"
+      }
+    ]
+  },
+  {
+    "sentence": "And in 2011 , Retired General Otto Pérez Molina of the Patriotic Party won the presidential election in a runoff against populist Manuel Baldizón of the LIDER party .",
+    "entity_list": [
+      {
+        "name": "Otto Pérez Molina",
+        "type": "politician"
+      },
+      {
+        "name": "Patriotic Party",
+        "type": "political party"
+      },
+      {
+        "name": "Manuel Baldizón",
+        "type": "politician"
+      },
+      {
+        "name": "LIDER party",
+        "type": "political party"
+      }
+    ]
+  },
+  {
+    "sentence": "Joschka Fischer became Vice-Chancellor of Germany and foreign minister in the new government , which had two other Green ministers ( Andrea Fischer , later Renate Künast , and Jürgen Trittin ) .",
+    "entity_list": [
+      {
+        "name": "Joschka Fischer",
+        "type": "politician"
+      },
+      {
+        "name": "Germany",
+        "type": "country"
+      },
+      {
+        "name": "Andrea Fischer",
+        "type": "person"
+      },
+      {
+        "name": "Renate Künast",
+        "type": "politician"
+      },
+      {
+        "name": "Jürgen Trittin",
+        "type": "politician"
+      }
+    ]
+  },
+  {
+    "sentence": "Despite losses for the SPD , the Red-Green coalition government commanded a very slight majority in the Bundestag and was renewed , with Joschka Fischer as foreign minister , Renate Künast as minister for consumer protection , nutrition and agriculture , and Jürgen Trittin as minister for the environment .",
+    "entity_list": [
+      {
+        "name": "SPD",
+        "type": "political party"
+      },
+      {
+        "name": "Red-Green coalition",
+        "type": "political party"
+      },
+      {
+        "name": "Bundestag",
+        "type": "organization"
+      },
+      {
+        "name": "Joschka Fischer",
+        "type": "politician"
+      },
+      {
+        "name": "Renate Künast",
+        "type": "politician"
+      },
+      {
+        "name": "Jürgen Trittin",
+        "type": "politician"
+      }
+    ]
+  },
+  {
+    "sentence": "As a result , former party chairpersons Fritz Kuhn and Claudia Roth ( who had been elected to parliament that year ) were no longer able to continue in their executive function and were replaced by former party secretary general Reinhard Bütikofer and former Bundestag member Angelika Beer .",
+    "entity_list": [
+      {
+        "name": "Fritz Kuhn",
+        "type": "politician"
+      },
+      {
+        "name": "Claudia Roth",
+        "type": "politician"
+      },
+      {
+        "name": "Reinhard Bütikofer",
+        "type": "politician"
+      },
+      {
+        "name": "Angelika Beer",
+        "type": "politician"
+      }
+    ]
+  },
+  {
+    "sentence": "On the train trip from Washington D.C. , to Gettysburg on November 18 , Lincoln was accompanied by three members of his Cabinet , William H. Seward , John Palmer Usher and Montgomery Blair , several foreign officials , his secretary John Nicolay , and his assistant secretary , John Hay .",
+    "entity_list": [
+      {
+        "name": "Washington D.C.",
+        "type": "location"
+      },
+      {
+        "name": "Gettysburg",
+        "type": "location"
+      },
+      {
+        "name": "Lincoln",
+        "type": "politician"
+      },
+      {
+        "name": "William H. Seward",
+        "type": "politician"
+      },
+      {
+        "name": "John Palmer Usher",
+        "type": "politician"
+      },
+      {
+        "name": "Montgomery Blair",
+        "type": "politician"
+      },
+      {
+        "name": "John Nicolay",
+        "type": "politician"
+      },
+      {
+        "name": "John Hay",
+        "type": "politician"
+      }
+    ]
+  },
+  {
+    "sentence": "After narrowly losing the 1969 Australian federal election , Whitlam led Labor to victory at the 1972 election after 23 years of continuous Liberal Party of Australia - National Party of Australia Coalition Government .",
+    "entity_list": [
+      {
+        "name": "1969 Australian federal election",
+        "type": "election"
+      },
+      {
+        "name": "Whitlam",
+        "type": "politician"
+      },
+      {
+        "name": "Labor",
+        "type": "political party"
+      },
+      {
+        "name": "Liberal Party of Australia",
+        "type": "political party"
+      },
+      {
+        "name": "National Party of Australia",
+        "type": "political party"
+      }
+    ]
+  },
+  {
+    "sentence": "The Prime Minister , Robert Menzies , adroitly used the defection of a Soviet official to his advantage , and his coalition of the Liberal and National Party of Australia parties was returned in the 1954 Australian federal election with a seven-seat majority .",
+    "entity_list": [
+      {
+        "name": "Robert Menzies",
+        "type": "politician"
+      },
+      {
+        "name": "Soviet",
+        "type": "else"
+      },
+      {
+        "name": "Liberal",
+        "type": "political party"
+      },
+      {
+        "name": "National Party of Australia",
+        "type": "political party"
+      },
+      {
+        "name": "1954 Australian federal election",
+        "type": "election"
+      }
+    ]
+  },
+  {
+    "sentence": "Most of the party 's major figures , including Evatt , Deputy Leader Arthur Calwell , Eddie Ward , and Reg Pollard , were in their sixties , twenty years older than Whitlam .",
+    "entity_list": [
+      {
+        "name": "Evatt",
+        "type": "politician"
+      },
+      {
+        "name": "Arthur Calwell",
+        "type": "politician"
+      },
+      {
+        "name": "Eddie Ward",
+        "type": "politician"
+      },
+      {
+        "name": "Reg Pollard",
+        "type": "politician"
+      },
+      {
+        "name": "Whitlam",
+        "type": "politician"
+      }
+    ]
+  },
+  {
+    "sentence": "Stephen Grover Cleveland ( March 18 , 1837 He won the popular vote for three presidential elections - in 1884 United States presidential election , 1888 United States presidential election , and 1892 United States presidential election - and was one of two Democrats ( with Woodrow Wilson ) to be elected president during the era of Republican political domination dating from 1861 to 1933 .",
+    "entity_list": [
+      {
+        "name": "Stephen Grover Cleveland",
+        "type": "politician"
+      },
+      {
+        "name": "1884 United States presidential election",
+        "type": "election"
+      },
+      {
+        "name": "1888 United States presidential election",
+        "type": "election"
+      },
+      {
+        "name": "1892 United States presidential election",
+        "type": "election"
+      },
+      {
+        "name": "Democrats",
+        "type": "else"
+      },
+      {
+        "name": "Woodrow Wilson",
+        "type": "politician"
+      },
+      {
+        "name": "Republican",
+        "type": "else"
+      }
+    ]
+  },
+  {
+    "sentence": "The Republicans gained the upper hand in the campaign , as Cleveland 's campaign was poorly managed by Calvin S. Brice and William H. Barnum , whereas Harrison had engaged more aggressive fundraisers and tacticians in Matthew Quay and John Wanamaker .",
+    "entity_list": [
+      {
+        "name": "Republicans",
+        "type": "else"
+      },
+      {
+        "name": "Calvin S. Brice",
+        "type": "politician"
+      },
+      {
+        "name": "William H. Barnum",
+        "type": "politician"
+      },
+      {
+        "name": "Matthew Quay",
+        "type": "politician"
+      },
+      {
+        "name": "John Wanamaker",
+        "type": "politician"
+      }
+    ]
+  },
+  {
+    "sentence": "Various Governors-General had previously served as governors of an Australian state or colony : Lord Hopetoun ( Victoria 1889-1895 ) ; Lord Tennyson ( South Australia 1899-1902 ) ; Lord Gowrie ( South Australia 1928-34 ; and New South Wales 1935-1936 ) ; Major General Michael Jeffery ( Western Australia 1993-2000 ) ; Quentin Bryce ( Queensland 2003-2008 ) ; General David Hurley ( New South Wales 2014 - 2019 ) .",
+    "entity_list": [
+      {
+        "name": "Australian",
+        "type": "else"
+      },
+      {
+        "name": "Lord Hopetoun",
+        "type": "politician"
+      },
+      {
+        "name": "Victoria",
+        "type": "location"
+      },
+      {
+        "name": "Lord Tennyson",
+        "type": "politician"
+      },
+      {
+        "name": "South Australia",
+        "type": "location"
+      },
+      {
+        "name": "Lord Gowrie",
+        "type": "politician"
+      },
+      {
+        "name": "New South Wales",
+        "type": "location"
+      },
+      {
+        "name": "Michael Jeffery",
+        "type": "politician"
+      },
+      {
+        "name": "Western Australia",
+        "type": "location"
+      },
+      {
+        "name": "Quentin Bryce",
+        "type": "politician"
+      },
+      {
+        "name": "Queensland",
+        "type": "location"
+      },
+      {
+        "name": "David Hurley",
+        "type": "politician"
+      }
+    ]
+  },
+  {
+    "sentence": "More recent Governors-General in this category include Lord Casey , Paul Hasluck , Sir John Kerr , Ninian Stephen , Bill Hayden and Sir William Deane .",
+    "entity_list": [
+      {
+        "name": "Lord Casey",
+        "type": "politician"
+      },
+      {
+        "name": "Paul Hasluck",
+        "type": "politician"
+      },
+      {
+        "name": "Sir John Kerr",
+        "type": "politician"
+      },
+      {
+        "name": "Ninian Stephen",
+        "type": "politician"
+      },
+      {
+        "name": "Bill Hayden",
+        "type": "politician"
+      },
+      {
+        "name": "Sir William Deane",
+        "type": "politician"
+      }
+    ]
+  },
+  {
+    "sentence": "In the nineteenth century , the members of the failed Decembrist revolt , Polish nobles who resisted Russian rule , and members of various socialist revolutionary groups , including Bolsheviks such as Sergo Ordzhonikidze , Leon Trotsky , and Joseph Stalin were all sent into exile .",
+    "entity_list": [
+      {
+        "name": "Decembrist revolt",
+        "type": "event"
+      },
+      {
+        "name": "Polish",
+        "type": "else"
+      },
+      {
+        "name": "Russian",
+        "type": "else"
+      },
+      {
+        "name": "Bolsheviks",
+        "type": "else"
+      },
+      {
+        "name": "Sergo Ordzhonikidze",
+        "type": "politician"
+      },
+      {
+        "name": "Leon Trotsky",
+        "type": "politician"
+      },
+      {
+        "name": "Joseph Stalin",
+        "type": "politician"
+      }
+    ]
+  },
+  {
+    "sentence": "It is often stated that incidents precede the 1789 election of the First U.S. Congress : namely , when Patrick Henry and his Anti-Federalist allies were in control of the Virginia House of Delegates in 1788 , they drew the boundaries of Virginia 's 5th congressional district in an unsuccessful attempt to keep James Madison out of the U.S. House of Representatives via the candidacy of James Monroe .",
+    "entity_list": [
+      {
+        "name": "First U.S. Congress",
+        "type": "else"
+      },
+      {
+        "name": "Patrick Henry",
+        "type": "politician"
+      },
+      {
+        "name": "Virginia House of Delegates",
+        "type": "organization"
+      },
+      {
+        "name": "Virginia",
+        "type": "location"
+      },
+      {
+        "name": "James Madison",
+        "type": "politician"
+      },
+      {
+        "name": "U.S. House of Representatives",
+        "type": "else"
+      },
+      {
+        "name": "James Monroe",
+        "type": "politician"
+      }
+    ]
+  },
+  {
+    "sentence": "In the subsequent election , Hugo Chávez 's political party , the United Socialist Party of Venezuela drew 48 % of the votes overall , while the opposition parties ( the Democratic Unity Roundtable and the Fatherland for All parties ) drew 52 % of the votes .",
+    "entity_list": [
+      {
+        "name": "Hugo Chávez",
+        "type": "politician"
+      },
+      {
+        "name": "United Socialist Party of Venezuela",
+        "type": "political party"
+      },
+      {
+        "name": "Democratic Unity Roundtable",
+        "type": "political party"
+      },
+      {
+        "name": "Fatherland for All",
+        "type": "political party"
+      }
+    ]
+  },
+  {
+    "sentence": "In the last years , Honduras has had five Liberal presidents : Roberto Suazo Córdova , José Azcona del Hoyo , Carlos Roberto Reina , Carlos Roberto Flores and Manuel Zelaya , and three Nationalists : Rafael Leonardo Callejas Romero , Porfirio Lobo Sosa and Ricardo Maduro .",
+    "entity_list": [
+      {
+        "name": "Honduras",
+        "type": "country"
+      },
+      {
+        "name": "Liberal",
+        "type": "political party"
+      },
+      {
+        "name": "Roberto Suazo Córdova",
+        "type": "politician"
+      },
+      {
+        "name": "José Azcona del Hoyo",
+        "type": "politician"
+      },
+      {
+        "name": "Carlos Roberto Reina",
+        "type": "politician"
+      },
+      {
+        "name": "Carlos Roberto Flores",
+        "type": "politician"
+      },
+      {
+        "name": "Manuel Zelaya",
+        "type": "politician"
+      },
+      {
+        "name": "Rafael Leonardo Callejas Romero",
+        "type": "politician"
+      },
+      {
+        "name": "Porfirio Lobo Sosa",
+        "type": "politician"
+      },
+      {
+        "name": "Ricardo Maduro",
+        "type": "politician"
+      }
+    ]
+  },
+  {
+    "sentence": "Manuel Zelaya of the Liberal Party of Honduras ( Partido Liberal de Honduras : PLH ) won , with Porfirio Pepe Lobo of the National Party of Honduras ( Partido Nacional de Honduras : PNH ) coming in second .",
+    "entity_list": [
+      {
+        "name": "Manuel Zelaya",
+        "type": "politician"
+      },
+      {
+        "name": "Liberal Party of Honduras",
+        "type": "political party"
+      },
+      {
+        "name": "Partido Liberal de Honduras",
+        "type": "political party"
+      },
+      {
+        "name": "PLH",
+        "type": "political party"
+      },
+      {
+        "name": "Porfirio Pepe Lobo",
+        "type": "politician"
+      },
+      {
+        "name": "National Party of Honduras",
+        "type": "political party"
+      },
+      {
+        "name": "Partido Nacional de Honduras",
+        "type": "political party"
+      },
+      {
+        "name": "PNH",
+        "type": "political party"
+      }
+    ]
+  },
+  {
+    "sentence": "This did not happen and the presidency , having been damaged by three late nineteenth and early twentieth century assassinations ( Abraham Lincoln , Garfield and William McKinley ) and one impeachment ( Johnson ) , reasserted its political dominance by the early twentieth century through such figures as Theodore Roosevelt and Woodrow Wilson .",
+    "entity_list": [
+      {
+        "name": "Abraham Lincoln",
+        "type": "politician"
+      },
+      {
+        "name": "Garfield",
+        "type": "politician"
+      },
+      {
+        "name": "William McKinley",
+        "type": "politician"
+      },
+      {
+        "name": "Johnson",
+        "type": "politician"
+      },
+      {
+        "name": "Theodore Roosevelt",
+        "type": "politician"
+      },
+      {
+        "name": "Woodrow Wilson",
+        "type": "politician"
+      }
+    ]
+  },
+  {
+    "sentence": "Genscher was one of the FDP 's driving forces when , in 1982 , the party switched sides from its coalition with the SPD to support the Christian Democratic Union of Germany in their Constructive vote of no confidence to have incumbent Helmut Schmidt replaced with opposition leader Helmut Kohl as Chancellor .",
+    "entity_list": [
+      {
+        "name": "Genscher",
+        "type": "politician"
+      },
+      {
+        "name": "FDP",
+        "type": "political party"
+      },
+      {
+        "name": "SPD",
+        "type": "political party"
+      },
+      {
+        "name": "Christian Democratic Union of Germany",
+        "type": "political party"
+      },
+      {
+        "name": "Helmut Schmidt",
+        "type": "politician"
+      },
+      {
+        "name": "Helmut Kohl",
+        "type": "politician"
+      }
+    ]
+  },
+  {
+    "sentence": "Following Genscher 's resignation , Chancellor Helmut Kohl and FDP chairman Otto Graf Lambsdorff named Irmgard Schwaetzer , a former aide to Genscher , to be the new Foreign Minister .",
+    "entity_list": [
+      {
+        "name": "Genscher",
+        "type": "politician"
+      },
+      {
+        "name": "Helmut Kohl",
+        "type": "politician"
+      },
+      {
+        "name": "FDP",
+        "type": "political party"
+      },
+      {
+        "name": "Otto Graf Lambsdorff",
+        "type": "politician"
+      },
+      {
+        "name": "Irmgard Schwaetzer",
+        "type": "politician"
+      }
+    ]
+  },
+  {
+    "sentence": "Hoover backed conservative leader Robert A. Taft at the 1952 Republican National Convention , but the party 's presidential nomination instead went to Dwight D. Eisenhower , who went on to win the 1952 United States presidential election .",
+    "entity_list": [
+      {
+        "name": "Hoover",
+        "type": "politician"
+      },
+      {
+        "name": "Robert A. Taft",
+        "type": "politician"
+      },
+      {
+        "name": "1952 Republican National Convention",
+        "type": "event"
+      },
+      {
+        "name": "Dwight D. Eisenhower",
+        "type": "politician"
+      },
+      {
+        "name": "1952 United States presidential election",
+        "type": "election"
+      }
+    ]
+  },
+  {
+    "sentence": "Kissinger - along with William Perry , Sam Nunn , and George Shultz - has called upon governments to embrace the vision of a world free of nuclear weapons , and in three Wall Street Journal op-ed s proposed an ambitious program of urgent steps to that end .",
+    "entity_list": [
+      {
+        "name": "Kissinger",
+        "type": "politician"
+      },
+      {
+        "name": "William Perry",
+        "type": "politician"
+      },
+      {
+        "name": "Sam Nunn",
+        "type": "politician"
+      },
+      {
+        "name": "George Shultz",
+        "type": "politician"
+      },
+      {
+        "name": "Wall Street Journal",
+        "type": "organization"
+      }
+    ]
+  },
+  {
+    "sentence": "Congress members Tom Lantos , Jim Saxton , Thad McCotter , Chris Shays , Charles Boustany , Alcee Hastings , and Robert Wexler referred to Hezbollah as a terrorist organization in their speeches supporting the legislation.Congress. denounces terrorism , and I have to take him at his word .",
+    "entity_list": [
+      {
+        "name": "Tom Lantos",
+        "type": "politician"
+      },
+      {
+        "name": "Jim Saxton",
+        "type": "politician"
+      },
+      {
+        "name": "Thad McCotter",
+        "type": "politician"
+      },
+      {
+        "name": "Chris Shays",
+        "type": "politician"
+      },
+      {
+        "name": "Charles Boustany",
+        "type": "politician"
+      },
+      {
+        "name": "Alcee Hastings",
+        "type": "politician"
+      },
+      {
+        "name": "Robert Wexler",
+        "type": "politician"
+      },
+      {
+        "name": "Hezbollah",
+        "type": "political party"
+      }
+    ]
+  },
+  {
+    "sentence": "Hamlin survived six of his successors in the vice presidency : Andrew Johnson , Schuyler Colfax , Henry Wilson , William A. Wheeler , Chester A. Arthur , and Thomas A. Hendricks .",
+    "entity_list": [
+      {
+        "name": "Hamlin",
+        "type": "politician"
+      },
+      {
+        "name": "Andrew Johnson",
+        "type": "politician"
+      },
+      {
+        "name": "Schuyler Colfax",
+        "type": "politician"
+      },
+      {
+        "name": "Henry Wilson",
+        "type": "politician"
+      },
+      {
+        "name": "William A. Wheeler",
+        "type": "politician"
+      },
+      {
+        "name": "Chester A. Arthur",
+        "type": "politician"
+      },
+      {
+        "name": "Thomas A. Hendricks",
+        "type": "politician"
+      }
+    ]
+  },
+  {
+    "sentence": "Thomas Wolsey , Thomas More , Thomas Cromwell , Richard Rich , and Thomas Cranmer all figured prominently in his administration .",
+    "entity_list": [
+      {
+        "name": "Thomas Wolsey",
+        "type": "politician"
+      },
+      {
+        "name": "Thomas More",
+        "type": "politician"
+      },
+      {
+        "name": "Thomas Cromwell",
+        "type": "politician"
+      },
+      {
+        "name": "Richard Rich",
+        "type": "politician"
+      },
+      {
+        "name": "Thomas Cranmer",
+        "type": "politician"
+      }
+    ]
+  },
+  {
+    "sentence": "Piłsudski , together with Colonel Kazimierz Sosnkowski , was greeted at Warsaw 's railway station by Regent Zdzisław Lubomirski and by Colonel Adam Koc .",
+    "entity_list": [
+      {
+        "name": "Piłsudski",
+        "type": "politician"
+      },
+      {
+        "name": "Kazimierz Sosnkowski",
+        "type": "politician"
+      },
+      {
+        "name": "Warsaw 's railway station",
+        "type": "location"
+      },
+      {
+        "name": "Zdzisław Lubomirski",
+        "type": "politician"
+      },
+      {
+        "name": "Adam Koc",
+        "type": "politician"
+      }
+    ]
+  },
+  {
+    "sentence": "The major political parties at this time were the Polish Socialist Party , National Democracy , various Peasant Parties , Polish Christian Democratic Party , and political groups of ethnic minorities ( German : German Social Democratic Party of Poland , Jewish : General Jewish Labour Bund in Poland , United Jewish Socialist Workers Party , and Ukrainian : Ukrainian National Democratic Alliance ) .",
+    "entity_list": [
+      {
+        "name": "Polish Socialist Party",
+        "type": "political party"
+      },
+      {
+        "name": "National Democracy",
+        "type": "political party"
+      },
+      {
+        "name": "Peasant Parties",
+        "type": "political party"
+      },
+      {
+        "name": "Polish Christian Democratic Party",
+        "type": "political party"
+      },
+      {
+        "name": "German",
+        "type": "else"
+      },
+      {
+        "name": "German Social Democratic Party of Poland",
+        "type": "political party"
+      },
+      {
+        "name": "Jewish",
+        "type": "else"
+      },
+      {
+        "name": "General Jewish Labour Bund in Poland",
+        "type": "political party"
+      },
+      {
+        "name": "United Jewish Socialist Workers Party",
+        "type": "political party"
+      },
+      {
+        "name": "Ukrainian",
+        "type": "else"
+      },
+      {
+        "name": "Ukrainian National Democratic Alliance",
+        "type": "political party"
+      }
+    ]
+  },
+  {
+    "sentence": "The following three parliamentary elections ( in 1930 Polish legislative election , 1935 Polish legislative election and 1938 Polish legislative election ) were manipulated , with opposition activists sent to Bereza Kartuska prison ( see also Brest trials ) .",
+    "entity_list": [
+      {
+        "name": "1930 Polish legislative election",
+        "type": "election"
+      },
+      {
+        "name": "1935 Polish legislative election",
+        "type": "election"
+      },
+      {
+        "name": "1938 Polish legislative election",
+        "type": "election"
+      },
+      {
+        "name": "Bereza Kartuska prison",
+        "type": "location"
+      },
+      {
+        "name": "Brest trials",
+        "type": "else"
+      }
+    ]
+  },
+  {
+    "sentence": "During the last four years of the Second Polish Republic , the major politicians included President Ignacy Mościcki , Foreign Minister Józef Beck and the Commander-in-Chief of the Polish Army , Edward Rydz-Śmigły .",
+    "entity_list": [
+      {
+        "name": "Polish",
+        "type": "else"
+      },
+      {
+        "name": "Ignacy Mościcki",
+        "type": "politician"
+      },
+      {
+        "name": "Józef Beck",
+        "type": "politician"
+      },
+      {
+        "name": "Polish Army",
+        "type": "else"
+      },
+      {
+        "name": "Edward Rydz-Śmigły",
+        "type": "politician"
+      }
+    ]
+  },
+  {
+    "sentence": "The Soviet Politburo decisions were guided by a Special Commission on Afghanistan , which consisted of Yuri Andropov the KGB chairman , Andrei Gromyko the Minister of Foreign Affairs , Defence Minister Dmitriy Ustinov , and Boris Ponomarev , the head of the International Department of the Central Committee .",
+    "entity_list": [
+      {
+        "name": "Soviet",
+        "type": "else"
+      },
+      {
+        "name": "Politburo",
+        "type": "else"
+      },
+      {
+        "name": "Afghanistan",
+        "type": "country"
+      },
+      {
+        "name": "Yuri Andropov",
+        "type": "politician"
+      },
+      {
+        "name": "KGB",
+        "type": "organization"
+      },
+      {
+        "name": "Andrei Gromyko",
+        "type": "politician"
+      },
+      {
+        "name": "Dmitriy Ustinov",
+        "type": "politician"
+      },
+      {
+        "name": "Boris Ponomarev",
+        "type": "politician"
+      },
+      {
+        "name": "International Department of the Central Committee",
+        "type": "organization"
+      }
+    ]
+  },
+  {
+    "sentence": "In 2004 , Thompson wrote : Richard Nixon was a professional politician , and I despised everything he stood for - but if he were running for president this year against the evil George W. Bush - Dick Cheney gang , I would happily vote for him .",
+    "entity_list": [
+      {
+        "name": "Thompson",
+        "type": "politician"
+      },
+      {
+        "name": "Richard Nixon",
+        "type": "politician"
+      },
+      {
+        "name": "George W. Bush",
+        "type": "politician"
+      },
+      {
+        "name": "Dick Cheney",
+        "type": "politician"
+      }
+    ]
+  },
+  {
+    "sentence": "Behind the long table set up on the steps of the Rathaus Schöneberg were U.S. and German dignitaries , including Dean Rusk ( Kennedy 's Secretary of State ) , Lucius D. Clay ( the US administrator of Germany ) , Konrad Adenauer ( the German chancellor ) , Willy Brandt , and Otto Bach ( President of the Abgeordnetenhaus of Berlin ) .",
+    "entity_list": [
+      {
+        "name": "Rathaus Schöneberg",
+        "type": "location"
+      },
+      {
+        "name": "U.S.",
+        "type": "country"
+      },
+      {
+        "name": "German",
+        "type": "else"
+      },
+      {
+        "name": "Dean Rusk",
+        "type": "politician"
+      },
+      {
+        "name": "Kennedy",
+        "type": "politician"
+      },
+      {
+        "name": "Lucius D. Clay",
+        "type": "politician"
+      },
+      {
+        "name": "US",
+        "type": "country"
+      },
+      {
+        "name": "Germany",
+        "type": "country"
+      },
+      {
+        "name": "Konrad Adenauer",
+        "type": "politician"
+      },
+      {
+        "name": "Willy Brandt",
+        "type": "politician"
+      },
+      {
+        "name": "Otto Bach",
+        "type": "politician"
+      },
+      {
+        "name": "Berlin",
+        "type": "location"
+      }
+    ]
+  },
+  {
+    "sentence": "( 1961 Turkish general election , 1965 Turkish general election , 1969 Turkish general election )",
+    "entity_list": [
+      {
+        "name": "1961 Turkish general election",
+        "type": "election"
+      },
+      {
+        "name": "1965 Turkish general election",
+        "type": "election"
+      },
+      {
+        "name": "1969 Turkish general election",
+        "type": "election"
+      }
+    ]
+  },
+  {
+    "sentence": "At the 1943 Tehran Conference , the Allies of World War II , Big Three - Joseph Stalin , Franklin D. Roosevelt , and Winston Churchill - issued the Tehran Declaration to guarantee the post-war independence and boundaries of Iran .",
+    "entity_list": [
+      {
+        "name": "1943 Tehran Conference",
+        "type": "event"
+      },
+      {
+        "name": "Allies",
+        "type": "country"
+      },
+      {
+        "name": "World War II",
+        "type": "event"
+      },
+      {
+        "name": "Joseph Stalin",
+        "type": "politician"
+      },
+      {
+        "name": "Franklin D. Roosevelt",
+        "type": "politician"
+      },
+      {
+        "name": "Winston Churchill",
+        "type": "politician"
+      },
+      {
+        "name": "Tehran Declaration",
+        "type": "else"
+      },
+      {
+        "name": "Iran",
+        "type": "country"
+      }
+    ]
+  },
+  {
+    "sentence": "The Italian Socialist Party , led by Bettino Craxi , became more and more critical of the communists and of the Soviet Union ; Craxi himself pushed in favor of Ronald Reagan ' s positioning of Pershing II missiles in Italy , a move many communists strongly disapproved of .",
+    "entity_list": [
+      {
+        "name": "Italian Socialist Party",
+        "type": "political party"
+      },
+      {
+        "name": "Bettino Craxi",
+        "type": "politician"
+      },
+      {
+        "name": "Soviet Union",
+        "type": "country"
+      },
+      {
+        "name": "Craxi",
+        "type": "politician"
+      },
+      {
+        "name": "Ronald Reagan",
+        "type": "politician"
+      },
+      {
+        "name": "Pershing II",
+        "type": "else"
+      },
+      {
+        "name": "Italy",
+        "type": "country"
+      }
+    ]
+  },
+  {
+    "sentence": "National elections held on 13 May 2001 returned Berlusconi to power at the head of the five-party center-right House of Freedoms coalition , comprising the Prime Minister 's own party , Forza Italia , the National Alliance , the Lega Nord , the Christian Democratic Center and the United Christian Democrats .",
+    "entity_list": [
+      {
+        "name": "Berlusconi",
+        "type": "politician"
+      },
+      {
+        "name": "House of Freedoms",
+        "type": "political party"
+      },
+      {
+        "name": "Forza Italia",
+        "type": "political party"
+      },
+      {
+        "name": "National Alliance",
+        "type": "political party"
+      },
+      {
+        "name": "Lega Nord",
+        "type": "political party"
+      },
+      {
+        "name": "Christian Democratic Center",
+        "type": "political party"
+      },
+      {
+        "name": "United Christian Democrats",
+        "type": "political party"
+      }
+    ]
+  },
+  {
+    "sentence": "On 25 November 1986 , President Reagan announced the creation of a Special Review Board to look into the matter ; the following day , he appointed former Senator John Tower , former Secretary of State Edmund Muskie , and former National Security Adviser Brent Scowcroft to serve as members .",
+    "entity_list": [
+      {
+        "name": "John Tower",
+        "type": "politician"
+      },
+      {
+        "name": "Edmund Muskie",
+        "type": "politician"
+      },
+      {
+        "name": "Brent Scowcroft",
+        "type": "politician"
+      }
+    ]
+  },
+  {
+    "sentence": "Necmettin Erbakan ( 1926-2011 ) was the leader of several of the parties , the National Order Party ( Milli Nizam Partisi , 1970-1971 ) , the National Salvation Party ( Milli Selamet Partisi , 1972-1981 ) , and the Welfare Party ( Refah Partisi , 1983-1998 ) ; he also became a member of the Felicity Party ( Saadet Partisi , 2003-2011 ) .",
+    "entity_list": [
+      {
+        "name": "Necmettin Erbakan",
+        "type": "politician"
+      },
+      {
+        "name": "National Order Party",
+        "type": "political party"
+      },
+      {
+        "name": "Milli Nizam Partisi",
+        "type": "political party"
+      },
+      {
+        "name": "National Salvation Party",
+        "type": "political party"
+      },
+      {
+        "name": "Milli Selamet Partisi",
+        "type": "political party"
+      },
+      {
+        "name": "Welfare Party",
+        "type": "political party"
+      },
+      {
+        "name": "Refah Partisi",
+        "type": "political party"
+      },
+      {
+        "name": "Felicity Party",
+        "type": "political party"
+      },
+      {
+        "name": "Saadet Partisi",
+        "type": "political party"
+      }
+    ]
+  },
+  {
+    "sentence": "In the 1994 European Parliament election in Ireland , Patricia McKenna topped the poll in the Dublin constituency and Nuala Ahern won a seat in Leinster .",
+    "entity_list": [
+      {
+        "name": "1994 European Parliament election in Ireland",
+        "type": "election"
+      },
+      {
+        "name": "Patricia McKenna",
+        "type": "politician"
+      },
+      {
+        "name": "Dublin",
+        "type": "location"
+      },
+      {
+        "name": "Nuala Ahern",
+        "type": "politician"
+      },
+      {
+        "name": "Leinster",
+        "type": "location"
+      }
+    ]
+  },
+  {
+    "sentence": "In the 1980s , Indira Gandhi along with Canadian Prime Minister Pierre Trudeau , Zambia 's President Kenneth Kaunda , Australian prime minister Malcolm Fraser and Singapore Prime Minister Lee Kuan Yew was regarded as one of the pillars of the commonwealth India under Indira also hosted the 1983 Commonwealth heads of Government summit in New Delhi in 1983 .",
+    "entity_list": [
+      {
+        "name": "Indira Gandhi",
+        "type": "politician"
+      },
+      {
+        "name": "Canadian",
+        "type": "else"
+      },
+      {
+        "name": "Pierre Trudeau",
+        "type": "politician"
+      },
+      {
+        "name": "Zambia",
+        "type": "country"
+      },
+      {
+        "name": "Kenneth Kaunda",
+        "type": "politician"
+      },
+      {
+        "name": "Australian",
+        "type": "else"
+      },
+      {
+        "name": "Malcolm Fraser",
+        "type": "politician"
+      },
+      {
+        "name": "Singapore",
+        "type": "else"
+      },
+      {
+        "name": "Lee Kuan Yew",
+        "type": "politician"
+      },
+      {
+        "name": "India",
+        "type": "country"
+      },
+      {
+        "name": "Indira",
+        "type": "politician"
+      },
+      {
+        "name": "1983 Commonwealth heads of Government summit",
+        "type": "event"
+      },
+      {
+        "name": "New Delhi",
+        "type": "location"
+      }
+    ]
+  },
+  {
+    "sentence": "Three United States presidents have been impeached by the House of Representatives : Andrew Johnson in 1868 , Bill Clinton in 1998 , and Donald Trump in 2019 .",
+    "entity_list": [
+      {
+        "name": "United States",
+        "type": "country"
+      },
+      {
+        "name": "House of Representatives",
+        "type": "else"
+      },
+      {
+        "name": "Andrew Johnson",
+        "type": "politician"
+      },
+      {
+        "name": "Bill Clinton",
+        "type": "politician"
+      },
+      {
+        "name": "Donald Trump",
+        "type": "politician"
+      }
+    ]
+  },
+  {
+    "sentence": "After losing the 2000 nomination , Jello became highly active in Ralph Nader ' s presidential campaign , as well as in 2004 United States presidential election and 2008 United States presidential election .",
+    "entity_list": [
+      {
+        "name": "Jello",
+        "type": "politician"
+      },
+      {
+        "name": "Ralph Nader",
+        "type": "politician"
+      },
+      {
+        "name": "2004 United States presidential election",
+        "type": "election"
+      },
+      {
+        "name": "2008 United States presidential election",
+        "type": "election"
+      }
+    ]
+  },
+  {
+    "sentence": "The 1824 United States presidential election was contested by Adams , Andrew Jackson , William H. Crawford , and Henry Clay , all of whom were members of the Democratic-Republican Party .",
+    "entity_list": [
+      {
+        "name": "1824 United States presidential election",
+        "type": "election"
+      },
+      {
+        "name": "Adams",
+        "type": "politician"
+      },
+      {
+        "name": "Andrew Jackson",
+        "type": "politician"
+      },
+      {
+        "name": "William H. Crawford",
+        "type": "politician"
+      },
+      {
+        "name": "Henry Clay",
+        "type": "politician"
+      },
+      {
+        "name": "Democratic-Republican Party",
+        "type": "political party"
+      }
+    ]
+  },
+  {
+    "sentence": "Following boundary changes , Major became the MP for the newly formed seat of Huntingdon in 1983 United Kingdom general election ( retaining the seat in 1987 United Kingdom general election , 1992 United Kingdom general election and 1997 United Kingdom general election before retiring from Parliament in 2001 United Kingdom general election ) .",
+    "entity_list": [
+      {
+        "name": "Huntingdon",
+        "type": "location"
+      },
+      {
+        "name": "1983 United Kingdom general election",
+        "type": "election"
+      },
+      {
+        "name": "1987 United Kingdom general election",
+        "type": "election"
+      },
+      {
+        "name": "1992 United Kingdom general election",
+        "type": "election"
+      },
+      {
+        "name": "1997 United Kingdom general election",
+        "type": "election"
+      },
+      {
+        "name": "2001 United Kingdom general election",
+        "type": "election"
+      }
+    ]
+  },
+  {
+    "sentence": "He secured re-nomination for vice president in 1992 United States presidential election , but Democrat Bill Clinton and his running mate , Al Gore , defeated the Bush / Quayle ticket .",
+    "entity_list": [
+      {
+        "name": "1992 United States presidential election",
+        "type": "election"
+      },
+      {
+        "name": "Bill Clinton",
+        "type": "politician"
+      },
+      {
+        "name": "Al Gore",
+        "type": "politician"
+      },
+      {
+        "name": "Bush",
+        "type": "politician"
+      },
+      {
+        "name": "Quayle",
+        "type": "politician"
+      }
+    ]
+  },
+  {
+    "sentence": "In the 1992 United States presidential election , Bush and Quayle were challenged in their bid for reelection by the Democratic ticket of Arkansas Governor Bill Clinton and Tennessee Senator Al Gore and the independent ticket of Texas businessman Ross Perot and retired Vice Admiral James Stockdale .",
+    "entity_list": [
+      {
+        "name": "1992 United States presidential election",
+        "type": "election"
+      },
+      {
+        "name": "Bush",
+        "type": "politician"
+      },
+      {
+        "name": "Quayle",
+        "type": "politician"
+      },
+      {
+        "name": "Arkansas",
+        "type": "location"
+      },
+      {
+        "name": "Bill Clinton",
+        "type": "politician"
+      },
+      {
+        "name": "Tennessee",
+        "type": "location"
+      },
+      {
+        "name": "Al Gore",
+        "type": "politician"
+      },
+      {
+        "name": "Texas",
+        "type": "location"
+      },
+      {
+        "name": "Ross Perot",
+        "type": "politician"
+      },
+      {
+        "name": "James Stockdale",
+        "type": "politician"
+      }
+    ]
+  },
+  {
+    "sentence": "His wartime leadership established him as Madison 's heir apparent , and he easily defeated Federalist Party candidate Rufus King in the 1816 United States presidential election .",
+    "entity_list": [
+      {
+        "name": "Madison",
+        "type": "politician"
+      },
+      {
+        "name": "Federalist Party",
+        "type": "political party"
+      },
+      {
+        "name": "Rufus King",
+        "type": "politician"
+      },
+      {
+        "name": "1816 United States presidential election",
+        "type": "election"
+      }
+    ]
+  },
+  {
+    "sentence": "Samuel became a county judge , and the guests at his home included Andrew Jackson , who had already served as a judge and in Congress.Borneman , James learned from the political talk around the dinner table ; both Samuel and Ezekiel were strong supporters of President Thomas Jefferson and opponents of the Federalist Party .",
+    "entity_list": [
+      {
+        "name": "Samuel",
+        "type": "politician"
+      },
+      {
+        "name": "Andrew Jackson",
+        "type": "politician"
+      },
+      {
+        "name": "James",
+        "type": "politician"
+      },
+      {
+        "name": "Ezekiel",
+        "type": "politician"
+      },
+      {
+        "name": "Thomas Jefferson",
+        "type": "politician"
+      },
+      {
+        "name": "Federalist Party",
+        "type": "political party"
+      }
+    ]
+  },
+  {
+    "sentence": "The prestige of the Speakership caused them to abandon life in a Washington boarding house for their own residence on Pennsylvania . In the 1836 United States presidential election , Vice President Martin Van Buren , Jackson 's chosen successor , defeated multiple Whig candidates , including Tennessee Senator Hugh Lawson White .",
+    "entity_list": [
+      {
+        "name": "Washington boarding house",
+        "type": "location"
+      },
+      {
+        "name": "Pennsylvania",
+        "type": "location"
+      },
+      {
+        "name": "1836 United States presidential election",
+        "type": "election"
+      },
+      {
+        "name": "Martin Van Buren",
+        "type": "politician"
+      },
+      {
+        "name": "Jackson",
+        "type": "politician"
+      },
+      {
+        "name": "Whig",
+        "type": "political party"
+      },
+      {
+        "name": "Tennessee",
+        "type": "location"
+      },
+      {
+        "name": "Hugh Lawson White",
+        "type": "politician"
+      }
+    ]
+  },
+  {
+    "sentence": "He faced strong challenges from the right ( Republican Ronald Reagan ) , the center ( independent John B. Anderson ) , and the left ( Democrat Ted Kennedy ) .",
+    "entity_list": [
+      {
+        "name": "Republican",
+        "type": "else"
+      },
+      {
+        "name": "Ronald Reagan",
+        "type": "politician"
+      },
+      {
+        "name": "independent",
+        "type": "else"
+      },
+      {
+        "name": "John B. Anderson",
+        "type": "politician"
+      },
+      {
+        "name": "Democrat",
+        "type": "else"
+      },
+      {
+        "name": "Ted Kennedy",
+        "type": "politician"
+      }
+    ]
+  },
+  {
+    "sentence": "Amid the Democratic presidential primary in 2008 United States presidential election , Carter was speculated to endorse Senator Barack Obama over his main primary rival Hillary Clinton amid his speaking favorably of the candidate , as well as remarks from the Carter family that showed their support for Obama .",
+    "entity_list": [
+      {
+        "name": "2008 United States presidential election",
+        "type": "election"
+      },
+      {
+        "name": "Carter",
+        "type": "politician"
+      },
+      {
+        "name": "Barack Obama",
+        "type": "politician"
+      },
+      {
+        "name": "Hillary Clinton",
+        "type": "politician"
+      },
+      {
+        "name": "Obama",
+        "type": "politician"
+      }
+    ]
+  },
+  {
+    "sentence": "Hagelin stood as a candidate for President of the United States for the Natural Law Party , a party founded by the TM movement , in the 1992 United States presidential election , 1996 United States presidential election and 2000 United States presidential election elections .",
+    "entity_list": [
+      {
+        "name": "Hagelin",
+        "type": "politician"
+      },
+      {
+        "name": "United States",
+        "type": "country"
+      },
+      {
+        "name": "Natural Law Party",
+        "type": "political party"
+      },
+      {
+        "name": "TM movement",
+        "type": "event"
+      },
+      {
+        "name": "1992 United States presidential election",
+        "type": "election"
+      },
+      {
+        "name": "1996 United States presidential election",
+        "type": "election"
+      },
+      {
+        "name": "2000 United States presidential election",
+        "type": "election"
+      }
+    ]
+  },
+  {
+    "sentence": "In the weeks leading up to the 1852 United States presidential election , he campaigned in numerous Southern states for Democratic candidates Franklin Pierce and William R. King .",
+    "entity_list": [
+      {
+        "name": "1852 United States presidential election",
+        "type": "election"
+      },
+      {
+        "name": "Franklin Pierce",
+        "type": "politician"
+      },
+      {
+        "name": "William R. King",
+        "type": "politician"
+      }
+    ]
+  },
+  {
+    "sentence": "LeRoy Pope Walker of Alabama was made Secretary of War , after being recommended for this post by Clement Claiborne Clay and William Lowndes Yancey ( both of whom declined to accept cabinet positions themselves ) .",
+    "entity_list": [
+      {
+        "name": "LeRoy Pope Walker",
+        "type": "politician"
+      },
+      {
+        "name": "Alabama",
+        "type": "location"
+      },
+      {
+        "name": "Clement Claiborne Clay",
+        "type": "politician"
+      },
+      {
+        "name": "William Lowndes Yancey",
+        "type": "politician"
+      }
+    ]
+  },
+  {
+    "sentence": "His arguments concerning liberty and the social contract later influenced the written works of Alexander Hamilton , James Madison , Thomas Jefferson , and other Founding Fathers of the United States .",
+    "entity_list": [
+      {
+        "name": "liberty",
+        "type": "political party"
+      },
+      {
+        "name": "Alexander Hamilton",
+        "type": "politician"
+      },
+      {
+        "name": "James Madison",
+        "type": "politician"
+      },
+      {
+        "name": "Thomas Jefferson",
+        "type": "politician"
+      },
+      {
+        "name": "United States",
+        "type": "country"
+      }
+    ]
+  },
+  {
+    "sentence": "After supporting Richard Nixon in his 1960 United States presidential election against John F. Kennedy , Robinson later praised Kennedy effusively for his stance on civil rights .",
+    "entity_list": [
+      {
+        "name": "Richard Nixon",
+        "type": "politician"
+      },
+      {
+        "name": "1960 United States presidential election",
+        "type": "election"
+      },
+      {
+        "name": "John F. Kennedy",
+        "type": "politician"
+      },
+      {
+        "name": "Robinson",
+        "type": "politician"
+      },
+      {
+        "name": "Kennedy",
+        "type": "politician"
+      }
+    ]
+  },
+  {
+    "sentence": "Gandhian right-wing Congressmen Vallabhbhai Patel , Rajendra Prasad and C. Rajagopalachari .In the 1930s the Congress Socialist Party group was formed within the INC under the leadership of Jayaprakash Narayan , Narendra Deo and Nehru , however , never joined the group but did act as bridge between them and Gandhi .",
+    "entity_list": [
+      {
+        "name": "Gandhian",
+        "type": "politician"
+      },
+      {
+        "name": "Vallabhbhai Patel",
+        "type": "politician"
+      },
+      {
+        "name": "Rajendra Prasad",
+        "type": "politician"
+      },
+      {
+        "name": "C. Rajagopalachari",
+        "type": "politician"
+      },
+      {
+        "name": "Congress Socialist Party",
+        "type": "political party"
+      },
+      {
+        "name": "INC",
+        "type": "else"
+      },
+      {
+        "name": "Jayaprakash Narayan",
+        "type": "politician"
+      },
+      {
+        "name": "Narendra Deo",
+        "type": "politician"
+      },
+      {
+        "name": "Nehru",
+        "type": "politician"
+      },
+      {
+        "name": "Gandhi",
+        "type": "politician"
+      }
+    ]
+  },
+  {
+    "sentence": "In addition to the Tydings-Butler race , McCarthy campaigned for several other Republicans in the 1950 United States Senate elections , including Everett Dirksen against Democratic incumbent and Senate Majority Leader Scott W. Lucas .",
+    "entity_list": [
+      {
+        "name": "Tydings-Butler race",
+        "type": "event"
+      },
+      {
+        "name": "McCarthy",
+        "type": "politician"
+      },
+      {
+        "name": "Republicans",
+        "type": "else"
+      },
+      {
+        "name": "1950 United States Senate elections",
+        "type": "election"
+      },
+      {
+        "name": "Everett Dirksen",
+        "type": "politician"
+      },
+      {
+        "name": "Scott W. Lucas",
+        "type": "politician"
+      }
+    ]
+  },
+  {
+    "sentence": "Six other Republican senators - Wayne Morse , Irving Ives , Charles W. Tobey , Edward John Thye , George Aiken , and Robert C. Hendrickson - joined her in condemning McCarthy 's tactics .",
+    "entity_list": [
+      {
+        "name": "Republican",
+        "type": "else"
+      },
+      {
+        "name": "Wayne Morse",
+        "type": "politician"
+      },
+      {
+        "name": "Irving Ives",
+        "type": "politician"
+      },
+      {
+        "name": "Charles W. Tobey",
+        "type": "politician"
+      },
+      {
+        "name": "Edward John Thye",
+        "type": "politician"
+      },
+      {
+        "name": "George Aiken",
+        "type": "politician"
+      },
+      {
+        "name": "Robert C. Hendrickson",
+        "type": "politician"
+      },
+      {
+        "name": "McCarthy",
+        "type": "politician"
+      }
+    ]
+  },
+  {
+    "sentence": "With fellow U.S. senators Trent Lott , Larry Craig , and Jim Jeffords , Ashcroft formed a barbershop quartet called The Singing Senators .",
+    "entity_list": [
+      {
+        "name": "U.S.",
+        "type": "country"
+      },
+      {
+        "name": "Trent Lott",
+        "type": "politician"
+      },
+      {
+        "name": "Larry Craig",
+        "type": "politician"
+      },
+      {
+        "name": "Jim Jeffords",
+        "type": "politician"
+      },
+      {
+        "name": "Ashcroft",
+        "type": "politician"
+      },
+      {
+        "name": "barbershop quartet",
+        "type": "organization"
+      },
+      {
+        "name": "The Singing Senators",
+        "type": "organization"
+      }
+    ]
+  },
+  {
+    "sentence": "He gained further international attention as the chief leader of the Non-Aligned Movement , alongside Jawaharlal Nehru of India , Gamal Abdel Nasser of Egypt , and Kwame Nkrumah of Ghana .",
+    "entity_list": [
+      {
+        "name": "Non-Aligned Movement",
+        "type": "organization"
+      },
+      {
+        "name": "Jawaharlal Nehru",
+        "type": "politician"
+      },
+      {
+        "name": "India",
+        "type": "country"
+      },
+      {
+        "name": "Gamal Abdel Nasser",
+        "type": "politician"
+      },
+      {
+        "name": "Egypt",
+        "type": "country"
+      },
+      {
+        "name": "Kwame Nkrumah",
+        "type": "politician"
+      },
+      {
+        "name": "Ghana",
+        "type": "country"
+      }
+    ]
+  },
+  {
+    "sentence": "He was appointed to the Committee and started to appoint allies to him , among them Edvard Kardelj , Milovan Đilas , Aleksandar Ranković and Boris Kidrič .",
+    "entity_list": [
+      {
+        "name": "Edvard Kardelj",
+        "type": "politician"
+      },
+      {
+        "name": "Milovan Đilas",
+        "type": "politician"
+      },
+      {
+        "name": "Aleksandar Ranković",
+        "type": "politician"
+      },
+      {
+        "name": "Boris Kidrič",
+        "type": "politician"
+      }
+    ]
+  },
+  {
+    "sentence": "In 1961 , Tito co-founded the movement with Egypt 's Gamal Abdel Nasser , India 's Jawaharlal Nehru , Indonesia 's Sukarno and Ghana 's Kwame Nkrumah , in an action called The Initiative of Five ( Tito , Nehru , Nasser , Sukarno , Nkrumah ) , thus establishing strong ties with third world countries .",
+    "entity_list": [
+      {
+        "name": "Tito",
+        "type": "politician"
+      },
+      {
+        "name": "Egypt",
+        "type": "country"
+      },
+      {
+        "name": "Gamal Abdel Nasser",
+        "type": "politician"
+      },
+      {
+        "name": "India",
+        "type": "country"
+      },
+      {
+        "name": "Jawaharlal Nehru",
+        "type": "politician"
+      },
+      {
+        "name": "Indonesia",
+        "type": "country"
+      },
+      {
+        "name": "Sukarno",
+        "type": "politician"
+      },
+      {
+        "name": "Ghana",
+        "type": "country"
+      },
+      {
+        "name": "Kwame Nkrumah",
+        "type": "politician"
+      },
+      {
+        "name": "Nehru",
+        "type": "politician"
+      },
+      {
+        "name": "Nasser",
+        "type": "politician"
+      },
+      {
+        "name": "Nkrumah",
+        "type": "politician"
+      }
+    ]
+  },
+  {
+    "sentence": "Beginning as a private secretary and assistant to Abraham Lincoln , Hay 's highest office was United States Secretary of State under Presidents William McKinley and Theodore Roosevelt .",
+    "entity_list": [
+      {
+        "name": "Abraham Lincoln",
+        "type": "politician"
+      },
+      {
+        "name": "Hay",
+        "type": "politician"
+      },
+      {
+        "name": "William McKinley",
+        "type": "politician"
+      },
+      {
+        "name": "Theodore Roosevelt",
+        "type": "politician"
+      }
+    ]
+  },
+  {
+    "sentence": "Between 2008 and 2013 Kenya was governed by a Grand coalition , established by a power sharing agreement , signed by then President Mwai Kibaki and Prime Minister Raila Odinga of the Orange Democratic Movement .",
+    "entity_list": [
+      {
+        "name": "Kenya",
+        "type": "country"
+      },
+      {
+        "name": "Mwai Kibaki",
+        "type": "politician"
+      },
+      {
+        "name": "Raila Odinga",
+        "type": "politician"
+      },
+      {
+        "name": "Orange Democratic Movement",
+        "type": "political party"
+      }
+    ]
+  },
+  {
+    "sentence": "Friedman had hoped to follow in the footsteps of other entertainers-turned-governors , including Jimmie Davis , Jesse Ventura , Arnold Schwarzenegger , and Ronald Reagan .",
+    "entity_list": [
+      {
+        "name": "Friedman",
+        "type": "politician"
+      },
+      {
+        "name": "Jimmie Davis",
+        "type": "politician"
+      },
+      {
+        "name": "Jesse Ventura",
+        "type": "politician"
+      },
+      {
+        "name": "Arnold Schwarzenegger",
+        "type": "politician"
+      },
+      {
+        "name": "Ronald Reagan",
+        "type": "politician"
+      }
+    ]
+  },
+  {
+    "sentence": "While exiled in Japan in 1914 , Sun established the Chinese Revolutionary Party on 8 July 1914 , but many of his old revolutionary comrades , including Huang Xing , Wang Jingwei , Hu Hanmin and Chen Jiongming , refused to join him or support his efforts in inciting armed uprising against Yuan .",
+    "entity_list": [
+      {
+        "name": "Japan",
+        "type": "country"
+      },
+      {
+        "name": "Chinese Revolutionary Party",
+        "type": "political party"
+      },
+      {
+        "name": "Huang Xing",
+        "type": "politician"
+      },
+      {
+        "name": "Wang Jingwei",
+        "type": "politician"
+      },
+      {
+        "name": "Hu Hanmin",
+        "type": "politician"
+      },
+      {
+        "name": "Chen Jiongming",
+        "type": "politician"
+      },
+      {
+        "name": "Yuan",
+        "type": "politician"
+      }
+    ]
+  },
+  {
+    "sentence": "Masud Sabri , a Uyghur was appointed as Governor of Xinjiang by KMT , as was the Tatar Burhan Shahidi and the Uyghur Yulbars Khan .",
+    "entity_list": [
+      {
+        "name": "Masud Sabri",
+        "type": "politician"
+      },
+      {
+        "name": "Uyghur",
+        "type": "else"
+      },
+      {
+        "name": "Xinjiang",
+        "type": "location"
+      },
+      {
+        "name": "KMT",
+        "type": "political party"
+      },
+      {
+        "name": "Tatar",
+        "type": "else"
+      },
+      {
+        "name": "Burhan Shahidi",
+        "type": "politician"
+      },
+      {
+        "name": "Yulbars Khan",
+        "type": "politician"
+      }
+    ]
+  },
+  {
+    "sentence": "Following their victory , the Khmer Rouge who were led by Pol Pot , Nuon Chea , Ieng Sary , Son Sen , and Khieu Samphan immediately set about forcibly evacuating the country 's major cities and in 1976 they renamed the country Democratic Kampuchea .",
+    "entity_list": [
+      {
+        "name": "Khmer Rouge",
+        "type": "organization"
+      },
+      {
+        "name": "Pol Pot",
+        "type": "politician"
+      },
+      {
+        "name": "Nuon Chea",
+        "type": "politician"
+      },
+      {
+        "name": "Ieng Sary",
+        "type": "politician"
+      },
+      {
+        "name": "Son Sen",
+        "type": "politician"
+      },
+      {
+        "name": "Khieu Samphan",
+        "type": "politician"
+      },
+      {
+        "name": "Democratic Kampuchea",
+        "type": "country"
+      }
+    ]
+  },
+  {
+    "sentence": "In the 1932 German presidential election , the SPD supported Paul von Hindenburg for President , fearing that a split vote would hand the job to the National Socialist German Workers ' Party ( NSDAP ) candidate , Adolf Hitler .",
+    "entity_list": [
+      {
+        "name": "1932 German presidential election",
+        "type": "election"
+      },
+      {
+        "name": "SPD",
+        "type": "political party"
+      },
+      {
+        "name": "Paul von Hindenburg",
+        "type": "politician"
+      },
+      {
+        "name": "National Socialist German Workers ' Party",
+        "type": "political party"
+      },
+      {
+        "name": "NSDAP",
+        "type": "political party"
+      },
+      {
+        "name": "Adolf Hitler",
+        "type": "politician"
+      }
+    ]
+  },
+  {
+    "sentence": "In almost every year , Wyden has maintained a 100 percent rating or close to it with pro-choice groups : NARAL Pro-Choice America , Planned Parenthood , and National Family Planning and Reproductive Health Association , and a 0 percent rating or close to it from pro-life group : the National Right to Life Committee .",
+    "entity_list": [
+      {
+        "name": "Wyden",
+        "type": "person"
+      },
+      {
+        "name": "NARAL Pro-Choice America",
+        "type": "organization"
+      },
+      {
+        "name": "Planned Parenthood",
+        "type": "organization"
+      },
+      {
+        "name": "National Family Planning and Reproductive Health Association",
+        "type": "organization"
+      },
+      {
+        "name": "National Right to Life Committee",
+        "type": "organization"
+      }
+    ]
+  },
+  {
+    "sentence": "The centre cooperates closely with the Carter Center in Atlanta , the Kim Dae Jung Library in Seoul and the Crisis Management Initiative in Helsinki .",
+    "entity_list": [
+      {
+        "name": "Carter Center",
+        "type": "organization"
+      },
+      {
+        "name": "Atlanta",
+        "type": "location"
+      },
+      {
+        "name": "Kim Dae Jung Library",
+        "type": "organization"
+      },
+      {
+        "name": "Seoul",
+        "type": "location"
+      },
+      {
+        "name": "Crisis Management Initiative",
+        "type": "organization"
+      },
+      {
+        "name": "Helsinki",
+        "type": "location"
+      }
+    ]
+  },
+  {
+    "sentence": "Successively , she was a member of the Social Democracy of the Kingdom of Poland and Lithuania ( SDKPiL ) , the Social Democratic Party of Germany ( SPD ) , the Independent Social Democratic Party of Germany ( USPD ) and the Communist Party of Germany ( KPD ) .",
+    "entity_list": [
+      {
+        "name": "Social Democracy of the Kingdom of Poland and Lithuania",
+        "type": "political party"
+      },
+      {
+        "name": "SDKPiL",
+        "type": "political party"
+      },
+      {
+        "name": "Social Democratic Party of Germany",
+        "type": "political party"
+      },
+      {
+        "name": "SPD",
+        "type": "political party"
+      },
+      {
+        "name": "Independent Social Democratic Party of Germany",
+        "type": "political party"
+      },
+      {
+        "name": "USPD",
+        "type": "political party"
+      },
+      {
+        "name": "Communist Party of Germany",
+        "type": "political party"
+      },
+      {
+        "name": "KPD",
+        "type": "political party"
+      }
+    ]
+  },
+  {
+    "sentence": "The devolved administration was suspended several times ( especially between 15 October 2002 and 8 May 2007 ) because the Ulster Unionist Party and Democratic Unionist Party were uncomfortable being in government with Sinn Féin when the Provisional Irish Republican Army had failed to decommission its arms fully and continued its criminal activities .",
+    "entity_list": [
+      {
+        "name": "Ulster Unionist Party",
+        "type": "political party"
+      },
+      {
+        "name": "Democratic Unionist Party",
+        "type": "political party"
+      },
+      {
+        "name": "Sinn Féin",
+        "type": "political party"
+      },
+      {
+        "name": "Provisional Irish Republican Army",
+        "type": "organization"
+      }
+    ]
+  },
+  {
+    "sentence": "Inukai was a leading figure in the successors to the Rikken Kaishintō , the Shimpotō , Kenseitō and the Rikken Kokumintō , which eventually toppled the government of Katsura Tarō in 1913 .",
+    "entity_list": [
+      {
+        "name": "Inukai",
+        "type": "politician"
+      },
+      {
+        "name": "Rikken Kaishintō",
+        "type": "political party"
+      },
+      {
+        "name": "Shimpotō",
+        "type": "political party"
+      },
+      {
+        "name": "Kenseitō",
+        "type": "political party"
+      },
+      {
+        "name": "Rikken Kokumintō",
+        "type": "political party"
+      },
+      {
+        "name": "Katsura Tarō",
+        "type": "politician"
+      }
+    ]
+  },
+  {
+    "sentence": "He attended an academy run by the crown prince 's ethics tutor in Tokyo , and briefly studied at Keio University and the Tokyo Physics School ( now the Tokyo University of Science ) .",
+    "entity_list": [
+      {
+        "name": "Tokyo",
+        "type": "location"
+      },
+      {
+        "name": "Keio University",
+        "type": "organization"
+      },
+      {
+        "name": "Tokyo Physics School",
+        "type": "organization"
+      },
+      {
+        "name": "Tokyo University of Science",
+        "type": "organization"
+      }
+    ]
+  },
+  {
+    "sentence": "Johnson unsuccessfully sought the Republican presidential nomination in 1920 United States presidential election and 1924 United States presidential election and supported Democrat Franklin D. Roosevelt in the 1932 United States presidential election .",
+    "entity_list": [
+      {
+        "name": "Johnson",
+        "type": "politician"
+      },
+      {
+        "name": "Republican",
+        "type": "else"
+      },
+      {
+        "name": "1920 United States presidential election",
+        "type": "election"
+      },
+      {
+        "name": "1924 United States presidential election",
+        "type": "election"
+      },
+      {
+        "name": "Democrat",
+        "type": "else"
+      },
+      {
+        "name": "Franklin D. Roosevelt",
+        "type": "politician"
+      },
+      {
+        "name": "1932 United States presidential election",
+        "type": "election"
+      }
+    ]
+  },
+  {
+    "sentence": "During and following his first governorship , Brown ran as a candidate for the Democratic presidential nomination in 1976 United States presidential election , 1980 Democratic Party presidential primaries and 1992 Democratic Party presidential primaries .",
+    "entity_list": [
+      {
+        "name": "Brown",
+        "type": "politician"
+      },
+      {
+        "name": "1976 United States presidential election",
+        "type": "election"
+      },
+      {
+        "name": "1980 Democratic Party presidential primaries",
+        "type": "election"
+      },
+      {
+        "name": "1992 Democratic Party presidential primaries",
+        "type": "election"
+      }
+    ]
+  },
+  {
+    "sentence": "At its peak in the late 1980s up to the mid-1990s , Garuda operated an extensive network of flights all over the world , with regularly scheduled services to Los Angeles , Paris , Rome , Fukuoka , Adelaide , Johannesburg , Cairo and other cities in Europe , Australia and Asia .",
+    "entity_list": [
+      {
+        "name": "Garuda",
+        "type": "organization"
+      },
+      {
+        "name": "Los Angeles",
+        "type": "location"
+      },
+      {
+        "name": "Paris",
+        "type": "location"
+      },
+      {
+        "name": "Rome",
+        "type": "location"
+      },
+      {
+        "name": "Fukuoka",
+        "type": "location"
+      },
+      {
+        "name": "Adelaide",
+        "type": "location"
+      },
+      {
+        "name": "Johannesburg",
+        "type": "location"
+      },
+      {
+        "name": "Cairo",
+        "type": "location"
+      },
+      {
+        "name": "Europe",
+        "type": "location"
+      },
+      {
+        "name": "Australia",
+        "type": "location"
+      },
+      {
+        "name": "Asia",
+        "type": "location"
+      }
+    ]
+  },
+  {
+    "sentence": "In 1965 , the airline took delivery of its first Douglas DC-8 , and grew beyond the Asian market it was focused on , beginning scheduled flights from Kemayoran Airport to Amsterdam and Frankfurt via Colombo , Mumbai , and Prague .",
+    "entity_list": [
+      {
+        "name": "Douglas DC-8",
+        "type": "else"
+      },
+      {
+        "name": "Asian",
+        "type": "location"
+      },
+      {
+        "name": "Kemayoran Airport",
+        "type": "location"
+      },
+      {
+        "name": "Amsterdam",
+        "type": "location"
+      },
+      {
+        "name": "Frankfurt",
+        "type": "location"
+      },
+      {
+        "name": "Colombo",
+        "type": "location"
+      },
+      {
+        "name": "Mumbai",
+        "type": "location"
+      },
+      {
+        "name": "Prague",
+        "type": "location"
+      }
+    ]
+  },
+  {
+    "sentence": "Rome and Paris became the airline 's third and fourth European destinations , with flights stopping in Mumbai and Cairo to refuel .",
+    "entity_list": [
+      {
+        "name": "Rome",
+        "type": "location"
+      },
+      {
+        "name": "Paris",
+        "type": "location"
+      },
+      {
+        "name": "European",
+        "type": "location"
+      },
+      {
+        "name": "Mumbai",
+        "type": "location"
+      },
+      {
+        "name": "Cairo",
+        "type": "location"
+      }
+    ]
+  },
+  {
+    "sentence": "After unsuccessfully contesting the constituency of Harwich at the 1954 by-election and 1955 United Kingdom general election , as well as the constituency of Southampton Test at the 1959 United Kingdom general election , Williams was returned in the 1964 United Kingdom general election as Labour MP for the constituency of Hitchin in Hertfordshire .",
+    "entity_list": [
+      {
+        "name": "Harwich",
+        "type": "location"
+      },
+      {
+        "name": "1954 by-election",
+        "type": "election"
+      },
+      {
+        "name": "1955 United Kingdom general election",
+        "type": "election"
+      },
+      {
+        "name": "Southampton Test",
+        "type": "else"
+      },
+      {
+        "name": "1959 United Kingdom general election",
+        "type": "election"
+      },
+      {
+        "name": "Williams",
+        "type": "politician"
+      },
+      {
+        "name": "1964 United Kingdom general election",
+        "type": "election"
+      },
+      {
+        "name": "Labour",
+        "type": "political party"
+      },
+      {
+        "name": "Hitchin",
+        "type": "location"
+      },
+      {
+        "name": "Hertfordshire",
+        "type": "location"
+      }
+    ]
+  },
+  {
+    "sentence": "Between 1925 and 1930 Germany was the site of innovative and extensive municipal public housing projects , mostly in Berlin , Hamburg , Cologne and Frankfurt .",
+    "entity_list": [
+      {
+        "name": "Germany",
+        "type": "country"
+      },
+      {
+        "name": "Berlin",
+        "type": "location"
+      },
+      {
+        "name": "Hamburg",
+        "type": "location"
+      },
+      {
+        "name": "Cologne",
+        "type": "location"
+      },
+      {
+        "name": "Frankfurt",
+        "type": "location"
+      }
+    ]
+  },
+  {
+    "sentence": "In this same period , such organizations as the Colonial Dames of America , the Mary Ball Washington Memorial Society , Preservation Virginia , United Daughters of the Confederacy , and Sons of Confederate Veterans were also founded .",
+    "entity_list": [
+      {
+        "name": "Colonial Dames of America",
+        "type": "organization"
+      },
+      {
+        "name": "Mary Ball Washington Memorial Society",
+        "type": "organization"
+      },
+      {
+        "name": "Preservation Virginia",
+        "type": "organization"
+      },
+      {
+        "name": "United Daughters of the Confederacy",
+        "type": "organization"
+      },
+      {
+        "name": "Sons of Confederate Veterans",
+        "type": "organization"
+      }
+    ]
+  },
+  {
+    "sentence": "After it left Gelsenkirchen , the train was boarded by other Jews from Münster , Dortmund and a few other stops along the way , and mostly by the Jews of Hanover , 500 in number .",
+    "entity_list": [
+      {
+        "name": "Gelsenkirchen",
+        "type": "location"
+      },
+      {
+        "name": "Münster",
+        "type": "location"
+      },
+      {
+        "name": "Dortmund",
+        "type": "location"
+      },
+      {
+        "name": "Hanover",
+        "type": "location"
+      }
+    ]
+  },
+  {
+    "sentence": "The only interruptions occurred in 1813-1814 , occasioned by the German War of Liberation ( War of the Sixth Coalition ) , during which the university was closed , and those occasioned by two prolonged literary tours , first in 1820 to Paris , London and Oxford with his colleague Johann Karl Thilo ( 1794-1853 ) for the examination of rare oriental manuscripts , and in 1835 to England and the Netherlands in connection with his Phoenician studies .",
+    "entity_list": [
+      {
+        "name": "German",
+        "type": "else"
+      },
+      {
+        "name": "War of Liberation",
+        "type": "event"
+      },
+      {
+        "name": "War of the Sixth Coalition",
+        "type": "event"
+      },
+      {
+        "name": "Paris",
+        "type": "location"
+      },
+      {
+        "name": "London",
+        "type": "location"
+      },
+      {
+        "name": "Oxford",
+        "type": "location"
+      },
+      {
+        "name": "Johann Karl Thilo",
+        "type": "person"
+      },
+      {
+        "name": "England",
+        "type": "country"
+      },
+      {
+        "name": "Netherlands",
+        "type": "country"
+      },
+      {
+        "name": "Phoenician",
+        "type": "else"
+      }
+    ]
+  },
+  {
+    "sentence": "Isaac Butt ( 6 September 1813 - 5 May 1879 ) , was an Irish barrister , politician , Member of Parliament ( M.P. ) in the House of Commons of the United Kingdom , and the founder and first leader of a number of Irish nationalist parties and organisations , including the Irish Metropolitan Conservative Society in 1836 , the Home Government Association in 1870 and in 1873 the Home Rule League .",
+    "entity_list": [
+      {
+        "name": "Isaac Butt",
+        "type": "politician"
+      },
+      {
+        "name": "Irish",
+        "type": "else"
+      },
+      {
+        "name": "Parliament",
+        "type": "organization"
+      },
+      {
+        "name": "House of Commons of the United Kingdom",
+        "type": "organization"
+      },
+      {
+        "name": "Irish nationalist",
+        "type": "else"
+      },
+      {
+        "name": "Irish Metropolitan Conservative Society",
+        "type": "political party"
+      },
+      {
+        "name": "Home Government Association",
+        "type": "political party"
+      },
+      {
+        "name": "Home Rule League",
+        "type": "political party"
+      }
+    ]
+  },
+  {
+    "sentence": "It is generally estimated that over 3 million people marched in Rome , between one and two million in London , more than 600,000 in Madrid , 300,000 in Berlin , as well as in Damascus , Paris , New York , Oslo , Stockholm , Brussels , Johannesburg , Montreal - more than 600 cities in all , worldwide .",
+    "entity_list": [
+      {
+        "name": "Rome",
+        "type": "country"
+      },
+      {
+        "name": "London",
+        "type": "country"
+      },
+      {
+        "name": "Madrid",
+        "type": "location"
+      },
+      {
+        "name": "Berlin",
+        "type": "location"
+      },
+      {
+        "name": "Damascus",
+        "type": "location"
+      },
+      {
+        "name": "Paris",
+        "type": "location"
+      },
+      {
+        "name": "New York",
+        "type": "location"
+      },
+      {
+        "name": "Oslo",
+        "type": "location"
+      },
+      {
+        "name": "Stockholm",
+        "type": "location"
+      },
+      {
+        "name": "Brussels",
+        "type": "location"
+      },
+      {
+        "name": "Johannesburg",
+        "type": "location"
+      },
+      {
+        "name": "Montreal",
+        "type": "location"
+      }
+    ]
+  },
+  {
+    "sentence": "During the 1990s and 2000s , NARAL Pro-Choice America and Planned Parenthood typically gave Kennedy ratings of 100 percent , while the National Right to Life Committee typically gave him a rating of less than 10 percent .",
+    "entity_list": [
+      {
+        "name": "NARAL Pro-Choice America",
+        "type": "organization"
+      },
+      {
+        "name": "Planned Parenthood",
+        "type": "organization"
+      },
+      {
+        "name": "Kennedy",
+        "type": "politician"
+      },
+      {
+        "name": "National Right to Life Committee",
+        "type": "organization"
+      }
+    ]
+  },
+  {
+    "sentence": "As the Australia Party it became influential , particularly in the landmark 1972 Australian federal election when its preferences assisted the Australian Labor Party to victory - ending 23 years of Liberal Party of Australia / National Party of Australia Coalition government .",
+    "entity_list": [
+      {
+        "name": "Australia",
+        "type": "country"
+      },
+      {
+        "name": "1972 Australian federal election",
+        "type": "election"
+      },
+      {
+        "name": "Australian Labor Party",
+        "type": "political party"
+      },
+      {
+        "name": "Liberal Party of Australia",
+        "type": "political party"
+      },
+      {
+        "name": "National Party of Australia",
+        "type": "political party"
+      }
+    ]
+  },
+  {
+    "sentence": "Subsequently , the party allied itself with the New Liberal Movement in the formation of the Australian Democrats for the 1977 Australian federal election .",
+    "entity_list": [
+      {
+        "name": "New Liberal Movement",
+        "type": "political party"
+      },
+      {
+        "name": "Australian Democrats",
+        "type": "political party"
+      },
+      {
+        "name": "1977 Australian federal election",
+        "type": "election"
+      }
+    ]
+  },
+  {
+    "sentence": "The Public Voice project is made possible , in part , by support from the Ford Foundation , the Markle Foundation , the Open Society Foundations , and EPIC .",
+    "entity_list": [
+      {
+        "name": "Public Voice",
+        "type": "organization"
+      },
+      {
+        "name": "Ford Foundation",
+        "type": "organization"
+      },
+      {
+        "name": "Markle Foundation",
+        "type": "organization"
+      },
+      {
+        "name": "Open Society Foundations",
+        "type": "organization"
+      },
+      {
+        "name": "EPIC",
+        "type": "organization"
+      }
+    ]
+  },
+  {
+    "sentence": "In June 1970 , a Dutch group called Kabouters won 5 of the 45 seats on the Amsterdam Gemeenteraad ( City Council ) , as well as two seats each on councils in The Hague and Leeuwarden and one seat apiece in Arnhem , Alkmaar and Leiden .",
+    "entity_list": [
+      {
+        "name": "Dutch",
+        "type": "else"
+      },
+      {
+        "name": "Kabouters",
+        "type": "organization"
+      },
+      {
+        "name": "Amsterdam",
+        "type": "location"
+      },
+      {
+        "name": "The Hague",
+        "type": "location"
+      },
+      {
+        "name": "Leeuwarden",
+        "type": "location"
+      },
+      {
+        "name": "Arnhem",
+        "type": "location"
+      },
+      {
+        "name": "Alkmaar",
+        "type": "location"
+      },
+      {
+        "name": "Leiden",
+        "type": "location"
+      }
+    ]
+  },
+  {
+    "sentence": "It was not registered as an official party , but some participants in that effort went on to form the Green Party of Canada in 1983 ( the Green Party of Ontario and Green Party of British Columbia were also formed that year ) .",
+    "entity_list": [
+      {
+        "name": "Green Party of Canada",
+        "type": "political party"
+      },
+      {
+        "name": "Green Party of Ontario",
+        "type": "political party"
+      },
+      {
+        "name": "Green Party of British Columbia",
+        "type": "political party"
+      }
+    ]
+  },
+  {
+    "sentence": "She won a close race for the U.S. Senate in 1996 United States Senate election in Louisiana ; she was re-elected by increasing margins in competitive races in 2002 United States Senate election in Louisiana and 2008 United States Senate election in Louisiana , but lost in 2014 United States Senate election in Louisiana .",
+    "entity_list": [
+      {
+        "name": "U.S. Senate",
+        "type": "organization"
+      },
+      {
+        "name": "1996 United States Senate election in Louisiana",
+        "type": "election"
+      },
+      {
+        "name": "2002 United States Senate election in Louisiana",
+        "type": "election"
+      },
+      {
+        "name": "2008 United States Senate election in Louisiana",
+        "type": "election"
+      },
+      {
+        "name": "2014 United States Senate election in Louisiana",
+        "type": "election"
+      }
+    ]
+  },
+  {
+    "sentence": "Its continued use by the Southern Army 's post-war veterans groups , the United Confederate Veterans ( U.C.V. ) and the later Sons of Confederate Veterans , ( S.C.V. ) , and elements of the design by related similar female descendants organizations of the United Daughters of the Confederacy , ( U.D.C. ) , led to the assumption that it was , as it has been termed , the soldier 's flag or the Confederate battle flag .",
+    "entity_list": [
+      {
+        "name": "Southern Army",
+        "type": "organization"
+      },
+      {
+        "name": "United Confederate Veterans",
+        "type": "organization"
+      },
+      {
+        "name": "U.C.V.",
+        "type": "organization"
+      },
+      {
+        "name": "Sons of Confederate Veterans",
+        "type": "organization"
+      },
+      {
+        "name": "S.C.V.",
+        "type": "organization"
+      },
+      {
+        "name": "United Daughters of the Confederacy",
+        "type": "organization"
+      },
+      {
+        "name": "U.D.C.",
+        "type": "organization"
+      }
+    ]
+  },
+  {
+    "sentence": "Rowse was elected a Fellow of the British Academy ( FBA ) , of the Royal Historical Society ( FRHistS ) and of the Royal Society of Literature ( FRSL ) .",
+    "entity_list": [
+      {
+        "name": "Rowse",
+        "type": "person"
+      },
+      {
+        "name": "British Academy",
+        "type": "organization"
+      },
+      {
+        "name": "FBA",
+        "type": "organization"
+      },
+      {
+        "name": "Royal Historical Society",
+        "type": "organization"
+      },
+      {
+        "name": "FRHistS",
+        "type": "organization"
+      },
+      {
+        "name": "Royal Society of Literature",
+        "type": "organization"
+      },
+      {
+        "name": "FRSL",
+        "type": "organization"
+      }
+    ]
+  },
+  {
+    "sentence": "Duplessis returned as premier in the 1944 Quebec general election , and held power without serious opposition for the next fifteen years , until his death , winning elections in 1948 Quebec general election , 1952 Quebec general election and 1956 Quebec general election .",
+    "entity_list": [
+      {
+        "name": "Duplessis",
+        "type": "politician"
+      },
+      {
+        "name": "1944 Quebec general election",
+        "type": "election"
+      },
+      {
+        "name": "1948 Quebec general election",
+        "type": "election"
+      },
+      {
+        "name": "1952 Quebec general election",
+        "type": "election"
+      },
+      {
+        "name": "1956 Quebec general election",
+        "type": "election"
+      }
+    ]
+  },
+  {
+    "sentence": "He survived the Progressive Conservative Party of Canada ascendancy and was re-elected in both 1957 Canadian federal election and 1958 Canadian federal election .",
+    "entity_list": [
+      {
+        "name": "Progressive Conservative Party of Canada",
+        "type": "political party"
+      },
+      {
+        "name": "1957 Canadian federal election",
+        "type": "election"
+      },
+      {
+        "name": "1958 Canadian federal election",
+        "type": "election"
+      }
+    ]
+  },
+  {
+    "sentence": "Human rights groups , including Amnesty International , Human Rights Watch and the Center for Constitutional Rights , and U.S. military defense lawyers have criticised the military commissions for lacking due process for a fair trial .",
+    "entity_list": [
+      {
+        "name": "Amnesty International",
+        "type": "organization"
+      },
+      {
+        "name": "Human Rights Watch",
+        "type": "organization"
+      },
+      {
+        "name": "Center for Constitutional Rights",
+        "type": "organization"
+      },
+      {
+        "name": "U.S.",
+        "type": "country"
+      }
+    ]
+  },
+  {
+    "sentence": "As of February 2012 the political composition of the council was : 11 Democratic Unionist Party ( DUP ) , 6 Alliance Party of Northern Ireland , 3 Ulster Unionist Party ( UUP ) , 2 Social Democratic and Labour Party ( SDLP ) and 1 Green Party in Northern Ireland councillor .",
+    "entity_list": [
+      {
+        "name": "Democratic Unionist Party",
+        "type": "political party"
+      },
+      {
+        "name": "DUP",
+        "type": "political party"
+      },
+      {
+        "name": "Alliance Party of Northern Ireland",
+        "type": "political party"
+      },
+      {
+        "name": "Ulster Unionist Party",
+        "type": "political party"
+      },
+      {
+        "name": "UUP",
+        "type": "political party"
+      },
+      {
+        "name": "Social Democratic and Labour Party",
+        "type": "political party"
+      },
+      {
+        "name": "SDLP",
+        "type": "political party"
+      },
+      {
+        "name": "Green Party in Northern Ireland",
+        "type": "political party"
+      }
+    ]
+  },
+  {
+    "sentence": "Jeddah , Medina and Dubai are the major focus city for the airline , with flights from Islamabad , Karachi , Lahore , Peshawar , Multan , Sialkot and Faisalabad .",
+    "entity_list": [
+      {
+        "name": "Jeddah",
+        "type": "location"
+      },
+      {
+        "name": "Medina",
+        "type": "location"
+      },
+      {
+        "name": "Dubai",
+        "type": "location"
+      },
+      {
+        "name": "Islamabad",
+        "type": "location"
+      },
+      {
+        "name": "Karachi",
+        "type": "location"
+      },
+      {
+        "name": "Lahore",
+        "type": "location"
+      },
+      {
+        "name": "Peshawar",
+        "type": "location"
+      },
+      {
+        "name": "Multan",
+        "type": "location"
+      },
+      {
+        "name": "Sialkot",
+        "type": "location"
+      },
+      {
+        "name": "Faisalabad",
+        "type": "location"
+      }
+    ]
+  },
+  {
+    "sentence": "PIA currently offers cargo / service for these international destinations Abu Dhabi , Bangkok , Barcelona , Birmingham , China - Beijing , Copenhagen , Dammam , Delhi , Dhaka , Doha , Dubai , Jeddah , Kabul , Kuala Lumpur , London , Manchester , Medina , Milan , Muscat , Najaf , Oslo , Paris , Riyadh , Sharjah , Tokyo - Narita and Toronto - Canada .",
+    "entity_list": [
+      {
+        "name": "PIA",
+        "type": "organization"
+      },
+      {
+        "name": "cargo",
+        "type": "else"
+      },
+      {
+        "name": "Abu Dhabi",
+        "type": "location"
+      },
+      {
+        "name": "Bangkok",
+        "type": "location"
+      },
+      {
+        "name": "Barcelona",
+        "type": "location"
+      },
+      {
+        "name": "Birmingham",
+        "type": "location"
+      },
+      {
+        "name": "China",
+        "type": "country"
+      },
+      {
+        "name": "Beijing",
+        "type": "location"
+      },
+      {
+        "name": "Copenhagen",
+        "type": "location"
+      },
+      {
+        "name": "Dammam",
+        "type": "location"
+      },
+      {
+        "name": "Delhi",
+        "type": "location"
+      },
+      {
+        "name": "Dhaka",
+        "type": "location"
+      },
+      {
+        "name": "Doha",
+        "type": "location"
+      },
+      {
+        "name": "Dubai",
+        "type": "location"
+      },
+      {
+        "name": "Jeddah",
+        "type": "location"
+      },
+      {
+        "name": "Kabul",
+        "type": "location"
+      },
+      {
+        "name": "Kuala Lumpur",
+        "type": "location"
+      },
+      {
+        "name": "London",
+        "type": "location"
+      },
+      {
+        "name": "Manchester",
+        "type": "location"
+      },
+      {
+        "name": "Medina",
+        "type": "location"
+      },
+      {
+        "name": "Milan",
+        "type": "location"
+      },
+      {
+        "name": "Muscat",
+        "type": "location"
+      },
+      {
+        "name": "Najaf",
+        "type": "location"
+      },
+      {
+        "name": "Oslo",
+        "type": "location"
+      },
+      {
+        "name": "Paris",
+        "type": "location"
+      },
+      {
+        "name": "Riyadh",
+        "type": "location"
+      },
+      {
+        "name": "Sharjah",
+        "type": "location"
+      },
+      {
+        "name": "Tokyo",
+        "type": "location"
+      },
+      {
+        "name": "Narita",
+        "type": "location"
+      },
+      {
+        "name": "Toronto",
+        "type": "location"
+      },
+      {
+        "name": "Canada",
+        "type": "country"
+      }
+    ]
+  },
+  {
+    "sentence": "The contemporary Québec Liberal Party is a broad-based federalist coalition including among its members some supporters of the federal Liberal Party of Canada , New Democratic Party , and Conservative Party of Canada .",
+    "entity_list": [
+      {
+        "name": "Liberal Party",
+        "type": "political party"
+      },
+      {
+        "name": "Liberal Party of Canada",
+        "type": "political party"
+      },
+      {
+        "name": "New Democratic Party",
+        "type": "political party"
+      },
+      {
+        "name": "Conservative Party of Canada",
+        "type": "political party"
+      }
+    ]
+  },
+  {
+    "sentence": "Đinđić was voted out of his position as Belgrade mayor by the Serbian Renewal Movement , Socialist Party of Serbia and Serbian Radical Party .",
+    "entity_list": [
+      {
+        "name": "Đinđić",
+        "type": "politician"
+      },
+      {
+        "name": "Belgrade",
+        "type": "location"
+      },
+      {
+        "name": "Serbian Renewal Movement",
+        "type": "political party"
+      },
+      {
+        "name": "Socialist Party of Serbia",
+        "type": "political party"
+      },
+      {
+        "name": "Serbian Radical Party",
+        "type": "political party"
+      }
+    ]
+  },
+  {
+    "sentence": "The war led to British Hong Kong , the first of many unequal treaties between Western powers and China , and the opening of five treaty ports ( Shanghai , Guangzhou , Fuzhou , Ningbo , and Xiamen ) opened to trade with the West - eschewing China 's traditional protectionism .",
+    "entity_list": [
+      {
+        "name": "British",
+        "type": "else"
+      },
+      {
+        "name": "Hong Kong",
+        "type": "location"
+      },
+      {
+        "name": "China",
+        "type": "country"
+      },
+      {
+        "name": "Shanghai",
+        "type": "location"
+      },
+      {
+        "name": "Guangzhou",
+        "type": "location"
+      },
+      {
+        "name": "Fuzhou",
+        "type": "location"
+      },
+      {
+        "name": "Ningbo",
+        "type": "location"
+      },
+      {
+        "name": "Xiamen",
+        "type": "location"
+      }
+    ]
+  },
+  {
+    "sentence": "There are Lord Edward Streets named in his honour in many places in Ireland , such as Dublin , Limerick , Sligo , Kilkenny , Ballina , Ballymote , and Ballycullenbeg in County Laois .",
+    "entity_list": [
+      {
+        "name": "Lord Edward Streets",
+        "type": "location"
+      },
+      {
+        "name": "Ireland",
+        "type": "country"
+      },
+      {
+        "name": "Dublin",
+        "type": "location"
+      },
+      {
+        "name": "Limerick",
+        "type": "location"
+      },
+      {
+        "name": "Sligo",
+        "type": "location"
+      },
+      {
+        "name": "Kilkenny",
+        "type": "location"
+      },
+      {
+        "name": "Ballina",
+        "type": "location"
+      },
+      {
+        "name": "Ballymote",
+        "type": "location"
+      },
+      {
+        "name": "Ballycullenbeg",
+        "type": "location"
+      },
+      {
+        "name": "County Laois",
+        "type": "location"
+      }
+    ]
+  },
+  {
+    "sentence": "He was a candidate in the Polish presidential election in 1995 Polish presidential election , 2000 Polish presidential election , 2005 Polish presidential election and 2010 Polish presidential election .",
+    "entity_list": [
+      {
+        "name": "Polish",
+        "type": "else"
+      },
+      {
+        "name": "1995 Polish presidential election",
+        "type": "election"
+      },
+      {
+        "name": "2000 Polish presidential election",
+        "type": "election"
+      },
+      {
+        "name": "2005 Polish presidential election",
+        "type": "election"
+      },
+      {
+        "name": "2010 Polish presidential election",
+        "type": "election"
+      }
+    ]
+  },
+  {
+    "sentence": "Brooks was a member of the Masonic Lodge , the Shriners , the Benevolent and Protective Order of Elks , American Legion , Veterans of Foreign Wars , and the Kiwanis International .",
+    "entity_list": [
+      {
+        "name": "Brooks",
+        "type": "person"
+      },
+      {
+        "name": "Masonic Lodge",
+        "type": "organization"
+      },
+      {
+        "name": "Shriners",
+        "type": "organization"
+      },
+      {
+        "name": "Benevolent and Protective Order of Elks",
+        "type": "organization"
+      },
+      {
+        "name": "American Legion",
+        "type": "organization"
+      },
+      {
+        "name": "Veterans of Foreign Wars",
+        "type": "organization"
+      },
+      {
+        "name": "Kiwanis International",
+        "type": "organization"
+      }
+    ]
+  },
+  {
+    "sentence": "Amnesty International and Human Rights Watch as well as B 'Tselem and Yesh Din criticized the military investigation .",
+    "entity_list": [
+      {
+        "name": "Amnesty International",
+        "type": "organization"
+      },
+      {
+        "name": "Human Rights Watch",
+        "type": "organization"
+      },
+      {
+        "name": "B 'Tselem",
+        "type": "organization"
+      },
+      {
+        "name": "Yesh Din",
+        "type": "organization"
+      }
+    ]
+  },
+  {
+    "sentence": "The People 's Party , led by Aznar , won the most parliamentary seats at the 1996 Spanish general election , but he failed to obtain a majority in the Congress of Deputies , which forced the PP to seek the support of Basque ( Basque Nationalist Party ) , Catalan ( Convergence and Union ) and Canarian ( Canarian Coalition ) regionalists .",
+    "entity_list": [
+      {
+        "name": "The People 's Party",
+        "type": "political party"
+      },
+      {
+        "name": "Aznar",
+        "type": "politician"
+      },
+      {
+        "name": "1996 Spanish general election",
+        "type": "election"
+      },
+      {
+        "name": "Congress of Deputies",
+        "type": "organization"
+      },
+      {
+        "name": "Basque",
+        "type": "else"
+      },
+      {
+        "name": "Basque Nationalist Party",
+        "type": "political party"
+      },
+      {
+        "name": "Catalan",
+        "type": "else"
+      },
+      {
+        "name": "Convergence and Union",
+        "type": "political party"
+      },
+      {
+        "name": "Canarian",
+        "type": "else"
+      },
+      {
+        "name": "Canarian Coalition",
+        "type": "political party"
+      }
+    ]
+  },
+  {
+    "sentence": "The movement was immediately supported by Mariotto Segni , leader of the centrist Segni Pact ; after few weeks the post-communist Democratic Party of the Left of Massimo D 'Alema , the PPI and the Federation of the Greens also joined the Olive Tree coalition .",
+    "entity_list": [
+      {
+        "name": "Mariotto Segni",
+        "type": "politician"
+      },
+      {
+        "name": "Segni Pact",
+        "type": "political party"
+      },
+      {
+        "name": "Democratic Party of the Left",
+        "type": "political party"
+      },
+      {
+        "name": "Massimo D 'Alema",
+        "type": "politician"
+      },
+      {
+        "name": "Federation of the Greens",
+        "type": "political party"
+      },
+      {
+        "name": "the Olive Tree",
+        "type": "organization"
+      }
+    ]
+  },
+  {
+    "sentence": "After some time , more candidates were presented , like Union of Democrats for Europe leader Clemente Mastella , Italy of Values leader and former magistrate Antonio Di Pietro , Federation of the Greens leader Alfonso Pecoraro Scanio and others few minor candidates .",
+    "entity_list": [
+      {
+        "name": "Union of Democrats for Europe",
+        "type": "political party"
+      },
+      {
+        "name": "Clemente Mastella",
+        "type": "politician"
+      },
+      {
+        "name": "Italy of Values",
+        "type": "political party"
+      },
+      {
+        "name": "Antonio Di Pietro",
+        "type": "politician"
+      },
+      {
+        "name": "Federation of the Greens",
+        "type": "political party"
+      },
+      {
+        "name": "Alfonso Pecoraro Scanio",
+        "type": "politician"
+      }
+    ]
+  },
+  {
+    "sentence": "Excluding the Japanese Communist Party , the coalition was backed by all of the former opposition parties , which included the newly formed JNP , the Japan Socialist Party , the Japan Renewal Party ( Shinseito ) , Komeito , the Democratic Socialist Party , the Socialist Democratic Federation , and the New Party Sakigake , who together controlled 243 seats in the House of Representatives .",
+    "entity_list": [
+      {
+        "name": "Japanese Communist Party",
+        "type": "political party"
+      },
+      {
+        "name": "JNP",
+        "type": "political party"
+      },
+      {
+        "name": "Japan Socialist Party",
+        "type": "political party"
+      },
+      {
+        "name": "Japan Renewal Party",
+        "type": "political party"
+      },
+      {
+        "name": "Shinseito",
+        "type": "political party"
+      },
+      {
+        "name": "Komeito",
+        "type": "political party"
+      },
+      {
+        "name": "Democratic Socialist Party",
+        "type": "political party"
+      },
+      {
+        "name": "Socialist Democratic Federation",
+        "type": "political party"
+      },
+      {
+        "name": "New Party Sakigake",
+        "type": "political party"
+      }
+    ]
+  },
+  {
+    "sentence": "The Theosophical Society built several Buddhist schools in Ceylon , most notably Ananda College in 1886 , Dharmaraja College Kandy in 1887 , Maliyadeva College Kurunegala in 1888 , Mahinda College Galle in 1892 , Nalanda College , Colombo in 1925 , Musaeus Girls College in Colombo and Dharmasoka College in Ambalangoda .",
+    "entity_list": [
+      {
+        "name": "Theosophical Society",
+        "type": "organization"
+      },
+      {
+        "name": "Buddhist",
+        "type": "else"
+      },
+      {
+        "name": "Ceylon",
+        "type": "location"
+      },
+      {
+        "name": "Ananda College",
+        "type": "organization"
+      },
+      {
+        "name": "Dharmaraja College",
+        "type": "organization"
+      },
+      {
+        "name": "Kandy",
+        "type": "location"
+      },
+      {
+        "name": "Maliyadeva College",
+        "type": "organization"
+      },
+      {
+        "name": "Kurunegala",
+        "type": "location"
+      },
+      {
+        "name": "Mahinda College",
+        "type": "organization"
+      },
+      {
+        "name": "Galle",
+        "type": "location"
+      },
+      {
+        "name": "Nalanda College",
+        "type": "organization"
+      },
+      {
+        "name": "Colombo",
+        "type": "location"
+      },
+      {
+        "name": "Musaeus Girls College",
+        "type": "organization"
+      },
+      {
+        "name": "Dharmasoka College",
+        "type": "organization"
+      },
+      {
+        "name": "Ambalangoda",
+        "type": "location"
+      }
+    ]
+  },
+  {
+    "sentence": "The carrier traces its roots back to , initially serving Athens , Cairo , London , Malta , Paris , Rome and Tunis .",
+    "entity_list": [
+      {
+        "name": "Athens",
+        "type": "location"
+      },
+      {
+        "name": "Cairo",
+        "type": "location"
+      },
+      {
+        "name": "London",
+        "type": "location"
+      },
+      {
+        "name": "Malta",
+        "type": "country"
+      },
+      {
+        "name": "Paris",
+        "type": "location"
+      },
+      {
+        "name": "Rome",
+        "type": "location"
+      },
+      {
+        "name": "Tunis",
+        "type": "location"
+      }
+    ]
+  },
+  {
+    "sentence": "Maharani Laxmi Bai Medical College in Jhansi are named after her .",
+    "entity_list": [
+      {
+        "name": "Maharani Laxmi Bai Medical College",
+        "type": "organization"
+      },
+      {
+        "name": "Jhansi",
+        "type": "location"
+      }
+    ]
+  },
+  {
+    "sentence": "The major cities of Lan Xang were located in Luang Prabang , Vientiane including the towns in Nong Khai , Muang Phuan .",
+    "entity_list": [
+      {
+        "name": "Lan Xang",
+        "type": "country"
+      },
+      {
+        "name": "Luang Prabang",
+        "type": "location"
+      },
+      {
+        "name": "Vientiane",
+        "type": "location"
+      },
+      {
+        "name": "Nong Khai",
+        "type": "location"
+      },
+      {
+        "name": "Muang Phuan",
+        "type": "location"
+      }
+    ]
+  },
+  {
+    "sentence": "In the beginning , Anawrahta 's principality was a small area - barely 200 miles north to south and about 80 miles from east to west , comprising roughly the present districts of Mandalay , Meiktila , Myingyan , Kyaukse , Yamethin , Magwe , Sagaing and Katha east of the Irrawaddy , and the riverine portions of Minbu and Pakkoku .",
+    "entity_list": [
+      {
+        "name": "Anawrahta",
+        "type": "person"
+      },
+      {
+        "name": "Mandalay",
+        "type": "location"
+      },
+      {
+        "name": "Meiktila",
+        "type": "location"
+      },
+      {
+        "name": "Myingyan",
+        "type": "location"
+      },
+      {
+        "name": "Kyaukse",
+        "type": "location"
+      },
+      {
+        "name": "Yamethin",
+        "type": "location"
+      },
+      {
+        "name": "Magwe",
+        "type": "location"
+      },
+      {
+        "name": "Sagaing",
+        "type": "location"
+      },
+      {
+        "name": "Katha",
+        "type": "location"
+      },
+      {
+        "name": "Irrawaddy",
+        "type": "location"
+      },
+      {
+        "name": "Minbu",
+        "type": "location"
+      },
+      {
+        "name": "Pakkoku",
+        "type": "location"
+      }
+    ]
+  },
+  {
+    "sentence": "This tends to lead to the chamber being dominated by two major parties , the Liberal Party of Australia / National Party of Australia Coalition and the Australian Labor Party .",
+    "entity_list": [
+      {
+        "name": "Liberal Party of Australia",
+        "type": "political party"
+      },
+      {
+        "name": "National Party of Australia",
+        "type": "political party"
+      },
+      {
+        "name": "Australian Labor Party",
+        "type": "political party"
+      }
+    ]
+  },
+  {
+    "sentence": "Many of the magazine 's articles were written by members of conservative think tanks located in Washington , including the American Enterprise Institute , the Ethics and Public Policy Center , the Foundation for Defense of Democracies , the Hudson Institute , and the Foreign Policy Initiative .",
+    "entity_list": [
+      {
+        "name": "Washington",
+        "type": "location"
+      },
+      {
+        "name": "American Enterprise Institute",
+        "type": "organization"
+      },
+      {
+        "name": "Ethics and Public Policy Center",
+        "type": "organization"
+      },
+      {
+        "name": "Foundation for Defense of Democracies",
+        "type": "organization"
+      },
+      {
+        "name": "Hudson Institute",
+        "type": "organization"
+      },
+      {
+        "name": "Foreign Policy Initiative",
+        "type": "organization"
+      }
+    ]
+  },
+  {
+    "sentence": "At the turn of the 19th century , nine out of ten workers were engaged in harbour activities , but as the century progressed ships became too large for the shallow harbour and the port lost business to the deep water ports at Liverpool , Southampton and Plymouth .",
+    "entity_list": [
+      {
+        "name": "Liverpool",
+        "type": "location"
+      },
+      {
+        "name": "Southampton",
+        "type": "location"
+      },
+      {
+        "name": "Plymouth",
+        "type": "location"
+      }
+    ]
+  },
+  {
+    "sentence": "Whereas most leaders had come from or identified with the independence movement Sinn Féin ( in its 1917-22 phase ) , Bruton identified more with the more moderate Irish Parliamentary Party ( IPP ) tradition that Sinn Féin had eclipsed at the 1918 Irish general election .",
+    "entity_list": [
+      {
+        "name": "Sinn Féin",
+        "type": "political party"
+      },
+      {
+        "name": "Bruton",
+        "type": "location"
+      },
+      {
+        "name": "Irish Parliamentary Party",
+        "type": "political party"
+      },
+      {
+        "name": "IPP",
+        "type": "political party"
+      },
+      {
+        "name": "1918 Irish general election",
+        "type": "election"
+      }
+    ]
+  },
+  {
+    "sentence": "By the time of the 1997 Irish general election Sinn Féin stated that they would prefer a Fianna Fáil led government and the IRA resumed their ceasefire soon after Fine Gael lost the 1997 Irish general election .",
+    "entity_list": [
+      {
+        "name": "1997 Irish general election",
+        "type": "election"
+      },
+      {
+        "name": "Sinn Féin",
+        "type": "political party"
+      },
+      {
+        "name": "Fianna Fáil",
+        "type": "political party"
+      },
+      {
+        "name": "IRA",
+        "type": "organization"
+      },
+      {
+        "name": "Fine Gael",
+        "type": "political party"
+      }
+    ]
+  },
+  {
+    "sentence": "Within this district were Barnsley , Batley , Bradford , Brighouse , Dewsbury , Doncaster , Halifax , Huddersfield , Keighley , Leeds , Morley , Ossett , Pontefract , Pudsey , Rotherham , Sheffield , Todmorden ( partly in Lancashire until 1888 , when fully incorporated into Yorkshire ) and Wakefield .",
+    "entity_list": [
+      {
+        "name": "Barnsley",
+        "type": "location"
+      },
+      {
+        "name": "Batley",
+        "type": "location"
+      },
+      {
+        "name": "Bradford",
+        "type": "location"
+      },
+      {
+        "name": "Brighouse",
+        "type": "location"
+      },
+      {
+        "name": "Dewsbury",
+        "type": "location"
+      },
+      {
+        "name": "Doncaster",
+        "type": "location"
+      },
+      {
+        "name": "Halifax",
+        "type": "location"
+      },
+      {
+        "name": "Huddersfield",
+        "type": "location"
+      },
+      {
+        "name": "Keighley",
+        "type": "location"
+      },
+      {
+        "name": "Leeds",
+        "type": "location"
+      },
+      {
+        "name": "Morley",
+        "type": "location"
+      },
+      {
+        "name": "Ossett",
+        "type": "location"
+      },
+      {
+        "name": "Pontefract",
+        "type": "location"
+      },
+      {
+        "name": "Pudsey",
+        "type": "location"
+      },
+      {
+        "name": "Rotherham",
+        "type": "location"
+      },
+      {
+        "name": "Sheffield",
+        "type": "location"
+      },
+      {
+        "name": "Todmorden",
+        "type": "location"
+      },
+      {
+        "name": "Lancashire",
+        "type": "location"
+      },
+      {
+        "name": "Yorkshire",
+        "type": "location"
+      },
+      {
+        "name": "Wakefield",
+        "type": "location"
+      }
+    ]
+  },
+  {
+    "sentence": "This promise was seen as key to his victory in many ridings , such as those in the suburbs around Longueuil and Quebec City and the continued support of the Anglophone community in the West Island of Montreal .",
+    "entity_list": [
+      {
+        "name": "Longueuil",
+        "type": "location"
+      },
+      {
+        "name": "Quebec City",
+        "type": "location"
+      },
+      {
+        "name": "Anglophone",
+        "type": "organization"
+      },
+      {
+        "name": "Montreal",
+        "type": "location"
+      }
+    ]
+  },
+  {
+    "sentence": "Lugar was reelected in 1982 United States Senate election in Indiana , 1988 United States Senate election in Indiana , 1994 United States Senate election in Indiana , 2000 United States Senate election in Indiana , and 2006 United States Senate election in Indiana .",
+    "entity_list": [
+      {
+        "name": "Lugar",
+        "type": "politician"
+      },
+      {
+        "name": "1982 United States Senate election in Indiana",
+        "type": "election"
+      },
+      {
+        "name": "1988 United States Senate election in Indiana",
+        "type": "election"
+      },
+      {
+        "name": "1994 United States Senate election in Indiana",
+        "type": "election"
+      },
+      {
+        "name": "2000 United States Senate election in Indiana",
+        "type": "election"
+      },
+      {
+        "name": "2006 United States Senate election in Indiana",
+        "type": "election"
+      }
+    ]
+  },
+  {
+    "sentence": "Formed by the Social Democratic Party ( SDP ) and the Liberal Party , the SDP-Liberal Alliance was established in 1981 , contesting the 1983 United Kingdom general election , 1984 European Parliament election in the United Kingdom and 1987 United Kingdom general election .",
+    "entity_list": [
+      {
+        "name": "Social Democratic Party",
+        "type": "political party"
+      },
+      {
+        "name": "SDP",
+        "type": "political party"
+      },
+      {
+        "name": "Liberal Party",
+        "type": "political party"
+      },
+      {
+        "name": "SDP-Liberal Alliance",
+        "type": "political party"
+      },
+      {
+        "name": "1983 United Kingdom general election",
+        "type": "election"
+      },
+      {
+        "name": "1984 European Parliament election in the United Kingdom",
+        "type": "election"
+      },
+      {
+        "name": "1987 United Kingdom general election",
+        "type": "election"
+      }
+    ]
+  },
+  {
+    "sentence": "In 1981 , there were riots in London ' s Brixton , Birmingham ' s Handsworth , Leeds ' Chapeltown , Liverpool ' s Toxteth and Manchester ' s Moss Side .",
+    "entity_list": [
+      {
+        "name": "London",
+        "type": "location"
+      },
+      {
+        "name": "Brixton",
+        "type": "location"
+      },
+      {
+        "name": "Birmingham",
+        "type": "location"
+      },
+      {
+        "name": "Handsworth",
+        "type": "location"
+      },
+      {
+        "name": "Leeds",
+        "type": "location"
+      },
+      {
+        "name": "Chapeltown",
+        "type": "location"
+      },
+      {
+        "name": "Liverpool",
+        "type": "location"
+      },
+      {
+        "name": "Toxteth",
+        "type": "location"
+      },
+      {
+        "name": "Manchester",
+        "type": "location"
+      },
+      {
+        "name": "Moss Side",
+        "type": "location"
+      }
+    ]
+  },
+  {
+    "sentence": "Šetalište Lazaro Kardenasa ( Lázaro Cárdenas promenade ) in Belgrade , Serbia , is also named after him , as is a street in Barcelona , Spain , and a monument in a park in Madrid dedicated to his memory for his role in admitting defeated Spanish Republicans to Mexico after the Civil War in that country .",
+    "entity_list": [
+      {
+        "name": "Šetalište Lazaro Kardenasa",
+        "type": "location"
+      },
+      {
+        "name": "Lázaro Cárdenas promenade",
+        "type": "location"
+      },
+      {
+        "name": "Belgrade",
+        "type": "location"
+      },
+      {
+        "name": "Serbia",
+        "type": "country"
+      },
+      {
+        "name": "Barcelona",
+        "type": "location"
+      },
+      {
+        "name": "Spain",
+        "type": "country"
+      },
+      {
+        "name": "Madrid",
+        "type": "location"
+      },
+      {
+        "name": "Spanish",
+        "type": "else"
+      },
+      {
+        "name": "Republicans",
+        "type": "else"
+      },
+      {
+        "name": "Mexico",
+        "type": "country"
+      },
+      {
+        "name": "Civil War",
+        "type": "event"
+      }
+    ]
+  },
+  {
+    "sentence": "On 5 April 1960 , BEA introduced de Havilland Comet 4B aircraft on the Nicosia , Athens , Rome , and London routes .",
+    "entity_list": [
+      {
+        "name": "BEA",
+        "type": "country"
+      },
+      {
+        "name": "de Havilland Comet",
+        "type": "organization"
+      },
+      {
+        "name": "Nicosia",
+        "type": "location"
+      },
+      {
+        "name": "Athens",
+        "type": "location"
+      },
+      {
+        "name": "Rome",
+        "type": "location"
+      },
+      {
+        "name": "London",
+        "type": "location"
+      }
+    ]
+  },
+  {
+    "sentence": "Re-elected as MP for that riding in the 1963 Canadian federal election and 1965 Canadian federal election , Douglas lost the redistricted seat of Burnaby - Seymour in the 1968 Canadian federal election .",
+    "entity_list": [
+      {
+        "name": "1963 Canadian federal election",
+        "type": "election"
+      },
+      {
+        "name": "1965 Canadian federal election",
+        "type": "election"
+      },
+      {
+        "name": "Douglas",
+        "type": "politician"
+      },
+      {
+        "name": "Burnaby - Seymour",
+        "type": "location"
+      },
+      {
+        "name": "1968 Canadian federal election",
+        "type": "election"
+      }
+    ]
+  },
+  {
+    "sentence": "After two failed attempts , New Democratic Party candidate Olivia Chow ( wife of NDP leader Jack Layton ) , was elected in the 2006 Canadian federal election , representing the riding of Trinity - Spadina , and the Bloc Québécois had an ethnic Chinese candidate , May Chiu , running in the riding of LaSalle - Émard against Liberal Party of Canada leader Paul Martin during the 2006 election .",
+    "entity_list": [
+      {
+        "name": "New Democratic Party",
+        "type": "political party"
+      },
+      {
+        "name": "Olivia Chow",
+        "type": "politician"
+      },
+      {
+        "name": "NDP",
+        "type": "political party"
+      },
+      {
+        "name": "Jack Layton",
+        "type": "politician"
+      },
+      {
+        "name": "2006 Canadian federal election",
+        "type": "election"
+      },
+      {
+        "name": "Trinity - Spadina",
+        "type": "location"
+      },
+      {
+        "name": "Bloc Québécois",
+        "type": "political party"
+      },
+      {
+        "name": "May Chiu",
+        "type": "politician"
+      },
+      {
+        "name": "LaSalle - Émard",
+        "type": "location"
+      },
+      {
+        "name": "Liberal Party of Canada",
+        "type": "political party"
+      },
+      {
+        "name": "Paul Martin",
+        "type": "politician"
+      },
+      {
+        "name": "2006 election",
+        "type": "election"
+      }
+    ]
+  },
+  {
+    "sentence": "He was the former president of the American Political Science Association and a member of the American Academy of Arts and Sciences , American Philosophical Society and Human Rights Foundation .",
+    "entity_list": [
+      {
+        "name": "American Political Science Association",
+        "type": "organization"
+      },
+      {
+        "name": "American Academy of Arts and Sciences",
+        "type": "organization"
+      },
+      {
+        "name": "American Philosophical Society",
+        "type": "organization"
+      },
+      {
+        "name": "Human Rights Foundation",
+        "type": "organization"
+      }
+    ]
+  },
+  {
+    "sentence": "Marxism-Leninism remains the ideology of several communist states around the world and the official ideology of the ruling parties of Communist Party of China , Communist Party of Cuba , Laos and Communist Party of Vietnam .",
+    "entity_list": [
+      {
+        "name": "Marxism-Leninism",
+        "type": "else"
+      },
+      {
+        "name": "Communist Party of China",
+        "type": "political party"
+      },
+      {
+        "name": "Communist Party of Cuba",
+        "type": "political party"
+      },
+      {
+        "name": "Laos",
+        "type": "country"
+      },
+      {
+        "name": "Communist Party of Vietnam",
+        "type": "political party"
+      }
+    ]
+  },
+  {
+    "sentence": "The party was directly succeeded by the Canadian Alliance in 2000 , which merged with the Progressive Conservative Party of Canada in 2003 to form the modern-day Conservative Party of Canada .",
+    "entity_list": [
+      {
+        "name": "Canadian Alliance",
+        "type": "political party"
+      },
+      {
+        "name": "Progressive Conservative Party of Canada",
+        "type": "political party"
+      },
+      {
+        "name": "Conservative Party of Canada",
+        "type": "political party"
+      }
+    ]
+  },
+  {
+    "sentence": "This resulted in significant breakthroughs at the 2013 United Kingdom local elections , 2014 European Parliament election in the United Kingdom , and 2015 United Kingdom general election .",
+    "entity_list": [
+      {
+        "name": "2013 United Kingdom local elections",
+        "type": "election"
+      },
+      {
+        "name": "2014 European Parliament election in the United Kingdom",
+        "type": "election"
+      },
+      {
+        "name": "2015 United Kingdom general election",
+        "type": "election"
+      }
+    ]
+  },
+  {
+    "sentence": "Following the 2004 European Parliament election in the United Kingdom , 37 MEPs from the UK , 2004 European Parliament election in Poland , 2004 European Parliament election in Denmark and Sweden founded a new European Parliamentary group called Independence and Democracy as a direct successor to the EDD group .",
+    "entity_list": [
+      {
+        "name": "2004 European Parliament election in the United Kingdom",
+        "type": "election"
+      },
+      {
+        "name": "MEPs",
+        "type": "else"
+      },
+      {
+        "name": "UK",
+        "type": "country"
+      },
+      {
+        "name": "2004 European Parliament election in Poland",
+        "type": "election"
+      },
+      {
+        "name": "2004 European Parliament election in Denmark",
+        "type": "election"
+      },
+      {
+        "name": "Sweden",
+        "type": "country"
+      },
+      {
+        "name": "Independence and Democracy",
+        "type": "organization"
+      },
+      {
+        "name": "EDD",
+        "type": "organization"
+      }
+    ]
+  },
+  {
+    "sentence": "During his time as governor , Thompson served as chairman of the National Governors Association and the Education Commission of the States , in addition to the Council of State Governments , the Republican Governors Association , the Council of Great Lakes Governors , and the Midwestern Governors Association .",
+    "entity_list": [
+      {
+        "name": "Thompson",
+        "type": "politician"
+      },
+      {
+        "name": "National Governors Association",
+        "type": "political party"
+      },
+      {
+        "name": "Education Commission of the States",
+        "type": "organization"
+      },
+      {
+        "name": "Council of State Governments",
+        "type": "organization"
+      },
+      {
+        "name": "Republican Governors Association",
+        "type": "political party"
+      },
+      {
+        "name": "Council of Great Lakes Governors",
+        "type": "organization"
+      },
+      {
+        "name": "Midwestern Governors Association",
+        "type": "organization"
+      }
+    ]
+  },
+  {
+    "sentence": "Nha Trang , headquarters of the U.S. I Field Force , was the first to be hit , followed shortly by Ban Mê Thuột , Kon Tum , Hội An , Tuy Hòa , Da Nang , Qui Nhơn , and Pleiku .",
+    "entity_list": [
+      {
+        "name": "Nha Trang",
+        "type": "location"
+      },
+      {
+        "name": "U.S.",
+        "type": "country"
+      },
+      {
+        "name": "I Field Force",
+        "type": "organization"
+      },
+      {
+        "name": "Ban Mê Thuột",
+        "type": "location"
+      },
+      {
+        "name": "Kon Tum",
+        "type": "location"
+      },
+      {
+        "name": "Hội An",
+        "type": "location"
+      },
+      {
+        "name": "Tuy Hòa",
+        "type": "location"
+      },
+      {
+        "name": "Da Nang",
+        "type": "location"
+      },
+      {
+        "name": "Qui Nhơn",
+        "type": "location"
+      },
+      {
+        "name": "Pleiku",
+        "type": "location"
+      }
+    ]
+  },
+  {
+    "sentence": "At 3 : 0 on 31 January PAVN / VC forces attacked Saigon , Cholon , and Gia Định in the Capital Military District ; Quảng Trị ( again ) , Huế , Quảng Tín , Tam Kỳ and Quảng Ngãi as well as U.S. bases at Phú Bài and Chu Lai in I Corps ; Phan Thiết , Tuy Hòa and U.S. installations at Bong Son and An Khê in II Corps ; and Cần Thơ and Vĩnh Long in IV Corps .",
+    "entity_list": [
+      {
+        "name": "PAVN",
+        "type": "organization"
+      },
+      {
+        "name": "VC",
+        "type": "organization"
+      },
+      {
+        "name": "Saigon",
+        "type": "location"
+      },
+      {
+        "name": "Cholon",
+        "type": "location"
+      },
+      {
+        "name": "Gia Định",
+        "type": "location"
+      },
+      {
+        "name": "Capital Military District",
+        "type": "location"
+      },
+      {
+        "name": "Quảng Trị",
+        "type": "location"
+      },
+      {
+        "name": "Huế",
+        "type": "location"
+      },
+      {
+        "name": "Quảng Tín",
+        "type": "location"
+      },
+      {
+        "name": "Tam Kỳ",
+        "type": "location"
+      },
+      {
+        "name": "Quảng Ngãi",
+        "type": "location"
+      },
+      {
+        "name": "U.S.",
+        "type": "country"
+      },
+      {
+        "name": "Phú Bài",
+        "type": "location"
+      },
+      {
+        "name": "Chu Lai",
+        "type": "location"
+      },
+      {
+        "name": "I Corps",
+        "type": "else"
+      },
+      {
+        "name": "Phan Thiết",
+        "type": "location"
+      },
+      {
+        "name": "Tuy Hòa",
+        "type": "location"
+      },
+      {
+        "name": "Bong Son",
+        "type": "location"
+      },
+      {
+        "name": "An Khê",
+        "type": "location"
+      },
+      {
+        "name": "II Corps",
+        "type": "else"
+      },
+      {
+        "name": "Cần Thơ",
+        "type": "location"
+      },
+      {
+        "name": "Vĩnh Long",
+        "type": "location"
+      },
+      {
+        "name": "IV Corps",
+        "type": "else"
+      }
+    ]
+  },
+  {
+    "sentence": "The January 1910 United Kingdom general election and December 1910 United Kingdom general election elections in 1910 destroyed the large Liberal majority , meaning they relied on the Irish Parliamentary Party to maintain a government .",
+    "entity_list": [
+      {
+        "name": "January 1910 United Kingdom general election",
+        "type": "election"
+      },
+      {
+        "name": "December 1910 United Kingdom general election",
+        "type": "election"
+      },
+      {
+        "name": "Liberal",
+        "type": "political party"
+      },
+      {
+        "name": "Irish Parliamentary Party",
+        "type": "political party"
+      }
+    ]
+  },
+  {
+    "sentence": "Chief towns included Kingston , Port of Spain , Bridgetown , Spanish Town , Montego Bay , Mandeville , Castries , Roseau , St. George 's , Kingstown , St. John 's , and Basseterre .",
+    "entity_list": [
+      {
+        "name": "Kingston",
+        "type": "location"
+      },
+      {
+        "name": "Port of Spain",
+        "type": "location"
+      },
+      {
+        "name": "Bridgetown",
+        "type": "location"
+      },
+      {
+        "name": "Spanish Town",
+        "type": "location"
+      },
+      {
+        "name": "Montego Bay",
+        "type": "location"
+      },
+      {
+        "name": "Mandeville",
+        "type": "location"
+      },
+      {
+        "name": "Castries",
+        "type": "location"
+      },
+      {
+        "name": "Roseau",
+        "type": "location"
+      },
+      {
+        "name": "St. George 's",
+        "type": "location"
+      },
+      {
+        "name": "Kingstown",
+        "type": "location"
+      },
+      {
+        "name": "St. John 's",
+        "type": "location"
+      },
+      {
+        "name": "Basseterre",
+        "type": "location"
+      }
+    ]
+  },
+  {
+    "sentence": "The USPTO was expected by 2014 to open its first ever satellite offices in Detroit , Dallas , Denver , and Silicon Valley to reduce backlog and reflect regional industrial strengths .",
+    "entity_list": [
+      {
+        "name": "USPTO",
+        "type": "organization"
+      },
+      {
+        "name": "Detroit",
+        "type": "location"
+      },
+      {
+        "name": "Dallas",
+        "type": "location"
+      },
+      {
+        "name": "Denver",
+        "type": "location"
+      },
+      {
+        "name": "Silicon Valley",
+        "type": "location"
+      }
+    ]
+  },
+  {
+    "sentence": "In 1875 , a lodge was established in Toronto , followed soon after by another in Montreal and in 1882 by a lodge in Berlin .",
+    "entity_list": [
+      {
+        "name": "Toronto",
+        "type": "location"
+      },
+      {
+        "name": "Montreal",
+        "type": "location"
+      },
+      {
+        "name": "Berlin",
+        "type": "location"
+      }
+    ]
+  },
+  {
+    "sentence": "It is also the home of Universities at Medway , a tri-partite collaboration of the University of Greenwich , the University of Kent and Canterbury Christ Church University on a single campus in Chatham , together with the University for the Creative Arts , which has a campus in Rochester .",
+    "entity_list": [
+      {
+        "name": "Universities at Medway",
+        "type": "location"
+      },
+      {
+        "name": "University of Greenwich",
+        "type": "location"
+      },
+      {
+        "name": "University of Kent",
+        "type": "organization"
+      },
+      {
+        "name": "Canterbury Christ Church University",
+        "type": "organization"
+      },
+      {
+        "name": "University for the Creative Arts",
+        "type": "organization"
+      },
+      {
+        "name": "Rochester",
+        "type": "location"
+      }
+    ]
+  },
+  {
+    "sentence": "Social conservatives often felt that they were being sidelined by officials in the Progressive Conservative Party of Canada and its leadership of so-called Red Tories for the last half of the twentieth century and therefore many eventually made their political home with parties such as the Social Credit Party of Canada and the Reform Party of Canada .",
+    "entity_list": [
+      {
+        "name": "Progressive Conservative Party of Canada",
+        "type": "political party"
+      },
+      {
+        "name": "Red Tories",
+        "type": "else"
+      },
+      {
+        "name": "Social Credit Party of Canada",
+        "type": "political party"
+      },
+      {
+        "name": "Reform Party of Canada",
+        "type": "political party"
+      }
+    ]
+  },
+  {
+    "sentence": "After Vienna , he studied political economy and social science at the universities of Heidelberg University , Leipzig University and University of Jena ,",
+    "entity_list": [
+      {
+        "name": "Vienna",
+        "type": "location"
+      },
+      {
+        "name": "political economy",
+        "type": "else"
+      },
+      {
+        "name": "social science",
+        "type": "else"
+      },
+      {
+        "name": "Heidelberg University",
+        "type": "organization"
+      },
+      {
+        "name": "Leipzig University",
+        "type": "organization"
+      },
+      {
+        "name": "University of Jena",
+        "type": "organization"
+      }
+    ]
+  },
+  {
+    "sentence": "Brazil 's major cities began to resemble 1932-33 Berlin with its street battles between the Communist Party of Germany and the Nazi Party .",
+    "entity_list": [
+      {
+        "name": "Brazil",
+        "type": "country"
+      },
+      {
+        "name": "Berlin",
+        "type": "location"
+      },
+      {
+        "name": "Communist Party of Germany",
+        "type": "political party"
+      },
+      {
+        "name": "Nazi Party",
+        "type": "political party"
+      }
+    ]
+  },
+  {
+    "sentence": "These include the TRUE Blue Crew , Antipodean Resistance , the Australian Defence League , National Action ( Australia ) , the Q Society , Reclaim Australia and the Lads Society ( formerly United Patriots Front ) .",
+    "entity_list": [
+      {
+        "name": "TRUE Blue Crew",
+        "type": "organization"
+      },
+      {
+        "name": "Antipodean Resistance",
+        "type": "organization"
+      },
+      {
+        "name": "Australian Defence League",
+        "type": "organization"
+      },
+      {
+        "name": "National Action",
+        "type": "organization"
+      },
+      {
+        "name": "Australia",
+        "type": "country"
+      },
+      {
+        "name": "Q Society",
+        "type": "organization"
+      },
+      {
+        "name": "Reclaim Australia",
+        "type": "organization"
+      },
+      {
+        "name": "Lads Society",
+        "type": "organization"
+      },
+      {
+        "name": "United Patriots Front",
+        "type": "organization"
+      }
+    ]
+  },
+  {
+    "sentence": "Representatives of the Kuomintang , Communist Party of China , Chinese Youth Party , and China Democratic League , as well as independent delegates , attended the conference in Chongqing .",
+    "entity_list": [
+      {
+        "name": "Kuomintang",
+        "type": "political party"
+      },
+      {
+        "name": "Communist Party of China",
+        "type": "political party"
+      },
+      {
+        "name": "Chinese Youth Party",
+        "type": "political party"
+      },
+      {
+        "name": "China Democratic League",
+        "type": "political party"
+      },
+      {
+        "name": "Chongqing",
+        "type": "location"
+      }
+    ]
+  },
+  {
+    "sentence": "Like Fidel , Raúl later attended the Jesuit School of Colegio Dolores in Santiago de Cuba and Belen Jesuit Preparatory School in Havana .",
+    "entity_list": [
+      {
+        "name": "Fidel",
+        "type": "person"
+      },
+      {
+        "name": "Raúl",
+        "type": "person"
+      },
+      {
+        "name": "Jesuit School of Colegio Dolores",
+        "type": "location"
+      },
+      {
+        "name": "Santiago de Cuba",
+        "type": "location"
+      },
+      {
+        "name": "Belen Jesuit Preparatory School",
+        "type": "location"
+      },
+      {
+        "name": "Havana",
+        "type": "location"
+      }
+    ]
+  },
+  {
+    "sentence": "Wood was unopposed in the general elections of 1918 United Kingdom general election , 1922 United Kingdom general election , 1923 United Kingdom general election and 1924 United Kingdom general election .",
+    "entity_list": [
+      {
+        "name": "1918 United Kingdom general election",
+        "type": "election"
+      },
+      {
+        "name": "1922 United Kingdom general election",
+        "type": "election"
+      },
+      {
+        "name": "1923 United Kingdom general election",
+        "type": "election"
+      },
+      {
+        "name": "1924 United Kingdom general election",
+        "type": "election"
+      }
+    ]
+  },
+  {
+    "sentence": "The 2001 Local Government Act restyled the five county boroughs of Dublin , Cork , Galway , Waterford , and Limerick as city councils , with the same status in law as county councils .",
+    "entity_list": [
+      {
+        "name": "Local Government Act",
+        "type": "else"
+      },
+      {
+        "name": "Dublin",
+        "type": "location"
+      },
+      {
+        "name": "Cork",
+        "type": "location"
+      },
+      {
+        "name": "Galway",
+        "type": "location"
+      },
+      {
+        "name": "Waterford",
+        "type": "location"
+      },
+      {
+        "name": "Limerick",
+        "type": "location"
+      }
+    ]
+  },
+  {
+    "sentence": "A number of the wealthiest and most affluent American families ( Old Money ) - such as the Vanderbilts , Astor family , Rockefeller family , Du Pont family , Roosevelt family , Forbes , Whitneys , Junius Spencer Morgan , and Harrimans - are mostly Mainline Protestant families in the Episcopalian , Presbyterian , or other similar traditions .",
+    "entity_list": [
+      {
+        "name": "Old Money",
+        "type": "else"
+      },
+      {
+        "name": "Vanderbilts",
+        "type": "organization"
+      },
+      {
+        "name": "Astor family",
+        "type": "organization"
+      },
+      {
+        "name": "Rockefeller family",
+        "type": "organization"
+      },
+      {
+        "name": "Du Pont family",
+        "type": "organization"
+      },
+      {
+        "name": "Roosevelt family",
+        "type": "organization"
+      },
+      {
+        "name": "Forbes",
+        "type": "organization"
+      },
+      {
+        "name": "Whitneys",
+        "type": "organization"
+      },
+      {
+        "name": "Junius Spencer Morgan",
+        "type": "person"
+      },
+      {
+        "name": "Harrimans",
+        "type": "else"
+      },
+      {
+        "name": "Mainline Protestant families",
+        "type": "organization"
+      },
+      {
+        "name": "Episcopalian",
+        "type": "organization"
+      },
+      {
+        "name": "Presbyterian",
+        "type": "organization"
+      }
+    ]
+  },
+  {
+    "sentence": "From their 18 % share of the first German federal elections under proportional representation in 1919 German federal election , they dropped , for example , to 4.9 % in the 1928 German federal election and to 1.0 % in the November 1932 German federal election .",
+    "entity_list": [
+      {
+        "name": "first German federal elections",
+        "type": "election"
+      },
+      {
+        "name": "1919 German federal election",
+        "type": "election"
+      },
+      {
+        "name": "1928 German federal election",
+        "type": "election"
+      },
+      {
+        "name": "November 1932 German federal election",
+        "type": "election"
+      }
+    ]
+  },
+  {
+    "sentence": "His party won 14 seats in the 1998 Nova Scotia general election and held the balance of power in a minority government where both the Nova Scotia Liberal Party and the Nova Scotia New Democratic Party , led by Russell MacLellan and Robert Chisholm , respectively , each had nineteen seats .",
+    "entity_list": [
+      {
+        "name": "1998 Nova Scotia general election",
+        "type": "election"
+      },
+      {
+        "name": "Nova Scotia Liberal Party",
+        "type": "political party"
+      },
+      {
+        "name": "Nova Scotia New Democratic Party",
+        "type": "political party"
+      },
+      {
+        "name": "Russell MacLellan",
+        "type": "politician"
+      },
+      {
+        "name": "Robert Chisholm",
+        "type": "politician"
+      }
+    ]
+  },
+  {
+    "sentence": "OSHA 's regional offices are located in Boston , New York City , Philadelphia , Atlanta , Chicago , Dallas , Kansas City metropolitan area , Denver , San Francisco , and Seattle .",
+    "entity_list": [
+      {
+        "name": "OSHA",
+        "type": "organization"
+      },
+      {
+        "name": "Boston",
+        "type": "location"
+      },
+      {
+        "name": "New York City",
+        "type": "location"
+      },
+      {
+        "name": "Philadelphia",
+        "type": "location"
+      },
+      {
+        "name": "Atlanta",
+        "type": "location"
+      },
+      {
+        "name": "Chicago",
+        "type": "location"
+      },
+      {
+        "name": "Dallas",
+        "type": "location"
+      },
+      {
+        "name": "Kansas City metropolitan area",
+        "type": "location"
+      },
+      {
+        "name": "Denver",
+        "type": "location"
+      },
+      {
+        "name": "San Francisco",
+        "type": "location"
+      },
+      {
+        "name": "Seattle",
+        "type": "location"
+      }
+    ]
+  },
+  {
+    "sentence": "He introduced measures to combat resistance , and when a widespread strike took place in Amsterdam , Arnhem and Hilversum in May 1943 , special summary court-martial procedures were brought in , and a collective fine of 18 million guilder s was imposed .",
+    "entity_list": [
+      {
+        "name": "Amsterdam",
+        "type": "location"
+      },
+      {
+        "name": "Arnhem",
+        "type": "location"
+      },
+      {
+        "name": "Hilversum",
+        "type": "location"
+      }
+    ]
+  },
+  {
+    "sentence": "Hitchens was made an Honorary Associate of the Rationalist International and the National Secular Society shortly after its release , and he was later named to the Honorary Board of distinguished achievers of the Freedom From Religion Foundation .. Approximately 112 minutes in , Hitchens contends , ' The moment where everything went wrong is the moment when the Jewish hellenists were defeated by the Jewish messiahs , the celebration now benignly known as Hanukkah .",
+    "entity_list": [
+      {
+        "name": "Hitchens",
+        "type": "person"
+      },
+      {
+        "name": "Rationalist International",
+        "type": "organization"
+      },
+      {
+        "name": "National Secular Society",
+        "type": "organization"
+      },
+      {
+        "name": "Freedom From Religion Foundation",
+        "type": "organization"
+      },
+      {
+        "name": "Jewish hellenists",
+        "type": "else"
+      },
+      {
+        "name": "Jewish messiahs",
+        "type": "else"
+      },
+      {
+        "name": "Hanukkah",
+        "type": "else"
+      }
+    ]
+  },
+  {
+    "sentence": "He was also the Member of Parliament for Upper Bann from 1990 Upper Bann by-election to 2005 United Kingdom general election in Northern Ireland and the Member of the Legislative Assembly ( MLA ) for Upper Bann from 1998 to 2007 Northern Ireland Assembly election .",
+    "entity_list": [
+      {
+        "name": "Parliament",
+        "type": "organization"
+      },
+      {
+        "name": "Upper Bann",
+        "type": "organization"
+      },
+      {
+        "name": "1990 Upper Bann by-election",
+        "type": "election"
+      },
+      {
+        "name": "2005 United Kingdom general election in Northern Ireland",
+        "type": "election"
+      },
+      {
+        "name": "Legislative Assembly",
+        "type": "organization"
+      },
+      {
+        "name": "MLA",
+        "type": "organization"
+      },
+      {
+        "name": "2007 Northern Ireland Assembly election",
+        "type": "election"
+      }
+    ]
+  },
+  {
+    "sentence": "Kristol was a fellow of the American Academy of Arts and Sciences , a member of the Council on Foreign Relations and a fellow emeritus at the American Enterprise Institute ( having been an associate fellow from 1972 , a senior fellow from 1977 and the John M. Olin Distinguished Fellow from 1988 to 1999 ) .",
+    "entity_list": [
+      {
+        "name": "Kristol",
+        "type": "person"
+      },
+      {
+        "name": "American Academy of Arts and Sciences",
+        "type": "organization"
+      },
+      {
+        "name": "Council on Foreign Relations",
+        "type": "organization"
+      },
+      {
+        "name": "American Enterprise Institute",
+        "type": "organization"
+      },
+      {
+        "name": "John M. Olin Distinguished Fellow",
+        "type": "else"
+      }
+    ]
+  },
+  {
+    "sentence": "The party won two additional seats in the 1985 Belgian general election , two additional seats in 1987 Belgian general election and one in 1991 Belgian general election : in that year it won seven seats in parliament .",
+    "entity_list": [
+      {
+        "name": "1985 Belgian general election",
+        "type": "election"
+      },
+      {
+        "name": "1987 Belgian general election",
+        "type": "election"
+      },
+      {
+        "name": "1991 Belgian general election",
+        "type": "election"
+      }
+    ]
+  },
+  {
+    "sentence": "Johnson ran for governor three times : in 1947 Mississippi gubernatorial election , 1951 Mississippi gubernatorial election , and 1955 Mississippi gubernatorial election , but was unsuccessful .",
+    "entity_list": [
+      {
+        "name": "Johnson",
+        "type": "politician"
+      },
+      {
+        "name": "1947 Mississippi gubernatorial election",
+        "type": "election"
+      },
+      {
+        "name": "1951 Mississippi gubernatorial election",
+        "type": "election"
+      },
+      {
+        "name": "1955 Mississippi gubernatorial election",
+        "type": "election"
+      }
+    ]
+  },
+  {
+    "sentence": "Following the launch of Yes Scotland , other campaigns in support of independence were launched , including the National Collective and Radical Independence Campaign .",
+    "entity_list": [
+      {
+        "name": "Yes Scotland",
+        "type": "organization"
+      },
+      {
+        "name": "National Collective",
+        "type": "organization"
+      },
+      {
+        "name": "Radical Independence Campaign",
+        "type": "organization"
+      }
+    ]
+  },
+  {
+    "sentence": "In an interview for Antena 3 , the leader of the Social Democratic Party , Liviu Dragnea , stated that even though his party agrees with the referendum , there are many voices that say that the referendum is actually useless for the publicly expressed purpose and that it actually is a way for Klaus Iohannis to get involved in the electoral campaign so that he can help parties around him .",
+    "entity_list": [
+      {
+        "name": "Antena 3",
+        "type": "organization"
+      },
+      {
+        "name": "Social Democratic Party",
+        "type": "political party"
+      },
+      {
+        "name": "Liviu Dragnea",
+        "type": "politician"
+      },
+      {
+        "name": "Klaus Iohannis",
+        "type": "politician"
+      }
+    ]
+  },
+  {
+    "sentence": "The III CELAC summit or 2015 CELAC summit was the third ordinary heads of state summit of the Community of Latin American and Caribbean States .",
+    "entity_list": [
+      {
+        "name": "III CELAC summit",
+        "type": "event"
+      },
+      {
+        "name": "2015 CELAC summit",
+        "type": "event"
+      },
+      {
+        "name": "Community of Latin American and Caribbean States",
+        "type": "organization"
+      }
+    ]
+  },
+  {
+    "sentence": "The IV CELAC summit or 2016 CELAC summit was the fourth ordinary heads of state summit of the Community of Latin American and Caribbean States .",
+    "entity_list": [
+      {
+        "name": "IV CELAC summit",
+        "type": "event"
+      },
+      {
+        "name": "2016 CELAC summit",
+        "type": "event"
+      },
+      {
+        "name": "Community of Latin American and Caribbean States",
+        "type": "organization"
+      }
+    ]
+  },
+  {
+    "sentence": "The heads of state summit was followed by a ministerial summit on November 2009 in Montego Bay , Jamaica to prepare an action plan to develop the agenda agreed in the I CALC summit .",
+    "entity_list": [
+      {
+        "name": "Montego Bay",
+        "type": "location"
+      },
+      {
+        "name": "Jamaica",
+        "type": "country"
+      },
+      {
+        "name": "I CALC summit",
+        "type": "event"
+      }
+    ]
+  },
+  {
+    "sentence": "As agreed with the Allies of World War II at the Tehran Conference in November 1943 and the Yalta Conference in February 1945 , the Soviet Union entered World War II 's Pacific Theater within three months of the end of the war in Europe .",
+    "entity_list": [
+      {
+        "name": "Allies of World War II",
+        "type": "organization"
+      },
+      {
+        "name": "Tehran Conference",
+        "type": "event"
+      },
+      {
+        "name": "Yalta Conference",
+        "type": "event"
+      },
+      {
+        "name": "Soviet Union",
+        "type": "country"
+      },
+      {
+        "name": "World War II 's Pacific Theater",
+        "type": "event"
+      },
+      {
+        "name": "Europe",
+        "type": "location"
+      }
+    ]
+  },
+  {
+    "sentence": "The 2019 BRICS summit was the eleventh annual BRICS summit , an international relations conference to be attended by the heads of state or heads of government of the five member states Brazil , Russia , India , China and South Africa .",
+    "entity_list": [
+      {
+        "name": "2019 BRICS summit",
+        "type": "event"
+      },
+      {
+        "name": "eleventh annual BRICS summit",
+        "type": "event"
+      },
+      {
+        "name": "Brazil",
+        "type": "country"
+      },
+      {
+        "name": "Russia",
+        "type": "country"
+      },
+      {
+        "name": "India",
+        "type": "country"
+      },
+      {
+        "name": "China",
+        "type": "country"
+      },
+      {
+        "name": "South Africa",
+        "type": "country"
+      }
+    ]
+  },
+  {
+    "sentence": "On 21 June , Prime Minister Churchill was in the White House in Washington conferring on the future direction of the war with President Franklin D. Roosevelt , a summit meeting known as the Second Washington Conference .",
+    "entity_list": [
+      {
+        "name": "Churchill",
+        "type": "politician"
+      },
+      {
+        "name": "White House",
+        "type": "location"
+      },
+      {
+        "name": "Washington",
+        "type": "location"
+      },
+      {
+        "name": "Franklin D. Roosevelt",
+        "type": "politician"
+      },
+      {
+        "name": "Second Washington Conference",
+        "type": "event"
+      }
+    ]
+  },
+  {
+    "sentence": "She worked for Christian Aid from 1994 to 1997 , taking on roles as a campaign assistant in London , working in Serbia during the war and as Head of Country Office in Bosnia in the aftermath of the Bosnian War .",
+    "entity_list": [
+      {
+        "name": "Christian Aid",
+        "type": "organization"
+      },
+      {
+        "name": "London",
+        "type": "location"
+      },
+      {
+        "name": "Serbia",
+        "type": "country"
+      },
+      {
+        "name": "Bosnia",
+        "type": "country"
+      },
+      {
+        "name": "Bosnian War",
+        "type": "event"
+      }
+    ]
+  }
+]

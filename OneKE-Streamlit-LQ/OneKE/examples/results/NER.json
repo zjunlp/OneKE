@@ -1,0 +1,16 @@
+{
+    "entity_list": [
+      {
+        "name": "ELRA",
+        "type": "organization"
+      },
+      {
+        "name": "LREC",
+        "type": "conference"
+      },
+      {
+        "name": "International Language Resources and Evaluation Conference",
+        "type": "conference"
+      }
+    ]
+  }
