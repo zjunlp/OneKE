@@ -1,0 +1,50 @@
+{
+  "instruction": "Extract the Named Entities in the given text.",
+  "text": "The Sustainability World Summit 2025, organized by Key Notion, will take place from June 11 to June 13 in Frankfurt, Germany. This premier event focuses on driving sustainable business through innovation, featuring industry leaders and expert insights.",
+  "constraint": "\n**Entity Type Constraint**: The type of entities must be chosen from the following list.\n[\"algorithm\", \"conference\", \"else\", \"product\", \"task\", \"field\", \"metrics\", \"organization\", \"researcher\", \"program language\", \"country\", \"location\", \"person\", \"university\"]\n",
+  "trajectory": {
+    "get_retrieved_schema": "['\\n{\"$defs\": {\"Entity\": {\"properties\": {\"name\": {\"description\": \"The specific name of the entity. \", \"title\": \"Name\", \"type\": \"string\"}, \"type\": {\"description\": \"The type or category that the entity belongs to.\", \"title\": \"Type\", \"type\": \"string\"}}, \"required\": [\"name\", \"type\"], \"title\": \"Entity\", \"type\": \"object\"}}, \"properties\": {\"entity_list\": {\"description\": \"Named entities appearing in the text.\", \"items\": {\"$ref\": \"#/$defs/Entity\"}, \"title\": \"Entity List\", \"type\": \"array\"}}, \"required\": [\"entity_list\"]}\\n']\n\nFor example, for the schema {\"properties\": {\"foo\": {\"title\": \"Foo\", \"description\": \"a list of strings\", \"type\": \"array\", \"items\": {\"type\": \"string\"}}}}, the object {\"foo\": [\"bar\", \"baz\"]} is a well-formatted instance.",
+    "extract_information_direct": [
+      {
+        "entity_list": [
+          {
+            "name": "Sustainability World Summit 2025",
+            "type": "conference"
+          },
+          {
+            "name": "Key Notion",
+            "type": "organization"
+          },
+          {
+            "name": "Frankfurt",
+            "type": "location"
+          },
+          {
+            "name": "Germany",
+            "type": "country"
+          }
+        ]
+      }
+    ]
+  },
+  "pred": {
+    "entity_list": [
+      {
+        "name": "Sustainability World Summit 2025",
+        "type": "conference"
+      },
+      {
+        "name": "Key Notion",
+        "type": "organization"
+      },
+      {
+        "name": "Frankfurt",
+        "type": "location"
+      },
+      {
+        "name": "Germany",
+        "type": "country"
+      }
+    ]
+  }
+}

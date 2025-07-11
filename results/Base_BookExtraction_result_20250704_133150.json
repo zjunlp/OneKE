@@ -1,0 +1,78 @@
+{
+  "characters": [
+    {
+      "name": "Mr. Dursley",
+      "description": "A big, beefy man with hardly any neck and a large mustache. Director of Grunnings, a drill-making firm. Fearful, disapproves of imagination, and easily rattled.",
+      "role": "Husband of Mrs. Dursley, father of Dudley, and uncle to Harry Potter"
+    },
+    {
+      "name": "Mrs. Dursley",
+      "description": "Thin, blonde, with an unusually long neck. Stiff demeanor, sips tea through pursed lips, and pretends she doesn't have a sister (Mrs. Potter).",
+      "role": "Wife of Mr. Dursley, mother of Dudley, and aunt to Harry Potter"
+    },
+    {
+      "name": "Dudley",
+      "description": "Small son of the Dursleys, spoiled and behaves poorly. Learned the word "Won't!" and often prods/pinches Harry.",
+      "role": "Son of Mr. and Mrs. Dursley, cousin to Harry Potter"
+    },
+    {
+      "name": "Harry Potter",
+      "description": "A baby boy with jet-black hair and a lightning-shaped scar on his forehead. Survived an attack by Voldemort, causing his power to break. Unaware of his fame.",
+      "role": "The boy who lived, nephew of the Dursleys"
+    },
+    {
+      "name": "Mrs. Potter",
+      "description": "Mrs. Dursley’s sister, whom she pretends doesn't exist. Married to a "good-for-nothing" husband (James Potter).",
+      "role": "Sister of Mrs. Dursley, mother of Harry Potter"
+    },
+    {
+      "name": "Albus Dumbledore",
+      "description": "Tall, thin, very old with silver hair and beard. Wears long robes, a purple cloak, half-moon spectacles, and has a long crooked nose. Calm, wise, and unafraid to say Voldemort's name.",
+      "role": "Headmaster of Hogwarts, leader in the wizarding world"
+    },
+    {
+      "name": "Professor McGonagall",
+      "description": "Severe-looking woman with square glasses, emerald cloak, and black hair in a tight bun. Anxious, concerned about rumors, and deeply affected by the Potters" death.",
+      "role": "Professor at Hogwarts"
+    },
+    {
+      "name": "Voldemort",
+      "description": "Feared dark wizard whose power broke after failing to kill Harry Potter. Often referred to as "You-Know-Who".",
+      "role": "Antagonist"
+    },
+    {
+      "name": "Hagrid",
+      "description": "A giant of a man with bushy black hair and beard. Wild in appearance, trusted friend of Dumbledore.",
+      "role": "Helper in the wizarding world"
+    },
+    {
+      "name": "Sirius Black",
+      "description": "Owner of a motorcycle lent to Hagrid. Not described in detail.",
+      "role": "Associate in the wizarding world"
+    },
+    {
+      "name": "The old man in a violet cloak",
+      "description": "Tiny, cheerful old man who mentions the disappearance of "You-Know-Who".",
+      "role": "Stranger interacting with Mr. Dursley"
+    },
+    {
+      "name": "The tabby cat",
+      "description": "Cat with markings around its eyes, gives Mr. Dursley a stern look. Later revealed to be Professor McGonagall.",
+      "role": "Observer"
+    }
+  ],
+  "setting": {
+    "location": "Privet Drive (specifically number four)",
+    "time_period": null,
+    "atmosphere": "Mysterious, unsettling, and uneasy. Unusual events like owls flying in daylight, shooting stars, and people in cloaks whispering.",
+    "notable_features": [
+      "Large tawny owl fluttering past the window",
+      "Tabby cat watching the street",
+      "Owls behaving unusually in broad daylight",
+      "Shooting stars reported across Britain",
+      "Street lamps being put out by Dumbledore",
+      "Neat hedges and low garden walls",
+      "Muggles unaware of wizarding world events"
+    ]
+  }
+}
