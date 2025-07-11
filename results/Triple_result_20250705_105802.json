@@ -1,0 +1,380 @@
+{
+  "triple_list": [
+    {
+      "head": "Bruce Wayne",
+      "head_type": "Person",
+      "relation": "develops a fear of",
+      "relation_type": "Interpersonal",
+      "tail": "bats",
+      "tail_type": "Property"
+    },
+    {
+      "head": "Bruce Wayne",
+      "head_type": "Person",
+      "relation": "asks to leave",
+      "relation_type": "Action",
+      "tail": "opera",
+      "tail_type": "Place"
+    },
+    {
+      "head": "Joe Chill",
+      "head_type": "Person",
+      "relation": "murders",
+      "relation_type": "Action",
+      "tail": "Bruce's parents",
+      "tail_type": "Person"
+    },
+    {
+      "head": "Bruce Wayne",
+      "head_type": "Person",
+      "relation": "is raised by",
+      "relation_type": "Interpersonal",
+      "tail": "Alfred Pennyworth",
+      "tail_type": "Person"
+    },
+    {
+      "head": "Joe Chill",
+      "head_type": "Person",
+      "relation": "testifies against",
+      "relation_type": "Action",
+      "tail": "Carmine Falcone",
+      "tail_type": "Person"
+    },
+    {
+      "head": "Bruce Wayne",
+      "head_type": "Person",
+      "relation": "intends to murder",
+      "relation_type": "Action",
+      "tail": "Joe Chill",
+      "tail_type": "Person"
+    },
+    {
+      "head": "Falcone's hitman",
+      "head_type": "Person",
+      "relation": "murders",
+      "relation_type": "Action",
+      "tail": "Joe Chill",
+      "tail_type": "Person"
+    },
+    {
+      "head": "Rachel Dawes",
+      "head_type": "Person",
+      "relation": "berates",
+      "relation_type": "Interpersonal",
+      "tail": "Bruce Wayne",
+      "tail_type": "Person"
+    },
+    {
+      "head": "Bruce Wayne",
+      "head_type": "Person",
+      "relation": "confronts",
+      "relation_type": "Action",
+      "tail": "Carmine Falcone",
+      "tail_type": "Person"
+    },
+    {
+      "head": "Bruce Wayne",
+      "head_type": "Person",
+      "relation": "travels",
+      "relation_type": "Action",
+      "tail": "world",
+      "tail_type": "Place"
+    },
+    {
+      "head": "Bruce Wayne",
+      "head_type": "Person",
+      "relation": "is approached by",
+      "relation_type": "Interpersonal",
+      "tail": "Henri Ducard",
+      "tail_type": "Person"
+    },
+    {
+      "head": "Henri Ducard",
+      "head_type": "Person",
+      "relation": "recruits",
+      "relation_type": "Interpersonal",
+      "tail": "Bruce Wayne",
+      "tail_type": "Person"
+    },
+    {
+      "head": "Bruce Wayne",
+      "head_type": "Person",
+      "relation": "rejects",
+      "relation_type": "Action",
+      "tail": "League of Shadows",
+      "tail_type": "Event"
+    },
+    {
+      "head": "Bruce Wayne",
+      "head_type": "Person",
+      "relation": "escapes",
+      "relation_type": "Action",
+      "tail": "League of Shadows",
+      "tail_type": "Event"
+    },
+    {
+      "head": "Bruce Wayne",
+      "head_type": "Person",
+      "relation": "saves",
+      "relation_type": "Action",
+      "tail": "Henri Ducard",
+      "tail_type": "Person"
+    },
+    {
+      "head": "Bruce Wayne",
+      "head_type": "Person",
+      "relation": "returns to",
+      "relation_type": "Action",
+      "tail": "Gotham",
+      "tail_type": "Place"
+    },
+    {
+      "head": "Bruce Wayne",
+      "head_type": "Person",
+      "relation": "takes an interest in",
+      "relation_type": "Action",
+      "tail": "Wayne Enterprises",
+      "tail_type": "Property"
+    },
+    {
+      "head": "Lucius Fox",
+      "head_type": "Person",
+      "relation": "allows access to",
+      "relation_type": "Action",
+      "tail": "Bruce Wayne",
+      "tail_type": "Person"
+    },
+    {
+      "head": "Bruce Wayne",
+      "head_type": "Person",
+      "relation": "poses as",
+      "relation_type": "Action",
+      "tail": "playboy",
+      "tail_type": "Property"
+    },
+    {
+      "head": "Bruce Wayne",
+      "head_type": "Person",
+      "relation": "sets up",
+      "relation_type": "Action",
+      "tail": "base",
+      "tail_type": "Property"
+    },
+    {
+      "head": "Bruce Wayne",
+      "head_type": "Person",
+      "relation": "takes up",
+      "relation_type": "Action",
+      "tail": "Batman",
+      "tail_type": "Property"
+    },
+    {
+      "head": "Batman",
+      "head_type": "Property",
+      "relation": "provides",
+      "relation_type": "Action",
+      "tail": "evidence",
+      "tail_type": "Property"
+    },
+    {
+      "head": "Batman",
+      "head_type": "Property",
+      "relation": "enlists",
+      "relation_type": "Interpersonal",
+      "tail": "James Gordon",
+      "tail_type": "Person"
+    },
+    {
+      "head": "Dr. Jonathan Crane",
+      "head_type": "Person",
+      "relation": "sprays",
+      "relation_type": "Action",
+      "tail": "Falcone",
+      "tail_type": "Person"
+    },
+    {
+      "head": "Batman",
+      "head_type": "Property",
+      "relation": "is ambushed by",
+      "relation_type": "Action",
+      "tail": "Dr. Jonathan Crane",
+      "tail_type": "Person"
+    },
+    {
+      "head": "Alfred",
+      "head_type": "Person",
+      "relation": "rescues",
+      "relation_type": "Action",
+      "tail": "Bruce Wayne",
+      "tail_type": "Person"
+    },
+    {
+      "head": "Rachel Dawes",
+      "head_type": "Person",
+      "relation": "accuses",
+      "relation_type": "Interpersonal",
+      "tail": "Dr. Jonathan Crane",
+      "tail_type": "Person"
+    },
+    {
+      "head": "Batman",
+      "head_type": "Property",
+      "relation": "subdues",
+      "relation_type": "Action",
+      "tail": "Dr. Jonathan Crane",
+      "tail_type": "Person"
+    },
+    {
+      "head": "Dr. Jonathan Crane",
+      "head_type": "Person",
+      "relation": "claims to work for",
+      "relation_type": "Interpersonal",
+      "tail": "Ra's al Ghul",
+      "tail_type": "Person"
+    },
+    {
+      "head": "Batman",
+      "head_type": "Property",
+      "relation": "evades",
+      "relation_type": "Action",
+      "tail": "police",
+      "tail_type": "Person"
+    },
+    {
+      "head": "Batman",
+      "head_type": "Property",
+      "relation": "administers",
+      "relation_type": "Action",
+      "tail": "antidote",
+      "tail_type": "Property"
+    },
+    {
+      "head": "Henri Ducard",
+      "head_type": "Person",
+      "relation": "reveals himself as",
+      "relation_type": "Action",
+      "tail": "Ra's al Ghul",
+      "tail_type": "Person"
+    },
+    {
+      "head": "Ra's al Ghul",
+      "head_type": "Person",
+      "relation": "sets aflame",
+      "relation_type": "Action",
+      "tail": "Wayne Manor",
+      "tail_type": "Place"
+    },
+    {
+      "head": "Alfred",
+      "head_type": "Person",
+      "relation": "rescues",
+      "relation_type": "Action",
+      "tail": "Bruce Wayne",
+      "tail_type": "Person"
+    },
+    {
+      "head": "Batman",
+      "head_type": "Property",
+      "relation": "rescues",
+      "relation_type": "Action",
+      "tail": "Rachel Dawes",
+      "tail_type": "Person"
+    },
+    {
+      "head": "Batman",
+      "head_type": "Property",
+      "relation": "reveals identity to",
+      "relation_type": "Interpersonal",
+      "tail": "Rachel Dawes",
+      "tail_type": "Person"
+    },
+    {
+      "head": "Batman",
+      "head_type": "Property",
+      "relation": "confronts",
+      "relation_type": "Action",
+      "tail": "Ra's al Ghul",
+      "tail_type": "Person"
+    },
+    {
+      "head": "James Gordon",
+      "head_type": "Person",
+      "relation": "uses",
+      "relation_type": "Action",
+      "tail": "Tumbler's cannons",
+      "tail_type": "Property"
+    },
+    {
+      "head": "Batman",
+      "head_type": "Property",
+      "relation": "escapes",
+      "relation_type": "Action",
+      "tail": "train",
+      "tail_type": "Property"
+    },
+    {
+      "head": "Bruce Wayne",
+      "head_type": "Person",
+      "relation": "gains respect of",
+      "relation_type": "Interpersonal",
+      "tail": "Rachel Dawes",
+      "tail_type": "Person"
+    },
+    {
+      "head": "Bruce Wayne",
+      "head_type": "Person",
+      "relation": "purchases",
+      "relation_type": "Action",
+      "tail": "controlling stake",
+      "tail_type": "Property"
+    },
+    {
+      "head": "Bruce Wayne",
+      "head_type": "Person",
+      "relation": "fires",
+      "relation_type": "Action",
+      "tail": "William Earle",
+      "tail_type": "Person"
+    },
+    {
+      "head": "Bruce Wayne",
+      "head_type": "Person",
+      "relation": "replaces",
+      "relation_type": "Action",
+      "tail": "William Earle",
+      "tail_type": "Person"
+    },
+    {
+      "head": "James Gordon",
+      "head_type": "Person",
+      "relation": "is promoted to",
+      "relation_type": "Action",
+      "tail": "Lieutenant",
+      "tail_type": "Property"
+    },
+    {
+      "head": "James Gordon",
+      "head_type": "Person",
+      "relation": "shows",
+      "relation_type": "Action",
+      "tail": "Bat-Signal",
+      "tail_type": "Property"
+    },
+    {
+      "head": "James Gordon",
+      "head_type": "Person",
+      "relation": "tells about",
+      "relation_type": "Interpersonal",
+      "tail": "criminal",
+      "tail_type": "Person"
+    },
+    {
+      "head": "Batman",
+      "head_type": "Property",
+      "relation": "promises to look into",
+      "relation_type": "Action",
+      "tail": "Joker playing cards",
+      "tail_type": "Property"
+    }
+  ]
+}

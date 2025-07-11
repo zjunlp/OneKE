@@ -1,0 +1,48 @@
+{
+  "instruction": "Extract Relationships between Named Entities in the given text.",
+  "text": "Greek authorities ordered thousands to evacuate from different parts of the southern island of Crete, one of the country's most popular tourist spots, where wildfires burned uncontrollably on Thursday. Firefighters were struggling to contain the blaze as gale-force winds fueled the flames.",
+  "constraint": "\n**Relation Type Constraint**: The type of relations must be chosen from the following list.\n[\"nationality\", \"country capital\", \"place of death\", \"children\", \"location contains\", \"place of birth\", \"place lived\", \"administrative division of country\", \"country of administrative divisions\", \"company\", \"neighborhood of\", \"company founders\"]\n",
+  "trajectory": {
+    "get_retrieved_schema": "['\\n{\"$defs\": {\"Relation\": {\"properties\": {\"head\": {\"description\": \"The starting entity in the relationship.\", \"title\": \"Head\", \"type\": \"string\"}, \"tail\": {\"description\": \"The ending entity in the relationship.\", \"title\": \"Tail\", \"type\": \"string\"}, \"relation\": {\"description\": \"The predicate that defines the relationship between the two entities.\", \"title\": \"Relation\", \"type\": \"string\"}}, \"required\": [\"head\", \"tail\", \"relation\"], \"title\": \"Relation\", \"type\": \"object\"}}, \"properties\": {\"relation_list\": {\"description\": \"The collection of relationships between various entities.\", \"items\": {\"$ref\": \"#/$defs/Relation\"}, \"title\": \"Relation List\", \"type\": \"array\"}}, \"required\": [\"relation_list\"]}\\n']\n\nFor example, for the schema {\"properties\": {\"foo\": {\"title\": \"Foo\", \"description\": \"a list of strings\", \"type\": \"array\", \"items\": {\"type\": \"string\"}}}}, the object {\"foo\": [\"bar\", \"baz\"]} is a well-formatted instance.",
+    "extract_information_direct": [
+      {
+        "relation_list": [
+          {
+            "head": "Crete",
+            "tail": "Greece",
+            "relation": "administrative division of country"
+          },
+          {
+            "head": "wildfires",
+            "tail": "Crete",
+            "relation": "location contains"
+          },
+          {
+            "head": "firefighters",
+            "tail": "Greece",
+            "relation": "nationality"
+          }
+        ]
+      }
+    ]
+  },
+  "pred": {
+    "relation_list": [
+      {
+        "head": "Crete",
+        "tail": "Greece",
+        "relation": "administrative division of country"
+      },
+      {
+        "head": "wildfires",
+        "tail": "Crete",
+        "relation": "location contains"
+      },
+      {
+        "head": "firefighters",
+        "tail": "Greece",
+        "relation": "nationality"
+      }
+    ]
+  }
+}

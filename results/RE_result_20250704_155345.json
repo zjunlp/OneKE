@@ -1,0 +1,19 @@
+{
+  "relation_list": [
+    {
+      "head": "Crete",
+      "tail": "Greece",
+      "relation": "administrative division of country"
+    },
+    {
+      "head": "wildfires",
+      "tail": "Crete",
+      "relation": "location contains"
+    },
+    {
+      "head": "firefighters",
+      "tail": "Greece",
+      "relation": "nationality"
+    }
+  ]
+}

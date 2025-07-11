@@ -1,0 +1,176 @@
+{
+  "instruction": "Extract key information from the given text.",
+  "text": "",
+  "constraint": "",
+  "trajectory": {
+    "get_retrieved_schema": "['\\n{\"$defs\": {\"Event\": {\"properties\": {\"name\": {\"description\": \"Name of the event\", \"title\": \"Name\", \"type\": \"string\"}, \"time\": {\"anyOf\": [{\"type\": \"string\"}, {\"type\": \"null\"}], \"description\": \"Time when the event took place\", \"title\": \"Time\"}, \"people_involved\": {\"anyOf\": [{\"items\": {\"$ref\": \"#/$defs/Person\"}, \"type\": \"array\"}, {\"type\": \"null\"}], \"description\": \"People involved in the event\", \"title\": \"People Involved\"}, \"cause\": {\"anyOf\": [{\"type\": \"string\"}, {\"type\": \"null\"}], \"default\": null, \"description\": \"Reason for the event, if applicable\", \"title\": \"Cause\"}, \"process\": {\"anyOf\": [{\"type\": \"string\"}, {\"type\": \"null\"}], \"description\": \"Details of the event process\", \"title\": \"Process\"}, \"result\": {\"anyOf\": [{\"type\": \"string\"}, {\"type\": \"null\"}], \"default\": null, \"description\": \"Result or outcome of the event\", \"title\": \"Result\"}}, \"required\": [\"name\", \"time\", \"people_involved\", \"process\"], \"title\": \"Event\", \"type\": \"object\"}, \"Person\": {\"properties\": {\"name\": {\"description\": \"The name of the person\", \"title\": \"Name\", \"type\": \"string\"}, \"identity\": {\"anyOf\": [{\"type\": \"string\"}, {\"type\": \"null\"}], \"description\": \"The occupation, status or characteristics of the person.\", \"title\": \"Identity\"}, \"role\": {\"anyOf\": [{\"type\": \"string\"}, {\"type\": \"null\"}], \"description\": \"The role or function the person plays in an event.\", \"title\": \"Role\"}}, \"required\": [\"name\", \"identity\", \"role\"], \"title\": \"Person\", \"type\": \"object\"}}, \"properties\": {\"title\": {\"description\": \"The title or headline of the news report\", \"title\": \"Title\", \"type\": \"string\"}, \"summary\": {\"description\": \"A brief summary of the news report\", \"title\": \"Summary\", \"type\": \"string\"}, \"publication_date\": {\"anyOf\": [{\"type\": \"string\"}, {\"type\": \"null\"}], \"description\": \"The publication date of the report\", \"title\": \"Publication Date\"}, \"keywords\": {\"anyOf\": [{\"items\": {\"type\": \"string\"}, \"type\": \"array\"}, {\"type\": \"null\"}], \"description\": \"List of keywords or topics covered in the news report\", \"title\": \"Keywords\"}, \"events\": {\"description\": \"Events covered in the news report\", \"items\": {\"$ref\": \"#/$defs/Event\"}, \"title\": \"Events\", \"type\": \"array\"}, \"quotes\": {\"anyOf\": [{\"additionalProperties\": true, \"type\": \"object\"}, {\"type\": \"null\"}], \"default\": null, \"description\": \"Quotes related to the news, with keys as the citation sources and values as the quoted content. \", \"title\": \"Quotes\"}, \"viewpoints\": {\"anyOf\": [{\"items\": {\"type\": \"string\"}, \"type\": \"array\"}, {\"type\": \"null\"}], \"default\": null, \"description\": \"Different viewpoints regarding the news\", \"title\": \"Viewpoints\"}}, \"required\": [\"title\", \"summary\", \"publication_date\", \"keywords\", \"events\"]}\\n']\n\nFor example, for the schema {\"properties\": {\"foo\": {\"title\": \"Foo\", \"description\": \"a list of strings\", \"type\": \"array\", \"items\": {\"type\": \"string\"}}}}, the object {\"foo\": [\"bar\", \"baz\"]} is a well-formatted instance.",
+    "extract_information_direct": [
+      {
+        "title": "Who is Tulsi Gabbard? Meet Trump's pick for director of national intelligence",
+        "summary": "Tulsi Gabbard, President-elect Donald Trump’s choice for director of national intelligence, could face one of the most bruising Senate confirmation battles. The 43-year-old former congresswoman and onetime Democratic presidential candidate has no intelligence experience, yet would be overseeing 18 intelligence agencies with a $100 billion budget.",
+        "publication_date": "December 4, 2024, 5:42 PM",
+        "keywords": [
+          "Tulsi Gabbard",
+          "Donald Trump",
+          "Director of National Intelligence",
+          "Senate confirmation",
+          "intelligence agencies",
+          "Russia",
+          "Ukraine",
+          "Syria",
+          "Bashar al-Assad"
+        ],
+        "events": [
+          {
+            "name": "Trump's pick for director of national intelligence",
+            "time": "December 4, 2024",
+            "people_involved": [
+              {
+                "name": "Tulsi Gabbard",
+                "identity": "Former U.S. Representative and Democratic presidential candidate",
+                "role": "Nominee for Director of National Intelligence"
+              },
+              {
+                "name": "Donald Trump",
+                "identity": "President-elect",
+                "role": "Nominator"
+              }
+            ],
+            "cause": "Potential appointment to oversee 18 intelligence agencies",
+            "process": "Senate confirmation battle expected due to Gabbard's lack of intelligence experience and controversial statements"
+          },
+          {
+            "name": "Meeting with Bashar al-Assad",
+            "time": "2017",
+            "people_involved": [
+              {
+                "name": "Tulsi Gabbard",
+                "identity": "U.S. Representative",
+                "role": "Visitor"
+              },
+              {
+                "name": "Bashar al-Assad",
+                "identity": "Syrian authoritarian leader",
+                "role": "Host"
+              }
+            ],
+            "cause": "Discussion on Syrian civil war",
+            "process": "Gabbard met twice with Assad and later expressed skepticism about his use of chemical weapons",
+            "result": "Controversy and accusations of sympathizing with U.S. adversaries"
+          },
+          {
+            "name": "Endorsement of Donald Trump",
+            "time": "October 2024",
+            "people_involved": [
+              {
+                "name": "Tulsi Gabbard",
+                "identity": "Former Democrat",
+                "role": "Endorser"
+              },
+              {
+                "name": "Donald Trump",
+                "identity": "Republican presidential nominee",
+                "role": "Endorsee"
+              }
+            ],
+            "cause": "Political alignment shift",
+            "process": "Gabbard announced her endorsement of Trump and joined the Republican Party",
+            "result": "Further controversy and scrutiny"
+          }
+        ],
+        "quotes": {
+          "Sen. Tammy Duckworth": "\"The U.S. intelligence community has identified her as having troubling relationships with America’s foes, and so my worry is that she couldn’t pass a background check.\"",
+          "Olivia Troye": "\"Foreign adversaries probably celebrate this moment. I think they have succeeded in putting someone that is sympathetic to their causes. I think that is alarming and dangerous.\""
+        },
+        "viewpoints": [
+          "Gabbard is seen as a national security risk due to her alleged sympathies with U.S. adversaries",
+          "Gabbard's anti-war stance and criticism of military interventions are highlighted",
+          "Concerns about the morale of the intelligence community and potential information sharing issues with allies"
+        ]
+      }
+    ]
+  },
+  "pred": {
+    "title": "Who is Tulsi Gabbard? Meet Trump's pick for director of national intelligence",
+    "summary": "Tulsi Gabbard, President-elect Donald Trump’s choice for director of national intelligence, could face one of the most bruising Senate confirmation battles. The 43-year-old former congresswoman and onetime Democratic presidential candidate has no intelligence experience, yet would be overseeing 18 intelligence agencies with a $100 billion budget.",
+    "publication_date": "December 4, 2024, 5:42 PM",
+    "keywords": [
+      "Tulsi Gabbard",
+      "Donald Trump",
+      "Director of National Intelligence",
+      "Senate confirmation",
+      "intelligence agencies",
+      "Russia",
+      "Ukraine",
+      "Syria",
+      "Bashar al-Assad"
+    ],
+    "events": [
+      {
+        "name": "Trump's pick for director of national intelligence",
+        "time": "December 4, 2024",
+        "people_involved": [
+          {
+            "name": "Tulsi Gabbard",
+            "identity": "Former U.S. Representative and Democratic presidential candidate",
+            "role": "Nominee for Director of National Intelligence"
+          },
+          {
+            "name": "Donald Trump",
+            "identity": "President-elect",
+            "role": "Nominator"
+          }
+        ],
+        "cause": "Potential appointment to oversee 18 intelligence agencies",
+        "process": "Senate confirmation battle expected due to Gabbard's lack of intelligence experience and controversial statements"
+      },
+      {
+        "name": "Meeting with Bashar al-Assad",
+        "time": "2017",
+        "people_involved": [
+          {
+            "name": "Tulsi Gabbard",
+            "identity": "U.S. Representative",
+            "role": "Visitor"
+          },
+          {
+            "name": "Bashar al-Assad",
+            "identity": "Syrian authoritarian leader",
+            "role": "Host"
+          }
+        ],
+        "cause": "Discussion on Syrian civil war",
+        "process": "Gabbard met twice with Assad and later expressed skepticism about his use of chemical weapons",
+        "result": "Controversy and accusations of sympathizing with U.S. adversaries"
+      },
+      {
+        "name": "Endorsement of Donald Trump",
+        "time": "October 2024",
+        "people_involved": [
+          {
+            "name": "Tulsi Gabbard",
+            "identity": "Former Democrat",
+            "role": "Endorser"
+          },
+          {
+            "name": "Donald Trump",
+            "identity": "Republican presidential nominee",
+            "role": "Endorsee"
+          }
+        ],
+        "cause": "Political alignment shift",
+        "process": "Gabbard announced her endorsement of Trump and joined the Republican Party",
+        "result": "Further controversy and scrutiny"
+      }
+    ],
+    "quotes": {
+      "Sen. Tammy Duckworth": "\"The U.S. intelligence community has identified her as having troubling relationships with America’s foes, and so my worry is that she couldn’t pass a background check.\"",
+      "Olivia Troye": "\"Foreign adversaries probably celebrate this moment. I think they have succeeded in putting someone that is sympathetic to their causes. I think that is alarming and dangerous.\""
+    },
+    "viewpoints": [
+      "Gabbard is seen as a national security risk due to her alleged sympathies with U.S. adversaries",
+      "Gabbard's anti-war stance and criticism of military interventions are highlighted",
+      "Concerns about the morale of the intelligence community and potential information sharing issues with allies"
+    ]
+  }
+}

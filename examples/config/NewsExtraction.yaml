@@ -1,7 +1,7 @@
 model:
   category: DeepSeek  # model category, chosen from ChatGPT, DeepSeek, LLaMA, Qwen, ChatGLM, MiniCPM, OneKE.
   model_name_or_path: deepseek-chat # model name, chosen from the model list of the selected category.
-  api_key: your_api_key  # your API key for the model with API service. No need for open-source models.
+  api_key: sk-779d1bfeeb1a4f38bc219b163f034c51  # your API key for the model with API service. No need for open-source models.
   base_url: https://api.deepseek.com # base URL for the API service. No need for open-source models.
 
 extraction:

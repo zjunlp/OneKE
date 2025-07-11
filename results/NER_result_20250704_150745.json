@@ -1,0 +1,20 @@
+{
+  "entity_list": [
+    {
+      "name": "Sustainability World Summit 2025",
+      "type": "conference"
+    },
+    {
+      "name": "Key Notion",
+      "type": "organization"
+    },
+    {
+      "name": "Frankfurt",
+      "type": "location"
+    },
+    {
+      "name": "Germany",
+      "type": "country"
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "instruction": "Extract the Events in the given text.",
+  "text": "UConn Health , an academic medical center , says in a media statement that it identified approximately 326,000 potentially impacted individuals whose personal information was contained in the compromised email accounts.",
+  "constraint": "\n**Event Extraction Constraint**: The event type must be selected from the following dictionary keys, and its event arguments should be chosen from its corresponding dictionary values. \n{\"phishing\": [\"damage amount\", \"attack pattern\", \"tool\", \"victim\", \"place\", \"attacker\", \"purpose\", \"trusted entity\", \"time\"], \"data breach\": [\"damage amount\", \"attack pattern\", \"number of data\", \"number of victim\", \"tool\", \"compromised data\", \"victim\", \"place\", \"attacker\", \"purpose\", \"time\"], \"ransom\": [\"damage amount\", \"attack pattern\", \"payment method\", \"tool\", \"victim\", \"place\", \"attacker\", \"price\", \"time\"], \"discover vulnerability\": [\"vulnerable system\", \"vulnerability\", \"vulnerable system owner\", \"vulnerable system version\", \"supported platform\", \"common vulnerabilities and exposures\", \"capabilities\", \"time\", \"discoverer\"], \"patch vulnerability\": [\"vulnerable system\", \"vulnerability\", \"issues addressed\", \"vulnerable system version\", \"releaser\", \"supported platform\", \"common vulnerabilities and exposures\", \"patch number\", \"time\", \"patch\"]}\n",
+  "trajectory": {
+    "get_retrieved_schema": "['\\n{\"$defs\": {\"Event\": {\"properties\": {\"event_type\": {\"description\": \"The type of the event.\", \"title\": \"Event Type\", \"type\": \"string\"}, \"event_trigger\": {\"description\": \"A specific word or phrase that indicates the occurrence of the event.\", \"title\": \"Event Trigger\", \"type\": \"string\"}, \"event_argument\": {\"additionalProperties\": true, \"description\": \"The arguments or participants involved in the event.\", \"title\": \"Event Argument\", \"type\": \"object\"}}, \"required\": [\"event_type\", \"event_trigger\", \"event_argument\"], \"title\": \"Event\", \"type\": \"object\"}}, \"properties\": {\"event_list\": {\"description\": \"The events presented in the text.\", \"items\": {\"$ref\": \"#/$defs/Event\"}, \"title\": \"Event List\", \"type\": \"array\"}}, \"required\": [\"event_list\"]}\\n']\n\nFor example, for the schema {\"properties\": {\"foo\": {\"title\": \"Foo\", \"description\": \"a list of strings\", \"type\": \"array\", \"items\": {\"type\": \"string\"}}}}, the object {\"foo\": [\"bar\", \"baz\"]} is a well-formatted instance.",
+    "extract_information_with_case": [
+      {
+        "event_list": [
+          {
+            "event_type": "data breach",
+            "event_trigger": "compromised",
+            "event_argument": {
+              "number of victim": "326,000",
+              "compromised data": "personal information",
+              "victim": "UConn Health"
+            }
+          }
+        ]
+      }
+    ],
+    "reflect_with_case": [
+      {
+        "event_list": [
+          {
+            "event_type": "data breach",
+            "event_trigger": "compromised",
+            "event_argument": {
+              "number of victim": "approximately 326,000",
+              "compromised data": "personal information",
+              "victim": "UConn Health"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "pred": {
+    "event_list": [
+      {
+        "event_type": "data breach",
+        "event_trigger": "compromised",
+        "event_argument": {
+          "number of victim": "approximately 326,000",
+          "compromised data": "personal information",
+          "victim": "UConn Health"
+        }
+      }
+    ]
+  }
+}

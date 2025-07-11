@@ -302,7 +302,8 @@ def create_interface():
                     constraint = constraint
                 if use_file:
                     text = ""
-                    file_path = file_path
+                    # file_path = file_path
+                    file_path=file_path.name if file_path else None #获取文件对象的路径
                 else:
                     text = text
                     file_path = None

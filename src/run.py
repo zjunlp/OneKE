@@ -1,12 +1,16 @@
 import argparse
 import os
-import yaml
+# import yaml
 from pipeline import Pipeline
 from typing import Literal
 import models
 from models import *
 from utils import *
 from modules import *
+import os
+import nltk
+from datetime import datetime
+
 
 def main():
     # Create command-line argument parser
@@ -40,12 +44,53 @@ def main():
         construct_config = config['construct']
         result, trajectory, _, _ = pipeline.get_extract_result(task=extraction_config['task'], instruction=extraction_config['instruction'], text=extraction_config['text'], output_schema=extraction_config['output_schema'], constraint=extraction_config['constraint'], use_file=extraction_config['use_file'], file_path=extraction_config['file_path'], truth=extraction_config['truth'], mode=extraction_config['mode'], update_case=extraction_config['update_case'], show_trajectory=extraction_config['show_trajectory'],
                                                                construct=construct_config, iskg=True) # When 'construct' is provided, 'iskg' should be True to construct the knowledge graph.
+
+        # save results to files
+        save_results(result, trajectory, extraction_config)
+
         return
     else:
         print("please provide construct config in the yaml file.")
 
     result, trajectory, _, _ = pipeline.get_extract_result(task=extraction_config['task'], instruction=extraction_config['instruction'], text=extraction_config['text'], output_schema=extraction_config['output_schema'], constraint=extraction_config['constraint'], use_file=extraction_config['use_file'], file_path=extraction_config['file_path'], truth=extraction_config['truth'], mode=extraction_config['mode'], update_case=extraction_config['update_case'], show_trajectory=extraction_config['show_trajectory'])
+
+    # save results to files
+    save_results(result, trajectory, extraction_config)
+
     return
+
+#save results to file
+def save_results(result, trajectory, config):
+    output_dir = "results"
+    os.makedirs(output_dir, exist_ok=True)
+
+    task_type = config['task']
+    timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+
+    # result file
+    result_path = os.path.join(output_dir, f"{task_type}_result_{timestamp}.json")
+    with open(result_path, 'w', encoding='utf-8') as f:
+        # whether result is string
+        if isinstance(result, str):
+            try:
+                # turn string to json
+                parsed_result = json.loads(result)
+                json.dump(parsed_result, f, ensure_ascii=False, indent=2)
+            except json.JSONDecodeError:
+                f.write(result)
+        else:
+            # if dictionary/list
+            json.dump(result, f, ensure_ascii=False, indent=2)
+
+    # trajectory file
+    if trajectory:
+        traj_path = os.path.join(output_dir, f"{task_type}_trajectory_{timestamp}.json")
+        with open(traj_path, 'w', encoding='utf-8') as f:
+            json.dump(trajectory, f, ensure_ascii=False, indent=2)
+
+    print(f"Extraction result has been saved in: {result_path}")
+    if trajectory:
+        print(f"Trajectory has been saved in: {traj_path}")
 
 if __name__ == "__main__":
     main()

@@ -145,7 +145,8 @@ def chunk_file(file_path):
     elif file_path.endswith(".docx"):
         loader = Docx2txtLoader(file_path)
     elif file_path.endswith(".html"):
-        loader = BSHTMLLoader(file_path)
+        # loader = BSHTMLLoader(file_path)
+        loader = BSHTMLLoader(file_path, open_encoding="utf-8")
     elif file_path.endswith(".json"):
         loader = JSONLoader(file_path)
     else:
