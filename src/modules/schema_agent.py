@@ -158,3 +158,9 @@ class TripleList(BaseModel):
         function_name = current_function_name()
         data.update_trajectory(function_name, deduced_schema)
         return data
+    def get_customized_schema(self, data: DataPoint):
+        self.__preprocess_text(data)
+        data.print_schema=data.output_schema
+        function_name = current_function_name()
+        data.update_trajectory(function_name, data.output_schema)
+        return data

@@ -1,0 +1,164 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        
+            <script src="lib/bindings/utils.js"></script>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vis-network/9.1.2/dist/dist/vis-network.min.css" integrity="sha512-WgxfT5LWjfszlPHXRmBWHkV2eceiWTOBvrKCNbdgDYTHrT2AeLCGbF4sZlZw3UMN3WtL0tGUoIAKsu8mllg/XA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/vis-network/9.1.2/dist/vis-network.min.js" integrity="sha512-LnvoEWDFrqGHlHmDD2101OrLcbsfkrzoSpvtSQtxK3RMnRV0eOkhhBN2dXHKRrUU8p2DGRTk35n4O8nWSVe1mQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+            
+        
+<center>
+<h1></h1>
+</center>
+
+<!-- <link rel="stylesheet" href="../node_modules/vis/dist/vis.min.css" type="text/css" />
+<script type="text/javascript" src="../node_modules/vis/dist/vis.js"> </script>-->
+        <link
+          href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6"
+          crossorigin="anonymous"
+        />
+        <script
+          src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+          crossorigin="anonymous"
+        ></script>
+
+
+        <center>
+          <h1></h1>
+        </center>
+        <style type="text/css">
+
+             #mynetwork {
+                 width: 100%;
+                 height: 750px;
+                 background-color: #222222;
+                 border: 1px solid lightgray;
+                 position: relative;
+                 float: left;
+             }
+
+             
+
+             
+
+             
+        </style>
+    </head>
+
+
+    <body>
+        <div class="card" style="width: 100%">
+            
+            
+            <div id="mynetwork" class="card-body"></div>
+        </div>
+
+        
+        
+
+        <script type="text/javascript">
+
+              // initialize global variables.
+              var edges;
+              var nodes;
+              var allNodes;
+              var allEdges;
+              var nodeColors;
+              var originalNodes;
+              var network;
+              var container;
+              var options, data;
+              var filter = {
+                  item : '',
+                  property : '',
+                  value : []
+              };
+
+              
+
+              
+
+              // This method is responsible for drawing the graph, returns the drawn network
+              function drawGraph() {
+                  var container = document.getElementById('mynetwork');
+
+                  
+
+                  // parsing and collecting nodes and edges from the python
+                  nodes = new vis.DataSet([{"color": "#97c2fc", "font": {"color": "white"}, "id": 0, "label": "Event\nglobal warming", "shape": "dot", "title": "{\u0027name\u0027: \u0027global warming\u0027}"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": 1, "label": "Event\nrising sea levels", "shape": "dot", "title": "{\u0027name\u0027: \u0027rising sea levels\u0027}"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": 2, "label": "Place\ncoastal cities", "shape": "dot", "title": "{\u0027name\u0027: \u0027coastal cities\u0027}"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": 3, "label": "Property\nworld\u0027s climate", "shape": "dot", "title": "{\u0027name\u0027: \"world\u0027s climate\"}"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": 4, "label": "Person\nnations", "shape": "dot", "title": "{\u0027name\u0027: \u0027nations\u0027}"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": 5, "label": "Person\nmechas", "shape": "dot", "title": "{\u0027name\u0027: \u0027mechas\u0027}"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": 6, "label": "Person\nDavid", "shape": "dot", "title": "{\u0027name\u0027: \u0027David\u0027}"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": 7, "label": "Person\nHenry Swinton and Monica", "shape": "dot", "title": "{\u0027name\u0027: \u0027Henry Swinton and Monica\u0027}"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": 8, "label": "Person\nMonica", "shape": "dot", "title": "{\u0027name\u0027: \u0027Monica\u0027}"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": 9, "label": "Person\nTeddy", "shape": "dot", "title": "{\u0027name\u0027: \u0027Teddy\u0027}"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": 10, "label": "Person\nMartin", "shape": "dot", "title": "{\u0027name\u0027: \u0027Martin\u0027}"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": 11, "label": "Property\npiece of Monica\u0027s hair", "shape": "dot", "title": "{\u0027name\u0027: \"piece of Monica\u0027s hair\"}"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": 12, "label": "Property\nMonica\u0027s eye", "shape": "dot", "title": "{\u0027name\u0027: \"Monica\u0027s eye\"}"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": 13, "label": "Event\nbeing poked with a knife", "shape": "dot", "title": "{\u0027name\u0027: \u0027being poked with a knife\u0027}"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": 14, "label": "Person\nHenry", "shape": "dot", "title": "{\u0027name\u0027: \u0027Henry\u0027}"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": 15, "label": "Property\nbecoming human will regain Monica\u0027s love", "shape": "dot", "title": "{\u0027name\u0027: \"becoming human will regain Monica\u0027s love\"}"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": 16, "label": "Person\nBlue Fairy", "shape": "dot", "title": "{\u0027name\u0027: \u0027Blue Fairy\u0027}"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": 17, "label": "Person\nDavid and Teddy", "shape": "dot", "title": "{\u0027name\u0027: \u0027David and Teddy\u0027}"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": 18, "label": "Event\nFlesh Fair", "shape": "dot", "title": "{\u0027name\u0027: \u0027Flesh Fair\u0027}"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": 19, "label": "Person\naudience", "shape": "dot", "title": "{\u0027name\u0027: \u0027audience\u0027}"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": 20, "label": "Action\nDavid to escape", "shape": "dot", "title": "{\u0027name\u0027: \u0027David to escape\u0027}"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": 21, "label": "Place\nRouge City", "shape": "dot", "title": "{\u0027name\u0027: \u0027Rouge City\u0027}"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": 22, "label": "Person\nDr. Know", "shape": "dot", "title": "{\u0027name\u0027: \u0027Dr. Know\u0027}"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": 23, "label": "Person\nProfessor Hobby", "shape": "dot", "title": "{\u0027name\u0027: \u0027Professor Hobby\u0027}"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": 24, "label": "Property\ncopies of David", "shape": "dot", "title": "{\u0027name\u0027: \u0027copies of David\u0027}"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": 25, "label": "Event\nsuicide", "shape": "dot", "title": "{\u0027name\u0027: \u0027suicide\u0027}"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": 26, "label": "Person\nJoe", "shape": "dot", "title": "{\u0027name\u0027: \u0027Joe\u0027}"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": 27, "label": "Person\nSpecialists", "shape": "dot", "title": "{\u0027name\u0027: \u0027Specialists\u0027}"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": 28, "label": "Place\nSwinton home", "shape": "dot", "title": "{\u0027name\u0027: \u0027Swinton home\u0027}"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": 29, "label": "Property\nDavid cannot become human", "shape": "dot", "title": "{\u0027name\u0027: \u0027David cannot become human\u0027}"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": 30, "label": "Property\nDavid she has always loved him", "shape": "dot", "title": "{\u0027name\u0027: \u0027David she has always loved him\u0027}"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": 31, "label": "Person\nnext to Monica", "shape": "dot", "title": "{\u0027name\u0027: \u0027next to Monica\u0027}"}]);
+                  edges = new vis.DataSet([{"from": 0, "label": "Action", "title": "Action\n{\u0027name\u0027: \u0027caused\u0027}", "to": 1}, {"from": 1, "label": "Action", "title": "Action\n{\u0027name\u0027: \u0027wiped out\u0027}", "to": 2}, {"from": 1, "label": "Action", "title": "Action\n{\u0027name\u0027: \u0027altered\u0027}", "to": 3}, {"from": 4, "label": "Action", "title": "Action\n{\u0027name\u0027: \u0027created\u0027}", "to": 5}, {"from": 6, "label": "Action", "title": "Action\n{\u0027name\u0027: \u0027cuts off\u0027}", "to": 11}, {"from": 6, "label": "Action", "title": "Action\n{\u0027name\u0027: \u0027accidentally pokes\u0027}", "to": 12}, {"from": 6, "label": "Action", "title": "Action\n{\u0027name\u0027: \u0027reacts to\u0027}", "to": 13}, {"from": 6, "label": "Action", "title": "Action\n{\u0027name\u0027: \u0027decides to find\u0027}", "to": 16}, {"from": 6, "label": "Action", "title": "Action\n{\u0027name\u0027: \u0027travels to\u0027}", "to": 21}, {"from": 6, "label": "Action", "title": "Action\n{\u0027name\u0027: \u0027attempts\u0027}", "to": 25}, {"from": 6, "label": "Action", "title": "Action\n{\u0027name\u0027: \u0027lies down\u0027}", "to": 31}, {"from": 6, "label": "Ownership", "title": "Ownership\n{\u0027name\u0027: \u0027given to\u0027}", "to": 7}, {"from": 6, "label": "Interpersonal", "title": "Interpersonal\n{\u0027name\u0027: \u0027befriends\u0027}", "to": 9}, {"from": 6, "label": "Interpersonal", "title": "Interpersonal\n{\u0027name\u0027: \u0027believes\u0027}", "to": 15}, {"from": 6, "label": "Interpersonal", "title": "Interpersonal\n{\u0027name\u0027: \u0027meets\u0027}", "to": 23}, {"from": 8, "label": "Action", "title": "Action\n{\u0027name\u0027: \u0027abandons\u0027}", "to": 6}, {"from": 8, "label": "Interpersonal", "title": "Interpersonal\n{\u0027name\u0027: \u0027tells\u0027}", "to": 30}, {"from": 10, "label": "Interpersonal", "title": "Interpersonal\n{\u0027name\u0027: \u0027goads\u0027}", "to": 6}, {"from": 14, "label": "Interpersonal", "title": "Interpersonal\n{\u0027name\u0027: \u0027convinces\u0027}", "to": 8}, {"from": 17, "label": "Action", "title": "Action\n{\u0027name\u0027: \u0027captured by\u0027}", "to": 18}, {"from": 19, "label": "Interpersonal", "title": "Interpersonal\n{\u0027name\u0027: \u0027allows\u0027}", "to": 20}, {"from": 22, "label": "Interpersonal", "title": "Interpersonal\n{\u0027name\u0027: \u0027directs\u0027}", "to": 17}, {"from": 23, "label": "Interpersonal", "title": "Interpersonal\n{\u0027name\u0027: \u0027shows\u0027}", "to": 24}, {"from": 26, "label": "Interpersonal", "title": "Interpersonal\n{\u0027name\u0027: \u0027rescues\u0027}", "to": 6}, {"from": 27, "label": "Action", "title": "Action\n{\u0027name\u0027: \u0027recreate\u0027}", "to": 8}, {"from": 27, "label": "Action", "title": "Action\n{\u0027name\u0027: \u0027resurrect\u0027}", "to": 17}, {"from": 27, "label": "Action", "title": "Action\n{\u0027name\u0027: \u0027reconstruct\u0027}", "to": 28}, {"from": 27, "label": "Interpersonal", "title": "Interpersonal\n{\u0027name\u0027: \u0027explain\u0027}", "to": 29}]);
+
+                  nodeColors = {};
+                  allNodes = nodes.get({ returnType: "Object" });
+                  for (nodeId in allNodes) {
+                    nodeColors[nodeId] = allNodes[nodeId].color;
+                  }
+                  allEdges = edges.get({ returnType: "Object" });
+                  // adding nodes and edges to the graph
+                  data = {nodes: nodes, edges: edges};
+
+                  var options = {
+    "configure": {
+        "enabled": false
+    },
+    "edges": {
+        "color": {
+            "inherit": true
+        },
+        "smooth": {
+            "enabled": true,
+            "type": "dynamic"
+        }
+    },
+    "interaction": {
+        "dragNodes": true,
+        "hideEdgesOnDrag": false,
+        "hideNodesOnDrag": false
+    },
+    "physics": {
+        "enabled": true,
+        "forceAtlas2Based": {
+            "avoidOverlap": 0,
+            "centralGravity": 0.01,
+            "damping": 0.4,
+            "gravitationalConstant": -50,
+            "springConstant": 0.08,
+            "springLength": 100
+        },
+        "solver": "forceAtlas2Based",
+        "stabilization": {
+            "enabled": true,
+            "fit": true,
+            "iterations": 1000,
+            "onlyDynamicEdges": false,
+            "updateInterval": 50
+        }
+    }
+};
+
+                  
+
+
+                  
+
+                  network = new vis.Network(container, data, options);
+
+                  
+
+                  
+
+                  
+
+
+                  
+
+                  return network;
+
+              }
+              drawGraph();
+        </script>
+    </body>
+</html>

@@ -1,0 +1,7 @@
+{"relation_list": [
+ {
+ "head": "Guinea",
+ "tail": "Conakry"
+ }
+ ]
+ }
