@@ -15,6 +15,6 @@ extraction:
 
 construct: # (Optional) If you want to construct a Knowledge Graph, you need to set the construct field, or you must delete this field.
    database: Neo4j # database type, now only support Neo4j.
-   url: neo4j+s://52bb44ac.databases.neo4j.io # your database URL，Neo4j's default port is 7687.
+   url:  # your database URL，Neo4j's default port is 7687.
    username: neo4j # your database username.
-   password: "JjvWjR1XEBr-6hHYh1oAmlekinaNgl7xhWfRY0pGZP4" # your database password.
+   password: "" # your database password.
