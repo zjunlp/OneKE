@@ -1,8 +1,8 @@
 model:
   category: DeepSeek
   model_name_or_path: deepseek-chat
-  api_key: sk-779d1bfeeb1a4f38bc219b163f034c51
-  base_url: https://api.deepseek.com
+  api_key: 
+  base_url: 
 
 extraction:
   task: RE  # task type, chosen from Base, NER, RE, EE.
