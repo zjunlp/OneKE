@@ -25,7 +25,12 @@ class InformationExtractor:
         response = self.llm.get_chat_response(prompt)
         response = extract_json_dict(response)
         return response
-
+    # 检查关系抽取中方向是否正确的函数
+    def check_answer(self, pred="", schema="", additional_info=""):
+        prompt = check_instruction.format(pred=pred, schema=schema, additional_info=additional_info)
+        response = self.llm.get_chat_response(prompt)
+        response = extract_json_dict(response)
+        return response
 class ExtractionAgent:
     def __init__(self, llm: BaseEngine, case_repo: CaseRepositoryHandler):
         self.llm = llm
@@ -124,11 +129,18 @@ class ExtractionAgent:
     def summarize_answer(self, data: DataPoint):
         if len(data.result_list) == 0:
             return data
-        if len(data.result_list) == 1:
-            data.set_pred(data.result_list[0])
-            return data
+        # if len(data.result_list) == 1:
+        #     data.set_pred(data.result_list[0])
+        #     return data
         summarized_result = self.module.summarize_answer(instruction=data.instruction, answer_list=data.result_list, schema=data.output_schema, additional_info=data.constraint)
         funtion_name = current_function_name()
         data.set_pred(summarized_result)
         data.update_trajectory(funtion_name, summarized_result)
+        return data
+    # 检查关系抽取方向性
+    def check_directionality(self, data: DataPoint):
+        checked_result = self.module.check_answer(pred=data.pred, schema=data.output_schema, additional_info=data.constraint)
+        funtion_name = current_function_name()
+        data.set_pred(checked_result)
+        data.update_trajectory(funtion_name, checked_result)
         return data

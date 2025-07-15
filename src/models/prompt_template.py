@@ -71,10 +71,22 @@ EXTRACT_INSTRUCTION = """
 Now please extract the corresponding information from the text. Ensure that the information you extract has a clear reference in the given text. Set any property not explicitly mentioned in the text to null.
 """
 
+EXTRACT_INSTRUCTION_ANOTHER = """
+**Instruction**: You are an agent skilled in information extarction. {instruction}
+{examples}
+**Text**: {text}
+{additional_info}
+**Output Schema**: {schema}
+
+Now please extract the corresponding information from the text. Please pay attention to the implicit information in the text, and do multi-hop reasoning. Hidden entities can be inferred from the text. This entity does not need to appear explicitly in the text, but needs to be inferred. Set any property not explicitly mentioned in the text to null.
+"""
+
 extract_instruction = PromptTemplate(
     input_variables=["instruction", "examples", "text", "schema", "additional_info"],
     template=EXTRACT_INSTRUCTION,
 )
+# 将此处的EXTRACT_INSTRUCTION改成EXTRACT_INSTRUCTION_ANOTHER即可提升模型的抽取多样性
+# 多样性优化
 
 instruction_mapper = {
     'NER': "You are an expert in named entity recognition. Please extract entities that match the schema definition from the input. Return an empty list if the entity type does not exist. Please respond in the format of a JSON string.",
@@ -109,9 +121,23 @@ summarize_instruction = PromptTemplate(
     input_variables=["instruction", "examples", "answer_list", "schema"],
     template=SUMMARIZE_INSTRUCTION,
 )
+# 关系抽取方向性优化，提升关系抽取的头实体和尾实体相对位置的准确性
+CHECK_INSTRUCTION = """
+**Instruction**: You are an expert in knowledge graph construction. Your task is to check whether the direction of the given relation triples is correct. If it is incorrect, please provide the correct direction in the ouput schema
+Judging Criteria:
+1. The relation should reflect a subject-to-object structure. Please note: If the head entity + relationship + tail entity can form a logically correct sentence(the sentence is formed by splicing "head entity + relationship + tail entity), then it can be considered correct. Otherwise, the order of the head entity and the tail entity needs to be changed, but the relationship type cannot be changed.
+2. The judgment should be based on common sense, encyclopedic knowledge, or natural semantic expression in language.
+Below is a list of results obtained after segmenting and extracting information from a long article. Please consolidate all the answers to generate a final response.
 
+**Predict result**: {pred}
 
-
+**Output Schema**: {schema}
+Now check whether the direction of the given relation triples is correct. If it is incorrect, please provide the correct direction in the ouput schema
+"""
+check_instruction = PromptTemplate(
+    input_variables=["pred", "schema"],
+    template=CHECK_INSTRUCTION,
+)
 
 # ==================================================================== #
 #                          REFLECION AGENT                             #

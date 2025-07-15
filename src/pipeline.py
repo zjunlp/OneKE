@@ -3,7 +3,7 @@ from models import *
 from utils import *
 from modules import *
 from construct import *
-
+import pdb
 
 class Pipeline:
     def __init__(self, llm: BaseEngine):
@@ -107,12 +107,20 @@ class Pipeline:
                 frontend_schema = data.print_schema
                 print_schema = True
         data = self.extraction_agent.summarize_answer(data)
-
+        # 改进，用于加强关系抽取的能力
+        data = self.extraction_agent.check_directionality(data)
         # show result
         if show_trajectory:
             print("Extraction Trajectory: \n", json.dumps(data.get_result_trajectory(), indent=2))
+
         extraction_result = json.dumps(data.pred, indent=2)
-        print("Extraction Result: \n", extraction_result)
+        if isinstance(data.pred, dict):
+            # with open("E:/zjuse/OneKE/ouput/Triple2KG.json", "w", encoding='utf-8') as f:
+            #     json.dump(data.pred, f, indent=2)
+            extraction_result = json.dumps(data.pred, indent=2)
+            print("Extraction Result: \n", extraction_result)
+        else:
+            print("Extraction Result: \n", data.pred)
 
         # construct KG
         if iskg:
