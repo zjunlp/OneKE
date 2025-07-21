@@ -7,6 +7,11 @@ import gradio as gr
 import json
 import random
 import re
+import os
+
+# Set proxy for requests
+os.environ['http_proxy'] = 'http://127.0.0.1:7890'
+os.environ['https_proxy'] = 'http://127.0.0.1:7890'
 
 from models import *
 from pipeline import Pipeline
@@ -452,4 +457,6 @@ def create_interface():
 # Launch the front-end interface
 if __name__ == "__main__":
     interface = create_interface()
-    interface.launch() # the Gradio defalut URL usually is: 127.0.0.1:7860
+    # interface.launch() # the Gradio defalut URL usually is: 127.0.0.1:7860
+    interface.launch(share=True)
+

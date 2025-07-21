@@ -7,7 +7,9 @@ import models
 from models import *
 from utils import *
 from modules import *
-
+# Set proxy for requests
+os.environ['http_proxy'] = 'http://127.0.0.1:7890'
+os.environ['https_proxy'] = 'http://127.0.0.1:7890'
 def main():
     # Create command-line argument parser
     parser = argparse.ArgumentParser(description='Run the extraction framefork.')
@@ -39,12 +41,12 @@ def main():
     if 'construct' in config:
         construct_config = config['construct']
         result, trajectory, _, _ = pipeline.get_extract_result(task=extraction_config['task'], instruction=extraction_config['instruction'], text=extraction_config['text'], output_schema=extraction_config['output_schema'], constraint=extraction_config['constraint'], use_file=extraction_config['use_file'], file_path=extraction_config['file_path'], truth=extraction_config['truth'], mode=extraction_config['mode'], update_case=extraction_config['update_case'], show_trajectory=extraction_config['show_trajectory'],
-                                                               construct=construct_config, iskg=True) # When 'construct' is provided, 'iskg' should be True to construct the knowledge graph.
+                                                               construct=construct_config, iskg=True,config_name=args.config) # When 'construct' is provided, 'iskg' should be True to construct the knowledge graph.
         return
     else:
         print("please provide construct config in the yaml file.")
 
-    result, trajectory, _, _ = pipeline.get_extract_result(task=extraction_config['task'], instruction=extraction_config['instruction'], text=extraction_config['text'], output_schema=extraction_config['output_schema'], constraint=extraction_config['constraint'], use_file=extraction_config['use_file'], file_path=extraction_config['file_path'], truth=extraction_config['truth'], mode=extraction_config['mode'], update_case=extraction_config['update_case'], show_trajectory=extraction_config['show_trajectory'])
+    result, trajectory, _, _ = pipeline.get_extract_result(task=extraction_config['task'], instruction=extraction_config['instruction'], text=extraction_config['text'], output_schema=extraction_config['output_schema'], constraint=extraction_config['constraint'], use_file=extraction_config['use_file'], file_path=extraction_config['file_path'], truth=extraction_config['truth'], mode=extraction_config['mode'], update_case=extraction_config['update_case'], show_trajectory=extraction_config['show_trajectory'],config_name=args.config)
     return
 
 if __name__ == "__main__":

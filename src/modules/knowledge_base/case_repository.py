@@ -3,6 +3,11 @@ import os
 import torch
 import numpy as np
 from utils import *
+
+# Set proxy for requests
+os.environ['http_proxy'] = 'http://127.0.0.1:7890'
+os.environ['https_proxy'] = 'http://127.0.0.1:7890'
+
 from sentence_transformers import SentenceTransformer
 from rapidfuzz import process
 from models import *

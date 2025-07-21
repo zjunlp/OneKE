@@ -12,6 +12,10 @@ import openai
 import os
 from openai import OpenAI
 
+# Set proxy for requests
+os.environ['http_proxy'] = 'http://127.0.0.1:7890'
+os.environ['https_proxy'] = 'http://127.0.0.1:7890'
+
 # The inferencing code is taken from the official documentation
 
 class BaseEngine:

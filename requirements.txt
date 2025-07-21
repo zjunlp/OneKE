@@ -17,4 +17,3 @@ bitsandbytes==0.45.0
 vllm==0.6.0
 gradio==4.44.0
 neo4j==5.28.1
-pydantic==2.10.6

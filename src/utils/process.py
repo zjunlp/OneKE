@@ -145,7 +145,8 @@ def chunk_file(file_path):
     elif file_path.endswith(".docx"):
         loader = Docx2txtLoader(file_path)
     elif file_path.endswith(".html"):
-        loader = BSHTMLLoader(file_path)
+        # loader = BSHTMLLoader(file_path)
+        loader = BSHTMLLoader(file_path, open_encoding='utf-8', bs_kwargs={'features': 'lxml'})
     elif file_path.endswith(".json"):
         loader = JSONLoader(file_path)
     else:
@@ -228,7 +229,7 @@ def format_string(s):
     s = s.lower()
     s = s.replace('{','').replace('}','')
     s = re.sub(',+', ',', s)
-    s = re.sub('\.+', '.', s)
+    s = re.sub(r'\.+', '.', s)
     s = re.sub(';+', ';', s)
     s = s.replace('’', "'")
     return s

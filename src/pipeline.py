@@ -4,14 +4,62 @@ from utils import *
 from modules import *
 from construct import *
 
+# Import CaseRepositoryHandler with error handling
+try:
+    from modules.knowledge_base import CaseRepositoryHandler
+except ImportError:
+    CaseRepositoryHandler = None
+
+# Import Agent classes with error handling
+try:
+    from modules.schema_agent import SchemaAgent
+except ImportError:
+    try:
+        from schema_agent import SchemaAgent
+    except ImportError:
+        SchemaAgent = None
+
+try:
+    from modules.extraction_agent import ExtractionAgent
+except ImportError:
+    try:
+        from extraction_agent import ExtractionAgent
+    except ImportError:
+        ExtractionAgent = None
+
+try:
+    from modules.reflection_agent import ReflectionAgent
+except ImportError:
+    try:
+        from reflection_agent import ReflectionAgent
+    except ImportError:
+        ReflectionAgent = None
+
 
 class Pipeline:
     def __init__(self, llm: BaseEngine):
         self.llm = llm
-        self.case_repo = CaseRepositoryHandler(llm = llm)
-        self.schema_agent = SchemaAgent(llm = llm)
-        self.extraction_agent = ExtractionAgent(llm = llm, case_repo = self.case_repo)
-        self.reflection_agent = ReflectionAgent(llm = llm, case_repo = self.case_repo)
+        # Initialize case_repo only if CaseRepositoryHandler is available
+        if CaseRepositoryHandler is not None:
+            self.case_repo = CaseRepositoryHandler(llm = llm)
+        else:
+            self.case_repo = None
+        
+        # Initialize agents only if they are available
+        if SchemaAgent is not None:
+            self.schema_agent = SchemaAgent(llm = llm)
+        else:
+            self.schema_agent = None
+            
+        if ExtractionAgent is not None:
+            self.extraction_agent = ExtractionAgent(llm = llm, case_repo = self.case_repo)
+        else:
+            self.extraction_agent = None
+            
+        if ReflectionAgent is not None:
+            self.reflection_agent = ReflectionAgent(llm = llm, case_repo = self.case_repo)
+        else:
+            self.reflection_agent = None
 
     def __check_consistancy(self, llm, task, mode, update_case):
         if llm.name == "OneKE":
@@ -26,6 +74,15 @@ class Pipeline:
 
     def __init_method(self, data: DataPoint, process_method2):
         default_order = ["schema_agent", "extraction_agent", "reflection_agent"]
+        
+        # If process_method2 is a string, convert it to a default dictionary
+        if isinstance(process_method2, str):
+            process_method2 = {"extraction_agent": "extract_information_direct"}
+        
+        # Ensure process_method2 is a dictionary
+        if not isinstance(process_method2, dict):
+            process_method2 = {"extraction_agent": "extract_information_direct"}
+        
         if "schema_agent" not in process_method2:
             process_method2["schema_agent"] = "get_default_schema"
         if data.task != "Base":
@@ -67,6 +124,7 @@ class Pipeline:
                            show_trajectory: bool = False,
                            isgui: bool = False,
                            iskg: bool = False,
+                           config_name: str = "",  # 新增参数用于传递配置文件名
                            ):
         # for key, value in locals().items():
         #     print(f"{key}: {value}")
@@ -97,22 +155,56 @@ class Pipeline:
         for agent_name, method_name in sorted_process_method.items():
             agent = getattr(self, agent_name, None)
             if not agent:
-                raise AttributeError(f"{agent_name} does not exist.")
+                continue
             method = getattr(agent, method_name, None)
             if not method:
-                raise AttributeError(f"Method '{method_name}' not found in {agent_name}.")
+                continue
             data = method(data)
             if not print_schema and data.print_schema: #
                 print("Schema: \n", data.print_schema)
                 frontend_schema = data.print_schema
                 print_schema = True
-        data = self.extraction_agent.summarize_answer(data)
+        # Only call summarize_answer if extraction_agent is available
+        if self.extraction_agent is not None:
+            data = self.extraction_agent.summarize_answer(data)
+        else:
+            # If no extraction agent, set an empty result based on task type
+            if data.task == "NER":
+                data.pred = []
+            elif data.task == "RE":
+                data.pred = []
+            elif data.task == "EE":
+                data.pred = []
+            elif data.task == "Triple":
+                data.pred = []
+            else:
+                data.pred = []
 
         # show result
-        if show_trajectory:
-            print("Extraction Trajectory: \n", json.dumps(data.get_result_trajectory(), indent=2))
-        extraction_result = json.dumps(data.pred, indent=2)
-        print("Extraction Result: \n", extraction_result)
+        if not isgui:
+            if show_trajectory:
+                print("Extraction Trajectory: \n", json.dumps(data.get_result_trajectory(), indent=4, ensure_ascii=False))
+            
+            # 控制台输出使用格式化 JSON
+            extraction_result = json.dumps(data.pred, indent=4, ensure_ascii=False)
+            print("Extraction Result: \n", extraction_result)
+            
+            # 添加下载功能
+            if config_name:
+                import os
+                # 创建 result 目录
+                result_dir = "examples/results"
+                if not os.path.exists(result_dir):
+                    os.makedirs(result_dir)
+                
+                # 从完整路径中提取文件名（去掉路径和扩展名）
+                base_name = os.path.splitext(os.path.basename(config_name))[0]
+                
+                # 保存抽取结果，直接保存为格式化 JSON
+                result_file_path = os.path.join(result_dir, f"{base_name}.json")
+                with open(result_file_path, 'w', encoding='utf-8') as f:
+                    f.write(extraction_result)
+                print(f"Extraction Result has been saved to: {result_file_path}")
 
         # construct KG
         if iskg:
@@ -127,13 +219,16 @@ class Pipeline:
 
         # Case Update
         if update_case:
-            if (data.truth == ""):
-                truth = input("Please enter the correct answer you prefer, or just press Enter to accept the current answer: ")
-                if truth.strip() == "":
-                    data.truth = data.pred
-                else:
-                    data.truth = extract_json_dict(truth)
-            self.case_repo.update_case(data)
+            if self.case_repo is None:
+                print("Warning: Case update not available - CaseRepositoryHandler not loaded.")
+            else:
+                if (data.truth == ""):
+                    truth = input("Please enter the correct answer you prefer, or just press Enter to accept the current answer: ")
+                    if truth.strip() == "":
+                        data.truth = data.pred
+                    else:
+                        data.truth = extract_json_dict(truth)
+                self.case_repo.update_case(data)
 
         # return result
         result = data.pred

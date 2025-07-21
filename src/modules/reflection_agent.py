@@ -1,7 +1,12 @@
 from models import *
 from utils import *
 from .extraction_agent import ExtractionAgent
-from .knowledge_base.case_repository import CaseRepositoryHandler
+
+# Optional import for CaseRepositoryHandler
+try:
+    from .knowledge_base.case_repository import CaseRepositoryHandler
+except ImportError:
+    CaseRepositoryHandler = None
 class ReflectionGenerator:
     def __init__(self, llm: BaseEngine):
         self.llm = llm
@@ -15,12 +20,16 @@ class ReflectionGenerator:
         return response
 
 class ReflectionAgent:
-    def __init__(self, llm: BaseEngine, case_repo: CaseRepositoryHandler):
+    def __init__(self, llm: BaseEngine, case_repo=None):
         self.llm = llm
         self.module = ReflectionGenerator(llm = llm)
         self.extractor = ExtractionAgent(llm = llm, case_repo = case_repo)
         self.case_repo = case_repo
-        self.methods = ["reflect_with_case"]
+        # Only include reflection method if case_repo is available
+        if case_repo is not None:
+            self.methods = ["reflect_with_case"]
+        else:
+            self.methods = []
 
     def __select_result(self, result_list):
         dict_objects = [obj for obj in result_list if isinstance(obj, dict)]
@@ -57,6 +66,10 @@ class ReflectionAgent:
             return reflect_index
 
     def reflect_with_case(self, data: DataPoint):
+        if self.case_repo is None:
+            print("Warning: Case repository not available, skipping reflection.")
+            return data
+        
         if data.result_list == []:
             return data
         reflect_index = self.__self_consistance_check(data)
