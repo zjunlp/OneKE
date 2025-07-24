@@ -210,15 +210,17 @@ Refer to [here](https://github.com/zjunlp/OneKE/tree/main/examples/results) to g
 Execute the following commands in the `OneKE` directory:
 
 ```bash
-python src/webui.py
+cd frontend/
+chmod u+x start.sh
+bash ./start.sh
 ```
 
 **Step2: Open your Web Browser**
 
-The front-end is built with Gradio, and the default port of Gradio is 7860. Therefore, please enter the following URL in your browser's address bar to open the web interface:
+The front-end is built with Streamlit, and the default port is 8501. Therefore, please enter the following URL in your browser's address bar to open the web interface:
 
 ```
- http://127.0.0.1:7860
+ http://0.0.0.0:8501
 ```
 
 The web service interface is now complete, so you can visually configure tasks and obtain results through it.

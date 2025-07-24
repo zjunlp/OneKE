@@ -22,9 +22,7 @@ class InformationExtractor:
 
     def summarize_answer(self, instruction="", answer_list="", schema="", additional_info=""):
         prompt = summarize_instruction.format(instruction=instruction, answer_list=answer_list, schema=schema, additional_info=additional_info)
-        print("Summarize Instruction: ", prompt)
         response = self.llm.get_chat_response(prompt)
-        print("Summarized Answer: ", response)
         response = extract_json_dict(response)
         return response
 
