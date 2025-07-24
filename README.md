@@ -51,6 +51,7 @@
 ---
 
 ## 🔔News
+- **[2025/07] We update the OneKE frontend demo to support visualization of constructed knowledge graphs.**
 - **[2025/03] We add the Triple Extraction Task for automated knowledge graph construction.**
 - **[2025/02] We support the local deployment of the [DeepSeek-R1](https://huggingface.co/collections/deepseek-ai/deepseek-r1-678e1e131c0169c0bc89728d) series in addition to the existing API service, as well as vllm acceleration for other LLMs.**
 - **[2025/01] [OneKE](https://arxiv.org/abs/2412.20005) is accepted by WWW 2025 Demonstration Track 🎉🎉🎉.**
