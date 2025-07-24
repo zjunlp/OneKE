@@ -5,29 +5,29 @@ from config.settings import PROXY_CONFIG
 
 
 def set_proxy_config(host, port):
-    """设置代理配置"""
+    """Set proxy configuration"""
     proxy_url = f"http://{host}:{port}"
     for var in PROXY_CONFIG["environment_variables"]:
         if var == 'USE_PROXY':
             os.environ[var] = 'true'
         else:
             os.environ[var] = proxy_url
-    print(f"代理已设置为: {proxy_url}")
+    print(f"Proxy has been set to: {proxy_url}")
 
 
 def render_proxy_configuration():
-    """渲染代理配置部分"""
+    """Render proxy configuration section"""
     with st.expander("🌐 Proxy Configuration", expanded=False):
         st.markdown("**Configure proxy settings for better model downloading from Hugging Face**")
         
-        # 启用代理复选框
+        # Enable proxy checkbox
         enable_proxy = st.checkbox(
             "Enable Proxy",
             value=st.session_state.get('proxy_enabled', PROXY_CONFIG["default_enabled"]),
             help="Enable proxy for network requests"
         )
         
-        # 代理地址和端口输入
+        # Proxy address and port input
         col_proxy1, col_proxy2 = st.columns(2)
         with col_proxy1:
             proxy_host = st.text_input(
@@ -45,7 +45,7 @@ def render_proxy_configuration():
                 help="Enter proxy server port"
             )
         
-        # 应用代理设置按钮
+        # Apply proxy settings button
         if st.button("Apply Proxy Settings", key="apply_proxy"):
             if enable_proxy and proxy_host and proxy_port:
                 try:
@@ -58,7 +58,7 @@ def render_proxy_configuration():
                     st.error(f"❌ Failed to set proxy: {str(e)}")
             elif not enable_proxy:
                 try:
-                    # 禁用代理
+                    # Disable proxy
                     if 'http_proxy' in os.environ:
                         del os.environ['http_proxy']
                     if 'https_proxy' in os.environ:
@@ -70,7 +70,7 @@ def render_proxy_configuration():
             else:
                 st.warning("⚠️ Please provide both proxy host and port")
         
-        # 显示当前代理状态
+        # Display current proxy status
         if st.session_state.get('proxy_enabled', False):
             current_host = st.session_state.get('proxy_host', '')
             current_port = st.session_state.get('proxy_port', '')
@@ -78,12 +78,12 @@ def render_proxy_configuration():
         else:
             st.info("🌐 Proxy: Disabled")
         
-        # 测试代理连接按钮
+        # Test proxy connection button
         if st.button("Test Proxy Connection", key="test_proxy"):
             if st.session_state.get('proxy_enabled', False):
                 with st.spinner("Testing proxy connection..."):
                     try:
-                        # 测试连接到一个简单的网站
+                        # Test connection to a simple website
                         response = requests.get('https://httpbin.org/ip', timeout=10)
                         if response.status_code == 200:
                             st.success("✅ Proxy connection successful!")

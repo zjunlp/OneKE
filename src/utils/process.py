@@ -189,7 +189,8 @@ def extract_json_dict(text):
     matches = re.findall(pattern, text)
     if matches:
         json_string = matches[-1]
-        json_string = process_single_quotes(json_string)
+        json_string = json_string.encode('utf-8').decode('unicode_escape')
+        # json_string = process_single_quotes(json_string)
         try:
             json_dict = json.loads(json_string)
             json_dict = remove_empty_values(json_dict)

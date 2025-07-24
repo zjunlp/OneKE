@@ -25,16 +25,16 @@ try:
 except ImportError:
     NEO4J_AVAILABLE = False
 
-# 代理设置函数 - 支持用户配置
+# Proxy configuration function - supports user configuration
 def set_proxy_config(enable_proxy=PROXY_CONFIG["default_enabled"], 
                     proxy_host=PROXY_CONFIG["default_host"], 
                     proxy_port=PROXY_CONFIG["default_port"]):
-    """设置代理配置
+    """Set proxy configuration
     
     Args:
-        enable_proxy (bool): 是否启用代理
-        proxy_host (str): 代理服务器地址
-        proxy_port (str): 代理端口
+        enable_proxy (bool): Whether to enable the proxy
+        proxy_host (str): Proxy server address
+        proxy_port (str): Proxy port
     """
     if enable_proxy:
         proxy_url = f"http://{proxy_host}:{proxy_port}"
@@ -43,17 +43,16 @@ def set_proxy_config(enable_proxy=PROXY_CONFIG["default_enabled"],
                 os.environ[var] = 'true'
             else:
                 os.environ[var] = proxy_url
-        print(f"🔧 代理已启用: {proxy_url}")
+        print(f"🔧 Proxy enabled: {proxy_url}")
     else:
-        # 清除代理设置
+        # Clear proxy settings
         for key in PROXY_CONFIG["environment_variables"]:
             os.environ.pop(key, None)
-        print("❌ 代理已禁用")
+        print("❌ Proxy disabled")
 
-# 初始化时不设置代理，等待用户配置
-# print("⚙️ 代理配置将由用户在界面中设置")
+# Do not set proxy during initialization, wait for user configuration
 
-# 添加OneKE源码路径
+# Add OneKE source path
 oneke_path = ONEKE_CONFIG["source_path"]
 if oneke_path.exists():
     sys.path.insert(0, str(oneke_path))
@@ -64,7 +63,6 @@ if oneke_path.exists():
         from utils import *
         ONEKE_AVAILABLE = True
         
-        # 尝试导入construct模块
         try:
             from construct.convert import generate_cypher_statements, execute_cypher_statements
             CONSTRUCT_AVAILABLE = True
@@ -79,17 +77,10 @@ else:
     CONSTRUCT_AVAILABLE = False
     st.warning(ERROR_MESSAGES["oneke_not_available"])
 
-# OneKEProcessor不再需要，直接使用Pipeline
-
-
-# 结果展示相关函数已移动到 components/results.py
-
-# 导入示例数据
 
 examples = get_examples()
 
 def get_model_category(model_name_or_path):
-    """获取模型类别，复制自webui.py"""
     if model_name_or_path in MODEL_CONFIG["supported_models"]["gpt"]:
         return ChatGPT
     elif model_name_or_path in MODEL_CONFIG["supported_models"]["deepseek"]:
@@ -106,7 +97,6 @@ def get_model_category(model_name_or_path):
         return BaseEngine
 
 def start_with_example():
-    """随机选择一个示例，复制自webui.py"""
     example_index = random.randint(-3, len(examples) - 1)
     example_index = max(example_index, 0)
     example = get_example_by_index(example_index)
@@ -127,7 +117,7 @@ def start_with_example():
 
 
 
-# 页面配置
+# Page configuration
 st.set_page_config(
     page_title=APP_CONFIG["page_title"],
     page_icon=APP_CONFIG["page_icon"],
@@ -135,16 +125,16 @@ st.set_page_config(
     initial_sidebar_state=APP_CONFIG["initial_sidebar_state"]
 )
 
-# 初始化session state
+# Initialize session state
 for key, default_value in SESSION_DEFAULTS.items():
     if key not in st.session_state:
         st.session_state[key] = default_value
 
 def main():
-    """主应用函数"""
+    """Main application function"""
     
-    # 页面标题和描述 - 基于OneKE项目的Streamlit前端
-    # 原OneKE项目信息（已注释）:
+    # Page title and description - Based on OneKE project Streamlit frontend
+    # Original OneKE project information (commented out):
     # OneKE: A Dockerized Schema-Guided LLM Agent-based Knowledge Extraction System
     # 🌐Home: http://oneke.openkg.cn/
     # 📹Video: http://oneke.openkg.cn/demo.mp4
@@ -162,10 +152,10 @@ def main():
     </div>
     """, unsafe_allow_html=True)
     
-    # 获取当前示例数据（必须在侧边栏配置之前定义）
+    # Get current example data (must be defined before sidebar configuration)
     current_example = st.session_state.get("current_example") or {}
     
-    # 随机示例按钮
+    # Random example button
     col_example1, col_example2, col_example3 = st.columns([1, 2, 1])
     with col_example2:
         if st.button("🎲 Quick Start with an Example 🎲", type="primary", use_container_width=True):
@@ -173,10 +163,10 @@ def main():
             st.session_state.current_example = example
             st.rerun()
     
-    # 侧边栏配置
+    # Sidebar configuration
     sidebar_config = render_sidebar()
     
-    # 从侧边栏配置中提取变量
+    # Extract variables from sidebar configuration
     model_name = sidebar_config["model_name"]
     api_key = sidebar_config["api_key"]
     base_url = sidebar_config["base_url"]
@@ -185,7 +175,7 @@ def main():
     agent_config = sidebar_config["agent_config"]
     neo4j_config = sidebar_config["neo4j_config"]
     
-    # 为了兼容现有代码，设置Neo4j相关变量
+    # Set Neo4j related variables for compatibility with existing code
     if task_type == "Triple":
         neo4j_url = neo4j_config.get("url", "")
         neo4j_username = neo4j_config.get("username", "")
@@ -196,16 +186,14 @@ def main():
         neo4j_username = ""
         neo4j_password = ""
         enable_kg_construction = False
-        
-
     
-    # 主内容区域
+    # Main content area
     col1, col2 = st.columns([1, 2])
     
     with col1:
         st.header("📝 Input Configuration")
         
-        # 输入方式选择
+        # Input method selection
         default_use_file = current_example.get("use_file", False)
         use_file = st.checkbox(
             "📂 Use File",
@@ -213,24 +201,24 @@ def main():
             help="Choose between file upload or text input"
         )
         
-        # 文件上传或文本输入
+        # File upload or text input
         input_text = ""
         uploaded_file = None
         example_file_loaded = False
         
         if use_file:
-            # 检查是否有示例文件需要加载
+            # Check if there is an example file to load
             example_file_path = current_example.get("file_path")
             if example_file_path and os.path.exists(example_file_path):
-                # 显示示例文件信息
+                # Display example file information
                 st.info(f"📁 Example file loaded: {os.path.basename(example_file_path)}")
                 st.info("📄 File will be processed by OneKE backend")
                 input_text = f"[File: {os.path.basename(example_file_path)}]"
                 
-                # 标记示例文件已加载
+                # Mark that the example file has been loaded
                 example_file_loaded = True
             
-            # 如果没有加载示例文件，显示文件上传器
+            # If no example file is loaded, display file uploader
             if not example_file_loaded:
                 uploaded_file = st.file_uploader(
                 "📖 Upload a File",
@@ -239,13 +227,13 @@ def main():
             )
             
             if uploaded_file is not None:
-                # 所有文件都交给OneKE后端处理
+                # All files will be processed by OneKE backend
                 st.success(f"✅ Uploaded {uploaded_file.name} - will be processed by OneKE backend")
                 input_text = f"[File uploaded: {uploaded_file.name}]"
             else:
                 input_text = ""
         else:
-            # 文本输入
+            # Text input
             default_text = current_example.get("text", "")
             input_text = st.text_area(
                 "📖 Text",
@@ -256,7 +244,7 @@ def main():
             )
         
         if task_type == "Base":
-            # Base任务显示instruction和output_schema输入
+            # Base task displays instruction and output_schema input
             default_instruction = current_example.get("instruction", "")
             instruction = st.text_area(
                 "🕹️ Instruction",
@@ -275,13 +263,13 @@ def main():
                 help=UI_CONFIG["help_texts"]["output_schema"]
             )
             
-            # Base任务constraint强制为空
+            # Base task constraint is forced to be empty
             constraint = ""
         else:
-            # 其他任务只显示constraint输入，instruction使用预设值
+            # Other tasks only display constraint input, instruction uses preset values
             default_constraint = current_example.get("constraint", "")
             
-            # 为不同任务类型提供不同的约束格式提示
+            # Provide different constraint format prompts for different task types
             constraint_placeholder = TASK_CONFIG["constraint_placeholders"].get(task_type, 'Enter constraints')
             constraint_help = TASK_CONFIG["constraint_help_texts"].get(task_type, 'Define constraints for the task')
             
@@ -293,11 +281,11 @@ def main():
                 help=constraint_help
             )
             
-            # 其他任务instruction和output_schema使用预设值
+            # Other tasks instruction and output_schema use preset values
             instruction = ""
             output_schema = ""
         
-        # 更新案例选项
+        # Update case options
         default_update_case = current_example.get("update_case", False)
         update_case = st.checkbox(
             "💰 Update Case",
@@ -305,7 +293,7 @@ def main():
             help=UI_CONFIG["help_texts"]["update_case"]
         )
         
-        # 真值输入（仅在更新案例时显示）
+        # Truth input (only displayed when updating case)
         truth = ""
         if update_case:
             default_truth = current_example.get("truth", "")
@@ -317,11 +305,11 @@ def main():
                 help=UI_CONFIG["help_texts"]["truth"]
             )
         
-        # 执行抽取按钮
+        # Execute extraction button
         if st.button("🚀 Submit", type="primary"):
             with st.spinner(f"Performing {task_type} extraction in {mode} mode..."):
                 try:
-                    # 按照webui.py的submit函数逻辑重新创建Pipeline
+                    # Recreate Pipeline according to the logic of the submit function in webui.py
                     ModelClass = get_model_category(model_name)
                     if base_url == "Default" or base_url == "":
                         if api_key == "":
@@ -334,13 +322,13 @@ def main():
                         else:
                             pipeline = Pipeline(ModelClass(model_name_or_path=model_name, api_key=api_key, base_url=base_url))
                     
-                    # 根据任务类型处理参数（遵循原始OneKE设计）
+                    # Process parameters according to task type (following the original OneKE design)
                     if task_type == "Base":
-                        # Base任务：使用instruction，constraint强制为空
+                        # Base task: use instruction, constraint is forced to be empty
                         instruction = instruction
                         constraint = ""
                     else:
-                        # 其他任务：使用constraint，instruction强制为空（使用config中的预设值）
+                        # Other tasks: use constraint, instruction is forced to be empty (using preset values from config)
                         instruction = ""
                         constraint = constraint
                     
@@ -348,7 +336,7 @@ def main():
                     extraction_Agent = agent_config.get("extraction_Agent", "Not Required") if mode == "customized" and agent_config else "Not Required"
                     reflection_agent = agent_config.get("reflection_agent", "Not Required") if mode == "customized" and agent_config else "Not Required"
                     
-                    # 按照webui.py的逻辑构建agent3字典
+                    # Construct agent3 dictionary according to the logic of webui.py
                     agent3 = {}
                     if mode == "customized":
                         if schema_agent not in ["", "Not Required"]:
@@ -358,24 +346,24 @@ def main():
                         if reflection_agent not in ["", "Not Required"]:
                             agent3["reflection_agent"] = reflection_agent
                     
-                    # 按照webui.py的逻辑处理text和file_path参数
+                    # Process text and file_path parameters according to the logic in webui.py
                     if use_file:
                         text_param = ""
-                        # 检查是否使用示例文件
+                        # Check if using example file
                         example_file_path = current_example.get("file_path")
                         if example_file_path and os.path.exists(example_file_path):
-                            # 使用示例文件路径
+                            # Use example file path
                             file_path_param = example_file_path
                         elif uploaded_file is not None:
-                            # 对于Streamlit，我们需要处理上传的文件
-                            # 根据文件类型确定后缀名
+                            # For Streamlit, we need to handle the uploaded file
+                            # Determine the file extension based on the file type
                             file_extension = os.path.splitext(uploaded_file.name)[1]
                             if not file_extension:
                                 file_extension = '.txt'
                             
-                            # 保存上传的文件到临时位置
+                            # Save the uploaded file to a temporary location
                             with tempfile.NamedTemporaryFile(mode='wb', delete=False, suffix=file_extension) as tmp_file:
-                                # 重置文件指针到开始位置
+                                # Reset file pointer to the beginning
                                 uploaded_file.seek(0)
                                 tmp_file.write(uploaded_file.read())
                                 file_path_param = tmp_file.name
@@ -388,7 +376,7 @@ def main():
                     if not update_case:
                         truth = ""
                     
-                    # 使用Pipeline的get_extract_result方法，与webui.py保持一致
+                    # Use the get_extract_result method of Pipeline to maintain consistency with webui.py
                     _, _, ger_frontend_schema, ger_frontend_res = pipeline.get_extract_result(
                         task=task_type,
                         text=text_param,
@@ -405,7 +393,7 @@ def main():
                         show_trajectory=False,
                     )
                     
-                    # 按照webui.py的逻辑处理结果
+                    # Process results according to the logic in webui.py
                     ger_frontend_schema = str(ger_frontend_schema)
                     ger_frontend_res = json.dumps(ger_frontend_res, ensure_ascii=False, indent=4) if isinstance(ger_frontend_res, dict) else str(ger_frontend_res)
                     
@@ -417,9 +405,9 @@ def main():
                     st.session_state.extraction_results = result
                     st.success(f"Extraction completed successfully in {mode} mode!")
                     
-                    # 清理临时文件（但不删除示例文件）
+                    # Clean up temporary files (but do not delete example files)
                     if use_file and file_path_param and os.path.exists(file_path_param):
-                        # 只删除临时文件，不删除示例文件
+                        # Only delete temporary files, do not delete example files
                         example_file_path = current_example.get("file_path")
                         if file_path_param != example_file_path:
                             try:
@@ -428,7 +416,7 @@ def main():
                                 pass
                 
                 except Exception as e:
-                    # 参考webui.py的错误处理方式
+                    # Reference the error handling method in webui.py
                     error_message = f"⚠️ Error:\n {str(e)}"
                     result = {
                         "success": False,
@@ -437,26 +425,23 @@ def main():
                     st.session_state.extraction_results = result
                     st.error(f"Extraction failed: {str(e)}")
                     
-                    # 提供连接错误的具体建议
+                    # Provide specific suggestions for connection errors
                     if "Connection error" in str(e) or "connection" in str(e).lower():
                         st.warning("💡 Connection Error Solutions:")
                         for i, solution in enumerate(ERROR_MESSAGES["connection_error_solutions"], 1):
                             st.write(f"{i}. {solution}")
                     
-                    # 显示详细错误信息用于调试
+                    # Display detailed error information for debugging
                     with st.expander("Detailed Error Information"):
                         st.code(str(e))
         
         
-        # 清除按钮 - 与webui.py的clear_all行为一致
         if st.button("🧹 Clear All"):
-            # 重置extraction_results和current_example
             st.session_state.extraction_results = None
             st.session_state.current_example = {}
             st.rerun()
     
     with col2:
-        # 使用新的结果展示组件
         st.header("📊 Results")
         
         if st.session_state.extraction_results:
@@ -465,7 +450,6 @@ def main():
         else:
             st.info("👆 Configure your model and input text to start extraction.")
 
-# create_knowledge_graph_visualization 函数已移动到 components/results.py
 
 if __name__ == "__main__":
     main()

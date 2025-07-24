@@ -1,12 +1,6 @@
-import json
 from models import *
 from utils import *
-
-# Optional import for CaseRepositoryHandler
-try:
-    from .knowledge_base.case_repository import CaseRepositoryHandler
-except ImportError:
-    CaseRepositoryHandler = None
+from .knowledge_base.case_repository import CaseRepositoryHandler
 
 class InformationExtractor:
     def __init__(self, llm: BaseEngine):
@@ -28,48 +22,21 @@ class InformationExtractor:
 
     def summarize_answer(self, instruction="", answer_list="", schema="", additional_info=""):
         prompt = summarize_instruction.format(instruction=instruction, answer_list=answer_list, schema=schema, additional_info=additional_info)
+        print("Summarize Instruction: ", prompt)
         response = self.llm.get_chat_response(prompt)
+        print("Summarized Answer: ", response)
         response = extract_json_dict(response)
         return response
 
 class ExtractionAgent:
-    def __init__(self, llm: BaseEngine, case_repo=None):
+    def __init__(self, llm: BaseEngine, case_repo: CaseRepositoryHandler):
         self.llm = llm
         self.module = InformationExtractor(llm = llm)
         self.case_repo = case_repo
-        # Only include case-based method if case_repo is available
-        if case_repo is not None:
-            self.methods = ["extract_information_direct", "extract_information_with_case"]
-        else:
-            self.methods = ["extract_information_direct"]
+        self.methods = ["extract_information_direct", "extract_information_with_case"]
 
     def __get_constraint(self, data: DataPoint):
         if data.constraint in ("", [], {}, None):
-            # For Base task, we construct the constraint from instruction and schema
-            if data.task == "Base":
-                # --- Start of modification ---
-                # If no output_schema is provided, use a default, generic schema
-                # to ensure the model still returns a structured JSON.
-                output_schema = data.output_schema
-                if not output_schema:
-                    output_schema = {
-                        "type": "object",
-                        "properties": {
-                            "extracted_info": {
-                                "type": "string",
-                                "description": "The extracted information based on the instruction."
-                            }
-                        },
-                        "required": ["extracted_info"]
-                    }
-
-                constraint_dict = {
-                    "instruction": data.instruction,
-                    "schema": output_schema
-                }
-                # --- End of modification ---
-                data.constraint = json.dumps(constraint_dict, indent=4)
-                return data
             return data
         if data.task == "NER":
             constraint = json.dumps(data.constraint)
@@ -134,14 +101,10 @@ class ExtractionAgent:
         data = self.__get_constraint(data)
         result_list = []
         for chunk_text in data.chunk_text_list:
-            # --- Start of modification ---
-            # Always use the compatible, JSON-enforcing method for Base task
-            if data.task == "Base" or self.llm.name == "OneKE":
-                extract_direct_result = self.module.extract_information_compatible(task=data.task, text=chunk_text, constraint=data.constraint)
-            else:
-                # Other tasks can use their specific methods
+            if self.llm.name != "OneKE":
                 extract_direct_result = self.module.extract_information(instruction=data.instruction, text=chunk_text, schema=data.output_schema, examples="", additional_info=data.constraint)
-            # --- End of modification ---
+            else:
+                extract_direct_result = self.module.extract_information_compatible(task=data.task, text=chunk_text, constraint=data.constraint)
             result_list.append(extract_direct_result)
         function_name = current_function_name()
         data.set_result_list(result_list)
@@ -149,10 +112,6 @@ class ExtractionAgent:
         return data
 
     def extract_information_with_case(self, data: DataPoint):
-        if self.case_repo is None:
-            print("Warning: Case repository not available, falling back to direct extraction.")
-            return self.extract_information_direct(data)
-        
         data = self.__get_constraint(data)
         result_list = []
         for chunk_text in data.chunk_text_list:
@@ -167,11 +126,10 @@ class ExtractionAgent:
     def summarize_answer(self, data: DataPoint):
         if len(data.result_list) == 0:
             return data
-
-        # 将结果列表正确地转换为格式化的JSON字符串，再送入提示词
-        answer_list_str = json.dumps(data.result_list, ensure_ascii=False, indent=4)
-
-        summarized_result = self.module.summarize_answer(instruction=data.instruction, answer_list=answer_list_str, schema=data.output_schema, additional_info=data.constraint)
+        if len(data.result_list) == 1:
+            data.set_pred(data.result_list[0])
+            return data
+        summarized_result = self.module.summarize_answer(instruction=data.instruction, answer_list=data.result_list, schema=data.output_schema, additional_info=data.constraint)
         funtion_name = current_function_name()
         data.set_pred(summarized_result)
         data.update_trajectory(funtion_name, summarized_result)

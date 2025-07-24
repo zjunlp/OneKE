@@ -5,6 +5,7 @@ import sys
 import tempfile
 import random
 import re
+import requests
 from pathlib import Path
 from typing import Dict, Any, Optional
 import streamlit.components.v1 as components
@@ -17,14 +18,14 @@ try:
 except ImportError:
     NEO4J_AVAILABLE = False
 
-# 代理设置函数 - 支持用户配置
+# Proxy configuration function - supports user configuration
 def set_proxy_config(enable_proxy=False, proxy_host="127.0.0.1", proxy_port="7890"):
-    """设置代理配置
+    """Set proxy configuration
     
     Args:
-        enable_proxy (bool): 是否启用代理
-        proxy_host (str): 代理服务器地址
-        proxy_port (str): 代理端口
+        enable_proxy (bool): Whether to enable the proxy
+        proxy_host (str): Proxy server address
+        proxy_port (str): Proxy port
     """
     if enable_proxy:
         proxy_url = f"http://{proxy_host}:{proxy_port}"
@@ -33,17 +34,17 @@ def set_proxy_config(enable_proxy=False, proxy_host="127.0.0.1", proxy_port="789
         os.environ['HTTP_PROXY'] = proxy_url
         os.environ['HTTPS_PROXY'] = proxy_url
         os.environ['USE_PROXY'] = 'true'
-        print(f"🔧 代理已启用: {proxy_url}")
+        print(f"🔧 Proxy enabled: {proxy_url}")
     else:
-        # 清除代理设置
+        # Clear proxy settings
         for key in ['http_proxy', 'https_proxy', 'HTTP_PROXY', 'HTTPS_PROXY', 'USE_PROXY']:
             os.environ.pop(key, None)
-        print("❌ 代理已禁用")
+        print("❌ Proxy disabled")
 
-# 初始化时不设置代理，等待用户配置
-# print("⚙️ 代理配置将由用户在界面中设置")
+# Do not set proxy during initialization, waiting for user configuration
+# print("⚙️ Proxy configuration will be set by the user in the interface")
 
-# 添加OneKE源码路径
+# Add OneKE source path
 oneke_path = Path("./src")
 if oneke_path.exists():
     sys.path.insert(0, str(oneke_path))
@@ -54,7 +55,7 @@ if oneke_path.exists():
         from utils import *
         ONEKE_AVAILABLE = True
         
-        # 尝试导入construct模块
+        # Try to import construct module
         try:
             from construct.convert import generate_cypher_statements, execute_cypher_statements
             CONSTRUCT_AVAILABLE = True
@@ -69,11 +70,11 @@ else:
     CONSTRUCT_AVAILABLE = False
     st.warning("OneKE source path not found. Using fallback implementations.")
 
-# OneKEProcessor不再需要，直接使用Pipeline
+# OneKEProcessor is no longer needed, directly use Pipeline
 
 
 def generate_cypher_from_result(result_str):
-    """从抽取结果生成Cypher语句"""
+    """Generate Cypher statements from extraction results"""
     try:
         if isinstance(result_str, str):
             result_data = json.loads(result_str)
@@ -82,7 +83,7 @@ def generate_cypher_from_result(result_str):
         
         cypher_statements = []
         
-        # 处理OneKE Triple任务的输出格式：{"triple_list": [...]}
+        # Handle OneKE Triple task output format: {"triple_list": [...]}
         if isinstance(result_data, dict) and 'triple_list' in result_data:
             triple_list = result_data['triple_list']
             for item in triple_list:
@@ -91,7 +92,7 @@ def generate_cypher_from_result(result_str):
                     tail = str(item['tail']).replace("'", "\\'")
                     relation = str(item['relation']).replace("'", "\\'")
                     
-                    # 使用类型信息（如果可用）
+                    # Use type information (if available)
                     head_type = item.get('head_type', 'Entity')
                     tail_type = item.get('tail_type', 'Entity')
                     relation_type = item.get('relation_type', relation)
@@ -101,7 +102,7 @@ def generate_cypher_from_result(result_str):
                     cypher += f"\nMERGE (h)-[:{relation_type.replace(' ', '_').upper()}]->(t);"
                     cypher_statements.append(cypher)
         
-        # 处理简单的三元组列表格式（向后兼容）
+        # Handle simple triple list format (backward compatibility)
         elif isinstance(result_data, list):
             for item in result_data:
                 if isinstance(item, dict) and 'head' in item and 'relation' in item and 'tail' in item:
@@ -122,24 +123,24 @@ def generate_cypher_from_result(result_str):
         return f"// Error generating Cypher: {str(e)}"
 
 def test_neo4j_connection(neo4j_url, neo4j_username, neo4j_password):
-    """测试Neo4j数据库连接"""
+    """Test Neo4j database connection"""
     if not NEO4J_AVAILABLE:
         return {"success": False, "error": "Neo4j driver not available. Please install: pip install neo4j"}
     
     try:
-        # 验证输入参数
+        # Validate input parameters
         if not neo4j_url or not neo4j_username or not neo4j_password:
             return {"success": False, "error": "Please provide all connection parameters (URL, username, password)"}
         
-        # 尝试连接
+        # Try to connect
         driver = GraphDatabase.driver(neo4j_url, auth=(neo4j_username, neo4j_password))
         
-        # 测试连接
+        # Test connection
         with driver.session() as session:
             result = session.run("RETURN 'Connection successful' as message")
             message = result.single()["message"]
             
-            # 获取数据库信息
+            # Get database information
             db_info = session.run("CALL dbms.components() YIELD name, versions RETURN name, versions[0] as version")
             db_details = db_info.single()
             db_name = db_details["name"] if db_details else "Neo4j"
@@ -160,7 +161,7 @@ def test_neo4j_connection(neo4j_url, neo4j_username, neo4j_password):
         return {"success": False, "error": error_msg}
 
 def build_knowledge_graph(result_str, neo4j_url, neo4j_username, neo4j_password):
-    """构建知识图谱到Neo4j数据库"""
+    """Build knowledge graph to Neo4j database"""
     if not NEO4J_AVAILABLE:
         return {"success": False, "error": "Neo4j driver not available"}
     
@@ -172,12 +173,12 @@ def build_knowledge_graph(result_str, neo4j_url, neo4j_username, neo4j_password)
             return {"success": False, "error": "Failed to generate Cypher statements"}
         
         with driver.session() as session:
-            # 执行Cypher语句
+            # Execute Cypher statements
             for statement in cypher_statements.split("\n\n"):
                 if statement.strip():
                     session.run(statement)
             
-            # 获取统计信息
+            # Get statistics
             node_count = session.run("MATCH (n) RETURN count(n) as count").single()["count"]
             rel_count = session.run("MATCH ()-[r]->() RETURN count(r) as count").single()["count"]
             
@@ -189,7 +190,7 @@ def build_knowledge_graph(result_str, neo4j_url, neo4j_username, neo4j_password)
     except Exception as e:
         return {"success": False, "error": str(e)}
 
-# OneKE webui.py中的示例数据
+# OneKE webui.py example
 examples = [
     {
         "task": "Base",
@@ -310,7 +311,7 @@ examples = [
 ]
 
 def get_model_category(model_name_or_path):
-    """获取模型类别，复制自webui.py"""
+    """Get model category, copied from webui.py"""
     if model_name_or_path in ["gpt-3.5-turbo", "gpt-4o-mini", "gpt-4o", "o3-mini"]:
         return ChatGPT
     elif model_name_or_path in ["deepseek-chat", "deepseek-reasoner"]:
@@ -327,7 +328,7 @@ def get_model_category(model_name_or_path):
         return BaseEngine
 
 def start_with_example():
-    """随机选择一个示例，复制自webui.py"""
+    """Randomly select an example, copied from webui.py"""
     example_index = random.randint(-3, len(examples) - 1)
     example_index = max(example_index, 0)
     example = examples[example_index]
@@ -345,9 +346,7 @@ def start_with_example():
     
     return example
 
-
-
-# 页面配置
+# Page configuration
 st.set_page_config(
     page_title="OneKE Information Extraction",
     page_icon="🧠",
@@ -355,26 +354,20 @@ st.set_page_config(
     initial_sidebar_state="expanded"
 )
 
-# 初始化session state
+# Initialize session state
 if "extraction_results" not in st.session_state:
     st.session_state.extraction_results = None
 if "current_example" not in st.session_state:
     st.session_state.current_example = {}
 
 def main():
-    """主应用函数"""
-    
-    # 页面标题和描述 - 基于OneKE项目的Streamlit前端
-    # 原OneKE项目信息（已注释）:
-    # OneKE: A Dockerized Schema-Guided LLM Agent-based Knowledge Extraction System
-    # 🌐Home: http://oneke.openkg.cn/
-    # 📹Video: http://oneke.openkg.cn/demo.mp4
+    """main function"""
     
     st.markdown("""
     <div style="text-align:center;">
         <h1>OneKE-Streamlit-Frontend</h1>
         <p style="font-size: 18px; color: #666; margin-bottom: 10px;">
-            基于OneKE项目的Streamlit知识抽取前端界面
+            A Dockerized Schema-Guided Knowledge Extraction System
         </p>
         <p>
         📝<a href="https://arxiv.org/abs/2412.20005v2" target="_blank">OneKE Paper</a> |
@@ -383,7 +376,7 @@ def main():
     </div>
     """, unsafe_allow_html=True)
     
-    # 随机示例按钮
+    # Random example button
     col_example1, col_example2, col_example3 = st.columns([1, 2, 1])
     with col_example2:
         if st.button("🎲 Quick Start with an Example 🎲", type="primary", use_container_width=True):
@@ -391,14 +384,14 @@ def main():
             st.session_state.current_example = example
             st.rerun()
     
-    # 侧边栏配置
+    # Sidebar configuration
     with st.sidebar:
         st.header("⚙️ Configuration")
         
-        # 模型配置
+        # Model configuration
         st.subheader("Model Settings")
         
-        # 模型名称输入
+        # Model name input
         current_example = st.session_state.get("current_example") or {}
         default_model = current_example.get("model", "deepseek-chat")
         model_name = st.text_input(
@@ -416,7 +409,7 @@ def main():
             placeholder="If using a local-model, this field should be left empty.",
             help="Enter your API key"
         )
-        # 去除API key前后的空格
+        # Remove leading and trailing spaces from API key
         api_key = api_key.strip()
         
         # Base URL
@@ -426,18 +419,18 @@ def main():
             placeholder="If using the default Base-URL or a local-model, this field should be left empty.",
             help="Enter custom base URL if needed"
         )
-        # 去除Base URL前后的空格
+        # Remove leading and trailing spaces from Base URL
         base_url = base_url.strip()
         
-        # 模型配置完成提示
+        # Model configuration completion prompt
         st.info("💡 Model will be initialized automatically when you submit a task.")
         
         st.divider()
         
-        # 任务和模式配置
+        # Task and mode configuration
         st.subheader("Task Configuration")
         
-        # 任务类型选择
+        # Task type selection
         default_task = current_example.get("task", "Base")
         task_type = st.selectbox(
             "🎯 Select your Task",
@@ -446,7 +439,7 @@ def main():
             help="Choose the extraction task type"
         )
         
-        # Neo4j配置 - 仅在Triple任务时显示
+        # Neo4j configuration - only displayed for Triple task
         if task_type == "Triple":
             st.subheader("🗄️ Neo4j Database Configuration")
             neo4j_url = st.text_input(
@@ -474,7 +467,7 @@ def main():
                 key="enable_kg_construction"
             )
             
-            # Neo4j连接测试
+            # Neo4j connection test
             if st.button("🔍 Test Neo4j Connection", key="test_neo4j"):
                 test_result = test_neo4j_connection(
                     neo4j_url,
@@ -492,7 +485,7 @@ def main():
                     st.write("4. Check firewall settings")
                     st.write("5. Ensure Neo4j driver is installed: pip install neo4j")
         
-        # 模式选择
+        # Mode selection
         default_mode = current_example.get("mode", "quick")
         mode = st.selectbox(
             "🧭 Select your Mode",
@@ -501,7 +494,7 @@ def main():
             help="Choose the extraction mode"
         )
         
-        # 自定义模式的代理配置
+        # Proxy configuration for customized mode
         agent_config = {}
         if mode == "customized":
             st.subheader("Agent Configuration")
@@ -529,14 +522,14 @@ def main():
         with st.expander("🌐 Proxy Configuration", expanded=False):
             st.markdown("**Configure proxy settings for better model downloading from Hugging Face**")
             
-            # 启用代理复选框
+            # Enable proxy checkbox
             enable_proxy = st.checkbox(
                 "Enable Proxy",
                 value=st.session_state.get('proxy_enabled', False),
                 help="Enable proxy for network requests"
             )
             
-            # 代理地址和端口输入
+            # Proxy address and port input
             col_proxy1, col_proxy2 = st.columns(2)
             with col_proxy1:
                 proxy_host = st.text_input(
@@ -554,7 +547,7 @@ def main():
                     help="Enter proxy server port"
                 )
             
-            # 应用代理设置按钮
+            # Apply proxy settings button
             if st.button("Apply Proxy Settings", key="apply_proxy"):
                 if enable_proxy and proxy_host and proxy_port:
                     try:
@@ -567,7 +560,7 @@ def main():
                         st.error(f"❌ Failed to set proxy: {str(e)}")
                 elif not enable_proxy:
                     try:
-                        # 禁用代理
+                        # Disable proxy
                         if 'http_proxy' in os.environ:
                             del os.environ['http_proxy']
                         if 'https_proxy' in os.environ:
@@ -579,7 +572,7 @@ def main():
                 else:
                     st.warning("⚠️ Please provide both proxy host and port")
             
-            # 显示当前代理状态
+            # Display current proxy status
             if st.session_state.get('proxy_enabled', False):
                 current_host = st.session_state.get('proxy_host', '')
                 current_port = st.session_state.get('proxy_port', '')
@@ -587,12 +580,12 @@ def main():
             else:
                 st.info("🌐 Proxy: Disabled")
             
-            # 测试代理连接按钮
+            # Test proxy connection button
             if st.button("Test Proxy Connection", key="test_proxy"):
                 if st.session_state.get('proxy_enabled', False):
                     with st.spinner("Testing proxy connection..."):
                         try:
-                            # 测试连接到一个简单的网站
+                            # Test connection to a simple website
                             response = requests.get('https://httpbin.org/ip', timeout=10)
                             if response.status_code == 200:
                                 st.success("✅ Proxy connection successful!")
@@ -604,15 +597,13 @@ def main():
                 else:
                     st.warning("⚠️ Please enable and configure proxy first")
         
-
-    
-    # 主内容区域
+    # Main content area
     col1, col2 = st.columns([1, 2])
     
     with col1:
         st.header("📝 Input Configuration")
         
-        # 输入方式选择
+        # Input method selection
         default_use_file = current_example.get("use_file", False)
         use_file = st.checkbox(
             "📂 Use File",
@@ -620,24 +611,24 @@ def main():
             help="Choose between file upload or text input"
         )
         
-        # 文件上传或文本输入
+        # File upload or text input
         input_text = ""
         uploaded_file = None
         example_file_loaded = False
         
         if use_file:
-            # 检查是否有示例文件需要加载
+            # Check if there is an example file to load
             example_file_path = current_example.get("file_path")
             if example_file_path and os.path.exists(example_file_path):
-                # 显示示例文件信息
+                # Display example file information
                 st.info(f"📁 Example file loaded: {os.path.basename(example_file_path)}")
                 st.info("📄 File will be processed by OneKE backend")
                 input_text = f"[File: {os.path.basename(example_file_path)}]"
                 
-                # 标记示例文件已加载
+                # Mark example file as loaded
                 example_file_loaded = True
             
-            # 如果没有加载示例文件，显示文件上传器
+            # If no example file is loaded, show file uploader
             if not example_file_loaded:
                 uploaded_file = st.file_uploader(
                     "📖 Upload a File",
@@ -646,13 +637,13 @@ def main():
                 )
             
             if uploaded_file is not None:
-                # 所有文件都交给OneKE后端处理
+                # All files will be processed by OneKE backend
                 st.success(f"✅ Uploaded {uploaded_file.name} - will be processed by OneKE backend")
                 input_text = f"[File uploaded: {uploaded_file.name}]"
             else:
                 input_text = ""
         else:
-            # 文本输入
+            # Text input
             default_text = current_example.get("text", "")
             input_text = st.text_area(
                 "📖 Text",
@@ -661,9 +652,9 @@ def main():
                 placeholder="Enter your Text please.",
                 help="Paste or type the text for information extraction"
             )
-        
+
         if task_type == "Base":
-            # Base任务显示instruction和output_schema输入
+            # Base task displays instruction and output_schema input
             default_instruction = current_example.get("instruction", "")
             instruction = st.text_area(
                 "🕹️ Instruction",
@@ -672,7 +663,7 @@ def main():
                 placeholder="You can enter any type of information you want to extract here, for example: Please help me extract all the person names.",
                 help="Provide specific instructions for the extraction task"
             )
-            
+
             default_output_schema = current_example.get("output_schema", "")
             output_schema = st.text_area(
                 "📋 Output Schema (Optional)",
@@ -681,14 +672,14 @@ def main():
                 placeholder='Custom output schema, e.g., {"type": "object", "properties": {"entities": {"type": "array"}}}',
                 help="Define custom output schema for Base tasks. Leave empty to use default schema."
             )
-            
-            # Base任务constraint强制为空
+
+            # Base task constraint is forced to be empty
             constraint = ""
         else:
-            # 其他任务只显示constraint输入，instruction使用预设值
+            # Other tasks only display constraint input, instruction uses preset value
             default_constraint = current_example.get("constraint", "")
-            
-            # 为不同任务类型提供不同的约束格式提示
+
+            # Provide different constraint format hints for different task types
             if task_type == "NER":
                 constraint_placeholder = 'Enter entity types as a list, e.g., ["Person", "Location", "Organization"]'
                 constraint_help = "Define entity types for Named Entity Recognition. Format: list of strings"
@@ -701,7 +692,7 @@ def main():
             else:  # Triple
                 constraint_placeholder = 'Enter constraints for Triple extraction'
                 constraint_help = "Define constraints for Triple extraction"
-            
+
             constraint = st.text_area(
                 "🕹️ Constraint",
                 value=default_constraint,
@@ -709,20 +700,20 @@ def main():
                 placeholder=constraint_placeholder,
                 help=constraint_help
             )
-            
-            # 其他任务instruction和output_schema使用预设值
+
+            # Other tasks use preset values for instruction and output_schema
             instruction = ""
             output_schema = ""
-        
-        # 更新案例选项
+
+        # Update case option
         default_update_case = current_example.get("update_case", False)
         update_case = st.checkbox(
             "💰 Update Case",
             value=default_update_case,
             help="Enable case updates for improved extraction"
         )
-        
-        # 真值输入（仅在更新案例时显示）
+
+        # Truth input (only displayed when updating case)
         truth = ""
         if update_case:
             default_truth = current_example.get("truth", "")
@@ -730,15 +721,15 @@ def main():
                 "🪙 Truth",
                 value=default_truth,
                 height=80,
-                placeholder='You can enter the truth you want LLM know, for example: {"relation_list": [{"head": "Guinea", "tail": "Conakry", "relation": "country capital"}]}',
+                placeholder='You can enter the truth you want LLM to know, for example: {"relation_list": [{"head": "Guinea", "tail": "Conakry", "relation": "country capital"}]}',
                 help="Provide ground truth information for case updates"
             )
-        
-        # 执行抽取按钮
+
+        # Execute extraction button
         if st.button("🚀 Submit", type="primary"):
             with st.spinner(f"Performing {task_type} extraction in {mode} mode..."):
                 try:
-                    # 按照webui.py的submit函数逻辑重新创建Pipeline
+                    # Recreate Pipeline according to the logic of webui.py's submit function
                     ModelClass = get_model_category(model_name)
                     if base_url == "Default" or base_url == "":
                         if api_key == "":
@@ -750,22 +741,22 @@ def main():
                             pipeline = Pipeline(ModelClass(model_name_or_path=model_name, base_url=base_url))
                         else:
                             pipeline = Pipeline(ModelClass(model_name_or_path=model_name, api_key=api_key, base_url=base_url))
-                    
-                    # 根据任务类型处理参数（遵循原始OneKE设计）
+
+                    # Process parameters according to task type (following original OneKE design)
                     if task_type == "Base":
-                        # Base任务：使用instruction，constraint强制为空
+                        # Base task: use instruction, constraint is forced to be empty
                         instruction = instruction
                         constraint = ""
                     else:
-                        # 其他任务：使用constraint，instruction强制为空（使用config中的预设值）
+                        # Other tasks: use constraint, instruction is forced to be empty (use preset values from config)
                         instruction = ""
                         constraint = constraint
-                    
+
                     schema_agent = agent_config.get("schema_agent", "Not Required") if mode == "customized" and agent_config else "Not Required"
                     extraction_Agent = agent_config.get("extraction_Agent", "Not Required") if mode == "customized" and agent_config else "Not Required"
                     reflection_agent = agent_config.get("reflection_agent", "Not Required") if mode == "customized" and agent_config else "Not Required"
-                    
-                    # 按照webui.py的逻辑构建agent3字典
+
+                    # Build agent3 dictionary according to webui.py logic
                     agent3 = {}
                     if mode == "customized":
                         if schema_agent not in ["", "Not Required"]:
@@ -774,25 +765,25 @@ def main():
                             agent3["extraction_agent"] = extraction_Agent
                         if reflection_agent not in ["", "Not Required"]:
                             agent3["reflection_agent"] = reflection_agent
-                    
-                    # 按照webui.py的逻辑处理text和file_path参数
+
+                    # Process text and file_path parameters according to webui.py logic
                     if use_file:
                         text_param = ""
-                        # 检查是否使用示例文件
+                        # Check if using example file
                         example_file_path = current_example.get("file_path")
                         if example_file_path and os.path.exists(example_file_path):
-                            # 使用示例文件路径
+                            # Use example file path
                             file_path_param = example_file_path
                         elif uploaded_file is not None:
-                            # 对于Streamlit，我们需要处理上传的文件
-                            # 根据文件类型确定后缀名
+                            # For Streamlit, we need to handle uploaded files
+                            # Determine file extension based on file type
                             file_extension = os.path.splitext(uploaded_file.name)[1]
                             if not file_extension:
                                 file_extension = '.txt'
-                            
-                            # 保存上传的文件到临时位置
+
+                            # Save uploaded file to temporary location
                             with tempfile.NamedTemporaryFile(mode='wb', delete=False, suffix=file_extension) as tmp_file:
-                                # 重置文件指针到开始位置
+                                # Reset file pointer to start
                                 uploaded_file.seek(0)
                                 tmp_file.write(uploaded_file.read())
                                 file_path_param = tmp_file.name
@@ -801,11 +792,11 @@ def main():
                     else:
                         text_param = input_text
                         file_path_param = None
-                    
+
                     if not update_case:
                         truth = ""
-                    
-                    # 使用Pipeline的get_extract_result方法，与webui.py保持一致
+
+                    # Use Pipeline's get_extract_result method, consistent with webui.py
                     _, _, ger_frontend_schema, ger_frontend_res = pipeline.get_extract_result(
                         task=task_type,
                         text=text_param,
@@ -821,11 +812,11 @@ def main():
                         output_schema=output_schema,
                         show_trajectory=False,
                     )
-                    
-                    # 按照webui.py的逻辑处理结果
+
+                    # Process results according to webui.py logic
                     ger_frontend_schema = str(ger_frontend_schema)
                     ger_frontend_res = json.dumps(ger_frontend_res, ensure_ascii=False, indent=4) if isinstance(ger_frontend_res, dict) else str(ger_frontend_res)
-                    
+
                     result = {
                         "success": True,
                         "schema": ger_frontend_schema,
@@ -833,19 +824,19 @@ def main():
                     }
                     st.session_state.extraction_results = result
                     st.success(f"Extraction completed successfully in {mode} mode!")
-                    
-                    # 清理临时文件（但不删除示例文件）
+
+                    # Clean up temporary files (but do not delete example files)
                     if use_file and file_path_param and os.path.exists(file_path_param):
-                        # 只删除临时文件，不删除示例文件
+                        # Only delete temporary files, do not delete example files
                         example_file_path = current_example.get("file_path")
                         if file_path_param != example_file_path:
                             try:
                                 os.unlink(file_path_param)
                             except:
                                 pass
-                
+
                 except Exception as e:
-                    # 参考webui.py的错误处理方式
+                    # Reference webui.py's error handling method
                     error_message = f"⚠️ Error:\n {str(e)}"
                     result = {
                         "success": False,
@@ -853,8 +844,8 @@ def main():
                     }
                     st.session_state.extraction_results = result
                     st.error(f"Extraction failed: {str(e)}")
-                    
-                    # 提供连接错误的具体建议
+
+                    # Provide specific suggestions for connection errors
                     if "Connection error" in str(e) or "connection" in str(e).lower():
                         st.warning("💡 Connection Error Solutions:")
                         st.write("1. Check network connection")
@@ -862,15 +853,12 @@ def main():
                         st.write("3. Confirm Base URL settings")
                         st.write("4. Try disabling proxy settings")
                         st.write("5. Check firewall settings")
-                    
-                    # 显示详细错误信息用于调试
+
+                    # Display detailed error information for debugging
                     with st.expander("Detailed Error Information"):
                         st.code(str(e))
-        
-        
-        # 清除按钮 - 与webui.py的clear_all行为一致
+    
         if st.button("🧹 Clear All"):
-            # 重置extraction_results和current_example
             st.session_state.extraction_results = None
             st.session_state.current_example = {}
             st.rerun()
@@ -882,7 +870,6 @@ def main():
             result = st.session_state.extraction_results
             
             if result.get("success"):
-                # 按照webui.py的格式显示结果
                 st.markdown("""
                 <div style="width: 100%; text-align: center; font-size: 16px; font-weight: bold; position: relative; margin: 20px 0;">
                     <span style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); width: 45%; border-top: 1px solid #ccc;"></span>
@@ -891,13 +878,10 @@ def main():
                 </div>
                 """, unsafe_allow_html=True)
                 
-                # 创建选项卡来切换不同的视图
                 if task_type == "Triple":
-                    # Triple任务显示两个选项卡：结果和知识图谱
                     tab1, tab2 = st.tabs(["📄 Schema & Results", "🕸️ Knowledge Graph"])
                     
                     with tab1:
-                        # 显示Schema和Results
                         col_schema, col_result = st.columns([1, 1.5])
                         
                         with col_schema:
@@ -905,7 +889,6 @@ def main():
                             schema_content = result.get("schema", "")
                             st.code(schema_content, language="python", line_numbers=False)
                             
-                            # 下载按钮
                             if schema_content:
                                 st.download_button(
                                     label="📥 Download Schema",
@@ -920,7 +903,6 @@ def main():
                             result_content = result.get("result", "")
                             st.code(result_content, language="json", line_numbers=False)
                             
-                            # 下载按钮
                             if result_content:
                                 st.download_button(
                                     label="📥 Download Result",
@@ -931,17 +913,13 @@ def main():
                                 )
                     
                     with tab2:
-                        # 知识图谱可视化选项卡
                         st.success("✅ Triple task detected - Knowledge Graph features are available!")
                         
-                        # 生成知识图谱可视化
                         html_content, viz_stats = create_knowledge_graph_visualization(result.get("result", ""))
                         
-                        # 控制按钮区域
                         button_col1, button_col2, button_col3, button_col4 = st.columns([1, 1, 1, 1])
                         
                         with button_col1:
-                            # 显示图谱统计信息
                             if html_content:
                                 st.info(f"📊 {viz_stats}")
                             else:
@@ -978,7 +956,6 @@ def main():
                                     st.warning("⚠️ Please enable 'Knowledge Graph Construction' in the configuration first.")
                         
                         with button_col4:
-                            # 添加全屏查看选项
                             if 'fullscreen_graph' not in st.session_state:
                                 st.session_state.fullscreen_graph = False
                             
@@ -986,22 +963,16 @@ def main():
                                 st.session_state.fullscreen_graph = True
                                 st.rerun()
                         
-                        # 检查是否进入全屏模式
                         if st.session_state.fullscreen_graph:
-                            # 全屏模式显示
                             st.markdown("### 🔍 Full Screen Knowledge Graph View")
                             
-                            # 退出全屏按钮
                             if st.button("⬅️ Back to Tab View", key="exit_fullscreen"):
                                 st.session_state.fullscreen_graph = False
                                 st.rerun()
                             
-                            # 全屏图谱显示
                             if html_content:
-                                # 使用更大的高度和全宽度显示
                                 components.html(html_content, height=700, scrolling=True)
                                 
-                                # 全屏模式下的详细统计信息
                                 with st.expander("📊 Detailed Graph Statistics", expanded=False):
                                     col_stats1, col_stats2 = st.columns(2)
                                     with col_stats1:
@@ -1012,7 +983,6 @@ def main():
                                             disabled=True
                                         )
                                     with col_stats2:
-                                        # 显示图谱的详细信息
                                         try:
                                             result_data = json.loads(result.get("result", "{}"))
                                             if isinstance(result_data, dict) and 'triple_list' in result_data:
@@ -1026,7 +996,6 @@ def main():
                                 st.error(f"❌ Failed to create visualization: {viz_stats}")
                         
                         else:
-                            # 正常选项卡模式显示图谱
                             if html_content:
                                 st.markdown("**Knowledge Graph Visualization:**")
                                 components.html(html_content, height=500, scrolling=True)
@@ -1034,7 +1003,6 @@ def main():
                                 st.error(f"❌ Failed to create visualization: {viz_stats}")
                 
                 else:
-                    # 非Triple任务只显示Schema和Results
                     col_schema, col_result = st.columns(2)
                     
                     with col_schema:
@@ -1042,7 +1010,6 @@ def main():
                         schema_content = result.get("schema", "")
                         st.code(schema_content, language="python", line_numbers=False)
                         
-                        # 下载按钮
                         if schema_content:
                             st.download_button(
                                 label="📥 Download Schema",
@@ -1057,7 +1024,6 @@ def main():
                         result_content = result.get("result", "")
                         st.code(result_content, language="json", line_numbers=False)
                         
-                        # 下载按钮
                         if result_content:
                             st.download_button(
                                 label="📥 Download Result",
@@ -1068,7 +1034,6 @@ def main():
                             )
             
             else:
-                # 显示错误信息，与webui.py的error_output_gr一致
                 st.text_area(
                     "😵‍💫 Ops, an Error Occurred",
                     value=result.get("error", "Unknown error"),
@@ -1080,14 +1045,14 @@ def main():
             st.info("👆 Configure your model and input text to start extraction.")
 
 def create_knowledge_graph_visualization(result_str):
-    """从OneKE Triple抽取结果创建知识图谱可视化"""
+    """Create knowledge graph visualization from OneKE Triple extraction results"""
     try:
         if isinstance(result_str, str):
             result_data = json.loads(result_str)
         else:
             result_data = result_str
         
-        # 创建pyvis网络图
+        # Create a pyvis network graph
         net = Network(
             height="600px", 
             width="100%", 
@@ -1098,11 +1063,11 @@ def create_knowledge_graph_visualization(result_str):
             cdn_resources='remote'
         )
         
-        # 存储节点和边的信息
+        # Store node and edge information
         nodes = set()
         edges = []
         
-        # 处理OneKE Triple任务的输出格式：{"triple_list": [...]}
+        # Process the output format of OneKE Triple task: {"triple_list": [...]}
         if isinstance(result_data, dict) and 'triple_list' in result_data:
             triple_list = result_data['triple_list']
             for item in triple_list:
@@ -1111,7 +1076,7 @@ def create_knowledge_graph_visualization(result_str):
                     tail = str(item['tail'])
                     relation = str(item['relation'])
                     
-                    # 获取类型信息
+                    # Get type information
                     head_type = item.get('head_type', 'Entity')
                     tail_type = item.get('tail_type', 'Entity')
                     
@@ -1119,7 +1084,7 @@ def create_knowledge_graph_visualization(result_str):
                     nodes.add((tail, tail_type))
                     edges.append((head, tail, relation))
         
-        # 处理简单的三元组列表格式（向后兼容）
+        # Handle simple triple list format (backward compatibility)
         elif isinstance(result_data, list):
             for item in result_data:
                 if isinstance(item, dict) and 'head' in item and 'relation' in item and 'tail' in item:
@@ -1134,7 +1099,7 @@ def create_knowledge_graph_visualization(result_str):
         if not nodes:
             return None, "No valid triples found for visualization"
         
-        # 定义节点类型颜色
+        # Define node type colors
         type_colors = {
             'Person': '#ff9999',
             'Place': '#99ff99', 
@@ -1145,7 +1110,7 @@ def create_knowledge_graph_visualization(result_str):
             'Number': '#99ffff'
         }
         
-        # 添加节点到网络图
+        # Add nodes to the network graph
         for node_name, node_type in nodes:
             color = type_colors.get(node_type, '#cccccc')
             net.add_node(
@@ -1156,7 +1121,7 @@ def create_knowledge_graph_visualization(result_str):
                 size=20
             )
         
-        # 添加边到网络图
+        # Add edges to the network graph
         for head, tail, relation in edges:
             net.add_edge(
                 head, 
@@ -1167,7 +1132,7 @@ def create_knowledge_graph_visualization(result_str):
                 width=2
             )
         
-        # 配置图形布局
+        # Configure graph layout
         net.set_options("""
         {
             "physics": {
@@ -1200,10 +1165,10 @@ def create_knowledge_graph_visualization(result_str):
         }
         """)
         
-        # 生成HTML
+        # Generate HTML
         html_content = net.generate_html()
         
-        # 统计信息
+        # Statistics
         stats = f"Nodes: {len(nodes)}\nRelationships: {len(edges)}"
         
         return html_content, stats

@@ -7,9 +7,7 @@ import models
 from models import *
 from utils import *
 from modules import *
-# Set proxy for requests
-os.environ['http_proxy'] = 'http://127.0.0.1:7890'
-os.environ['https_proxy'] = 'http://127.0.0.1:7890'
+
 def main():
     # Create command-line argument parser
     parser = argparse.ArgumentParser(description='Run the extraction framefork.')

@@ -1,28 +1,14 @@
-# model:
-#   category: LLaMA # model category, chosen from ChatGPT, DeepSeek, LLaMA, Qwen, ChatGLM, MiniCPM, OneKE.
-#   model_name_or_path: meta-llama/Meta-Llama-3-8B-Instruct # model name to download from huggingface or use the local model path.
-#   vllm_serve: false # whether to use the vllm. Default set to false.
-
-# extraction:
-#   task: NER  # task type, chosen from Base, NER, RE, EE.
-#   text: Finally , every other year , ELRA organizes a major conference LREC , the International Language Resources and Evaluation Conference . # input text for the extraction task. No need if use_file is set to true.
-#   constraint: ["algorithm", "conference", "else", "product", "task", "field", "metrics", "organization", "researcher", "program language", "country", "location", "person", "university"] # Specified entity types for the named entity recognition task. Default set to empty.
-#   use_file: false # whether to use a file for the input text.
-#   mode: quick # extraction mode, chosen from quick, detailed, customized. Default set to quick. See src/config.yaml for more details.
-#   update_case: false # whether to update the case repository. Default set to false.
-#   show_trajectory: false # whether to display the extracted intermediate steps
-
 model:
-  category: DeepSeek 
-  model_name_or_path: deepseek-chat 
-  api_key: sk-xxxxx
-  base_url: https://api.deepseek.com 
+  category: DeepSeek  # model category, chosen from ChatGPT, DeepSeek, LLaMA, Qwen, ChatGLM, MiniCPM, OneKE.
+  model_name_or_path: deepseek-chat # model name, chosen from the model list of the selected category.
+  api_key: your_api_key  # your API key for the model with API service. No need for open-source models.
+  base_url: https://api.deepseek.com # base URL for the API service. No need for open-source models.
 
 extraction:
-  task: NER 
-  text: Finally , every other year , ELRA organizes a major conference LREC , the International Language Resources and Evaluation Conference . 
-  constraint: ["algorithm", "conference", "else", "product", "task", "field", "metrics", "organization", "researcher", "program language", "country", "location", "person", "university"]
-  use_file: false 
-  mode: quick 
-  update_case: false 
-  show_trajectory: false 
+  task: EE # task type, chosen from Base, NER, RE, EE.
+  text: UConn Health , an academic medical center , says in a media statement that it identified approximately 326,000 potentially impacted individuals whose personal information was contained in the compromised email accounts. # input text for the extraction task. No need if use_file is set to true.
+  constraint: {"phishing": ["damage amount", "attack pattern", "tool", "victim", "place", "attacker", "purpose", "trusted entity", "time"], "data breach": ["damage amount", "attack pattern", "number of data", "number of victim", "tool", "compromised data", "victim", "place", "attacker", "purpose", "time"], "ransom": ["damage amount", "attack pattern", "payment method", "tool", "victim", "place", "attacker", "price", "time"], "discover vulnerability": ["vulnerable system", "vulnerability", "vulnerable system owner", "vulnerable system version", "supported platform", "common vulnerabilities and exposures", "capabilities", "time", "discoverer"], "patch vulnerability": ["vulnerable system", "vulnerability", "issues addressed", "vulnerable system version", "releaser", "supported platform", "common vulnerabilities and exposures", "patch number", "time", "patch"]} # Specified event type and the corresponding arguments for the event extraction task. Structured as a dictionary with the event type as the key and the list of arguments as the value. Default set to empty.
+  use_file: false # whether to use a file for the input text.
+  mode: standard # extraction mode, chosen from quick, detailed, customized. Default set to quick. See src/config.yaml for more details.
+  update_case: false # whether to update the case repository. Default set to false.
+  show_trajectory: false # whether to display the extracted intermediate steps

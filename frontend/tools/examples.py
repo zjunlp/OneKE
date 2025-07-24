@@ -1,10 +1,10 @@
 # -*- coding: utf-8 -*-
 """
-OneKE-Streamlit-Frontend 示例数据
-包含各种任务类型的示例数据
+OneKE-Streamlit-Frontend example data
+Contains example data for various task types
 """
 
-# OneKE webui.py中的示例数据
+# Example data in OneKE webui.py
 examples = [
     {
         "task": "Base",
@@ -125,15 +125,15 @@ examples = [
 ]
 
 def get_examples():
-    """获取示例数据"""
+    """Get example data"""
     return examples
 
 def get_example_by_task(task_type):
-    """根据任务类型获取示例"""
+    """Get example by task type"""
     return [example for example in examples if example["task"] == task_type]
 
 def get_example_by_index(index):
-    """根据索引获取示例"""
+    """Get example by index"""
     if 0 <= index < len(examples):
         return examples[index]
     return None

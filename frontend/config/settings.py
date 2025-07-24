@@ -1,28 +1,28 @@
 # -*- coding: utf-8 -*-
 """
-OneKE-Streamlit-Frontend 配置文件
-包含应用程序的所有配置项、默认值和常量
+OneKE-Streamlit-Frontend Configuration File
+Contains all configuration items, default values, and constants for the application
 """
 
 import os
 from pathlib import Path
 
-# ==================== 应用程序基本配置 ====================
+# ==================== Application Basic Configuration ====================
 APP_CONFIG = {
     "page_title": "OneKE-Streamlit-Frontend",
-    "page_icon": "🧠",
+    "page_icon": "💫",
     "layout": "wide",
     "initial_sidebar_state": "expanded"
 }
 
-# ==================== OneKE 路径配置 ====================
+# ==================== OneKE Path Configuration ====================
 ONEKE_CONFIG = {
     "source_path": Path("../src"),
     "data_path": Path("../data"),
     "input_files_path": Path("../data/input_files")
 }
 
-# ==================== 模型配置 ====================
+# ==================== Model Configuration ====================
 MODEL_CONFIG = {
     "default_model": "deepseek-chat",
     "default_api_key": "sk-xxxxxxxx",
@@ -30,14 +30,14 @@ MODEL_CONFIG = {
     "supported_models": {
         "gpt": ["gpt-3.5-turbo", "gpt-4o-mini", "gpt-4o", "o3-mini"],
         "deepseek": ["deepseek-chat", "deepseek-reasoner"],
-        "llama": "llama",  # 正则匹配
-        "qwen": "qwen",    # 正则匹配
-        "minicpm": "minicpm",  # 正则匹配
-        "chatglm": "chatglm"   # 正则匹配
+        "llama": "llama",  # Regular expression matching
+        "qwen": "qwen",    # Regular expression matching
+        "minicpm": "minicpm",  # Regular expression matching
+        "chatglm": "chatglm"   # Regular expression matching
     }
 }
 
-# ==================== 任务配置 ====================
+# ==================== Task Configuration ====================
 TASK_CONFIG = {
     "supported_tasks": ["Base", "NER", "RE", "EE", "Triple"],
     "supported_modes": ["quick", "standard", "customized"],
@@ -57,7 +57,7 @@ TASK_CONFIG = {
     }
 }
 
-# ==================== Neo4j 配置 ====================
+# ==================== Neo4j Configuration ====================
 NEO4J_CONFIG = {
     "default_url": "neo4j://127.0.0.1:7687",
     "default_username": "neo4j",
@@ -65,7 +65,7 @@ NEO4J_CONFIG = {
     "connection_timeout": 10
 }
 
-# ==================== 代理配置 ====================
+# ==================== Proxy Configuration ====================
 PROXY_CONFIG = {
     "default_host": "127.0.0.1",
     "default_port": "7890",
@@ -75,14 +75,14 @@ PROXY_CONFIG = {
     ]
 }
 
-# ==================== 文件上传配置 ====================
+# ==================== File Upload Configuration ====================
 FILE_CONFIG = {
     "supported_extensions": ["txt", "pdf", "docx", "html", "json"],
     "max_file_size": 200 * 1024 * 1024,  # 200MB
-    "temp_dir": None  # 使用系统默认临时目录
+    "temp_dir": None  # Use system default temporary directory
 }
 
-# ==================== UI 配置 ====================
+# ==================== UI Configuration ====================
 UI_CONFIG = {
     "text_area_height": {
         "text_input": 200,
@@ -109,7 +109,7 @@ UI_CONFIG = {
     }
 }
 
-# ==================== 错误消息配置 ====================
+# ==================== Error Messages Configuration ====================
 ERROR_MESSAGES = {
     "oneke_not_available": "OneKE source path not found. Using fallback implementations.",
     "neo4j_driver_not_available": "Neo4j driver not available. Please install: pip install neo4j",
@@ -125,7 +125,7 @@ ERROR_MESSAGES = {
     ]
 }
 
-# ==================== 示例数据配置 ====================
+# ==================== Example Data Configuration ====================
 EXAMPLES_CONFIG = {
     "chinese_news_file": "../data/input_files/ChineseNewsExample.json",
     "example_files": {
@@ -135,7 +135,7 @@ EXAMPLES_CONFIG = {
     }
 }
 
-# ==================== 知识图谱可视化配置 ====================
+# ==================== Knowledge Graph Visualization Configuration ====================
 KG_VISUALIZATION_CONFIG = {
     "network_height": "600px",
     "network_width": "100%",
@@ -158,7 +158,7 @@ KG_VISUALIZATION_CONFIG = {
     }
 }
 
-# ==================== 会话状态默认值 ====================
+# ==================== Session State Defaults ====================
 SESSION_DEFAULTS = {
     "extraction_results": None,
     "current_example": {},
@@ -171,16 +171,16 @@ SESSION_DEFAULTS = {
     "enable_kg_construction": False
 }
 
-# ==================== 环境变量配置 ====================
+# ==================== Environment Variable Configuration ====================
 ENV_CONFIG = {
     "proxy_vars": PROXY_CONFIG["environment_variables"],
     "default_temp_dir": None
 }
 
-# ==================== 应用程序信息 ====================
+# ==================== Application Information ====================
 APP_INFO = {
-    "title": "OneKE-Streamlit-Frontend",
-    "description": "基于OneKE项目的Streamlit知识抽取前端界面",
+    "title": "OneKE: A Flexible Schema-Guided Knowledge Extraction System",
+    "description": "OneKE-Streamlit-Frontend",
     "links": {
         "paper": "https://arxiv.org/abs/2412.20005v2",
         "code": "https://github.com/zjunlp/OneKE",
@@ -189,34 +189,34 @@ APP_INFO = {
     }
 }
 
-# ==================== 工具函数 ====================
+# ==================== Utility Functions ====================
 def get_config_value(config_dict, key, default=None):
-    """安全获取配置值"""
+    """Safely get configuration value"""
     return config_dict.get(key, default)
 
 def update_config(config_dict, updates):
-    """更新配置字典"""
+    """Update configuration dictionary"""
     config_dict.update(updates)
     return config_dict
 
 def validate_config():
-    """验证配置的有效性"""
+    """Validate the effectiveness of the configuration"""
     errors = []
     
-    # 检查OneKE路径
+    # Check OneKE path
     if not ONEKE_CONFIG["source_path"].exists():
         errors.append(f"OneKE source path not found: {ONEKE_CONFIG['source_path']}")
     
-    # 检查数据路径
+    # Check data path
     if not ONEKE_CONFIG["data_path"].exists():
         errors.append(f"OneKE data path not found: {ONEKE_CONFIG['data_path']}")
     
     return errors
 
-# ==================== 配置初始化 ====================
+# ==================== Configuration Initialization ====================
 def init_config():
-    """初始化配置"""
-    # 验证配置
+    """Initialize configuration"""
+    # Validate configuration
     errors = validate_config()
     if errors:
         print("Configuration warnings:")
@@ -225,6 +225,6 @@ def init_config():
     
     return True
 
-# 自动初始化
+# Automatic initialization
 if __name__ != "__main__":
     init_config()

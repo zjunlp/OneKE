@@ -4,62 +4,14 @@ from utils import *
 from modules import *
 from construct import *
 
-# Import CaseRepositoryHandler with error handling
-try:
-    from modules.knowledge_base import CaseRepositoryHandler
-except ImportError:
-    CaseRepositoryHandler = None
-
-# Import Agent classes with error handling
-try:
-    from modules.schema_agent import SchemaAgent
-except ImportError:
-    try:
-        from schema_agent import SchemaAgent
-    except ImportError:
-        SchemaAgent = None
-
-try:
-    from modules.extraction_agent import ExtractionAgent
-except ImportError:
-    try:
-        from extraction_agent import ExtractionAgent
-    except ImportError:
-        ExtractionAgent = None
-
-try:
-    from modules.reflection_agent import ReflectionAgent
-except ImportError:
-    try:
-        from reflection_agent import ReflectionAgent
-    except ImportError:
-        ReflectionAgent = None
-
-
 class Pipeline:
     def __init__(self, llm: BaseEngine):
         self.llm = llm
-        # Initialize case_repo only if CaseRepositoryHandler is available
-        if CaseRepositoryHandler is not None:
-            self.case_repo = CaseRepositoryHandler(llm = llm)
-        else:
-            self.case_repo = None
-        
-        # Initialize agents only if they are available
-        if SchemaAgent is not None:
-            self.schema_agent = SchemaAgent(llm = llm)
-        else:
-            self.schema_agent = None
-            
-        if ExtractionAgent is not None:
-            self.extraction_agent = ExtractionAgent(llm = llm, case_repo = self.case_repo)
-        else:
-            self.extraction_agent = None
-            
-        if ReflectionAgent is not None:
-            self.reflection_agent = ReflectionAgent(llm = llm, case_repo = self.case_repo)
-        else:
-            self.reflection_agent = None
+        self.llm = llm
+        self.case_repo = CaseRepositoryHandler(llm = llm)
+        self.schema_agent = SchemaAgent(llm = llm)
+        self.extraction_agent = ExtractionAgent(llm = llm, case_repo = self.case_repo)
+        self.reflection_agent = ReflectionAgent(llm = llm, case_repo = self.case_repo)
 
     def __check_consistancy(self, llm, task, mode, update_case):
         if llm.name == "OneKE":
@@ -72,24 +24,20 @@ class Pipeline:
                 return mode, update_case
         return mode, update_case
 
-    def __init_method(self, data: DataPoint, process_method2):
+    def __init_method(self, data: DataPoint, method):
         default_order = ["schema_agent", "extraction_agent", "reflection_agent"]
         
-        # If process_method2 is a string, convert it to a default dictionary
-        if isinstance(process_method2, str):
-            process_method2 = {"extraction_agent": "extract_information_direct"}
+        # Ensure method is a dictionary
+        if not isinstance(method, dict):
+            method = {"extraction_agent": "extract_information_direct"}
         
-        # Ensure process_method2 is a dictionary
-        if not isinstance(process_method2, dict):
-            process_method2 = {"extraction_agent": "extract_information_direct"}
-        
-        if "schema_agent" not in process_method2:
-            process_method2["schema_agent"] = "get_default_schema"
+        if "schema_agent" not in method:
+            method["schema_agent"] = "get_default_schema"
         if data.task != "Base":
-            process_method2["schema_agent"] = "get_retrieved_schema"
-        if "extraction_agent" not in process_method2:
-            process_method2["extraction_agent"] = "extract_information_direct"
-        sorted_process_method = {key: process_method2[key] for key in default_order if key in process_method2}
+            method["schema_agent"] = "get_retrieved_schema"
+        if "extraction_agent" not in method:
+            method["extraction_agent"] = "extract_information_direct"
+        sorted_process_method = {key: method[key] for key in default_order if key in method}
         return sorted_process_method
 
     def __init_data(self, data: DataPoint):
@@ -124,10 +72,8 @@ class Pipeline:
                            show_trajectory: bool = False,
                            isgui: bool = False,
                            iskg: bool = False,
-                           config_name: str = "",  # 新增参数用于传递配置文件名
+                           config_name: str = "", 
                            ):
-        # for key, value in locals().items():
-        #     print(f"{key}: {value}")
 
         # Check Consistancy
         mode, update_case = self.__check_consistancy(self.llm, task, mode, update_case)
@@ -185,22 +131,23 @@ class Pipeline:
             if show_trajectory:
                 print("Extraction Trajectory: \n", json.dumps(data.get_result_trajectory(), indent=4, ensure_ascii=False))
             
-            # 控制台输出使用格式化 JSON
-            extraction_result = json.dumps(data.pred, indent=4, ensure_ascii=False)
+            # Console output in formatted JSON
+            if type(data.pred) is not str:
+                extraction_result = json.dumps(data.pred, indent=4, ensure_ascii=False)
             print("Extraction Result: \n", extraction_result)
             
-            # 添加下载功能
+            # Add download functionality
             if config_name:
                 import os
-                # 创建 result 目录
+                # Create result directory
                 result_dir = "examples/results"
                 if not os.path.exists(result_dir):
                     os.makedirs(result_dir)
                 
-                # 从完整路径中提取文件名（去掉路径和扩展名）
+                # Extract filename from full path (remove path and extension)
                 base_name = os.path.splitext(os.path.basename(config_name))[0]
                 
-                # 保存抽取结果，直接保存为格式化 JSON
+                # Save extraction result as formatted JSON
                 result_file_path = os.path.join(result_dir, f"{base_name}.json")
                 with open(result_file_path, 'w', encoding='utf-8') as f:
                     f.write(extraction_result)
@@ -215,7 +162,7 @@ class Pipeline:
             cypher_statements = generate_cypher_statements(extraction_result)
             execute_cypher_statements(uri=myurl, user=myusername, password=mypassword, cypher_statements=cypher_statements)
 
-        frontend_res = data.pred #
+        frontend_res = data.pred
 
         # Case Update
         if update_case:

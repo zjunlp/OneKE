@@ -4,7 +4,7 @@ import json
 from pyvis.network import Network
 from config.settings import NEO4J_CONFIG, KG_VISUALIZATION_CONFIG, UI_CONFIG, ERROR_MESSAGES
 
-# 尝试导入Neo4j驱动
+# Attempt to import Neo4j driver
 try:
     from neo4j import GraphDatabase
     NEO4J_AVAILABLE = True
@@ -13,7 +13,7 @@ except ImportError:
     GraphDatabase = None
 
 def generate_cypher_from_result(result_str):
-    """从抽取结果生成Cypher语句"""
+    """Generate Cypher statements from extraction results"""
     try:
         if isinstance(result_str, str):
             result_data = json.loads(result_str)
@@ -22,7 +22,7 @@ def generate_cypher_from_result(result_str):
         
         cypher_statements = []
         
-        # 处理OneKE Triple任务的输出格式：{"triple_list": [...]}
+        # Handle OneKE Triple task output format: {"triple_list": [...]}
         if isinstance(result_data, dict) and 'triple_list' in result_data:
             triple_list = result_data['triple_list']
             for item in triple_list:
@@ -31,7 +31,7 @@ def generate_cypher_from_result(result_str):
                     tail = str(item['tail']).replace("'", "\\'")
                     relation = str(item['relation']).replace("'", "\\'")
                     
-                    # 使用类型信息（如果可用）
+                    # Use type information (if available)
                     head_type = item.get('head_type', 'Entity')
                     tail_type = item.get('tail_type', 'Entity')
                     relation_type = item.get('relation_type', relation)
@@ -41,7 +41,7 @@ def generate_cypher_from_result(result_str):
                     cypher += f"\nMERGE (h)-[:{relation_type.replace(' ', '_').upper()}]->(t);"
                     cypher_statements.append(cypher)
         
-        # 处理简单的三元组列表格式（向后兼容）
+        # Handle simple triple list format (backward compatibility)
         elif isinstance(result_data, list):
             for item in result_data:
                 if isinstance(item, dict) and 'head' in item and 'relation' in item and 'tail' in item:
@@ -62,24 +62,24 @@ def generate_cypher_from_result(result_str):
         return f"// Error generating Cypher: {str(e)}"
 
 def test_neo4j_connection(neo4j_url, neo4j_username, neo4j_password):
-    """测试Neo4j数据库连接"""
+    """Test Neo4j database connection"""
     if not NEO4J_AVAILABLE:
         return {"success": False, "error": ERROR_MESSAGES["neo4j_driver_not_available"]}
     
     try:
-        # 验证输入参数
+        # Validate input parameters
         if not neo4j_url or not neo4j_username or not neo4j_password:
             return {"success": False, "error": ERROR_MESSAGES["neo4j_missing_params"]}
         
-        # 尝试连接
+        # Attempt to connect
         driver = GraphDatabase.driver(neo4j_url, auth=(neo4j_username, neo4j_password))
         
-        # 测试连接
+        # Test connection
         with driver.session() as session:
             result = session.run("RETURN 'Connection successful' as message")
             message = result.single()["message"]
             
-            # 获取数据库信息
+            # Get database information
             db_info = session.run("CALL dbms.components() YIELD name, versions RETURN name, versions[0] as version")
             db_details = db_info.single()
             db_name = db_details["name"] if db_details else "Neo4j"
@@ -100,7 +100,7 @@ def test_neo4j_connection(neo4j_url, neo4j_username, neo4j_password):
         return {"success": False, "error": error_msg}
 
 def build_knowledge_graph(result_str, neo4j_url, neo4j_username, neo4j_password):
-    """构建知识图谱到Neo4j数据库"""
+    """Build knowledge graph in Neo4j database"""
     if not NEO4J_AVAILABLE:
         return {"success": False, "error": "Neo4j driver not available"}
     
@@ -112,12 +112,12 @@ def build_knowledge_graph(result_str, neo4j_url, neo4j_username, neo4j_password)
             return {"success": False, "error": "Failed to generate Cypher statements"}
         
         with driver.session() as session:
-            # 执行Cypher语句
+            # Execute Cypher statements
             for statement in cypher_statements.split("\n\n"):
                 if statement.strip():
                     session.run(statement)
             
-            # 获取统计信息
+            # Get statistics
             node_count = session.run("MATCH (n) RETURN count(n) as count").single()["count"]
             rel_count = session.run("MATCH ()-[r]->() RETURN count(r) as count").single()["count"]
             
@@ -130,14 +130,14 @@ def build_knowledge_graph(result_str, neo4j_url, neo4j_username, neo4j_password)
         return {"success": False, "error": str(e)}
 
 def create_knowledge_graph_visualization(result_str):
-    """从OneKE Triple抽取结果创建知识图谱可视化"""
+    """Create knowledge graph visualization from OneKE Triple extraction results"""
     try:
         if isinstance(result_str, str):
             result_data = json.loads(result_str)
         else:
             result_data = result_str
         
-        # 创建pyvis网络图
+        # Create pyvis network graph
         net = Network(
             height=KG_VISUALIZATION_CONFIG["network_height"], 
             width=KG_VISUALIZATION_CONFIG["network_width"], 
@@ -148,11 +148,11 @@ def create_knowledge_graph_visualization(result_str):
             cdn_resources='remote'
         )
         
-        # 存储节点和边的信息
+        # Store node and edge information
         nodes = set()
         edges = []
         
-        # 处理OneKE Triple任务的输出格式：{"triple_list": [...]}
+        # Process OneKE Triple task output format: {"triple_list": [...]}
         if isinstance(result_data, dict) and 'triple_list' in result_data:
             triple_list = result_data['triple_list']
             for item in triple_list:
@@ -161,7 +161,7 @@ def create_knowledge_graph_visualization(result_str):
                     tail = str(item['tail'])
                     relation = str(item['relation'])
                     
-                    # 获取类型信息
+                    # Get type information
                     head_type = item.get('head_type', 'Entity')
                     tail_type = item.get('tail_type', 'Entity')
                     
@@ -169,7 +169,7 @@ def create_knowledge_graph_visualization(result_str):
                     nodes.add((tail, tail_type))
                     edges.append((head, tail, relation))
         
-        # 处理简单的三元组列表格式（向后兼容）
+        # Handle simple triple list format (backward compatibility)
         elif isinstance(result_data, list):
             for item in result_data:
                 if isinstance(item, dict) and 'head' in item and 'relation' in item and 'tail' in item:
@@ -184,10 +184,10 @@ def create_knowledge_graph_visualization(result_str):
         if not nodes:
             return None, "No valid triples found for visualization"
         
-        # 定义节点类型颜色
+        # Define node type colors
         type_colors = KG_VISUALIZATION_CONFIG["node_colors"]
         
-        # 添加节点到网络图
+        # Add nodes to the network graph
         for node_name, node_type in nodes:
             color = type_colors.get(node_type, KG_VISUALIZATION_CONFIG["default_node_color"])
             net.add_node(
@@ -198,7 +198,7 @@ def create_knowledge_graph_visualization(result_str):
                 size=KG_VISUALIZATION_CONFIG["node_size"]
             )
         
-        # 添加边到网络图
+        # Add edges to the network graph
         for head, tail, relation in edges:
             net.add_edge(
                 head, 
@@ -209,7 +209,7 @@ def create_knowledge_graph_visualization(result_str):
                 width=KG_VISUALIZATION_CONFIG["edge_width"]
             )
         
-        # 配置图形布局
+        # Configure graph layout
         net.set_options("""
         {
             "physics": {
@@ -242,10 +242,10 @@ def create_knowledge_graph_visualization(result_str):
         }
         """)
         
-        # 生成HTML
+        # Generate HTML
         html_content = net.generate_html()
         
-        # 统计信息
+        # Statistics
         stats = f"Nodes: {len(nodes)}\nRelationships: {len(edges)}"
         
         return html_content, stats
@@ -254,9 +254,9 @@ def create_knowledge_graph_visualization(result_str):
         return None, f"Error creating visualization: {str(e)}"
 
 def render_results(result, task_type):
-    """渲染结果展示组件"""
+    """Render the result display component"""
     if result and result.get("success", False):
-        # 按照webui.py的格式显示结果
+        # Display results in the format of webui.py
         st.markdown("""
         <div style="width: 100%; text-align: center; font-size: 16px; font-weight: bold; position: relative; margin: 20px 0;">
             <span style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); width: 45%; border-top: 1px solid #ccc;"></span>
@@ -265,9 +265,9 @@ def render_results(result, task_type):
         </div>
         """, unsafe_allow_html=True)
         
-        # 创建选项卡来切换不同的视图
+        # Create tabs to switch between different views
         if task_type == "Triple":
-            # Triple任务显示两个选项卡：结果和知识图谱
+            # Triple task displays two tabs: Results and Knowledge Graph
             tab1, tab2 = st.tabs(["📄 Schema & Results", "🕸️ Knowledge Graph"])
             
             with tab1:
@@ -277,11 +277,11 @@ def render_results(result, task_type):
                 _render_knowledge_graph_tab(result)
         
         else:
-            # 非Triple任务只显示Schema和Results
+            # Non-Triple tasks only display Schema and Results
             _render_schema_and_results(result)
     
     else:
-        # 显示错误信息，与webui.py的error_output_gr一致
+        # Display error message, consistent with webui.py's error_output_gr
         st.text_area(
             "😵‍💫 Ops, an Error Occurred",
             value=result.get("error", "Unknown error") if result else "No result available",
@@ -290,7 +290,7 @@ def render_results(result, task_type):
         )
 
 def _render_schema_and_results(result):
-    """渲染Schema和Results部分"""
+    """Render the Schema and Results section"""
     col_schema, col_result = st.columns([1, 1.5])
     
     with col_schema:
@@ -298,7 +298,7 @@ def _render_schema_and_results(result):
         schema_content = result.get("schema", "")
         st.code(schema_content, language="python", line_numbers=False)
         
-        # 下载按钮
+        # Download button
         if schema_content:
             st.download_button(
                 label="📥 Download Schema",
@@ -313,7 +313,7 @@ def _render_schema_and_results(result):
         result_content = result.get("result", "")
         st.code(result_content, language="json", line_numbers=False)
         
-        # 下载按钮
+        # Download button
         if result_content:
             st.download_button(
                 label="📥 Download Result",
@@ -324,17 +324,17 @@ def _render_schema_and_results(result):
             )
 
 def _render_knowledge_graph_tab(result):
-    """渲染知识图谱选项卡"""
+    """Render the Knowledge Graph tab"""
     st.success("✅ Triple task detected - Knowledge Graph features are available!")
     
-    # 生成知识图谱可视化
+    # Generate knowledge graph visualization
     html_content, viz_stats = create_knowledge_graph_visualization(result.get("result", ""))
     
-    # 控制按钮区域
+    # Control button area
     button_col1, button_col2, button_col3, button_col4 = st.columns([1, 1, 1, 1])
     
     with button_col1:
-        # 显示图谱统计信息
+        # Display graph statistics
         if html_content:
             st.info(f"📊 {viz_stats}")
         else:
@@ -371,7 +371,7 @@ def _render_knowledge_graph_tab(result):
                 st.warning("⚠️ Please enable 'Knowledge Graph Construction' in the configuration first.")
     
     with button_col4:
-        # 添加全屏查看选项
+        # Add full screen view option
         if 'fullscreen_graph' not in st.session_state:
             st.session_state.fullscreen_graph = False
         
@@ -379,11 +379,11 @@ def _render_knowledge_graph_tab(result):
             st.session_state.fullscreen_graph = True
             st.rerun()
     
-    # 检查是否进入全屏模式
+    # Check if entering full screen mode
     if st.session_state.fullscreen_graph:
         _render_fullscreen_graph(result, html_content, viz_stats)
     else:
-        # 正常选项卡模式显示图谱
+        # Display graph in normal tab mode
         if html_content:
             st.markdown("**Knowledge Graph Visualization:**")
             components.html(html_content, height=KG_VISUALIZATION_CONFIG["tab_view_height"], scrolling=True)
@@ -391,20 +391,20 @@ def _render_knowledge_graph_tab(result):
             st.error(f"❌ Failed to create visualization: {viz_stats}")
 
 def _render_fullscreen_graph(result, html_content, viz_stats):
-    """渲染全屏知识图谱视图"""
+    """Render full screen knowledge graph view"""
     st.markdown("### 🔍 Full Screen Knowledge Graph View")
     
-    # 退出全屏按钮
+    # Back to tab view button
     if st.button("⬅️ Back to Tab View", key="exit_fullscreen"):
         st.session_state.fullscreen_graph = False
         st.rerun()
     
-    # 全屏图谱显示
+    # Full screen graph display
     if html_content:
-        # 使用更大的高度和全宽度显示
+        # Display with larger height and full width
         components.html(html_content, height=KG_VISUALIZATION_CONFIG["fullscreen_height"], scrolling=True)
         
-        # 全屏模式下的详细统计信息
+        # Detailed statistics in full screen mode
         with st.expander("📊 Detailed Graph Statistics", expanded=False):
             col_stats1, col_stats2 = st.columns(2)
             with col_stats1:
@@ -415,7 +415,7 @@ def _render_fullscreen_graph(result, html_content, viz_stats):
                     disabled=True
                 )
             with col_stats2:
-                # 显示图谱的详细信息
+                # Display detailed information of the graph
                 try:
                     result_data = json.loads(result.get("result", "{}"))
                     if isinstance(result_data, dict) and 'triple_list' in result_data:
