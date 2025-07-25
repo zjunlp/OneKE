@@ -7,7 +7,7 @@ model:
 extraction:
   task: RE  # task type, chosen from Base, NER, RE, EE.
   text: The aid group Doctors Without Borders said that since Saturday , more than 275 wounded people had been admitted and treated at Donka Hospital in the capital of Guinea , Conakry .  # input text for the extraction task. No need if use_file is set to true.
-  constraint: ["nationality", "country capital", "place of death", "children", "location contains", "place of birth", "place lived", "administrative division of country", "country of administrative divisions", "company", "neighborhood of", "company founders"] # Specified entity types for the named entity recognition task. Default set to empty.
+  constraint: ["nationality", "country capital", "place of death", "children", "location contains", "place of birth", "place lived", "administrative division of country", "country of administrative divisions", "company", "neighborhood of", "company founders"] # Specified relation types for the relation extraction task. Default set to empty.
   truth: {"relation_list": [{"head": "Guinea", "tail": "Conakry", "relation": "country capital"}]} # Truth data for the relation extraction task. Structured as a dictionary with the list of relation tuples as the value. Required if set update_case to true.
   use_file: false # whether to use a file for the input text.
   mode: quick # extraction mode, chosen from quick, detailed, customized. Default set to quick. See src/config.yaml for more details.
