@@ -15,13 +15,31 @@ warnings.filterwarnings("ignore", category=FutureWarning, message=r".*clean_up_t
 
 class CaseRepository:
     def __init__(self):
-        try:
-            self.embedder = SentenceTransformer(docker_model_path)
-        except:
-            self.embedder = SentenceTransformer(config['model']['embedding_model'])
-        self.embedder.to(device)
-        self.corpus = self.load_corpus()
-        self.embedded_corpus = self.embed_corpus()
+        self._embedder = None
+        self._corpus = None
+        self._embedded_corpus = None
+
+    @property
+    def embedder(self):
+        if self._embedder is None:
+            try:
+                self._embedder = SentenceTransformer(docker_model_path)
+            except:
+                self._embedder = SentenceTransformer(config['model']['embedding_model'])
+            self._embedder.to(device)
+        return self._embedder
+
+    @property
+    def corpus(self):
+        if self._corpus is None:
+            self._corpus = self.load_corpus()
+        return self._corpus
+
+    @property
+    def embedded_corpus(self):
+        if self._embedded_corpus is None:
+            self._embedded_corpus = self.embed_corpus()
+        return self._embedded_corpus
 
     def load_corpus(self):
         with open(os.path.join(os.path.dirname(__file__), "case_repository.json")) as file:
@@ -91,8 +109,14 @@ class CaseRepository:
 
 class CaseRepositoryHandler:
     def __init__(self, llm: BaseEngine):
-        self.repository = CaseRepository()
+        self._repository = None
         self.llm = llm
+
+    @property
+    def repository(self):
+        if self._repository is None:
+            self._repository = CaseRepository()
+        return self._repository
 
     def __get_good_case_analysis(self, instruction="", text="", result="", additional_info=""):
         prompt = good_case_analysis_instruction.format(

@@ -4,9 +4,9 @@ from utils import *
 from modules import *
 from construct import *
 
-
 class Pipeline:
     def __init__(self, llm: BaseEngine):
+        self.llm = llm
         self.llm = llm
         self.case_repo = CaseRepositoryHandler(llm = llm)
         self.schema_agent = SchemaAgent(llm = llm)
@@ -24,15 +24,20 @@ class Pipeline:
                 return mode, update_case
         return mode, update_case
 
-    def __init_method(self, data: DataPoint, process_method2):
+    def __init_method(self, data: DataPoint, method):
         default_order = ["schema_agent", "extraction_agent", "reflection_agent"]
-        if "schema_agent" not in process_method2:
-            process_method2["schema_agent"] = "get_default_schema"
+        
+        # Ensure method is a dictionary
+        if not isinstance(method, dict):
+            method = {"extraction_agent": "extract_information_direct"}
+        
+        if "schema_agent" not in method:
+            method["schema_agent"] = "get_default_schema"
         if data.task != "Base":
-            process_method2["schema_agent"] = "get_retrieved_schema"
-        if "extraction_agent" not in process_method2:
-            process_method2["extraction_agent"] = "extract_information_direct"
-        sorted_process_method = {key: process_method2[key] for key in default_order if key in process_method2}
+            method["schema_agent"] = "get_retrieved_schema"
+        if "extraction_agent" not in method:
+            method["extraction_agent"] = "extract_information_direct"
+        sorted_process_method = {key: method[key] for key in default_order if key in method}
         return sorted_process_method
 
     def __init_data(self, data: DataPoint):
@@ -67,9 +72,8 @@ class Pipeline:
                            show_trajectory: bool = False,
                            isgui: bool = False,
                            iskg: bool = False,
+                           config_name: str = "", 
                            ):
-        # for key, value in locals().items():
-        #     print(f"{key}: {value}")
 
         # Check Consistancy
         mode, update_case = self.__check_consistancy(self.llm, task, mode, update_case)
@@ -97,22 +101,57 @@ class Pipeline:
         for agent_name, method_name in sorted_process_method.items():
             agent = getattr(self, agent_name, None)
             if not agent:
-                raise AttributeError(f"{agent_name} does not exist.")
+                continue
             method = getattr(agent, method_name, None)
             if not method:
-                raise AttributeError(f"Method '{method_name}' not found in {agent_name}.")
+                continue
             data = method(data)
             if not print_schema and data.print_schema: #
                 print("Schema: \n", data.print_schema)
                 frontend_schema = data.print_schema
                 print_schema = True
-        data = self.extraction_agent.summarize_answer(data)
+        # Only call summarize_answer if extraction_agent is available
+        if self.extraction_agent is not None:
+            data = self.extraction_agent.summarize_answer(data)
+        else:
+            # If no extraction agent, set an empty result based on task type
+            if data.task == "NER":
+                data.pred = []
+            elif data.task == "RE":
+                data.pred = []
+            elif data.task == "EE":
+                data.pred = []
+            elif data.task == "Triple":
+                data.pred = []
+            else:
+                data.pred = []
 
         # show result
-        if show_trajectory:
-            print("Extraction Trajectory: \n", json.dumps(data.get_result_trajectory(), indent=2))
-        extraction_result = json.dumps(data.pred, indent=2)
-        print("Extraction Result: \n", extraction_result)
+        if not isgui:
+            if show_trajectory:
+                print("Extraction Trajectory: \n", json.dumps(data.get_result_trajectory(), indent=4, ensure_ascii=False))
+            
+            # Console output in formatted JSON
+            if type(data.pred) is not str:
+                extraction_result = json.dumps(data.pred, indent=4, ensure_ascii=False)
+            print("Extraction Result: \n", extraction_result)
+            
+            # Add download functionality
+            if config_name:
+                import os
+                # Create result directory
+                result_dir = "examples/results"
+                if not os.path.exists(result_dir):
+                    os.makedirs(result_dir)
+                
+                # Extract filename from full path (remove path and extension)
+                base_name = os.path.splitext(os.path.basename(config_name))[0]
+                
+                # Save extraction result as formatted JSON
+                result_file_path = os.path.join(result_dir, f"{base_name}.json")
+                with open(result_file_path, 'w', encoding='utf-8') as f:
+                    f.write(extraction_result)
+                print(f"Extraction Result has been saved to: {result_file_path}")
 
         # construct KG
         if iskg:
@@ -123,17 +162,20 @@ class Pipeline:
             cypher_statements = generate_cypher_statements(extraction_result)
             execute_cypher_statements(uri=myurl, user=myusername, password=mypassword, cypher_statements=cypher_statements)
 
-        frontend_res = data.pred #
+        frontend_res = data.pred
 
         # Case Update
         if update_case:
-            if (data.truth == ""):
-                truth = input("Please enter the correct answer you prefer, or just press Enter to accept the current answer: ")
-                if truth.strip() == "":
-                    data.truth = data.pred
-                else:
-                    data.truth = extract_json_dict(truth)
-            self.case_repo.update_case(data)
+            if self.case_repo is None:
+                print("Warning: Case update not available - CaseRepositoryHandler not loaded.")
+            else:
+                if (data.truth == ""):
+                    truth = input("Please enter the correct answer you prefer, or just press Enter to accept the current answer: ")
+                    if truth.strip() == "":
+                        data.truth = data.pred
+                    else:
+                        data.truth = extract_json_dict(truth)
+                self.case_repo.update_case(data)
 
         # return result
         result = data.pred

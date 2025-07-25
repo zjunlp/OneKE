@@ -62,7 +62,7 @@ deduced_schema_code_instruction = PromptTemplate(
 # ==================================================================== #
 
 EXTRACT_INSTRUCTION = """
-**Instruction**: You are an agent skilled in information extarction. {instruction}
+**Instruction**: You are an agent skilled in information extraction. {instruction}
 {examples}
 **Text**: {text}
 {additional_info}
@@ -77,9 +77,10 @@ extract_instruction = PromptTemplate(
 )
 
 instruction_mapper = {
-    'NER': "You are an expert in named entity recognition. Please extract entities that match the schema definition from the input. Return an empty list if the entity type does not exist. Please respond in the format of a JSON string.",
-    'RE': "You are an expert in relationship extraction. Please extract relationship triples that match the schema definition from the input. Return an empty list for relationships that do not exist. Please respond in the format of a JSON string.",
-    'EE': "You are an expert in event extraction. Please extract events from the input that conform to the schema definition. Return an empty list for events that do not exist, and return NAN for arguments that do not exist. If an argument has multiple values, please return a list. Respond in the format of a JSON string.",
+    'NER': "You are an expert in named entity recognition. Please extract entities that match the schema definition from the input. Return an empty list if the entity type does not exist. Please return your final extraction results as a JSON object without escape characters or line breaks, wrapped in triple backticks (```). Use standard double quotes ("") for JSON structure ",
+    'RE': "You are an expert in relationship extraction. Please extract relationship triples that match the schema definition from the input. Return an empty list for relationships that do not exist. Please return your final extraction results as a JSON object without escape characters or line breaks, wrapped in triple backticks (```). Use standard double quotes ("") for JSON structure",
+    'EE': "You are an expert in event extraction. Please extract events from the input that conform to the schema definition. Return an empty list for events that do not exist, and return NAN for arguments that do not exist. If an argument has multiple values without escape characters or line breaks, please return a list. Please return your final extraction results as a JSON object, wrapped in triple backticks (```). Use standard double quotes ("") for JSON structure",
+    'Base': "You are an agent skilled in information extraction. Please follow the instructions and schema provided to extract information from the text. Please return your final extraction results as a JSON object, wrapped in triple backticks (```). Use standard double quotes ("") for JSON structure"
 }
 
 EXTRACT_INSTRUCTION_JSON = """
@@ -97,16 +98,17 @@ extract_instruction_json = PromptTemplate(
 
 SUMMARIZE_INSTRUCTION = """
 **Instruction**: Below is a list of results obtained after segmenting and extracting information from a long article. Please consolidate all the answers to generate a final response.
-{examples}
+
 **Task**: {instruction}
 
 **Result List**: {answer_list}
-
+{additional_info}
 **Output Schema**: {schema}
-Now summarize all the information from the Result List. Filter or merge the redundant information.
+
+Now summarize the information from the Result List. Return your final summarized result as a JSON object without escape characters or line breaks, wrapped in triple backticks (```). Use standard double quotes ("") for JSON structure
 """
 summarize_instruction = PromptTemplate(
-    input_variables=["instruction", "examples", "answer_list", "schema"],
+    input_variables=["instruction", "answer_list", "additional_info", "schema"],
     template=SUMMARIZE_INSTRUCTION,
 )
 
@@ -135,22 +137,6 @@ reflect_instruction = PromptTemplate(
     input_variables=["instruction", "examples", "text", "schema", "result"],
     template=REFLECT_INSTRUCTION,
 )
-
-SUMMARIZE_INSTRUCTION = """
-**Instruction**: Below is a list of results obtained after segmenting and extracting information from a long article. Please consolidate all the answers to generate a final response.
-
-**Task**: {instruction}
-
-**Result List**: {answer_list}
-{additional_info}
-**Output Schema**: {schema}
-Now summarize the information from the Result List.
-"""
-summarize_instruction = PromptTemplate(
-    input_variables=["instruction", "answer_list", "additional_info", "schema"],
-    template=SUMMARIZE_INSTRUCTION,
-)
-
 
 
 # ==================================================================== #
