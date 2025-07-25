@@ -768,7 +768,7 @@ Here are some network issues you might encounter and the corresponding solutions
 
 [Ningyu Zhang](https://person.zju.edu.cn/en/ningyu), [Haofen Wang](https://tjdi.tongji.edu.cn/TeacherDetail.do?id=4991&lang=_en), Yujie Luo, Xiangyuan Ru, Kangwei Liu, Lin Yuan, Mengshu Sun, Lei Liang, Zhiqiang Zhang, Jun Zhou, Lanning Wei, Da Zheng, Huajun Chen.
 
-Community contributors: [Qi Liu](https://github.com/ABOYL-Tuna), [Kang Peng](https://github.com/littlepkk), [Unknown](https://github.com/Jackvae).
+Community contributors: [Qi Liu](https://github.com/ABOYL-Tuna), [Kang Peng](https://github.com/littlepkk), [Jie Yang](https://github.com/Jackvae), Yuqian Wang.
 
 We deeply appreciate the collaborative efforts of everyone involved. We will continue to enhance and maintain this repository over the long term. If you encounter any issues, feel free to submit them to us!
 
