@@ -8,6 +8,7 @@ from langchain_core.output_parsers import JsonOutputParser
 class Entity(BaseModel):
     name : str = Field(description="The specific name of the entity. ")
     type : str = Field(description="The type or category that the entity belongs to.")
+
 class EntityList(BaseModel):
     entity_list : List[Entity] = Field(description="Named entities appearing in the text.")
 
@@ -43,8 +44,9 @@ class Triple(BaseModel):
     relation_type: str = Field(description="The type of the relation.")
     tail: str = Field(description="The object or tail of the triple.")
     tail_type: str = Field(description="The type of the object entity.")
+
 class TripleList(BaseModel):
-    triple_list: List[Triple] = Field(description="The collection of triples and their types presented in the text.")
+    triple_list: List[Triple] = Field(description="The concise collection of triples and their types extracted from the text.")
 
 # ==================================================================== #
 #                          TEXT DESCRIPTION                            #

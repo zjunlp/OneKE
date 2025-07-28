@@ -6,7 +6,7 @@ agent:
   default_ner: Extract the Named Entities in the given text.
   default_re: Extract Relationships between Named Entities in the given text.
   default_ee: Extract the Events in the given text.
-  default_triple: Extract the Triples (subject, relation, object) from the given text, hope that all the relationships for each entity can be extracted.
+  default_triple: Extract all Triples (subject, relation, object) from the given text, covering every entity's direct relations without redundancy or ambiguity.
   chunk_token_limit: 1024
   mode:
     quick:
